@@ -121,3 +121,4 @@ T2 fix f0370db sdd-reviewer fix-needed D3 busy loop, D6 TS7, gen fmt scope
 T2 fix 3c7fc9e sdd-reviewer-lite fix-needed seed cleared by reset, ajv validators not used on requests
 T2 fix c9b0040 sdd-reviewer-lite fix-needed dead code in validation.ts; owner chose coord fix past cap
 T2 coord e4d53f2 drop dead validator code, unknown-field test; count 1520 both runners
+T2 done 8f7858b sdd-reviewer-lite coord review approve; 1520 tests both runners
