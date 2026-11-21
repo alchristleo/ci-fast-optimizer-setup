@@ -184,7 +184,7 @@ COORD fix wave 01be3f6 re-review approve (sdd-reviewer-lite), all priors fixed
 USAGE end 91
 PAUSED at step 8 (PR 1 CI green head 5d38981), next: spec-converge on milestone-1 (base fd54e21) -> merge gate PR 1 (suggest squash) -> T9 PR 2
 
-**PAUSED 2026-11-21** at step 8: PR 1 CI green (head 5d38981). Next: spec-converge → merge gate (squash) → T9 bench + README (PR 2).
+PAUSED 2026-11-21 at step 8: PR 1 CI green (head 5d38981). Next: spec-converge → merge gate (squash) → T9 bench + README (PR 2).
 RESUME spec-converge PR 1
 USAGE start 0
 CONVERGE 6d5acb5 verified=7 inconclusive=7 (pending PR 2 bench/README/owner)
@@ -204,3 +204,13 @@ SEAT cdo pass e513fb5 AC12
 FIX wave e513fb5 sdd-reviewer-lite re-review fix-needed: unsourced 4-vCPU, billing, bench duration
 COORD 38a4664 README sources + 5 CDO nits; owner accepted without further review
 CONVERGE 7c4f649 verified=13 inconclusive=1 (AC13 owner at gate)
+SEAT owner pass c74dd38 AC13
+MERGED PR 2 squash 95d5105 (owner approved, head c74dd38)
+USAGE end 22
+
+## Retro (2026-11-22)
+- **Numbers:** tasks=10 fix_rounds=6 coord=6 fix_waves=3 blocked=0 seats 2/0 reruns=1 owner=1; panel PR1 correctness 1/4/2, design 0/8/5, security 0/0/2; PR2 cdo 2/6/3, correctness 0/1/3; 5h usage 89 pt over two windows. Result: fast 44 s vs baseline 219 s (4.98x).
+- **Wasted effort:** benchmark-honesty gaps found one at a time mid-build (busy-loop boot, unused validators, 1.5 s suite making shards a net loss, barrel import graph selecting everything) → structure: for a benchmark showcase, T1 measures each claim's effect at target scale before scaffold.
+- **Repeated:** implementer agents ended with a stray background shell 3 times (coordinator TaskStop'd each) → agent rule: no background processes left at report time.
+- **Tooling:** pr-checks-wait.sh run outside the repo dir queried the wrong repo; gh 2.4.0 lacks `pr merge --match-head-commit` and mangles `-f inputs[x]` → merges went via REST `PUT pulls/N/merge sha=`.
+- **Next:** Backlog above (scripts/plan.ts, ci-ok idiom, flatter affected.ts shape, gen seed const, repo slug env override, smoke count derive).
