@@ -179,3 +179,5 @@ PANEL security 8c5bdc1 must=0 should=0 nit=2
 PANEL correctness 8c5bdc1 must=1 should=4 nit=2
 TRIAGE fixed=17 dismissed=1 backlog=5
 DISMISSED design should README stub -> PR 2 scope (owner)
+FIX wave 01be3f6 sdd-implementer panel PR1: 17 items
+COORD fix wave 01be3f6 re-review approve (sdd-reviewer-lite), all priors fixed
