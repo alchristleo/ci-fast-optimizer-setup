@@ -97,7 +97,7 @@ describe("jobsTiming", () => {
       ["test (1)", 28],
       ["ci-ok", 2],
     ]);
-    expect(t.jobs[1].steps).toEqual([{ name: "Run tests", s: 26 }]);
+    expect(t.jobs[1]?.steps).toEqual([{ name: "Run tests", s: 26 }]);
   });
 });
 
@@ -197,7 +197,7 @@ describe("checks", () => {
     const slow = results(
       good.runs.map((r) => (r.workflow === "fast" && r.mode === "full" ? { ...r, wall_s: 70 } : r)),
     );
-    const f = (res: Results, e: string) => checkAll(res, e)[0].ok;
+    const f = (res: Results, e: string) => checkAll(res, e)[0]?.ok;
     expect(f(slow, "fast_full_median_lt=60")).toBe(false);
     expect(f(slow, "speedup_gte=3")).toBe(false);
     const diff = results(
@@ -214,8 +214,8 @@ describe("checks", () => {
     ).toBe(false);
   });
   test("no data fails and unknown expression fails", () => {
-    expect(checkAll(results([]), "speedup_gte=3")[0].ok).toBe(false);
-    expect(checkAll(good, "bogus")[0].ok).toBe(false);
+    expect(checkAll(results([]), "speedup_gte=3")[0]?.ok).toBe(false);
+    expect(checkAll(good, "bogus")[0]?.ok).toBe(false);
   });
 });
 

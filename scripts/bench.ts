@@ -75,13 +75,13 @@ export function jobsTiming(jobs: ApiJob[], runCreatedAt: string) {
 export function median(xs: number[]): number {
   const s = [...xs].sort((a, b) => a - b);
   const m = s.length >> 1;
-  return s.length % 2 ? s[m] : (s[m - 1] + s[m]) / 2;
+  return s.length % 2 ? s[m]! : (s[m - 1]! + s[m]!) / 2;
 }
 
 // Nearest-rank percentile.
 export function p90(xs: number[]): number {
   const s = [...xs].sort((a, b) => a - b);
-  return s[Math.ceil(0.9 * s.length) - 1];
+  return s[Math.ceil(0.9 * s.length) - 1]!;
 }
 
 export function correlateRun(
@@ -305,7 +305,7 @@ async function main(argv: string[]) {
     return;
   }
   if (argv.includes("--check")) {
-    const out = checkAll(res, arg("--check"));
+    const out = checkAll(res, arg("--check") ?? "");
     for (const c of out) console.log(`${c.ok ? "PASS" : "FAIL"} ${c.expr}: ${c.detail}`);
     if (out.some((c) => !c.ok)) process.exit(1);
     return;
