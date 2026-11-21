@@ -2,7 +2,7 @@
 
 Spec: `docs/superpowers/specs/2026-11-21-sub-minute-ci-design.md` (git show main:<spec>).
 Repo: /home/leo/AI_STUFF/ci-fast-optimizer-setup. Smoke command: `bun run ci:local` (AC11).
-Order: T1 → T2 → {T3, T4, T5, T8} parallel → T6 → T7 → T9.
+Order: T1 → T2 → {T3, T4, T5, T8} parallel → T10 → T6 → T7 → T9.
 
 ## T1 — Settle tool facts (agent: sdd-implementer; network; depends-on: none)
 Install the newest stable Bun to `~/.bun` (official installer) and Node 22 if missing. Write
@@ -76,7 +76,26 @@ on fixtures, README render idempotent (render twice = same), non-success runs ex
 test_files/tests_passed: parsed from a `::notice::TESTS files=<n> passed=<n>` line each test job
 prints (T6 emits it) via jobs logs API.
 
-## T6 — Workflows (agent: sdd-implementer; depends-on: T3, T4, T5, T8)
+## T10 — Barrel cut, smoke set, scaled suite (agent: sdd-implementer; depends-on: T4 fix merged)
+Added mid-build (owner decisions after T3/T4 reviews; spec D1, D8 at af7b728).
+Files: scripts/gen.ts (+ regenerated output), test/** shape, test/smoke/** (≤3 files),
+test/meta/cross-domain.test.ts, test/support/property.ts (shared fast-check seed/numRuns),
+scripts/affected.ts (+tests), bunfig.toml (test root `test/`), package.json scripts
+(`test` = app suite, `test:tooling` = `bun test scripts/`, `ci:local` adds test:tooling,
+`timings:update` scoped to test/), vitest.config.ts include test/ only, scripts/bench.ts check
+`fast_full_max_lte=90`, `.ci/test-timings.json` regenerated via `timings:update`.
+Interfaces: `affectedTests` returns `{mode, files, smoke: string[]}`; reverse edges through
+`src/domains/index.ts` not walked; index.ts / app.ts change → all.
+Tests: affected — one generated-domain service change selects ≤20% of test files incl. smoke
+(on the real tree); index.ts change → all; cross-domain meta test fails when a test requests a
+route prefix whose domain module it doesn't import (break check). Property tests do real work on
+domain services (totals, rounding, validation round-trips), pinned seed, one literal example each.
+Tuning: serial `bun test` ≈25–35 s locally; record bun + vitest (default workers) + vitest
+--maxWorkers=4 times in docs/t1-findings.md (T10 section) with a projected AC2 ratio for a
+4-vCPU runner. Test count equal on both runners (app suite only).
+Smoke: `bun run ci:local` green.
+
+## T6 — Workflows (agent: sdd-implementer; depends-on: T3, T4, T5, T8, T10)
 Files: `.github/workflows/baseline.yml`, `.github/workflows/fast.yml`, `scripts/workflows.test.ts`.
 Per spec D5–D7, D10, D12, D13, D16. fast.yml: `plan` job (affected + shard matrix output; fast,
 no install if possible) → fmt, lint, typecheck, build, test[matrix] (no needs on each other except
