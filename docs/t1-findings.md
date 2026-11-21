@@ -35,3 +35,13 @@ D4 lint: `bun lint` absent on stable -> keep oxlint in fast pipeline, README say
 D11 pin: bun-version 1.4.5, node 22.23.5 (evidence: `bun --version` -> 1.4.5; `node -v` -> v22.23.5)
 D13: do not rely on `scanImports`; write a fallback regex scanner that keeps type edges (evidence: `bun scan.ts` -> only ./b, ./e, ./f, missing ./types ./c ./d)
 Junit: `bun test --reporter=junit --reporter-outfile=<f> <files...>` (evidence: `bun test --reporter=junit --reporter-outfile=out.xml a.test.ts v.test.ts` -> 2 pass, XML written)
+
+## T2: scaffold tuning
+Chosen: K=120 generated domains (`gen.ts --domains 120 --seed 1`), plus 3 hand-written domains and 5 lib/meta test files. `createApp()` runs `WARMUP_ROUNDS=20000` validator rounds per domain (constant in `src/app.ts`).
+Env: Bun 1.4.5, Node 22.23.5, vitest 5.1.1, 20-core local machine.
+- `bun test`: 1399 tests across 128 files, 0.97 s wall (build once per process).
+- `vitest run` (`bun run legacy:test`, default workers): 1399 tests across 128 files, 15.4 s wall. Ratio 15.9x (target 4x).
+- `vitest run --maxWorkers=1` (serial, like the baseline job): 121.5 s.
+- Baseline-serial local total (oxfmt, oxlint, tsc, build, vitest with 1 worker): 125 s (target 120 s). Measured as one `time ( ... )` run.
+- Test count matches on both runners (1399). Both pass green.
+- Negative checks: appending `Bun.version` to `src/lib/ids.ts` fails `api subset > src/ never uses Bun.* APIs`. Adding `import ... from "vitest"` to a test file fails `api subset > test/ imports only the shared subset`. Both restored.
