@@ -58,3 +58,10 @@ Env: same machine as T2 (20 cores), Bun 1.4.5, Node 22.23.5, vitest 5.1.1. Same 
 - Projected AC2 for a 4-vCPU runner (a projection, T9 measures it): baseline = setup and install O + vitest 62 s + tsc about 6 s (slower cores) = O + 68 s. Fast = O + test shard 6.4 s + about 2 s (fmt/lint/typecheck/build run in parallel jobs, each with its own setup). With O of about 20 s: 88 s / 28 s = 3.1x. The margin over 3x is thin and moves with O: O = 15 s gives 2.8x, O = 25 s gives 3.4x. If T9 measures under 3x, the owner decides K, N or per-test cost.
 - Note: the T2 rule "local vitest at least 4x bun" and "baseline-serial at least 120 s" no longer apply (D1 replaced them). Local vitest is now 1.2x bun because the 20-core machine hides the boot cost.
 - Negative checks: a test requesting `/orders` without importing `src/domains/orders/` fails `cross-domain rule > a test imports the domain module of every route prefix it requests` (restored). Removing the `!== BARREL` filter in `scripts/affected.ts` fails `the barrel cut` and the 20% real-tree test (restored). Removing the `RUN_ALL` check fails the three "runs all" tests for `index.ts` and `app.ts` (restored).
+
+T10 notes (coordinator): bench.ts changes in T10 (RUN_TIMEOUT_MS poll cap, `run_attempt === 1`
+filter, `fast_full_max_lte`, `n/a` rendering, nullable jobsTiming) were folded into the T10 brief
+from the T8 review nits. AC2 projection caveat: only tsc is scaled for slower runner cores; the
+vitest (`--maxWorkers=4`, 20-core host) and bun shard times are not, so 3.1x is optimistic
+(1.5x slower shard → ~2.8x). T9 measures on real runners. fast-check numRuns (4000 × scale
+1–4) is set to reach the time target — README must say so.
