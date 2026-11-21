@@ -174,6 +174,18 @@ describe("parseTestsNotice", () => {
     expect(parseTestsNotice(log)).toEqual({ files: 30, passed: 380 });
     expect(parseTestsNotice("nothing")).toBeUndefined();
   });
+
+  test("reads the plain line from a raw job log and ignores the echoed script", () => {
+    const log = [
+      "2026-11-21T10:00:01.0000000Z ##[group]Run set -o pipefail",
+      "2026-11-21T10:00:01.0000001Z set -o pipefail",
+      '2026-11-21T10:00:01.0000002Z echo "TESTS files=${files} passed=${passed}"',
+      "2026-11-21T10:00:01.0000003Z ##[endgroup]",
+      "2026-11-21T10:00:30.0000000Z TESTS files=30 passed=380",
+    ];
+    expect(parseTestsNotice(log.join("\n"))).toEqual({ files: 30, passed: 380 });
+    expect(parseTestsNotice(log.slice(0, 4).join("\n"))).toBeUndefined();
+  });
 });
 
 function run(p: Partial<BenchRun> & { workflow: string; mode: string; wall_s: number }): BenchRun {

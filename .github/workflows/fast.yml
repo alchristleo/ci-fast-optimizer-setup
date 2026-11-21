@@ -182,13 +182,14 @@ jobs:
       - name: bun test
         env:
           FILES: ${{ matrix.files }}
+          SHARD: ${{ matrix.shard }}
         run: |
           set -o pipefail
           read -ra list <<< "$FILES"
-          bun test --reporter=junit --reporter-outfile=junit-${{ matrix.shard }}.xml "${list[@]}" 2>&1 | tee bun.log
+          bun test --reporter=junit --reporter-outfile="junit-${SHARD}.xml" "${list[@]}" 2>&1 | tee bun.log
           files=${#list[@]}
           passed=$(sed -nE 's/^ *([0-9]+) pass$/\1/p' bun.log)
-          echo "::notice::TESTS files=${files} passed=${passed}"
+          echo "TESTS files=${files} passed=${passed}"
       - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:
           name: junit-${{ matrix.shard }}

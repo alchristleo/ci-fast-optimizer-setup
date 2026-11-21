@@ -2,10 +2,16 @@ import { expect, test } from "bun:test";
 import { readFileSync } from "node:fs";
 import { parse } from "yaml";
 
-type Job = { name?: string; needs?: string | string[]; steps?: { uses?: string }[] };
+type Job = {
+  name?: string;
+  needs?: string | string[];
+  if?: string;
+  steps?: { uses?: string; run?: string; with?: Record<string, unknown> }[];
+};
 type Workflow = {
   on: Record<string, unknown>;
   permissions?: Record<string, string>;
+  concurrency?: { "cancel-in-progress"?: unknown };
   jobs: Record<string, Job>;
 };
 
@@ -61,4 +67,39 @@ test("every uses: is pinned to a 40-hex SHA", () => {
 
 test("no secrets are used", () => {
   for (const { text } of both) expect(text).not.toContain("secrets.");
+});
+
+test("fast: timings runs only on push", () => {
+  expect(fast.wf.jobs.timings!.if).toContain("github.event_name == 'push'");
+});
+
+test("fast: cancel-in-progress only for pull_request", () => {
+  expect(fast.wf.concurrency?.["cancel-in-progress"]).toBe(
+    "${{ github.event_name == 'pull_request' }}",
+  );
+});
+
+test("fast: ci-ok runs always and needs every other job", () => {
+  const ok = fast.wf.jobs["ci-ok"]!;
+  expect(ok.if).toBe("always()");
+  const others = Object.keys(fast.wf.jobs).filter((id) => id !== "ci-ok" && id !== "timings");
+  expect(needsOf(ok).sort()).toEqual(others.sort());
+});
+
+test("no run block interpolates untrusted expressions", () => {
+  for (const { wf } of both)
+    for (const job of Object.values(wf.jobs))
+      for (const step of job.steps ?? [])
+        expect(step.run ?? "").not.toMatch(
+          /\$\{\{\s*(inputs\.|github\.head_ref|github\.event\.|matrix\.)/,
+        );
+});
+
+test("fast: plan checks out full history", () => {
+  const checkout = fast.wf.jobs.plan!.steps!.find((s) => s.uses?.startsWith("actions/checkout@"));
+  expect(checkout!.with).toEqual({ "fetch-depth": 0 });
+});
+
+test("fast: test job is skipped when the plan has no files", () => {
+  expect(fast.wf.jobs.test!.if).toBe("needs.plan.outputs.count != '0'");
 });

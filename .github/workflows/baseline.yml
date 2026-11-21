@@ -48,4 +48,4 @@ jobs:
           npm run legacy:test 2>&1 | tee vitest.log
           files=$(sed 's/\x1b\[[0-9;]*m//g' vitest.log | sed -nE 's/^ *Test Files +([0-9]+) passed.*/\1/p')
           passed=$(sed 's/\x1b\[[0-9;]*m//g' vitest.log | sed -nE 's/^ *Tests +([0-9]+) passed.*/\1/p')
-          echo "::notice::TESTS files=${files} passed=${passed}"
+          echo "TESTS files=${files} passed=${passed}"

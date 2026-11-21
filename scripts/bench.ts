@@ -103,8 +103,9 @@ export function correlateRun(
     .sort((a, b) => Date.parse(a.created_at) - Date.parse(b.created_at))[0];
 }
 
+// Digits are required, so the echoed script text (`files=${files}`) never matches.
 export function parseTestsNotice(log: string): { files: number; passed: number } | undefined {
-  const m = /::notice::TESTS files=(\d+) passed=(\d+)/.exec(log);
+  const m = /TESTS files=(\d+) passed=(\d+)/.exec(log);
   return m ? { files: Number(m[1]), passed: Number(m[2]) } : undefined;
 }
 
