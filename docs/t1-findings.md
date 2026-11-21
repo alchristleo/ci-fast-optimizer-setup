@@ -1,7 +1,7 @@
 # T1 findings: tool facts
 
 Env: Bun 1.4.5 (npm `latest` dist-tag; canary version not checked), Node v22.23.5, vitest 5.1.1.
-Scratch projects: `/tmp/claude-1000/-home-leo-AI-STUFF-lean-sdd/45fad210-f892-4c83-9a39-acc262fd122b/scratchpad/{s1,d2}`.
+Scratch projects: throwaway dirs outside the repo (`s1`, `d2`), not committed.
 
 ## Install deviation
 The official installer (`curl https://bun.sh/install | bash` to `~/.bun`) was denied by the permission classifier.

@@ -1,7 +1,7 @@
 # Plan: sub-minute CI showcase
 
 Spec: `docs/superpowers/specs/2026-11-21-sub-minute-ci-design.md` (git show main:<spec>).
-Repo: /home/leo/AI_STUFF/ci-fast-optimizer-setup. Smoke command: `bun run ci:local` (AC11).
+Repo: this repository. Smoke command: `bun run ci:local` (AC11).
 Order: T1 → T2 → {T3, T4, T5, T8} parallel → T10 → T6 → T7 → T9.
 
 ## T1 — Settle tool facts (agent: sdd-implementer; network; depends-on: none)
