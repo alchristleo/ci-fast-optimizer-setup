@@ -110,21 +110,22 @@ plan; baseline single job; no pull_request_target; top-level permissions content
 every `uses:` not under `actions/` org pinned to 40-hex SHA (actions/* also pinned); no `secrets.`.
 Validate with `actionlint` if available (install in task).
 
-## T7 — Publish + first CI runs (agent: sdd-implementer; network; depends-on: T6)
-Create PUBLIC repo `alchristleo/ci-fast-optimizer-setup` (`gh repo create --public --source .
---push`), owner-approved at spec gate. Watch first push runs of both workflows to green (fix
-failures in workflow/test code only). Download test junit artifacts, refresh
-`.ci/test-timings.json` from CI times, commit. Create branch `bench/pr-sample` with one
-generated-domain service change (commit), push. Dispatch fast mode=pr once on it; verify fewer
-test files ran. Report run URLs.
+## T7 — Publish + PR CI runs (agent: sdd-implementer; network; depends-on: T6)
+Owner flow (2026-11-21): PR first, bench after merge. Create PUBLIC repo
+`alchristleo/ci-fast-optimizer-setup` (owner-approved), push `main` (fd54e21: spec + plan only),
+push `milestone-1`, open PR milestone-1 → main. Watch both workflows on the PR to green (fix
+workflow/test code only; commit to milestone-1). Refresh `.ci/test-timings.json` from the PR
+run's shard junit (artifacts), commit. Report run URLs + per-job durations.
 
-## T9 — Bench + README (agent: sdd-implementer; network; depends-on: T7)
-`bun scripts/bench.ts run --runs 5` (+ pr mode 5). Run all `--check`s (AC1,2,3,9). If AC1/AC2
-fail: report numbers and stop (owner decides tuning: K, N, jobs). README full write: what/why,
-the 8 changes each with config snippet + measured effect (per-step table baseline vs fast),
-headline table, honest notes (scaled suite, shared install cache, D4 fallback if any, ±1 s
-quantization, runner variance), hours-saved formula, reproduce section (`bench.ts run`), links
-to runs. `--readme --check` green (AC10). Push to main.
+## T9 — Bench + README (after PR 1 merge; second PR; agent: sdd-implementer; network)
+Branch `bench-readme` from merged main. Create `bench/pr-sample` from main with one
+generated-domain service change, push. `bun scripts/bench.ts run --runs 5` (+ pr mode 5). Run all
+`--check`s (AC1,2,3,9). If AC1/AC2 fail: report numbers and stop (owner decides). README full
+write: what/why, the 8 changes each with config snippet + measured effect (per-step table
+baseline vs fast), headline table, honest notes (scaled suite, fast-check numRuns chosen for
+time target, shared install cache, oxlint fallback, TS 5.9 baseline vs TS 7, barrel cut risk,
+±1 s quantization, runner variance), hours-saved formula, reproduce section, links to runs.
+`--readme --check` green (AC10). PR 2 with its own review + merge gate.
 
 ## Backlog
 - test/smoke/catalog.test.ts:15 hard-coded toBe(123) → derive from domains.length (PRE-EXISTING, T10 review)
@@ -163,3 +164,5 @@ T10 done e0e6601 sdd-reviewer approve (coord closed by owner)
 T6 review approve cd2bdfb sdd-reviewer 2 should (TESTS log format, workflow test gaps) -> cheap fix
 T6 fix 13f1ff9 sdd-reviewer-lite fix-needed untrusted-expr scan misses needs/steps/github.*
 T6 coord 3a0128c reject any ${{ in run blocks; needs.* mutation red
+T6 done 3a0128c sdd-reviewer-lite coord approve
+PLAN T7/T9 restructured: PR first, bench after merge (owner)
