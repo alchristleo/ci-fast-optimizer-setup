@@ -130,8 +130,8 @@ function main(argv: string[]): void {
   const mergeBase = git("merge-base", base, head).trim();
   const changed = parseNameStatus(git("diff", "--name-status", `${mergeBase}..${head}`));
   let graph = buildGraph(process.cwd());
-  if (changed.some((c) => c.status === "D")) {
-    // Deleted files are gone from the head graph: add the base graph so their dependents are found.
+  if (changed.some((c) => c.status === "D" || c.status === "R")) {
+    // Deleted and renamed-away paths are gone from the head graph: add the base graph so their dependents are found.
     const files = git("ls-tree", "-r", "--name-only", mergeBase, ...SCAN_DIRS)
       .split("\n")
       .filter(Boolean);
@@ -141,7 +141,8 @@ function main(argv: string[]): void {
     );
   }
   const result = affectedTests(changed, graph);
-  console.log(result.mode === "all" ? "all" : result.files.join("\n"));
+  if (result.mode === "all") console.log("all");
+  else if (result.files.length > 0) console.log(result.files.join("\n"));
 }
 
 if (import.meta.main) main(process.argv.slice(2));

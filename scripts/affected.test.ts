@@ -1,8 +1,9 @@
 import { describe, expect, test } from "bun:test";
-import { mkdirSync, mkdtempSync, rmSync, writeFileSync } from "node:fs";
+import { execFileSync } from "node:child_process";
+import { mkdirSync, mkdtempSync, renameSync, rmSync, unlinkSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { dirname, join } from "node:path";
-import { affectedTests, buildGraph } from "./affected.ts";
+import { affectedTests, buildGraph, parseNameStatus } from "./affected.ts";
 
 // Fixture repo shaped like the generated tree: tests -> support/app -> app -> domains index -> routes -> service -> lib.
 function fixture(extra: Record<string, string> = {}): string {
@@ -190,5 +191,80 @@ describe("real tree shapes", () => {
       graph,
     );
     expect(r.files).toContain("test/generated/accounts.test.ts");
+  });
+});
+
+describe("parseNameStatus", () => {
+  test("a rename lists both paths with status R", () => {
+    expect(parseNameStatus("R100\told.ts\tnew.ts\nM\ta.ts\nD\tb.ts\n")).toEqual([
+      { path: "old.ts", status: "R" },
+      { path: "new.ts", status: "R" },
+      { path: "a.ts", status: "M" },
+      { path: "b.ts", status: "D" },
+    ]);
+  });
+});
+
+describe("CLI against a git repo", () => {
+  const script = join(import.meta.dirname, "affected.ts");
+  const git = (cwd: string, ...args: string[]) =>
+    execFileSync("git", ["-c", "user.name=t", "-c", "user.email=t@t", ...args], {
+      cwd,
+      encoding: "utf8",
+    });
+  const commit = (cwd: string, msg: string) => {
+    git(cwd, "add", "-A");
+    git(cwd, "commit", "-q", "-m", msg);
+  };
+
+  // Repo on branch `feature`, forked from `main`; `onMain` commits on main after the fork.
+  function cli(edit: (root: string) => void, onMain?: (root: string) => void): string {
+    const root = fixture();
+    try {
+      git(root, "init", "-q", "-b", "main");
+      commit(root, "base");
+      git(root, "checkout", "-q", "-b", "feature");
+      edit(root);
+      commit(root, "feature");
+      if (onMain) {
+        git(root, "checkout", "-q", "main");
+        onMain(root);
+        commit(root, "main moved");
+        git(root, "checkout", "-q", "feature");
+      }
+      return execFileSync(process.execPath, [script, "--base", "main", "--head", "feature"], {
+        cwd: root,
+        encoding: "utf8",
+      });
+    } finally {
+      rmSync(root, { recursive: true });
+    }
+  }
+
+  test("a docs-only diff prints nothing", () => {
+    expect(cli((r) => writeFileSync(join(r, "README.md"), "hi\n"))).toBe("");
+  });
+
+  test("changes on base after the fork are ignored (merge-base)", () => {
+    const out = cli(
+      (r) => {
+        mkdirSync(join(r, "docs"));
+        writeFileSync(join(r, "docs/x.md"), "x\n");
+      },
+      (r) => writeFileSync(join(r, "src/domains/c/service.ts"), "export const h = 2;\n"),
+    );
+    expect(out).toBe("");
+  });
+
+  test("a deleted file selects the tests that imported it", () => {
+    const out = cli((r) => unlinkSync(join(r, "src/domains/c/service.ts")));
+    expect(out).toBe("test/c.test.ts\n");
+  });
+
+  test("a renamed file selects the tests that imported its old path", () => {
+    const out = cli((r) =>
+      renameSync(join(r, "src/domains/c/service.ts"), join(r, "src/domains/c/svc.ts")),
+    );
+    expect(out).toBe("test/c.test.ts\n");
   });
 });
