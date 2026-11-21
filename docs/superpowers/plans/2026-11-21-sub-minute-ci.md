@@ -1,8 +1,8 @@
 # Plan: sub-minute CI showcase
 
 Spec: `docs/superpowers/specs/2026-11-21-sub-minute-ci-design.md` (git show main:<spec>).
-Repo: /home/leo/AI_STUFF/ci-fast-optimizer-setup. Smoke command: `bun run ci:local` (AC11).
-Order: T1 → T2 → {T3, T4, T5, T8} parallel → T6 → T7 → T9.
+Repo: this repository. Smoke command: `bun run ci:local` (AC11).
+Order: T1 → T2 → {T3, T4, T5, T8} parallel → T10 → T6 → T7 → T9.
 
 ## T1 — Settle tool facts (agent: sdd-implementer; network; depends-on: none)
 Install the newest stable Bun to `~/.bun` (official installer) and Node 22 if missing. Write
@@ -76,7 +76,29 @@ on fixtures, README render idempotent (render twice = same), non-success runs ex
 test_files/tests_passed: parsed from a `::notice::TESTS files=<n> passed=<n>` line each test job
 prints (T6 emits it) via jobs logs API.
 
-## T6 — Workflows (agent: sdd-implementer; depends-on: T3, T4, T5, T8)
+## T10 — Barrel cut, smoke set, scaled suite (agent: sdd-implementer; depends-on: T4 fix merged)
+Added mid-build (owner decisions after T3/T4 reviews; spec D1, D8 at af7b728).
+Files: scripts/gen.ts (+ regenerated output), test/** shape, test/smoke/** (≤3 files),
+test/meta/cross-domain.test.ts, test/support/property.ts (shared fast-check seed/numRuns),
+scripts/affected.ts (+tests), bunfig.toml (test root `test/`), package.json scripts
+(`test` = app suite, `test:tooling` = `bun test scripts/`, `ci:local` adds test:tooling,
+`timings:update` scoped to test/), vitest.config.ts include test/ only, scripts/bench.ts check
+`fast_full_max_lte=90`, `.ci/test-timings.json` regenerated via `timings:update`.
+Interfaces: `affectedTests` returns `{mode, files, smoke: string[]}`; reverse edges through
+`src/domains/index.ts` not walked; index.ts / app.ts change → all.
+Tests: affected — one generated-domain service change selects ≤20% of test files incl. smoke
+(on the real tree); index.ts change → all; cross-domain meta test fails when a test requests a
+route prefix whose domain module it doesn't import (break check). Property tests do real work on
+domain services (totals, rounding, validation round-trips), pinned seed, one literal example each.
+Tuning: serial `bun test` ≈25–35 s locally; record bun + vitest (default workers) + vitest
+--maxWorkers=4 times in docs/t1-findings.md (T10 section) with a projected AC2 ratio for a
+4-vCPU runner. Test count equal on both runners (app suite only).
+Also in T10 brief (T8 review nits): bench.ts `n/a` for non-finite cells, null jobsTiming on no
+completed jobs, 30-min poll cap, tests for cancelled run / null started_at / run_attempt>1 decoy;
+affected.ts filters selected tests to files existing at head.
+Smoke: `bun run ci:local` green.
+
+## T6 — Workflows (agent: sdd-implementer; depends-on: T3, T4, T5, T8, T10)
 Files: `.github/workflows/baseline.yml`, `.github/workflows/fast.yml`, `scripts/workflows.test.ts`.
 Per spec D5–D7, D10, D12, D13, D16. fast.yml: `plan` job (affected + shard matrix output; fast,
 no install if possible) → fmt, lint, typecheck, build, test[matrix] (no needs on each other except
@@ -88,23 +110,31 @@ plan; baseline single job; no pull_request_target; top-level permissions content
 every `uses:` not under `actions/` org pinned to 40-hex SHA (actions/* also pinned); no `secrets.`.
 Validate with `actionlint` if available (install in task).
 
-## T7 — Publish + first CI runs (agent: sdd-implementer; network; depends-on: T6)
-Create PUBLIC repo `alchristleo/ci-fast-optimizer-setup` (`gh repo create --public --source .
---push`), owner-approved at spec gate. Watch first push runs of both workflows to green (fix
-failures in workflow/test code only). Download test junit artifacts, refresh
-`.ci/test-timings.json` from CI times, commit. Create branch `bench/pr-sample` with one
-generated-domain service change (commit), push. Dispatch fast mode=pr once on it; verify fewer
-test files ran. Report run URLs.
+## T7 — Publish + PR CI runs (agent: sdd-implementer; network; depends-on: T6)
+Owner flow (2026-11-21): PR first, bench after merge. Create PUBLIC repo
+`alchristleo/ci-fast-optimizer-setup` (owner-approved), push `main` (fd54e21: spec + plan only),
+push `milestone-1`, open PR milestone-1 → main. Watch both workflows on the PR to green (fix
+workflow/test code only; commit to milestone-1). Refresh `.ci/test-timings.json` from the PR
+run's shard junit (artifacts), commit. Report run URLs + per-job durations.
 
-## T9 — Bench + README (agent: sdd-implementer; network; depends-on: T7)
-`bun scripts/bench.ts run --runs 5` (+ pr mode 5). Run all `--check`s (AC1,2,3,9). If AC1/AC2
-fail: report numbers and stop (owner decides tuning: K, N, jobs). README full write: what/why,
-the 8 changes each with config snippet + measured effect (per-step table baseline vs fast),
-headline table, honest notes (scaled suite, shared install cache, D4 fallback if any, ±1 s
-quantization, runner variance), hours-saved formula, reproduce section (`bench.ts run`), links
-to runs. `--readme --check` green (AC10). Push to main.
+## T9 — Bench + README (after PR 1 merge; second PR; agent: sdd-implementer; network)
+Branch `bench-readme` from merged main. Create `bench/pr-sample` from main with one
+generated-domain service change, push. `bun scripts/bench.ts run --runs 5` (+ pr mode 5). Run all
+`--check`s (AC1,2,3,9). If AC1/AC2 fail: report numbers and stop (owner decides). README full
+write: what/why, the 8 changes each with config snippet + measured effect (per-step table
+baseline vs fast), headline table, honest notes (scaled suite, fast-check numRuns chosen for
+time target, shared install cache, oxlint fallback, TS 5.9 baseline vs TS 7, barrel cut risk,
+±1 s quantization, runner variance), hours-saved formula, reproduce section, links to runs.
+`--readme --check` green (AC10). PR 2 with its own review + merge gate.
 
 ## Backlog
+- scripts/plan.ts: move fast.yml plan bash into a tested script (panel design)
+- ci-ok: standard contains(needs.*.result) idiom (panel design)
+- affected.ts: flatter return shape `string[] | "all"` (panel design)
+- gen `--seed` as constant (panel design nit)
+- T9: rebase bench/pr-sample / assert fast.yml blob equals main before bench (panel correctness nit)
+- test/smoke/catalog.test.ts:15 hard-coded toBe(123) → derive from domains.length (PRE-EXISTING, T10 review)
+- bench.ts optional repo slug env override (T8 review nit)
 - Scheduled weekly bench re-run + badge
 - Per-claim ablation workflows (one change at a time)
 - turbo/nx comparison; frontend app
@@ -113,3 +143,48 @@ to runs. `--readme --check` green (AC10). Push to main.
 ## Ledger
 USAGE start 24
 PLAN written 9 tasks
+T1 done 3412ab1 sdd-implementer bun 1.4.5 stable: check+fmt yes, lint no -> oxlint; D2 alias ok; scanImports drops type edges
+T1 fix 3412ab1 sdd-reviewer-lite fix-needed unsourced installer/canary claim, D4 lint + D11 pin lines missing, no trailers
+T1 coord 7a634cb findings fixes per review
+T1 done 7a634cb sdd-reviewer-lite coord re-review approve
+T2 fix f0370db sdd-reviewer fix-needed D3 busy loop, D6 TS7, gen fmt scope
+T2 fix 3c7fc9e sdd-reviewer-lite fix-needed seed cleared by reset, ajv validators not used on requests
+T2 fix c9b0040 sdd-reviewer-lite fix-needed dead code in validation.ts; owner chose coord fix past cap
+T2 coord e4d53f2 drop dead validator code, unknown-field test; count 1520 both runners
+T2 done 8f7858b sdd-reviewer-lite coord review approve; 1520 tests both runners
+T3 review approve 8c78c6a sdd-reviewer should: seed skewed by boot cost -> regen via timings:update after merge
+T3 done 8c78c6a sdd-reviewer approve
+T5 review approve 7d5e3ea sdd-reviewer nit: scope timings:update to test/
+T5 done 7d5e3ea sdd-reviewer approve
+T4 fix 5c54ea7 sdd-reviewer fix-needed empty-set prints newline; CLI/rename/delete paths untested
+T8 review approve c8d5369 sdd-reviewer should: baseline dispatch inputs -> T6 declares mode in baseline.yml
+T8 done c8d5369 sdd-reviewer approve
+T4 done 235c19d sdd-reviewer-lite approve
+T10 review approve 4c31638 sdd-reviewer should: bench scope unexplained -> coord note
+T10 coord 6a15945 findings notes: bench scope + AC2 projection caveat
+T10 coord b577e4f attribution: brief extras recorded in plan
+COORD T8 review nits (from c8d5369 review, folded into T10): NaN render on empty results; Infinity from empty jobs; uncapped poll loop; missing cancelled/null started_at/run_attempt>1 tests
+T10 coord e0e6601 record T8 nits + reword; owner accepted without further review
+T10 done e0e6601 sdd-reviewer approve (coord closed by owner)
+T6 review approve cd2bdfb sdd-reviewer 2 should (TESTS log format, workflow test gaps) -> cheap fix
+T6 fix 13f1ff9 sdd-reviewer-lite fix-needed untrusted-expr scan misses needs/steps/github.*
+T6 coord 3a0128c reject any ${{ in run blocks; needs.* mutation red
+T6 done 3a0128c sdd-reviewer-lite coord approve
+PLAN T7/T9 restructured: PR first, bench after merge (owner)
+PR 1 opened https://github.com/alchristleo/ci-fast-optimizer-setup/pull/1; first runs fast 45s, baseline 203s
+T7 done e4db8ff sdd-implementer PR CI green: fast 45s, baseline 203s
+PANEL cdo skipped owner: README lands in PR 2
+PANEL design 8c5bdc1 must=0 should=8 nit=5
+PANEL security 8c5bdc1 must=0 should=0 nit=2
+PANEL correctness 8c5bdc1 must=1 should=4 nit=2
+TRIAGE fixed=17 dismissed=1 backlog=5
+DISMISSED design should README stub -> PR 2 scope (owner)
+FIX wave 01be3f6 sdd-implementer panel PR1: 17 items
+COORD fix wave 01be3f6 re-review approve (sdd-reviewer-lite), all priors fixed
+USAGE end 91
+PAUSED at step 8 (PR 1 CI green head 5d38981), next: spec-converge on milestone-1 (base fd54e21) -> merge gate PR 1 (suggest squash) -> T9 PR 2
+
+**PAUSED 2026-11-21** at step 8: PR 1 CI green (head 5d38981). Next: spec-converge → merge gate (squash) → T9 bench + README (PR 2).
+RESUME spec-converge PR 1
+USAGE start 0
+CONVERGE 6d5acb5 verified=7 inconclusive=7 (pending PR 2 bench/README/owner)

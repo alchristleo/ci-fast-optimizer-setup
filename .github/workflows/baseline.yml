@@ -1,0 +1,41 @@
+name: baseline
+# The common "before" pipeline: one job, serial steps, Node tools, no sharding.
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: baseline-${{ github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+jobs:
+  test:
+    name: test (baseline)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: 22.23.5
+      - uses: ./.github/actions/setup
+      - name: fmt
+        run: npm run legacy:fmt
+      - name: lint
+        run: npm run lint
+      - name: typecheck
+        run: npm run legacy:check
+      - name: build
+        run: bun run build
+      - name: vitest
+        run: |
+          set -o pipefail
+          npm run legacy:test 2>&1 | tee vitest.log
+          files=$(sed 's/\x1b\[[0-9;]*m//g' vitest.log | sed -nE 's/^ *Test Files +([0-9]+) passed.*/\1/p')
+          passed=$(sed 's/\x1b\[[0-9;]*m//g' vitest.log | sed -nE 's/^ *Tests +([0-9]+) passed.*/\1/p')
+          # Parsed by parseTestsNotice in scripts/bench.ts: keep the "TESTS files=N passed=N" format.
+          echo "TESTS files=${files} passed=${passed}"

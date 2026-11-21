@@ -1,0 +1,36 @@
+{
+  "name": "ci-fast-optimizer-setup",
+  "version": "0.1.0",
+  "private": true,
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "fmt": "bun fmt",
+    "fmt:check": "bun fmt --check",
+    "lint": "oxlint",
+    "check": "bun check",
+    "build": "bun build src/app.ts --target=node --outdir dist",
+    "test": "bun test",
+    "test:tooling": "bun test ./scripts/",
+    "gen": "bun scripts/gen.ts --domains 120 --seed 1 && bun fmt src/domains test/generated fixtures",
+    "ci:local": "bun run fmt:check && bun run lint && bun run check && bun run build && bun run test && bun run test:tooling",
+    "timings:update": "mkdir -p .ci && bun test --reporter=junit --reporter-outfile=.ci/junit.xml && bun scripts/timings.ts merge .ci/junit.xml > .ci/test-timings.json",
+    "legacy:fmt": "oxfmt --check .",
+    "legacy:check": "tsc --noEmit",
+    "legacy:test": "vitest run"
+  },
+  "dependencies": {
+    "ajv": "8.20.0",
+    "hono": "^4.13.19"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.4.5",
+    "@types/node": "^26.6.6",
+    "fast-check": "4.10.3",
+    "oxfmt": "^0.79.0",
+    "oxlint": "^1.94.0",
+    "typescript": "5.9.3",
+    "vitest": "^5.1.1",
+    "yaml": "2.9.1"
+  }
+}
