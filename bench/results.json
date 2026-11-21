@@ -1,6 +1,4317 @@
 {
-  "generated_at": null,
-  "bun": null,
-  "node": null,
-  "runs": []
+  "generated_at": "2026-11-21T17:24:34.855Z",
+  "bun": "1.4.5",
+  "node": "22.23.5",
+  "runs": [
+    {
+      "run_id": 44927113096,
+      "head_sha": "5673b4667aa98fc534ff7bba7073597f825907f0",
+      "workflow": "baseline",
+      "mode": "full",
+      "attempt": 1,
+      "url": "https://github.com/alchristleo/ci-fast-optimizer-setup/actions/runs/44927113096",
+      "conclusion": "success",
+      "created_at": "2026-11-21T16:54:29Z",
+      "queue_s": 3,
+      "wall_s": 285,
+      "jobs": [
+        {
+          "name": "test (baseline)",
+          "wall_s": 285,
+          "steps": [
+            {
+              "name": "Set up job",
+              "s": 1
+            },
+            {
+              "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 1
+            },
+            {
+              "name": "Run actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1",
+              "s": 1
+            },
+            {
+              "name": "Run ./.github/actions/setup",
+              "s": 2
+            },
+            {
+              "name": "fmt",
+              "s": 0
+            },
+            {
+              "name": "lint",
+              "s": 0
+            },
+            {
+              "name": "typecheck",
+              "s": 6
+            },
+            {
+              "name": "build",
+              "s": 0
+            },
+            {
+              "name": "vitest",
+              "s": 271
+            },
+            {
+              "name": "Post Run ./.github/actions/setup",
+              "s": 0
+            },
+            {
+              "name": "Post Run actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1",
+              "s": 0
+            },
+            {
+              "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 0
+            },
+            {
+              "name": "Complete job",
+              "s": 1
+            }
+          ]
+        }
+      ],
+      "test_files": 131,
+      "tests_passed": 2053
+    },
+    {
+      "run_id": 44927546962,
+      "head_sha": "5673b4667aa98fc534ff7bba7073597f825907f0",
+      "workflow": "fast",
+      "mode": "full",
+      "attempt": 1,
+      "url": "https://github.com/alchristleo/ci-fast-optimizer-setup/actions/runs/44927546962",
+      "conclusion": "success",
+      "created_at": "2026-11-21T16:59:29Z",
+      "queue_s": 3,
+      "wall_s": 42,
+      "jobs": [
+        {
+          "name": "tooling",
+          "wall_s": 21,
+          "steps": [
+            {
+              "name": "Set up job",
+              "s": 1
+            },
+            {
+              "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 1
+            },
+            {
+              "name": "Run ./.github/actions/setup",
+              "s": 5
+            },
+            {
+              "name": "Run bun run test:tooling",
+              "s": 10
+            },
+            {
+              "name": "Post Run ./.github/actions/setup",
+              "s": 1
+            },
+            {
+              "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 0
+            },
+            {
+              "name": "Complete job",
+              "s": 0
+            }
+          ]
+        },
+        {
+          "name": "fmt",
+          "wall_s": 12,
+          "steps": [
+            {
+              "name": "Set up job",
+              "s": 1
+            },
+            {
+              "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 1
+            },
+            {
+              "name": "Run ./.github/actions/setup",
+              "s": 5
+            },
+            {
+              "name": "Run bun run fmt:check",
+              "s": 0
+            },
+            {
+              "name": "Post Run ./.github/actions/setup",
+              "s": 0
+            },
+            {
+              "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 1
+            },
+            {
+              "name": "Complete job",
+              "s": 0
+            }
+          ]
+        },
+        {
+          "name": "lint",
+          "wall_s": 7,
+          "steps": [
+            {
+              "name": "Set up job",
+              "s": 0
+            },
+            {
+              "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 1
+            },
+            {
+              "name": "Run ./.github/actions/setup",
+              "s": 2
+            },
+            {
+              "name": "Run bun run lint",
+              "s": 1
+            },
+            {
+              "name": "Post Run ./.github/actions/setup",
+              "s": 0
+            },
+            {
+              "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 0
+            },
+            {
+              "name": "Complete job",
+              "s": 0
+            }
+          ]
+        },
+        {
+          "name": "build",
+          "wall_s": 7,
+          "steps": [
+            {
+              "name": "Set up job",
+              "s": 1
+            },
+            {
+              "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 1
+            },
+            {
+              "name": "Run ./.github/actions/setup",
+              "s": 2
+            },
+            {
+              "name": "Run bun run build",
+              "s": 0
+            },
+            {
+              "name": "Post Run ./.github/actions/setup",
+              "s": 1
+            },
+            {
+              "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 0
+            },
+            {
+              "name": "Complete job",
+              "s": 0
+            }
+          ]
+        },
+        {
+          "name": "typecheck",
+          "wall_s": 11,
+          "steps": [
+            {
+              "name": "Set up job",
+              "s": 1
+            },
+            {
+              "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 1
+            },
+            {
+              "name": "Run ./.github/actions/setup",
+              "s": 5
+            },
+            {
+              "name": "Run bun run check",
+              "s": 0
+            },
+            {
+              "name": "Post Run ./.github/actions/setup",
+              "s": 0
+            },
+            {
+              "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 1
+            },
+            {
+              "name": "Complete job",
+              "s": 0
+            }
+          ]
+        },
+        {
+          "name": "plan",
+          "wall_s": 9,
+          "steps": [
+            {
+              "name": "Set up job",
+              "s": 0
+            },
+            {
+              "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 1
+            },
+            {
+              "name": "Run ./.github/actions/setup",
+              "s": 4
+            },
+            {
+              "name": "Run actions/cache/restore@55cc8345863c7cc4c66a329aec7e433d2d1c52a9",
+              "s": 0
+            },
+            {
+              "name": "Run set -euo pipefail",
+              "s": 0
+            },
+            {
+              "name": "Post Run ./.github/actions/setup",
+              "s": 1
+            },
+            {
+              "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 0
+            },
+            {
+              "name": "Complete job",
+              "s": 0
+            }
+          ]
+        },
+        {
+          "name": "test (shard 1)",
+          "wall_s": 17,
+          "steps": [
+            {
+              "name": "Set up job",
+              "s": 1
+            },
+            {
+              "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 0
+            },
+            {
+              "name": "Run ./.github/actions/setup",
+              "s": 4
+            },
+            {
+              "name": "bun test",
+              "s": 9
+            },
+            {
+              "name": "Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9",
+              "s": 1
+            },
+            {
+              "name": "Post Run ./.github/actions/setup",
+              "s": 0
+            },
+            {
+              "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 0
+            },
+            {
+              "name": "Complete job",
+              "s": 0
+            }
+          ]
+        },
+        {
+          "name": "test (shard 3)",
+          "wall_s": 18,
+          "steps": [
+            {
+              "name": "Set up job",
+              "s": 0
+            },
+            {
+              "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 1
+            },
+            {
+              "name": "Run ./.github/actions/setup",
+              "s": 2
+            },
+            {
+              "name": "bun test",
+              "s": 12
+            },
+            {
+              "name": "Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9",
+              "s": 0
+            },
+            {
+              "name": "Post Run ./.github/actions/setup",
+              "s": 1
+            },
+            {
+              "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 0
+            },
+            {
+              "name": "Complete job",
+              "s": 0
+            }
+          ]
+        },
+        {
+          "name": "test (shard 2)",
+          "wall_s": 20,
+          "steps": [
+            {
+              "name": "Set up job",
+              "s": 1
+            },
+            {
+              "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 1
+            },
+            {
+              "name": "Run ./.github/actions/setup",
+              "s": 2
+            },
+            {
+              "name": "bun test",
+              "s": 13
+            },
+            {
+              "name": "Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9",
+              "s": 1
+            },
+            {
+              "name": "Post Run ./.github/actions/setup",
+              "s": 0
+            },
+            {
+              "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 0
+            },
+            {
+              "name": "Complete job",
+              "s": 0
+            }
+          ]
+        },
+        {
+          "name": "test (shard 0)",
+          "wall_s": 26,
+          "steps": [
+            {
+              "name": "Set up job",
+              "s": 2
+            },
+            {
+              "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 4
+            },
+            {
+              "name": "Run ./.github/actions/setup",
+              "s": 6
+            },
+            {
+              "name": "bun test",
+              "s": 9
+            },
+            {
+              "name": "Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9",
+              "s": 1
+            },
+            {
+              "name": "Post Run ./.github/actions/setup",
+              "s": 1
+            },
+            {
+              "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 0
+            },
+            {
+              "name": "Complete job",
+              "s": 0
+            }
+          ]
+        },
+        {
+          "name": "ci-ok",
+          "wall_s": 3,
+          "steps": [
+            {
+              "name": "Set up job",
+              "s": 0
+            },
+            {
+              "name": "check needs",
+              "s": 0
+            },
+            {
+              "name": "Complete job",
+              "s": 0
+            }
+          ]
+        }
+      ],
+      "test_files": 131,
+      "tests_passed": 2053
+    },
+    {
+      "run_id": 44927640112,
+      "head_sha": "d7774181182e182921949da3964462b769aa9f68",
+      "workflow": "fast",
+      "mode": "pr",
+      "attempt": 1,
+      "url": "https://github.com/alchristleo/ci-fast-optimizer-setup/actions/runs/44927640112",
+      "conclusion": "success",
+      "created_at": "2026-11-21T17:00:27Z",
+      "queue_s": 3,
+      "wall_s": 34,
+      "jobs": [
+        {
+          "name": "plan",
+          "wall_s": 7,
+          "steps": [
+            {
+              "name": "Set up job",
+              "s": 0
+            },
+            {
+              "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 1
+            },
+            {
+              "name": "Run ./.github/actions/setup",
+              "s": 2
+            },
+            {
+              "name": "Run actions/cache/restore@55cc8345863c7cc4c66a329aec7e433d2d1c52a9",
+              "s": 1
+            },
+            {
+              "name": "Run set -euo pipefail",
+              "s": 0
+            },
+            {
+              "name": "Post Run ./.github/actions/setup",
+              "s": 0
+            },
+            {
+              "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 0
+            },
+            {
+              "name": "Complete job",
+              "s": 0
+            }
+          ]
+        },
+        {
+          "name": "typecheck",
+          "wall_s": 9,
+          "steps": [
+            {
+              "name": "Set up job",
+              "s": 1
+            },
+            {
+              "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 1
+            },
+            {
+              "name": "Run ./.github/actions/setup",
+              "s": 4
+            },
+            {
+              "name": "Run bun run check",
+              "s": 0
+            },
+            {
+              "name": "Post Run ./.github/actions/setup",
+              "s": 0
+            },
+            {
+              "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 0
+            },
+            {
+              "name": "Complete job",
+              "s": 0
+            }
+          ]
+        },
+        {
+          "name": "build",
+          "wall_s": 7,
+          "steps": [
+            {
+              "name": "Set up job",
+              "s": 0
+            },
+            {
+              "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 1
+            },
+            {
+              "name": "Run ./.github/actions/setup",
+              "s": 2
+            },
+            {
+              "name": "Run bun run build",
+              "s": 0
+            },
+            {
+              "name": "Post Run ./.github/actions/setup",
+              "s": 1
+            },
+            {
+              "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 0
+            },
+            {
+              "name": "Complete job",
+              "s": 0
+            }
+          ]
+        },
+        {
+          "name": "tooling",
+          "wall_s": 17,
+          "steps": [
+            {
+              "name": "Set up job",
+              "s": 0
+            },
+            {
+              "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 1
+            },
+            {
+              "name": "Run ./.github/actions/setup",
+              "s": 5
+            },
+            {
+              "name": "Run bun run test:tooling",
+              "s": 8
+            },
+            {
+              "name": "Post Run ./.github/actions/setup",
+              "s": 0
+            },
+            {
+              "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 0
+            },
+            {
+              "name": "Complete job",
+              "s": 0
+            }
+          ]
+        },
+        {
+          "name": "lint",
+          "wall_s": 7,
+          "steps": [
+            {
+              "name": "Set up job",
+              "s": 1
+            },
+            {
+              "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 0
+            },
+            {
+              "name": "Run ./.github/actions/setup",
+              "s": 3
+            },
+            {
+              "name": "Run bun run lint",
+              "s": 0
+            },
+            {
+              "name": "Post Run ./.github/actions/setup",
+              "s": 1
+            },
+            {
+              "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 0
+            },
+            {
+              "name": "Complete job",
+              "s": 0
+            }
+          ]
+        },
+        {
+          "name": "fmt",
+          "wall_s": 11,
+          "steps": [
+            {
+              "name": "Set up job",
+              "s": 0
+            },
+            {
+              "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 2
+            },
+            {
+              "name": "Run ./.github/actions/setup",
+              "s": 5
+            },
+            {
+              "name": "Run bun run fmt:check",
+              "s": 0
+            },
+            {
+              "name": "Post Run ./.github/actions/setup",
+              "s": 0
+            },
+            {
+              "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 0
+            },
+            {
+              "name": "Complete job",
+              "s": 0
+            }
+          ]
+        },
+        {
+          "name": "test (shard 3)",
+          "wall_s": 12,
+          "steps": [
+            {
+              "name": "Set up job",
+              "s": 1
+            },
+            {
+              "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 1
+            },
+            {
+              "name": "Run ./.github/actions/setup",
+              "s": 5
+            },
+            {
+              "name": "bun test",
+              "s": 1
+            },
+            {
+              "name": "Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9",
+              "s": 2
+            },
+            {
+              "name": "Post Run ./.github/actions/setup",
+              "s": 0
+            },
+            {
+              "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 0
+            },
+            {
+              "name": "Complete job",
+              "s": 0
+            }
+          ]
+        },
+        {
+          "name": "test (shard 0)",
+          "wall_s": 15,
+          "steps": [
+            {
+              "name": "Set up job",
+              "s": 0
+            },
+            {
+              "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 2
+            },
+            {
+              "name": "Run ./.github/actions/setup",
+              "s": 5
+            },
+            {
+              "name": "bun test",
+              "s": 2
+            },
+            {
+              "name": "Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9",
+              "s": 2
+            },
+            {
+              "name": "Post Run ./.github/actions/setup",
+              "s": 0
+            },
+            {
+              "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 1
+            },
+            {
+              "name": "Complete job",
+              "s": 0
+            }
+          ]
+        },
+        {
+          "name": "test (shard 1)",
+          "wall_s": 21,
+          "steps": [
+            {
+              "name": "Set up job",
+              "s": 2
+            },
+            {
+              "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 5
+            },
+            {
+              "name": "Run ./.github/actions/setup",
+              "s": 6
+            },
+            {
+              "name": "bun test",
+              "s": 2
+            },
+            {
+              "name": "Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9",
+              "s": 1
+            },
+            {
+              "name": "Post Run ./.github/actions/setup",
+              "s": 1
+            },
+            {
+              "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 0
+            },
+            {
+              "name": "Complete job",
+              "s": 0
+            }
+          ]
+        },
+        {
+          "name": "test (shard 2)",
+          "wall_s": 9,
+          "steps": [
+            {
+              "name": "Set up job",
+              "s": 1
+            },
+            {
+              "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 1
+            },
+            {
+              "name": "Run ./.github/actions/setup",
+              "s": 2
+            },
+            {
+              "name": "bun test",
+              "s": 2
+            },
+            {
+              "name": "Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9",
+              "s": 1
+            },
+            {
+              "name": "Post Run ./.github/actions/setup",
+              "s": 1
+            },
+            {
+              "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 0
+            },
+            {
+              "name": "Complete job",
+              "s": 0
+            }
+          ]
+        },
+        {
+          "name": "ci-ok",
+          "wall_s": 2,
+          "steps": [
+            {
+              "name": "Set up job",
+              "s": 0
+            },
+            {
+              "name": "check needs",
+              "s": 1
+            },
+            {
+              "name": "Complete job",
+              "s": 0
+            }
+          ]
+        }
+      ],
+      "test_files": 8,
+      "tests_passed": 189
+    },
+    {
+      "run_id": 44927728691,
+      "head_sha": "5673b4667aa98fc534ff7bba7073597f825907f0",
+      "workflow": "baseline",
+      "mode": "full",
+      "attempt": 1,
+      "url": "https://github.com/alchristleo/ci-fast-optimizer-setup/actions/runs/44927728691",
+      "conclusion": "success",
+      "created_at": "2026-11-21T17:01:18Z",
+      "queue_s": 3,
+      "wall_s": 282,
+      "jobs": [
+        {
+          "name": "test (baseline)",
+          "wall_s": 282,
+          "steps": [
+            {
+              "name": "Set up job",
+              "s": 0
+            },
+            {
+              "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 1
+            },
+            {
+              "name": "Run actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1",
+              "s": 1
+            },
+            {
+              "name": "Run ./.github/actions/setup",
+              "s": 2
+            },
+            {
+              "name": "fmt",
+              "s": 0
+            },
+            {
+              "name": "lint",
+              "s": 0
+            },
+            {
+              "name": "typecheck",
+              "s": 6
+            },
+            {
+              "name": "build",
+              "s": 0
+            },
+            {
+              "name": "vitest",
+              "s": 268
+            },
+            {
+              "name": "Post Run ./.github/actions/setup",
+              "s": 0
+            },
+            {
+              "name": "Post Run actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1",
+              "s": 0
+            },
+            {
+              "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 1
+            },
+            {
+              "name": "Complete job",
+              "s": 0
+            }
+          ]
+        }
+      ],
+      "test_files": 131,
+      "tests_passed": 2053
+    },
+    {
+      "run_id": 44928190160,
+      "head_sha": "5673b4667aa98fc534ff7bba7073597f825907f0",
+      "workflow": "fast",
+      "mode": "full",
+      "attempt": 1,
+      "url": "https://github.com/alchristleo/ci-fast-optimizer-setup/actions/runs/44928190160",
+      "conclusion": "success",
+      "created_at": "2026-11-21T17:06:12Z",
+      "queue_s": 3,
+      "wall_s": 51,
+      "jobs": [
+        {
+          "name": "typecheck",
+          "wall_s": 7,
+          "steps": [
+            {
+              "name": "Set up job",
+              "s": 1
+            },
+            {
+              "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 1
+            },
+            {
+              "name": "Run ./.github/actions/setup",
+              "s": 2
+            },
+            {
+              "name": "Run bun run check",
+              "s": 0
+            },
+            {
+              "name": "Post Run ./.github/actions/setup",
+              "s": 1
+            },
+            {
+              "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 0
+            },
+            {
+              "name": "Complete job",
+              "s": 0
+            }
+          ]
+        },
+        {
+          "name": "fmt",
+          "wall_s": 8,
+          "steps": [
+            {
+              "name": "Set up job",
+              "s": 1
+            },
+            {
+              "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 1
+            },
+            {
+              "name": "Run ./.github/actions/setup",
+              "s": 3
+            },
+            {
+              "name": "Run bun run fmt:check",
+              "s": 0
+            },
+            {
+              "name": "Post Run ./.github/actions/setup",
+              "s": 1
+            },
+            {
+              "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 0
+            },
+            {
+              "name": "Complete job",
+              "s": 0
+            }
+          ]
+        },
+        {
+          "name": "lint",
+          "wall_s": 11,
+          "steps": [
+            {
+              "name": "Set up job",
+              "s": 0
+            },
+            {
+              "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 2
+            },
+            {
+              "name": "Run ./.github/actions/setup",
+              "s": 4
+            },
+            {
+              "name": "Run bun run lint",
+              "s": 2
+            },
+            {
+              "name": "Post Run ./.github/actions/setup",
+              "s": 0
+            },
+            {
+              "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 0
+            },
+            {
+              "name": "Complete job",
+              "s": 0
+            }
+          ]
+        },
+        {
+          "name": "tooling",
+          "wall_s": 15,
+          "steps": [
+            {
+              "name": "Set up job",
+              "s": 0
+            },
+            {
+              "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 1
+            },
+            {
+              "name": "Run ./.github/actions/setup",
+              "s": 5
+            },
+            {
+              "name": "Run bun run test:tooling",
+              "s": 4
+            },
+            {
+              "name": "Post Run ./.github/actions/setup",
+              "s": 1
+            },
+            {
+              "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 0
+            },
+            {
+              "name": "Complete job",
+              "s": 0
+            }
+          ]
+        },
+        {
+          "name": "build",
+          "wall_s": 8,
+          "steps": [
+            {
+              "name": "Set up job",
+              "s": 0
+            },
+            {
+              "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 2
+            },
+            {
+              "name": "Run ./.github/actions/setup",
+              "s": 3
+            },
+            {
+              "name": "Run bun run build",
+              "s": 0
+            },
+            {
+              "name": "Post Run ./.github/actions/setup",
+              "s": 0
+            },
+            {
+              "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 0
+            },
+            {
+              "name": "Complete job",
+              "s": 0
+            }
+          ]
+        },
+        {
+          "name": "plan",
+          "wall_s": 17,
+          "steps": [
+            {
+              "name": "Set up job",
+              "s": 2
+            },
+            {
+              "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 3
+            },
+            {
+              "name": "Run ./.github/actions/setup",
+              "s": 6
+            },
+            {
+              "name": "Run actions/cache/restore@55cc8345863c7cc4c66a329aec7e433d2d1c52a9",
+              "s": 1
+            },
+            {
+              "name": "Run set -euo pipefail",
+              "s": 0
+            },
+            {
+              "name": "Post Run ./.github/actions/setup",
+              "s": 0
+            },
+            {
+              "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 1
+            },
+            {
+              "name": "Complete job",
+              "s": 0
+            }
+          ]
+        },
+        {
+          "name": "test (shard 2)",
+          "wall_s": 26,
+          "steps": [
+            {
+              "name": "Set up job",
+              "s": 0
+            },
+            {
+              "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 2
+            },
+            {
+              "name": "Run ./.github/actions/setup",
+              "s": 4
+            },
+            {
+              "name": "bun test",
+              "s": 15
+            },
+            {
+              "name": "Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9",
+              "s": 1
+            },
+            {
+              "name": "Post Run ./.github/actions/setup",
+              "s": 0
+            },
+            {
+              "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 1
+            },
+            {
+              "name": "Complete job",
+              "s": 0
+            }
+          ]
+        },
+        {
+          "name": "test (shard 3)",
+          "wall_s": 26,
+          "steps": [
+            {
+              "name": "Set up job",
+              "s": 1
+            },
+            {
+              "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 1
+            },
+            {
+              "name": "Run ./.github/actions/setup",
+              "s": 5
+            },
+            {
+              "name": "bun test",
+              "s": 14
+            },
+            {
+              "name": "Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9",
+              "s": 1
+            },
+            {
+              "name": "Post Run ./.github/actions/setup",
+              "s": 0
+            },
+            {
+              "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 1
+            },
+            {
+              "name": "Complete job",
+              "s": 0
+            }
+          ]
+        },
+        {
+          "name": "test (shard 0)",
+          "wall_s": 27,
+          "steps": [
+            {
+              "name": "Set up job",
+              "s": 1
+            },
+            {
+              "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 1
+            },
+            {
+              "name": "Run ./.github/actions/setup",
+              "s": 6
+            },
+            {
+              "name": "bun test",
+              "s": 14
+            },
+            {
+              "name": "Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9",
+              "s": 1
+            },
+            {
+              "name": "Post Run ./.github/actions/setup",
+              "s": 1
+            },
+            {
+              "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 0
+            },
+            {
+              "name": "Complete job",
+              "s": 0
+            }
+          ]
+        },
+        {
+          "name": "test (shard 1)",
+          "wall_s": 22,
+          "steps": [
+            {
+              "name": "Set up job",
+              "s": 1
+            },
+            {
+              "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 1
+            },
+            {
+              "name": "Run ./.github/actions/setup",
+              "s": 2
+            },
+            {
+              "name": "bun test",
+              "s": 15
+            },
+            {
+              "name": "Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9",
+              "s": 0
+            },
+            {
+              "name": "Post Run ./.github/actions/setup",
+              "s": 1
+            },
+            {
+              "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 0
+            },
+            {
+              "name": "Complete job",
+              "s": 0
+            }
+          ]
+        },
+        {
+          "name": "ci-ok",
+          "wall_s": 3,
+          "steps": [
+            {
+              "name": "Set up job",
+              "s": 0
+            },
+            {
+              "name": "check needs",
+              "s": 0
+            },
+            {
+              "name": "Complete job",
+              "s": 0
+            }
+          ]
+        }
+      ],
+      "test_files": 131,
+      "tests_passed": 2053
+    },
+    {
+      "run_id": 44928294466,
+      "head_sha": "d7774181182e182921949da3964462b769aa9f68",
+      "workflow": "fast",
+      "mode": "pr",
+      "attempt": 1,
+      "url": "https://github.com/alchristleo/ci-fast-optimizer-setup/actions/runs/44928294466",
+      "conclusion": "success",
+      "created_at": "2026-11-21T17:07:22Z",
+      "queue_s": 3,
+      "wall_s": 35,
+      "jobs": [
+        {
+          "name": "typecheck",
+          "wall_s": 8,
+          "steps": [
+            {
+              "name": "Set up job",
+              "s": 1
+            },
+            {
+              "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 1
+            },
+            {
+              "name": "Run ./.github/actions/setup",
+              "s": 3
+            },
+            {
+              "name": "Run bun run check",
+              "s": 0
+            },
+            {
+              "name": "Post Run ./.github/actions/setup",
+              "s": 1
+            },
+            {
+              "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 0
+            },
+            {
+              "name": "Complete job",
+              "s": 0
+            }
+          ]
+        },
+        {
+          "name": "build",
+          "wall_s": 8,
+          "steps": [
+            {
+              "name": "Set up job",
+              "s": 0
+            },
+            {
+              "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 1
+            },
+            {
+              "name": "Run ./.github/actions/setup",
+              "s": 3
+            },
+            {
+              "name": "Run bun run build",
+              "s": 1
+            },
+            {
+              "name": "Post Run ./.github/actions/setup",
+              "s": 0
+            },
+            {
+              "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 0
+            },
+            {
+              "name": "Complete job",
+              "s": 0
+            }
+          ]
+        },
+        {
+          "name": "lint",
+          "wall_s": 15,
+          "steps": [
+            {
+              "name": "Set up job",
+              "s": 1
+            },
+            {
+              "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 1
+            },
+            {
+              "name": "Run ./.github/actions/setup",
+              "s": 3
+            },
+            {
+              "name": "Run bun run lint",
+              "s": 8
+            },
+            {
+              "name": "Post Run ./.github/actions/setup",
+              "s": 1
+            },
+            {
+              "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 0
+            },
+            {
+              "name": "Complete job",
+              "s": 0
+            }
+          ]
+        },
+        {
+          "name": "fmt",
+          "wall_s": 8,
+          "steps": [
+            {
+              "name": "Set up job",
+              "s": 0
+            },
+            {
+              "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 1
+            },
+            {
+              "name": "Run ./.github/actions/setup",
+              "s": 3
+            },
+            {
+              "name": "Run bun run fmt:check",
+              "s": 0
+            },
+            {
+              "name": "Post Run ./.github/actions/setup",
+              "s": 1
+            },
+            {
+              "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 0
+            },
+            {
+              "name": "Complete job",
+              "s": 0
+            }
+          ]
+        },
+        {
+          "name": "plan",
+          "wall_s": 13,
+          "steps": [
+            {
+              "name": "Set up job",
+              "s": 1
+            },
+            {
+              "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 1
+            },
+            {
+              "name": "Run ./.github/actions/setup",
+              "s": 5
+            },
+            {
+              "name": "Run actions/cache/restore@55cc8345863c7cc4c66a329aec7e433d2d1c52a9",
+              "s": 1
+            },
+            {
+              "name": "Run set -euo pipefail",
+              "s": 0
+            },
+            {
+              "name": "Post Run ./.github/actions/setup",
+              "s": 1
+            },
+            {
+              "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 0
+            },
+            {
+              "name": "Complete job",
+              "s": 0
+            }
+          ]
+        },
+        {
+          "name": "tooling",
+          "wall_s": 15,
+          "steps": [
+            {
+              "name": "Set up job",
+              "s": 0
+            },
+            {
+              "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 1
+            },
+            {
+              "name": "Run ./.github/actions/setup",
+              "s": 3
+            },
+            {
+              "name": "Run bun run test:tooling",
+              "s": 8
+            },
+            {
+              "name": "Post Run ./.github/actions/setup",
+              "s": 1
+            },
+            {
+              "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 0
+            },
+            {
+              "name": "Complete job",
+              "s": 0
+            }
+          ]
+        },
+        {
+          "name": "test (shard 3)",
+          "wall_s": 11,
+          "steps": [
+            {
+              "name": "Set up job",
+              "s": 1
+            },
+            {
+              "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 1
+            },
+            {
+              "name": "Run ./.github/actions/setup",
+              "s": 3
+            },
+            {
+              "name": "bun test",
+              "s": 3
+            },
+            {
+              "name": "Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9",
+              "s": 1
+            },
+            {
+              "name": "Post Run ./.github/actions/setup",
+              "s": 0
+            },
+            {
+              "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 1
+            },
+            {
+              "name": "Complete job",
+              "s": 0
+            }
+          ]
+        },
+        {
+          "name": "test (shard 2)",
+          "wall_s": 10,
+          "steps": [
+            {
+              "name": "Set up job",
+              "s": 0
+            },
+            {
+              "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 1
+            },
+            {
+              "name": "Run ./.github/actions/setup",
+              "s": 3
+            },
+            {
+              "name": "bun test",
+              "s": 2
+            },
+            {
+              "name": "Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9",
+              "s": 1
+            },
+            {
+              "name": "Post Run ./.github/actions/setup",
+              "s": 0
+            },
+            {
+              "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 0
+            },
+            {
+              "name": "Complete job",
+              "s": 0
+            }
+          ]
+        },
+        {
+          "name": "test (shard 1)",
+          "wall_s": 15,
+          "steps": [
+            {
+              "name": "Set up job",
+              "s": 0
+            },
+            {
+              "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 1
+            },
+            {
+              "name": "Run ./.github/actions/setup",
+              "s": 6
+            },
+            {
+              "name": "bun test",
+              "s": 3
+            },
+            {
+              "name": "Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9",
+              "s": 1
+            },
+            {
+              "name": "Post Run ./.github/actions/setup",
+              "s": 1
+            },
+            {
+              "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 0
+            },
+            {
+              "name": "Complete job",
+              "s": 0
+            }
+          ]
+        },
+        {
+          "name": "test (shard 0)",
+          "wall_s": 10,
+          "steps": [
+            {
+              "name": "Set up job",
+              "s": 0
+            },
+            {
+              "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 1
+            },
+            {
+              "name": "Run ./.github/actions/setup",
+              "s": 3
+            },
+            {
+              "name": "bun test",
+              "s": 2
+            },
+            {
+              "name": "Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9",
+              "s": 1
+            },
+            {
+              "name": "Post Run ./.github/actions/setup",
+              "s": 0
+            },
+            {
+              "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 1
+            },
+            {
+              "name": "Complete job",
+              "s": 0
+            }
+          ]
+        },
+        {
+          "name": "ci-ok",
+          "wall_s": 3,
+          "steps": [
+            {
+              "name": "Set up job",
+              "s": 0
+            },
+            {
+              "name": "check needs",
+              "s": 0
+            },
+            {
+              "name": "Complete job",
+              "s": 0
+            }
+          ]
+        }
+      ],
+      "test_files": 8,
+      "tests_passed": 189
+    },
+    {
+      "run_id": 44928383240,
+      "head_sha": "5673b4667aa98fc534ff7bba7073597f825907f0",
+      "workflow": "baseline",
+      "mode": "full",
+      "attempt": 1,
+      "url": "https://github.com/alchristleo/ci-fast-optimizer-setup/actions/runs/44928383240",
+      "conclusion": "success",
+      "created_at": "2026-11-21T17:08:19Z",
+      "queue_s": 3,
+      "wall_s": 219,
+      "jobs": [
+        {
+          "name": "test (baseline)",
+          "wall_s": 219,
+          "steps": [
+            {
+              "name": "Set up job",
+              "s": 0
+            },
+            {
+              "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 1
+            },
+            {
+              "name": "Run actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1",
+              "s": 1
+            },
+            {
+              "name": "Run ./.github/actions/setup",
+              "s": 2
+            },
+            {
+              "name": "fmt",
+              "s": 1
+            },
+            {
+              "name": "lint",
+              "s": 0
+            },
+            {
+              "name": "typecheck",
+              "s": 5
+            },
+            {
+              "name": "build",
+              "s": 0
+            },
+            {
+              "name": "vitest",
+              "s": 205
+            },
+            {
+              "name": "Post Run ./.github/actions/setup",
+              "s": 1
+            },
+            {
+              "name": "Post Run actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1",
+              "s": 0
+            },
+            {
+              "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 0
+            },
+            {
+              "name": "Complete job",
+              "s": 0
+            }
+          ]
+        }
+      ],
+      "test_files": 131,
+      "tests_passed": 2053
+    },
+    {
+      "run_id": 44928739641,
+      "head_sha": "5673b4667aa98fc534ff7bba7073597f825907f0",
+      "workflow": "fast",
+      "mode": "full",
+      "attempt": 1,
+      "url": "https://github.com/alchristleo/ci-fast-optimizer-setup/actions/runs/44928739641",
+      "conclusion": "success",
+      "created_at": "2026-11-21T17:12:08Z",
+      "queue_s": 3,
+      "wall_s": 43,
+      "jobs": [
+        {
+          "name": "plan",
+          "wall_s": 9,
+          "steps": [
+            {
+              "name": "Set up job",
+              "s": 0
+            },
+            {
+              "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 1
+            },
+            {
+              "name": "Run ./.github/actions/setup",
+              "s": 3
+            },
+            {
+              "name": "Run actions/cache/restore@55cc8345863c7cc4c66a329aec7e433d2d1c52a9",
+              "s": 1
+            },
+            {
+              "name": "Run set -euo pipefail",
+              "s": 0
+            },
+            {
+              "name": "Post Run ./.github/actions/setup",
+              "s": 0
+            },
+            {
+              "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 1
+            },
+            {
+              "name": "Complete job",
+              "s": 0
+            }
+          ]
+        },
+        {
+          "name": "typecheck",
+          "wall_s": 9,
+          "steps": [
+            {
+              "name": "Set up job",
+              "s": 0
+            },
+            {
+              "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 1
+            },
+            {
+              "name": "Run ./.github/actions/setup",
+              "s": 4
+            },
+            {
+              "name": "Run bun run check",
+              "s": 0
+            },
+            {
+              "name": "Post Run ./.github/actions/setup",
+              "s": 1
+            },
+            {
+              "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 0
+            },
+            {
+              "name": "Complete job",
+              "s": 0
+            }
+          ]
+        },
+        {
+          "name": "fmt",
+          "wall_s": 8,
+          "steps": [
+            {
+              "name": "Set up job",
+              "s": 0
+            },
+            {
+              "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 1
+            },
+            {
+              "name": "Run ./.github/actions/setup",
+              "s": 3
+            },
+            {
+              "name": "Run bun run fmt:check",
+              "s": 1
+            },
+            {
+              "name": "Post Run ./.github/actions/setup",
+              "s": 0
+            },
+            {
+              "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 0
+            },
+            {
+              "name": "Complete job",
+              "s": 0
+            }
+          ]
+        },
+        {
+          "name": "lint",
+          "wall_s": 8,
+          "steps": [
+            {
+              "name": "Set up job",
+              "s": 0
+            },
+            {
+              "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 1
+            },
+            {
+              "name": "Run ./.github/actions/setup",
+              "s": 3
+            },
+            {
+              "name": "Run bun run lint",
+              "s": 1
+            },
+            {
+              "name": "Post Run ./.github/actions/setup",
+              "s": 0
+            },
+            {
+              "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 0
+            },
+            {
+              "name": "Complete job",
+              "s": 0
+            }
+          ]
+        },
+        {
+          "name": "tooling",
+          "wall_s": 15,
+          "steps": [
+            {
+              "name": "Set up job",
+              "s": 0
+            },
+            {
+              "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 1
+            },
+            {
+              "name": "Run ./.github/actions/setup",
+              "s": 3
+            },
+            {
+              "name": "Run bun run test:tooling",
+              "s": 7
+            },
+            {
+              "name": "Post Run ./.github/actions/setup",
+              "s": 0
+            },
+            {
+              "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 0
+            },
+            {
+              "name": "Complete job",
+              "s": 0
+            }
+          ]
+        },
+        {
+          "name": "build",
+          "wall_s": 10,
+          "steps": [
+            {
+              "name": "Set up job",
+              "s": 1
+            },
+            {
+              "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 1
+            },
+            {
+              "name": "Run ./.github/actions/setup",
+              "s": 4
+            },
+            {
+              "name": "Run bun run build",
+              "s": 0
+            },
+            {
+              "name": "Post Run ./.github/actions/setup",
+              "s": 0
+            },
+            {
+              "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 0
+            },
+            {
+              "name": "Complete job",
+              "s": 0
+            }
+          ]
+        },
+        {
+          "name": "test (shard 3)",
+          "wall_s": 22,
+          "steps": [
+            {
+              "name": "Set up job",
+              "s": 1
+            },
+            {
+              "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 0
+            },
+            {
+              "name": "Run ./.github/actions/setup",
+              "s": 3
+            },
+            {
+              "name": "bun test",
+              "s": 13
+            },
+            {
+              "name": "Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9",
+              "s": 1
+            },
+            {
+              "name": "Post Run ./.github/actions/setup",
+              "s": 1
+            },
+            {
+              "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 0
+            },
+            {
+              "name": "Complete job",
+              "s": 0
+            }
+          ]
+        },
+        {
+          "name": "test (shard 1)",
+          "wall_s": 26,
+          "steps": [
+            {
+              "name": "Set up job",
+              "s": 1
+            },
+            {
+              "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 1
+            },
+            {
+              "name": "Run ./.github/actions/setup",
+              "s": 5
+            },
+            {
+              "name": "bun test",
+              "s": 15
+            },
+            {
+              "name": "Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9",
+              "s": 1
+            },
+            {
+              "name": "Post Run ./.github/actions/setup",
+              "s": 0
+            },
+            {
+              "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 1
+            },
+            {
+              "name": "Complete job",
+              "s": 0
+            }
+          ]
+        },
+        {
+          "name": "test (shard 2)",
+          "wall_s": 20,
+          "steps": [
+            {
+              "name": "Set up job",
+              "s": 2
+            },
+            {
+              "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 3
+            },
+            {
+              "name": "Run ./.github/actions/setup",
+              "s": 2
+            },
+            {
+              "name": "bun test",
+              "s": 9
+            },
+            {
+              "name": "Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9",
+              "s": 1
+            },
+            {
+              "name": "Post Run ./.github/actions/setup",
+              "s": 0
+            },
+            {
+              "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 0
+            },
+            {
+              "name": "Complete job",
+              "s": 0
+            }
+          ]
+        },
+        {
+          "name": "test (shard 0)",
+          "wall_s": 21,
+          "steps": [
+            {
+              "name": "Set up job",
+              "s": 2
+            },
+            {
+              "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 4
+            },
+            {
+              "name": "Run ./.github/actions/setup",
+              "s": 2
+            },
+            {
+              "name": "bun test",
+              "s": 9
+            },
+            {
+              "name": "Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9",
+              "s": 1
+            },
+            {
+              "name": "Post Run ./.github/actions/setup",
+              "s": 0
+            },
+            {
+              "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 1
+            },
+            {
+              "name": "Complete job",
+              "s": 0
+            }
+          ]
+        },
+        {
+          "name": "ci-ok",
+          "wall_s": 4,
+          "steps": [
+            {
+              "name": "Set up job",
+              "s": 0
+            },
+            {
+              "name": "check needs",
+              "s": 0
+            },
+            {
+              "name": "Complete job",
+              "s": 0
+            }
+          ]
+        }
+      ],
+      "test_files": 131,
+      "tests_passed": 2053
+    },
+    {
+      "run_id": 44928836833,
+      "head_sha": "d7774181182e182921949da3964462b769aa9f68",
+      "workflow": "fast",
+      "mode": "pr",
+      "attempt": 1,
+      "url": "https://github.com/alchristleo/ci-fast-optimizer-setup/actions/runs/44928836833",
+      "conclusion": "success",
+      "created_at": "2026-11-21T17:13:12Z",
+      "queue_s": 3,
+      "wall_s": 38,
+      "jobs": [
+        {
+          "name": "build",
+          "wall_s": 7,
+          "steps": [
+            {
+              "name": "Set up job",
+              "s": 1
+            },
+            {
+              "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 1
+            },
+            {
+              "name": "Run ./.github/actions/setup",
+              "s": 3
+            },
+            {
+              "name": "Run bun run build",
+              "s": 0
+            },
+            {
+              "name": "Post Run ./.github/actions/setup",
+              "s": 0
+            },
+            {
+              "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 0
+            },
+            {
+              "name": "Complete job",
+              "s": 0
+            }
+          ]
+        },
+        {
+          "name": "typecheck",
+          "wall_s": 16,
+          "steps": [
+            {
+              "name": "Set up job",
+              "s": 2
+            },
+            {
+              "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 3
+            },
+            {
+              "name": "Run ./.github/actions/setup",
+              "s": 7
+            },
+            {
+              "name": "Run bun run check",
+              "s": 0
+            },
+            {
+              "name": "Post Run ./.github/actions/setup",
+              "s": 0
+            },
+            {
+              "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 0
+            },
+            {
+              "name": "Complete job",
+              "s": 0
+            }
+          ]
+        },
+        {
+          "name": "tooling",
+          "wall_s": 25,
+          "steps": [
+            {
+              "name": "Set up job",
+              "s": 2
+            },
+            {
+              "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 5
+            },
+            {
+              "name": "Run ./.github/actions/setup",
+              "s": 7
+            },
+            {
+              "name": "Run bun run test:tooling",
+              "s": 7
+            },
+            {
+              "name": "Post Run ./.github/actions/setup",
+              "s": 0
+            },
+            {
+              "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 0
+            },
+            {
+              "name": "Complete job",
+              "s": 0
+            }
+          ]
+        },
+        {
+          "name": "fmt",
+          "wall_s": 7,
+          "steps": [
+            {
+              "name": "Set up job",
+              "s": 1
+            },
+            {
+              "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 1
+            },
+            {
+              "name": "Run ./.github/actions/setup",
+              "s": 2
+            },
+            {
+              "name": "Run bun run fmt:check",
+              "s": 0
+            },
+            {
+              "name": "Post Run ./.github/actions/setup",
+              "s": 1
+            },
+            {
+              "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 0
+            },
+            {
+              "name": "Complete job",
+              "s": 0
+            }
+          ]
+        },
+        {
+          "name": "plan",
+          "wall_s": 12,
+          "steps": [
+            {
+              "name": "Set up job",
+              "s": 1
+            },
+            {
+              "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 1
+            },
+            {
+              "name": "Run ./.github/actions/setup",
+              "s": 5
+            },
+            {
+              "name": "Run actions/cache/restore@55cc8345863c7cc4c66a329aec7e433d2d1c52a9",
+              "s": 1
+            },
+            {
+              "name": "Run set -euo pipefail",
+              "s": 0
+            },
+            {
+              "name": "Post Run ./.github/actions/setup",
+              "s": 0
+            },
+            {
+              "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 1
+            },
+            {
+              "name": "Complete job",
+              "s": 0
+            }
+          ]
+        },
+        {
+          "name": "lint",
+          "wall_s": 10,
+          "steps": [
+            {
+              "name": "Set up job",
+              "s": 0
+            },
+            {
+              "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 2
+            },
+            {
+              "name": "Run ./.github/actions/setup",
+              "s": 4
+            },
+            {
+              "name": "Run bun run lint",
+              "s": 1
+            },
+            {
+              "name": "Post Run ./.github/actions/setup",
+              "s": 0
+            },
+            {
+              "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 0
+            },
+            {
+              "name": "Complete job",
+              "s": 0
+            }
+          ]
+        },
+        {
+          "name": "test (shard 1)",
+          "wall_s": 20,
+          "steps": [
+            {
+              "name": "Set up job",
+              "s": 2
+            },
+            {
+              "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 4
+            },
+            {
+              "name": "Run ./.github/actions/setup",
+              "s": 6
+            },
+            {
+              "name": "bun test",
+              "s": 2
+            },
+            {
+              "name": "Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9",
+              "s": 2
+            },
+            {
+              "name": "Post Run ./.github/actions/setup",
+              "s": 0
+            },
+            {
+              "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 0
+            },
+            {
+              "name": "Complete job",
+              "s": 0
+            }
+          ]
+        },
+        {
+          "name": "test (shard 0)",
+          "wall_s": 12,
+          "steps": [
+            {
+              "name": "Set up job",
+              "s": 2
+            },
+            {
+              "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 3
+            },
+            {
+              "name": "Run ./.github/actions/setup",
+              "s": 2
+            },
+            {
+              "name": "bun test",
+              "s": 2
+            },
+            {
+              "name": "Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9",
+              "s": 1
+            },
+            {
+              "name": "Post Run ./.github/actions/setup",
+              "s": 0
+            },
+            {
+              "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 0
+            },
+            {
+              "name": "Complete job",
+              "s": 0
+            }
+          ]
+        },
+        {
+          "name": "test (shard 3)",
+          "wall_s": 13,
+          "steps": [
+            {
+              "name": "Set up job",
+              "s": 0
+            },
+            {
+              "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 1
+            },
+            {
+              "name": "Run ./.github/actions/setup",
+              "s": 5
+            },
+            {
+              "name": "bun test",
+              "s": 2
+            },
+            {
+              "name": "Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9",
+              "s": 1
+            },
+            {
+              "name": "Post Run ./.github/actions/setup",
+              "s": 0
+            },
+            {
+              "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 1
+            },
+            {
+              "name": "Complete job",
+              "s": 0
+            }
+          ]
+        },
+        {
+          "name": "test (shard 2)",
+          "wall_s": 9,
+          "steps": [
+            {
+              "name": "Set up job",
+              "s": 1
+            },
+            {
+              "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 0
+            },
+            {
+              "name": "Run ./.github/actions/setup",
+              "s": 3
+            },
+            {
+              "name": "bun test",
+              "s": 2
+            },
+            {
+              "name": "Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9",
+              "s": 1
+            },
+            {
+              "name": "Post Run ./.github/actions/setup",
+              "s": 0
+            },
+            {
+              "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 1
+            },
+            {
+              "name": "Complete job",
+              "s": 0
+            }
+          ]
+        },
+        {
+          "name": "ci-ok",
+          "wall_s": 2,
+          "steps": [
+            {
+              "name": "Set up job",
+              "s": 0
+            },
+            {
+              "name": "check needs",
+              "s": 0
+            },
+            {
+              "name": "Complete job",
+              "s": 1
+            }
+          ]
+        }
+      ],
+      "test_files": 8,
+      "tests_passed": 189
+    },
+    {
+      "run_id": 44928920396,
+      "head_sha": "5673b4667aa98fc534ff7bba7073597f825907f0",
+      "workflow": "baseline",
+      "mode": "full",
+      "attempt": 1,
+      "url": "https://github.com/alchristleo/ci-fast-optimizer-setup/actions/runs/44928920396",
+      "conclusion": "success",
+      "created_at": "2026-11-21T17:14:09Z",
+      "queue_s": 3,
+      "wall_s": 173,
+      "jobs": [
+        {
+          "name": "test (baseline)",
+          "wall_s": 173,
+          "steps": [
+            {
+              "name": "Set up job",
+              "s": 1
+            },
+            {
+              "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 1
+            },
+            {
+              "name": "Run actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1",
+              "s": 3
+            },
+            {
+              "name": "Run ./.github/actions/setup",
+              "s": 4
+            },
+            {
+              "name": "fmt",
+              "s": 0
+            },
+            {
+              "name": "lint",
+              "s": 1
+            },
+            {
+              "name": "typecheck",
+              "s": 4
+            },
+            {
+              "name": "build",
+              "s": 0
+            },
+            {
+              "name": "vitest",
+              "s": 155
+            },
+            {
+              "name": "Post Run ./.github/actions/setup",
+              "s": 1
+            },
+            {
+              "name": "Post Run actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1",
+              "s": 0
+            },
+            {
+              "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 0
+            },
+            {
+              "name": "Complete job",
+              "s": 0
+            }
+          ]
+        }
+      ],
+      "test_files": 131,
+      "tests_passed": 2053
+    },
+    {
+      "run_id": 44929199698,
+      "head_sha": "5673b4667aa98fc534ff7bba7073597f825907f0",
+      "workflow": "fast",
+      "mode": "full",
+      "attempt": 1,
+      "url": "https://github.com/alchristleo/ci-fast-optimizer-setup/actions/runs/44929199698",
+      "conclusion": "success",
+      "created_at": "2026-11-21T17:17:13Z",
+      "queue_s": 3,
+      "wall_s": 44,
+      "jobs": [
+        {
+          "name": "fmt",
+          "wall_s": 11,
+          "steps": [
+            {
+              "name": "Set up job",
+              "s": 2
+            },
+            {
+              "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 5
+            },
+            {
+              "name": "Run ./.github/actions/setup",
+              "s": 2
+            },
+            {
+              "name": "Run bun run fmt:check",
+              "s": 0
+            },
+            {
+              "name": "Post Run ./.github/actions/setup",
+              "s": 1
+            },
+            {
+              "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 0
+            },
+            {
+              "name": "Complete job",
+              "s": 0
+            }
+          ]
+        },
+        {
+          "name": "lint",
+          "wall_s": 6,
+          "steps": [
+            {
+              "name": "Set up job",
+              "s": 1
+            },
+            {
+              "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 1
+            },
+            {
+              "name": "Run ./.github/actions/setup",
+              "s": 2
+            },
+            {
+              "name": "Run bun run lint",
+              "s": 0
+            },
+            {
+              "name": "Post Run ./.github/actions/setup",
+              "s": 1
+            },
+            {
+              "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 0
+            },
+            {
+              "name": "Complete job",
+              "s": 0
+            }
+          ]
+        },
+        {
+          "name": "build",
+          "wall_s": 7,
+          "steps": [
+            {
+              "name": "Set up job",
+              "s": 0
+            },
+            {
+              "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 2
+            },
+            {
+              "name": "Run ./.github/actions/setup",
+              "s": 2
+            },
+            {
+              "name": "Run bun run build",
+              "s": 0
+            },
+            {
+              "name": "Post Run ./.github/actions/setup",
+              "s": 1
+            },
+            {
+              "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 0
+            },
+            {
+              "name": "Complete job",
+              "s": 0
+            }
+          ]
+        },
+        {
+          "name": "plan",
+          "wall_s": 9,
+          "steps": [
+            {
+              "name": "Set up job",
+              "s": 0
+            },
+            {
+              "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 1
+            },
+            {
+              "name": "Run ./.github/actions/setup",
+              "s": 3
+            },
+            {
+              "name": "Run actions/cache/restore@55cc8345863c7cc4c66a329aec7e433d2d1c52a9",
+              "s": 1
+            },
+            {
+              "name": "Run set -euo pipefail",
+              "s": 0
+            },
+            {
+              "name": "Post Run ./.github/actions/setup",
+              "s": 0
+            },
+            {
+              "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 0
+            },
+            {
+              "name": "Complete job",
+              "s": 0
+            }
+          ]
+        },
+        {
+          "name": "typecheck",
+          "wall_s": 8,
+          "steps": [
+            {
+              "name": "Set up job",
+              "s": 0
+            },
+            {
+              "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 1
+            },
+            {
+              "name": "Run ./.github/actions/setup",
+              "s": 3
+            },
+            {
+              "name": "Run bun run check",
+              "s": 1
+            },
+            {
+              "name": "Post Run ./.github/actions/setup",
+              "s": 0
+            },
+            {
+              "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 0
+            },
+            {
+              "name": "Complete job",
+              "s": 0
+            }
+          ]
+        },
+        {
+          "name": "tooling",
+          "wall_s": 15,
+          "steps": [
+            {
+              "name": "Set up job",
+              "s": 0
+            },
+            {
+              "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 1
+            },
+            {
+              "name": "Run ./.github/actions/setup",
+              "s": 3
+            },
+            {
+              "name": "Run bun run test:tooling",
+              "s": 8
+            },
+            {
+              "name": "Post Run ./.github/actions/setup",
+              "s": 0
+            },
+            {
+              "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 0
+            },
+            {
+              "name": "Complete job",
+              "s": 0
+            }
+          ]
+        },
+        {
+          "name": "test (shard 0)",
+          "wall_s": 21,
+          "steps": [
+            {
+              "name": "Set up job",
+              "s": 0
+            },
+            {
+              "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 3
+            },
+            {
+              "name": "Run ./.github/actions/setup",
+              "s": 4
+            },
+            {
+              "name": "bun test",
+              "s": 9
+            },
+            {
+              "name": "Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9",
+              "s": 1
+            },
+            {
+              "name": "Post Run ./.github/actions/setup",
+              "s": 1
+            },
+            {
+              "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 0
+            },
+            {
+              "name": "Complete job",
+              "s": 0
+            }
+          ]
+        },
+        {
+          "name": "test (shard 3)",
+          "wall_s": 20,
+          "steps": [
+            {
+              "name": "Set up job",
+              "s": 0
+            },
+            {
+              "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 1
+            },
+            {
+              "name": "Run ./.github/actions/setup",
+              "s": 4
+            },
+            {
+              "name": "bun test",
+              "s": 11
+            },
+            {
+              "name": "Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9",
+              "s": 1
+            },
+            {
+              "name": "Post Run ./.github/actions/setup",
+              "s": 0
+            },
+            {
+              "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 0
+            },
+            {
+              "name": "Complete job",
+              "s": 0
+            }
+          ]
+        },
+        {
+          "name": "test (shard 1)",
+          "wall_s": 28,
+          "steps": [
+            {
+              "name": "Set up job",
+              "s": 1
+            },
+            {
+              "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 1
+            },
+            {
+              "name": "Run ./.github/actions/setup",
+              "s": 6
+            },
+            {
+              "name": "bun test",
+              "s": 15
+            },
+            {
+              "name": "Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9",
+              "s": 1
+            },
+            {
+              "name": "Post Run ./.github/actions/setup",
+              "s": 1
+            },
+            {
+              "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 0
+            },
+            {
+              "name": "Complete job",
+              "s": 0
+            }
+          ]
+        },
+        {
+          "name": "test (shard 2)",
+          "wall_s": 20,
+          "steps": [
+            {
+              "name": "Set up job",
+              "s": 1
+            },
+            {
+              "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 1
+            },
+            {
+              "name": "Run ./.github/actions/setup",
+              "s": 3
+            },
+            {
+              "name": "bun test",
+              "s": 11
+            },
+            {
+              "name": "Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9",
+              "s": 1
+            },
+            {
+              "name": "Post Run ./.github/actions/setup",
+              "s": 1
+            },
+            {
+              "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 0
+            },
+            {
+              "name": "Complete job",
+              "s": 0
+            }
+          ]
+        },
+        {
+          "name": "ci-ok",
+          "wall_s": 3,
+          "steps": [
+            {
+              "name": "Set up job",
+              "s": 0
+            },
+            {
+              "name": "check needs",
+              "s": 0
+            },
+            {
+              "name": "Complete job",
+              "s": 0
+            }
+          ]
+        }
+      ],
+      "test_files": 131,
+      "tests_passed": 2053
+    },
+    {
+      "run_id": 44929294822,
+      "head_sha": "d7774181182e182921949da3964462b769aa9f68",
+      "workflow": "fast",
+      "mode": "pr",
+      "attempt": 1,
+      "url": "https://github.com/alchristleo/ci-fast-optimizer-setup/actions/runs/44929294822",
+      "conclusion": "success",
+      "created_at": "2026-11-21T17:18:17Z",
+      "queue_s": 2,
+      "wall_s": 29,
+      "jobs": [
+        {
+          "name": "plan",
+          "wall_s": 7,
+          "steps": [
+            {
+              "name": "Set up job",
+              "s": 1
+            },
+            {
+              "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 1
+            },
+            {
+              "name": "Run ./.github/actions/setup",
+              "s": 2
+            },
+            {
+              "name": "Run actions/cache/restore@55cc8345863c7cc4c66a329aec7e433d2d1c52a9",
+              "s": 1
+            },
+            {
+              "name": "Run set -euo pipefail",
+              "s": 0
+            },
+            {
+              "name": "Post Run ./.github/actions/setup",
+              "s": 0
+            },
+            {
+              "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 0
+            },
+            {
+              "name": "Complete job",
+              "s": 0
+            }
+          ]
+        },
+        {
+          "name": "tooling",
+          "wall_s": 14,
+          "steps": [
+            {
+              "name": "Set up job",
+              "s": 1
+            },
+            {
+              "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 1
+            },
+            {
+              "name": "Run ./.github/actions/setup",
+              "s": 3
+            },
+            {
+              "name": "Run bun run test:tooling",
+              "s": 7
+            },
+            {
+              "name": "Post Run ./.github/actions/setup",
+              "s": 0
+            },
+            {
+              "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 1
+            },
+            {
+              "name": "Complete job",
+              "s": 0
+            }
+          ]
+        },
+        {
+          "name": "lint",
+          "wall_s": 11,
+          "steps": [
+            {
+              "name": "Set up job",
+              "s": 0
+            },
+            {
+              "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 1
+            },
+            {
+              "name": "Run ./.github/actions/setup",
+              "s": 5
+            },
+            {
+              "name": "Run bun run lint",
+              "s": 1
+            },
+            {
+              "name": "Post Run ./.github/actions/setup",
+              "s": 0
+            },
+            {
+              "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 0
+            },
+            {
+              "name": "Complete job",
+              "s": 0
+            }
+          ]
+        },
+        {
+          "name": "build",
+          "wall_s": 7,
+          "steps": [
+            {
+              "name": "Set up job",
+              "s": 0
+            },
+            {
+              "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 2
+            },
+            {
+              "name": "Run ./.github/actions/setup",
+              "s": 2
+            },
+            {
+              "name": "Run bun run build",
+              "s": 0
+            },
+            {
+              "name": "Post Run ./.github/actions/setup",
+              "s": 0
+            },
+            {
+              "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 0
+            },
+            {
+              "name": "Complete job",
+              "s": 0
+            }
+          ]
+        },
+        {
+          "name": "typecheck",
+          "wall_s": 8,
+          "steps": [
+            {
+              "name": "Set up job",
+              "s": 1
+            },
+            {
+              "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 0
+            },
+            {
+              "name": "Run ./.github/actions/setup",
+              "s": 4
+            },
+            {
+              "name": "Run bun run check",
+              "s": 0
+            },
+            {
+              "name": "Post Run ./.github/actions/setup",
+              "s": 1
+            },
+            {
+              "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 0
+            },
+            {
+              "name": "Complete job",
+              "s": 0
+            }
+          ]
+        },
+        {
+          "name": "fmt",
+          "wall_s": 11,
+          "steps": [
+            {
+              "name": "Set up job",
+              "s": 1
+            },
+            {
+              "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 1
+            },
+            {
+              "name": "Run ./.github/actions/setup",
+              "s": 5
+            },
+            {
+              "name": "Run bun run fmt:check",
+              "s": 0
+            },
+            {
+              "name": "Post Run ./.github/actions/setup",
+              "s": 0
+            },
+            {
+              "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 0
+            },
+            {
+              "name": "Complete job",
+              "s": 0
+            }
+          ]
+        },
+        {
+          "name": "test (shard 2)",
+          "wall_s": 12,
+          "steps": [
+            {
+              "name": "Set up job",
+              "s": 1
+            },
+            {
+              "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 1
+            },
+            {
+              "name": "Run ./.github/actions/setup",
+              "s": 4
+            },
+            {
+              "name": "bun test",
+              "s": 2
+            },
+            {
+              "name": "Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9",
+              "s": 1
+            },
+            {
+              "name": "Post Run ./.github/actions/setup",
+              "s": 1
+            },
+            {
+              "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 0
+            },
+            {
+              "name": "Complete job",
+              "s": 0
+            }
+          ]
+        },
+        {
+          "name": "test (shard 0)",
+          "wall_s": 14,
+          "steps": [
+            {
+              "name": "Set up job",
+              "s": 1
+            },
+            {
+              "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 1
+            },
+            {
+              "name": "Run ./.github/actions/setup",
+              "s": 4
+            },
+            {
+              "name": "bun test",
+              "s": 3
+            },
+            {
+              "name": "Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9",
+              "s": 1
+            },
+            {
+              "name": "Post Run ./.github/actions/setup",
+              "s": 0
+            },
+            {
+              "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 1
+            },
+            {
+              "name": "Complete job",
+              "s": 0
+            }
+          ]
+        },
+        {
+          "name": "test (shard 1)",
+          "wall_s": 13,
+          "steps": [
+            {
+              "name": "Set up job",
+              "s": 1
+            },
+            {
+              "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 1
+            },
+            {
+              "name": "Run ./.github/actions/setup",
+              "s": 4
+            },
+            {
+              "name": "bun test",
+              "s": 3
+            },
+            {
+              "name": "Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9",
+              "s": 1
+            },
+            {
+              "name": "Post Run ./.github/actions/setup",
+              "s": 1
+            },
+            {
+              "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 0
+            },
+            {
+              "name": "Complete job",
+              "s": 0
+            }
+          ]
+        },
+        {
+          "name": "test (shard 3)",
+          "wall_s": 13,
+          "steps": [
+            {
+              "name": "Set up job",
+              "s": 1
+            },
+            {
+              "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 1
+            },
+            {
+              "name": "Run ./.github/actions/setup",
+              "s": 4
+            },
+            {
+              "name": "bun test",
+              "s": 2
+            },
+            {
+              "name": "Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9",
+              "s": 1
+            },
+            {
+              "name": "Post Run ./.github/actions/setup",
+              "s": 0
+            },
+            {
+              "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 1
+            },
+            {
+              "name": "Complete job",
+              "s": 0
+            }
+          ]
+        },
+        {
+          "name": "ci-ok",
+          "wall_s": 3,
+          "steps": [
+            {
+              "name": "Set up job",
+              "s": 0
+            },
+            {
+              "name": "check needs",
+              "s": 1
+            },
+            {
+              "name": "Complete job",
+              "s": 0
+            }
+          ]
+        }
+      ],
+      "test_files": 8,
+      "tests_passed": 189
+    },
+    {
+      "run_id": 44929362671,
+      "head_sha": "5673b4667aa98fc534ff7bba7073597f825907f0",
+      "workflow": "baseline",
+      "mode": "full",
+      "attempt": 1,
+      "url": "https://github.com/alchristleo/ci-fast-optimizer-setup/actions/runs/44929362671",
+      "conclusion": "success",
+      "created_at": "2026-11-21T17:19:03Z",
+      "queue_s": 3,
+      "wall_s": 203,
+      "jobs": [
+        {
+          "name": "test (baseline)",
+          "wall_s": 203,
+          "steps": [
+            {
+              "name": "Set up job",
+              "s": 1
+            },
+            {
+              "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 1
+            },
+            {
+              "name": "Run actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1",
+              "s": 0
+            },
+            {
+              "name": "Run ./.github/actions/setup",
+              "s": 4
+            },
+            {
+              "name": "fmt",
+              "s": 1
+            },
+            {
+              "name": "lint",
+              "s": 0
+            },
+            {
+              "name": "typecheck",
+              "s": 4
+            },
+            {
+              "name": "build",
+              "s": 0
+            },
+            {
+              "name": "vitest",
+              "s": 187
+            },
+            {
+              "name": "Post Run ./.github/actions/setup",
+              "s": 0
+            },
+            {
+              "name": "Post Run actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1",
+              "s": 1
+            },
+            {
+              "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 0
+            },
+            {
+              "name": "Complete job",
+              "s": 0
+            }
+          ]
+        }
+      ],
+      "test_files": 131,
+      "tests_passed": 2053
+    },
+    {
+      "run_id": 44929706588,
+      "head_sha": "5673b4667aa98fc534ff7bba7073597f825907f0",
+      "workflow": "fast",
+      "mode": "full",
+      "attempt": 1,
+      "url": "https://github.com/alchristleo/ci-fast-optimizer-setup/actions/runs/44929706588",
+      "conclusion": "success",
+      "created_at": "2026-11-21T17:22:37Z",
+      "queue_s": 3,
+      "wall_s": 55,
+      "jobs": [
+        {
+          "name": "build",
+          "wall_s": 11,
+          "steps": [
+            {
+              "name": "Set up job",
+              "s": 1
+            },
+            {
+              "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 1
+            },
+            {
+              "name": "Run ./.github/actions/setup",
+              "s": 5
+            },
+            {
+              "name": "Run bun run build",
+              "s": 0
+            },
+            {
+              "name": "Post Run ./.github/actions/setup",
+              "s": 0
+            },
+            {
+              "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 1
+            },
+            {
+              "name": "Complete job",
+              "s": 0
+            }
+          ]
+        },
+        {
+          "name": "tooling",
+          "wall_s": 19,
+          "steps": [
+            {
+              "name": "Set up job",
+              "s": 1
+            },
+            {
+              "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 2
+            },
+            {
+              "name": "Run ./.github/actions/setup",
+              "s": 5
+            },
+            {
+              "name": "Run bun run test:tooling",
+              "s": 7
+            },
+            {
+              "name": "Post Run ./.github/actions/setup",
+              "s": 0
+            },
+            {
+              "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 1
+            },
+            {
+              "name": "Complete job",
+              "s": 0
+            }
+          ]
+        },
+        {
+          "name": "fmt",
+          "wall_s": 8,
+          "steps": [
+            {
+              "name": "Set up job",
+              "s": 0
+            },
+            {
+              "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 1
+            },
+            {
+              "name": "Run ./.github/actions/setup",
+              "s": 3
+            },
+            {
+              "name": "Run bun run fmt:check",
+              "s": 0
+            },
+            {
+              "name": "Post Run ./.github/actions/setup",
+              "s": 1
+            },
+            {
+              "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 0
+            },
+            {
+              "name": "Complete job",
+              "s": 0
+            }
+          ]
+        },
+        {
+          "name": "typecheck",
+          "wall_s": 11,
+          "steps": [
+            {
+              "name": "Set up job",
+              "s": 1
+            },
+            {
+              "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 1
+            },
+            {
+              "name": "Run ./.github/actions/setup",
+              "s": 5
+            },
+            {
+              "name": "Run bun run check",
+              "s": 0
+            },
+            {
+              "name": "Post Run ./.github/actions/setup",
+              "s": 1
+            },
+            {
+              "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 0
+            },
+            {
+              "name": "Complete job",
+              "s": 0
+            }
+          ]
+        },
+        {
+          "name": "lint",
+          "wall_s": 7,
+          "steps": [
+            {
+              "name": "Set up job",
+              "s": 0
+            },
+            {
+              "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 1
+            },
+            {
+              "name": "Run ./.github/actions/setup",
+              "s": 2
+            },
+            {
+              "name": "Run bun run lint",
+              "s": 0
+            },
+            {
+              "name": "Post Run ./.github/actions/setup",
+              "s": 1
+            },
+            {
+              "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 0
+            },
+            {
+              "name": "Complete job",
+              "s": 0
+            }
+          ]
+        },
+        {
+          "name": "plan",
+          "wall_s": 18,
+          "steps": [
+            {
+              "name": "Set up job",
+              "s": 2
+            },
+            {
+              "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 5
+            },
+            {
+              "name": "Run ./.github/actions/setup",
+              "s": 6
+            },
+            {
+              "name": "Run actions/cache/restore@55cc8345863c7cc4c66a329aec7e433d2d1c52a9",
+              "s": 1
+            },
+            {
+              "name": "Run set -euo pipefail",
+              "s": 0
+            },
+            {
+              "name": "Post Run ./.github/actions/setup",
+              "s": 0
+            },
+            {
+              "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 0
+            },
+            {
+              "name": "Complete job",
+              "s": 0
+            }
+          ]
+        },
+        {
+          "name": "test (shard 2)",
+          "wall_s": 28,
+          "steps": [
+            {
+              "name": "Set up job",
+              "s": 1
+            },
+            {
+              "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 1
+            },
+            {
+              "name": "Run ./.github/actions/setup",
+              "s": 5
+            },
+            {
+              "name": "bun test",
+              "s": 15
+            },
+            {
+              "name": "Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9",
+              "s": 2
+            },
+            {
+              "name": "Post Run ./.github/actions/setup",
+              "s": 0
+            },
+            {
+              "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 0
+            },
+            {
+              "name": "Complete job",
+              "s": 0
+            }
+          ]
+        },
+        {
+          "name": "test (shard 3)",
+          "wall_s": 17,
+          "steps": [
+            {
+              "name": "Set up job",
+              "s": 0
+            },
+            {
+              "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 1
+            },
+            {
+              "name": "Run ./.github/actions/setup",
+              "s": 3
+            },
+            {
+              "name": "bun test",
+              "s": 9
+            },
+            {
+              "name": "Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9",
+              "s": 1
+            },
+            {
+              "name": "Post Run ./.github/actions/setup",
+              "s": 0
+            },
+            {
+              "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 0
+            },
+            {
+              "name": "Complete job",
+              "s": 0
+            }
+          ]
+        },
+        {
+          "name": "test (shard 1)",
+          "wall_s": 19,
+          "steps": [
+            {
+              "name": "Set up job",
+              "s": 0
+            },
+            {
+              "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 1
+            },
+            {
+              "name": "Run ./.github/actions/setup",
+              "s": 4
+            },
+            {
+              "name": "bun test",
+              "s": 10
+            },
+            {
+              "name": "Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9",
+              "s": 1
+            },
+            {
+              "name": "Post Run ./.github/actions/setup",
+              "s": 1
+            },
+            {
+              "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 0
+            },
+            {
+              "name": "Complete job",
+              "s": 0
+            }
+          ]
+        },
+        {
+          "name": "test (shard 0)",
+          "wall_s": 26,
+          "steps": [
+            {
+              "name": "Set up job",
+              "s": 0
+            },
+            {
+              "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 1
+            },
+            {
+              "name": "Run ./.github/actions/setup",
+              "s": 5
+            },
+            {
+              "name": "bun test",
+              "s": 14
+            },
+            {
+              "name": "Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9",
+              "s": 1
+            },
+            {
+              "name": "Post Run ./.github/actions/setup",
+              "s": 0
+            },
+            {
+              "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 1
+            },
+            {
+              "name": "Complete job",
+              "s": 0
+            }
+          ]
+        },
+        {
+          "name": "ci-ok",
+          "wall_s": 3,
+          "steps": [
+            {
+              "name": "Set up job",
+              "s": 0
+            },
+            {
+              "name": "check needs",
+              "s": 1
+            },
+            {
+              "name": "Complete job",
+              "s": 0
+            }
+          ]
+        }
+      ],
+      "test_files": 131,
+      "tests_passed": 2053
+    },
+    {
+      "run_id": 44929822176,
+      "head_sha": "d7774181182e182921949da3964462b769aa9f68",
+      "workflow": "fast",
+      "mode": "pr",
+      "attempt": 1,
+      "url": "https://github.com/alchristleo/ci-fast-optimizer-setup/actions/runs/44929822176",
+      "conclusion": "success",
+      "created_at": "2026-11-21T17:23:53Z",
+      "queue_s": 3,
+      "wall_s": 29,
+      "jobs": [
+        {
+          "name": "typecheck",
+          "wall_s": 8,
+          "steps": [
+            {
+              "name": "Set up job",
+              "s": 1
+            },
+            {
+              "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 1
+            },
+            {
+              "name": "Run ./.github/actions/setup",
+              "s": 3
+            },
+            {
+              "name": "Run bun run check",
+              "s": 1
+            },
+            {
+              "name": "Post Run ./.github/actions/setup",
+              "s": 0
+            },
+            {
+              "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 0
+            },
+            {
+              "name": "Complete job",
+              "s": 0
+            }
+          ]
+        },
+        {
+          "name": "lint",
+          "wall_s": 11,
+          "steps": [
+            {
+              "name": "Set up job",
+              "s": 0
+            },
+            {
+              "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 1
+            },
+            {
+              "name": "Run ./.github/actions/setup",
+              "s": 4
+            },
+            {
+              "name": "Run bun run lint",
+              "s": 3
+            },
+            {
+              "name": "Post Run ./.github/actions/setup",
+              "s": 0
+            },
+            {
+              "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 0
+            },
+            {
+              "name": "Complete job",
+              "s": 0
+            }
+          ]
+        },
+        {
+          "name": "tooling",
+          "wall_s": 14,
+          "steps": [
+            {
+              "name": "Set up job",
+              "s": 1
+            },
+            {
+              "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 1
+            },
+            {
+              "name": "Run ./.github/actions/setup",
+              "s": 3
+            },
+            {
+              "name": "Run bun run test:tooling",
+              "s": 6
+            },
+            {
+              "name": "Post Run ./.github/actions/setup",
+              "s": 1
+            },
+            {
+              "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 0
+            },
+            {
+              "name": "Complete job",
+              "s": 0
+            }
+          ]
+        },
+        {
+          "name": "plan",
+          "wall_s": 8,
+          "steps": [
+            {
+              "name": "Set up job",
+              "s": 1
+            },
+            {
+              "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 1
+            },
+            {
+              "name": "Run ./.github/actions/setup",
+              "s": 3
+            },
+            {
+              "name": "Run actions/cache/restore@55cc8345863c7cc4c66a329aec7e433d2d1c52a9",
+              "s": 0
+            },
+            {
+              "name": "Run set -euo pipefail",
+              "s": 0
+            },
+            {
+              "name": "Post Run ./.github/actions/setup",
+              "s": 1
+            },
+            {
+              "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 0
+            },
+            {
+              "name": "Complete job",
+              "s": 0
+            }
+          ]
+        },
+        {
+          "name": "fmt",
+          "wall_s": 8,
+          "steps": [
+            {
+              "name": "Set up job",
+              "s": 0
+            },
+            {
+              "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 1
+            },
+            {
+              "name": "Run ./.github/actions/setup",
+              "s": 4
+            },
+            {
+              "name": "Run bun run fmt:check",
+              "s": 0
+            },
+            {
+              "name": "Post Run ./.github/actions/setup",
+              "s": 0
+            },
+            {
+              "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 1
+            },
+            {
+              "name": "Complete job",
+              "s": 0
+            }
+          ]
+        },
+        {
+          "name": "build",
+          "wall_s": 9,
+          "steps": [
+            {
+              "name": "Set up job",
+              "s": 1
+            },
+            {
+              "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 1
+            },
+            {
+              "name": "Run ./.github/actions/setup",
+              "s": 4
+            },
+            {
+              "name": "Run bun run build",
+              "s": 0
+            },
+            {
+              "name": "Post Run ./.github/actions/setup",
+              "s": 0
+            },
+            {
+              "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 0
+            },
+            {
+              "name": "Complete job",
+              "s": 0
+            }
+          ]
+        },
+        {
+          "name": "test (shard 1)",
+          "wall_s": 14,
+          "steps": [
+            {
+              "name": "Set up job",
+              "s": 1
+            },
+            {
+              "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 5
+            },
+            {
+              "name": "Run ./.github/actions/setup",
+              "s": 2
+            },
+            {
+              "name": "bun test",
+              "s": 2
+            },
+            {
+              "name": "Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9",
+              "s": 1
+            },
+            {
+              "name": "Post Run ./.github/actions/setup",
+              "s": 0
+            },
+            {
+              "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 0
+            },
+            {
+              "name": "Complete job",
+              "s": 0
+            }
+          ]
+        },
+        {
+          "name": "test (shard 3)",
+          "wall_s": 13,
+          "steps": [
+            {
+              "name": "Set up job",
+              "s": 1
+            },
+            {
+              "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 1
+            },
+            {
+              "name": "Run ./.github/actions/setup",
+              "s": 4
+            },
+            {
+              "name": "bun test",
+              "s": 2
+            },
+            {
+              "name": "Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9",
+              "s": 1
+            },
+            {
+              "name": "Post Run ./.github/actions/setup",
+              "s": 1
+            },
+            {
+              "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 0
+            },
+            {
+              "name": "Complete job",
+              "s": 0
+            }
+          ]
+        },
+        {
+          "name": "test (shard 0)",
+          "wall_s": 9,
+          "steps": [
+            {
+              "name": "Set up job",
+              "s": 0
+            },
+            {
+              "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 1
+            },
+            {
+              "name": "Run ./.github/actions/setup",
+              "s": 2
+            },
+            {
+              "name": "bun test",
+              "s": 3
+            },
+            {
+              "name": "Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9",
+              "s": 0
+            },
+            {
+              "name": "Post Run ./.github/actions/setup",
+              "s": 1
+            },
+            {
+              "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 0
+            },
+            {
+              "name": "Complete job",
+              "s": 0
+            }
+          ]
+        },
+        {
+          "name": "test (shard 2)",
+          "wall_s": 7,
+          "steps": [
+            {
+              "name": "Set up job",
+              "s": 1
+            },
+            {
+              "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 0
+            },
+            {
+              "name": "Run ./.github/actions/setup",
+              "s": 2
+            },
+            {
+              "name": "bun test",
+              "s": 1
+            },
+            {
+              "name": "Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9",
+              "s": 1
+            },
+            {
+              "name": "Post Run ./.github/actions/setup",
+              "s": 0
+            },
+            {
+              "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "s": 1
+            },
+            {
+              "name": "Complete job",
+              "s": 0
+            }
+          ]
+        },
+        {
+          "name": "ci-ok",
+          "wall_s": 3,
+          "steps": [
+            {
+              "name": "Set up job",
+              "s": 0
+            },
+            {
+              "name": "check needs",
+              "s": 0
+            },
+            {
+              "name": "Complete job",
+              "s": 0
+            }
+          ]
+        }
+      ],
+      "test_files": 8,
+      "tests_passed": 189
+    }
+  ]
 }

@@ -20,6 +20,7 @@ export type BenchRun = {
   workflow: string;
   mode: string;
   run_id: number;
+  head_sha: string;
   attempt: number;
   url: string;
   conclusion: string;
@@ -40,6 +41,7 @@ export type Results = {
 type ApiStep = { name: string; started_at: string | null; completed_at: string | null };
 type ApiJob = {
   name: string;
+  conclusion?: string | null;
   started_at: string | null;
   completed_at: string | null;
   steps?: ApiStep[];
@@ -55,9 +57,10 @@ type ApiRun = {
 
 const secs = (a: string, b: string) => (Date.parse(b) - Date.parse(a)) / 1000;
 
+// Skipped jobs (such as `timings` outside push events) are left out.
 // null when no job both started and completed (cancelled before any job ran).
 export function jobsTiming(jobs: ApiJob[], runCreatedAt: string) {
-  const done = jobs.filter((j) => j.started_at && j.completed_at);
+  const done = jobs.filter((j) => j.started_at && j.completed_at && j.conclusion !== "skipped");
   if (done.length === 0) return null;
   const first = Math.min(...done.map((j) => Date.parse(j.started_at!)));
   const last = Math.max(...done.map((j) => Date.parse(j.completed_at!)));
@@ -72,6 +75,18 @@ export function jobsTiming(jobs: ApiJob[], runCreatedAt: string) {
         .map((s) => ({ name: s.name, s: secs(s.started_at!, s.completed_at!) })),
     })),
   };
+}
+
+// Body of the workflow_dispatch API call. Only fast.yml declares inputs, baseline rejects them.
+export function dispatchBody(
+  workflow: string,
+  mode: "full" | "pr",
+  ref: string,
+  base: string,
+  head: string,
+) {
+  if (workflow !== "fast") return { ref };
+  return { ref, inputs: mode === "pr" ? { mode, base, head } : { mode } };
 }
 
 export function median(xs: number[]): number {
@@ -119,6 +134,10 @@ export function summarize(runs: BenchRun[], workflow: string, mode: string) {
     median_wall_s: ok.length ? median(walls) : NaN,
     p90_wall_s: ok.length ? p90(walls) : NaN,
     median_queue_s: ok.length ? median(ok.map((r) => r.queue_s)) : NaN,
+    // Runner time: the sum of all job walls in a run.
+    median_runner_s: ok.length
+      ? median(ok.map((r) => r.jobs.reduce((t, j) => t + j.wall_s, 0)))
+      : NaN,
     median_files: ok.length ? median(ok.map((r) => r.test_files ?? NaN)) : NaN,
   };
 }
@@ -184,6 +203,9 @@ const END = "<!-- bench:end -->";
 
 const num = (x: number) => (Number.isFinite(x) ? String(x) : "n/a");
 
+// "Run actions/checkout@<40 hex>" becomes "actions/checkout".
+const shortStep = (name: string) => name.replace(/^Run /, "").replace(/@[0-9a-f]{40}$/, "");
+
 function section(res: Results): string {
   const rows = (
     [
@@ -193,12 +215,49 @@ function section(res: Results): string {
     ] as const
   ).map(([w, m]) => {
     const s = summarize(res.runs, w, m);
-    return `| ${w} | ${m} | ${s.n} | ${s.excluded} | ${num(s.median_wall_s)} | ${num(s.p90_wall_s)} | ${num(s.median_queue_s)} |`;
+    return `| ${w} | ${m} | ${s.n} | ${s.excluded} | ${num(s.median_wall_s)} | ${num(s.p90_wall_s)} | ${num(s.median_queue_s)} | ${num(s.median_runner_s)} |`;
+  });
+  const steps: string[] = [];
+  for (const w of ["baseline", "fast"]) {
+    const by = new Map<string, number[]>();
+    for (const r of summarize(res.runs, w, "full").ok)
+      for (const j of r.jobs) {
+        // Shards are one job kind: group "test (shard 2)" with the others.
+        const job = j.name.replace(/ \(shard \d+\)$/, " (shards)");
+        for (const st of j.steps) {
+          if (/^(Set up job|Post |Complete job)/.test(st.name)) continue; // runner bookkeeping
+          const key = `${job}\t${shortStep(st.name)}`;
+          by.set(key, [...(by.get(key) ?? []), st.s]);
+        }
+      }
+    for (const [key, v] of by) {
+      const [job, step] = key.split("\t");
+      steps.push(`| ${w} | ${job} | ${step} | ${num(median(v))} |`);
+    }
+  }
+  const ranges = summarize(res.runs, "fast", "full").ok.map((r) => {
+    const w = r.jobs.filter((j) => /^test \(shard \d+\)$/.test(j.name)).map((j) => j.wall_s);
+    return w.length ? `${Math.min(...w)}-${Math.max(...w)} s` : "n/a";
   });
   return [
-    "| workflow | mode | runs | excluded | median wall (s) | p90 wall (s) | median queue (s) |",
-    "| --- | --- | --- | --- | --- | --- | --- |",
+    "Columns: mode `full` runs every test file and `pr` runs only the files the diff can reach (fast.yml on the branch `bench/pr-sample`). `excluded` counts runs that did not succeed and are left out of every statistic. Runner seconds are the sum of all job walls in a run, skipped jobs left out.",
+    "",
+    "| workflow | mode | runs | excluded | median wall (s) | p90 wall (s) | median queue (s) | median runner (s) |",
+    "| --- | --- | --- | --- | --- | --- | --- | --- |",
     ...rows,
+    "",
+    `Shard job wall range (fastest-slowest) in each fast full run: ${ranges.join(", ") || "n/a"}.`,
+    "",
+    "<details>",
+    "<summary>Median seconds per step, successful full-mode runs</summary>",
+    "",
+    "Runner bookkeeping steps are left out and shards are grouped as one job.",
+    "",
+    "| workflow | job | step | median (s) |",
+    "| --- | --- | --- | --- |",
+    ...steps,
+    "",
+    "</details>",
     "",
     `Generated from bench/results.json (generated_at ${res.generated_at}, bun ${res.bun}, node ${res.node}).`,
   ].join("\n");
@@ -216,8 +275,8 @@ export function checkReadme(readme: string, res: Results): boolean {
 }
 
 // ---- gh-backed commands (not unit tested) ----
-function gh(args: string[]): string {
-  return execFileSync("gh", ["api", ...args], { encoding: "utf8" });
+function gh(args: string[], input?: string): string {
+  return execFileSync("gh", ["api", ...args], { encoding: "utf8", input });
 }
 const ghJson = (args: string[]) => JSON.parse(gh(args));
 const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
@@ -241,12 +300,9 @@ async function dispatchOne(workflow: string, mode: "full" | "pr"): Promise<Bench
       .filter((r) => r.head_sha === headSha)
       .map((r) => r.id),
   );
-  const fields = ["-f", `ref=${ref}`];
-  // Only fast.yml declares inputs; baseline would reject them.
-  if (workflow === "fast") fields.push("-f", `inputs[mode]=${mode}`);
-  if (workflow === "fast" && mode === "pr")
-    fields.push("-f", `inputs[base]=${mainSha}`, "-f", `inputs[head]=${headSha}`);
-  gh(["-X", "POST", `repos/${REPO}/actions/workflows/${file}/dispatches`, ...fields]);
+  // JSON body: older gh versions send `-f inputs[mode]=x` as a literal key.
+  const body = JSON.stringify(dispatchBody(workflow, mode, ref, mainSha, headSha));
+  gh(["-X", "POST", `repos/${REPO}/actions/workflows/${file}/dispatches`, "--input", "-"], body);
 
   let found: ApiRun | undefined;
   for (let i = 0; i < 60 && !found; i++) {
@@ -280,6 +336,7 @@ async function dispatchOne(workflow: string, mode: "full" | "pr"): Promise<Bench
     workflow,
     mode,
     run_id: run.id,
+    head_sha: found.head_sha,
     attempt: run.run_attempt,
     url: run.html_url ?? `https://github.com/${REPO}/actions/runs/${run.id}`,
     conclusion: run.conclusion ?? "unknown",

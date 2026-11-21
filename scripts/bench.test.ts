@@ -3,6 +3,7 @@ import {
   checkAll,
   checkReadme,
   correlateRun,
+  dispatchBody,
   jobsTiming,
   median,
   p90,
@@ -129,6 +130,48 @@ describe("jobsTiming edge cases", () => {
   });
 });
 
+describe("jobsTiming skipped jobs", () => {
+  test("a skipped job is left out of jobs and out of wall", () => {
+    const t = jobsTiming(
+      [
+        {
+          name: "lint",
+          conclusion: "success",
+          started_at: "2026-11-21T10:00:10Z",
+          completed_at: "2026-11-21T10:00:25Z",
+        },
+        {
+          name: "timings",
+          conclusion: "skipped",
+          started_at: "2026-11-21T10:00:10Z",
+          completed_at: "2026-11-21T10:05:00Z",
+        },
+      ],
+      "2026-11-21T10:00:00Z",
+    );
+    expect(t?.wall_s).toBe(15);
+    expect(t?.jobs.map((j) => j.name)).toEqual(["lint"]);
+  });
+});
+
+describe("dispatchBody", () => {
+  test("baseline sends a ref and no inputs", () => {
+    expect(dispatchBody("baseline", "full", "main", "b", "h")).toEqual({ ref: "main" });
+  });
+  test("fast full sends only the mode", () => {
+    expect(dispatchBody("fast", "full", "main", "b", "h")).toEqual({
+      ref: "main",
+      inputs: { mode: "full" },
+    });
+  });
+  test("fast pr sends mode, base and head", () => {
+    expect(dispatchBody("fast", "pr", "bench/pr-sample", "b", "h")).toEqual({
+      ref: "bench/pr-sample",
+      inputs: { mode: "pr", base: "b", head: "h" },
+    });
+  });
+});
+
 describe("median and p90", () => {
   test("literal values", () => {
     expect(median([5, 1, 3])).toBe(3);
@@ -188,6 +231,7 @@ describe("parseTestsNotice", () => {
 function run(p: Partial<BenchRun> & { workflow: string; mode: string; wall_s: number }): BenchRun {
   return {
     run_id: 1,
+    head_sha: "abc",
     attempt: 1,
     url: "https://github.com/o/r/actions/runs/1",
     conclusion: "success",
@@ -311,6 +355,80 @@ describe("readme", () => {
     const out = renderReadme(readme, results([]));
     expect(out).not.toContain("NaN");
     expect(out).toContain("| baseline | full | 0 | 0 | n/a | n/a | n/a |");
+  });
+  test("renders median per-step seconds for full-mode successful runs", () => {
+    const withJobs = results([
+      ...[10, 20, 30].map((s, i) =>
+        run({
+          workflow: "baseline",
+          mode: "full",
+          wall_s: 60,
+          run_id: 40 + i,
+          jobs: [{ name: "test (baseline)", wall_s: 60, steps: [{ name: "vitest", s }] }],
+        }),
+      ),
+      run({
+        workflow: "baseline",
+        mode: "full",
+        wall_s: 60,
+        run_id: 49,
+        conclusion: "failure",
+        jobs: [{ name: "test (baseline)", wall_s: 900, steps: [{ name: "vitest", s: 900 }] }],
+      }),
+    ]);
+    const out = renderReadme(readme, withJobs);
+    expect(out).toContain("| baseline | test (baseline) | vitest | 20 |");
+  });
+  test("renders median runner seconds as the sum of job walls", () => {
+    const j = (w: number) => ({ name: "x", wall_s: w, steps: [] });
+    const out = renderReadme(
+      readme,
+      results([
+        run({ workflow: "fast", mode: "full", wall_s: 9, run_id: 60, jobs: [j(10), j(5)] }),
+        run({ workflow: "fast", mode: "full", wall_s: 9, run_id: 61, jobs: [j(20), j(10)] }),
+        run({ workflow: "fast", mode: "full", wall_s: 9, run_id: 62, jobs: [j(100)] }),
+      ]),
+    );
+    expect(out).toContain("| fast | full | 3 | 0 | 9 | 9 | 3 | 30 |");
+  });
+  test("renders a legend, short step names and a details block", () => {
+    const out = renderReadme(
+      readme,
+      results([
+        run({
+          workflow: "fast",
+          mode: "full",
+          wall_s: 9,
+          run_id: 70,
+          jobs: [
+            {
+              name: "plan",
+              wall_s: 9,
+              steps: [
+                { name: "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1", s: 1 },
+                { name: "Run bun run lint", s: 2 },
+              ],
+            },
+          ],
+        }),
+      ]),
+    );
+    expect(out).toContain("excluded");
+    expect(out).toContain("<details>");
+    expect(out).toContain("| fast | plan | actions/checkout | 1 |");
+    expect(out).toContain("| fast | plan | bun run lint | 2 |");
+    expect(out).not.toContain("3d3c42e5");
+  });
+  test("renders the shard wall range of each fast full run", () => {
+    const sh = (w: number) => ({ name: "test (shard 0)", wall_s: w, steps: [] });
+    const out = renderReadme(
+      readme,
+      results([
+        run({ workflow: "fast", mode: "full", wall_s: 9, run_id: 80, jobs: [sh(17), sh(26)] }),
+        run({ workflow: "fast", mode: "full", wall_s: 9, run_id: 81, jobs: [sh(22), sh(27)] }),
+      ]),
+    );
+    expect(out).toContain("17-26 s, 22-27 s");
   });
   test("throws without markers", () => {
     expect(() => renderReadme("# T\n", good)).toThrow();
