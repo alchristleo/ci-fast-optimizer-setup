@@ -187,3 +187,4 @@ PAUSED at step 8 (PR 1 CI green head 5d38981), next: spec-converge on milestone-
 **PAUSED 2026-11-21** at step 8: PR 1 CI green (head 5d38981). Next: spec-converge → merge gate (squash) → T9 bench + README (PR 2).
 RESUME spec-converge PR 1
 USAGE start 0
+CONVERGE 6d5acb5 verified=7 inconclusive=7 (pending PR 2 bench/README/owner)
