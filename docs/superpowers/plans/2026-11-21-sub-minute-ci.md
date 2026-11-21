@@ -124,6 +124,8 @@ quantization, runner variance), hours-saved formula, reproduce section (`bench.t
 to runs. `--readme --check` green (AC10). Push to main.
 
 ## Backlog
+- test/smoke/catalog.test.ts:15 hard-coded toBe(123) → derive from domains.length (PRE-EXISTING, T10 review)
+- bench.ts optional repo slug env override (T8 review nit)
 - Scheduled weekly bench re-run + badge
 - Per-claim ablation workflows (one change at a time)
 - turbo/nx comparison; frontend app
@@ -149,3 +151,5 @@ T4 fix 5c54ea7 sdd-reviewer fix-needed empty-set prints newline; CLI/rename/dele
 T8 review approve c8d5369 sdd-reviewer should: baseline dispatch inputs -> T6 declares mode in baseline.yml
 T8 done c8d5369 sdd-reviewer approve
 T4 done 235c19d sdd-reviewer-lite approve
+T10 review approve 4c31638 sdd-reviewer should: bench scope unexplained -> coord note
+T10 coord 6a15945 findings notes: bench scope + AC2 projection caveat
