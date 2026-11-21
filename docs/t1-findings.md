@@ -47,7 +47,7 @@ Env: Bun 1.4.5, Node 22.23.5, vitest 5.1.1, TypeScript 5.9.3 (`legacy:check`), 2
 - Negative checks: appending `Bun.version` to `src/lib/ids.ts` fails `api subset > src/ never uses Bun.* APIs`. Adding `import ... from "vitest"` to a test file fails `api subset > test/ imports only the shared subset`. Both restored.
 
 ## T10: barrel cut, smoke set, scaled suite
-Env: same machine as T2 (20 cores), Bun 1.4.5, Node 22.23.5, vitest 5.1.1. Same K=120 domains. Property tests (fast-check, shared seed 20261121 and `RUNS = 4000` in `test/support/property.ts`, scaled 1-4x per generated domain) do the CPU work. App suite root is `test/` (`bunfig.toml`). `scripts/*.test.ts` run via `bun run test:tooling` (62 tests, not counted below).
+Env: same machine as T2 (20 cores), Bun 1.4.5, Node 22.23.5, vitest 5.1.1. Same K=120 domains. Property tests (fast-check, shared seed 20261121 and `RUNS = 4000` in `test/support/property.ts`, scaled 1-4x per generated domain) do the CPU work. App suite root is `test/` (`bunfig.toml`). `scripts/*.test.ts` run via `bun run test:tooling` (68 tests, not counted below).
 - `bun test` (serial, one process): 2053 tests across 131 files, 28.3 s wall.
 - `vitest run` (`bun run legacy:test`, default workers = 20): 2053 tests across 131 files, 34.5 s wall.
 - `vitest run --maxWorkers=4` (stand-in for a 4-vCPU runner): 2053 tests across 131 files, 62.3 s wall.
