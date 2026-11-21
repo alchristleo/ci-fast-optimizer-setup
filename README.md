@@ -1,14 +1,12 @@
 # ci-fast-optimizer-setup
 
-A small TypeScript backend with two GitHub Actions pipelines that run the same checks on the same code. `baseline.yml` is the common setup: one job, serial steps, Node tools. `fast.yml` applies eight changes. This repo exists to measure what those changes are worth on real runners, and to show the config.
+A small TypeScript backend with two GitHub Actions pipelines that run the same checks on the same code. `baseline.yml` is the common setup: one job, serial steps, Node tools. `fast.yml` applies seven of eight changes and keeps oxlint for change 3. This repo exists to measure what those changes are worth on real runners, and to show the config.
 
-On the benchmark below, the full fast pipeline has a median wall time of 44 s against 219 s for the baseline. Both run the same 131 test files and 2053 tests.
-
-Read this with the caveats. The ratio is about 5x (219 / 44) on a generated 131-file suite. The baseline uses one runner. The fast pipeline uses four test shards plus parallel jobs. The fast median is 44 s (p90 55 s). The baseline median is 219 s, with runs from 173 s to 285 s. See [Caveats](#caveats).
+On the benchmark below, the full fast pipeline has a median wall time of 44 s against 219 s for the baseline. Both run the same 131 test files and 2053 tests. Read this with the caveats. The ratio is about 5x (219 / 44) on a generated 131-file suite. The baseline uses one runner. The fast pipeline uses four test shards plus parallel jobs. The fast median is 44 s (p90 55 s). The baseline median is 219 s, with runs from 173 s to 285 s. See [Caveats](#caveats).
 
 ## Results
 
-Every number in this section comes from `bench/results.json`. The script `scripts/bench.ts` dispatches each workflow on GitHub, reads job and step timings from the Actions API, and renders the tables below. Wall time is the last job's end minus the first job's start, so it includes runner startup and install but not queue time (shown separately). Five runs of each, dispatched one after another in the order baseline, fast, fast on the sample PR branch.
+Every number in this section comes from `bench/results.json`. The script `scripts/bench.ts` dispatches each workflow on GitHub, reads job and step timings from the Actions API, and renders the tables below. Wall time is the last job's end minus the first job's start, so it includes runner startup and install but not queue time (shown separately). Five rounds, each dispatching baseline, then fast, then fast on the sample PR branch, one run at a time.
 
 <!-- bench:start -->
 Columns: mode `full` runs every test file and `pr` runs only the files the diff can reach (fast.yml on the branch `bench/pr-sample`). `excluded` counts runs that did not succeed and are left out of every statistic. Runner seconds are the sum of all job walls in a run, skipped jobs left out.
@@ -77,7 +75,7 @@ Generated from bench/results.json (generated_at 2026-11-21T17:24:34.855Z, bun 1.
    ```
    Effect: the baseline `vitest` step has a median of 205 s. In `fast`, the `bun test` step in each of four shards has a median of 12.5 s. This compares one runner doing all the files against four runners doing a quarter each, so changes 1, 5 and 7 together produce it.
 
-   The 205 s is much slower than the local numbers in `docs/t1-findings.md` (T10). That file records 28.3 s for serial `bun test`, 34.5 s for `vitest run` with default workers, and 62.3 s for `vitest run --maxWorkers=4`, all on a 20-core dev machine. The CI baseline runs vitest on a hosted 4-vCPU runner. A 4-vCPU runner has far fewer cores than the dev machine. The 4-worker local run (62.3 s) is still about a third of the CI step, so slower runner cores probably explain the rest. That part is not measured. Local timings do not predict CI timings.
+   The 205 s is much slower than the local numbers in `docs/t1-findings.md` (T10). That file records 28.3 s for serial `bun test`, 34.5 s for `vitest run` with default workers, and 62.3 s for `vitest run --maxWorkers=4`, all on a 20-core dev machine. The CI baseline runs vitest on a GitHub-hosted `ubuntu-latest` runner, which GitHub documents as 4 vCPUs for public repositories ([runner specs](https://docs.github.com/en/actions/using-github-hosted-runners/using-github-hosted-runners/about-github-hosted-runners#standard-github-hosted-runners-for-public-repositories)). That is far fewer cores than the dev machine. The 4-worker local run (62.3 s) is still about a third of the CI step, so slower runner cores probably explain the rest. That part is not measured. Local timings do not predict CI timings.
 2. **`tsc` to `bun check`.** `bun check` is in Bun 1.4.5 and reads the same `tsconfig.json`.
    ```json
    "check": "bun check", "legacy:check": "tsc --noEmit"
@@ -93,7 +91,7 @@ Generated from bench/results.json (generated_at 2026-11-21T17:24:34.855Z, bun 1.
    ```yaml
    matrix: ${{ fromJSON(needs.plan.outputs.matrix) }}   # 4 shards of ~33 files
    ```
-   What happened in the benchmark: the `plan` job logs of all 5 fast full runs show a cache hit for `.ci/test-timings.json`. The committed fallback file was not used. Every run restored the same cache entry, saved by an earlier push run on `main`. Only push runs save a new entry, because the `timings` job is skipped on dispatch. The bench dispatches did not refresh it. The shards were balanced by that recorded data, not by fresh data.
+   What happened in the benchmark: the `plan` job logs of all 5 fast full runs restored `.ci/test-timings.json` from the cache via restore-key `timings-` (prefix match). The committed fallback file was not used. Every run restored the same cache entry, saved by an earlier push run on `main`. Only push runs save a new entry, because the `timings` job is skipped on dispatch. The bench dispatches did not refresh it. The shards were balanced by that recorded data, not by fresh data.
 
    Effect: within a run, the fastest and slowest shard differed by 5 to 11 s. The range line under the results table shows 17 to 28 s overall. The slowest shard sets the test time. The job wall includes checkout and setup, so the spread is not all test time.
 6. **PRs run only the tests the diff can reach.** [`scripts/affected.ts`](scripts/affected.ts) builds a reverse import graph of `src/` and `test/`. It walks from the changed files to test files. Changes to config, workflows, scripts or `package.json` run everything. See the barrel note below.
@@ -106,7 +104,7 @@ Generated from bench/results.json (generated_at 2026-11-21T17:24:34.855Z, bun 1.
    export function getTestApp(): Hono { app ??= createApp(); return app; }
    ```
    Effect: not measured separately. It is part of the gap in change 1.
-8. **Lint, typecheck, build, tooling tests and test shards run as parallel jobs.** No job has a `needs` on another, except that test shards wait for `plan`. A final `ci-ok` job reports one result. `ci-ok` needs every job and fails if any required job did not succeed, so a branch protection rule needs only that one check.
+8. **Lint, typecheck, build, tooling tests and test shards run as parallel jobs.** No job has a `needs` on another, except that test shards wait for `plan` and the push-only `timings` job waits for the shards. A final `ci-ok` job reports one result. `ci-ok` needs every job and fails if any required job did not succeed, so a branch protection rule needs only that one check.
    ```yaml
    jobs: { plan: ..., fmt: ..., lint: ..., typecheck: ..., build: ..., tooling: ..., test: { needs: plan }, ci-ok: ... }
    ```
@@ -127,7 +125,7 @@ Generated from bench/results.json (generated_at 2026-11-21T17:24:34.855Z, bun 1.
 
 ## What this saves you
 
-The savings are developer wait time. They are not billable runner minutes. The fast pipeline starts more jobs, each with its own checkout and setup. The "median runner (s)" column in the results table sums the job walls of a run (skipped jobs left out). Fast full is 152 s against 219 s for the baseline, and fast pr is 116 s. The fast runs use fewer runner seconds here, but the benefit to plan on is shorter waits, not a smaller bill.
+The savings are developer wait time. The fast pipeline starts more jobs, each with its own checkout and setup. The "median runner (s)" column in the results table sums the job walls of a run (skipped jobs left out). Fast full is 152 s against 219 s for the baseline, and fast pr is 116 s. The fast runs use fewer runner seconds here, but the benefit to plan on is shorter waits. Public repositories run Actions for free. On private repositories GitHub rounds each job up to a whole minute ([billing](https://docs.github.com/en/billing/managing-billing-for-your-products/managing-billing-for-github-actions/about-billing-for-github-actions)), so eight short jobs can bill more minutes than one long one.
 
 The tables give seconds per run. Savings in wait time depend on how often your CI runs:
 
@@ -153,7 +151,7 @@ Needs Bun 1.4.5, Node 22 and the `gh` CLI signed in to a fork of this repo.
 bun install --frozen-lockfile
 bun run ci:local                      # fmt, lint, check, build, tests, tooling tests
 bun run legacy:check && bun run check # both type checkers agree
-bun scripts/bench.ts run --runs 5     # dispatch both workflows; takes 30 to 40 minutes
+bun scripts/bench.ts run --runs 5     # dispatches 15 runs one at a time; the recorded runs total about 26 min of job time, plus queue and polling
 bun scripts/bench.ts --check fast_full_median_lt=60,fast_full_max_lte=90
 bun scripts/bench.ts --check speedup_gte=3
 bun scripts/bench.ts --check same_tests
