@@ -198,3 +198,8 @@ T9 review approve 5b0b336 sdd-reviewer nit dispatchBody untested
 T9 done 5b0b336 sdd-reviewer approve
 PANEL security skipped PR 2: trust surface unchanged (owner)
 TRIAGE fixed=14 dismissed=0 backlog=0
+FIX wave e513fb5 sdd-implementer PR 2 panel: 14 items
+PANEL cdo e513fb5 must=0 should=0 nit=5
+SEAT cdo pass e513fb5 AC12
+FIX wave e513fb5 sdd-reviewer-lite re-review fix-needed: unsourced 4-vCPU, billing, bench duration
+COORD 38a4664 README sources + 5 CDO nits; owner accepted without further review
