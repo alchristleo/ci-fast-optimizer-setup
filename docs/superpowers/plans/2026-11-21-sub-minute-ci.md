@@ -93,6 +93,9 @@ domain services (totals, rounding, validation round-trips), pinned seed, one lit
 Tuning: serial `bun test` ≈25–35 s locally; record bun + vitest (default workers) + vitest
 --maxWorkers=4 times in docs/t1-findings.md (T10 section) with a projected AC2 ratio for a
 4-vCPU runner. Test count equal on both runners (app suite only).
+Also in T10 brief (T8 review nits): bench.ts `n/a` for non-finite cells, null jobsTiming on no
+completed jobs, 30-min poll cap, tests for cancelled run / null started_at / run_attempt>1 decoy;
+affected.ts filters selected tests to files existing at head.
 Smoke: `bun run ci:local` green.
 
 ## T6 — Workflows (agent: sdd-implementer; depends-on: T3, T4, T5, T8, T10)

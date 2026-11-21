@@ -60,8 +60,10 @@ Env: same machine as T2 (20 cores), Bun 1.4.5, Node 22.23.5, vitest 5.1.1. Same 
 - Negative checks: a test requesting `/orders` without importing `src/domains/orders/` fails `cross-domain rule > a test imports the domain module of every route prefix it requests` (restored). Removing the `!== BARREL` filter in `scripts/affected.ts` fails `the barrel cut` and the 20% real-tree test (restored). Removing the `RUN_ALL` check fails the three "runs all" tests for `index.ts` and `app.ts` (restored).
 
 T10 notes (coordinator): bench.ts changes in T10 (RUN_TIMEOUT_MS poll cap, `run_attempt === 1`
-filter, `fast_full_max_lte`, `n/a` rendering, nullable jobsTiming) were folded into the T10 brief
-from the T8 review nits. AC2 projection caveat: only tsc is scaled for slower runner cores; the
+filter, `fast_full_max_lte`, `n/a` rendering, nullable jobsTiming): `fast_full_max_lte` is in the
+plan's T10 section; the other four came from the coordinator's T10 dispatch brief, which folded
+T8 review nits (NaN render on empty results, Infinity from empty jobs, uncapped poll loop, missing
+cancelled / null started_at / run_attempt>1 tests). Recorded in the plan's T10 section since. AC2 projection caveat: only tsc is scaled for slower runner cores; the
 vitest (`--maxWorkers=4`, 20-core host) and bun shard times are not, so 3.1x is optimistic
 (1.5x slower shard → ~2.8x). T9 measures on real runners. fast-check numRuns (4000 × scale
 1–4) is set to reach the time target — README must say so.
