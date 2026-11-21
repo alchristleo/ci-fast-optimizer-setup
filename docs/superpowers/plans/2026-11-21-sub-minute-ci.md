@@ -203,3 +203,4 @@ PANEL cdo e513fb5 must=0 should=0 nit=5
 SEAT cdo pass e513fb5 AC12
 FIX wave e513fb5 sdd-reviewer-lite re-review fix-needed: unsourced 4-vCPU, billing, bench duration
 COORD 38a4664 README sources + 5 CDO nits; owner accepted without further review
+CONVERGE 7c4f649 verified=13 inconclusive=1 (AC13 owner at gate)
