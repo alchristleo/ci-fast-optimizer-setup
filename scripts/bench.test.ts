@@ -312,6 +312,29 @@ describe("readme", () => {
     expect(out).not.toContain("NaN");
     expect(out).toContain("| baseline | full | 0 | 0 | n/a | n/a | n/a |");
   });
+  test("renders median per-step seconds for full-mode successful runs", () => {
+    const withJobs = results([
+      ...[10, 20, 30].map((s, i) =>
+        run({
+          workflow: "baseline",
+          mode: "full",
+          wall_s: 60,
+          run_id: 40 + i,
+          jobs: [{ name: "test (baseline)", wall_s: 60, steps: [{ name: "vitest", s }] }],
+        }),
+      ),
+      run({
+        workflow: "baseline",
+        mode: "full",
+        wall_s: 60,
+        run_id: 49,
+        conclusion: "failure",
+        jobs: [{ name: "test (baseline)", wall_s: 900, steps: [{ name: "vitest", s: 900 }] }],
+      }),
+    ]);
+    const out = renderReadme(readme, withJobs);
+    expect(out).toContain("| baseline | test (baseline) | vitest | 20 |");
+  });
   test("throws without markers", () => {
     expect(() => renderReadme("# T\n", good)).toThrow();
   });

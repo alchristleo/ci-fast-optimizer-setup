@@ -195,10 +195,34 @@ function section(res: Results): string {
     const s = summarize(res.runs, w, m);
     return `| ${w} | ${m} | ${s.n} | ${s.excluded} | ${num(s.median_wall_s)} | ${num(s.p90_wall_s)} | ${num(s.median_queue_s)} |`;
   });
+  const steps: string[] = [];
+  for (const w of ["baseline", "fast"]) {
+    const by = new Map<string, number[]>();
+    for (const r of summarize(res.runs, w, "full").ok)
+      for (const j of r.jobs) {
+        // Shards are one job kind: group "test (shard 2)" with the others.
+        const job = j.name.replace(/ \(shard \d+\)$/, " (shards)");
+        for (const st of j.steps) {
+          if (/^(Set up job|Post |Complete job)/.test(st.name)) continue; // runner bookkeeping
+          const key = `${job}\t${st.name}`;
+          by.set(key, [...(by.get(key) ?? []), st.s]);
+        }
+      }
+    for (const [key, v] of by) {
+      const [job, step] = key.split("\t");
+      steps.push(`| ${w} | ${job} | ${step} | ${num(median(v))} |`);
+    }
+  }
   return [
     "| workflow | mode | runs | excluded | median wall (s) | p90 wall (s) | median queue (s) |",
     "| --- | --- | --- | --- | --- | --- | --- |",
     ...rows,
+    "",
+    "Median seconds per step, successful full-mode runs (runner bookkeeping steps left out, shards grouped as one job):",
+    "",
+    "| workflow | job | step | median (s) |",
+    "| --- | --- | --- | --- |",
+    ...steps,
     "",
     `Generated from bench/results.json (generated_at ${res.generated_at}, bun ${res.bun}, node ${res.node}).`,
   ].join("\n");
@@ -216,8 +240,8 @@ export function checkReadme(readme: string, res: Results): boolean {
 }
 
 // ---- gh-backed commands (not unit tested) ----
-function gh(args: string[]): string {
-  return execFileSync("gh", ["api", ...args], { encoding: "utf8" });
+function gh(args: string[], input?: string): string {
+  return execFileSync("gh", ["api", ...args], { encoding: "utf8", input });
 }
 const ghJson = (args: string[]) => JSON.parse(gh(args));
 const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
@@ -241,12 +265,13 @@ async function dispatchOne(workflow: string, mode: "full" | "pr"): Promise<Bench
       .filter((r) => r.head_sha === headSha)
       .map((r) => r.id),
   );
-  const fields = ["-f", `ref=${ref}`];
+  // JSON body: older gh versions send `-f inputs[mode]=x` as a literal key.
   // Only fast.yml declares inputs; baseline would reject them.
-  if (workflow === "fast") fields.push("-f", `inputs[mode]=${mode}`);
-  if (workflow === "fast" && mode === "pr")
-    fields.push("-f", `inputs[base]=${mainSha}`, "-f", `inputs[head]=${headSha}`);
-  gh(["-X", "POST", `repos/${REPO}/actions/workflows/${file}/dispatches`, ...fields]);
+  const inputs: Record<string, string> = {};
+  if (workflow === "fast") inputs.mode = mode;
+  if (workflow === "fast" && mode === "pr") Object.assign(inputs, { base: mainSha, head: headSha });
+  const body = JSON.stringify(workflow === "fast" ? { ref, inputs } : { ref });
+  gh(["-X", "POST", `repos/${REPO}/actions/workflows/${file}/dispatches`, "--input", "-"], body);
 
   let found: ApiRun | undefined;
   for (let i = 0; i < 60 && !found; i++) {
