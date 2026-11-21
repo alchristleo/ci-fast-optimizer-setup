@@ -181,3 +181,7 @@ TRIAGE fixed=17 dismissed=1 backlog=5
 DISMISSED design should README stub -> PR 2 scope (owner)
 FIX wave 01be3f6 sdd-implementer panel PR1: 17 items
 COORD fix wave 01be3f6 re-review approve (sdd-reviewer-lite), all priors fixed
+USAGE end 91
+PAUSED at step 8 (PR 1 CI green head 5d38981), next: spec-converge on milestone-1 (base fd54e21) -> merge gate PR 1 (suggest squash) -> T9 PR 2
+
+**PAUSED 2026-11-21** at step 8: PR 1 CI green (head 5d38981). Next: spec-converge → merge gate (squash) → T9 bench + README (PR 2).
