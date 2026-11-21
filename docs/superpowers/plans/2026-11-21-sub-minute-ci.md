@@ -166,3 +166,6 @@ T6 fix 13f1ff9 sdd-reviewer-lite fix-needed untrusted-expr scan misses needs/ste
 T6 coord 3a0128c reject any ${{ in run blocks; needs.* mutation red
 T6 done 3a0128c sdd-reviewer-lite coord approve
 PLAN T7/T9 restructured: PR first, bench after merge (owner)
+PR 1 opened https://github.com/alchristleo/ci-fast-optimizer-setup/pull/1; first runs fast 45s, baseline 203s
+T7 done e4db8ff sdd-implementer PR CI green: fast 45s, baseline 203s
+PANEL cdo skipped owner: README lands in PR 2
