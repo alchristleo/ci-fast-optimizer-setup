@@ -1,0 +1,241 @@
+name: fast
+# Parallel jobs, affected-only tests on PRs, LPT-sharded bun test.
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: full runs every test file, pr runs only the affected files
+        type: choice
+        options: [full, pr]
+        default: full
+      base:
+        description: Base commit SHA (pr mode)
+        default: ""
+      head:
+        description: Head commit SHA (pr mode)
+        default: ""
+
+permissions:
+  contents: read
+
+concurrency:
+  group: fast-${{ github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+env:
+  BUN_VERSION: 1.4.5
+
+jobs:
+  plan:
+    runs-on: ubuntu-latest
+    outputs:
+      count: ${{ steps.plan.outputs.count }}
+      matrix: ${{ steps.plan.outputs.matrix }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+      - uses: oven-sh/setup-bun@0c5077e51419868618aeaa5fe8019c62421857d6 # v2.2.0
+        with:
+          bun-version: ${{ env.BUN_VERSION }}
+      - uses: actions/cache/restore@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+        with:
+          path: .ci/test-timings.json
+          key: timings-none
+          restore-keys: timings-
+      - id: plan
+        env:
+          EVENT: ${{ github.event_name }}
+          IN_MODE: ${{ inputs.mode }}
+          IN_BASE: ${{ inputs.base }}
+          IN_HEAD: ${{ inputs.head }}
+          PR_BASE: ${{ github.event.pull_request.base.sha }}
+        run: |
+          set -euo pipefail
+          mode="full"
+          base=""
+          head=$(git rev-parse HEAD)
+          if [ "$EVENT" = pull_request ]; then
+            mode="pr"; base="$PR_BASE"
+          elif [ "$EVENT" = workflow_dispatch ]; then
+            mode=$IN_MODE
+            if [ "$mode" = pr ]; then
+              base=$IN_BASE; head=$IN_HEAD
+              if [ -z "$base" ] || [ -z "$head" ]; then echo "pr mode needs base and head" >&2; exit 1; fi
+            fi
+          fi
+          if [ "$mode" = pr ]; then
+            bun scripts/affected.ts --base "$base" --head "$head" > affected.txt
+          else
+            echo all > affected.txt
+          fi
+          if [ "$(head -n1 affected.txt)" = all ]; then
+            find test -name '*.test.ts' | sort > files.txt
+          else
+            grep . affected.txt > files.txt || true
+          fi
+          total=$(wc -l < files.txt)
+          n=4
+          if [ "$total" -lt "$n" ]; then n=$total; fi
+          echo "mode=$mode files=$total shards=$n"
+          matrix='[]'
+          for i in $(seq 0 $((n - 1))); do
+            list=$(bun scripts/shard.ts --index "$i" --total "$n" --files-from files.txt | tr '\n' ' ')
+            matrix=$(jq -c --argjson i "$i" --arg f "$list" '. + [{shard: $i, files: $f}]' <<< "$matrix")
+          done
+          echo "count=$n" >> "$GITHUB_OUTPUT"
+          echo "matrix={\"include\":$matrix}" >> "$GITHUB_OUTPUT"
+
+  fmt:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: oven-sh/setup-bun@0c5077e51419868618aeaa5fe8019c62421857d6 # v2.2.0
+        with:
+          bun-version: ${{ env.BUN_VERSION }}
+      - uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+        with:
+          path: ~/.bun/install/cache
+          key: bun-${{ runner.os }}-${{ hashFiles('bun.lock') }}
+      - run: bun install --frozen-lockfile
+      - run: bun run fmt:check
+
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: oven-sh/setup-bun@0c5077e51419868618aeaa5fe8019c62421857d6 # v2.2.0
+        with:
+          bun-version: ${{ env.BUN_VERSION }}
+      - uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+        with:
+          path: ~/.bun/install/cache
+          key: bun-${{ runner.os }}-${{ hashFiles('bun.lock') }}
+      - run: bun install --frozen-lockfile
+      - run: bun run lint
+
+  typecheck:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: oven-sh/setup-bun@0c5077e51419868618aeaa5fe8019c62421857d6 # v2.2.0
+        with:
+          bun-version: ${{ env.BUN_VERSION }}
+      - uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+        with:
+          path: ~/.bun/install/cache
+          key: bun-${{ runner.os }}-${{ hashFiles('bun.lock') }}
+      - run: bun install --frozen-lockfile
+      - run: bun run check
+
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: oven-sh/setup-bun@0c5077e51419868618aeaa5fe8019c62421857d6 # v2.2.0
+        with:
+          bun-version: ${{ env.BUN_VERSION }}
+      - uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+        with:
+          path: ~/.bun/install/cache
+          key: bun-${{ runner.os }}-${{ hashFiles('bun.lock') }}
+      - run: bun install --frozen-lockfile
+      - run: bun run build
+
+  tooling:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+      - uses: oven-sh/setup-bun@0c5077e51419868618aeaa5fe8019c62421857d6 # v2.2.0
+        with:
+          bun-version: ${{ env.BUN_VERSION }}
+      - uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+        with:
+          path: ~/.bun/install/cache
+          key: bun-${{ runner.os }}-${{ hashFiles('bun.lock') }}
+      - run: bun install --frozen-lockfile
+      - run: bun run test:tooling
+
+  test:
+    name: test (shard ${{ matrix.shard }})
+    needs: plan
+    if: needs.plan.outputs.count != '0'
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix: ${{ fromJSON(needs.plan.outputs.matrix) }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: oven-sh/setup-bun@0c5077e51419868618aeaa5fe8019c62421857d6 # v2.2.0
+        with:
+          bun-version: ${{ env.BUN_VERSION }}
+      - uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+        with:
+          path: ~/.bun/install/cache
+          key: bun-${{ runner.os }}-${{ hashFiles('bun.lock') }}
+      - run: bun install --frozen-lockfile
+      - name: bun test
+        env:
+          FILES: ${{ matrix.files }}
+        run: |
+          set -o pipefail
+          read -ra list <<< "$FILES"
+          bun test --reporter=junit --reporter-outfile=junit-${{ matrix.shard }}.xml "${list[@]}" 2>&1 | tee bun.log
+          files=${#list[@]}
+          passed=$(sed -nE 's/^ *([0-9]+) pass$/\1/p' bun.log)
+          echo "::notice::TESTS files=${files} passed=${passed}"
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: junit-${{ matrix.shard }}
+          path: junit-${{ matrix.shard }}.xml
+
+  ci-ok:
+    needs: [plan, fmt, lint, typecheck, build, tooling, test]
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
+      - name: check needs
+        env:
+          PLAN: ${{ needs.plan.result }}
+          FMT: ${{ needs.fmt.result }}
+          LINT: ${{ needs.lint.result }}
+          TYPECHECK: ${{ needs.typecheck.result }}
+          BUILD: ${{ needs.build.result }}
+          TOOLING: ${{ needs.tooling.result }}
+          TEST: ${{ needs.test.result }}
+          COUNT: ${{ needs.plan.outputs.count }}
+        run: |
+          for r in "$PLAN" "$FMT" "$LINT" "$TYPECHECK" "$BUILD" "$TOOLING"; do
+            [ "$r" = success ] || { echo "a required job did not succeed"; exit 1; }
+          done
+          if [ "$TEST" = success ]; then exit 0; fi
+          if [ "$TEST" = skipped ] && [ "$COUNT" = 0 ]; then echo "no affected tests"; exit 0; fi
+          echo "test result: $TEST"
+          exit 1
+
+  timings:
+    needs: test
+    if: github.event_name == 'push' && needs.test.result == 'success'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: oven-sh/setup-bun@0c5077e51419868618aeaa5fe8019c62421857d6 # v2.2.0
+        with:
+          bun-version: ${{ env.BUN_VERSION }}
+      - uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
+        with:
+          pattern: junit-*
+          path: junit
+          merge-multiple: true
+      - run: |
+          mkdir -p .ci
+          bun scripts/timings.ts merge junit/*.xml > .ci/test-timings.json
+      - uses: actions/cache/save@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+        with:
+          path: .ci/test-timings.json
+          key: timings-${{ github.run_id }}
