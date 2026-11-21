@@ -198,3 +198,28 @@ Phase 1 (PR 1, base fd54e21, head b338313). No earlier status table existed.
 Open findings: none. Ledger shows `TRIAGE fixed=17 dismissed=1 backlog=5`, `FIX wave 01be3f6`, `COORD ... re-review approve`; the one dismissed item (README stub) is owner-scoped to PR 2.
 
 Deviations: none in commands run. AC3 parity uses PR CI logs, not the bench command. AC14 covers HEAD only.
+
+## Status (converged 2026-11-22)
+
+Phase 2 (PR 2, branch bench-readme, head 786392f, base 5673b46). Phase 1 table above is kept. Rows verified there stay VERIFIED only where re-run below.
+
+| # | criterion (short) | verdict | evidence |
+|---|---|---|---|
+| 1 | fast full median < 60 s, max <= 90 s | VERIFIED | `bun scripts/bench.ts --check fast_full_median_lt=60,fast_full_max_lte=90`: median 44 s, max 55 s over 5 runs |
+| 2 | baseline >= 3x fast | VERIFIED | `--check speedup_gte=3`: baseline 219 s / fast 44 s = 4.98 |
+| 3 | same tests both pipelines | VERIFIED | `--check same_tests`: signatures 131 files / 2053 tests |
+| 4 | LPT shard | VERIFIED | `bun test ./scripts/shard.test.ts`: 7 pass, 0 fail |
+| 5 | affected selection | VERIFIED | `bun test ./scripts/affected.test.ts`: 45 pass, 0 fail |
+| 6 | build once | VERIFIED | `bun test ./scripts/build-once.test.ts`: 2 pass, 0 fail |
+| 7 | fast jobs no needs; baseline one job | VERIFIED | `bun test ./scripts/workflows.test.ts`: 14 pass, 0 fail |
+| 8 | workflow security D10 | VERIFIED | same run as AC7: 14 pass, 0 fail |
+| 9 | PR mode <= 20% files, median < 60 s | VERIFIED | `--check pr_fewer_files,pr_median_lt=60`: 8 of 131 files (6%), median 34 s over 5 runs |
+| 10 | README equals render of results.json | VERIFIED | `bun scripts/bench.ts --readme --check`: exit 0 |
+| 11 | local gate green | VERIFIED | `bun run ci:local`: exit 0; 2053 pass 0 fail (131 files), tooling 98 pass 0 fail (6 files) |
+| 12 | README content | VERIFIED | ledger `SEAT cdo pass e513fb5 AC12`. README edits in 38a4664 (after e513fb5) were owner-accepted without re-review |
+| 13 | public runs linked | INCONCLUSIVE | owner checks at merge gate |
+| 14 | tsc 5.9 and bun check agree | VERIFIED | `bun run legacy:check && bun run check` at HEAD: "No type errors in 400 files". Same two commands on origin/bench/pr-sample (d777418, fresh worktree, bun install): exit 0, "No type errors in 400 files" |
+
+Open findings: none. Ledger `TRIAGE fixed=14 dismissed=0 backlog=0` follows the PR 2 panel lines; no later open item.
+
+Deviations: no baseline-ref timing was taken for AC1/2/9. Base 5673b46 has no bench or results.json; the numbers come from `bench/results.json` (workflow runs, both pipelines measured with the same dispatch method), not re-measured locally. Tooling test count is 98 (was 90 in phase 1) due to PR 2 additions.
