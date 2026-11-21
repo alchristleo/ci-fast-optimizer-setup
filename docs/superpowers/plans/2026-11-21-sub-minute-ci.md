@@ -185,3 +185,5 @@ USAGE end 91
 PAUSED at step 8 (PR 1 CI green head 5d38981), next: spec-converge on milestone-1 (base fd54e21) -> merge gate PR 1 (suggest squash) -> T9 PR 2
 
 **PAUSED 2026-11-21** at step 8: PR 1 CI green (head 5d38981). Next: spec-converge → merge gate (squash) → T9 bench + README (PR 2).
+RESUME spec-converge PR 1
+USAGE start 0
