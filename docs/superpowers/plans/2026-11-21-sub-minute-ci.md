@@ -156,3 +156,5 @@ T8 done c8d5369 sdd-reviewer approve
 T4 done 235c19d sdd-reviewer-lite approve
 T10 review approve 4c31638 sdd-reviewer should: bench scope unexplained -> coord note
 T10 coord 6a15945 findings notes: bench scope + AC2 projection caveat
+T10 coord b577e4f attribution: brief extras recorded in plan
+COORD T8 review nits (from c8d5369 review, folded into T10): NaN render on empty results; Infinity from empty jobs; uncapped poll loop; missing cancelled/null started_at/run_attempt>1 tests

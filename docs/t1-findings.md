@@ -63,7 +63,8 @@ T10 notes (coordinator): bench.ts changes in T10 (RUN_TIMEOUT_MS poll cap, `run_
 filter, `fast_full_max_lte`, `n/a` rendering, nullable jobsTiming): `fast_full_max_lte` is in the
 plan's T10 section; the other four came from the coordinator's T10 dispatch brief, which folded
 T8 review nits (NaN render on empty results, Infinity from empty jobs, uncapped poll loop, missing
-cancelled / null started_at / run_attempt>1 tests). Recorded in the plan's T10 section since. AC2 projection caveat: only tsc is scaled for slower runner cores; the
+cancelled / null started_at / run_attempt>1 tests; logged as T8 review lines in the plan
+ledger). The same brief added the affected.ts filter to test files existing at head. AC2 projection caveat: only tsc is scaled for slower runner cores; the
 vitest (`--maxWorkers=4`, 20-core host) and bun shard times are not, so 3.1x is optimistic
 (1.5x slower shard → ~2.8x). T9 measures on real runners. fast-check numRuns (4000 × scale
 1–4) is set to reach the time target — README must say so.
