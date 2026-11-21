@@ -113,3 +113,7 @@ to runs. `--readme --check` green (AC10). Push to main.
 ## Ledger
 USAGE start 24
 PLAN written 9 tasks
+T1 done 3412ab1 sdd-implementer bun 1.4.5 stable: check+fmt yes, lint no -> oxlint; D2 alias ok; scanImports drops type edges
+T1 fix 3412ab1 sdd-reviewer-lite fix-needed unsourced installer/canary claim, D4 lint + D11 pin lines missing, no trailers
+T1 coord 7a634cb findings fixes per review
+T1 done 7a634cb sdd-reviewer-lite coord re-review approve
