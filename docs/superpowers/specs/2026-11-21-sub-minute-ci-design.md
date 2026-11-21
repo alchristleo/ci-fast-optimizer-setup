@@ -28,8 +28,9 @@ No team-scale claims ("200+ hours"): README gives a formula readers fill with th
   **pending: T1** (whichever works with zero per-file edits on both runners; (a) preferred).
 - **D3 Build once per process:** one memoized `getTestApp()` helper. No knob: Vitest's default
   per-file isolation rebuilds it per file; `bun test` shares one module registry per process, so
-  it builds once. `createApp()` does real work (register all domain routers, compile validators,
-  seed in-memory store) and increments a counter printed as `APP_BUILDS=<n>` at process exit.
+  it builds once. `createApp()` does real-style boot work only, no busy loops (owner choice): compile every
+  domain route's JSON schema with ajv, build the router table, load seed fixtures from disk
+  (`fixtures/seed/*.json`) into the in-memory store; cost tuned via schema/fixture size and increments a counter printed as `APP_BUILDS=<n>` at process exit.
 - **D4 Lint tool:** pin newest **stable** Bun. If `bun lint` is stable there, use it; else keep
   oxlint in the fast pipeline and README says so. **pending: T1.** Same rule for `bun check`/`bun fmt`
   (fallback: tsc / oxfmt, flagged in README).
@@ -37,7 +38,8 @@ No team-scale claims ("200+ hours"): README gives a formula readers fill with th
   claims; one lockfile). Baseline runs tools on Node 22 via setup-node. Both pipelines cache
   `~/.bun/install/cache` with actions/cache keyed on `bun.lock` hash (owner choice). README states it.
 - **D6 Baseline shape:** one job, serial steps: install → oxfmt check → oxlint → tsc → build →
-  vitest (no sharding). The common "before" state.
+  vitest (no sharding). `tsc` = TypeScript 5.9 (JS compiler, owner choice: the common "before");
+  `bun check` in fast. README notes TS 7 native tsc closes most of this gap. Vitest default workers. The common "before" state.
 - **D7 Shard timings storage** (shapes: committed file refreshed by bot PR / actions cache).
   Chosen: actions cache, written only on `push` to main (key `timings-<run_id>`, restore prefix
   `timings-`), fallback to committed `.ci/test-timings.json` (seeded once from T-measure run),
