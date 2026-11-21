@@ -86,13 +86,11 @@ test("fast: ci-ok runs always and needs every other job", () => {
   expect(needsOf(ok).sort()).toEqual(others.sort());
 });
 
-test("no run block interpolates untrusted expressions", () => {
+// Any ${{ }} in a run block is rejected: values reach scripts only through env.
+test("no run block interpolates expressions", () => {
   for (const { wf } of both)
     for (const job of Object.values(wf.jobs))
-      for (const step of job.steps ?? [])
-        expect(step.run ?? "").not.toMatch(
-          /\$\{\{\s*(inputs\.|github\.head_ref|github\.event\.|matrix\.)/,
-        );
+      for (const step of job.steps ?? []) expect(step.run ?? "").not.toMatch(/\$\{\{/);
 });
 
 test("fast: plan checks out full history", () => {
