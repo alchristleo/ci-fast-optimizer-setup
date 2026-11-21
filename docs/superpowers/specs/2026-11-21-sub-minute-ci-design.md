@@ -134,21 +134,21 @@ separately, not in wall time beyond its own seconds.
 
 1. Fast full pipeline (push/dispatch on main) median wall < 60 s and max ≤ 90 s over R≥5 runs
    (wall includes runner startup and install):
-   `bun scripts/bench.ts --check fast_full_median_lt=60`
+   `bun scripts/bench.ts --check fast_full_median_lt=60,fast_full_max_lte=90`
 2. Baseline median wall ≥ 3× fast median: `bun scripts/bench.ts --check speedup_gte=3`
 3. Both pipelines execute the same test files and pass the same test count in benched runs:
    `bun scripts/bench.ts --check same_tests`
 4. LPT shard: unit + property tests (pinned seed) — every file in exactly one shard; max shard
-   ≤ max(longest file, 1.15 × mean) on fixture; literal example: `bun test scripts/shard.test.ts`
+   ≤ max(longest file, 1.15 × mean) on fixture; literal example: `bun test ./scripts/shard.test.ts`
 5. Affected: domain-file change → that domain's tests + importers only; shared lib change → all
    dependents; config/workflow change → all; `*.md` only → none; deleted file → its dependents:
-   `bun test scripts/affected.test.ts`
+   `bun test ./scripts/affected.test.ts`
 6. Build once: `bun test` process prints `APP_BUILDS=1` per shard; vitest run prints one build per
-   test file using the app: `bun test scripts/build-once.test.ts` (spawns both runners on 3 files)
+   test file using the app: `bun test ./scripts/build-once.test.ts` (spawns both runners on 3 files)
 7. fast.yml: fmt/lint/typecheck/build/test jobs have no `needs`; baseline.yml is one job:
-   `bun test scripts/workflows.test.ts`
+   `bun test ./scripts/workflows.test.ts`
 8. Workflow security per D10 (no `pull_request_target`, read-only perms, SHA-pinned third-party
-   actions, no secrets): `bun test scripts/workflows.test.ts`
+   actions, no secrets): `bun test ./scripts/workflows.test.ts`
 9. PR mode on `bench/pr-sample` (one generated-domain service change) runs ≤ 20% of full test
    files and median wall < 60 s:
    `bun scripts/bench.ts --check pr_fewer_files,pr_median_lt=60`

@@ -128,6 +128,11 @@ time target, shared install cache, oxlint fallback, TS 5.9 baseline vs TS 7, bar
 `--readme --check` green (AC10). PR 2 with its own review + merge gate.
 
 ## Backlog
+- scripts/plan.ts: move fast.yml plan bash into a tested script (panel design)
+- ci-ok: standard contains(needs.*.result) idiom (panel design)
+- affected.ts: flatter return shape `string[] | "all"` (panel design)
+- gen `--seed` as constant (panel design nit)
+- T9: rebase bench/pr-sample / assert fast.yml blob equals main before bench (panel correctness nit)
 - test/smoke/catalog.test.ts:15 hard-coded toBe(123) → derive from domains.length (PRE-EXISTING, T10 review)
 - bench.ts optional repo slug env override (T8 review nit)
 - Scheduled weekly bench re-run + badge
@@ -169,3 +174,8 @@ PLAN T7/T9 restructured: PR first, bench after merge (owner)
 PR 1 opened https://github.com/alchristleo/ci-fast-optimizer-setup/pull/1; first runs fast 45s, baseline 203s
 T7 done e4db8ff sdd-implementer PR CI green: fast 45s, baseline 203s
 PANEL cdo skipped owner: README lands in PR 2
+PANEL design 8c5bdc1 must=0 should=8 nit=5
+PANEL security 8c5bdc1 must=0 should=0 nit=2
+PANEL correctness 8c5bdc1 must=1 should=4 nit=2
+TRIAGE fixed=17 dismissed=1 backlog=5
+DISMISSED design should README stub -> PR 2 scope (owner)
