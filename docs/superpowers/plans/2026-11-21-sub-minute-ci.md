@@ -188,3 +188,4 @@ PAUSED at step 8 (PR 1 CI green head 5d38981), next: spec-converge on milestone-
 RESUME spec-converge PR 1
 USAGE start 0
 CONVERGE 6d5acb5 verified=7 inconclusive=7 (pending PR 2 bench/README/owner)
+MERGED PR 1 squash 5673b46 (owner approved, head 0bee8e3)
