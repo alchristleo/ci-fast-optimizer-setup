@@ -161,3 +161,5 @@ COORD T8 review nits (from c8d5369 review, folded into T10): NaN render on empty
 T10 coord e0e6601 record T8 nits + reword; owner accepted without further review
 T10 done e0e6601 sdd-reviewer approve (coord closed by owner)
 T6 review approve cd2bdfb sdd-reviewer 2 should (TESTS log format, workflow test gaps) -> cheap fix
+T6 fix 13f1ff9 sdd-reviewer-lite fix-needed untrusted-expr scan misses needs/steps/github.*
+T6 coord 3a0128c reject any ${{ in run blocks; needs.* mutation red
