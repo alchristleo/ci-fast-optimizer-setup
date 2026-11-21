@@ -1,6 +1,6 @@
 // Deterministic generator: bun scripts/gen.ts --domains K --seed S
-// Writes src/domains/generated/<name>/{service,routes}.ts, test/generated/<name>.test.ts
-// and src/domains/index.ts. Output depends only on K and S.
+// Writes src/domains/generated/<name>/{service,routes}.ts, test/generated/<name>.test.ts,
+// src/domains/index.ts and fixtures/{schema,seed}/<name>.json. Output depends only on K and S.
 import { mkdirSync, rmSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
@@ -114,6 +114,60 @@ function mulberry32(seed: number): () => number {
     t = Math.imul(t ^ (t >>> 15), t | 1);
     t ^= t + Math.imul(t ^ (t >>> 7), t | 61);
     return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+  };
+}
+
+const SCHEMA_PROPS = 80;
+const SEED_ROWS = 60;
+const ROW_PROPS = 10;
+
+function hash(text: string): number {
+  let h = 2166136261;
+  for (const ch of text) h = Math.imul(h ^ ch.charCodeAt(0), 16777619);
+  return h >>> 0;
+}
+
+// JSON schema (many optional props) and seed rows for one domain, seeded per domain name.
+function genFixtures(name: string, seed: number): { schema: unknown; seed: unknown[] } {
+  const rand = mulberry32(seed ^ hash(name));
+  const int = (lo: number, hi: number): number => lo + Math.floor(rand() * (hi - lo + 1));
+  const kinds = ["string", "integer", "enum", "boolean", "pattern"] as const;
+  const props: Record<string, unknown> = { name: { type: "string", minLength: 1, maxLength: 80 } };
+  const make: Record<string, () => unknown> = {};
+  for (let p = 0; p < SCHEMA_PROPS; p++) {
+    const key = `attr${p}`;
+    const kind = kinds[p % kinds.length]!;
+    if (kind === "string") {
+      props[key] = { type: "string", minLength: 1, maxLength: int(20, 200) };
+      make[key] = () => `s${int(0, 9999)}`;
+    } else if (kind === "integer") {
+      const hi = int(100, 100000);
+      props[key] = { type: "integer", minimum: 0, maximum: hi, multipleOf: 1 };
+      make[key] = () => int(0, hi);
+    } else if (kind === "enum") {
+      const values = [0, 1, 2, 3, 4].map((v) => `e${p}_${v}`);
+      props[key] = { type: "string", enum: values };
+      make[key] = () => values[int(0, 4)]!;
+    } else if (kind === "boolean") {
+      props[key] = { type: "boolean" };
+      make[key] = () => rand() < 0.5;
+    } else {
+      props[key] = { type: "string", pattern: "^[A-Z]{2}[0-9]{3}$" };
+      make[key] = () => `AB${int(100, 999)}`;
+    }
+  }
+  const rows: unknown[] = [];
+  for (let r = 0; r < SEED_ROWS; r++) {
+    const row: Record<string, unknown> = { name: `${name}-${r}` };
+    for (let k = 0; k < ROW_PROPS; k++) {
+      const key = `attr${int(0, SCHEMA_PROPS - 1)}`;
+      row[key] = make[key]!();
+    }
+    rows.push(row);
+  }
+  return {
+    schema: { type: "object", required: ["name"], additionalProperties: false, properties: props },
+    seed: rows,
   };
 }
 
@@ -373,10 +427,12 @@ function main(): void {
   const rand = mulberry32(seed);
   const genDir = join(root, "src/domains/generated");
   const testDir = join(root, "test/generated");
-  rmSync(genDir, { recursive: true, force: true });
-  rmSync(testDir, { recursive: true, force: true });
-  mkdirSync(genDir, { recursive: true });
-  mkdirSync(testDir, { recursive: true });
+  const schemaDir = join(root, "fixtures/schema");
+  const seedDir = join(root, "fixtures/seed");
+  for (const dir of [genDir, testDir, schemaDir, seedDir]) {
+    rmSync(dir, { recursive: true, force: true });
+    mkdirSync(dir, { recursive: true });
+  }
 
   const names: string[] = [];
   for (let i = 0; i < domains; i++) {
@@ -386,6 +442,12 @@ function main(): void {
     writeFileSync(join(genDir, d.name, "routes.ts"), d.routes);
     writeFileSync(join(testDir, `${d.name}.test.ts`), d.test);
     names.push(d.name);
+  }
+
+  for (const name of ["orders", "inventory", "customers", ...names]) {
+    const f = genFixtures(name, seed);
+    writeFileSync(join(schemaDir, `${name}.json`), JSON.stringify(f.schema, null, 2) + "\n");
+    writeFileSync(join(seedDir, `${name}.json`), JSON.stringify(f.seed, null, 2) + "\n");
   }
 
   const all = [

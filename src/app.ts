@@ -1,12 +1,12 @@
-import { mkdirSync, writeFileSync } from "node:fs";
+import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
+import { fileURLToPath } from "node:url";
+import { Ajv } from "ajv";
 import { Hono } from "hono";
 import { domains } from "./domains/index.ts";
 import { insert } from "./lib/store.ts";
-import { compile, type Schema } from "./lib/validation.ts";
 
-const WARMUP_ROUNDS = 20000;
-const SEED_ROWS = 50;
+const fixturesDir = fileURLToPath(new URL("../fixtures", import.meta.url));
 
 let builds = 0;
 
@@ -14,24 +14,35 @@ export function appBuilds(): number {
   return builds;
 }
 
-function sample(schema: Schema, round: number): Record<string, unknown> {
-  const out: Record<string, unknown> = {};
-  for (const [key, field] of Object.entries(schema)) {
-    if (field.type === "number") out[key] = round % 7;
-    else if (field.type === "boolean") out[key] = round % 2 === 0;
-    else out[key] = field.pattern ? "AB123" : `v${round}`;
-  }
-  return out;
+function loadJson(kind: "schema" | "seed", name: string): unknown {
+  return JSON.parse(readFileSync(join(fixturesDir, kind, `${name}.json`), "utf8"));
 }
 
-// Registers every domain router, compiles and warms every validator, seeds the store.
+// Parsed seed rows, cached per process. Read-only: callers deep-clone before inserting.
+const seedCache = new Map<string, readonly Record<string, unknown>[]>();
+
+function seedRows(name: string): readonly Record<string, unknown>[] {
+  let rows = seedCache.get(name);
+  if (!rows) {
+    rows = loadJson("seed", name) as Record<string, unknown>[];
+    seedCache.set(name, rows);
+  }
+  return rows;
+}
+
+// Builds the router table, compiles every domain JSON schema with ajv and seeds the store
+// with deep clones of the cached fixtures.
 export function createApp(): Hono {
   const app = new Hono();
+  const ajv = new Ajv();
   for (const domain of domains) {
     app.route(`/${domain.name}`, domain.routes());
-    const validate = compile(domain.schema);
-    for (let round = 0; round < WARMUP_ROUNDS; round++) validate(sample(domain.schema, round));
-    for (let row = 0; row < SEED_ROWS; row++) insert(domain.name, sample(domain.schema, row));
+    const validate = ajv.compile(loadJson("schema", domain.name) as object);
+    for (const row of seedRows(domain.name)) {
+      const copy = structuredClone(row);
+      if (!validate(copy)) throw new Error(`bad seed fixture for ${domain.name}`);
+      insert(domain.name, copy);
+    }
   }
   builds++;
   const dir = process.env.APP_BUILDS_DIR;

@@ -12,7 +12,7 @@
     "build": "bun build src/app.ts --target=node --outdir dist",
     "test": "bun test",
     "test:vitest": "vitest run",
-    "gen": "bun scripts/gen.ts --domains 120 --seed 1 && bun fmt",
+    "gen": "bun scripts/gen.ts --domains 120 --seed 1 && bun fmt src/domains test/generated fixtures",
     "ci:local": "bun run fmt:check && bun run lint && bun run check && bun run build && bun run test",
     "timings:update": "bun test --reporter=junit --reporter-outfile=.ci/junit.xml && echo 'timings merge arrives in T5'",
     "legacy:fmt": "oxfmt --check .",
@@ -21,6 +21,7 @@
     "legacy:test": "vitest run"
   },
   "dependencies": {
+    "ajv": "8.20.0",
     "hono": "^4.13.19"
   },
   "devDependencies": {
@@ -28,7 +29,7 @@
     "@types/node": "^26.6.6",
     "oxfmt": "^0.79.0",
     "oxlint": "^1.94.0",
-    "typescript": "^7.0.2",
+    "typescript": "5.9.3",
     "vitest": "^5.1.1"
   }
 }
