@@ -148,3 +148,4 @@ T5 done 7d5e3ea sdd-reviewer approve
 T4 fix 5c54ea7 sdd-reviewer fix-needed empty-set prints newline; CLI/rename/delete paths untested
 T8 review approve c8d5369 sdd-reviewer should: baseline dispatch inputs -> T6 declares mode in baseline.yml
 T8 done c8d5369 sdd-reviewer approve
+T4 done 235c19d sdd-reviewer-lite approve
