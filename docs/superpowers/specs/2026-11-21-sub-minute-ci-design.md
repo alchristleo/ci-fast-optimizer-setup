@@ -27,7 +27,10 @@ No team-scale claims ("200+ hours"): README gives a formula readers fill with th
   real CPU work (fast-check property tests over domain services, pinned seeds, no sleeps) and the
   suite grows until serial `bun test` is ≈25–35 s locally (target ≈40–60 s on a 4-vCPU runner),
   so 4 time-filled shards pay off. App suite root is `test/`; tooling tests (`scripts/*.test.ts`)
-  run via `bun run test:tooling`, outside benched test counts.
+  run via `bun run test:tooling`, outside benched test counts. fast-check seed and numRuns live in
+  one shared config (seed printed on failure). Size by serial time on BOTH runtimes. Baseline
+  vitest config stays default (isolate on, default pool/workers = runner vCPUs); whether AC2
+  holds on the runner is a measured fact (T7/T9) — if not, stop and ask the owner.
 - **D2 Test file compat** (one-way door: test source shape). Shapes: (a) tests import `bun:test`,
   vitest aliases `bun:test`→`vitest`; (b) tests import `vitest`, Bun resolves it natively.
   **pending: T1** (whichever works with zero per-file edits on both runners; (a) preferred).
@@ -61,7 +64,7 @@ No team-scale claims ("200+ hours"): README gives a formula readers fill with th
   into least-loaded shard), ties broken by path. Shard count N=4 (tuned in T2 measurement). Cache scoped per branch: PR/dispatch refs restore
   main's entry; 7-day idle eviction → falls back to committed file, which is refreshed manually
   (`bun run timings:update`) when stale.
-- **D8 Affected tests:** `scripts/affected.ts <base> <head>` — reverse import graph over `src/`
+- **D8 Affected tests:** `scripts/affected.ts --base <sha> --head <sha>` — reverse import graph over `src/`
   and `test/` (Bun.Transpiler.scanImports), walk from changed files to test files. Any change
   outside `src/`/`test/` except `*.md`/`docs/` (package.json, bun.lock, configs, scripts,
   workflows) → run all. Deleted files count as changed (graph built at base for them). Zero
@@ -70,6 +73,10 @@ No team-scale claims ("200+ hours"): README gives a formula readers fill with th
   walked; every domain test imports its own domain module, so a domain change selects its own
   tests plus real importers. `test/smoke/**` (boot, catalog over all domains, cross-domain
   flows) always runs on PRs to catch wiring breaks. README explains the cut and its risk.
+  Smoke ≤ 3 files, no property tests, runs once (shard 0 / plan output), counted inside AC9's 20%.
+  `src/domains/index.ts` and `src/app.ts` changes → run all. Cross-domain rule: a test file
+  must import the domain module of every route prefix it requests (meta test enforces), so HTTP
+  coupling is a real import edge. AC9 applies only to the fixed bench sample commit; README says so.
 - **D9 Bench:** `scripts/bench.ts` run locally with the owner's `gh` auth (no CI token with write
   scope). Dispatches `baseline.yml` and `fast.yml` (`workflow_dispatch`, mode `full`) R=5 times
   each, interleaved, plus `fast.yml` mode `pr` on fixed sample diff branch `bench/pr-sample`.
@@ -125,7 +132,8 @@ separately, not in wall time beyond its own seconds.
 
 ## Acceptance criteria
 
-1. Fast full pipeline (push/dispatch on main) median wall < 60 s over R≥5 runs:
+1. Fast full pipeline (push/dispatch on main) median wall < 60 s and max ≤ 90 s over R≥5 runs
+   (wall includes runner startup and install):
    `bun scripts/bench.ts --check fast_full_median_lt=60`
 2. Baseline median wall ≥ 3× fast median: `bun scripts/bench.ts --check speedup_gte=3`
 3. Both pipelines execute the same test files and pass the same test count in benched runs:
