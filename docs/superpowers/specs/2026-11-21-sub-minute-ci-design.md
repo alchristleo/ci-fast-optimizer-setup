@@ -29,10 +29,12 @@ No team-scale claims ("200+ hours"): README gives a formula readers fill with th
 - **D3 Build once per process:** one memoized `getTestApp()` helper. No knob: Vitest's default
   per-file isolation rebuilds it per file; `bun test` shares one module registry per process, so
   it builds once. `createApp()` does real-style boot work only, no busy loops (owner choice): compile every
-  domain route's JSON schema with ajv, build the router table, load seed fixtures from disk
-  (`fixtures/seed/*.json`) into the in-memory store; cost tuned via schema/fixture size.
-  Seed read via `node:fs` with path from `import.meta.url`; parsed JSON cached read-only, store
-  reset deep-clones it. ajv version pinned exactly. Per-build cost measured and reported in README
+  domain's request JSON schema (`fixtures/schema/<d>.json`) with ajv — the compiled validator is
+  the only request-body validator its routes use (no separate hand-written Schema); build the
+  router table; load seed fixtures (`fixtures/seed/<d>.json`) from disk, validate each row, and
+  serve them as read-only reference data (`GET /<d>/catalog`). Seed read via `node:fs` with path
+  from `import.meta.url`; parsed seed frozen, never mutated, so it needs no reset. The mutable
+  store starts empty and `resetStore` clears it. Cost tuned via schema/fixture size. ajv version pinned exactly. Per-build cost measured and reported in README
   (tuned so local vitest ≥ 4× bun test, T2 rule); no target beyond that and increments a counter printed as `APP_BUILDS=<n>` at process exit.
 - **D4 Lint tool:** pin newest **stable** Bun. If `bun lint` is stable there, use it; else keep
   oxlint in the fast pipeline and README says so. **pending: T1.** Same rule for `bun check`/`bun fmt`
