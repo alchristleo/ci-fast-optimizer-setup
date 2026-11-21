@@ -30,7 +30,10 @@ No team-scale claims ("200+ hours"): README gives a formula readers fill with th
   per-file isolation rebuilds it per file; `bun test` shares one module registry per process, so
   it builds once. `createApp()` does real-style boot work only, no busy loops (owner choice): compile every
   domain route's JSON schema with ajv, build the router table, load seed fixtures from disk
-  (`fixtures/seed/*.json`) into the in-memory store; cost tuned via schema/fixture size and increments a counter printed as `APP_BUILDS=<n>` at process exit.
+  (`fixtures/seed/*.json`) into the in-memory store; cost tuned via schema/fixture size.
+  Seed read via `node:fs` with path from `import.meta.url`; parsed JSON cached read-only, store
+  reset deep-clones it. ajv version pinned exactly. Per-build cost measured and reported in README
+  (tuned so local vitest ≥ 4× bun test, T2 rule); no target beyond that and increments a counter printed as `APP_BUILDS=<n>` at process exit.
 - **D4 Lint tool:** pin newest **stable** Bun. If `bun lint` is stable there, use it; else keep
   oxlint in the fast pipeline and README says so. **pending: T1.** Same rule for `bun check`/`bun fmt`
   (fallback: tsc / oxfmt, flagged in README).
@@ -39,7 +42,7 @@ No team-scale claims ("200+ hours"): README gives a formula readers fill with th
   `~/.bun/install/cache` with actions/cache keyed on `bun.lock` hash (owner choice). README states it.
 - **D6 Baseline shape:** one job, serial steps: install → oxfmt check → oxlint → tsc → build →
   vitest (no sharding). `tsc` = TypeScript 5.9 (JS compiler, owner choice: the common "before");
-  `bun check` in fast. README notes TS 7 native tsc closes most of this gap. Vitest default workers. The common "before" state.
+  `bun check` in fast. TS 5.9 pinned exactly. README notes TS 7 native tsc closes most of this gap. Vitest default workers. The common "before" state.
 - **D7 Shard timings storage** (shapes: committed file refreshed by bot PR / actions cache).
   Chosen: actions cache, written only on `push` to main (key `timings-<run_id>`, restore prefix
   `timings-`), fallback to committed `.ci/test-timings.json` (seeded once from T-measure run),
@@ -65,7 +68,7 @@ No team-scale claims ("200+ hours"): README gives a formula readers fill with th
   from a `plan` step output; empty → test job skipped, `ci-ok` (`if: always()`) passes only when
   skipped-because-empty, fails on any failed/cancelled/other-skipped need.
 - **D13 Affected safety:** base = `git merge-base` of PR base SHA and head, `fetch-depth: 0`.
-  Dispatch pr-mode takes explicit `base`/`head` inputs. Unresolvable or non-literal import,
+  Dispatch pr-mode takes explicit `base`/`head` inputs. `fixtures/seed/**` change → run all (fs read invisible to import graph). Unresolvable or non-literal import,
   tsconfig path alias, or fs-read fixture under `test/fixtures` change → run all. Type-only import
   edges are included (scanned from source text, not transpiler output) — pending T1 check of
   scanImports; fallback is a regex import scanner.
@@ -128,6 +131,8 @@ separately, not in wall time beyond its own seconds.
 10. README bench section equals render of `bench/results.json` (no hand numbers):
     `bun scripts/bench.ts --readme --check`
 11. Local gate green: `bun run ci:local` (fmt check, lint, check, build, test)
+14. Both checkers agree: TS 5.9 `tsc --noEmit` and `bun check` both pass at HEAD and on
+    `bench/pr-sample`, same tsconfig: `bun run legacy:check && bun run check`
 12. README explains each of the 8 changes with its measured effect, honest notes (scaled suite,
     shared install, any D4 fallback), and the hours-saved formula: check: seat panel-cdo
 13. Real public runs exist: README links the Actions runs used in results.json: check: owner at gate
