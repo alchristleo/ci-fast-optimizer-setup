@@ -126,3 +126,6 @@ T3 review approve 8c78c6a sdd-reviewer should: seed skewed by boot cost -> regen
 T3 done 8c78c6a sdd-reviewer approve
 T5 review approve 7d5e3ea sdd-reviewer nit: scope timings:update to test/
 T5 done 7d5e3ea sdd-reviewer approve
+T4 fix 5c54ea7 sdd-reviewer fix-needed empty-set prints newline; CLI/rename/delete paths untested
+T8 review approve c8d5369 sdd-reviewer should: baseline dispatch inputs -> T6 declares mode in baseline.yml
+T8 done c8d5369 sdd-reviewer approve
