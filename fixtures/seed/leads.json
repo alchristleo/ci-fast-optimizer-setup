@@ -1,6 +1,8 @@
 [
   {
     "name": "leads-0",
+    "note": "hello",
+    "priceCents": 250,
     "attr37": "e37_4",
     "attr64": "AB561",
     "attr68": true,
@@ -14,6 +16,8 @@
   },
   {
     "name": "leads-1",
+    "note": "hello",
+    "priceCents": 250,
     "attr23": false,
     "attr75": "s7568",
     "attr33": true,
@@ -26,6 +30,8 @@
   },
   {
     "name": "leads-2",
+    "note": "hello",
+    "priceCents": 250,
     "attr45": "s9738",
     "attr6": 56502,
     "attr58": true,
@@ -39,6 +45,8 @@
   },
   {
     "name": "leads-3",
+    "note": "hello",
+    "priceCents": 250,
     "attr79": "AB533",
     "attr60": "s3507",
     "attr15": "s4858",
@@ -52,6 +60,8 @@
   },
   {
     "name": "leads-4",
+    "note": "hello",
+    "priceCents": 250,
     "attr40": "s3867",
     "attr27": "e27_1",
     "attr38": false,
@@ -65,6 +75,8 @@
   },
   {
     "name": "leads-5",
+    "note": "hello",
+    "priceCents": 250,
     "attr10": "s8836",
     "attr26": 16316,
     "attr14": "AB818",
@@ -78,6 +90,8 @@
   },
   {
     "name": "leads-6",
+    "note": "hello",
+    "priceCents": 250,
     "attr68": true,
     "attr63": true,
     "attr6": 43981,
@@ -91,6 +105,8 @@
   },
   {
     "name": "leads-7",
+    "note": "hello",
+    "priceCents": 250,
     "attr42": "e42_2",
     "attr45": "s2180",
     "attr3": true,
@@ -104,6 +120,8 @@
   },
   {
     "name": "leads-8",
+    "note": "hello",
+    "priceCents": 250,
     "attr6": 10238,
     "attr60": "s3618",
     "attr70": "s8076",
@@ -117,6 +135,8 @@
   },
   {
     "name": "leads-9",
+    "note": "hello",
+    "priceCents": 250,
     "attr50": "s5489",
     "attr21": 3732,
     "attr58": true,
@@ -130,6 +150,8 @@
   },
   {
     "name": "leads-10",
+    "note": "hello",
+    "priceCents": 250,
     "attr26": 16403,
     "attr73": false,
     "attr22": "e22_0",
@@ -142,6 +164,8 @@
   },
   {
     "name": "leads-11",
+    "note": "hello",
+    "priceCents": 250,
     "attr49": "AB281",
     "attr8": false,
     "attr34": "AB933",
@@ -153,6 +177,8 @@
   },
   {
     "name": "leads-12",
+    "note": "hello",
+    "priceCents": 250,
     "attr14": "AB148",
     "attr48": false,
     "attr19": "AB426",
@@ -165,6 +191,8 @@
   },
   {
     "name": "leads-13",
+    "note": "hello",
+    "priceCents": 250,
     "attr61": 3452,
     "attr11": 48659,
     "attr22": "e22_4",
@@ -178,6 +206,8 @@
   },
   {
     "name": "leads-14",
+    "note": "hello",
+    "priceCents": 250,
     "attr53": true,
     "attr35": "s5427",
     "attr62": "e62_4",
@@ -190,6 +220,8 @@
   },
   {
     "name": "leads-15",
+    "note": "hello",
+    "priceCents": 250,
     "attr32": "e32_2",
     "attr2": "e2_1",
     "attr18": true,
@@ -203,6 +235,8 @@
   },
   {
     "name": "leads-16",
+    "note": "hello",
+    "priceCents": 250,
     "attr9": "AB569",
     "attr26": 23442,
     "attr63": false,
@@ -216,6 +250,8 @@
   },
   {
     "name": "leads-17",
+    "note": "hello",
+    "priceCents": 250,
     "attr47": "e47_4",
     "attr15": "s6948",
     "attr13": false,
@@ -228,6 +264,8 @@
   },
   {
     "name": "leads-18",
+    "note": "hello",
+    "priceCents": 250,
     "attr42": "e42_4",
     "attr10": "s6168",
     "attr4": "AB309",
@@ -241,6 +279,8 @@
   },
   {
     "name": "leads-19",
+    "note": "hello",
+    "priceCents": 250,
     "attr33": false,
     "attr16": 59640,
     "attr7": "e7_0",
@@ -254,6 +294,8 @@
   },
   {
     "name": "leads-20",
+    "note": "hello",
+    "priceCents": 250,
     "attr19": "AB335",
     "attr61": 24003,
     "attr23": false,
@@ -266,6 +308,8 @@
   },
   {
     "name": "leads-21",
+    "note": "hello",
+    "priceCents": 250,
     "attr30": "s9115",
     "attr41": 77212,
     "attr53": false,
@@ -279,6 +323,8 @@
   },
   {
     "name": "leads-22",
+    "note": "hello",
+    "priceCents": 250,
     "attr7": "e7_3",
     "attr54": "AB779",
     "attr46": 525,
@@ -292,6 +338,8 @@
   },
   {
     "name": "leads-23",
+    "note": "hello",
+    "priceCents": 250,
     "attr58": false,
     "attr17": "e17_1",
     "attr56": 22297,
@@ -303,6 +351,8 @@
   },
   {
     "name": "leads-24",
+    "note": "hello",
+    "priceCents": 250,
     "attr25": "s5456",
     "attr17": "e17_0",
     "attr4": "AB107",
@@ -316,6 +366,8 @@
   },
   {
     "name": "leads-25",
+    "note": "hello",
+    "priceCents": 250,
     "attr77": "e77_0",
     "attr23": false,
     "attr35": "s607",
@@ -329,6 +381,8 @@
   },
   {
     "name": "leads-26",
+    "note": "hello",
+    "priceCents": 250,
     "attr63": true,
     "attr69": "AB504",
     "attr21": 19451,
@@ -341,6 +395,8 @@
   },
   {
     "name": "leads-27",
+    "note": "hello",
+    "priceCents": 250,
     "attr6": 26960,
     "attr13": false,
     "attr1": 17808,
@@ -353,6 +409,8 @@
   },
   {
     "name": "leads-28",
+    "note": "hello",
+    "priceCents": 250,
     "attr17": "e17_1",
     "attr44": "AB327",
     "attr61": 6475,
@@ -365,6 +423,8 @@
   },
   {
     "name": "leads-29",
+    "note": "hello",
+    "priceCents": 250,
     "attr12": "e12_2",
     "attr44": "AB292",
     "attr3": true,
@@ -377,6 +437,8 @@
   },
   {
     "name": "leads-30",
+    "note": "hello",
+    "priceCents": 250,
     "attr49": "AB171",
     "attr78": true,
     "attr19": "AB853",
@@ -387,6 +449,8 @@
   },
   {
     "name": "leads-31",
+    "note": "hello",
+    "priceCents": 250,
     "attr55": "s9512",
     "attr70": "s7559",
     "attr30": "s7632",
@@ -399,6 +463,8 @@
   },
   {
     "name": "leads-32",
+    "note": "hello",
+    "priceCents": 250,
     "attr79": "AB710",
     "attr7": "e7_4",
     "attr13": false,
@@ -411,6 +477,8 @@
   },
   {
     "name": "leads-33",
+    "note": "hello",
+    "priceCents": 250,
     "attr69": "AB237",
     "attr74": "AB830",
     "attr61": 24804,
@@ -423,6 +491,8 @@
   },
   {
     "name": "leads-34",
+    "note": "hello",
+    "priceCents": 250,
     "attr40": "s559",
     "attr19": "AB188",
     "attr37": "e37_2",
@@ -435,6 +505,8 @@
   },
   {
     "name": "leads-35",
+    "note": "hello",
+    "priceCents": 250,
     "attr47": "e47_4",
     "attr53": false,
     "attr56": 18802,
@@ -448,6 +520,8 @@
   },
   {
     "name": "leads-36",
+    "note": "hello",
+    "priceCents": 250,
     "attr4": "AB852",
     "attr13": false,
     "attr37": "e37_3",
@@ -461,6 +535,8 @@
   },
   {
     "name": "leads-37",
+    "note": "hello",
+    "priceCents": 250,
     "attr5": "s1765",
     "attr50": "s4599",
     "attr55": "s6668",
@@ -474,6 +550,8 @@
   },
   {
     "name": "leads-38",
+    "note": "hello",
+    "priceCents": 250,
     "attr31": 34839,
     "attr7": "e7_3",
     "attr50": "s2799",
@@ -486,6 +564,8 @@
   },
   {
     "name": "leads-39",
+    "note": "hello",
+    "priceCents": 250,
     "attr13": true,
     "attr28": false,
     "attr0": "s348",
@@ -499,6 +579,8 @@
   },
   {
     "name": "leads-40",
+    "note": "hello",
+    "priceCents": 250,
     "attr1": 23299,
     "attr39": "AB484",
     "attr25": "s7130",
@@ -512,6 +594,8 @@
   },
   {
     "name": "leads-41",
+    "note": "hello",
+    "priceCents": 250,
     "attr8": false,
     "attr35": "s7706",
     "attr11": 63734,
@@ -525,6 +609,8 @@
   },
   {
     "name": "leads-42",
+    "note": "hello",
+    "priceCents": 250,
     "attr20": "s9969",
     "attr23": true,
     "attr69": "AB506",
@@ -538,6 +624,8 @@
   },
   {
     "name": "leads-43",
+    "note": "hello",
+    "priceCents": 250,
     "attr76": 12400,
     "attr35": "s4471",
     "attr46": 3576,
@@ -551,6 +639,8 @@
   },
   {
     "name": "leads-44",
+    "note": "hello",
+    "priceCents": 250,
     "attr58": true,
     "attr60": "s1316",
     "attr30": "s9706",
@@ -562,6 +652,8 @@
   },
   {
     "name": "leads-45",
+    "note": "hello",
+    "priceCents": 250,
     "attr22": "e22_1",
     "attr0": "s4122",
     "attr79": "AB201",
@@ -575,6 +667,8 @@
   },
   {
     "name": "leads-46",
+    "note": "hello",
+    "priceCents": 250,
     "attr44": "AB436",
     "attr69": "AB378",
     "attr72": "e72_4",
@@ -587,6 +681,8 @@
   },
   {
     "name": "leads-47",
+    "note": "hello",
+    "priceCents": 250,
     "attr68": true,
     "attr56": 20442,
     "attr47": "e47_1",
@@ -599,6 +695,8 @@
   },
   {
     "name": "leads-48",
+    "note": "hello",
+    "priceCents": 250,
     "attr32": "e32_0",
     "attr54": "AB174",
     "attr76": 11461,
@@ -612,6 +710,8 @@
   },
   {
     "name": "leads-49",
+    "note": "hello",
+    "priceCents": 250,
     "attr30": "s7879",
     "attr21": 21116,
     "attr72": "e72_0",
@@ -625,6 +725,8 @@
   },
   {
     "name": "leads-50",
+    "note": "hello",
+    "priceCents": 250,
     "attr75": "s4896",
     "attr9": "AB909",
     "attr14": "AB664",
@@ -638,6 +740,8 @@
   },
   {
     "name": "leads-51",
+    "note": "hello",
+    "priceCents": 250,
     "attr27": "e27_4",
     "attr12": "e12_0",
     "attr35": "s4404",
@@ -651,6 +755,8 @@
   },
   {
     "name": "leads-52",
+    "note": "hello",
+    "priceCents": 250,
     "attr35": "s914",
     "attr69": "AB535",
     "attr37": "e37_0",
@@ -664,6 +770,8 @@
   },
   {
     "name": "leads-53",
+    "note": "hello",
+    "priceCents": 250,
     "attr58": true,
     "attr3": false,
     "attr25": "s5059",
@@ -677,6 +785,8 @@
   },
   {
     "name": "leads-54",
+    "note": "hello",
+    "priceCents": 250,
     "attr22": "e22_4",
     "attr71": 9324,
     "attr60": "s319",
@@ -689,6 +799,8 @@
   },
   {
     "name": "leads-55",
+    "note": "hello",
+    "priceCents": 250,
     "attr66": 1472,
     "attr61": 8928,
     "attr49": "AB265",
@@ -702,6 +814,8 @@
   },
   {
     "name": "leads-56",
+    "note": "hello",
+    "priceCents": 250,
     "attr73": false,
     "attr27": "e27_0",
     "attr36": 19256,
@@ -714,6 +828,8 @@
   },
   {
     "name": "leads-57",
+    "note": "hello",
+    "priceCents": 250,
     "attr33": true,
     "attr15": "s9516",
     "attr77": "e77_2",
@@ -726,6 +842,8 @@
   },
   {
     "name": "leads-58",
+    "note": "hello",
+    "priceCents": 250,
     "attr55": "s5500",
     "attr38": false,
     "attr28": false,
@@ -739,6 +857,8 @@
   },
   {
     "name": "leads-59",
+    "note": "hello",
+    "priceCents": 250,
     "attr66": 62231,
     "attr0": "s8470",
     "attr30": "s6852",

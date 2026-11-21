@@ -1,6 +1,9 @@
 [
   {
     "name": "fleets-0",
+    "code": "AB123",
+    "priceCents": 250,
+    "qty": 3,
     "attr43": true,
     "attr6": 448,
     "attr67": "e67_2",
@@ -14,6 +17,9 @@
   },
   {
     "name": "fleets-1",
+    "code": "AB123",
+    "priceCents": 250,
+    "qty": 3,
     "attr74": "AB821",
     "attr58": true,
     "attr38": true,
@@ -26,6 +32,9 @@
   },
   {
     "name": "fleets-2",
+    "code": "AB123",
+    "priceCents": 250,
+    "qty": 3,
     "attr16": 17278,
     "attr61": 53084,
     "attr65": "s8641",
@@ -39,6 +48,9 @@
   },
   {
     "name": "fleets-3",
+    "code": "AB123",
+    "priceCents": 250,
+    "qty": 3,
     "attr57": "e57_0",
     "attr25": "s3950",
     "attr45": "s4963",
@@ -51,6 +63,9 @@
   },
   {
     "name": "fleets-4",
+    "code": "AB123",
+    "priceCents": 250,
+    "qty": 3,
     "attr24": "AB665",
     "attr15": "s8203",
     "attr67": "e67_1",
@@ -64,6 +79,9 @@
   },
   {
     "name": "fleets-5",
+    "code": "AB123",
+    "priceCents": 250,
+    "qty": 3,
     "attr19": "AB615",
     "attr30": "s2815",
     "attr9": "AB152",
@@ -76,6 +94,9 @@
   },
   {
     "name": "fleets-6",
+    "code": "AB123",
+    "priceCents": 250,
+    "qty": 3,
     "attr2": "e2_0",
     "attr76": 20711,
     "attr4": "AB408",
@@ -88,6 +109,9 @@
   },
   {
     "name": "fleets-7",
+    "code": "AB123",
+    "priceCents": 250,
+    "qty": 3,
     "attr16": 54925,
     "attr65": "s8001",
     "attr29": "AB638",
@@ -100,6 +124,9 @@
   },
   {
     "name": "fleets-8",
+    "code": "AB123",
+    "priceCents": 250,
+    "qty": 3,
     "attr41": 46447,
     "attr18": true,
     "attr2": "e2_4",
@@ -113,6 +140,9 @@
   },
   {
     "name": "fleets-9",
+    "code": "AB123",
+    "priceCents": 250,
+    "qty": 3,
     "attr11": 18034,
     "attr15": "s2512",
     "attr36": 14806,
@@ -125,6 +155,9 @@
   },
   {
     "name": "fleets-10",
+    "code": "AB123",
+    "priceCents": 250,
+    "qty": 3,
     "attr52": "e52_0",
     "attr27": "e27_2",
     "attr20": "s3344",
@@ -138,6 +171,9 @@
   },
   {
     "name": "fleets-11",
+    "code": "AB123",
+    "priceCents": 250,
+    "qty": 3,
     "attr14": "AB857",
     "attr0": "s6430",
     "attr30": "s8464",
@@ -151,6 +187,9 @@
   },
   {
     "name": "fleets-12",
+    "code": "AB123",
+    "priceCents": 250,
+    "qty": 3,
     "attr31": 46606,
     "attr44": "AB883",
     "attr75": "s809",
@@ -164,6 +203,9 @@
   },
   {
     "name": "fleets-13",
+    "code": "AB123",
+    "priceCents": 250,
+    "qty": 3,
     "attr79": "AB359",
     "attr49": "AB641",
     "attr25": "s1422",
@@ -176,6 +218,9 @@
   },
   {
     "name": "fleets-14",
+    "code": "AB123",
+    "priceCents": 250,
+    "qty": 3,
     "attr34": "AB115",
     "attr62": "e62_0",
     "attr54": "AB705",
@@ -188,6 +233,9 @@
   },
   {
     "name": "fleets-15",
+    "code": "AB123",
+    "priceCents": 250,
+    "qty": 3,
     "attr43": false,
     "attr38": true,
     "attr58": true,
@@ -201,6 +249,9 @@
   },
   {
     "name": "fleets-16",
+    "code": "AB123",
+    "priceCents": 250,
+    "qty": 3,
     "attr50": "s8959",
     "attr34": "AB797",
     "attr11": 71961,
@@ -214,6 +265,9 @@
   },
   {
     "name": "fleets-17",
+    "code": "AB123",
+    "priceCents": 250,
+    "qty": 3,
     "attr51": 16328,
     "attr63": false,
     "attr60": "s5236",
@@ -225,6 +279,9 @@
   },
   {
     "name": "fleets-18",
+    "code": "AB123",
+    "priceCents": 250,
+    "qty": 3,
     "attr74": "AB765",
     "attr37": "e37_2",
     "attr11": 20698,
@@ -238,6 +295,9 @@
   },
   {
     "name": "fleets-19",
+    "code": "AB123",
+    "priceCents": 250,
+    "qty": 3,
     "attr42": "e42_4",
     "attr29": "AB818",
     "attr28": true,
@@ -250,6 +310,9 @@
   },
   {
     "name": "fleets-20",
+    "code": "AB123",
+    "priceCents": 250,
+    "qty": 3,
     "attr3": true,
     "attr78": false,
     "attr68": false,
@@ -263,6 +326,9 @@
   },
   {
     "name": "fleets-21",
+    "code": "AB123",
+    "priceCents": 250,
+    "qty": 3,
     "attr60": "s4670",
     "attr13": true,
     "attr70": "s9420",
@@ -276,6 +342,9 @@
   },
   {
     "name": "fleets-22",
+    "code": "AB123",
+    "priceCents": 250,
+    "qty": 3,
     "attr64": "AB656",
     "attr23": true,
     "attr41": 11922,
@@ -289,6 +358,9 @@
   },
   {
     "name": "fleets-23",
+    "code": "AB123",
+    "priceCents": 250,
+    "qty": 3,
     "attr41": 1959,
     "attr23": false,
     "attr30": "s4040",
@@ -301,6 +373,9 @@
   },
   {
     "name": "fleets-24",
+    "code": "AB123",
+    "priceCents": 250,
+    "qty": 3,
     "attr21": 3736,
     "attr25": "s6305",
     "attr2": "e2_2",
@@ -314,6 +389,9 @@
   },
   {
     "name": "fleets-25",
+    "code": "AB123",
+    "priceCents": 250,
+    "qty": 3,
     "attr78": true,
     "attr16": 49904,
     "attr75": "s6207",
@@ -326,6 +404,9 @@
   },
   {
     "name": "fleets-26",
+    "code": "AB123",
+    "priceCents": 250,
+    "qty": 3,
     "attr66": 19014,
     "attr55": "s7260",
     "attr8": true,
@@ -339,6 +420,9 @@
   },
   {
     "name": "fleets-27",
+    "code": "AB123",
+    "priceCents": 250,
+    "qty": 3,
     "attr22": "e22_0",
     "attr63": false,
     "attr45": "s2820",
@@ -352,6 +436,9 @@
   },
   {
     "name": "fleets-28",
+    "code": "AB123",
+    "priceCents": 250,
+    "qty": 3,
     "attr78": true,
     "attr71": 46031,
     "attr17": "e17_0",
@@ -364,6 +451,9 @@
   },
   {
     "name": "fleets-29",
+    "code": "AB123",
+    "priceCents": 250,
+    "qty": 3,
     "attr56": 8881,
     "attr65": "s4698",
     "attr32": "e32_4",
@@ -377,6 +467,9 @@
   },
   {
     "name": "fleets-30",
+    "code": "AB123",
+    "priceCents": 250,
+    "qty": 3,
     "attr49": "AB840",
     "attr13": true,
     "attr9": "AB290",
@@ -388,6 +481,9 @@
   },
   {
     "name": "fleets-31",
+    "code": "AB123",
+    "priceCents": 250,
+    "qty": 3,
     "attr9": "AB268",
     "attr53": true,
     "attr52": "e52_4",
@@ -401,6 +497,9 @@
   },
   {
     "name": "fleets-32",
+    "code": "AB123",
+    "priceCents": 250,
+    "qty": 3,
     "attr77": "e77_4",
     "attr14": "AB872",
     "attr3": false,
@@ -412,6 +511,9 @@
   },
   {
     "name": "fleets-33",
+    "code": "AB123",
+    "priceCents": 250,
+    "qty": 3,
     "attr63": false,
     "attr29": "AB525",
     "attr2": "e2_3",
@@ -423,6 +525,9 @@
   },
   {
     "name": "fleets-34",
+    "code": "AB123",
+    "priceCents": 250,
+    "qty": 3,
     "attr68": false,
     "attr43": false,
     "attr17": "e17_1",
@@ -435,6 +540,9 @@
   },
   {
     "name": "fleets-35",
+    "code": "AB123",
+    "priceCents": 250,
+    "qty": 3,
     "attr0": "s2911",
     "attr40": "s2730",
     "attr14": "AB966",
@@ -447,6 +555,9 @@
   },
   {
     "name": "fleets-36",
+    "code": "AB123",
+    "priceCents": 250,
+    "qty": 3,
     "attr78": true,
     "attr16": 85022,
     "attr44": "AB709",
@@ -460,6 +571,9 @@
   },
   {
     "name": "fleets-37",
+    "code": "AB123",
+    "priceCents": 250,
+    "qty": 3,
     "attr31": 22989,
     "attr39": "AB633",
     "attr49": "AB837",
@@ -473,6 +587,9 @@
   },
   {
     "name": "fleets-38",
+    "code": "AB123",
+    "priceCents": 250,
+    "qty": 3,
     "attr44": "AB855",
     "attr19": "AB979",
     "attr5": "s8238",
@@ -486,6 +603,9 @@
   },
   {
     "name": "fleets-39",
+    "code": "AB123",
+    "priceCents": 250,
+    "qty": 3,
     "attr55": "s4754",
     "attr10": "s3121",
     "attr71": 51973,
@@ -499,6 +619,9 @@
   },
   {
     "name": "fleets-40",
+    "code": "AB123",
+    "priceCents": 250,
+    "qty": 3,
     "attr37": "e37_4",
     "attr47": "e47_2",
     "attr31": 79502,
@@ -512,6 +635,9 @@
   },
   {
     "name": "fleets-41",
+    "code": "AB123",
+    "priceCents": 250,
+    "qty": 3,
     "attr51": 16645,
     "attr48": true,
     "attr52": "e52_0",
@@ -524,6 +650,9 @@
   },
   {
     "name": "fleets-42",
+    "code": "AB123",
+    "priceCents": 250,
+    "qty": 3,
     "attr61": 52099,
     "attr2": "e2_4",
     "attr60": "s9036",
@@ -536,6 +665,9 @@
   },
   {
     "name": "fleets-43",
+    "code": "AB123",
+    "priceCents": 250,
+    "qty": 3,
     "attr64": "AB249",
     "attr44": "AB177",
     "attr69": "AB140",
@@ -548,6 +680,9 @@
   },
   {
     "name": "fleets-44",
+    "code": "AB123",
+    "priceCents": 250,
+    "qty": 3,
     "attr19": "AB581",
     "attr71": 6335,
     "attr27": "e27_2",
@@ -561,6 +696,9 @@
   },
   {
     "name": "fleets-45",
+    "code": "AB123",
+    "priceCents": 250,
+    "qty": 3,
     "attr71": 33922,
     "attr37": "e37_0",
     "attr35": "s4253",
@@ -572,6 +710,9 @@
   },
   {
     "name": "fleets-46",
+    "code": "AB123",
+    "priceCents": 250,
+    "qty": 3,
     "attr15": "s1671",
     "attr77": "e77_4",
     "attr21": 9531,
@@ -584,6 +725,9 @@
   },
   {
     "name": "fleets-47",
+    "code": "AB123",
+    "priceCents": 250,
+    "qty": 3,
     "attr47": "e47_4",
     "attr64": "AB834",
     "attr70": "s3046",
@@ -597,6 +741,9 @@
   },
   {
     "name": "fleets-48",
+    "code": "AB123",
+    "priceCents": 250,
+    "qty": 3,
     "attr8": false,
     "attr4": "AB745",
     "attr58": false,
@@ -609,6 +756,9 @@
   },
   {
     "name": "fleets-49",
+    "code": "AB123",
+    "priceCents": 250,
+    "qty": 3,
     "attr54": "AB306",
     "attr8": false,
     "attr5": "s1776",
@@ -622,6 +772,9 @@
   },
   {
     "name": "fleets-50",
+    "code": "AB123",
+    "priceCents": 250,
+    "qty": 3,
     "attr2": "e2_4",
     "attr54": "AB286",
     "attr36": 13015,
@@ -634,6 +787,9 @@
   },
   {
     "name": "fleets-51",
+    "code": "AB123",
+    "priceCents": 250,
+    "qty": 3,
     "attr35": "s7565",
     "attr57": "e57_2",
     "attr49": "AB226",
@@ -646,6 +802,9 @@
   },
   {
     "name": "fleets-52",
+    "code": "AB123",
+    "priceCents": 250,
+    "qty": 3,
     "attr61": 79833,
     "attr31": 25724,
     "attr43": false,
@@ -659,6 +818,9 @@
   },
   {
     "name": "fleets-53",
+    "code": "AB123",
+    "priceCents": 250,
+    "qty": 3,
     "attr58": false,
     "attr66": 46993,
     "attr14": "AB454",
@@ -672,6 +834,9 @@
   },
   {
     "name": "fleets-54",
+    "code": "AB123",
+    "priceCents": 250,
+    "qty": 3,
     "attr72": "e72_0",
     "attr55": "s8694",
     "attr5": "s5703",
@@ -684,6 +849,9 @@
   },
   {
     "name": "fleets-55",
+    "code": "AB123",
+    "priceCents": 250,
+    "qty": 3,
     "attr31": 44710,
     "attr50": "s3937",
     "attr16": 82000,
@@ -697,6 +865,9 @@
   },
   {
     "name": "fleets-56",
+    "code": "AB123",
+    "priceCents": 250,
+    "qty": 3,
     "attr60": "s6841",
     "attr13": false,
     "attr27": "e27_1",
@@ -710,6 +881,9 @@
   },
   {
     "name": "fleets-57",
+    "code": "AB123",
+    "priceCents": 250,
+    "qty": 3,
     "attr18": false,
     "attr74": "AB274",
     "attr40": "s106",
@@ -722,6 +896,9 @@
   },
   {
     "name": "fleets-58",
+    "code": "AB123",
+    "priceCents": 250,
+    "qty": 3,
     "attr35": "s8158",
     "attr41": 66458,
     "attr65": "s3346",
@@ -735,6 +912,9 @@
   },
   {
     "name": "fleets-59",
+    "code": "AB123",
+    "priceCents": 250,
+    "qty": 3,
     "attr58": false,
     "attr79": "AB148",
     "attr9": "AB189",

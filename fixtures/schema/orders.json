@@ -1,12 +1,18 @@
 {
   "type": "object",
-  "required": ["name"],
+  "required": ["customerId", "itemId", "quantity"],
   "additionalProperties": false,
   "properties": {
-    "name": {
-      "type": "string",
-      "minLength": 1,
-      "maxLength": 80
+    "customerId": {
+      "type": "string"
+    },
+    "itemId": {
+      "type": "string"
+    },
+    "quantity": {
+      "type": "number",
+      "minimum": 1,
+      "maximum": 1000
     },
     "attr0": {
       "type": "string",

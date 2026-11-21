@@ -1,6 +1,8 @@
 [
   {
     "name": "markets2-0",
+    "active": true,
+    "code": "AB123",
     "attr15": "s3430",
     "attr65": "s8868",
     "attr34": "AB660",
@@ -14,6 +16,8 @@
   },
   {
     "name": "markets2-1",
+    "active": true,
+    "code": "AB123",
     "attr8": false,
     "attr11": 22749,
     "attr30": "s4772",
@@ -25,6 +29,8 @@
   },
   {
     "name": "markets2-2",
+    "active": true,
+    "code": "AB123",
     "attr63": true,
     "attr3": true,
     "attr53": false,
@@ -38,6 +44,8 @@
   },
   {
     "name": "markets2-3",
+    "active": true,
+    "code": "AB123",
     "attr60": "s7378",
     "attr79": "AB500",
     "attr44": "AB346",
@@ -51,6 +59,8 @@
   },
   {
     "name": "markets2-4",
+    "active": true,
+    "code": "AB123",
     "attr63": true,
     "attr50": "s5939",
     "attr72": "e72_0",
@@ -62,6 +72,8 @@
   },
   {
     "name": "markets2-5",
+    "active": true,
+    "code": "AB123",
     "attr40": "s8027",
     "attr30": "s9035",
     "attr72": "e72_4",
@@ -75,6 +87,8 @@
   },
   {
     "name": "markets2-6",
+    "active": true,
+    "code": "AB123",
     "attr14": "AB345",
     "attr73": true,
     "attr24": "AB832",
@@ -88,6 +102,8 @@
   },
   {
     "name": "markets2-7",
+    "active": true,
+    "code": "AB123",
     "attr67": "e67_3",
     "attr15": "s9649",
     "attr71": 62826,
@@ -100,6 +116,8 @@
   },
   {
     "name": "markets2-8",
+    "active": true,
+    "code": "AB123",
     "attr16": 1979,
     "attr45": "s1076",
     "attr10": "s8677",
@@ -112,6 +130,8 @@
   },
   {
     "name": "markets2-9",
+    "active": true,
+    "code": "AB123",
     "attr62": "e62_2",
     "attr76": 1460,
     "attr70": "s4350",
@@ -125,6 +145,8 @@
   },
   {
     "name": "markets2-10",
+    "active": true,
+    "code": "AB123",
     "attr27": "e27_2",
     "attr48": true,
     "attr78": true,
@@ -137,6 +159,8 @@
   },
   {
     "name": "markets2-11",
+    "active": true,
+    "code": "AB123",
     "attr78": true,
     "attr8": true,
     "attr7": "e7_2",
@@ -150,6 +174,8 @@
   },
   {
     "name": "markets2-12",
+    "active": true,
+    "code": "AB123",
     "attr8": false,
     "attr72": "e72_0",
     "attr70": "s4843",
@@ -163,6 +189,8 @@
   },
   {
     "name": "markets2-13",
+    "active": true,
+    "code": "AB123",
     "attr51": 23616,
     "attr13": false,
     "attr60": "s6824",
@@ -176,6 +204,8 @@
   },
   {
     "name": "markets2-14",
+    "active": true,
+    "code": "AB123",
     "attr6": 88793,
     "attr54": "AB526",
     "attr46": 72716,
@@ -188,6 +218,8 @@
   },
   {
     "name": "markets2-15",
+    "active": true,
+    "code": "AB123",
     "attr70": "s6887",
     "attr61": 24624,
     "attr13": true,
@@ -200,6 +232,8 @@
   },
   {
     "name": "markets2-16",
+    "active": true,
+    "code": "AB123",
     "attr23": false,
     "attr20": "s5337",
     "attr46": 55768,
@@ -212,6 +246,8 @@
   },
   {
     "name": "markets2-17",
+    "active": true,
+    "code": "AB123",
     "attr68": true,
     "attr18": true,
     "attr52": "e52_4",
@@ -224,6 +260,8 @@
   },
   {
     "name": "markets2-18",
+    "active": true,
+    "code": "AB123",
     "attr37": "e37_3",
     "attr75": "s6380",
     "attr41": 63502,
@@ -237,6 +275,8 @@
   },
   {
     "name": "markets2-19",
+    "active": true,
+    "code": "AB123",
     "attr31": 55186,
     "attr69": "AB996",
     "attr46": 71161,
@@ -249,6 +289,8 @@
   },
   {
     "name": "markets2-20",
+    "active": true,
+    "code": "AB123",
     "attr60": "s726",
     "attr43": false,
     "attr45": "s6616",
@@ -261,6 +303,8 @@
   },
   {
     "name": "markets2-21",
+    "active": true,
+    "code": "AB123",
     "attr71": 508,
     "attr26": 78575,
     "attr29": "AB231",
@@ -273,6 +317,8 @@
   },
   {
     "name": "markets2-22",
+    "active": true,
+    "code": "AB123",
     "attr24": "AB453",
     "attr76": 1310,
     "attr62": "e62_0",
@@ -286,6 +332,8 @@
   },
   {
     "name": "markets2-23",
+    "active": true,
+    "code": "AB123",
     "attr1": 174,
     "attr50": "s5470",
     "attr22": "e22_1",
@@ -299,6 +347,8 @@
   },
   {
     "name": "markets2-24",
+    "active": true,
+    "code": "AB123",
     "attr38": false,
     "attr17": "e17_2",
     "attr66": 51810,
@@ -311,6 +361,8 @@
   },
   {
     "name": "markets2-25",
+    "active": true,
+    "code": "AB123",
     "attr72": "e72_2",
     "attr66": 16839,
     "attr51": 5836,
@@ -324,6 +376,8 @@
   },
   {
     "name": "markets2-26",
+    "active": true,
+    "code": "AB123",
     "attr73": true,
     "attr31": 31692,
     "attr20": "s7363",
@@ -337,6 +391,8 @@
   },
   {
     "name": "markets2-27",
+    "active": true,
+    "code": "AB123",
     "attr28": false,
     "attr6": 82863,
     "attr74": "AB388",
@@ -348,6 +404,8 @@
   },
   {
     "name": "markets2-28",
+    "active": true,
+    "code": "AB123",
     "attr23": false,
     "attr13": false,
     "attr17": "e17_0",
@@ -360,6 +418,8 @@
   },
   {
     "name": "markets2-29",
+    "active": true,
+    "code": "AB123",
     "attr42": "e42_4",
     "attr17": "e17_0",
     "attr62": "e62_2",
@@ -373,6 +433,8 @@
   },
   {
     "name": "markets2-30",
+    "active": true,
+    "code": "AB123",
     "attr26": 60082,
     "attr46": 31378,
     "attr41": 56265,
@@ -385,6 +447,8 @@
   },
   {
     "name": "markets2-31",
+    "active": true,
+    "code": "AB123",
     "attr49": "AB866",
     "attr63": true,
     "attr40": "s8478",
@@ -397,6 +461,8 @@
   },
   {
     "name": "markets2-32",
+    "active": true,
+    "code": "AB123",
     "attr0": "s1220",
     "attr47": "e47_3",
     "attr33": false,
@@ -410,6 +476,8 @@
   },
   {
     "name": "markets2-33",
+    "active": true,
+    "code": "AB123",
     "attr35": "s9674",
     "attr12": "e12_1",
     "attr16": 2219,
@@ -423,6 +491,8 @@
   },
   {
     "name": "markets2-34",
+    "active": true,
+    "code": "AB123",
     "attr44": "AB797",
     "attr24": "AB516",
     "attr4": "AB433",
@@ -436,6 +506,8 @@
   },
   {
     "name": "markets2-35",
+    "active": true,
+    "code": "AB123",
     "attr42": "e42_3",
     "attr52": "e52_1",
     "attr34": "AB387",
@@ -448,6 +520,8 @@
   },
   {
     "name": "markets2-36",
+    "active": true,
+    "code": "AB123",
     "attr20": "s8455",
     "attr61": 13325,
     "attr6": 51918,
@@ -461,6 +535,8 @@
   },
   {
     "name": "markets2-37",
+    "active": true,
+    "code": "AB123",
     "attr32": "e32_4",
     "attr39": "AB245",
     "attr55": "s4382",
@@ -474,6 +550,8 @@
   },
   {
     "name": "markets2-38",
+    "active": true,
+    "code": "AB123",
     "attr72": "e72_1",
     "attr63": true,
     "attr44": "AB297",
@@ -486,6 +564,8 @@
   },
   {
     "name": "markets2-39",
+    "active": true,
+    "code": "AB123",
     "attr50": "s9998",
     "attr5": "s3836",
     "attr42": "e42_4",
@@ -498,6 +578,8 @@
   },
   {
     "name": "markets2-40",
+    "active": true,
+    "code": "AB123",
     "attr50": "s6647",
     "attr56": 34977,
     "attr61": 23787,
@@ -511,6 +593,8 @@
   },
   {
     "name": "markets2-41",
+    "active": true,
+    "code": "AB123",
     "attr14": "AB142",
     "attr31": 28886,
     "attr5": "s3941",
@@ -522,6 +606,8 @@
   },
   {
     "name": "markets2-42",
+    "active": true,
+    "code": "AB123",
     "attr74": "AB174",
     "attr71": 56490,
     "attr17": "e17_4",
@@ -534,6 +620,8 @@
   },
   {
     "name": "markets2-43",
+    "active": true,
+    "code": "AB123",
     "attr26": 63604,
     "attr52": "e52_3",
     "attr56": 36624,
@@ -546,6 +634,8 @@
   },
   {
     "name": "markets2-44",
+    "active": true,
+    "code": "AB123",
     "attr79": "AB771",
     "attr17": "e17_3",
     "attr31": 24500,
@@ -558,6 +648,8 @@
   },
   {
     "name": "markets2-45",
+    "active": true,
+    "code": "AB123",
     "attr0": "s7044",
     "attr44": "AB769",
     "attr47": "e47_4",
@@ -571,6 +663,8 @@
   },
   {
     "name": "markets2-46",
+    "active": true,
+    "code": "AB123",
     "attr61": 40317,
     "attr75": "s9050",
     "attr58": true,
@@ -584,6 +678,8 @@
   },
   {
     "name": "markets2-47",
+    "active": true,
+    "code": "AB123",
     "attr30": "s1844",
     "attr55": "s6662",
     "attr72": "e72_0",
@@ -597,6 +693,8 @@
   },
   {
     "name": "markets2-48",
+    "active": true,
+    "code": "AB123",
     "attr16": 1363,
     "attr22": "e22_0",
     "attr71": 16922,
@@ -610,6 +708,8 @@
   },
   {
     "name": "markets2-49",
+    "active": true,
+    "code": "AB123",
     "attr35": "s3521",
     "attr11": 27234,
     "attr50": "s4004",
@@ -622,6 +722,8 @@
   },
   {
     "name": "markets2-50",
+    "active": true,
+    "code": "AB123",
     "attr49": "AB238",
     "attr42": "e42_3",
     "attr55": "s2601",
@@ -634,6 +736,8 @@
   },
   {
     "name": "markets2-51",
+    "active": true,
+    "code": "AB123",
     "attr2": "e2_3",
     "attr6": 9799,
     "attr74": "AB627",
@@ -647,6 +751,8 @@
   },
   {
     "name": "markets2-52",
+    "active": true,
+    "code": "AB123",
     "attr33": true,
     "attr20": "s3643",
     "attr25": "s834",
@@ -659,6 +765,8 @@
   },
   {
     "name": "markets2-53",
+    "active": true,
+    "code": "AB123",
     "attr72": "e72_2",
     "attr30": "s2216",
     "attr66": 319,
@@ -672,6 +780,8 @@
   },
   {
     "name": "markets2-54",
+    "active": true,
+    "code": "AB123",
     "attr2": "e2_3",
     "attr20": "s5757",
     "attr27": "e27_2",
@@ -685,6 +795,8 @@
   },
   {
     "name": "markets2-55",
+    "active": true,
+    "code": "AB123",
     "attr77": "e77_2",
     "attr9": "AB703",
     "attr36": 46827,
@@ -698,6 +810,8 @@
   },
   {
     "name": "markets2-56",
+    "active": true,
+    "code": "AB123",
     "attr5": "s1176",
     "attr17": "e17_1",
     "attr73": true,
@@ -711,6 +825,8 @@
   },
   {
     "name": "markets2-57",
+    "active": true,
+    "code": "AB123",
     "attr39": "AB205",
     "attr72": "e72_4",
     "attr13": false,
@@ -724,6 +840,8 @@
   },
   {
     "name": "markets2-58",
+    "active": true,
+    "code": "AB123",
     "attr28": true,
     "attr36": 9515,
     "attr37": "e37_1",
@@ -735,6 +853,8 @@
   },
   {
     "name": "markets2-59",
+    "active": true,
+    "code": "AB123",
     "attr73": true,
     "attr67": "e67_2",
     "attr12": "e12_1",

@@ -1,6 +1,9 @@
 [
   {
     "name": "inventory-0",
+    "sku": "SKU-0",
+    "quantity": 1,
+    "unitCents": 100,
     "attr71": 9617,
     "attr60": "s4143",
     "attr7": "e7_4",
@@ -12,6 +15,9 @@
   },
   {
     "name": "inventory-1",
+    "sku": "SKU-1",
+    "quantity": 1,
+    "unitCents": 100,
     "attr34": "AB310",
     "attr16": 31434,
     "attr41": 67995,
@@ -24,6 +30,9 @@
   },
   {
     "name": "inventory-2",
+    "sku": "SKU-2",
+    "quantity": 1,
+    "unitCents": 100,
     "attr33": false,
     "attr47": "e47_0",
     "attr37": "e37_4",
@@ -37,6 +46,9 @@
   },
   {
     "name": "inventory-3",
+    "sku": "SKU-3",
+    "quantity": 1,
+    "unitCents": 100,
     "attr78": true,
     "attr56": 15595,
     "attr39": "AB283",
@@ -49,6 +61,9 @@
   },
   {
     "name": "inventory-4",
+    "sku": "SKU-4",
+    "quantity": 1,
+    "unitCents": 100,
     "attr56": 19396,
     "attr62": "e62_0",
     "attr45": "s1508",
@@ -62,6 +77,9 @@
   },
   {
     "name": "inventory-5",
+    "sku": "SKU-5",
+    "quantity": 1,
+    "unitCents": 100,
     "attr78": true,
     "attr30": "s1992",
     "attr44": "AB477",
@@ -75,6 +93,9 @@
   },
   {
     "name": "inventory-6",
+    "sku": "SKU-6",
+    "quantity": 1,
+    "unitCents": 100,
     "attr61": 6255,
     "attr19": "AB834",
     "attr2": "e2_0",
@@ -87,6 +108,9 @@
   },
   {
     "name": "inventory-7",
+    "sku": "SKU-7",
+    "quantity": 1,
+    "unitCents": 100,
     "attr49": "AB730",
     "attr44": "AB101",
     "attr17": "e17_4",
@@ -100,6 +124,9 @@
   },
   {
     "name": "inventory-8",
+    "sku": "SKU-8",
+    "quantity": 1,
+    "unitCents": 100,
     "attr22": "e22_4",
     "attr46": 24834,
     "attr8": false,
@@ -113,6 +140,9 @@
   },
   {
     "name": "inventory-9",
+    "sku": "SKU-9",
+    "quantity": 1,
+    "unitCents": 100,
     "attr65": "s8941",
     "attr5": "s631",
     "attr15": "s93",
@@ -125,6 +155,9 @@
   },
   {
     "name": "inventory-10",
+    "sku": "SKU-10",
+    "quantity": 1,
+    "unitCents": 100,
     "attr1": 26022,
     "attr28": true,
     "attr78": true,
@@ -138,6 +171,9 @@
   },
   {
     "name": "inventory-11",
+    "sku": "SKU-11",
+    "quantity": 1,
+    "unitCents": 100,
     "attr27": "e27_0",
     "attr54": "AB110",
     "attr2": "e2_2",
@@ -151,6 +187,9 @@
   },
   {
     "name": "inventory-12",
+    "sku": "SKU-12",
+    "quantity": 1,
+    "unitCents": 100,
     "attr52": "e52_2",
     "attr38": false,
     "attr70": "s5996",
@@ -163,6 +202,9 @@
   },
   {
     "name": "inventory-13",
+    "sku": "SKU-13",
+    "quantity": 1,
+    "unitCents": 100,
     "attr67": "e67_0",
     "attr1": 14445,
     "attr60": "s9341",
@@ -175,6 +217,9 @@
   },
   {
     "name": "inventory-14",
+    "sku": "SKU-14",
+    "quantity": 1,
+    "unitCents": 100,
     "attr38": false,
     "attr13": false,
     "attr19": "AB479",
@@ -188,6 +233,9 @@
   },
   {
     "name": "inventory-15",
+    "sku": "SKU-15",
+    "quantity": 1,
+    "unitCents": 100,
     "attr59": "AB132",
     "attr14": "AB645",
     "attr70": "s8610",
@@ -200,6 +248,9 @@
   },
   {
     "name": "inventory-16",
+    "sku": "SKU-16",
+    "quantity": 1,
+    "unitCents": 100,
     "attr62": "e62_3",
     "attr23": true,
     "attr75": "s3397",
@@ -212,6 +263,9 @@
   },
   {
     "name": "inventory-17",
+    "sku": "SKU-17",
+    "quantity": 1,
+    "unitCents": 100,
     "attr47": "e47_2",
     "attr55": "s9820",
     "attr27": "e27_3",
@@ -225,6 +279,9 @@
   },
   {
     "name": "inventory-18",
+    "sku": "SKU-18",
+    "quantity": 1,
+    "unitCents": 100,
     "attr59": "AB254",
     "attr27": "e27_3",
     "attr45": "s4827",
@@ -238,6 +295,9 @@
   },
   {
     "name": "inventory-19",
+    "sku": "SKU-19",
+    "quantity": 1,
+    "unitCents": 100,
     "attr42": "e42_2",
     "attr29": "AB698",
     "attr30": "s9099",
@@ -251,6 +311,9 @@
   },
   {
     "name": "inventory-20",
+    "sku": "SKU-20",
+    "quantity": 1,
+    "unitCents": 100,
     "attr67": "e67_2",
     "attr57": "e57_4",
     "attr15": "s1661",
@@ -263,6 +326,9 @@
   },
   {
     "name": "inventory-21",
+    "sku": "SKU-21",
+    "quantity": 1,
+    "unitCents": 100,
     "attr7": "e7_3",
     "attr34": "AB467",
     "attr77": "e77_4",
@@ -276,6 +342,9 @@
   },
   {
     "name": "inventory-22",
+    "sku": "SKU-22",
+    "quantity": 1,
+    "unitCents": 100,
     "attr27": "e27_3",
     "attr78": true,
     "attr33": false,
@@ -287,6 +356,9 @@
   },
   {
     "name": "inventory-23",
+    "sku": "SKU-23",
+    "quantity": 1,
+    "unitCents": 100,
     "attr53": false,
     "attr22": "e22_4",
     "attr70": "s1492",
@@ -300,6 +372,9 @@
   },
   {
     "name": "inventory-24",
+    "sku": "SKU-24",
+    "quantity": 1,
+    "unitCents": 100,
     "attr54": "AB645",
     "attr11": 48056,
     "attr18": true,
@@ -311,6 +386,9 @@
   },
   {
     "name": "inventory-25",
+    "sku": "SKU-25",
+    "quantity": 1,
+    "unitCents": 100,
     "attr69": "AB219",
     "attr31": 42478,
     "attr2": "e2_1",
@@ -324,6 +402,9 @@
   },
   {
     "name": "inventory-26",
+    "sku": "SKU-26",
+    "quantity": 1,
+    "unitCents": 100,
     "attr4": "AB319",
     "attr37": "e37_4",
     "attr63": true,
@@ -335,6 +416,9 @@
   },
   {
     "name": "inventory-27",
+    "sku": "SKU-27",
+    "quantity": 1,
+    "unitCents": 100,
     "attr6": 3702,
     "attr14": "AB625",
     "attr62": "e62_1",
@@ -348,6 +432,9 @@
   },
   {
     "name": "inventory-28",
+    "sku": "SKU-28",
+    "quantity": 1,
+    "unitCents": 100,
     "attr61": 7558,
     "attr76": 12574,
     "attr64": "AB110",
@@ -361,6 +448,9 @@
   },
   {
     "name": "inventory-29",
+    "sku": "SKU-29",
+    "quantity": 1,
+    "unitCents": 100,
     "attr66": 24833,
     "attr5": "s5585",
     "attr6": 37198,
@@ -373,6 +463,9 @@
   },
   {
     "name": "inventory-30",
+    "sku": "SKU-30",
+    "quantity": 1,
+    "unitCents": 100,
     "attr70": "s7053",
     "attr47": "e47_1",
     "attr44": "AB903",
@@ -386,6 +479,9 @@
   },
   {
     "name": "inventory-31",
+    "sku": "SKU-31",
+    "quantity": 1,
+    "unitCents": 100,
     "attr21": 16513,
     "attr54": "AB398",
     "attr5": "s9093",
@@ -399,6 +495,9 @@
   },
   {
     "name": "inventory-32",
+    "sku": "SKU-32",
+    "quantity": 1,
+    "unitCents": 100,
     "attr4": "AB199",
     "attr45": "s709",
     "attr36": 18868,
@@ -412,6 +511,9 @@
   },
   {
     "name": "inventory-33",
+    "sku": "SKU-33",
+    "quantity": 1,
+    "unitCents": 100,
     "attr35": "s9572",
     "attr11": 22360,
     "attr1": 23983,
@@ -424,6 +526,9 @@
   },
   {
     "name": "inventory-34",
+    "sku": "SKU-34",
+    "quantity": 1,
+    "unitCents": 100,
     "attr7": "e7_3",
     "attr33": false,
     "attr25": "s8807",
@@ -436,6 +541,9 @@
   },
   {
     "name": "inventory-35",
+    "sku": "SKU-35",
+    "quantity": 1,
+    "unitCents": 100,
     "attr55": "s544",
     "attr54": "AB371",
     "attr50": "s4294",
@@ -449,6 +557,9 @@
   },
   {
     "name": "inventory-36",
+    "sku": "SKU-36",
+    "quantity": 1,
+    "unitCents": 100,
     "attr3": true,
     "attr57": "e57_1",
     "attr14": "AB487",
@@ -460,6 +571,9 @@
   },
   {
     "name": "inventory-37",
+    "sku": "SKU-37",
+    "quantity": 1,
+    "unitCents": 100,
     "attr71": 31813,
     "attr63": true,
     "attr26": 25355,
@@ -473,6 +587,9 @@
   },
   {
     "name": "inventory-38",
+    "sku": "SKU-38",
+    "quantity": 1,
+    "unitCents": 100,
     "attr15": "s3197",
     "attr37": "e37_1",
     "attr56": 25739,
@@ -484,6 +601,9 @@
   },
   {
     "name": "inventory-39",
+    "sku": "SKU-39",
+    "quantity": 1,
+    "unitCents": 100,
     "attr3": false,
     "attr30": "s1356",
     "attr23": false,
@@ -496,6 +616,9 @@
   },
   {
     "name": "inventory-40",
+    "sku": "SKU-40",
+    "quantity": 1,
+    "unitCents": 100,
     "attr11": 17615,
     "attr3": false,
     "attr64": "AB787",
@@ -508,6 +631,9 @@
   },
   {
     "name": "inventory-41",
+    "sku": "SKU-41",
+    "quantity": 1,
+    "unitCents": 100,
     "attr0": "s5609",
     "attr52": "e52_3",
     "attr29": "AB191",
@@ -521,6 +647,9 @@
   },
   {
     "name": "inventory-42",
+    "sku": "SKU-42",
+    "quantity": 1,
+    "unitCents": 100,
     "attr48": false,
     "attr57": "e57_2",
     "attr21": 13099,
@@ -533,6 +662,9 @@
   },
   {
     "name": "inventory-43",
+    "sku": "SKU-43",
+    "quantity": 1,
+    "unitCents": 100,
     "attr37": "e37_1",
     "attr15": "s65",
     "attr13": false,
@@ -545,6 +677,9 @@
   },
   {
     "name": "inventory-44",
+    "sku": "SKU-44",
+    "quantity": 1,
+    "unitCents": 100,
     "attr50": "s2841",
     "attr43": true,
     "attr47": "e47_1",
@@ -557,6 +692,9 @@
   },
   {
     "name": "inventory-45",
+    "sku": "SKU-45",
+    "quantity": 1,
+    "unitCents": 100,
     "attr39": "AB664",
     "attr36": 20800,
     "attr24": "AB908",
@@ -570,6 +708,9 @@
   },
   {
     "name": "inventory-46",
+    "sku": "SKU-46",
+    "quantity": 1,
+    "unitCents": 100,
     "attr55": "s5990",
     "attr51": 3939,
     "attr41": 77060,
@@ -583,6 +724,9 @@
   },
   {
     "name": "inventory-47",
+    "sku": "SKU-47",
+    "quantity": 1,
+    "unitCents": 100,
     "attr34": "AB170",
     "attr78": false,
     "attr50": "s5027",
@@ -596,6 +740,9 @@
   },
   {
     "name": "inventory-48",
+    "sku": "SKU-48",
+    "quantity": 1,
+    "unitCents": 100,
     "attr52": "e52_3",
     "attr65": "s5128",
     "attr47": "e47_4",
@@ -609,6 +756,9 @@
   },
   {
     "name": "inventory-49",
+    "sku": "SKU-49",
+    "quantity": 1,
+    "unitCents": 100,
     "attr61": 18607,
     "attr67": "e67_2",
     "attr14": "AB466",
@@ -621,6 +771,9 @@
   },
   {
     "name": "inventory-50",
+    "sku": "SKU-50",
+    "quantity": 1,
+    "unitCents": 100,
     "attr39": "AB273",
     "attr68": false,
     "attr10": "s4783",
@@ -634,6 +787,9 @@
   },
   {
     "name": "inventory-51",
+    "sku": "SKU-51",
+    "quantity": 1,
+    "unitCents": 100,
     "attr73": true,
     "attr41": 80008,
     "attr22": "e22_1",
@@ -647,6 +803,9 @@
   },
   {
     "name": "inventory-52",
+    "sku": "SKU-52",
+    "quantity": 1,
+    "unitCents": 100,
     "attr8": true,
     "attr28": false,
     "attr49": "AB688",
@@ -660,6 +819,9 @@
   },
   {
     "name": "inventory-53",
+    "sku": "SKU-53",
+    "quantity": 1,
+    "unitCents": 100,
     "attr39": "AB495",
     "attr23": false,
     "attr41": 48728,
@@ -673,6 +835,9 @@
   },
   {
     "name": "inventory-54",
+    "sku": "SKU-54",
+    "quantity": 1,
+    "unitCents": 100,
     "attr26": 16985,
     "attr67": "e67_0",
     "attr19": "AB676",
@@ -685,6 +850,9 @@
   },
   {
     "name": "inventory-55",
+    "sku": "SKU-55",
+    "quantity": 1,
+    "unitCents": 100,
     "attr53": true,
     "attr19": "AB187",
     "attr44": "AB563",
@@ -697,6 +865,9 @@
   },
   {
     "name": "inventory-56",
+    "sku": "SKU-56",
+    "quantity": 1,
+    "unitCents": 100,
     "attr75": "s5352",
     "attr76": 45116,
     "attr56": 27774,
@@ -710,6 +881,9 @@
   },
   {
     "name": "inventory-57",
+    "sku": "SKU-57",
+    "quantity": 1,
+    "unitCents": 100,
     "attr67": "e67_3",
     "attr74": "AB259",
     "attr19": "AB622",
@@ -722,6 +896,9 @@
   },
   {
     "name": "inventory-58",
+    "sku": "SKU-58",
+    "quantity": 1,
+    "unitCents": 100,
     "attr27": "e27_1",
     "attr43": false,
     "attr66": 32616,
@@ -735,6 +912,9 @@
   },
   {
     "name": "inventory-59",
+    "sku": "SKU-59",
+    "quantity": 1,
+    "unitCents": 100,
     "attr4": "AB194",
     "attr39": "AB329",
     "attr56": 4128,

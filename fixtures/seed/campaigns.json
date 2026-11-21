@@ -1,6 +1,7 @@
 [
   {
     "name": "campaigns-0",
+    "priceCents": 250,
     "attr50": "s4733",
     "attr28": true,
     "attr40": "s3641",
@@ -14,6 +15,7 @@
   },
   {
     "name": "campaigns-1",
+    "priceCents": 250,
     "attr50": "s980",
     "attr27": "e27_0",
     "attr60": "s3529",
@@ -25,6 +27,7 @@
   },
   {
     "name": "campaigns-2",
+    "priceCents": 250,
     "attr31": 11888,
     "attr57": "e57_1",
     "attr14": "AB152",
@@ -37,6 +40,7 @@
   },
   {
     "name": "campaigns-3",
+    "priceCents": 250,
     "attr13": false,
     "attr20": "s7043",
     "attr71": 20464,
@@ -50,6 +54,7 @@
   },
   {
     "name": "campaigns-4",
+    "priceCents": 250,
     "attr22": "e22_1",
     "attr78": true,
     "attr26": 8198,
@@ -62,6 +67,7 @@
   },
   {
     "name": "campaigns-5",
+    "priceCents": 250,
     "attr55": "s5825",
     "attr25": "s5961",
     "attr8": false,
@@ -74,6 +80,7 @@
   },
   {
     "name": "campaigns-6",
+    "priceCents": 250,
     "attr12": "e12_4",
     "attr40": "s9188",
     "attr39": "AB701",
@@ -86,6 +93,7 @@
   },
   {
     "name": "campaigns-7",
+    "priceCents": 250,
     "attr65": "s304",
     "attr11": 6651,
     "attr37": "e37_2",
@@ -99,6 +107,7 @@
   },
   {
     "name": "campaigns-8",
+    "priceCents": 250,
     "attr27": "e27_0",
     "attr46": 13986,
     "attr69": "AB632",
@@ -111,6 +120,7 @@
   },
   {
     "name": "campaigns-9",
+    "priceCents": 250,
     "attr46": 13292,
     "attr61": 2345,
     "attr5": "s2036",
@@ -123,6 +133,7 @@
   },
   {
     "name": "campaigns-10",
+    "priceCents": 250,
     "attr27": "e27_3",
     "attr30": "s2741",
     "attr9": "AB134",
@@ -136,6 +147,7 @@
   },
   {
     "name": "campaigns-11",
+    "priceCents": 250,
     "attr20": "s7233",
     "attr4": "AB305",
     "attr66": 1918,
@@ -148,6 +160,7 @@
   },
   {
     "name": "campaigns-12",
+    "priceCents": 250,
     "attr12": "e12_0",
     "attr26": 6083,
     "attr40": "s3698",
@@ -161,6 +174,7 @@
   },
   {
     "name": "campaigns-13",
+    "priceCents": 250,
     "attr0": "s1998",
     "attr33": false,
     "attr43": true,
@@ -174,6 +188,7 @@
   },
   {
     "name": "campaigns-14",
+    "priceCents": 250,
     "attr24": "AB882",
     "attr53": false,
     "attr77": "e77_0",
@@ -186,6 +201,7 @@
   },
   {
     "name": "campaigns-15",
+    "priceCents": 250,
     "attr30": "s1934",
     "attr41": 6235,
     "attr65": "s4689",
@@ -198,6 +214,7 @@
   },
   {
     "name": "campaigns-16",
+    "priceCents": 250,
     "attr36": 50818,
     "attr79": "AB454",
     "attr77": "e77_4",
@@ -210,6 +227,7 @@
   },
   {
     "name": "campaigns-17",
+    "priceCents": 250,
     "attr45": "s2867",
     "attr21": 16045,
     "attr60": "s2238",
@@ -222,6 +240,7 @@
   },
   {
     "name": "campaigns-18",
+    "priceCents": 250,
     "attr35": "s4785",
     "attr22": "e22_4",
     "attr17": "e17_3",
@@ -233,6 +252,7 @@
   },
   {
     "name": "campaigns-19",
+    "priceCents": 250,
     "attr54": "AB159",
     "attr4": "AB948",
     "attr5": "s639",
@@ -246,6 +266,7 @@
   },
   {
     "name": "campaigns-20",
+    "priceCents": 250,
     "attr43": true,
     "attr56": 444,
     "attr13": true,
@@ -258,6 +279,7 @@
   },
   {
     "name": "campaigns-21",
+    "priceCents": 250,
     "attr53": false,
     "attr23": true,
     "attr33": false,
@@ -270,6 +292,7 @@
   },
   {
     "name": "campaigns-22",
+    "priceCents": 250,
     "attr6": 25182,
     "attr63": true,
     "attr24": "AB411",
@@ -283,6 +306,7 @@
   },
   {
     "name": "campaigns-23",
+    "priceCents": 250,
     "attr43": true,
     "attr12": "e12_0",
     "attr20": "s1384",
@@ -295,6 +319,7 @@
   },
   {
     "name": "campaigns-24",
+    "priceCents": 250,
     "attr33": true,
     "attr74": "AB704",
     "attr24": "AB987",
@@ -307,6 +332,7 @@
   },
   {
     "name": "campaigns-25",
+    "priceCents": 250,
     "attr56": 432,
     "attr69": "AB530",
     "attr13": false,
@@ -317,6 +343,7 @@
   },
   {
     "name": "campaigns-26",
+    "priceCents": 250,
     "attr61": 30096,
     "attr64": "AB941",
     "attr46": 19130,
@@ -328,6 +355,7 @@
   },
   {
     "name": "campaigns-27",
+    "priceCents": 250,
     "attr17": "e17_1",
     "attr13": true,
     "attr35": "s1465",
@@ -340,6 +368,7 @@
   },
   {
     "name": "campaigns-28",
+    "priceCents": 250,
     "attr37": "e37_0",
     "attr41": 7529,
     "attr2": "e2_4",
@@ -352,6 +381,7 @@
   },
   {
     "name": "campaigns-29",
+    "priceCents": 250,
     "attr12": "e12_3",
     "attr43": true,
     "attr62": "e62_2",
@@ -365,6 +395,7 @@
   },
   {
     "name": "campaigns-30",
+    "priceCents": 250,
     "attr13": true,
     "attr23": true,
     "attr35": "s1390",
@@ -378,6 +409,7 @@
   },
   {
     "name": "campaigns-31",
+    "priceCents": 250,
     "attr9": "AB724",
     "attr23": false,
     "attr43": true,
@@ -391,6 +423,7 @@
   },
   {
     "name": "campaigns-32",
+    "priceCents": 250,
     "attr21": 3259,
     "attr77": "e77_2",
     "attr67": "e67_4",
@@ -404,6 +437,7 @@
   },
   {
     "name": "campaigns-33",
+    "priceCents": 250,
     "attr59": "AB768",
     "attr52": "e52_0",
     "attr35": "s2686",
@@ -417,6 +451,7 @@
   },
   {
     "name": "campaigns-34",
+    "priceCents": 250,
     "attr15": "s6733",
     "attr70": "s3897",
     "attr4": "AB645",
@@ -429,6 +464,7 @@
   },
   {
     "name": "campaigns-35",
+    "priceCents": 250,
     "attr23": false,
     "attr44": "AB358",
     "attr77": "e77_3",
@@ -442,6 +478,7 @@
   },
   {
     "name": "campaigns-36",
+    "priceCents": 250,
     "attr22": "e22_3",
     "attr3": false,
     "attr76": 2528,
@@ -454,6 +491,7 @@
   },
   {
     "name": "campaigns-37",
+    "priceCents": 250,
     "attr35": "s1889",
     "attr44": "AB266",
     "attr52": "e52_4",
@@ -466,6 +504,7 @@
   },
   {
     "name": "campaigns-38",
+    "priceCents": 250,
     "attr53": false,
     "attr21": 27196,
     "attr5": "s1076",
@@ -476,6 +515,7 @@
   },
   {
     "name": "campaigns-39",
+    "priceCents": 250,
     "attr56": 436,
     "attr11": 4565,
     "attr77": "e77_1",
@@ -489,6 +529,7 @@
   },
   {
     "name": "campaigns-40",
+    "priceCents": 250,
     "attr35": "s8431",
     "attr3": false,
     "attr2": "e2_2",
@@ -502,6 +543,7 @@
   },
   {
     "name": "campaigns-41",
+    "priceCents": 250,
     "attr24": "AB893",
     "attr77": "e77_2",
     "attr76": 17265,
@@ -515,6 +557,7 @@
   },
   {
     "name": "campaigns-42",
+    "priceCents": 250,
     "attr14": "AB443",
     "attr7": "e7_1",
     "attr43": true,
@@ -527,6 +570,7 @@
   },
   {
     "name": "campaigns-43",
+    "priceCents": 250,
     "attr21": 29763,
     "attr53": true,
     "attr78": false,
@@ -540,6 +584,7 @@
   },
   {
     "name": "campaigns-44",
+    "priceCents": 250,
     "attr53": false,
     "attr19": "AB828",
     "attr40": "s7126",
@@ -552,6 +597,7 @@
   },
   {
     "name": "campaigns-45",
+    "priceCents": 250,
     "attr25": "s857",
     "attr31": 1106,
     "attr54": "AB921",
@@ -563,6 +609,7 @@
   },
   {
     "name": "campaigns-46",
+    "priceCents": 250,
     "attr34": "AB699",
     "attr31": 5318,
     "attr21": 30312,
@@ -576,6 +623,7 @@
   },
   {
     "name": "campaigns-47",
+    "priceCents": 250,
     "attr32": "e32_2",
     "attr36": 68854,
     "attr53": false,
@@ -589,6 +637,7 @@
   },
   {
     "name": "campaigns-48",
+    "priceCents": 250,
     "attr54": "AB283",
     "attr70": "s8696",
     "attr40": "s9509",
@@ -602,6 +651,7 @@
   },
   {
     "name": "campaigns-49",
+    "priceCents": 250,
     "attr68": true,
     "attr48": false,
     "attr27": "e27_0",
@@ -615,6 +665,7 @@
   },
   {
     "name": "campaigns-50",
+    "priceCents": 250,
     "attr28": true,
     "attr16": 10971,
     "attr79": "AB677",
@@ -628,6 +679,7 @@
   },
   {
     "name": "campaigns-51",
+    "priceCents": 250,
     "attr55": "s9622",
     "attr24": "AB347",
     "attr43": true,
@@ -641,6 +693,7 @@
   },
   {
     "name": "campaigns-52",
+    "priceCents": 250,
     "attr77": "e77_0",
     "attr71": 20669,
     "attr3": false,
@@ -654,6 +707,7 @@
   },
   {
     "name": "campaigns-53",
+    "priceCents": 250,
     "attr0": "s6031",
     "attr4": "AB582",
     "attr78": true,
@@ -666,6 +720,7 @@
   },
   {
     "name": "campaigns-54",
+    "priceCents": 250,
     "attr29": "AB249",
     "attr54": "AB668",
     "attr9": "AB420",
@@ -679,6 +734,7 @@
   },
   {
     "name": "campaigns-55",
+    "priceCents": 250,
     "attr32": "e32_2",
     "attr49": "AB515",
     "attr36": 42269,
@@ -691,6 +747,7 @@
   },
   {
     "name": "campaigns-56",
+    "priceCents": 250,
     "attr62": "e62_4",
     "attr55": "s551",
     "attr24": "AB619",
@@ -703,6 +760,7 @@
   },
   {
     "name": "campaigns-57",
+    "priceCents": 250,
     "attr28": false,
     "attr22": "e22_2",
     "attr50": "s4984",
@@ -716,6 +774,7 @@
   },
   {
     "name": "campaigns-58",
+    "priceCents": 250,
     "attr2": "e2_1",
     "attr65": "s7172",
     "attr28": true,
@@ -729,6 +788,7 @@
   },
   {
     "name": "campaigns-59",
+    "priceCents": 250,
     "attr31": 5653,
     "attr19": "AB848",
     "attr61": 12339,

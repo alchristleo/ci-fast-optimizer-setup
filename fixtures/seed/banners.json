@@ -1,6 +1,7 @@
 [
   {
     "name": "banners-0",
+    "qty": 3,
     "attr44": "AB599",
     "attr52": "e52_0",
     "attr16": 90457,
@@ -14,6 +15,7 @@
   },
   {
     "name": "banners-1",
+    "qty": 3,
     "attr55": "s6040",
     "attr76": 46565,
     "attr79": "AB291",
@@ -26,6 +28,7 @@
   },
   {
     "name": "banners-2",
+    "qty": 3,
     "attr35": "s5011",
     "attr67": "e67_3",
     "attr0": "s6701",
@@ -39,6 +42,7 @@
   },
   {
     "name": "banners-3",
+    "qty": 3,
     "attr45": "s674",
     "attr40": "s1463",
     "attr72": "e72_3",
@@ -52,6 +56,7 @@
   },
   {
     "name": "banners-4",
+    "qty": 3,
     "attr12": "e12_3",
     "attr39": "AB404",
     "attr7": "e7_1",
@@ -64,6 +69,7 @@
   },
   {
     "name": "banners-5",
+    "qty": 3,
     "attr41": 4790,
     "attr43": true,
     "attr13": false,
@@ -76,6 +82,7 @@
   },
   {
     "name": "banners-6",
+    "qty": 3,
     "attr74": "AB478",
     "attr43": false,
     "attr48": true,
@@ -88,6 +95,7 @@
   },
   {
     "name": "banners-7",
+    "qty": 3,
     "attr15": "s2585",
     "attr44": "AB342",
     "attr67": "e67_1",
@@ -100,6 +108,7 @@
   },
   {
     "name": "banners-8",
+    "qty": 3,
     "attr35": "s9406",
     "attr63": true,
     "attr78": false,
@@ -112,6 +121,7 @@
   },
   {
     "name": "banners-9",
+    "qty": 3,
     "attr31": 3096,
     "attr77": "e77_3",
     "attr2": "e2_3",
@@ -124,6 +134,7 @@
   },
   {
     "name": "banners-10",
+    "qty": 3,
     "attr0": "s5549",
     "attr42": "e42_3",
     "attr73": true,
@@ -137,6 +148,7 @@
   },
   {
     "name": "banners-11",
+    "qty": 3,
     "attr48": true,
     "attr23": false,
     "attr15": "s8370",
@@ -150,6 +162,7 @@
   },
   {
     "name": "banners-12",
+    "qty": 3,
     "attr21": 17192,
     "attr5": "s6969",
     "attr40": "s9022",
@@ -163,6 +176,7 @@
   },
   {
     "name": "banners-13",
+    "qty": 3,
     "attr36": 53164,
     "attr18": true,
     "attr32": "e32_0",
@@ -176,6 +190,7 @@
   },
   {
     "name": "banners-14",
+    "qty": 3,
     "attr23": true,
     "attr71": 23605,
     "attr73": true,
@@ -189,6 +204,7 @@
   },
   {
     "name": "banners-15",
+    "qty": 3,
     "attr69": "AB343",
     "attr46": 34138,
     "attr79": "AB538",
@@ -201,6 +217,7 @@
   },
   {
     "name": "banners-16",
+    "qty": 3,
     "attr41": 37209,
     "attr45": "s8356",
     "attr1": 2142,
@@ -213,6 +230,7 @@
   },
   {
     "name": "banners-17",
+    "qty": 3,
     "attr73": false,
     "attr48": true,
     "attr35": "s2786",
@@ -226,6 +244,7 @@
   },
   {
     "name": "banners-18",
+    "qty": 3,
     "attr34": "AB632",
     "attr10": "s6514",
     "attr15": "s7638",
@@ -239,6 +258,7 @@
   },
   {
     "name": "banners-19",
+    "qty": 3,
     "attr31": 3298,
     "attr30": "s5850",
     "attr61": 37271,
@@ -252,6 +272,7 @@
   },
   {
     "name": "banners-20",
+    "qty": 3,
     "attr69": "AB111",
     "attr61": 38863,
     "attr19": "AB692",
@@ -263,6 +284,7 @@
   },
   {
     "name": "banners-21",
+    "qty": 3,
     "attr26": 15466,
     "attr0": "s9517",
     "attr3": false,
@@ -276,6 +298,7 @@
   },
   {
     "name": "banners-22",
+    "qty": 3,
     "attr14": "AB757",
     "attr0": "s8983",
     "attr53": false,
@@ -289,6 +312,7 @@
   },
   {
     "name": "banners-23",
+    "qty": 3,
     "attr20": "s5359",
     "attr45": "s8179",
     "attr24": "AB307",
@@ -302,6 +326,7 @@
   },
   {
     "name": "banners-24",
+    "qty": 3,
     "attr7": "e7_0",
     "attr41": 594,
     "attr49": "AB493",
@@ -315,6 +340,7 @@
   },
   {
     "name": "banners-25",
+    "qty": 3,
     "attr15": "s1138",
     "attr63": false,
     "attr71": 8386,
@@ -327,6 +353,7 @@
   },
   {
     "name": "banners-26",
+    "qty": 3,
     "attr4": "AB389",
     "attr68": false,
     "attr29": "AB330",
@@ -339,6 +366,7 @@
   },
   {
     "name": "banners-27",
+    "qty": 3,
     "attr53": false,
     "attr64": "AB538",
     "attr23": true,
@@ -351,6 +379,7 @@
   },
   {
     "name": "banners-28",
+    "qty": 3,
     "attr7": "e7_1",
     "attr28": true,
     "attr53": true,
@@ -364,6 +393,7 @@
   },
   {
     "name": "banners-29",
+    "qty": 3,
     "attr28": false,
     "attr3": false,
     "attr24": "AB569",
@@ -377,6 +407,7 @@
   },
   {
     "name": "banners-30",
+    "qty": 3,
     "attr39": "AB788",
     "attr14": "AB262",
     "attr24": "AB840",
@@ -389,6 +420,7 @@
   },
   {
     "name": "banners-31",
+    "qty": 3,
     "attr57": "e57_4",
     "attr70": "s2537",
     "attr39": "AB518",
@@ -402,6 +434,7 @@
   },
   {
     "name": "banners-32",
+    "qty": 3,
     "attr28": true,
     "attr67": "e67_4",
     "attr4": "AB863",
@@ -415,6 +448,7 @@
   },
   {
     "name": "banners-33",
+    "qty": 3,
     "attr30": "s6713",
     "attr35": "s2401",
     "attr45": "s3606",
@@ -427,6 +461,7 @@
   },
   {
     "name": "banners-34",
+    "qty": 3,
     "attr31": 19643,
     "attr52": "e52_2",
     "attr21": 15106,
@@ -437,6 +472,7 @@
   },
   {
     "name": "banners-35",
+    "qty": 3,
     "attr2": "e2_4",
     "attr3": true,
     "attr15": "s2353",
@@ -449,6 +485,7 @@
   },
   {
     "name": "banners-36",
+    "qty": 3,
     "attr76": 7942,
     "attr17": "e17_2",
     "attr39": "AB557",
@@ -462,6 +499,7 @@
   },
   {
     "name": "banners-37",
+    "qty": 3,
     "attr19": "AB807",
     "attr39": "AB618",
     "attr3": true,
@@ -474,6 +512,7 @@
   },
   {
     "name": "banners-38",
+    "qty": 3,
     "attr38": true,
     "attr62": "e62_1",
     "attr17": "e17_0",
@@ -485,6 +524,7 @@
   },
   {
     "name": "banners-39",
+    "qty": 3,
     "attr20": "s8299",
     "attr19": "AB362",
     "attr75": "s1317",
@@ -497,6 +537,7 @@
   },
   {
     "name": "banners-40",
+    "qty": 3,
     "attr53": true,
     "attr51": 11914,
     "attr75": "s9480",
@@ -509,6 +550,7 @@
   },
   {
     "name": "banners-41",
+    "qty": 3,
     "attr21": 43770,
     "attr60": "s3168",
     "attr12": "e12_1",
@@ -522,6 +564,7 @@
   },
   {
     "name": "banners-42",
+    "qty": 3,
     "attr39": "AB644",
     "attr40": "s9970",
     "attr59": "AB529",
@@ -533,6 +576,7 @@
   },
   {
     "name": "banners-43",
+    "qty": 3,
     "attr25": "s5098",
     "attr61": 25362,
     "attr27": "e27_1",
@@ -546,6 +590,7 @@
   },
   {
     "name": "banners-44",
+    "qty": 3,
     "attr65": "s6693",
     "attr12": "e12_1",
     "attr33": false,
@@ -559,6 +604,7 @@
   },
   {
     "name": "banners-45",
+    "qty": 3,
     "attr16": 36699,
     "attr65": "s5591",
     "attr49": "AB334",
@@ -572,6 +618,7 @@
   },
   {
     "name": "banners-46",
+    "qty": 3,
     "attr22": "e22_1",
     "attr62": "e62_0",
     "attr66": 72536,
@@ -584,6 +631,7 @@
   },
   {
     "name": "banners-47",
+    "qty": 3,
     "attr10": "s8991",
     "attr70": "s39",
     "attr23": true,
@@ -597,6 +645,7 @@
   },
   {
     "name": "banners-48",
+    "qty": 3,
     "attr14": "AB551",
     "attr57": "e57_3",
     "attr29": "AB834",
@@ -610,6 +659,7 @@
   },
   {
     "name": "banners-49",
+    "qty": 3,
     "attr66": 66143,
     "attr34": "AB536",
     "attr43": true,
@@ -623,6 +673,7 @@
   },
   {
     "name": "banners-50",
+    "qty": 3,
     "attr56": 73059,
     "attr40": "s4412",
     "attr71": 20533,
@@ -636,6 +687,7 @@
   },
   {
     "name": "banners-51",
+    "qty": 3,
     "attr48": false,
     "attr71": 378,
     "attr41": 19241,
@@ -648,6 +700,7 @@
   },
   {
     "name": "banners-52",
+    "qty": 3,
     "attr72": "e72_0",
     "attr2": "e2_0",
     "attr25": "s7433",
@@ -661,6 +714,7 @@
   },
   {
     "name": "banners-53",
+    "qty": 3,
     "attr68": true,
     "attr35": "s5585",
     "attr29": "AB756",
@@ -673,6 +727,7 @@
   },
   {
     "name": "banners-54",
+    "qty": 3,
     "attr22": "e22_4",
     "attr73": false,
     "attr11": 16420,
@@ -686,6 +741,7 @@
   },
   {
     "name": "banners-55",
+    "qty": 3,
     "attr16": 7078,
     "attr77": "e77_0",
     "attr32": "e32_4",
@@ -699,6 +755,7 @@
   },
   {
     "name": "banners-56",
+    "qty": 3,
     "attr43": true,
     "attr32": "e32_0",
     "attr4": "AB487",
@@ -712,6 +769,7 @@
   },
   {
     "name": "banners-57",
+    "qty": 3,
     "attr17": "e17_1",
     "attr75": "s9317",
     "attr25": "s5429",
@@ -725,6 +783,7 @@
   },
   {
     "name": "banners-58",
+    "qty": 3,
     "attr66": 77604,
     "attr17": "e17_0",
     "attr27": "e27_3",
@@ -737,6 +796,7 @@
   },
   {
     "name": "banners-59",
+    "qty": 3,
     "attr8": true,
     "attr38": false,
     "attr9": "AB332",

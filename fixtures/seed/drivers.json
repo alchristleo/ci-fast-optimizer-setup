@@ -1,6 +1,8 @@
 [
   {
     "name": "drivers-0",
+    "active": true,
+    "code": "AB123",
     "attr60": "s994",
     "attr51": 29518,
     "attr7": "e7_1",
@@ -14,6 +16,8 @@
   },
   {
     "name": "drivers-1",
+    "active": true,
+    "code": "AB123",
     "attr8": true,
     "attr63": false,
     "attr7": "e7_2",
@@ -27,6 +31,8 @@
   },
   {
     "name": "drivers-2",
+    "active": true,
+    "code": "AB123",
     "attr19": "AB399",
     "attr17": "e17_4",
     "attr3": false,
@@ -40,6 +46,8 @@
   },
   {
     "name": "drivers-3",
+    "active": true,
+    "code": "AB123",
     "attr60": "s2731",
     "attr42": "e42_1",
     "attr40": "s7107",
@@ -53,6 +61,8 @@
   },
   {
     "name": "drivers-4",
+    "active": true,
+    "code": "AB123",
     "attr37": "e37_4",
     "attr28": false,
     "attr29": "AB680",
@@ -66,6 +76,8 @@
   },
   {
     "name": "drivers-5",
+    "active": true,
+    "code": "AB123",
     "attr68": false,
     "attr46": 7471,
     "attr64": "AB364",
@@ -79,6 +91,8 @@
   },
   {
     "name": "drivers-6",
+    "active": true,
+    "code": "AB123",
     "attr54": "AB813",
     "attr2": "e2_2",
     "attr50": "s3621",
@@ -91,6 +105,8 @@
   },
   {
     "name": "drivers-7",
+    "active": true,
+    "code": "AB123",
     "attr65": "s9852",
     "attr23": true,
     "attr29": "AB453",
@@ -104,6 +120,8 @@
   },
   {
     "name": "drivers-8",
+    "active": true,
+    "code": "AB123",
     "attr8": true,
     "attr11": 24114,
     "attr37": "e37_2",
@@ -116,6 +134,8 @@
   },
   {
     "name": "drivers-9",
+    "active": true,
+    "code": "AB123",
     "attr62": "e62_1",
     "attr55": "s1979",
     "attr69": "AB245",
@@ -128,6 +148,8 @@
   },
   {
     "name": "drivers-10",
+    "active": true,
+    "code": "AB123",
     "attr79": "AB426",
     "attr9": "AB955",
     "attr19": "AB779",
@@ -141,6 +163,8 @@
   },
   {
     "name": "drivers-11",
+    "active": true,
+    "code": "AB123",
     "attr59": "AB390",
     "attr31": 63437,
     "attr48": false,
@@ -154,6 +178,8 @@
   },
   {
     "name": "drivers-12",
+    "active": true,
+    "code": "AB123",
     "attr41": 2362,
     "attr67": "e67_4",
     "attr4": "AB326",
@@ -167,6 +193,8 @@
   },
   {
     "name": "drivers-13",
+    "active": true,
+    "code": "AB123",
     "attr73": true,
     "attr41": 4248,
     "attr14": "AB470",
@@ -180,6 +208,8 @@
   },
   {
     "name": "drivers-14",
+    "active": true,
+    "code": "AB123",
     "attr21": 19938,
     "attr24": "AB532",
     "attr75": "s8818",
@@ -193,6 +223,8 @@
   },
   {
     "name": "drivers-15",
+    "active": true,
+    "code": "AB123",
     "attr7": "e7_2",
     "attr9": "AB877",
     "attr44": "AB560",
@@ -206,6 +238,8 @@
   },
   {
     "name": "drivers-16",
+    "active": true,
+    "code": "AB123",
     "attr36": 5031,
     "attr39": "AB558",
     "attr33": false,
@@ -219,6 +253,8 @@
   },
   {
     "name": "drivers-17",
+    "active": true,
+    "code": "AB123",
     "attr30": "s5366",
     "attr19": "AB205",
     "attr49": "AB248",
@@ -231,6 +267,8 @@
   },
   {
     "name": "drivers-18",
+    "active": true,
+    "code": "AB123",
     "attr49": "AB313",
     "attr76": 50028,
     "attr57": "e57_2",
@@ -244,6 +282,8 @@
   },
   {
     "name": "drivers-19",
+    "active": true,
+    "code": "AB123",
     "attr52": "e52_3",
     "attr14": "AB670",
     "attr42": "e42_4",
@@ -256,6 +296,8 @@
   },
   {
     "name": "drivers-20",
+    "active": true,
+    "code": "AB123",
     "attr52": "e52_1",
     "attr0": "s5031",
     "attr74": "AB582",
@@ -269,6 +311,8 @@
   },
   {
     "name": "drivers-21",
+    "active": true,
+    "code": "AB123",
     "attr34": "AB762",
     "attr74": "AB638",
     "attr45": "s3580",
@@ -281,6 +325,8 @@
   },
   {
     "name": "drivers-22",
+    "active": true,
+    "code": "AB123",
     "attr42": "e42_1",
     "attr31": 13863,
     "attr39": "AB741",
@@ -293,6 +339,8 @@
   },
   {
     "name": "drivers-23",
+    "active": true,
+    "code": "AB123",
     "attr37": "e37_1",
     "attr45": "s1784",
     "attr9": "AB629",
@@ -304,6 +352,8 @@
   },
   {
     "name": "drivers-24",
+    "active": true,
+    "code": "AB123",
     "attr23": false,
     "attr53": true,
     "attr15": "s561",
@@ -317,6 +367,8 @@
   },
   {
     "name": "drivers-25",
+    "active": true,
+    "code": "AB123",
     "attr26": 54938,
     "attr41": 5179,
     "attr50": "s8059",
@@ -330,6 +382,8 @@
   },
   {
     "name": "drivers-26",
+    "active": true,
+    "code": "AB123",
     "attr5": "s8125",
     "attr78": false,
     "attr7": "e7_3",
@@ -342,6 +396,8 @@
   },
   {
     "name": "drivers-27",
+    "active": true,
+    "code": "AB123",
     "attr35": "s6238",
     "attr79": "AB512",
     "attr62": "e62_3",
@@ -354,6 +410,8 @@
   },
   {
     "name": "drivers-28",
+    "active": true,
+    "code": "AB123",
     "attr1": 38511,
     "attr61": 4309,
     "attr72": "e72_1",
@@ -367,6 +425,8 @@
   },
   {
     "name": "drivers-29",
+    "active": true,
+    "code": "AB123",
     "attr52": "e52_4",
     "attr12": "e12_0",
     "attr11": 15824,
@@ -380,6 +440,8 @@
   },
   {
     "name": "drivers-30",
+    "active": true,
+    "code": "AB123",
     "attr57": "e57_4",
     "attr33": false,
     "attr34": "AB870",
@@ -392,6 +454,8 @@
   },
   {
     "name": "drivers-31",
+    "active": true,
+    "code": "AB123",
     "attr28": false,
     "attr71": 40078,
     "attr52": "e52_2",
@@ -405,6 +469,8 @@
   },
   {
     "name": "drivers-32",
+    "active": true,
+    "code": "AB123",
     "attr48": true,
     "attr36": 4414,
     "attr74": "AB383",
@@ -418,6 +484,8 @@
   },
   {
     "name": "drivers-33",
+    "active": true,
+    "code": "AB123",
     "attr79": "AB822",
     "attr2": "e2_1",
     "attr10": "s5228",
@@ -429,6 +497,8 @@
   },
   {
     "name": "drivers-34",
+    "active": true,
+    "code": "AB123",
     "attr35": "s3578",
     "attr68": false,
     "attr21": 1984,
@@ -441,6 +511,8 @@
   },
   {
     "name": "drivers-35",
+    "active": true,
+    "code": "AB123",
     "attr26": 44966,
     "attr36": 2776,
     "attr1": 80321,
@@ -453,6 +525,8 @@
   },
   {
     "name": "drivers-36",
+    "active": true,
+    "code": "AB123",
     "attr45": "s3200",
     "attr67": "e67_0",
     "attr0": "s3078",
@@ -465,6 +539,8 @@
   },
   {
     "name": "drivers-37",
+    "active": true,
+    "code": "AB123",
     "attr43": true,
     "attr13": true,
     "attr3": false,
@@ -477,6 +553,8 @@
   },
   {
     "name": "drivers-38",
+    "active": true,
+    "code": "AB123",
     "attr57": "e57_2",
     "attr24": "AB131",
     "attr5": "s3770",
@@ -490,6 +568,8 @@
   },
   {
     "name": "drivers-39",
+    "active": true,
+    "code": "AB123",
     "attr48": true,
     "attr59": "AB890",
     "attr10": "s6400",
@@ -503,6 +583,8 @@
   },
   {
     "name": "drivers-40",
+    "active": true,
+    "code": "AB123",
     "attr17": "e17_0",
     "attr39": "AB897",
     "attr26": 17804,
@@ -514,6 +596,8 @@
   },
   {
     "name": "drivers-41",
+    "active": true,
+    "code": "AB123",
     "attr71": 59574,
     "attr6": 34994,
     "attr14": "AB814",
@@ -527,6 +611,8 @@
   },
   {
     "name": "drivers-42",
+    "active": true,
+    "code": "AB123",
     "attr31": 37852,
     "attr37": "e37_0",
     "attr70": "s8172",
@@ -540,6 +626,8 @@
   },
   {
     "name": "drivers-43",
+    "active": true,
+    "code": "AB123",
     "attr16": 2616,
     "attr79": "AB479",
     "attr20": "s2213",
@@ -553,6 +641,8 @@
   },
   {
     "name": "drivers-44",
+    "active": true,
+    "code": "AB123",
     "attr36": 4089,
     "attr23": false,
     "attr20": "s929",
@@ -566,6 +656,8 @@
   },
   {
     "name": "drivers-45",
+    "active": true,
+    "code": "AB123",
     "attr0": "s9908",
     "attr78": false,
     "attr32": "e32_1",
@@ -578,6 +670,8 @@
   },
   {
     "name": "drivers-46",
+    "active": true,
+    "code": "AB123",
     "attr26": 59153,
     "attr42": "e42_4",
     "attr77": "e77_1",
@@ -591,6 +685,8 @@
   },
   {
     "name": "drivers-47",
+    "active": true,
+    "code": "AB123",
     "attr73": false,
     "attr9": "AB114",
     "attr74": "AB993",
@@ -603,6 +699,8 @@
   },
   {
     "name": "drivers-48",
+    "active": true,
+    "code": "AB123",
     "attr79": "AB386",
     "attr72": "e72_3",
     "attr23": false,
@@ -616,6 +714,8 @@
   },
   {
     "name": "drivers-49",
+    "active": true,
+    "code": "AB123",
     "attr1": 27942,
     "attr31": 42149,
     "attr4": "AB904",
@@ -629,6 +729,8 @@
   },
   {
     "name": "drivers-50",
+    "active": true,
+    "code": "AB123",
     "attr76": 25420,
     "attr11": 26367,
     "attr58": true,
@@ -641,6 +743,8 @@
   },
   {
     "name": "drivers-51",
+    "active": true,
+    "code": "AB123",
     "attr11": 45873,
     "attr29": "AB809",
     "attr4": "AB117",
@@ -654,6 +758,8 @@
   },
   {
     "name": "drivers-52",
+    "active": true,
+    "code": "AB123",
     "attr79": "AB160",
     "attr62": "e62_3",
     "attr65": "s824",
@@ -667,6 +773,8 @@
   },
   {
     "name": "drivers-53",
+    "active": true,
+    "code": "AB123",
     "attr64": "AB104",
     "attr2": "e2_0",
     "attr4": "AB223",
@@ -680,6 +788,8 @@
   },
   {
     "name": "drivers-54",
+    "active": true,
+    "code": "AB123",
     "attr16": 3697,
     "attr51": 7930,
     "attr34": "AB995",
@@ -693,6 +803,8 @@
   },
   {
     "name": "drivers-55",
+    "active": true,
+    "code": "AB123",
     "attr26": 8358,
     "attr65": "s4677",
     "attr54": "AB863",
@@ -705,6 +817,8 @@
   },
   {
     "name": "drivers-56",
+    "active": true,
+    "code": "AB123",
     "attr72": "e72_3",
     "attr18": false,
     "attr68": true,
@@ -717,6 +831,8 @@
   },
   {
     "name": "drivers-57",
+    "active": true,
+    "code": "AB123",
     "attr33": true,
     "attr74": "AB874",
     "attr21": 19819,
@@ -728,6 +844,8 @@
   },
   {
     "name": "drivers-58",
+    "active": true,
+    "code": "AB123",
     "attr17": "e17_2",
     "attr79": "AB912",
     "attr57": "e57_1",
@@ -740,6 +858,8 @@
   },
   {
     "name": "drivers-59",
+    "active": true,
+    "code": "AB123",
     "attr23": true,
     "attr56": 860,
     "attr43": false,

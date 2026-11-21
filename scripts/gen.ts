@@ -88,22 +88,42 @@ const NOUNS = [
 
 type FieldDef = {
   key: string;
-  decl: string;
+  json: Record<string, unknown>;
   valid: string;
   invalid: string;
+  sample: unknown;
 };
 
 const FIELD_POOL: FieldDef[] = [
-  { key: "qty", decl: `{ type: "number", min: 0, max: 10000 }`, valid: "3", invalid: "-1" },
-  { key: "priceCents", decl: `{ type: "number", min: 0 }`, valid: "250", invalid: "-5" },
-  { key: "active", decl: `{ type: "boolean" }`, valid: "true", invalid: `"yes"` },
+  {
+    key: "qty",
+    json: { type: "number", minimum: 0, maximum: 10000 },
+    valid: "3",
+    invalid: "-1",
+    sample: 3,
+  },
+  {
+    key: "priceCents",
+    json: { type: "number", minimum: 0 },
+    valid: "250",
+    invalid: "-5",
+    sample: 250,
+  },
+  { key: "active", json: { type: "boolean" }, valid: "true", invalid: `"yes"`, sample: true },
   {
     key: "code",
-    decl: `{ type: "string", pattern: "^[A-Z]{2}[0-9]{3}$" }`,
+    json: { type: "string", pattern: "^[A-Z]{2}[0-9]{3}$" },
     valid: `"AB123"`,
     invalid: `"bad"`,
+    sample: "AB123",
   },
-  { key: "note", decl: `{ type: "string", max: 200 }`, valid: `"hello"`, invalid: "42" },
+  {
+    key: "note",
+    json: { type: "string", maxLength: 200 },
+    valid: `"hello"`,
+    invalid: "42",
+    sample: "hello",
+  },
 ];
 
 function mulberry32(seed: number): () => number {
@@ -127,12 +147,50 @@ function hash(text: string): number {
   return h >>> 0;
 }
 
-// JSON schema (many optional props) and seed rows for one domain, seeded per domain name.
-function genFixtures(name: string, seed: number): { schema: unknown; seed: unknown[] } {
+// What a domain's routes accept: required keys, property schemas and one valid sample row.
+type Base = { required: string[]; props: Record<string, unknown>; row: (n: number) => object };
+
+const NAME_PROP = { type: "string", minLength: 1, maxLength: 80 };
+const SKU = "^[A-Z0-9-]{3,16}$";
+
+const HAND: Record<string, Base> = {
+  orders: {
+    required: ["customerId", "itemId", "quantity"],
+    props: {
+      customerId: { type: "string" },
+      itemId: { type: "string" },
+      quantity: { type: "number", minimum: 1, maximum: 1000 },
+    },
+    row: () => ({ customerId: "customers_1", itemId: "inventory_1", quantity: 1 }),
+  },
+  inventory: {
+    required: ["name", "sku", "quantity", "unitCents"],
+    props: {
+      name: NAME_PROP,
+      sku: { type: "string", pattern: SKU },
+      quantity: { type: "number", minimum: 0 },
+      unitCents: { type: "number", minimum: 0 },
+    },
+    row: (n) => ({ name: `inventory-${n}`, sku: `SKU-${n}`, quantity: 1, unitCents: 100 }),
+  },
+  customers: {
+    required: ["name", "email"],
+    props: {
+      name: NAME_PROP,
+      email: { type: "string", pattern: "^[^@\\s]+@[^@\\s]+\\.[a-z]{2,}$" },
+      vip: { type: "boolean" },
+    },
+    row: (n) => ({ name: `customers-${n}`, email: `c${n}@example.com`, vip: false }),
+  },
+};
+
+// JSON schema (route fields plus many optional props) and seed rows for one domain,
+// seeded per domain name. The routes' only request-body validator compiles from this schema.
+function genFixtures(name: string, seed: number, base: Base): { schema: unknown; seed: unknown[] } {
   const rand = mulberry32(seed ^ hash(name));
   const int = (lo: number, hi: number): number => lo + Math.floor(rand() * (hi - lo + 1));
   const kinds = ["string", "integer", "enum", "boolean", "pattern"] as const;
-  const props: Record<string, unknown> = { name: { type: "string", minLength: 1, maxLength: 80 } };
+  const props: Record<string, unknown> = { ...base.props };
   const make: Record<string, () => unknown> = {};
   for (let p = 0; p < SCHEMA_PROPS; p++) {
     const key = `attr${p}`;
@@ -158,7 +216,7 @@ function genFixtures(name: string, seed: number): { schema: unknown; seed: unkno
   }
   const rows: unknown[] = [];
   for (let r = 0; r < SEED_ROWS; r++) {
-    const row: Record<string, unknown> = { name: `${name}-${r}` };
+    const row: Record<string, unknown> = { ...base.row(r) };
     for (let k = 0; k < ROW_PROPS; k++) {
       const key = `attr${int(0, SCHEMA_PROPS - 1)}`;
       row[key] = make[key]!();
@@ -166,7 +224,12 @@ function genFixtures(name: string, seed: number): { schema: unknown; seed: unkno
     rows.push(row);
   }
   return {
-    schema: { type: "object", required: ["name"], additionalProperties: false, properties: props },
+    schema: {
+      type: "object",
+      required: base.required,
+      additionalProperties: false,
+      properties: props,
+    },
     seed: rows,
   };
 }
@@ -190,7 +253,7 @@ function domainName(i: number): string {
 function genDomain(
   i: number,
   rand: () => number,
-): { service: string; routes: string; test: string; name: string } {
+): { service: string; routes: string; test: string; name: string; base: Base } {
   const name = domainName(i);
   const int = (lo: number, hi: number): number => lo + Math.floor(rand() * (hi - lo + 1));
   const shuffled = [...FIELD_POOL].sort(() => rand() - 0.5);
@@ -262,22 +325,11 @@ function genDomain(
   const rt: string[] = [];
   rt.push(
     `import { Hono } from "hono";`,
-    `import { compile, type Schema } from "../../../lib/validation.ts";`,
+    `import type { Validator } from "../../../lib/validation.ts";`,
   );
   rt.push(`import { ${svcUse.sort().join(", ")} } from "./service.ts";`, "");
   rt.push(`export const name = "${name}";`, "");
-  rt.push(
-    `export const schema: Schema = {`,
-    `  name: { type: "string", required: true, min: 1, max: 80 },`,
-  );
-  extra.forEach((f) => rt.push(`  ${f.key}: ${f.decl},`));
-  rt.push(`};`, "");
-  rt.push(
-    `export function routes(): Hono {`,
-    `  const app = new Hono();`,
-    `  const validate = compile(schema);`,
-    "",
-  );
+  rt.push(`export function routes(validate: Validator): Hono {`, `  const app = new Hono();`, "");
   rt.push(`  app.get("/", (c) => c.json(list()));`);
   if (handlers.has("stats")) rt.push(`  app.get("/stats", (c) => c.json(stats()));`);
   if (handlers.has("linked")) rt.push(`  app.get("/linked", (c) => c.json(linked()));`);
@@ -419,7 +471,15 @@ function genDomain(
   );
   head.push(`const valid = ${validObj};`, "", `describe("${name}", () => {`);
   const test = head.join("\n") + "\n" + chosen.join("\n") + `});\n`;
-  return { service, routes, test, name };
+  const base: Base = {
+    required: ["name"],
+    props: { name: NAME_PROP, ...Object.fromEntries(extra.map((f) => [f.key, f.json])) },
+    row: (n) => ({
+      name: `${name}-${n}`,
+      ...Object.fromEntries(extra.map((f) => [f.key, f.sample])),
+    }),
+  };
+  return { service, routes, test, name, base };
 }
 
 function main(): void {
@@ -435,6 +495,7 @@ function main(): void {
   }
 
   const names: string[] = [];
+  const bases: Record<string, Base> = { ...HAND };
   for (let i = 0; i < domains; i++) {
     const d = genDomain(i, rand);
     mkdirSync(join(genDir, d.name), { recursive: true });
@@ -442,10 +503,11 @@ function main(): void {
     writeFileSync(join(genDir, d.name, "routes.ts"), d.routes);
     writeFileSync(join(testDir, `${d.name}.test.ts`), d.test);
     names.push(d.name);
+    bases[d.name] = d.base;
   }
 
   for (const name of ["orders", "inventory", "customers", ...names]) {
-    const f = genFixtures(name, seed);
+    const f = genFixtures(name, seed, bases[name]!);
     writeFileSync(join(schemaDir, `${name}.json`), JSON.stringify(f.schema, null, 2) + "\n");
     writeFileSync(join(seedDir, `${name}.json`), JSON.stringify(f.seed, null, 2) + "\n");
   }

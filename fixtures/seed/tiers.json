@@ -1,6 +1,9 @@
 [
   {
     "name": "tiers-0",
+    "priceCents": 250,
+    "active": true,
+    "qty": 3,
     "attr54": "AB317",
     "attr4": "AB669",
     "attr22": "e22_3",
@@ -13,6 +16,9 @@
   },
   {
     "name": "tiers-1",
+    "priceCents": 250,
+    "active": true,
+    "qty": 3,
     "attr26": 13397,
     "attr29": "AB225",
     "attr65": "s2742",
@@ -26,6 +32,9 @@
   },
   {
     "name": "tiers-2",
+    "priceCents": 250,
+    "active": true,
+    "qty": 3,
     "attr30": "s6122",
     "attr25": "s894",
     "attr61": 3546,
@@ -38,6 +47,9 @@
   },
   {
     "name": "tiers-3",
+    "priceCents": 250,
+    "active": true,
+    "qty": 3,
     "attr39": "AB666",
     "attr49": "AB958",
     "attr32": "e32_1",
@@ -51,6 +63,9 @@
   },
   {
     "name": "tiers-4",
+    "priceCents": 250,
+    "active": true,
+    "qty": 3,
     "attr72": "e72_2",
     "attr40": "s4002",
     "attr29": "AB717",
@@ -62,6 +77,9 @@
   },
   {
     "name": "tiers-5",
+    "priceCents": 250,
+    "active": true,
+    "qty": 3,
     "attr10": "s5268",
     "attr79": "AB445",
     "attr62": "e62_0",
@@ -75,6 +93,9 @@
   },
   {
     "name": "tiers-6",
+    "priceCents": 250,
+    "active": true,
+    "qty": 3,
     "attr40": "s5085",
     "attr23": true,
     "attr61": 6389,
@@ -88,6 +109,9 @@
   },
   {
     "name": "tiers-7",
+    "priceCents": 250,
+    "active": true,
+    "qty": 3,
     "attr2": "e2_1",
     "attr38": true,
     "attr24": "AB552",
@@ -101,6 +125,9 @@
   },
   {
     "name": "tiers-8",
+    "priceCents": 250,
+    "active": true,
+    "qty": 3,
     "attr21": 19985,
     "attr7": "e7_2",
     "attr57": "e57_4",
@@ -113,6 +140,9 @@
   },
   {
     "name": "tiers-9",
+    "priceCents": 250,
+    "active": true,
+    "qty": 3,
     "attr30": "s1484",
     "attr53": true,
     "attr34": "AB942",
@@ -126,6 +156,9 @@
   },
   {
     "name": "tiers-10",
+    "priceCents": 250,
+    "active": true,
+    "qty": 3,
     "attr76": 4003,
     "attr5": "s6243",
     "attr51": 9319,
@@ -139,6 +172,9 @@
   },
   {
     "name": "tiers-11",
+    "priceCents": 250,
+    "active": true,
+    "qty": 3,
     "attr31": 23871,
     "attr54": "AB608",
     "attr17": "e17_1",
@@ -152,6 +188,9 @@
   },
   {
     "name": "tiers-12",
+    "priceCents": 250,
+    "active": true,
+    "qty": 3,
     "attr43": true,
     "attr47": "e47_2",
     "attr23": true,
@@ -164,6 +203,9 @@
   },
   {
     "name": "tiers-13",
+    "priceCents": 250,
+    "active": true,
+    "qty": 3,
     "attr70": "s9530",
     "attr62": "e62_0",
     "attr56": 10936,
@@ -176,6 +218,9 @@
   },
   {
     "name": "tiers-14",
+    "priceCents": 250,
+    "active": true,
+    "qty": 3,
     "attr38": false,
     "attr63": false,
     "attr54": "AB215",
@@ -188,6 +233,9 @@
   },
   {
     "name": "tiers-15",
+    "priceCents": 250,
+    "active": true,
+    "qty": 3,
     "attr39": "AB592",
     "attr37": "e37_3",
     "attr78": false,
@@ -200,6 +248,9 @@
   },
   {
     "name": "tiers-16",
+    "priceCents": 250,
+    "active": true,
+    "qty": 3,
     "attr3": false,
     "attr9": "AB231",
     "attr74": "AB242",
@@ -213,6 +264,9 @@
   },
   {
     "name": "tiers-17",
+    "priceCents": 250,
+    "active": true,
+    "qty": 3,
     "attr34": "AB530",
     "attr12": "e12_4",
     "attr8": false,
@@ -226,6 +280,9 @@
   },
   {
     "name": "tiers-18",
+    "priceCents": 250,
+    "active": true,
+    "qty": 3,
     "attr32": "e32_1",
     "attr58": false,
     "attr19": "AB375",
@@ -239,6 +296,9 @@
   },
   {
     "name": "tiers-19",
+    "priceCents": 250,
+    "active": true,
+    "qty": 3,
     "attr61": 405,
     "attr11": 35757,
     "attr10": "s9225",
@@ -251,6 +311,9 @@
   },
   {
     "name": "tiers-20",
+    "priceCents": 250,
+    "active": true,
+    "qty": 3,
     "attr3": true,
     "attr57": "e57_3",
     "attr46": 45137,
@@ -264,6 +327,9 @@
   },
   {
     "name": "tiers-21",
+    "priceCents": 250,
+    "active": true,
+    "qty": 3,
     "attr23": true,
     "attr20": "s6374",
     "attr75": "s4867",
@@ -275,6 +341,9 @@
   },
   {
     "name": "tiers-22",
+    "priceCents": 250,
+    "active": true,
+    "qty": 3,
     "attr68": true,
     "attr67": "e67_0",
     "attr57": "e57_3",
@@ -288,6 +357,9 @@
   },
   {
     "name": "tiers-23",
+    "priceCents": 250,
+    "active": true,
+    "qty": 3,
     "attr52": "e52_4",
     "attr51": 3630,
     "attr27": "e27_0",
@@ -301,6 +373,9 @@
   },
   {
     "name": "tiers-24",
+    "priceCents": 250,
+    "active": true,
+    "qty": 3,
     "attr4": "AB491",
     "attr78": false,
     "attr57": "e57_2",
@@ -313,6 +388,9 @@
   },
   {
     "name": "tiers-25",
+    "priceCents": 250,
+    "active": true,
+    "qty": 3,
     "attr54": "AB759",
     "attr57": "e57_4",
     "attr35": "s3290",
@@ -326,6 +404,9 @@
   },
   {
     "name": "tiers-26",
+    "priceCents": 250,
+    "active": true,
+    "qty": 3,
     "attr28": true,
     "attr73": false,
     "attr0": "s6449",
@@ -339,6 +420,9 @@
   },
   {
     "name": "tiers-27",
+    "priceCents": 250,
+    "active": true,
+    "qty": 3,
     "attr41": 3194,
     "attr61": 2601,
     "attr40": "s1316",
@@ -350,6 +434,9 @@
   },
   {
     "name": "tiers-28",
+    "priceCents": 250,
+    "active": true,
+    "qty": 3,
     "attr75": "s6397",
     "attr11": 24018,
     "attr12": "e12_2",
@@ -363,6 +450,9 @@
   },
   {
     "name": "tiers-29",
+    "priceCents": 250,
+    "active": true,
+    "qty": 3,
     "attr50": "s7907",
     "attr13": true,
     "attr20": "s4625",
@@ -375,6 +465,9 @@
   },
   {
     "name": "tiers-30",
+    "priceCents": 250,
+    "active": true,
+    "qty": 3,
     "attr46": 32786,
     "attr54": "AB930",
     "attr66": 13440,
@@ -386,6 +479,9 @@
   },
   {
     "name": "tiers-31",
+    "priceCents": 250,
+    "active": true,
+    "qty": 3,
     "attr24": "AB177",
     "attr50": "s3983",
     "attr32": "e32_3",
@@ -399,6 +495,9 @@
   },
   {
     "name": "tiers-32",
+    "priceCents": 250,
+    "active": true,
+    "qty": 3,
     "attr24": "AB889",
     "attr51": 16750,
     "attr14": "AB144",
@@ -412,6 +511,9 @@
   },
   {
     "name": "tiers-33",
+    "priceCents": 250,
+    "active": true,
+    "qty": 3,
     "attr67": "e67_4",
     "attr11": 1776,
     "attr25": "s6433",
@@ -425,6 +527,9 @@
   },
   {
     "name": "tiers-34",
+    "priceCents": 250,
+    "active": true,
+    "qty": 3,
     "attr19": "AB680",
     "attr40": "s3353",
     "attr58": true,
@@ -436,6 +541,9 @@
   },
   {
     "name": "tiers-35",
+    "priceCents": 250,
+    "active": true,
+    "qty": 3,
     "attr42": "e42_4",
     "attr53": false,
     "attr56": 19789,
@@ -447,6 +555,9 @@
   },
   {
     "name": "tiers-36",
+    "priceCents": 250,
+    "active": true,
+    "qty": 3,
     "attr22": "e22_4",
     "attr32": "e32_3",
     "attr53": false,
@@ -460,6 +571,9 @@
   },
   {
     "name": "tiers-37",
+    "priceCents": 250,
+    "active": true,
+    "qty": 3,
     "attr10": "s8187",
     "attr66": 149,
     "attr63": true,
@@ -473,6 +587,9 @@
   },
   {
     "name": "tiers-38",
+    "priceCents": 250,
+    "active": true,
+    "qty": 3,
     "attr46": 31574,
     "attr45": "s7524",
     "attr66": 10507,
@@ -486,6 +603,9 @@
   },
   {
     "name": "tiers-39",
+    "priceCents": 250,
+    "active": true,
+    "qty": 3,
     "attr62": "e62_0",
     "attr0": "s6360",
     "attr39": "AB776",
@@ -497,6 +617,9 @@
   },
   {
     "name": "tiers-40",
+    "priceCents": 250,
+    "active": true,
+    "qty": 3,
     "attr6": 5215,
     "attr58": true,
     "attr2": "e2_0",
@@ -509,6 +632,9 @@
   },
   {
     "name": "tiers-41",
+    "priceCents": 250,
+    "active": true,
+    "qty": 3,
     "attr27": "e27_0",
     "attr37": "e37_3",
     "attr46": 74574,
@@ -522,6 +648,9 @@
   },
   {
     "name": "tiers-42",
+    "priceCents": 250,
+    "active": true,
+    "qty": 3,
     "attr70": "s3295",
     "attr21": 15490,
     "attr7": "e7_2",
@@ -534,6 +663,9 @@
   },
   {
     "name": "tiers-43",
+    "priceCents": 250,
+    "active": true,
+    "qty": 3,
     "attr27": "e27_2",
     "attr12": "e12_1",
     "attr73": true,
@@ -547,6 +679,9 @@
   },
   {
     "name": "tiers-44",
+    "priceCents": 250,
+    "active": true,
+    "qty": 3,
     "attr12": "e12_2",
     "attr76": 112,
     "attr43": true,
@@ -559,6 +694,9 @@
   },
   {
     "name": "tiers-45",
+    "priceCents": 250,
+    "active": true,
+    "qty": 3,
     "attr37": "e37_2",
     "attr71": 46672,
     "attr72": "e72_2",
@@ -572,6 +710,9 @@
   },
   {
     "name": "tiers-46",
+    "priceCents": 250,
+    "active": true,
+    "qty": 3,
     "attr53": true,
     "attr6": 58457,
     "attr0": "s4429",
@@ -585,6 +726,9 @@
   },
   {
     "name": "tiers-47",
+    "priceCents": 250,
+    "active": true,
+    "qty": 3,
     "attr30": "s5652",
     "attr46": 32852,
     "attr8": false,
@@ -598,6 +742,9 @@
   },
   {
     "name": "tiers-48",
+    "priceCents": 250,
+    "active": true,
+    "qty": 3,
     "attr73": false,
     "attr9": "AB867",
     "attr50": "s1106",
@@ -611,6 +758,9 @@
   },
   {
     "name": "tiers-49",
+    "priceCents": 250,
+    "active": true,
+    "qty": 3,
     "attr34": "AB618",
     "attr57": "e57_2",
     "attr42": "e42_4",
@@ -624,6 +774,9 @@
   },
   {
     "name": "tiers-50",
+    "priceCents": 250,
+    "active": true,
+    "qty": 3,
     "attr17": "e17_3",
     "attr13": false,
     "attr41": 752,
@@ -636,6 +789,9 @@
   },
   {
     "name": "tiers-51",
+    "priceCents": 250,
+    "active": true,
+    "qty": 3,
     "attr55": "s2747",
     "attr56": 15993,
     "attr73": true,
@@ -649,6 +805,9 @@
   },
   {
     "name": "tiers-52",
+    "priceCents": 250,
+    "active": true,
+    "qty": 3,
     "attr6": 98608,
     "attr46": 17501,
     "attr26": 29572,
@@ -662,6 +821,9 @@
   },
   {
     "name": "tiers-53",
+    "priceCents": 250,
+    "active": true,
+    "qty": 3,
     "attr38": false,
     "attr40": "s5821",
     "attr14": "AB971",
@@ -674,6 +836,9 @@
   },
   {
     "name": "tiers-54",
+    "priceCents": 250,
+    "active": true,
+    "qty": 3,
     "attr72": "e72_0",
     "attr55": "s3956",
     "attr73": true,
@@ -687,6 +852,9 @@
   },
   {
     "name": "tiers-55",
+    "priceCents": 250,
+    "active": true,
+    "qty": 3,
     "attr38": true,
     "attr19": "AB466",
     "attr63": true,
@@ -700,6 +868,9 @@
   },
   {
     "name": "tiers-56",
+    "priceCents": 250,
+    "active": true,
+    "qty": 3,
     "attr32": "e32_4",
     "attr31": 18433,
     "attr36": 14956,
@@ -711,6 +882,9 @@
   },
   {
     "name": "tiers-57",
+    "priceCents": 250,
+    "active": true,
+    "qty": 3,
     "attr32": "e32_3",
     "attr1": 82455,
     "attr20": "s5181",
@@ -723,6 +897,9 @@
   },
   {
     "name": "tiers-58",
+    "priceCents": 250,
+    "active": true,
+    "qty": 3,
     "attr61": 6903,
     "attr42": "e42_1",
     "attr51": 13133,
@@ -735,6 +912,9 @@
   },
   {
     "name": "tiers-59",
+    "priceCents": 250,
+    "active": true,
+    "qty": 3,
     "attr3": false,
     "attr60": "s6994",
     "attr18": true,

@@ -1,6 +1,8 @@
 [
   {
     "name": "claims-0",
+    "qty": 3,
+    "active": true,
     "attr53": false,
     "attr38": true,
     "attr63": false,
@@ -14,6 +16,8 @@
   },
   {
     "name": "claims-1",
+    "qty": 3,
+    "active": true,
     "attr20": "s4822",
     "attr24": "AB692",
     "attr53": false,
@@ -26,6 +30,8 @@
   },
   {
     "name": "claims-2",
+    "qty": 3,
+    "active": true,
     "attr74": "AB826",
     "attr54": "AB676",
     "attr66": 3761,
@@ -39,6 +45,8 @@
   },
   {
     "name": "claims-3",
+    "qty": 3,
+    "active": true,
     "attr25": "s7550",
     "attr50": "s6605",
     "attr59": "AB557",
@@ -50,6 +58,8 @@
   },
   {
     "name": "claims-4",
+    "qty": 3,
+    "active": true,
     "attr19": "AB659",
     "attr10": "s1708",
     "attr43": true,
@@ -63,6 +73,8 @@
   },
   {
     "name": "claims-5",
+    "qty": 3,
+    "active": true,
     "attr32": "e32_1",
     "attr44": "AB972",
     "attr19": "AB324",
@@ -76,6 +88,8 @@
   },
   {
     "name": "claims-6",
+    "qty": 3,
+    "active": true,
     "attr16": 38565,
     "attr55": "s8721",
     "attr48": false,
@@ -88,6 +102,8 @@
   },
   {
     "name": "claims-7",
+    "qty": 3,
+    "active": true,
     "attr44": "AB970",
     "attr22": "e22_3",
     "attr41": 76,
@@ -100,6 +116,8 @@
   },
   {
     "name": "claims-8",
+    "qty": 3,
+    "active": true,
     "attr9": "AB353",
     "attr24": "AB896",
     "attr73": true,
@@ -113,6 +131,8 @@
   },
   {
     "name": "claims-9",
+    "qty": 3,
+    "active": true,
     "attr29": "AB300",
     "attr19": "AB170",
     "attr63": true,
@@ -125,6 +145,8 @@
   },
   {
     "name": "claims-10",
+    "qty": 3,
+    "active": true,
     "attr24": "AB383",
     "attr73": false,
     "attr31": 71578,
@@ -138,6 +160,8 @@
   },
   {
     "name": "claims-11",
+    "qty": 3,
+    "active": true,
     "attr50": "s7677",
     "attr6": 6464,
     "attr47": "e47_4",
@@ -150,6 +174,8 @@
   },
   {
     "name": "claims-12",
+    "qty": 3,
+    "active": true,
     "attr0": "s3688",
     "attr10": "s5173",
     "attr28": false,
@@ -161,6 +187,8 @@
   },
   {
     "name": "claims-13",
+    "qty": 3,
+    "active": true,
     "attr16": 27268,
     "attr70": "s7464",
     "attr10": "s621",
@@ -174,6 +202,8 @@
   },
   {
     "name": "claims-14",
+    "qty": 3,
+    "active": true,
     "attr45": "s8321",
     "attr7": "e7_2",
     "attr54": "AB135",
@@ -186,6 +216,8 @@
   },
   {
     "name": "claims-15",
+    "qty": 3,
+    "active": true,
     "attr4": "AB696",
     "attr17": "e17_4",
     "attr76": 15855,
@@ -198,6 +230,8 @@
   },
   {
     "name": "claims-16",
+    "qty": 3,
+    "active": true,
     "attr56": 8369,
     "attr38": false,
     "attr28": true,
@@ -210,6 +244,8 @@
   },
   {
     "name": "claims-17",
+    "qty": 3,
+    "active": true,
     "attr3": false,
     "attr0": "s246",
     "attr26": 63067,
@@ -223,6 +259,8 @@
   },
   {
     "name": "claims-18",
+    "qty": 3,
+    "active": true,
     "attr5": "s6976",
     "attr40": "s863",
     "attr12": "e12_4",
@@ -234,6 +272,8 @@
   },
   {
     "name": "claims-19",
+    "qty": 3,
+    "active": true,
     "attr22": "e22_1",
     "attr9": "AB328",
     "attr74": "AB892",
@@ -247,6 +287,8 @@
   },
   {
     "name": "claims-20",
+    "qty": 3,
+    "active": true,
     "attr25": "s4555",
     "attr47": "e47_3",
     "attr41": 485,
@@ -260,6 +302,8 @@
   },
   {
     "name": "claims-21",
+    "qty": 3,
+    "active": true,
     "attr20": "s9669",
     "attr77": "e77_2",
     "attr47": "e47_3",
@@ -273,6 +317,8 @@
   },
   {
     "name": "claims-22",
+    "qty": 3,
+    "active": true,
     "attr28": false,
     "attr30": "s7174",
     "attr38": false,
@@ -286,6 +332,8 @@
   },
   {
     "name": "claims-23",
+    "qty": 3,
+    "active": true,
     "attr7": "e7_4",
     "attr67": "e67_4",
     "attr6": 6688,
@@ -299,6 +347,8 @@
   },
   {
     "name": "claims-24",
+    "qty": 3,
+    "active": true,
     "attr10": "s8404",
     "attr44": "AB196",
     "attr24": "AB471",
@@ -311,6 +361,8 @@
   },
   {
     "name": "claims-25",
+    "qty": 3,
+    "active": true,
     "attr42": "e42_1",
     "attr1": 15771,
     "attr35": "s9515",
@@ -322,6 +374,8 @@
   },
   {
     "name": "claims-26",
+    "qty": 3,
+    "active": true,
     "attr78": false,
     "attr12": "e12_3",
     "attr20": "s7732",
@@ -335,6 +389,8 @@
   },
   {
     "name": "claims-27",
+    "qty": 3,
+    "active": true,
     "attr40": "s368",
     "attr33": true,
     "attr31": 78291,
@@ -347,6 +403,8 @@
   },
   {
     "name": "claims-28",
+    "qty": 3,
+    "active": true,
     "attr20": "s9881",
     "attr42": "e42_4",
     "attr36": 13432,
@@ -359,6 +417,8 @@
   },
   {
     "name": "claims-29",
+    "qty": 3,
+    "active": true,
     "attr29": "AB586",
     "attr68": false,
     "attr69": "AB375",
@@ -372,6 +432,8 @@
   },
   {
     "name": "claims-30",
+    "qty": 3,
+    "active": true,
     "attr22": "e22_2",
     "attr16": 2168,
     "attr41": 1226,
@@ -385,6 +447,8 @@
   },
   {
     "name": "claims-31",
+    "qty": 3,
+    "active": true,
     "attr6": 28960,
     "attr27": "e27_4",
     "attr13": false,
@@ -398,6 +462,8 @@
   },
   {
     "name": "claims-32",
+    "qty": 3,
+    "active": true,
     "attr39": "AB451",
     "attr34": "AB418",
     "attr67": "e67_0",
@@ -411,6 +477,8 @@
   },
   {
     "name": "claims-33",
+    "qty": 3,
+    "active": true,
     "attr72": "e72_4",
     "attr64": "AB563",
     "attr62": "e62_2",
@@ -421,6 +489,8 @@
   },
   {
     "name": "claims-34",
+    "qty": 3,
+    "active": true,
     "attr29": "AB210",
     "attr43": true,
     "attr30": "s9901",
@@ -433,6 +503,8 @@
   },
   {
     "name": "claims-35",
+    "qty": 3,
+    "active": true,
     "attr33": false,
     "attr8": true,
     "attr28": true,
@@ -446,6 +518,8 @@
   },
   {
     "name": "claims-36",
+    "qty": 3,
+    "active": true,
     "attr48": false,
     "attr12": "e12_1",
     "attr19": "AB202",
@@ -459,6 +533,8 @@
   },
   {
     "name": "claims-37",
+    "qty": 3,
+    "active": true,
     "attr11": 4620,
     "attr43": true,
     "attr15": "s6909",
@@ -471,6 +547,8 @@
   },
   {
     "name": "claims-38",
+    "qty": 3,
+    "active": true,
     "attr32": "e32_2",
     "attr15": "s6943",
     "attr22": "e22_4",
@@ -484,6 +562,8 @@
   },
   {
     "name": "claims-39",
+    "qty": 3,
+    "active": true,
     "attr28": false,
     "attr9": "AB584",
     "attr77": "e77_4",
@@ -496,6 +576,8 @@
   },
   {
     "name": "claims-40",
+    "qty": 3,
+    "active": true,
     "attr42": "e42_1",
     "attr46": 49636,
     "attr2": "e2_4",
@@ -509,6 +591,8 @@
   },
   {
     "name": "claims-41",
+    "qty": 3,
+    "active": true,
     "attr21": 7372,
     "attr33": false,
     "attr17": "e17_2",
@@ -522,6 +606,8 @@
   },
   {
     "name": "claims-42",
+    "qty": 3,
+    "active": true,
     "attr43": false,
     "attr0": "s2487",
     "attr6": 38748,
@@ -533,6 +619,8 @@
   },
   {
     "name": "claims-43",
+    "qty": 3,
+    "active": true,
     "attr71": 17749,
     "attr45": "s3441",
     "attr6": 47773,
@@ -546,6 +634,8 @@
   },
   {
     "name": "claims-44",
+    "qty": 3,
+    "active": true,
     "attr50": "s6112",
     "attr3": true,
     "attr60": "s4667",
@@ -559,6 +649,8 @@
   },
   {
     "name": "claims-45",
+    "qty": 3,
+    "active": true,
     "attr57": "e57_3",
     "attr73": false,
     "attr63": true,
@@ -572,6 +664,8 @@
   },
   {
     "name": "claims-46",
+    "qty": 3,
+    "active": true,
     "attr2": "e2_1",
     "attr20": "s8244",
     "attr40": "s1419",
@@ -585,6 +679,8 @@
   },
   {
     "name": "claims-47",
+    "qty": 3,
+    "active": true,
     "attr32": "e32_4",
     "attr75": "s2767",
     "attr48": false,
@@ -598,6 +694,8 @@
   },
   {
     "name": "claims-48",
+    "qty": 3,
+    "active": true,
     "attr20": "s2733",
     "attr25": "s1966",
     "attr45": "s6710",
@@ -611,6 +709,8 @@
   },
   {
     "name": "claims-49",
+    "qty": 3,
+    "active": true,
     "attr27": "e27_3",
     "attr41": 789,
     "attr71": 20396,
@@ -623,6 +723,8 @@
   },
   {
     "name": "claims-50",
+    "qty": 3,
+    "active": true,
     "attr43": false,
     "attr45": "s9700",
     "attr29": "AB918",
@@ -636,6 +738,8 @@
   },
   {
     "name": "claims-51",
+    "qty": 3,
+    "active": true,
     "attr75": "s538",
     "attr47": "e47_1",
     "attr39": "AB812",
@@ -649,6 +753,8 @@
   },
   {
     "name": "claims-52",
+    "qty": 3,
+    "active": true,
     "attr46": 22733,
     "attr63": false,
     "attr68": true,
@@ -662,6 +768,8 @@
   },
   {
     "name": "claims-53",
+    "qty": 3,
+    "active": true,
     "attr78": true,
     "attr48": false,
     "attr71": 25948,
@@ -674,6 +782,8 @@
   },
   {
     "name": "claims-54",
+    "qty": 3,
+    "active": true,
     "attr30": "s9991",
     "attr29": "AB617",
     "attr21": 4916,
@@ -687,6 +797,8 @@
   },
   {
     "name": "claims-55",
+    "qty": 3,
+    "active": true,
     "attr10": "s6514",
     "attr51": 40832,
     "attr58": false,
@@ -699,6 +811,8 @@
   },
   {
     "name": "claims-56",
+    "qty": 3,
+    "active": true,
     "attr43": true,
     "attr61": 11640,
     "attr37": "e37_0",
@@ -711,6 +825,8 @@
   },
   {
     "name": "claims-57",
+    "qty": 3,
+    "active": true,
     "attr39": "AB505",
     "attr8": false,
     "attr33": false,
@@ -723,6 +839,8 @@
   },
   {
     "name": "claims-58",
+    "qty": 3,
+    "active": true,
     "attr60": "s28",
     "attr58": true,
     "attr36": 38485,
@@ -735,6 +853,8 @@
   },
   {
     "name": "claims-59",
+    "qty": 3,
+    "active": true,
     "attr3": true,
     "attr31": 1451,
     "attr51": 17787,

@@ -1,6 +1,7 @@
 [
   {
     "name": "suppliers-0",
+    "priceCents": 250,
     "attr39": "AB277",
     "attr11": 597,
     "attr52": "e52_0",
@@ -14,6 +15,7 @@
   },
   {
     "name": "suppliers-1",
+    "priceCents": 250,
     "attr61": 80824,
     "attr71": 32980,
     "attr40": "s5263",
@@ -27,6 +29,7 @@
   },
   {
     "name": "suppliers-2",
+    "priceCents": 250,
     "attr29": "AB550",
     "attr45": "s3638",
     "attr24": "AB862",
@@ -40,6 +43,7 @@
   },
   {
     "name": "suppliers-3",
+    "priceCents": 250,
     "attr1": 30312,
     "attr69": "AB212",
     "attr3": true,
@@ -53,6 +57,7 @@
   },
   {
     "name": "suppliers-4",
+    "priceCents": 250,
     "attr15": "s5715",
     "attr49": "AB557",
     "attr28": false,
@@ -66,6 +71,7 @@
   },
   {
     "name": "suppliers-5",
+    "priceCents": 250,
     "attr53": true,
     "attr17": "e17_2",
     "attr65": "s4789",
@@ -79,6 +85,7 @@
   },
   {
     "name": "suppliers-6",
+    "priceCents": 250,
     "attr43": false,
     "attr69": "AB176",
     "attr55": "s5893",
@@ -92,6 +99,7 @@
   },
   {
     "name": "suppliers-7",
+    "priceCents": 250,
     "attr53": false,
     "attr23": true,
     "attr69": "AB691",
@@ -105,6 +113,7 @@
   },
   {
     "name": "suppliers-8",
+    "priceCents": 250,
     "attr33": false,
     "attr56": 1026,
     "attr64": "AB362",
@@ -117,6 +126,7 @@
   },
   {
     "name": "suppliers-9",
+    "priceCents": 250,
     "attr56": 3169,
     "attr24": "AB927",
     "attr34": "AB994",
@@ -130,6 +140,7 @@
   },
   {
     "name": "suppliers-10",
+    "priceCents": 250,
     "attr37": "e37_0",
     "attr26": 16963,
     "attr73": false,
@@ -142,6 +153,7 @@
   },
   {
     "name": "suppliers-11",
+    "priceCents": 250,
     "attr24": "AB220",
     "attr4": "AB388",
     "attr28": false,
@@ -155,6 +167,7 @@
   },
   {
     "name": "suppliers-12",
+    "priceCents": 250,
     "attr19": "AB647",
     "attr37": "e37_4",
     "attr0": "s1836",
@@ -167,6 +180,7 @@
   },
   {
     "name": "suppliers-13",
+    "priceCents": 250,
     "attr78": true,
     "attr54": "AB927",
     "attr21": 11929,
@@ -179,6 +193,7 @@
   },
   {
     "name": "suppliers-14",
+    "priceCents": 250,
     "attr32": "e32_4",
     "attr22": "e22_4",
     "attr78": true,
@@ -192,6 +207,7 @@
   },
   {
     "name": "suppliers-15",
+    "priceCents": 250,
     "attr17": "e17_3",
     "attr33": true,
     "attr14": "AB296",
@@ -205,6 +221,7 @@
   },
   {
     "name": "suppliers-16",
+    "priceCents": 250,
     "attr3": true,
     "attr28": true,
     "attr18": false,
@@ -218,6 +235,7 @@
   },
   {
     "name": "suppliers-17",
+    "priceCents": 250,
     "attr54": "AB952",
     "attr26": 19874,
     "attr29": "AB695",
@@ -231,6 +249,7 @@
   },
   {
     "name": "suppliers-18",
+    "priceCents": 250,
     "attr36": 29743,
     "attr64": "AB285",
     "attr47": "e47_2",
@@ -244,6 +263,7 @@
   },
   {
     "name": "suppliers-19",
+    "priceCents": 250,
     "attr13": true,
     "attr74": "AB311",
     "attr65": "s6052",
@@ -256,6 +276,7 @@
   },
   {
     "name": "suppliers-20",
+    "priceCents": 250,
     "attr3": true,
     "attr64": "AB665",
     "attr59": "AB509",
@@ -268,6 +289,7 @@
   },
   {
     "name": "suppliers-21",
+    "priceCents": 250,
     "attr2": "e2_4",
     "attr23": true,
     "attr25": "s1190",
@@ -281,6 +303,7 @@
   },
   {
     "name": "suppliers-22",
+    "priceCents": 250,
     "attr67": "e67_3",
     "attr37": "e37_4",
     "attr55": "s9312",
@@ -294,6 +317,7 @@
   },
   {
     "name": "suppliers-23",
+    "priceCents": 250,
     "attr52": "e52_3",
     "attr2": "e2_0",
     "attr58": true,
@@ -307,6 +331,7 @@
   },
   {
     "name": "suppliers-24",
+    "priceCents": 250,
     "attr34": "AB789",
     "attr18": false,
     "attr76": 14458,
@@ -320,6 +345,7 @@
   },
   {
     "name": "suppliers-25",
+    "priceCents": 250,
     "attr35": "s9862",
     "attr74": "AB905",
     "attr12": "e12_3",
@@ -333,6 +359,7 @@
   },
   {
     "name": "suppliers-26",
+    "priceCents": 250,
     "attr37": "e37_0",
     "attr55": "s314",
     "attr11": 9243,
@@ -346,6 +373,7 @@
   },
   {
     "name": "suppliers-27",
+    "priceCents": 250,
     "attr16": 61319,
     "attr64": "AB819",
     "attr60": "s1712",
@@ -359,6 +387,7 @@
   },
   {
     "name": "suppliers-28",
+    "priceCents": 250,
     "attr4": "AB390",
     "attr20": "s2968",
     "attr63": true,
@@ -372,6 +401,7 @@
   },
   {
     "name": "suppliers-29",
+    "priceCents": 250,
     "attr32": "e32_3",
     "attr43": true,
     "attr40": "s8603",
@@ -384,6 +414,7 @@
   },
   {
     "name": "suppliers-30",
+    "priceCents": 250,
     "attr33": false,
     "attr44": "AB381",
     "attr61": 56676,
@@ -395,6 +426,7 @@
   },
   {
     "name": "suppliers-31",
+    "priceCents": 250,
     "attr5": "s4498",
     "attr76": 2360,
     "attr73": false,
@@ -407,6 +439,7 @@
   },
   {
     "name": "suppliers-32",
+    "priceCents": 250,
     "attr47": "e47_0",
     "attr66": 37277,
     "attr64": "AB739",
@@ -419,6 +452,7 @@
   },
   {
     "name": "suppliers-33",
+    "priceCents": 250,
     "attr64": "AB287",
     "attr78": true,
     "attr9": "AB648",
@@ -431,6 +465,7 @@
   },
   {
     "name": "suppliers-34",
+    "priceCents": 250,
     "attr14": "AB244",
     "attr52": "e52_0",
     "attr15": "s1434",
@@ -443,6 +478,7 @@
   },
   {
     "name": "suppliers-35",
+    "priceCents": 250,
     "attr53": true,
     "attr26": 77354,
     "attr5": "s134",
@@ -456,6 +492,7 @@
   },
   {
     "name": "suppliers-36",
+    "priceCents": 250,
     "attr37": "e37_2",
     "attr63": false,
     "attr38": true,
@@ -468,6 +505,7 @@
   },
   {
     "name": "suppliers-37",
+    "priceCents": 250,
     "attr41": 25543,
     "attr60": "s6509",
     "attr52": "e52_4",
@@ -481,6 +519,7 @@
   },
   {
     "name": "suppliers-38",
+    "priceCents": 250,
     "attr53": false,
     "attr23": true,
     "attr28": true,
@@ -493,6 +532,7 @@
   },
   {
     "name": "suppliers-39",
+    "priceCents": 250,
     "attr35": "s255",
     "attr40": "s6021",
     "attr62": "e62_0",
@@ -506,6 +546,7 @@
   },
   {
     "name": "suppliers-40",
+    "priceCents": 250,
     "attr36": 31376,
     "attr64": "AB202",
     "attr74": "AB469",
@@ -519,6 +560,7 @@
   },
   {
     "name": "suppliers-41",
+    "priceCents": 250,
     "attr17": "e17_0",
     "attr63": false,
     "attr75": "s2372",
@@ -531,6 +573,7 @@
   },
   {
     "name": "suppliers-42",
+    "priceCents": 250,
     "attr9": "AB196",
     "attr53": false,
     "attr65": "s4288",
@@ -544,6 +587,7 @@
   },
   {
     "name": "suppliers-43",
+    "priceCents": 250,
     "attr37": "e37_4",
     "attr53": false,
     "attr24": "AB181",
@@ -557,6 +601,7 @@
   },
   {
     "name": "suppliers-44",
+    "priceCents": 250,
     "attr13": false,
     "attr50": "s8916",
     "attr32": "e32_0",
@@ -569,6 +614,7 @@
   },
   {
     "name": "suppliers-45",
+    "priceCents": 250,
     "attr37": "e37_4",
     "attr57": "e57_3",
     "attr44": "AB583",
@@ -582,6 +628,7 @@
   },
   {
     "name": "suppliers-46",
+    "priceCents": 250,
     "attr74": "AB295",
     "attr43": true,
     "attr55": "s1707",
@@ -594,6 +641,7 @@
   },
   {
     "name": "suppliers-47",
+    "priceCents": 250,
     "attr17": "e17_4",
     "attr56": 2337,
     "attr43": false,
@@ -606,6 +654,7 @@
   },
   {
     "name": "suppliers-48",
+    "priceCents": 250,
     "attr43": false,
     "attr12": "e12_4",
     "attr73": true,
@@ -619,6 +668,7 @@
   },
   {
     "name": "suppliers-49",
+    "priceCents": 250,
     "attr10": "s2687",
     "attr77": "e77_4",
     "attr3": false,
@@ -631,6 +681,7 @@
   },
   {
     "name": "suppliers-50",
+    "priceCents": 250,
     "attr22": "e22_2",
     "attr46": 8023,
     "attr6": 60314,
@@ -644,6 +695,7 @@
   },
   {
     "name": "suppliers-51",
+    "priceCents": 250,
     "attr79": "AB285",
     "attr17": "e17_3",
     "attr37": "e37_3",
@@ -657,6 +709,7 @@
   },
   {
     "name": "suppliers-52",
+    "priceCents": 250,
     "attr20": "s5064",
     "attr15": "s2962",
     "attr12": "e12_0",
@@ -670,6 +723,7 @@
   },
   {
     "name": "suppliers-53",
+    "priceCents": 250,
     "attr78": true,
     "attr1": 47312,
     "attr49": "AB156",
@@ -681,6 +735,7 @@
   },
   {
     "name": "suppliers-54",
+    "priceCents": 250,
     "attr32": "e32_2",
     "attr8": false,
     "attr61": 15351,
@@ -694,6 +749,7 @@
   },
   {
     "name": "suppliers-55",
+    "priceCents": 250,
     "attr64": "AB878",
     "attr14": "AB931",
     "attr22": "e22_4",
@@ -707,6 +763,7 @@
   },
   {
     "name": "suppliers-56",
+    "priceCents": 250,
     "attr59": "AB311",
     "attr58": false,
     "attr4": "AB754",
@@ -720,6 +777,7 @@
   },
   {
     "name": "suppliers-57",
+    "priceCents": 250,
     "attr75": "s8664",
     "attr45": "s582",
     "attr16": 2121,
@@ -731,6 +789,7 @@
   },
   {
     "name": "suppliers-58",
+    "priceCents": 250,
     "attr55": "s6312",
     "attr15": "s4472",
     "attr14": "AB171",
@@ -744,6 +803,7 @@
   },
   {
     "name": "suppliers-59",
+    "priceCents": 250,
     "attr23": false,
     "attr38": true,
     "attr42": "e42_3",

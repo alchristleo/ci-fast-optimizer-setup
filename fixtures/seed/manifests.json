@@ -1,6 +1,7 @@
 [
   {
     "name": "manifests-0",
+    "note": "hello",
     "attr70": "s5396",
     "attr29": "AB902",
     "attr73": false,
@@ -13,6 +14,7 @@
   },
   {
     "name": "manifests-1",
+    "note": "hello",
     "attr21": 14252,
     "attr62": "e62_0",
     "attr69": "AB858",
@@ -26,6 +28,7 @@
   },
   {
     "name": "manifests-2",
+    "note": "hello",
     "attr6": 37706,
     "attr14": "AB728",
     "attr67": "e67_1",
@@ -38,6 +41,7 @@
   },
   {
     "name": "manifests-3",
+    "note": "hello",
     "attr10": "s2044",
     "attr58": true,
     "attr34": "AB880",
@@ -51,6 +55,7 @@
   },
   {
     "name": "manifests-4",
+    "note": "hello",
     "attr42": "e42_0",
     "attr41": 13216,
     "attr72": "e72_2",
@@ -64,6 +69,7 @@
   },
   {
     "name": "manifests-5",
+    "note": "hello",
     "attr14": "AB742",
     "attr69": "AB329",
     "attr56": 129,
@@ -77,6 +83,7 @@
   },
   {
     "name": "manifests-6",
+    "note": "hello",
     "attr38": true,
     "attr65": "s2316",
     "attr32": "e32_0",
@@ -88,6 +95,7 @@
   },
   {
     "name": "manifests-7",
+    "note": "hello",
     "attr14": "AB224",
     "attr3": true,
     "attr32": "e32_2",
@@ -101,6 +109,7 @@
   },
   {
     "name": "manifests-8",
+    "note": "hello",
     "attr18": true,
     "attr57": "e57_1",
     "attr54": "AB817",
@@ -114,6 +123,7 @@
   },
   {
     "name": "manifests-9",
+    "note": "hello",
     "attr36": 2138,
     "attr37": "e37_1",
     "attr7": "e7_2",
@@ -126,6 +136,7 @@
   },
   {
     "name": "manifests-10",
+    "note": "hello",
     "attr43": true,
     "attr31": 39681,
     "attr46": 10494,
@@ -138,6 +149,7 @@
   },
   {
     "name": "manifests-11",
+    "note": "hello",
     "attr21": 18390,
     "attr23": false,
     "attr70": "s1394",
@@ -150,6 +162,7 @@
   },
   {
     "name": "manifests-12",
+    "note": "hello",
     "attr24": "AB448",
     "attr8": true,
     "attr29": "AB576",
@@ -162,6 +175,7 @@
   },
   {
     "name": "manifests-13",
+    "note": "hello",
     "attr33": false,
     "attr21": 3654,
     "attr22": "e22_4",
@@ -175,6 +189,7 @@
   },
   {
     "name": "manifests-14",
+    "note": "hello",
     "attr9": "AB137",
     "attr77": "e77_4",
     "attr64": "AB248",
@@ -186,6 +201,7 @@
   },
   {
     "name": "manifests-15",
+    "note": "hello",
     "attr54": "AB486",
     "attr57": "e57_0",
     "attr58": false,
@@ -197,6 +213,7 @@
   },
   {
     "name": "manifests-16",
+    "note": "hello",
     "attr57": "e57_3",
     "attr74": "AB589",
     "attr24": "AB821",
@@ -209,6 +226,7 @@
   },
   {
     "name": "manifests-17",
+    "note": "hello",
     "attr60": "s3055",
     "attr54": "AB466",
     "attr68": true,
@@ -221,6 +239,7 @@
   },
   {
     "name": "manifests-18",
+    "note": "hello",
     "attr4": "AB613",
     "attr60": "s5912",
     "attr31": 7119,
@@ -234,6 +253,7 @@
   },
   {
     "name": "manifests-19",
+    "note": "hello",
     "attr29": "AB442",
     "attr46": 5219,
     "attr25": "s8839",
@@ -247,6 +267,7 @@
   },
   {
     "name": "manifests-20",
+    "note": "hello",
     "attr14": "AB837",
     "attr70": "s4090",
     "attr13": true,
@@ -260,6 +281,7 @@
   },
   {
     "name": "manifests-21",
+    "note": "hello",
     "attr35": "s8870",
     "attr72": "e72_1",
     "attr77": "e77_3",
@@ -273,6 +295,7 @@
   },
   {
     "name": "manifests-22",
+    "note": "hello",
     "attr75": "s8678",
     "attr13": false,
     "attr34": "AB336",
@@ -285,6 +308,7 @@
   },
   {
     "name": "manifests-23",
+    "note": "hello",
     "attr44": "AB836",
     "attr40": "s9312",
     "attr5": "s2358",
@@ -297,6 +321,7 @@
   },
   {
     "name": "manifests-24",
+    "note": "hello",
     "attr79": "AB222",
     "attr47": "e47_1",
     "attr22": "e22_2",
@@ -309,6 +334,7 @@
   },
   {
     "name": "manifests-25",
+    "note": "hello",
     "attr9": "AB139",
     "attr61": 59409,
     "attr53": false,
@@ -322,6 +348,7 @@
   },
   {
     "name": "manifests-26",
+    "note": "hello",
     "attr51": 9652,
     "attr73": true,
     "attr32": "e32_4",
@@ -333,6 +360,7 @@
   },
   {
     "name": "manifests-27",
+    "note": "hello",
     "attr37": "e37_1",
     "attr66": 3979,
     "attr36": 28496,
@@ -346,6 +374,7 @@
   },
   {
     "name": "manifests-28",
+    "note": "hello",
     "attr28": true,
     "attr20": "s6981",
     "attr47": "e47_0",
@@ -358,6 +387,7 @@
   },
   {
     "name": "manifests-29",
+    "note": "hello",
     "attr0": "s6762",
     "attr54": "AB905",
     "attr78": true,
@@ -370,6 +400,7 @@
   },
   {
     "name": "manifests-30",
+    "note": "hello",
     "attr51": 9069,
     "attr25": "s8501",
     "attr8": true,
@@ -383,6 +414,7 @@
   },
   {
     "name": "manifests-31",
+    "note": "hello",
     "attr71": 4799,
     "attr21": 2824,
     "attr78": true,
@@ -395,6 +427,7 @@
   },
   {
     "name": "manifests-32",
+    "note": "hello",
     "attr71": 506,
     "attr36": 36496,
     "attr39": "AB668",
@@ -408,6 +441,7 @@
   },
   {
     "name": "manifests-33",
+    "note": "hello",
     "attr33": true,
     "attr0": "s1941",
     "attr7": "e7_0",
@@ -421,6 +455,7 @@
   },
   {
     "name": "manifests-34",
+    "note": "hello",
     "attr34": "AB231",
     "attr0": "s4537",
     "attr74": "AB130",
@@ -434,6 +469,7 @@
   },
   {
     "name": "manifests-35",
+    "note": "hello",
     "attr46": 9857,
     "attr8": false,
     "attr7": "e7_3",
@@ -446,6 +482,7 @@
   },
   {
     "name": "manifests-36",
+    "note": "hello",
     "attr41": 14719,
     "attr69": "AB684",
     "attr45": "s1343",
@@ -459,6 +496,7 @@
   },
   {
     "name": "manifests-37",
+    "note": "hello",
     "attr41": 15758,
     "attr49": "AB234",
     "attr24": "AB431",
@@ -472,6 +510,7 @@
   },
   {
     "name": "manifests-38",
+    "note": "hello",
     "attr8": true,
     "attr68": false,
     "attr75": "s1323",
@@ -484,6 +523,7 @@
   },
   {
     "name": "manifests-39",
+    "note": "hello",
     "attr48": true,
     "attr16": 19531,
     "attr53": false,
@@ -497,6 +537,7 @@
   },
   {
     "name": "manifests-40",
+    "note": "hello",
     "attr71": 499,
     "attr39": "AB940",
     "attr9": "AB374",
@@ -509,6 +550,7 @@
   },
   {
     "name": "manifests-41",
+    "note": "hello",
     "attr51": 18290,
     "attr20": "s5065",
     "attr36": 14434,
@@ -521,6 +563,7 @@
   },
   {
     "name": "manifests-42",
+    "note": "hello",
     "attr23": false,
     "attr3": false,
     "attr17": "e17_3",
@@ -533,6 +576,7 @@
   },
   {
     "name": "manifests-43",
+    "note": "hello",
     "attr42": "e42_0",
     "attr59": "AB365",
     "attr31": 29783,
@@ -546,6 +590,7 @@
   },
   {
     "name": "manifests-44",
+    "note": "hello",
     "attr78": false,
     "attr28": true,
     "attr17": "e17_2",
@@ -558,6 +603,7 @@
   },
   {
     "name": "manifests-45",
+    "note": "hello",
     "attr0": "s6366",
     "attr73": false,
     "attr30": "s5435",
@@ -570,6 +616,7 @@
   },
   {
     "name": "manifests-46",
+    "note": "hello",
     "attr11": 1380,
     "attr63": false,
     "attr8": false,
@@ -582,6 +629,7 @@
   },
   {
     "name": "manifests-47",
+    "note": "hello",
     "attr69": "AB452",
     "attr62": "e62_2",
     "attr29": "AB211",
@@ -595,6 +643,7 @@
   },
   {
     "name": "manifests-48",
+    "note": "hello",
     "attr25": "s5256",
     "attr4": "AB341",
     "attr55": "s9225",
@@ -608,6 +657,7 @@
   },
   {
     "name": "manifests-49",
+    "note": "hello",
     "attr47": "e47_4",
     "attr34": "AB891",
     "attr13": false,
@@ -621,6 +671,7 @@
   },
   {
     "name": "manifests-50",
+    "note": "hello",
     "attr65": "s979",
     "attr35": "s2037",
     "attr31": 38445,
@@ -634,6 +685,7 @@
   },
   {
     "name": "manifests-51",
+    "note": "hello",
     "attr55": "s7059",
     "attr40": "s9743",
     "attr27": "e27_2",
@@ -647,6 +699,7 @@
   },
   {
     "name": "manifests-52",
+    "note": "hello",
     "attr5": "s6874",
     "attr40": "s1991",
     "attr0": "s7487",
@@ -659,6 +712,7 @@
   },
   {
     "name": "manifests-53",
+    "note": "hello",
     "attr64": "AB626",
     "attr66": 3342,
     "attr54": "AB624",
@@ -672,6 +726,7 @@
   },
   {
     "name": "manifests-54",
+    "note": "hello",
     "attr27": "e27_4",
     "attr48": true,
     "attr55": "s356",
@@ -684,6 +739,7 @@
   },
   {
     "name": "manifests-55",
+    "note": "hello",
     "attr36": 12655,
     "attr34": "AB234",
     "attr20": "s3736",
@@ -697,6 +753,7 @@
   },
   {
     "name": "manifests-56",
+    "note": "hello",
     "attr12": "e12_3",
     "attr31": 33695,
     "attr13": false,
@@ -710,6 +767,7 @@
   },
   {
     "name": "manifests-57",
+    "note": "hello",
     "attr58": true,
     "attr21": 55332,
     "attr45": "s1008",
@@ -722,6 +780,7 @@
   },
   {
     "name": "manifests-58",
+    "note": "hello",
     "attr74": "AB830",
     "attr59": "AB176",
     "attr68": false,
@@ -734,6 +793,7 @@
   },
   {
     "name": "manifests-59",
+    "note": "hello",
     "attr12": "e12_0",
     "attr15": "s1205",
     "attr63": false,

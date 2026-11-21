@@ -1,6 +1,8 @@
 [
   {
     "name": "coupons2-0",
+    "priceCents": 250,
+    "qty": 3,
     "attr21": 10992,
     "attr4": "AB221",
     "attr15": "s8171",
@@ -13,6 +15,8 @@
   },
   {
     "name": "coupons2-1",
+    "priceCents": 250,
+    "qty": 3,
     "attr6": 14313,
     "attr31": 30217,
     "attr24": "AB432",
@@ -24,6 +28,8 @@
   },
   {
     "name": "coupons2-2",
+    "priceCents": 250,
+    "qty": 3,
     "attr54": "AB289",
     "attr56": 10661,
     "attr19": "AB696",
@@ -37,6 +43,8 @@
   },
   {
     "name": "coupons2-3",
+    "priceCents": 250,
+    "qty": 3,
     "attr20": "s9329",
     "attr4": "AB234",
     "attr40": "s9275",
@@ -48,6 +56,8 @@
   },
   {
     "name": "coupons2-4",
+    "priceCents": 250,
+    "qty": 3,
     "attr18": false,
     "attr51": 35890,
     "attr69": "AB383",
@@ -61,6 +71,8 @@
   },
   {
     "name": "coupons2-5",
+    "priceCents": 250,
+    "qty": 3,
     "attr66": 17799,
     "attr52": "e52_2",
     "attr6": 22386,
@@ -73,6 +85,8 @@
   },
   {
     "name": "coupons2-6",
+    "priceCents": 250,
+    "qty": 3,
     "attr25": "s5361",
     "attr51": 41548,
     "attr40": "s3499",
@@ -86,6 +100,8 @@
   },
   {
     "name": "coupons2-7",
+    "priceCents": 250,
+    "qty": 3,
     "attr6": 22020,
     "attr0": "s2048",
     "attr45": "s3721",
@@ -97,6 +113,8 @@
   },
   {
     "name": "coupons2-8",
+    "priceCents": 250,
+    "qty": 3,
     "attr34": "AB191",
     "attr20": "s7521",
     "attr66": 19851,
@@ -109,6 +127,8 @@
   },
   {
     "name": "coupons2-9",
+    "priceCents": 250,
+    "qty": 3,
     "attr5": "s4162",
     "attr33": false,
     "attr35": "s8700",
@@ -122,6 +142,8 @@
   },
   {
     "name": "coupons2-10",
+    "priceCents": 250,
+    "qty": 3,
     "attr54": "AB195",
     "attr2": "e2_0",
     "attr21": 48546,
@@ -134,6 +156,8 @@
   },
   {
     "name": "coupons2-11",
+    "priceCents": 250,
+    "qty": 3,
     "attr4": "AB962",
     "attr41": 23748,
     "attr45": "s5352",
@@ -146,6 +170,8 @@
   },
   {
     "name": "coupons2-12",
+    "priceCents": 250,
+    "qty": 3,
     "attr26": 20302,
     "attr27": "e27_3",
     "attr19": "AB738",
@@ -159,6 +185,8 @@
   },
   {
     "name": "coupons2-13",
+    "priceCents": 250,
+    "qty": 3,
     "attr10": "s5778",
     "attr5": "s406",
     "attr38": false,
@@ -172,6 +200,8 @@
   },
   {
     "name": "coupons2-14",
+    "priceCents": 250,
+    "qty": 3,
     "attr0": "s1898",
     "attr14": "AB935",
     "attr29": "AB300",
@@ -185,6 +215,8 @@
   },
   {
     "name": "coupons2-15",
+    "priceCents": 250,
+    "qty": 3,
     "attr30": "s9584",
     "attr59": "AB730",
     "attr15": "s6217",
@@ -197,6 +229,8 @@
   },
   {
     "name": "coupons2-16",
+    "priceCents": 250,
+    "qty": 3,
     "attr76": 33419,
     "attr42": "e42_1",
     "attr69": "AB816",
@@ -210,6 +244,8 @@
   },
   {
     "name": "coupons2-17",
+    "priceCents": 250,
+    "qty": 3,
     "attr70": "s4931",
     "attr41": 20559,
     "attr77": "e77_4",
@@ -222,6 +258,8 @@
   },
   {
     "name": "coupons2-18",
+    "priceCents": 250,
+    "qty": 3,
     "attr54": "AB379",
     "attr13": true,
     "attr31": 2255,
@@ -234,6 +272,8 @@
   },
   {
     "name": "coupons2-19",
+    "priceCents": 250,
+    "qty": 3,
     "attr24": "AB743",
     "attr21": 59891,
     "attr75": "s5601",
@@ -247,6 +287,8 @@
   },
   {
     "name": "coupons2-20",
+    "priceCents": 250,
+    "qty": 3,
     "attr50": "s7654",
     "attr2": "e2_1",
     "attr78": true,
@@ -258,6 +300,8 @@
   },
   {
     "name": "coupons2-21",
+    "priceCents": 250,
+    "qty": 3,
     "attr4": "AB852",
     "attr48": false,
     "attr62": "e62_1",
@@ -270,6 +314,8 @@
   },
   {
     "name": "coupons2-22",
+    "priceCents": 250,
+    "qty": 3,
     "attr1": 28308,
     "attr77": "e77_3",
     "attr21": 87971,
@@ -283,6 +329,8 @@
   },
   {
     "name": "coupons2-23",
+    "priceCents": 250,
+    "qty": 3,
     "attr44": "AB385",
     "attr28": true,
     "attr11": 4268,
@@ -295,6 +343,8 @@
   },
   {
     "name": "coupons2-24",
+    "priceCents": 250,
+    "qty": 3,
     "attr33": false,
     "attr73": true,
     "attr36": 6456,
@@ -307,6 +357,8 @@
   },
   {
     "name": "coupons2-25",
+    "priceCents": 250,
+    "qty": 3,
     "attr38": true,
     "attr41": 46611,
     "attr3": false,
@@ -319,6 +371,8 @@
   },
   {
     "name": "coupons2-26",
+    "priceCents": 250,
+    "qty": 3,
     "attr70": "s7552",
     "attr40": "s4646",
     "attr32": "e32_4",
@@ -332,6 +386,8 @@
   },
   {
     "name": "coupons2-27",
+    "priceCents": 250,
+    "qty": 3,
     "attr14": "AB787",
     "attr65": "s7040",
     "attr4": "AB764",
@@ -345,6 +401,8 @@
   },
   {
     "name": "coupons2-28",
+    "priceCents": 250,
+    "qty": 3,
     "attr65": "s5877",
     "attr57": "e57_0",
     "attr46": 21196,
@@ -358,6 +416,8 @@
   },
   {
     "name": "coupons2-29",
+    "priceCents": 250,
+    "qty": 3,
     "attr17": "e17_1",
     "attr18": true,
     "attr75": "s708",
@@ -371,6 +431,8 @@
   },
   {
     "name": "coupons2-30",
+    "priceCents": 250,
+    "qty": 3,
     "attr49": "AB519",
     "attr55": "s8498",
     "attr12": "e12_0",
@@ -384,6 +446,8 @@
   },
   {
     "name": "coupons2-31",
+    "priceCents": 250,
+    "qty": 3,
     "attr0": "s9549",
     "attr77": "e77_1",
     "attr74": "AB255",
@@ -396,6 +460,8 @@
   },
   {
     "name": "coupons2-32",
+    "priceCents": 250,
+    "qty": 3,
     "attr10": "s2296",
     "attr14": "AB471",
     "attr68": false,
@@ -409,6 +475,8 @@
   },
   {
     "name": "coupons2-33",
+    "priceCents": 250,
+    "qty": 3,
     "attr42": "e42_1",
     "attr34": "AB830",
     "attr23": true,
@@ -421,6 +489,8 @@
   },
   {
     "name": "coupons2-34",
+    "priceCents": 250,
+    "qty": 3,
     "attr14": "AB671",
     "attr24": "AB344",
     "attr32": "e32_2",
@@ -434,6 +504,8 @@
   },
   {
     "name": "coupons2-35",
+    "priceCents": 250,
+    "qty": 3,
     "attr60": "s7819",
     "attr66": 16780,
     "attr53": false,
@@ -447,6 +519,8 @@
   },
   {
     "name": "coupons2-36",
+    "priceCents": 250,
+    "qty": 3,
     "attr52": "e52_4",
     "attr44": "AB920",
     "attr43": true,
@@ -460,6 +534,8 @@
   },
   {
     "name": "coupons2-37",
+    "priceCents": 250,
+    "qty": 3,
     "attr60": "s7035",
     "attr3": true,
     "attr30": "s3916",
@@ -473,6 +549,8 @@
   },
   {
     "name": "coupons2-38",
+    "priceCents": 250,
+    "qty": 3,
     "attr24": "AB640",
     "attr60": "s800",
     "attr25": "s6399",
@@ -484,6 +562,8 @@
   },
   {
     "name": "coupons2-39",
+    "priceCents": 250,
+    "qty": 3,
     "attr8": true,
     "attr79": "AB277",
     "attr31": 10,
@@ -497,6 +577,8 @@
   },
   {
     "name": "coupons2-40",
+    "priceCents": 250,
+    "qty": 3,
     "attr47": "e47_4",
     "attr71": 37187,
     "attr13": true,
@@ -509,6 +591,8 @@
   },
   {
     "name": "coupons2-41",
+    "priceCents": 250,
+    "qty": 3,
     "attr55": "s6986",
     "attr57": "e57_2",
     "attr76": 49828,
@@ -521,6 +605,8 @@
   },
   {
     "name": "coupons2-42",
+    "priceCents": 250,
+    "qty": 3,
     "attr20": "s2520",
     "attr76": 37417,
     "attr79": "AB819",
@@ -533,6 +619,8 @@
   },
   {
     "name": "coupons2-43",
+    "priceCents": 250,
+    "qty": 3,
     "attr12": "e12_0",
     "attr64": "AB903",
     "attr56": 9444,
@@ -546,6 +634,8 @@
   },
   {
     "name": "coupons2-44",
+    "priceCents": 250,
+    "qty": 3,
     "attr7": "e7_0",
     "attr11": 6533,
     "attr58": true,
@@ -559,6 +649,8 @@
   },
   {
     "name": "coupons2-45",
+    "priceCents": 250,
+    "qty": 3,
     "attr16": 1909,
     "attr3": true,
     "attr40": "s2429",
@@ -572,6 +664,8 @@
   },
   {
     "name": "coupons2-46",
+    "priceCents": 250,
+    "qty": 3,
     "attr41": 1494,
     "attr11": 726,
     "attr58": false,
@@ -583,6 +677,8 @@
   },
   {
     "name": "coupons2-47",
+    "priceCents": 250,
+    "qty": 3,
     "attr5": "s2491",
     "attr65": "s5028",
     "attr72": "e72_3",
@@ -596,6 +692,8 @@
   },
   {
     "name": "coupons2-48",
+    "priceCents": 250,
+    "qty": 3,
     "attr53": true,
     "attr8": false,
     "attr70": "s3002",
@@ -609,6 +707,8 @@
   },
   {
     "name": "coupons2-49",
+    "priceCents": 250,
+    "qty": 3,
     "attr24": "AB622",
     "attr35": "s239",
     "attr49": "AB504",
@@ -621,6 +721,8 @@
   },
   {
     "name": "coupons2-50",
+    "priceCents": 250,
+    "qty": 3,
     "attr54": "AB693",
     "attr44": "AB671",
     "attr63": false,
@@ -634,6 +736,8 @@
   },
   {
     "name": "coupons2-51",
+    "priceCents": 250,
+    "qty": 3,
     "attr24": "AB112",
     "attr28": true,
     "attr35": "s6161",
@@ -647,6 +751,8 @@
   },
   {
     "name": "coupons2-52",
+    "priceCents": 250,
+    "qty": 3,
     "attr63": false,
     "attr67": "e67_3",
     "attr39": "AB873",
@@ -659,6 +765,8 @@
   },
   {
     "name": "coupons2-53",
+    "priceCents": 250,
+    "qty": 3,
     "attr71": 73924,
     "attr65": "s1403",
     "attr62": "e62_2",
@@ -672,6 +780,8 @@
   },
   {
     "name": "coupons2-54",
+    "priceCents": 250,
+    "qty": 3,
     "attr47": "e47_1",
     "attr15": "s1632",
     "attr60": "s9258",
@@ -685,6 +795,8 @@
   },
   {
     "name": "coupons2-55",
+    "priceCents": 250,
+    "qty": 3,
     "attr77": "e77_0",
     "attr11": 5233,
     "attr37": "e37_2",
@@ -697,6 +809,8 @@
   },
   {
     "name": "coupons2-56",
+    "priceCents": 250,
+    "qty": 3,
     "attr74": "AB157",
     "attr30": "s9846",
     "attr31": 8466,
@@ -710,6 +824,8 @@
   },
   {
     "name": "coupons2-57",
+    "priceCents": 250,
+    "qty": 3,
     "attr64": "AB510",
     "attr24": "AB853",
     "attr5": "s9177",
@@ -722,6 +838,8 @@
   },
   {
     "name": "coupons2-58",
+    "priceCents": 250,
+    "qty": 3,
     "attr35": "s9657",
     "attr54": "AB893",
     "attr39": "AB546",
@@ -734,6 +852,8 @@
   },
   {
     "name": "coupons2-59",
+    "priceCents": 250,
+    "qty": 3,
     "attr11": 6942,
     "attr21": 43595,
     "attr64": "AB244",

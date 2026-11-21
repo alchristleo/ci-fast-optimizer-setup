@@ -1,6 +1,7 @@
 [
   {
     "name": "groups2-0",
+    "qty": 3,
     "attr61": 79461,
     "attr74": "AB685",
     "attr67": "e67_3",
@@ -14,6 +15,7 @@
   },
   {
     "name": "groups2-1",
+    "qty": 3,
     "attr68": false,
     "attr34": "AB182",
     "attr57": "e57_4",
@@ -26,6 +28,7 @@
   },
   {
     "name": "groups2-2",
+    "qty": 3,
     "attr77": "e77_4",
     "attr33": false,
     "attr59": "AB762",
@@ -37,6 +40,7 @@
   },
   {
     "name": "groups2-3",
+    "qty": 3,
     "attr47": "e47_3",
     "attr30": "s2486",
     "attr43": true,
@@ -50,6 +54,7 @@
   },
   {
     "name": "groups2-4",
+    "qty": 3,
     "attr41": 68131,
     "attr35": "s7880",
     "attr11": 17047,
@@ -63,6 +68,7 @@
   },
   {
     "name": "groups2-5",
+    "qty": 3,
     "attr52": "e52_0",
     "attr2": "e2_1",
     "attr16": 40913,
@@ -76,6 +82,7 @@
   },
   {
     "name": "groups2-6",
+    "qty": 3,
     "attr16": 40890,
     "attr33": false,
     "attr21": 36191,
@@ -89,6 +96,7 @@
   },
   {
     "name": "groups2-7",
+    "qty": 3,
     "attr60": "s1407",
     "attr4": "AB496",
     "attr59": "AB247",
@@ -102,6 +110,7 @@
   },
   {
     "name": "groups2-8",
+    "qty": 3,
     "attr49": "AB914",
     "attr10": "s9095",
     "attr69": "AB307",
@@ -115,6 +124,7 @@
   },
   {
     "name": "groups2-9",
+    "qty": 3,
     "attr11": 28189,
     "attr76": 59306,
     "attr65": "s2848",
@@ -128,6 +138,7 @@
   },
   {
     "name": "groups2-10",
+    "qty": 3,
     "attr37": "e37_3",
     "attr70": "s9894",
     "attr42": "e42_3",
@@ -140,6 +151,7 @@
   },
   {
     "name": "groups2-11",
+    "qty": 3,
     "attr61": 72997,
     "attr39": "AB748",
     "attr0": "s2758",
@@ -153,6 +165,7 @@
   },
   {
     "name": "groups2-12",
+    "qty": 3,
     "attr9": "AB755",
     "attr58": true,
     "attr68": true,
@@ -166,6 +179,7 @@
   },
   {
     "name": "groups2-13",
+    "qty": 3,
     "attr29": "AB220",
     "attr44": "AB351",
     "attr68": false,
@@ -178,6 +192,7 @@
   },
   {
     "name": "groups2-14",
+    "qty": 3,
     "attr39": "AB780",
     "attr15": "s3521",
     "attr54": "AB480",
@@ -191,6 +206,7 @@
   },
   {
     "name": "groups2-15",
+    "qty": 3,
     "attr44": "AB839",
     "attr45": "s4098",
     "attr24": "AB350",
@@ -204,6 +220,7 @@
   },
   {
     "name": "groups2-16",
+    "qty": 3,
     "attr66": 29697,
     "attr70": "s6571",
     "attr23": true,
@@ -217,6 +234,7 @@
   },
   {
     "name": "groups2-17",
+    "qty": 3,
     "attr32": "e32_2",
     "attr28": false,
     "attr54": "AB619",
@@ -229,6 +247,7 @@
   },
   {
     "name": "groups2-18",
+    "qty": 3,
     "attr35": "s6599",
     "attr49": "AB769",
     "attr29": "AB656",
@@ -242,6 +261,7 @@
   },
   {
     "name": "groups2-19",
+    "qty": 3,
     "attr31": 1319,
     "attr49": "AB613",
     "attr48": true,
@@ -255,6 +275,7 @@
   },
   {
     "name": "groups2-20",
+    "qty": 3,
     "attr50": "s1701",
     "attr33": true,
     "attr61": 74026,
@@ -268,6 +289,7 @@
   },
   {
     "name": "groups2-21",
+    "qty": 3,
     "attr73": false,
     "attr9": "AB168",
     "attr66": 19235,
@@ -281,6 +303,7 @@
   },
   {
     "name": "groups2-22",
+    "qty": 3,
     "attr46": 98208,
     "attr23": false,
     "attr39": "AB468",
@@ -293,6 +316,7 @@
   },
   {
     "name": "groups2-23",
+    "qty": 3,
     "attr5": "s1918",
     "attr72": "e72_3",
     "attr65": "s5606",
@@ -306,6 +330,7 @@
   },
   {
     "name": "groups2-24",
+    "qty": 3,
     "attr60": "s4190",
     "attr62": "e62_2",
     "attr38": true,
@@ -319,6 +344,7 @@
   },
   {
     "name": "groups2-25",
+    "qty": 3,
     "attr34": "AB416",
     "attr67": "e67_4",
     "attr36": 8882,
@@ -332,6 +358,7 @@
   },
   {
     "name": "groups2-26",
+    "qty": 3,
     "attr35": "s5527",
     "attr46": 39369,
     "attr74": "AB980",
@@ -344,6 +371,7 @@
   },
   {
     "name": "groups2-27",
+    "qty": 3,
     "attr31": 10199,
     "attr11": 8160,
     "attr79": "AB389",
@@ -355,6 +383,7 @@
   },
   {
     "name": "groups2-28",
+    "qty": 3,
     "attr40": "s8837",
     "attr56": 60434,
     "attr23": true,
@@ -368,6 +397,7 @@
   },
   {
     "name": "groups2-29",
+    "qty": 3,
     "attr66": 9379,
     "attr20": "s5546",
     "attr70": "s1494",
@@ -381,6 +411,7 @@
   },
   {
     "name": "groups2-30",
+    "qty": 3,
     "attr5": "s9915",
     "attr48": true,
     "attr77": "e77_2",
@@ -394,6 +425,7 @@
   },
   {
     "name": "groups2-31",
+    "qty": 3,
     "attr20": "s3893",
     "attr63": false,
     "attr76": 26876,
@@ -407,6 +439,7 @@
   },
   {
     "name": "groups2-32",
+    "qty": 3,
     "attr65": "s4920",
     "attr41": 8905,
     "attr29": "AB217",
@@ -419,6 +452,7 @@
   },
   {
     "name": "groups2-33",
+    "qty": 3,
     "attr64": "AB423",
     "attr56": 42881,
     "attr9": "AB338",
@@ -431,6 +465,7 @@
   },
   {
     "name": "groups2-34",
+    "qty": 3,
     "attr77": "e77_0",
     "attr32": "e32_4",
     "attr42": "e42_2",
@@ -444,6 +479,7 @@
   },
   {
     "name": "groups2-35",
+    "qty": 3,
     "attr35": "s5699",
     "attr2": "e2_0",
     "attr54": "AB824",
@@ -457,6 +493,7 @@
   },
   {
     "name": "groups2-36",
+    "qty": 3,
     "attr74": "AB157",
     "attr37": "e37_2",
     "attr47": "e47_1",
@@ -469,6 +506,7 @@
   },
   {
     "name": "groups2-37",
+    "qty": 3,
     "attr9": "AB312",
     "attr49": "AB480",
     "attr70": "s2581",
@@ -480,6 +518,7 @@
   },
   {
     "name": "groups2-38",
+    "qty": 3,
     "attr76": 40761,
     "attr30": "s8742",
     "attr67": "e67_1",
@@ -493,6 +532,7 @@
   },
   {
     "name": "groups2-39",
+    "qty": 3,
     "attr70": "s3939",
     "attr78": true,
     "attr42": "e42_0",
@@ -504,6 +544,7 @@
   },
   {
     "name": "groups2-40",
+    "qty": 3,
     "attr79": "AB762",
     "attr74": "AB972",
     "attr73": true,
@@ -517,6 +558,7 @@
   },
   {
     "name": "groups2-41",
+    "qty": 3,
     "attr76": 63520,
     "attr50": "s1409",
     "attr29": "AB592",
@@ -529,6 +571,7 @@
   },
   {
     "name": "groups2-42",
+    "qty": 3,
     "attr62": "e62_4",
     "attr7": "e7_1",
     "attr16": 4298,
@@ -542,6 +585,7 @@
   },
   {
     "name": "groups2-43",
+    "qty": 3,
     "attr41": 69301,
     "attr27": "e27_4",
     "attr77": "e77_3",
@@ -555,6 +599,7 @@
   },
   {
     "name": "groups2-44",
+    "qty": 3,
     "attr70": "s2799",
     "attr10": "s6671",
     "attr52": "e52_2",
@@ -568,6 +613,7 @@
   },
   {
     "name": "groups2-45",
+    "qty": 3,
     "attr53": false,
     "attr49": "AB752",
     "attr77": "e77_4",
@@ -581,6 +627,7 @@
   },
   {
     "name": "groups2-46",
+    "qty": 3,
     "attr53": false,
     "attr50": "s1978",
     "attr29": "AB980",
@@ -593,6 +640,7 @@
   },
   {
     "name": "groups2-47",
+    "qty": 3,
     "attr79": "AB376",
     "attr11": 13334,
     "attr55": "s4594",
@@ -605,6 +653,7 @@
   },
   {
     "name": "groups2-48",
+    "qty": 3,
     "attr54": "AB846",
     "attr30": "s8588",
     "attr31": 11621,
@@ -618,6 +667,7 @@
   },
   {
     "name": "groups2-49",
+    "qty": 3,
     "attr47": "e47_1",
     "attr14": "AB738",
     "attr74": "AB390",
@@ -631,6 +681,7 @@
   },
   {
     "name": "groups2-50",
+    "qty": 3,
     "attr58": true,
     "attr71": 83826,
     "attr61": 83653,
@@ -643,6 +694,7 @@
   },
   {
     "name": "groups2-51",
+    "qty": 3,
     "attr26": 2487,
     "attr6": 1772,
     "attr39": "AB601",
@@ -656,6 +708,7 @@
   },
   {
     "name": "groups2-52",
+    "qty": 3,
     "attr74": "AB423",
     "attr75": "s1582",
     "attr28": true,
@@ -667,6 +720,7 @@
   },
   {
     "name": "groups2-53",
+    "qty": 3,
     "attr76": 17506,
     "attr63": false,
     "attr52": "e52_4",
@@ -680,6 +734,7 @@
   },
   {
     "name": "groups2-54",
+    "qty": 3,
     "attr76": 1900,
     "attr61": 64577,
     "attr11": 25222,
@@ -693,6 +748,7 @@
   },
   {
     "name": "groups2-55",
+    "qty": 3,
     "attr54": "AB393",
     "attr46": 27418,
     "attr60": "s6206",
@@ -706,6 +762,7 @@
   },
   {
     "name": "groups2-56",
+    "qty": 3,
     "attr65": "s7637",
     "attr5": "s6384",
     "attr51": 20102,
@@ -718,6 +775,7 @@
   },
   {
     "name": "groups2-57",
+    "qty": 3,
     "attr55": "s4775",
     "attr68": false,
     "attr14": "AB919",
@@ -729,6 +787,7 @@
   },
   {
     "name": "groups2-58",
+    "qty": 3,
     "attr77": "e77_2",
     "attr9": "AB351",
     "attr20": "s5985",
@@ -742,6 +801,7 @@
   },
   {
     "name": "groups2-59",
+    "qty": 3,
     "attr40": "s830",
     "attr64": "AB804",
     "attr4": "AB551",

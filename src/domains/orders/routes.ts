@@ -1,18 +1,11 @@
 import { Hono } from "hono";
-import { compile, type Schema } from "../../lib/validation.ts";
+import type { Validator } from "../../lib/validation.ts";
 import { cancelOrder, getOrder, listOrders, placeOrder, revenue } from "./service.ts";
 
 export const name = "orders";
 
-export const schema: Schema = {
-  customerId: { type: "string", required: true },
-  itemId: { type: "string", required: true },
-  quantity: { type: "number", required: true, min: 1, max: 1000 },
-};
-
-export function routes(): Hono {
+export function routes(validate: Validator): Hono {
   const app = new Hono();
-  const validate = compile(schema);
 
   app.get("/", (c) => c.json(listOrders()));
   app.get("/revenue", (c) => c.json({ revenueCents: revenue() }));

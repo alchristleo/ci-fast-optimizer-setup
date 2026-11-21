@@ -1,6 +1,9 @@
 [
   {
     "name": "invoices2-0",
+    "priceCents": 250,
+    "active": true,
+    "note": "hello",
     "attr11": 14982,
     "attr38": false,
     "attr8": false,
@@ -13,6 +16,9 @@
   },
   {
     "name": "invoices2-1",
+    "priceCents": 250,
+    "active": true,
+    "note": "hello",
     "attr79": "AB875",
     "attr20": "s7829",
     "attr65": "s3629",
@@ -26,6 +32,9 @@
   },
   {
     "name": "invoices2-2",
+    "priceCents": 250,
+    "active": true,
+    "note": "hello",
     "attr22": "e22_4",
     "attr64": "AB257",
     "attr12": "e12_3",
@@ -38,6 +47,9 @@
   },
   {
     "name": "invoices2-3",
+    "priceCents": 250,
+    "active": true,
+    "note": "hello",
     "attr14": "AB562",
     "attr42": "e42_0",
     "attr5": "s8617",
@@ -49,6 +61,9 @@
   },
   {
     "name": "invoices2-4",
+    "priceCents": 250,
+    "active": true,
+    "note": "hello",
     "attr65": "s6689",
     "attr27": "e27_0",
     "attr24": "AB507",
@@ -61,6 +76,9 @@
   },
   {
     "name": "invoices2-5",
+    "priceCents": 250,
+    "active": true,
+    "note": "hello",
     "attr73": false,
     "attr56": 3403,
     "attr49": "AB769",
@@ -72,6 +90,9 @@
   },
   {
     "name": "invoices2-6",
+    "priceCents": 250,
+    "active": true,
+    "note": "hello",
     "attr70": "s2214",
     "attr34": "AB410",
     "attr10": "s6561",
@@ -85,6 +106,9 @@
   },
   {
     "name": "invoices2-7",
+    "priceCents": 250,
+    "active": true,
+    "note": "hello",
     "attr37": "e37_2",
     "attr58": true,
     "attr59": "AB338",
@@ -98,6 +122,9 @@
   },
   {
     "name": "invoices2-8",
+    "priceCents": 250,
+    "active": true,
+    "note": "hello",
     "attr77": "e77_2",
     "attr20": "s3749",
     "attr3": false,
@@ -110,6 +137,9 @@
   },
   {
     "name": "invoices2-9",
+    "priceCents": 250,
+    "active": true,
+    "note": "hello",
     "attr3": false,
     "attr23": true,
     "attr48": true,
@@ -123,6 +153,9 @@
   },
   {
     "name": "invoices2-10",
+    "priceCents": 250,
+    "active": true,
+    "note": "hello",
     "attr67": "e67_0",
     "attr22": "e22_3",
     "attr14": "AB418",
@@ -136,6 +169,9 @@
   },
   {
     "name": "invoices2-11",
+    "priceCents": 250,
+    "active": true,
+    "note": "hello",
     "attr72": "e72_2",
     "attr4": "AB346",
     "attr70": "s3166",
@@ -149,6 +185,9 @@
   },
   {
     "name": "invoices2-12",
+    "priceCents": 250,
+    "active": true,
+    "note": "hello",
     "attr7": "e7_2",
     "attr50": "s2576",
     "attr39": "AB722",
@@ -162,6 +201,9 @@
   },
   {
     "name": "invoices2-13",
+    "priceCents": 250,
+    "active": true,
+    "note": "hello",
     "attr72": "e72_0",
     "attr58": false,
     "attr27": "e27_0",
@@ -174,6 +216,9 @@
   },
   {
     "name": "invoices2-14",
+    "priceCents": 250,
+    "active": true,
+    "note": "hello",
     "attr22": "e22_2",
     "attr61": 8212,
     "attr16": 33921,
@@ -186,6 +231,9 @@
   },
   {
     "name": "invoices2-15",
+    "priceCents": 250,
+    "active": true,
+    "note": "hello",
     "attr41": 36677,
     "attr7": "e7_1",
     "attr61": 4581,
@@ -198,6 +246,9 @@
   },
   {
     "name": "invoices2-16",
+    "priceCents": 250,
+    "active": true,
+    "note": "hello",
     "attr16": 3238,
     "attr76": 72511,
     "attr34": "AB378",
@@ -211,6 +262,9 @@
   },
   {
     "name": "invoices2-17",
+    "priceCents": 250,
+    "active": true,
+    "note": "hello",
     "attr47": "e47_3",
     "attr79": "AB395",
     "attr39": "AB246",
@@ -224,6 +278,9 @@
   },
   {
     "name": "invoices2-18",
+    "priceCents": 250,
+    "active": true,
+    "note": "hello",
     "attr2": "e2_3",
     "attr31": 976,
     "attr44": "AB721",
@@ -237,6 +294,9 @@
   },
   {
     "name": "invoices2-19",
+    "priceCents": 250,
+    "active": true,
+    "note": "hello",
     "attr25": "s9641",
     "attr66": 4544,
     "attr47": "e47_0",
@@ -249,6 +309,9 @@
   },
   {
     "name": "invoices2-20",
+    "priceCents": 250,
+    "active": true,
+    "note": "hello",
     "attr77": "e77_0",
     "attr47": "e47_1",
     "attr31": 3632,
@@ -262,6 +325,9 @@
   },
   {
     "name": "invoices2-21",
+    "priceCents": 250,
+    "active": true,
+    "note": "hello",
     "attr59": "AB740",
     "attr62": "e62_2",
     "attr77": "e77_4",
@@ -274,6 +340,9 @@
   },
   {
     "name": "invoices2-22",
+    "priceCents": 250,
+    "active": true,
+    "note": "hello",
     "attr38": true,
     "attr35": "s4728",
     "attr40": "s2470",
@@ -287,6 +356,9 @@
   },
   {
     "name": "invoices2-23",
+    "priceCents": 250,
+    "active": true,
+    "note": "hello",
     "attr34": "AB356",
     "attr38": true,
     "attr25": "s4305",
@@ -299,6 +371,9 @@
   },
   {
     "name": "invoices2-24",
+    "priceCents": 250,
+    "active": true,
+    "note": "hello",
     "attr23": false,
     "attr62": "e62_4",
     "attr60": "s1793",
@@ -312,6 +387,9 @@
   },
   {
     "name": "invoices2-25",
+    "priceCents": 250,
+    "active": true,
+    "note": "hello",
     "attr4": "AB759",
     "attr32": "e32_0",
     "attr54": "AB293",
@@ -324,6 +402,9 @@
   },
   {
     "name": "invoices2-26",
+    "priceCents": 250,
+    "active": true,
+    "note": "hello",
     "attr7": "e7_0",
     "attr75": "s2634",
     "attr70": "s3647",
@@ -337,6 +418,9 @@
   },
   {
     "name": "invoices2-27",
+    "priceCents": 250,
+    "active": true,
+    "note": "hello",
     "attr78": false,
     "attr38": false,
     "attr29": "AB692",
@@ -350,6 +434,9 @@
   },
   {
     "name": "invoices2-28",
+    "priceCents": 250,
+    "active": true,
+    "note": "hello",
     "attr65": "s8034",
     "attr37": "e37_3",
     "attr32": "e32_4",
@@ -362,6 +449,9 @@
   },
   {
     "name": "invoices2-29",
+    "priceCents": 250,
+    "active": true,
+    "note": "hello",
     "attr52": "e52_2",
     "attr9": "AB300",
     "attr48": false,
@@ -375,6 +465,9 @@
   },
   {
     "name": "invoices2-30",
+    "priceCents": 250,
+    "active": true,
+    "note": "hello",
     "attr57": "e57_0",
     "attr11": 20784,
     "attr31": 23800,
@@ -388,6 +481,9 @@
   },
   {
     "name": "invoices2-31",
+    "priceCents": 250,
+    "active": true,
+    "note": "hello",
     "attr64": "AB299",
     "attr21": 43477,
     "attr9": "AB191",
@@ -400,6 +496,9 @@
   },
   {
     "name": "invoices2-32",
+    "priceCents": 250,
+    "active": true,
+    "note": "hello",
     "attr26": 3175,
     "attr46": 2892,
     "attr58": false,
@@ -412,6 +511,9 @@
   },
   {
     "name": "invoices2-33",
+    "priceCents": 250,
+    "active": true,
+    "note": "hello",
     "attr33": true,
     "attr17": "e17_1",
     "attr28": true,
@@ -425,6 +527,9 @@
   },
   {
     "name": "invoices2-34",
+    "priceCents": 250,
+    "active": true,
+    "note": "hello",
     "attr51": 15248,
     "attr75": "s4946",
     "attr70": "s6059",
@@ -438,6 +543,9 @@
   },
   {
     "name": "invoices2-35",
+    "priceCents": 250,
+    "active": true,
+    "note": "hello",
     "attr1": 9652,
     "attr13": true,
     "attr58": false,
@@ -451,6 +559,9 @@
   },
   {
     "name": "invoices2-36",
+    "priceCents": 250,
+    "active": true,
+    "note": "hello",
     "attr34": "AB779",
     "attr27": "e27_2",
     "attr44": "AB326",
@@ -463,6 +574,9 @@
   },
   {
     "name": "invoices2-37",
+    "priceCents": 250,
+    "active": true,
+    "note": "hello",
     "attr16": 15013,
     "attr43": true,
     "attr63": false,
@@ -475,6 +589,9 @@
   },
   {
     "name": "invoices2-38",
+    "priceCents": 250,
+    "active": true,
+    "note": "hello",
     "attr61": 11658,
     "attr72": "e72_2",
     "attr21": 37964,
@@ -488,6 +605,9 @@
   },
   {
     "name": "invoices2-39",
+    "priceCents": 250,
+    "active": true,
+    "note": "hello",
     "attr76": 34693,
     "attr68": false,
     "attr21": 50651,
@@ -498,6 +618,9 @@
   },
   {
     "name": "invoices2-40",
+    "priceCents": 250,
+    "active": true,
+    "note": "hello",
     "attr43": true,
     "attr68": false,
     "attr40": "s4251",
@@ -511,6 +634,9 @@
   },
   {
     "name": "invoices2-41",
+    "priceCents": 250,
+    "active": true,
+    "note": "hello",
     "attr11": 41915,
     "attr53": true,
     "attr8": false,
@@ -523,6 +649,9 @@
   },
   {
     "name": "invoices2-42",
+    "priceCents": 250,
+    "active": true,
+    "note": "hello",
     "attr14": "AB104",
     "attr12": "e12_4",
     "attr76": 60733,
@@ -536,6 +665,9 @@
   },
   {
     "name": "invoices2-43",
+    "priceCents": 250,
+    "active": true,
+    "note": "hello",
     "attr8": false,
     "attr4": "AB942",
     "attr41": 45443,
@@ -548,6 +680,9 @@
   },
   {
     "name": "invoices2-44",
+    "priceCents": 250,
+    "active": true,
+    "note": "hello",
     "attr76": 44924,
     "attr35": "s3650",
     "attr78": false,
@@ -560,6 +695,9 @@
   },
   {
     "name": "invoices2-45",
+    "priceCents": 250,
+    "active": true,
+    "note": "hello",
     "attr38": false,
     "attr56": 17811,
     "attr61": 1792,
@@ -573,6 +711,9 @@
   },
   {
     "name": "invoices2-46",
+    "priceCents": 250,
+    "active": true,
+    "note": "hello",
     "attr21": 36887,
     "attr14": "AB849",
     "attr22": "e22_0",
@@ -585,6 +726,9 @@
   },
   {
     "name": "invoices2-47",
+    "priceCents": 250,
+    "active": true,
+    "note": "hello",
     "attr58": true,
     "attr2": "e2_1",
     "attr45": "s362",
@@ -597,6 +741,9 @@
   },
   {
     "name": "invoices2-48",
+    "priceCents": 250,
+    "active": true,
+    "note": "hello",
     "attr36": 33397,
     "attr32": "e32_1",
     "attr17": "e17_1",
@@ -609,6 +756,9 @@
   },
   {
     "name": "invoices2-49",
+    "priceCents": 250,
+    "active": true,
+    "note": "hello",
     "attr38": true,
     "attr7": "e7_2",
     "attr26": 72916,
@@ -622,6 +772,9 @@
   },
   {
     "name": "invoices2-50",
+    "priceCents": 250,
+    "active": true,
+    "note": "hello",
     "attr32": "e32_0",
     "attr0": "s3920",
     "attr60": "s6333",
@@ -633,6 +786,9 @@
   },
   {
     "name": "invoices2-51",
+    "priceCents": 250,
+    "active": true,
+    "note": "hello",
     "attr27": "e27_4",
     "attr24": "AB625",
     "attr74": "AB545",
@@ -646,6 +802,9 @@
   },
   {
     "name": "invoices2-52",
+    "priceCents": 250,
+    "active": true,
+    "note": "hello",
     "attr69": "AB689",
     "attr14": "AB898",
     "attr77": "e77_4",
@@ -658,6 +817,9 @@
   },
   {
     "name": "invoices2-53",
+    "priceCents": 250,
+    "active": true,
+    "note": "hello",
     "attr67": "e67_1",
     "attr48": true,
     "attr21": 7082,
@@ -671,6 +833,9 @@
   },
   {
     "name": "invoices2-54",
+    "priceCents": 250,
+    "active": true,
+    "note": "hello",
     "attr15": "s8339",
     "attr27": "e27_0",
     "attr16": 29072,
@@ -684,6 +849,9 @@
   },
   {
     "name": "invoices2-55",
+    "priceCents": 250,
+    "active": true,
+    "note": "hello",
     "attr52": "e52_2",
     "attr63": false,
     "attr9": "AB575",
@@ -696,6 +864,9 @@
   },
   {
     "name": "invoices2-56",
+    "priceCents": 250,
+    "active": true,
+    "note": "hello",
     "attr71": 13704,
     "attr54": "AB992",
     "attr24": "AB960",
@@ -709,6 +880,9 @@
   },
   {
     "name": "invoices2-57",
+    "priceCents": 250,
+    "active": true,
+    "note": "hello",
     "attr71": 26791,
     "attr25": "s4096",
     "attr65": "s8704",
@@ -721,6 +895,9 @@
   },
   {
     "name": "invoices2-58",
+    "priceCents": 250,
+    "active": true,
+    "note": "hello",
     "attr42": "e42_4",
     "attr45": "s3442",
     "attr13": false,
@@ -732,6 +909,9 @@
   },
   {
     "name": "invoices2-59",
+    "priceCents": 250,
+    "active": true,
+    "note": "hello",
     "attr22": "e22_3",
     "attr74": "AB414",
     "attr19": "AB459",

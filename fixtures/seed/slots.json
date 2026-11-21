@@ -1,6 +1,7 @@
 [
   {
     "name": "slots-0",
+    "priceCents": 250,
     "attr13": true,
     "attr52": "e52_4",
     "attr70": "s3214",
@@ -14,6 +15,7 @@
   },
   {
     "name": "slots-1",
+    "priceCents": 250,
     "attr69": "AB609",
     "attr3": false,
     "attr61": 16121,
@@ -27,6 +29,7 @@
   },
   {
     "name": "slots-2",
+    "priceCents": 250,
     "attr4": "AB122",
     "attr21": 5726,
     "attr29": "AB675",
@@ -40,6 +43,7 @@
   },
   {
     "name": "slots-3",
+    "priceCents": 250,
     "attr52": "e52_0",
     "attr39": "AB352",
     "attr7": "e7_3",
@@ -52,6 +56,7 @@
   },
   {
     "name": "slots-4",
+    "priceCents": 250,
     "attr65": "s4243",
     "attr39": "AB753",
     "attr16": 35815,
@@ -64,6 +69,7 @@
   },
   {
     "name": "slots-5",
+    "priceCents": 250,
     "attr66": 2446,
     "attr16": 17513,
     "attr24": "AB649",
@@ -77,6 +83,7 @@
   },
   {
     "name": "slots-6",
+    "priceCents": 250,
     "attr69": "AB787",
     "attr29": "AB993",
     "attr40": "s5767",
@@ -90,6 +97,7 @@
   },
   {
     "name": "slots-7",
+    "priceCents": 250,
     "attr50": "s5420",
     "attr64": "AB995",
     "attr47": "e47_0",
@@ -102,6 +110,7 @@
   },
   {
     "name": "slots-8",
+    "priceCents": 250,
     "attr34": "AB862",
     "attr7": "e7_1",
     "attr29": "AB738",
@@ -114,6 +123,7 @@
   },
   {
     "name": "slots-9",
+    "priceCents": 250,
     "attr72": "e72_3",
     "attr61": 10331,
     "attr4": "AB503",
@@ -127,6 +137,7 @@
   },
   {
     "name": "slots-10",
+    "priceCents": 250,
     "attr69": "AB276",
     "attr14": "AB943",
     "attr60": "s3267",
@@ -140,6 +151,7 @@
   },
   {
     "name": "slots-11",
+    "priceCents": 250,
     "attr76": 91603,
     "attr58": false,
     "attr73": false,
@@ -150,6 +162,7 @@
   },
   {
     "name": "slots-12",
+    "priceCents": 250,
     "attr51": 8357,
     "attr46": 23108,
     "attr39": "AB440",
@@ -162,6 +175,7 @@
   },
   {
     "name": "slots-13",
+    "priceCents": 250,
     "attr28": false,
     "attr75": "s1232",
     "attr7": "e7_4",
@@ -175,6 +189,7 @@
   },
   {
     "name": "slots-14",
+    "priceCents": 250,
     "attr27": "e27_3",
     "attr63": false,
     "attr14": "AB813",
@@ -188,6 +203,7 @@
   },
   {
     "name": "slots-15",
+    "priceCents": 250,
     "attr37": "e37_1",
     "attr59": "AB469",
     "attr63": false,
@@ -200,6 +216,7 @@
   },
   {
     "name": "slots-16",
+    "priceCents": 250,
     "attr52": "e52_2",
     "attr14": "AB889",
     "attr15": "s4482",
@@ -213,6 +230,7 @@
   },
   {
     "name": "slots-17",
+    "priceCents": 250,
     "attr16": 44914,
     "attr72": "e72_4",
     "attr56": 22312,
@@ -224,6 +242,7 @@
   },
   {
     "name": "slots-18",
+    "priceCents": 250,
     "attr16": 59168,
     "attr35": "s7209",
     "attr11": 92836,
@@ -236,6 +255,7 @@
   },
   {
     "name": "slots-19",
+    "priceCents": 250,
     "attr31": 14955,
     "attr63": false,
     "attr2": "e2_1",
@@ -249,6 +269,7 @@
   },
   {
     "name": "slots-20",
+    "priceCents": 250,
     "attr27": "e27_3",
     "attr37": "e37_4",
     "attr25": "s2478",
@@ -262,6 +283,7 @@
   },
   {
     "name": "slots-21",
+    "priceCents": 250,
     "attr43": false,
     "attr77": "e77_1",
     "attr32": "e32_2",
@@ -274,6 +296,7 @@
   },
   {
     "name": "slots-22",
+    "priceCents": 250,
     "attr77": "e77_2",
     "attr52": "e52_2",
     "attr56": 27813,
@@ -287,6 +310,7 @@
   },
   {
     "name": "slots-23",
+    "priceCents": 250,
     "attr32": "e32_3",
     "attr66": 2238,
     "attr8": false,
@@ -300,6 +324,7 @@
   },
   {
     "name": "slots-24",
+    "priceCents": 250,
     "attr72": "e72_0",
     "attr37": "e37_2",
     "attr70": "s9842",
@@ -312,6 +337,7 @@
   },
   {
     "name": "slots-25",
+    "priceCents": 250,
     "attr29": "AB242",
     "attr76": 24748,
     "attr43": false,
@@ -324,6 +350,7 @@
   },
   {
     "name": "slots-26",
+    "priceCents": 250,
     "attr64": "AB425",
     "attr1": 2984,
     "attr38": false,
@@ -337,6 +364,7 @@
   },
   {
     "name": "slots-27",
+    "priceCents": 250,
     "attr68": false,
     "attr75": "s7390",
     "attr5": "s8103",
@@ -350,6 +378,7 @@
   },
   {
     "name": "slots-28",
+    "priceCents": 250,
     "attr70": "s6506",
     "attr45": "s4983",
     "attr58": true,
@@ -363,6 +392,7 @@
   },
   {
     "name": "slots-29",
+    "priceCents": 250,
     "attr35": "s4861",
     "attr55": "s7636",
     "attr21": 29176,
@@ -376,6 +406,7 @@
   },
   {
     "name": "slots-30",
+    "priceCents": 250,
     "attr38": false,
     "attr66": 2588,
     "attr77": "e77_1",
@@ -389,6 +420,7 @@
   },
   {
     "name": "slots-31",
+    "priceCents": 250,
     "attr78": true,
     "attr69": "AB222",
     "attr59": "AB440",
@@ -402,6 +434,7 @@
   },
   {
     "name": "slots-32",
+    "priceCents": 250,
     "attr57": "e57_2",
     "attr28": true,
     "attr60": "s9123",
@@ -415,6 +448,7 @@
   },
   {
     "name": "slots-33",
+    "priceCents": 250,
     "attr26": 25174,
     "attr22": "e22_4",
     "attr6": 3874,
@@ -427,6 +461,7 @@
   },
   {
     "name": "slots-34",
+    "priceCents": 250,
     "attr41": 5500,
     "attr66": 35,
     "attr6": 24585,
@@ -440,6 +475,7 @@
   },
   {
     "name": "slots-35",
+    "priceCents": 250,
     "attr17": "e17_4",
     "attr53": true,
     "attr12": "e12_2",
@@ -453,6 +489,7 @@
   },
   {
     "name": "slots-36",
+    "priceCents": 250,
     "attr68": false,
     "attr10": "s3245",
     "attr50": "s5856",
@@ -466,6 +503,7 @@
   },
   {
     "name": "slots-37",
+    "priceCents": 250,
     "attr2": "e2_2",
     "attr16": 82476,
     "attr63": false,
@@ -478,6 +516,7 @@
   },
   {
     "name": "slots-38",
+    "priceCents": 250,
     "attr6": 57352,
     "attr32": "e32_3",
     "attr41": 19979,
@@ -491,6 +530,7 @@
   },
   {
     "name": "slots-39",
+    "priceCents": 250,
     "attr77": "e77_0",
     "attr9": "AB712",
     "attr10": "s8213",
@@ -504,6 +544,7 @@
   },
   {
     "name": "slots-40",
+    "priceCents": 250,
     "attr0": "s4322",
     "attr56": 55279,
     "attr17": "e17_0",
@@ -517,6 +558,7 @@
   },
   {
     "name": "slots-41",
+    "priceCents": 250,
     "attr57": "e57_1",
     "attr26": 5400,
     "attr16": 11899,
@@ -530,6 +572,7 @@
   },
   {
     "name": "slots-42",
+    "priceCents": 250,
     "attr42": "e42_4",
     "attr62": "e62_3",
     "attr63": false,
@@ -541,6 +584,7 @@
   },
   {
     "name": "slots-43",
+    "priceCents": 250,
     "attr61": 29438,
     "attr35": "s3978",
     "attr55": "s264",
@@ -553,6 +597,7 @@
   },
   {
     "name": "slots-44",
+    "priceCents": 250,
     "attr28": true,
     "attr77": "e77_2",
     "attr19": "AB870",
@@ -565,6 +610,7 @@
   },
   {
     "name": "slots-45",
+    "priceCents": 250,
     "attr79": "AB301",
     "attr30": "s380",
     "attr58": false,
@@ -576,6 +622,7 @@
   },
   {
     "name": "slots-46",
+    "priceCents": 250,
     "attr77": "e77_3",
     "attr16": 20914,
     "attr67": "e67_2",
@@ -589,6 +636,7 @@
   },
   {
     "name": "slots-47",
+    "priceCents": 250,
     "attr11": 29774,
     "attr79": "AB128",
     "attr69": "AB180",
@@ -602,6 +650,7 @@
   },
   {
     "name": "slots-48",
+    "priceCents": 250,
     "attr56": 10227,
     "attr74": "AB955",
     "attr62": "e62_4",
@@ -615,6 +664,7 @@
   },
   {
     "name": "slots-49",
+    "priceCents": 250,
     "attr28": true,
     "attr29": "AB993",
     "attr19": "AB601",
@@ -627,6 +677,7 @@
   },
   {
     "name": "slots-50",
+    "priceCents": 250,
     "attr28": true,
     "attr3": true,
     "attr45": "s344",
@@ -640,6 +691,7 @@
   },
   {
     "name": "slots-51",
+    "priceCents": 250,
     "attr47": "e47_2",
     "attr62": "e62_2",
     "attr20": "s6423",
@@ -653,6 +705,7 @@
   },
   {
     "name": "slots-52",
+    "priceCents": 250,
     "attr3": false,
     "attr11": 10270,
     "attr38": true,
@@ -666,6 +719,7 @@
   },
   {
     "name": "slots-53",
+    "priceCents": 250,
     "attr15": "s594",
     "attr20": "s8943",
     "attr56": 52046,
@@ -678,6 +732,7 @@
   },
   {
     "name": "slots-54",
+    "priceCents": 250,
     "attr17": "e17_3",
     "attr51": 8657,
     "attr45": "s4975",
@@ -691,6 +746,7 @@
   },
   {
     "name": "slots-55",
+    "priceCents": 250,
     "attr79": "AB135",
     "attr20": "s6521",
     "attr72": "e72_0",
@@ -704,6 +760,7 @@
   },
   {
     "name": "slots-56",
+    "priceCents": 250,
     "attr63": true,
     "attr25": "s1648",
     "attr77": "e77_4",
@@ -716,6 +773,7 @@
   },
   {
     "name": "slots-57",
+    "priceCents": 250,
     "attr45": "s908",
     "attr57": "e57_0",
     "attr6": 21588,
@@ -729,6 +787,7 @@
   },
   {
     "name": "slots-58",
+    "priceCents": 250,
     "attr25": "s2873",
     "attr40": "s2099",
     "attr26": 11845,
@@ -742,6 +801,7 @@
   },
   {
     "name": "slots-59",
+    "priceCents": 250,
     "attr64": "AB889",
     "attr25": "s6659",
     "attr40": "s2375",

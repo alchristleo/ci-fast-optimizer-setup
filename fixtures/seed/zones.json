@@ -1,6 +1,7 @@
 [
   {
     "name": "zones-0",
+    "note": "hello",
     "attr63": true,
     "attr0": "s189",
     "attr69": "AB478",
@@ -14,6 +15,7 @@
   },
   {
     "name": "zones-1",
+    "note": "hello",
     "attr71": 5175,
     "attr7": "e7_1",
     "attr9": "AB115",
@@ -26,6 +28,7 @@
   },
   {
     "name": "zones-2",
+    "note": "hello",
     "attr16": 41760,
     "attr75": "s2630",
     "attr70": "s2500",
@@ -39,6 +42,7 @@
   },
   {
     "name": "zones-3",
+    "note": "hello",
     "attr45": "s9665",
     "attr59": "AB113",
     "attr37": "e37_0",
@@ -52,6 +56,7 @@
   },
   {
     "name": "zones-4",
+    "note": "hello",
     "attr51": 25222,
     "attr32": "e32_0",
     "attr5": "s6560",
@@ -64,6 +69,7 @@
   },
   {
     "name": "zones-5",
+    "note": "hello",
     "attr14": "AB884",
     "attr79": "AB586",
     "attr74": "AB885",
@@ -77,6 +83,7 @@
   },
   {
     "name": "zones-6",
+    "note": "hello",
     "attr15": "s3886",
     "attr21": 52070,
     "attr45": "s2426",
@@ -88,6 +95,7 @@
   },
   {
     "name": "zones-7",
+    "note": "hello",
     "attr4": "AB559",
     "attr23": false,
     "attr20": "s2881",
@@ -101,6 +109,7 @@
   },
   {
     "name": "zones-8",
+    "note": "hello",
     "attr76": 13988,
     "attr49": "AB863",
     "attr2": "e2_3",
@@ -113,6 +122,7 @@
   },
   {
     "name": "zones-9",
+    "note": "hello",
     "attr35": "s5000",
     "attr70": "s9765",
     "attr69": "AB858",
@@ -126,6 +136,7 @@
   },
   {
     "name": "zones-10",
+    "note": "hello",
     "attr63": true,
     "attr50": "s9528",
     "attr27": "e27_0",
@@ -138,6 +149,7 @@
   },
   {
     "name": "zones-11",
+    "note": "hello",
     "attr44": "AB237",
     "attr32": "e32_1",
     "attr36": 12721,
@@ -150,6 +162,7 @@
   },
   {
     "name": "zones-12",
+    "note": "hello",
     "attr6": 51452,
     "attr32": "e32_0",
     "attr4": "AB794",
@@ -162,6 +175,7 @@
   },
   {
     "name": "zones-13",
+    "note": "hello",
     "attr13": true,
     "attr72": "e72_0",
     "attr47": "e47_3",
@@ -175,6 +189,7 @@
   },
   {
     "name": "zones-14",
+    "note": "hello",
     "attr60": "s1500",
     "attr24": "AB465",
     "attr78": false,
@@ -188,6 +203,7 @@
   },
   {
     "name": "zones-15",
+    "note": "hello",
     "attr32": "e32_1",
     "attr67": "e67_0",
     "attr8": true,
@@ -200,6 +216,7 @@
   },
   {
     "name": "zones-16",
+    "note": "hello",
     "attr57": "e57_4",
     "attr50": "s9530",
     "attr28": false,
@@ -212,6 +229,7 @@
   },
   {
     "name": "zones-17",
+    "note": "hello",
     "attr58": true,
     "attr33": true,
     "attr66": 57003,
@@ -224,6 +242,7 @@
   },
   {
     "name": "zones-18",
+    "note": "hello",
     "attr7": "e7_4",
     "attr56": 59506,
     "attr4": "AB667",
@@ -235,6 +254,7 @@
   },
   {
     "name": "zones-19",
+    "note": "hello",
     "attr0": "s2787",
     "attr31": 65943,
     "attr75": "s1096",
@@ -248,6 +268,7 @@
   },
   {
     "name": "zones-20",
+    "note": "hello",
     "attr42": "e42_0",
     "attr73": false,
     "attr8": false,
@@ -260,6 +281,7 @@
   },
   {
     "name": "zones-21",
+    "note": "hello",
     "attr60": "s6528",
     "attr37": "e37_3",
     "attr26": 15371,
@@ -272,6 +294,7 @@
   },
   {
     "name": "zones-22",
+    "note": "hello",
     "attr66": 41640,
     "attr70": "s1399",
     "attr77": "e77_4",
@@ -284,6 +307,7 @@
   },
   {
     "name": "zones-23",
+    "note": "hello",
     "attr12": "e12_4",
     "attr24": "AB721",
     "attr27": "e27_3",
@@ -297,6 +321,7 @@
   },
   {
     "name": "zones-24",
+    "note": "hello",
     "attr65": "s90",
     "attr10": "s281",
     "attr53": true,
@@ -310,6 +335,7 @@
   },
   {
     "name": "zones-25",
+    "note": "hello",
     "attr59": "AB449",
     "attr69": "AB327",
     "attr73": false,
@@ -322,6 +348,7 @@
   },
   {
     "name": "zones-26",
+    "note": "hello",
     "attr3": true,
     "attr27": "e27_3",
     "attr38": false,
@@ -335,6 +362,7 @@
   },
   {
     "name": "zones-27",
+    "note": "hello",
     "attr25": "s5775",
     "attr16": 9293,
     "attr31": 55985,
@@ -347,6 +375,7 @@
   },
   {
     "name": "zones-28",
+    "note": "hello",
     "attr10": "s3854",
     "attr52": "e52_4",
     "attr71": 26355,
@@ -358,6 +387,7 @@
   },
   {
     "name": "zones-29",
+    "note": "hello",
     "attr17": "e17_4",
     "attr33": false,
     "attr15": "s9034",
@@ -370,6 +400,7 @@
   },
   {
     "name": "zones-30",
+    "note": "hello",
     "attr70": "s3016",
     "attr10": "s5040",
     "attr55": "s8469",
@@ -383,6 +414,7 @@
   },
   {
     "name": "zones-31",
+    "note": "hello",
     "attr78": false,
     "attr20": "s6402",
     "attr46": 41121,
@@ -396,6 +428,7 @@
   },
   {
     "name": "zones-32",
+    "note": "hello",
     "attr67": "e67_3",
     "attr68": true,
     "attr46": 40556,
@@ -409,6 +442,7 @@
   },
   {
     "name": "zones-33",
+    "note": "hello",
     "attr58": true,
     "attr11": 48296,
     "attr38": true,
@@ -421,6 +455,7 @@
   },
   {
     "name": "zones-34",
+    "note": "hello",
     "attr11": 61125,
     "attr10": "s8796",
     "attr63": true,
@@ -434,6 +469,7 @@
   },
   {
     "name": "zones-35",
+    "note": "hello",
     "attr24": "AB151",
     "attr22": "e22_1",
     "attr6": 64752,
@@ -447,6 +483,7 @@
   },
   {
     "name": "zones-36",
+    "note": "hello",
     "attr27": "e27_4",
     "attr17": "e17_1",
     "attr53": true,
@@ -460,6 +497,7 @@
   },
   {
     "name": "zones-37",
+    "note": "hello",
     "attr30": "s7285",
     "attr11": 7367,
     "attr63": true,
@@ -472,6 +510,7 @@
   },
   {
     "name": "zones-38",
+    "note": "hello",
     "attr7": "e7_2",
     "attr13": false,
     "attr76": 26801,
@@ -485,6 +524,7 @@
   },
   {
     "name": "zones-39",
+    "note": "hello",
     "attr55": "s1965",
     "attr43": false,
     "attr54": "AB246",
@@ -498,6 +538,7 @@
   },
   {
     "name": "zones-40",
+    "note": "hello",
     "attr45": "s1952",
     "attr54": "AB813",
     "attr27": "e27_3",
@@ -510,6 +551,7 @@
   },
   {
     "name": "zones-41",
+    "note": "hello",
     "attr64": "AB240",
     "attr3": true,
     "attr69": "AB266",
@@ -523,6 +565,7 @@
   },
   {
     "name": "zones-42",
+    "note": "hello",
     "attr24": "AB277",
     "attr48": true,
     "attr40": "s1562",
@@ -534,6 +577,7 @@
   },
   {
     "name": "zones-43",
+    "note": "hello",
     "attr78": false,
     "attr20": "s2383",
     "attr4": "AB193",
@@ -546,6 +590,7 @@
   },
   {
     "name": "zones-44",
+    "note": "hello",
     "attr11": 5637,
     "attr8": true,
     "attr63": true,
@@ -558,6 +603,7 @@
   },
   {
     "name": "zones-45",
+    "note": "hello",
     "attr9": "AB352",
     "attr0": "s656",
     "attr17": "e17_2",
@@ -571,6 +617,7 @@
   },
   {
     "name": "zones-46",
+    "note": "hello",
     "attr41": 44433,
     "attr76": 24185,
     "attr28": true,
@@ -584,6 +631,7 @@
   },
   {
     "name": "zones-47",
+    "note": "hello",
     "attr31": 24616,
     "attr11": 18365,
     "attr15": "s7503",
@@ -596,6 +644,7 @@
   },
   {
     "name": "zones-48",
+    "note": "hello",
     "attr31": 53087,
     "attr1": 17353,
     "attr23": true,
@@ -609,6 +658,7 @@
   },
   {
     "name": "zones-49",
+    "note": "hello",
     "attr15": "s3917",
     "attr54": "AB396",
     "attr42": "e42_3",
@@ -621,6 +671,7 @@
   },
   {
     "name": "zones-50",
+    "note": "hello",
     "attr77": "e77_4",
     "attr59": "AB535",
     "attr33": false,
@@ -634,6 +685,7 @@
   },
   {
     "name": "zones-51",
+    "note": "hello",
     "attr0": "s135",
     "attr1": 35139,
     "attr10": "s3333",
@@ -647,6 +699,7 @@
   },
   {
     "name": "zones-52",
+    "note": "hello",
     "attr10": "s742",
     "attr27": "e27_2",
     "attr34": "AB243",
@@ -660,6 +713,7 @@
   },
   {
     "name": "zones-53",
+    "note": "hello",
     "attr29": "AB486",
     "attr58": false,
     "attr69": "AB555",
@@ -672,6 +726,7 @@
   },
   {
     "name": "zones-54",
+    "note": "hello",
     "attr24": "AB746",
     "attr46": 51151,
     "attr30": "s2597",
@@ -684,6 +739,7 @@
   },
   {
     "name": "zones-55",
+    "note": "hello",
     "attr50": "s7513",
     "attr26": 6148,
     "attr38": false,
@@ -697,6 +753,7 @@
   },
   {
     "name": "zones-56",
+    "note": "hello",
     "attr18": true,
     "attr42": "e42_1",
     "attr1": 22284,
@@ -709,6 +766,7 @@
   },
   {
     "name": "zones-57",
+    "note": "hello",
     "attr22": "e22_0",
     "attr29": "AB147",
     "attr26": 15414,
@@ -721,6 +779,7 @@
   },
   {
     "name": "zones-58",
+    "note": "hello",
     "attr14": "AB573",
     "attr67": "e67_3",
     "attr32": "e32_2",
@@ -732,6 +791,7 @@
   },
   {
     "name": "zones-59",
+    "note": "hello",
     "attr10": "s9887",
     "attr8": false,
     "attr28": false,

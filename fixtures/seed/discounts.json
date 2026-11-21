@@ -1,6 +1,7 @@
 [
   {
     "name": "discounts-0",
+    "note": "hello",
     "attr18": false,
     "attr61": 38114,
     "attr38": true,
@@ -13,6 +14,7 @@
   },
   {
     "name": "discounts-1",
+    "note": "hello",
     "attr29": "AB908",
     "attr43": true,
     "attr35": "s1807",
@@ -25,6 +27,7 @@
   },
   {
     "name": "discounts-2",
+    "note": "hello",
     "attr10": "s8575",
     "attr68": true,
     "attr53": false,
@@ -38,6 +41,7 @@
   },
   {
     "name": "discounts-3",
+    "note": "hello",
     "attr16": 89969,
     "attr63": false,
     "attr40": "s9564",
@@ -51,6 +55,7 @@
   },
   {
     "name": "discounts-4",
+    "note": "hello",
     "attr61": 1594,
     "attr35": "s5549",
     "attr74": "AB880",
@@ -63,6 +68,7 @@
   },
   {
     "name": "discounts-5",
+    "note": "hello",
     "attr58": true,
     "attr24": "AB555",
     "attr43": true,
@@ -74,6 +80,7 @@
   },
   {
     "name": "discounts-6",
+    "note": "hello",
     "attr9": "AB356",
     "attr30": "s1652",
     "attr46": 7180,
@@ -86,6 +93,7 @@
   },
   {
     "name": "discounts-7",
+    "note": "hello",
     "attr2": "e2_4",
     "attr29": "AB262",
     "attr41": 51439,
@@ -99,6 +107,7 @@
   },
   {
     "name": "discounts-8",
+    "note": "hello",
     "attr9": "AB301",
     "attr48": true,
     "attr27": "e27_4",
@@ -112,6 +121,7 @@
   },
   {
     "name": "discounts-9",
+    "note": "hello",
     "attr53": true,
     "attr52": "e52_1",
     "attr3": false,
@@ -124,6 +134,7 @@
   },
   {
     "name": "discounts-10",
+    "note": "hello",
     "attr35": "s3106",
     "attr27": "e27_2",
     "attr34": "AB459",
@@ -137,6 +148,7 @@
   },
   {
     "name": "discounts-11",
+    "note": "hello",
     "attr2": "e2_1",
     "attr40": "s8372",
     "attr42": "e42_1",
@@ -149,6 +161,7 @@
   },
   {
     "name": "discounts-12",
+    "note": "hello",
     "attr43": false,
     "attr2": "e2_3",
     "attr62": "e62_0",
@@ -162,6 +175,7 @@
   },
   {
     "name": "discounts-13",
+    "note": "hello",
     "attr74": "AB543",
     "attr58": true,
     "attr43": false,
@@ -175,6 +189,7 @@
   },
   {
     "name": "discounts-14",
+    "note": "hello",
     "attr17": "e17_4",
     "attr22": "e22_1",
     "attr23": true,
@@ -188,6 +203,7 @@
   },
   {
     "name": "discounts-15",
+    "note": "hello",
     "attr65": "s355",
     "attr4": "AB512",
     "attr11": 10153,
@@ -200,6 +216,7 @@
   },
   {
     "name": "discounts-16",
+    "note": "hello",
     "attr38": false,
     "attr65": "s923",
     "attr42": "e42_4",
@@ -213,6 +230,7 @@
   },
   {
     "name": "discounts-17",
+    "note": "hello",
     "attr20": "s3254",
     "attr48": true,
     "attr37": "e37_0",
@@ -225,6 +243,7 @@
   },
   {
     "name": "discounts-18",
+    "note": "hello",
     "attr66": 20731,
     "attr19": "AB248",
     "attr9": "AB645",
@@ -238,6 +257,7 @@
   },
   {
     "name": "discounts-19",
+    "note": "hello",
     "attr50": "s8488",
     "attr39": "AB852",
     "attr1": 6643,
@@ -249,6 +269,7 @@
   },
   {
     "name": "discounts-20",
+    "note": "hello",
     "attr11": 8005,
     "attr35": "s9064",
     "attr18": true,
@@ -261,6 +282,7 @@
   },
   {
     "name": "discounts-21",
+    "note": "hello",
     "attr53": true,
     "attr40": "s4015",
     "attr5": "s1622",
@@ -274,6 +296,7 @@
   },
   {
     "name": "discounts-22",
+    "note": "hello",
     "attr59": "AB251",
     "attr50": "s4787",
     "attr39": "AB204",
@@ -287,6 +310,7 @@
   },
   {
     "name": "discounts-23",
+    "note": "hello",
     "attr34": "AB622",
     "attr48": true,
     "attr55": "s2612",
@@ -299,6 +323,7 @@
   },
   {
     "name": "discounts-24",
+    "note": "hello",
     "attr0": "s7536",
     "attr8": true,
     "attr79": "AB221",
@@ -312,6 +337,7 @@
   },
   {
     "name": "discounts-25",
+    "note": "hello",
     "attr10": "s8181",
     "attr41": 67000,
     "attr39": "AB705",
@@ -324,6 +350,7 @@
   },
   {
     "name": "discounts-26",
+    "note": "hello",
     "attr76": 8454,
     "attr68": true,
     "attr45": "s9522",
@@ -337,6 +364,7 @@
   },
   {
     "name": "discounts-27",
+    "note": "hello",
     "attr3": true,
     "attr56": 143,
     "attr44": "AB112",
@@ -350,6 +378,7 @@
   },
   {
     "name": "discounts-28",
+    "note": "hello",
     "attr75": "s5496",
     "attr12": "e12_2",
     "attr76": 50411,
@@ -363,6 +392,7 @@
   },
   {
     "name": "discounts-29",
+    "note": "hello",
     "attr0": "s7563",
     "attr1": 6479,
     "attr40": "s1753",
@@ -376,6 +406,7 @@
   },
   {
     "name": "discounts-30",
+    "note": "hello",
     "attr4": "AB433",
     "attr76": 3335,
     "attr29": "AB850",
@@ -389,6 +420,7 @@
   },
   {
     "name": "discounts-31",
+    "note": "hello",
     "attr6": 24378,
     "attr51": 54565,
     "attr33": false,
@@ -402,6 +434,7 @@
   },
   {
     "name": "discounts-32",
+    "note": "hello",
     "attr59": "AB380",
     "attr73": false,
     "attr40": "s4401",
@@ -415,6 +448,7 @@
   },
   {
     "name": "discounts-33",
+    "note": "hello",
     "attr54": "AB318",
     "attr44": "AB406",
     "attr31": 8485,
@@ -428,6 +462,7 @@
   },
   {
     "name": "discounts-34",
+    "note": "hello",
     "attr54": "AB456",
     "attr19": "AB424",
     "attr20": "s5507",
@@ -441,6 +476,7 @@
   },
   {
     "name": "discounts-35",
+    "note": "hello",
     "attr78": false,
     "attr17": "e17_1",
     "attr50": "s2615",
@@ -453,6 +489,7 @@
   },
   {
     "name": "discounts-36",
+    "note": "hello",
     "attr66": 5896,
     "attr4": "AB611",
     "attr0": "s2373",
@@ -465,6 +502,7 @@
   },
   {
     "name": "discounts-37",
+    "note": "hello",
     "attr11": 9899,
     "attr7": "e7_0",
     "attr10": "s6077",
@@ -478,6 +516,7 @@
   },
   {
     "name": "discounts-38",
+    "note": "hello",
     "attr44": "AB528",
     "attr45": "s3870",
     "attr4": "AB784",
@@ -491,6 +530,7 @@
   },
   {
     "name": "discounts-39",
+    "note": "hello",
     "attr5": "s4414",
     "attr1": 12673,
     "attr33": true,
@@ -503,6 +543,7 @@
   },
   {
     "name": "discounts-40",
+    "note": "hello",
     "attr51": 24168,
     "attr14": "AB423",
     "attr56": 268,
@@ -516,6 +557,7 @@
   },
   {
     "name": "discounts-41",
+    "note": "hello",
     "attr28": true,
     "attr50": "s2503",
     "attr78": false,
@@ -529,6 +571,7 @@
   },
   {
     "name": "discounts-42",
+    "note": "hello",
     "attr77": "e77_2",
     "attr75": "s5181",
     "attr40": "s1196",
@@ -541,6 +584,7 @@
   },
   {
     "name": "discounts-43",
+    "note": "hello",
     "attr76": 10651,
     "attr59": "AB413",
     "attr33": true,
@@ -553,6 +597,7 @@
   },
   {
     "name": "discounts-44",
+    "note": "hello",
     "attr39": "AB910",
     "attr27": "e27_4",
     "attr56": 411,
@@ -565,6 +610,7 @@
   },
   {
     "name": "discounts-45",
+    "note": "hello",
     "attr63": false,
     "attr9": "AB173",
     "attr74": "AB647",
@@ -578,6 +624,7 @@
   },
   {
     "name": "discounts-46",
+    "note": "hello",
     "attr62": "e62_4",
     "attr15": "s5185",
     "attr57": "e57_0",
@@ -591,6 +638,7 @@
   },
   {
     "name": "discounts-47",
+    "note": "hello",
     "attr11": 9323,
     "attr41": 28495,
     "attr60": "s1604",
@@ -602,6 +650,7 @@
   },
   {
     "name": "discounts-48",
+    "note": "hello",
     "attr8": false,
     "attr36": 42371,
     "attr18": true,
@@ -614,6 +663,7 @@
   },
   {
     "name": "discounts-49",
+    "note": "hello",
     "attr77": "e77_2",
     "attr75": "s5822",
     "attr69": "AB890",
@@ -627,6 +677,7 @@
   },
   {
     "name": "discounts-50",
+    "note": "hello",
     "attr59": "AB139",
     "attr29": "AB525",
     "attr51": 4805,
@@ -640,6 +691,7 @@
   },
   {
     "name": "discounts-51",
+    "note": "hello",
     "attr37": "e37_0",
     "attr39": "AB118",
     "attr65": "s2602",
@@ -652,6 +704,7 @@
   },
   {
     "name": "discounts-52",
+    "note": "hello",
     "attr62": "e62_0",
     "attr45": "s7261",
     "attr42": "e42_3",
@@ -665,6 +718,7 @@
   },
   {
     "name": "discounts-53",
+    "note": "hello",
     "attr71": 5288,
     "attr49": "AB761",
     "attr3": true,
@@ -677,6 +731,7 @@
   },
   {
     "name": "discounts-54",
+    "note": "hello",
     "attr50": "s291",
     "attr70": "s3006",
     "attr68": false,
@@ -689,6 +744,7 @@
   },
   {
     "name": "discounts-55",
+    "note": "hello",
     "attr35": "s6029",
     "attr40": "s6748",
     "attr43": true,
@@ -701,6 +757,7 @@
   },
   {
     "name": "discounts-56",
+    "note": "hello",
     "attr37": "e37_3",
     "attr47": "e47_4",
     "attr57": "e57_1",
@@ -713,6 +770,7 @@
   },
   {
     "name": "discounts-57",
+    "note": "hello",
     "attr63": false,
     "attr15": "s63",
     "attr47": "e47_0",
@@ -726,6 +784,7 @@
   },
   {
     "name": "discounts-58",
+    "note": "hello",
     "attr19": "AB146",
     "attr66": 6163,
     "attr10": "s4151",
@@ -739,6 +798,7 @@
   },
   {
     "name": "discounts-59",
+    "note": "hello",
     "attr38": false,
     "attr23": true,
     "attr69": "AB366",

@@ -1,6 +1,7 @@
 [
   {
     "name": "carriers2-0",
+    "priceCents": 250,
     "attr66": 34941,
     "attr10": "s1940",
     "attr5": "s7574",
@@ -14,6 +15,7 @@
   },
   {
     "name": "carriers2-1",
+    "priceCents": 250,
     "attr64": "AB139",
     "attr58": false,
     "attr14": "AB596",
@@ -25,6 +27,7 @@
   },
   {
     "name": "carriers2-2",
+    "priceCents": 250,
     "attr5": "s1674",
     "attr38": true,
     "attr33": false,
@@ -37,6 +40,7 @@
   },
   {
     "name": "carriers2-3",
+    "priceCents": 250,
     "attr71": 8602,
     "attr12": "e12_2",
     "attr73": true,
@@ -50,6 +54,7 @@
   },
   {
     "name": "carriers2-4",
+    "priceCents": 250,
     "attr59": "AB672",
     "attr77": "e77_0",
     "attr38": false,
@@ -62,6 +67,7 @@
   },
   {
     "name": "carriers2-5",
+    "priceCents": 250,
     "attr77": "e77_0",
     "attr12": "e12_3",
     "attr1": 2239,
@@ -75,6 +81,7 @@
   },
   {
     "name": "carriers2-6",
+    "priceCents": 250,
     "attr23": true,
     "attr78": true,
     "attr75": "s5997",
@@ -87,6 +94,7 @@
   },
   {
     "name": "carriers2-7",
+    "priceCents": 250,
     "attr29": "AB117",
     "attr6": 6905,
     "attr42": "e42_1",
@@ -100,6 +108,7 @@
   },
   {
     "name": "carriers2-8",
+    "priceCents": 250,
     "attr55": "s7476",
     "attr67": "e67_3",
     "attr47": "e47_4",
@@ -112,6 +121,7 @@
   },
   {
     "name": "carriers2-9",
+    "priceCents": 250,
     "attr27": "e27_4",
     "attr22": "e22_2",
     "attr70": "s9648",
@@ -123,6 +133,7 @@
   },
   {
     "name": "carriers2-10",
+    "priceCents": 250,
     "attr46": 45411,
     "attr26": 63058,
     "attr45": "s9586",
@@ -136,6 +147,7 @@
   },
   {
     "name": "carriers2-11",
+    "priceCents": 250,
     "attr7": "e7_4",
     "attr53": false,
     "attr43": true,
@@ -147,6 +159,7 @@
   },
   {
     "name": "carriers2-12",
+    "priceCents": 250,
     "attr1": 9655,
     "attr66": 47681,
     "attr11": 20351,
@@ -160,6 +173,7 @@
   },
   {
     "name": "carriers2-13",
+    "priceCents": 250,
     "attr12": "e12_2",
     "attr11": 41758,
     "attr63": false,
@@ -173,6 +187,7 @@
   },
   {
     "name": "carriers2-14",
+    "priceCents": 250,
     "attr15": "s9047",
     "attr77": "e77_0",
     "attr75": "s4610",
@@ -185,6 +200,7 @@
   },
   {
     "name": "carriers2-15",
+    "priceCents": 250,
     "attr76": 1095,
     "attr41": 17358,
     "attr64": "AB251",
@@ -198,6 +214,7 @@
   },
   {
     "name": "carriers2-16",
+    "priceCents": 250,
     "attr27": "e27_0",
     "attr4": "AB301",
     "attr23": true,
@@ -209,6 +226,7 @@
   },
   {
     "name": "carriers2-17",
+    "priceCents": 250,
     "attr10": "s2007",
     "attr35": "s4437",
     "attr75": "s3560",
@@ -222,6 +240,7 @@
   },
   {
     "name": "carriers2-18",
+    "priceCents": 250,
     "attr62": "e62_4",
     "attr5": "s6317",
     "attr28": false,
@@ -233,6 +252,7 @@
   },
   {
     "name": "carriers2-19",
+    "priceCents": 250,
     "attr55": "s3159",
     "attr0": "s9156",
     "attr64": "AB151",
@@ -246,6 +266,7 @@
   },
   {
     "name": "carriers2-20",
+    "priceCents": 250,
     "attr66": 49735,
     "attr3": true,
     "attr51": 18537,
@@ -259,6 +280,7 @@
   },
   {
     "name": "carriers2-21",
+    "priceCents": 250,
     "attr49": "AB487",
     "attr11": 26621,
     "attr23": true,
@@ -272,6 +294,7 @@
   },
   {
     "name": "carriers2-22",
+    "priceCents": 250,
     "attr78": false,
     "attr35": "s7643",
     "attr42": "e42_1",
@@ -284,6 +307,7 @@
   },
   {
     "name": "carriers2-23",
+    "priceCents": 250,
     "attr52": "e52_3",
     "attr13": true,
     "attr70": "s4884",
@@ -297,6 +321,7 @@
   },
   {
     "name": "carriers2-24",
+    "priceCents": 250,
     "attr77": "e77_1",
     "attr50": "s4760",
     "attr37": "e37_2",
@@ -309,6 +334,7 @@
   },
   {
     "name": "carriers2-25",
+    "priceCents": 250,
     "attr75": "s4732",
     "attr13": true,
     "attr71": 23730,
@@ -321,6 +347,7 @@
   },
   {
     "name": "carriers2-26",
+    "priceCents": 250,
     "attr26": 32866,
     "attr20": "s9516",
     "attr1": 9645,
@@ -332,6 +359,7 @@
   },
   {
     "name": "carriers2-27",
+    "priceCents": 250,
     "attr42": "e42_0",
     "attr69": "AB924",
     "attr39": "AB731",
@@ -343,6 +371,7 @@
   },
   {
     "name": "carriers2-28",
+    "priceCents": 250,
     "attr10": "s2574",
     "attr69": "AB511",
     "attr51": 19339,
@@ -356,6 +385,7 @@
   },
   {
     "name": "carriers2-29",
+    "priceCents": 250,
     "attr57": "e57_1",
     "attr61": 5857,
     "attr6": 5527,
@@ -369,6 +399,7 @@
   },
   {
     "name": "carriers2-30",
+    "priceCents": 250,
     "attr49": "AB852",
     "attr69": "AB955",
     "attr52": "e52_4",
@@ -381,6 +412,7 @@
   },
   {
     "name": "carriers2-31",
+    "priceCents": 250,
     "attr41": 15339,
     "attr37": "e37_0",
     "attr29": "AB625",
@@ -394,6 +426,7 @@
   },
   {
     "name": "carriers2-32",
+    "priceCents": 250,
     "attr13": true,
     "attr36": 9403,
     "attr60": "s6982",
@@ -406,6 +439,7 @@
   },
   {
     "name": "carriers2-33",
+    "priceCents": 250,
     "attr60": "s3533",
     "attr61": 2252,
     "attr28": false,
@@ -419,6 +453,7 @@
   },
   {
     "name": "carriers2-34",
+    "priceCents": 250,
     "attr0": "s3514",
     "attr40": "s5050",
     "attr10": "s6596",
@@ -432,6 +467,7 @@
   },
   {
     "name": "carriers2-35",
+    "priceCents": 250,
     "attr70": "s7052",
     "attr61": 10472,
     "attr69": "AB285",
@@ -444,6 +480,7 @@
   },
   {
     "name": "carriers2-36",
+    "priceCents": 250,
     "attr57": "e57_2",
     "attr21": 79472,
     "attr13": false,
@@ -457,6 +494,7 @@
   },
   {
     "name": "carriers2-37",
+    "priceCents": 250,
     "attr79": "AB998",
     "attr35": "s3894",
     "attr36": 17560,
@@ -469,6 +507,7 @@
   },
   {
     "name": "carriers2-38",
+    "priceCents": 250,
     "attr32": "e32_4",
     "attr45": "s9070",
     "attr59": "AB100",
@@ -481,6 +520,7 @@
   },
   {
     "name": "carriers2-39",
+    "priceCents": 250,
     "attr51": 10359,
     "attr39": "AB376",
     "attr15": "s6117",
@@ -494,6 +534,7 @@
   },
   {
     "name": "carriers2-40",
+    "priceCents": 250,
     "attr4": "AB965",
     "attr62": "e62_2",
     "attr41": 75715,
@@ -507,6 +548,7 @@
   },
   {
     "name": "carriers2-41",
+    "priceCents": 250,
     "attr52": "e52_4",
     "attr67": "e67_3",
     "attr70": "s8585",
@@ -520,6 +562,7 @@
   },
   {
     "name": "carriers2-42",
+    "priceCents": 250,
     "attr6": 12893,
     "attr21": 34520,
     "attr70": "s4456",
@@ -533,6 +576,7 @@
   },
   {
     "name": "carriers2-43",
+    "priceCents": 250,
     "attr24": "AB180",
     "attr76": 1039,
     "attr40": "s7762",
@@ -546,6 +590,7 @@
   },
   {
     "name": "carriers2-44",
+    "priceCents": 250,
     "attr24": "AB354",
     "attr38": true,
     "attr77": "e77_2",
@@ -557,6 +602,7 @@
   },
   {
     "name": "carriers2-45",
+    "priceCents": 250,
     "attr67": "e67_3",
     "attr1": 1088,
     "attr42": "e42_2",
@@ -568,6 +614,7 @@
   },
   {
     "name": "carriers2-46",
+    "priceCents": 250,
     "attr38": false,
     "attr15": "s538",
     "attr51": 18375,
@@ -580,6 +627,7 @@
   },
   {
     "name": "carriers2-47",
+    "priceCents": 250,
     "attr48": true,
     "attr58": true,
     "attr8": true,
@@ -592,6 +640,7 @@
   },
   {
     "name": "carriers2-48",
+    "priceCents": 250,
     "attr77": "e77_3",
     "attr47": "e47_1",
     "attr46": 8777,
@@ -605,6 +654,7 @@
   },
   {
     "name": "carriers2-49",
+    "priceCents": 250,
     "attr30": "s3779",
     "attr61": 15887,
     "attr43": true,
@@ -618,6 +668,7 @@
   },
   {
     "name": "carriers2-50",
+    "priceCents": 250,
     "attr55": "s502",
     "attr23": true,
     "attr73": false,
@@ -631,6 +682,7 @@
   },
   {
     "name": "carriers2-51",
+    "priceCents": 250,
     "attr38": false,
     "attr18": false,
     "attr21": 45228,
@@ -643,6 +695,7 @@
   },
   {
     "name": "carriers2-52",
+    "priceCents": 250,
     "attr73": false,
     "attr76": 2844,
     "attr75": "s8522",
@@ -656,6 +709,7 @@
   },
   {
     "name": "carriers2-53",
+    "priceCents": 250,
     "attr47": "e47_0",
     "attr74": "AB267",
     "attr65": "s8440",
@@ -669,6 +723,7 @@
   },
   {
     "name": "carriers2-54",
+    "priceCents": 250,
     "attr72": "e72_0",
     "attr23": false,
     "attr38": true,
@@ -682,6 +737,7 @@
   },
   {
     "name": "carriers2-55",
+    "priceCents": 250,
     "attr28": true,
     "attr52": "e52_0",
     "attr15": "s6050",
@@ -694,6 +750,7 @@
   },
   {
     "name": "carriers2-56",
+    "priceCents": 250,
     "attr40": "s1338",
     "attr11": 30298,
     "attr49": "AB660",
@@ -706,6 +763,7 @@
   },
   {
     "name": "carriers2-57",
+    "priceCents": 250,
     "attr60": "s4478",
     "attr61": 12487,
     "attr34": "AB508",
@@ -718,6 +776,7 @@
   },
   {
     "name": "carriers2-58",
+    "priceCents": 250,
     "attr45": "s9420",
     "attr27": "e27_1",
     "attr24": "AB726",
@@ -731,6 +790,7 @@
   },
   {
     "name": "carriers2-59",
+    "priceCents": 250,
     "attr39": "AB181",
     "attr65": "s5086",
     "attr30": "s2117",

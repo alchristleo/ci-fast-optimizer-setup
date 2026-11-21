@@ -1,6 +1,8 @@
 [
   {
     "name": "contracts2-0",
+    "code": "AB123",
+    "priceCents": 250,
     "attr46": 1789,
     "attr10": "s3364",
     "attr3": true,
@@ -13,6 +15,8 @@
   },
   {
     "name": "contracts2-1",
+    "code": "AB123",
+    "priceCents": 250,
     "attr60": "s4945",
     "attr3": true,
     "attr63": false,
@@ -25,6 +29,8 @@
   },
   {
     "name": "contracts2-2",
+    "code": "AB123",
+    "priceCents": 250,
     "attr29": "AB871",
     "attr26": 53530,
     "attr63": true,
@@ -37,6 +43,8 @@
   },
   {
     "name": "contracts2-3",
+    "code": "AB123",
+    "priceCents": 250,
     "attr62": "e62_0",
     "attr28": true,
     "attr56": 28226,
@@ -47,6 +55,8 @@
   },
   {
     "name": "contracts2-4",
+    "code": "AB123",
+    "priceCents": 250,
     "attr1": 54284,
     "attr9": "AB699",
     "attr6": 11610,
@@ -60,6 +70,8 @@
   },
   {
     "name": "contracts2-5",
+    "code": "AB123",
+    "priceCents": 250,
     "attr45": "s1411",
     "attr71": 70365,
     "attr7": "e7_3",
@@ -71,6 +83,8 @@
   },
   {
     "name": "contracts2-6",
+    "code": "AB123",
+    "priceCents": 250,
     "attr68": true,
     "attr72": "e72_1",
     "attr25": "s6973",
@@ -83,6 +97,8 @@
   },
   {
     "name": "contracts2-7",
+    "code": "AB123",
+    "priceCents": 250,
     "attr64": "AB270",
     "attr30": "s388",
     "attr23": true,
@@ -96,6 +112,8 @@
   },
   {
     "name": "contracts2-8",
+    "code": "AB123",
+    "priceCents": 250,
     "attr31": 11238,
     "attr23": true,
     "attr24": "AB303",
@@ -108,6 +126,8 @@
   },
   {
     "name": "contracts2-9",
+    "code": "AB123",
+    "priceCents": 250,
     "attr19": "AB442",
     "attr0": "s3855",
     "attr2": "e2_2",
@@ -120,6 +140,8 @@
   },
   {
     "name": "contracts2-10",
+    "code": "AB123",
+    "priceCents": 250,
     "attr31": 5332,
     "attr28": true,
     "attr34": "AB949",
@@ -133,6 +155,8 @@
   },
   {
     "name": "contracts2-11",
+    "code": "AB123",
+    "priceCents": 250,
     "attr42": "e42_1",
     "attr56": 16759,
     "attr55": "s9588",
@@ -145,6 +169,8 @@
   },
   {
     "name": "contracts2-12",
+    "code": "AB123",
+    "priceCents": 250,
     "attr8": true,
     "attr59": "AB224",
     "attr46": 10606,
@@ -158,6 +184,8 @@
   },
   {
     "name": "contracts2-13",
+    "code": "AB123",
+    "priceCents": 250,
     "attr57": "e57_2",
     "attr66": 7611,
     "attr14": "AB723",
@@ -170,6 +198,8 @@
   },
   {
     "name": "contracts2-14",
+    "code": "AB123",
+    "priceCents": 250,
     "attr8": true,
     "attr70": "s9048",
     "attr64": "AB350",
@@ -183,6 +213,8 @@
   },
   {
     "name": "contracts2-15",
+    "code": "AB123",
+    "priceCents": 250,
     "attr30": "s236",
     "attr0": "s3790",
     "attr17": "e17_0",
@@ -196,6 +228,8 @@
   },
   {
     "name": "contracts2-16",
+    "code": "AB123",
+    "priceCents": 250,
     "attr73": false,
     "attr49": "AB551",
     "attr39": "AB425",
@@ -209,6 +243,8 @@
   },
   {
     "name": "contracts2-17",
+    "code": "AB123",
+    "priceCents": 250,
     "attr35": "s3995",
     "attr13": false,
     "attr3": false,
@@ -221,6 +257,8 @@
   },
   {
     "name": "contracts2-18",
+    "code": "AB123",
+    "priceCents": 250,
     "attr14": "AB490",
     "attr51": 71232,
     "attr76": 25989,
@@ -233,6 +271,8 @@
   },
   {
     "name": "contracts2-19",
+    "code": "AB123",
+    "priceCents": 250,
     "attr1": 4009,
     "attr36": 11421,
     "attr2": "e2_3",
@@ -245,6 +285,8 @@
   },
   {
     "name": "contracts2-20",
+    "code": "AB123",
+    "priceCents": 250,
     "attr18": false,
     "attr28": true,
     "attr70": "s6551",
@@ -257,6 +299,8 @@
   },
   {
     "name": "contracts2-21",
+    "code": "AB123",
+    "priceCents": 250,
     "attr53": true,
     "attr48": false,
     "attr72": "e72_0",
@@ -269,6 +313,8 @@
   },
   {
     "name": "contracts2-22",
+    "code": "AB123",
+    "priceCents": 250,
     "attr66": 3792,
     "attr7": "e7_2",
     "attr29": "AB974",
@@ -282,6 +328,8 @@
   },
   {
     "name": "contracts2-23",
+    "code": "AB123",
+    "priceCents": 250,
     "attr4": "AB715",
     "attr12": "e12_1",
     "attr64": "AB267",
@@ -294,6 +342,8 @@
   },
   {
     "name": "contracts2-24",
+    "code": "AB123",
+    "priceCents": 250,
     "attr74": "AB162",
     "attr25": "s6608",
     "attr14": "AB273",
@@ -307,6 +357,8 @@
   },
   {
     "name": "contracts2-25",
+    "code": "AB123",
+    "priceCents": 250,
     "attr44": "AB988",
     "attr32": "e32_2",
     "attr37": "e37_1",
@@ -320,6 +372,8 @@
   },
   {
     "name": "contracts2-26",
+    "code": "AB123",
+    "priceCents": 250,
     "attr40": "s9495",
     "attr63": true,
     "attr33": true,
@@ -333,6 +387,8 @@
   },
   {
     "name": "contracts2-27",
+    "code": "AB123",
+    "priceCents": 250,
     "attr10": "s9276",
     "attr74": "AB510",
     "attr52": "e52_0",
@@ -345,6 +401,8 @@
   },
   {
     "name": "contracts2-28",
+    "code": "AB123",
+    "priceCents": 250,
     "attr21": 50307,
     "attr54": "AB644",
     "attr59": "AB858",
@@ -356,6 +414,8 @@
   },
   {
     "name": "contracts2-29",
+    "code": "AB123",
+    "priceCents": 250,
     "attr69": "AB454",
     "attr29": "AB237",
     "attr57": "e57_1",
@@ -369,6 +429,8 @@
   },
   {
     "name": "contracts2-30",
+    "code": "AB123",
+    "priceCents": 250,
     "attr7": "e7_1",
     "attr8": true,
     "attr3": true,
@@ -382,6 +444,8 @@
   },
   {
     "name": "contracts2-31",
+    "code": "AB123",
+    "priceCents": 250,
     "attr69": "AB857",
     "attr22": "e22_3",
     "attr29": "AB836",
@@ -394,6 +458,8 @@
   },
   {
     "name": "contracts2-32",
+    "code": "AB123",
+    "priceCents": 250,
     "attr46": 36980,
     "attr35": "s6580",
     "attr18": false,
@@ -407,6 +473,8 @@
   },
   {
     "name": "contracts2-33",
+    "code": "AB123",
+    "priceCents": 250,
     "attr52": "e52_4",
     "attr46": 9390,
     "attr74": "AB459",
@@ -419,6 +487,8 @@
   },
   {
     "name": "contracts2-34",
+    "code": "AB123",
+    "priceCents": 250,
     "attr3": true,
     "attr71": 66144,
     "attr20": "s233",
@@ -431,6 +501,8 @@
   },
   {
     "name": "contracts2-35",
+    "code": "AB123",
+    "priceCents": 250,
     "attr46": 24102,
     "attr13": false,
     "attr38": false,
@@ -444,6 +516,8 @@
   },
   {
     "name": "contracts2-36",
+    "code": "AB123",
+    "priceCents": 250,
     "attr63": true,
     "attr57": "e57_3",
     "attr66": 9642,
@@ -456,6 +530,8 @@
   },
   {
     "name": "contracts2-37",
+    "code": "AB123",
+    "priceCents": 250,
     "attr19": "AB508",
     "attr34": "AB993",
     "attr74": "AB665",
@@ -467,6 +543,8 @@
   },
   {
     "name": "contracts2-38",
+    "code": "AB123",
+    "priceCents": 250,
     "attr35": "s9635",
     "attr22": "e22_0",
     "attr18": true,
@@ -480,6 +558,8 @@
   },
   {
     "name": "contracts2-39",
+    "code": "AB123",
+    "priceCents": 250,
     "attr10": "s753",
     "attr28": true,
     "attr6": 34234,
@@ -493,6 +573,8 @@
   },
   {
     "name": "contracts2-40",
+    "code": "AB123",
+    "priceCents": 250,
     "attr25": "s85",
     "attr2": "e2_4",
     "attr31": 14209,
@@ -506,6 +588,8 @@
   },
   {
     "name": "contracts2-41",
+    "code": "AB123",
+    "priceCents": 250,
     "attr24": "AB417",
     "attr56": 65590,
     "attr14": "AB464",
@@ -518,6 +602,8 @@
   },
   {
     "name": "contracts2-42",
+    "code": "AB123",
+    "priceCents": 250,
     "attr34": "AB709",
     "attr41": 5091,
     "attr59": "AB975",
@@ -531,6 +617,8 @@
   },
   {
     "name": "contracts2-43",
+    "code": "AB123",
+    "priceCents": 250,
     "attr68": false,
     "attr49": "AB357",
     "attr76": 32622,
@@ -544,6 +632,8 @@
   },
   {
     "name": "contracts2-44",
+    "code": "AB123",
+    "priceCents": 250,
     "attr65": "s3848",
     "attr27": "e27_3",
     "attr50": "s8730",
@@ -556,6 +646,8 @@
   },
   {
     "name": "contracts2-45",
+    "code": "AB123",
+    "priceCents": 250,
     "attr40": "s1052",
     "attr10": "s333",
     "attr78": true,
@@ -567,6 +659,8 @@
   },
   {
     "name": "contracts2-46",
+    "code": "AB123",
+    "priceCents": 250,
     "attr47": "e47_3",
     "attr33": false,
     "attr45": "s2023",
@@ -579,6 +673,8 @@
   },
   {
     "name": "contracts2-47",
+    "code": "AB123",
+    "priceCents": 250,
     "attr31": 5672,
     "attr55": "s9135",
     "attr57": "e57_2",
@@ -591,6 +687,8 @@
   },
   {
     "name": "contracts2-48",
+    "code": "AB123",
+    "priceCents": 250,
     "attr14": "AB677",
     "attr20": "s4063",
     "attr49": "AB876",
@@ -604,6 +702,8 @@
   },
   {
     "name": "contracts2-49",
+    "code": "AB123",
+    "priceCents": 250,
     "attr29": "AB772",
     "attr59": "AB126",
     "attr53": true,
@@ -616,6 +716,8 @@
   },
   {
     "name": "contracts2-50",
+    "code": "AB123",
+    "priceCents": 250,
     "attr7": "e7_4",
     "attr36": 4473,
     "attr42": "e42_2",
@@ -629,6 +731,8 @@
   },
   {
     "name": "contracts2-51",
+    "code": "AB123",
+    "priceCents": 250,
     "attr7": "e7_3",
     "attr22": "e22_1",
     "attr0": "s5588",
@@ -642,6 +746,8 @@
   },
   {
     "name": "contracts2-52",
+    "code": "AB123",
+    "priceCents": 250,
     "attr51": 49407,
     "attr45": "s7965",
     "attr41": 2837,
@@ -655,6 +761,8 @@
   },
   {
     "name": "contracts2-53",
+    "code": "AB123",
+    "priceCents": 250,
     "attr0": "s5914",
     "attr47": "e47_1",
     "attr42": "e42_4",
@@ -668,6 +776,8 @@
   },
   {
     "name": "contracts2-54",
+    "code": "AB123",
+    "priceCents": 250,
     "attr29": "AB337",
     "attr1": 47796,
     "attr75": "s8120",
@@ -681,6 +791,8 @@
   },
   {
     "name": "contracts2-55",
+    "code": "AB123",
+    "priceCents": 250,
     "attr9": "AB204",
     "attr79": "AB136",
     "attr7": "e7_0",
@@ -693,6 +805,8 @@
   },
   {
     "name": "contracts2-56",
+    "code": "AB123",
+    "priceCents": 250,
     "attr61": 7151,
     "attr71": 636,
     "attr48": false,
@@ -705,6 +819,8 @@
   },
   {
     "name": "contracts2-57",
+    "code": "AB123",
+    "priceCents": 250,
     "attr41": 2927,
     "attr74": "AB575",
     "attr19": "AB801",
@@ -718,6 +834,8 @@
   },
   {
     "name": "contracts2-58",
+    "code": "AB123",
+    "priceCents": 250,
     "attr62": "e62_2",
     "attr56": 2155,
     "attr37": "e37_2",
@@ -730,6 +848,8 @@
   },
   {
     "name": "contracts2-59",
+    "code": "AB123",
+    "priceCents": 250,
     "attr32": "e32_2",
     "attr37": "e37_1",
     "attr35": "s742",

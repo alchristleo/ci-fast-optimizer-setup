@@ -1,6 +1,7 @@
 [
   {
     "name": "lockers2-0",
+    "active": true,
     "attr4": "AB562",
     "attr33": true,
     "attr11": 6335,
@@ -13,6 +14,7 @@
   },
   {
     "name": "lockers2-1",
+    "active": true,
     "attr57": "e57_1",
     "attr69": "AB798",
     "attr31": 2423,
@@ -25,6 +27,7 @@
   },
   {
     "name": "lockers2-2",
+    "active": true,
     "attr59": "AB442",
     "attr56": 45532,
     "attr40": "s5612",
@@ -36,6 +39,7 @@
   },
   {
     "name": "lockers2-3",
+    "active": true,
     "attr66": 29055,
     "attr5": "s5110",
     "attr6": 16003,
@@ -48,6 +52,7 @@
   },
   {
     "name": "lockers2-4",
+    "active": true,
     "attr61": 30229,
     "attr3": true,
     "attr21": 6776,
@@ -60,6 +65,7 @@
   },
   {
     "name": "lockers2-5",
+    "active": true,
     "attr45": "s5233",
     "attr41": 56197,
     "attr39": "AB833",
@@ -73,6 +79,7 @@
   },
   {
     "name": "lockers2-6",
+    "active": true,
     "attr37": "e37_4",
     "attr9": "AB946",
     "attr33": false,
@@ -85,6 +92,7 @@
   },
   {
     "name": "lockers2-7",
+    "active": true,
     "attr36": 12704,
     "attr61": 19493,
     "attr65": "s9970",
@@ -98,6 +106,7 @@
   },
   {
     "name": "lockers2-8",
+    "active": true,
     "attr71": 3600,
     "attr1": 24052,
     "attr32": "e32_0",
@@ -111,6 +120,7 @@
   },
   {
     "name": "lockers2-9",
+    "active": true,
     "attr57": "e57_4",
     "attr37": "e37_0",
     "attr1": 21197,
@@ -123,6 +133,7 @@
   },
   {
     "name": "lockers2-10",
+    "active": true,
     "attr50": "s3457",
     "attr36": 10072,
     "attr75": "s5635",
@@ -134,6 +145,7 @@
   },
   {
     "name": "lockers2-11",
+    "active": true,
     "attr13": false,
     "attr42": "e42_4",
     "attr51": 15069,
@@ -146,6 +158,7 @@
   },
   {
     "name": "lockers2-12",
+    "active": true,
     "attr30": "s873",
     "attr2": "e2_4",
     "attr3": false,
@@ -159,6 +172,7 @@
   },
   {
     "name": "lockers2-13",
+    "active": true,
     "attr46": 46417,
     "attr50": "s6008",
     "attr53": true,
@@ -171,6 +185,7 @@
   },
   {
     "name": "lockers2-14",
+    "active": true,
     "attr69": "AB614",
     "attr75": "s4200",
     "attr37": "e37_1",
@@ -183,6 +198,7 @@
   },
   {
     "name": "lockers2-15",
+    "active": true,
     "attr28": true,
     "attr19": "AB482",
     "attr52": "e52_1",
@@ -195,6 +211,7 @@
   },
   {
     "name": "lockers2-16",
+    "active": true,
     "attr8": true,
     "attr65": "s5128",
     "attr42": "e42_1",
@@ -208,6 +225,7 @@
   },
   {
     "name": "lockers2-17",
+    "active": true,
     "attr57": "e57_4",
     "attr9": "AB219",
     "attr45": "s5124",
@@ -221,6 +239,7 @@
   },
   {
     "name": "lockers2-18",
+    "active": true,
     "attr2": "e2_4",
     "attr48": false,
     "attr24": "AB884",
@@ -233,6 +252,7 @@
   },
   {
     "name": "lockers2-19",
+    "active": true,
     "attr75": "s3247",
     "attr46": 13336,
     "attr41": 12444,
@@ -244,6 +264,7 @@
   },
   {
     "name": "lockers2-20",
+    "active": true,
     "attr48": true,
     "attr34": "AB964",
     "attr18": true,
@@ -256,6 +277,7 @@
   },
   {
     "name": "lockers2-21",
+    "active": true,
     "attr56": 30444,
     "attr0": "s1284",
     "attr45": "s5908",
@@ -268,6 +290,7 @@
   },
   {
     "name": "lockers2-22",
+    "active": true,
     "attr38": true,
     "attr62": "e62_1",
     "attr29": "AB759",
@@ -279,6 +302,7 @@
   },
   {
     "name": "lockers2-23",
+    "active": true,
     "attr18": false,
     "attr19": "AB823",
     "attr47": "e47_1",
@@ -291,6 +315,7 @@
   },
   {
     "name": "lockers2-24",
+    "active": true,
     "attr65": "s73",
     "attr59": "AB101",
     "attr33": false,
@@ -302,6 +327,7 @@
   },
   {
     "name": "lockers2-25",
+    "active": true,
     "attr23": false,
     "attr43": true,
     "attr53": false,
@@ -314,6 +340,7 @@
   },
   {
     "name": "lockers2-26",
+    "active": true,
     "attr50": "s6805",
     "attr51": 16704,
     "attr14": "AB737",
@@ -327,6 +354,7 @@
   },
   {
     "name": "lockers2-27",
+    "active": true,
     "attr66": 22080,
     "attr24": "AB148",
     "attr68": true,
@@ -340,6 +368,7 @@
   },
   {
     "name": "lockers2-28",
+    "active": true,
     "attr12": "e12_1",
     "attr24": "AB947",
     "attr56": 1592,
@@ -350,6 +379,7 @@
   },
   {
     "name": "lockers2-29",
+    "active": true,
     "attr6": 3991,
     "attr51": 24365,
     "attr41": 59820,
@@ -363,6 +393,7 @@
   },
   {
     "name": "lockers2-30",
+    "active": true,
     "attr71": 200,
     "attr41": 13031,
     "attr74": "AB802",
@@ -376,6 +407,7 @@
   },
   {
     "name": "lockers2-31",
+    "active": true,
     "attr30": "s8624",
     "attr64": "AB558",
     "attr75": "s2846",
@@ -389,6 +421,7 @@
   },
   {
     "name": "lockers2-32",
+    "active": true,
     "attr54": "AB210",
     "attr79": "AB330",
     "attr70": "s2869",
@@ -401,6 +434,7 @@
   },
   {
     "name": "lockers2-33",
+    "active": true,
     "attr22": "e22_4",
     "attr73": false,
     "attr23": false,
@@ -413,6 +447,7 @@
   },
   {
     "name": "lockers2-34",
+    "active": true,
     "attr65": "s2879",
     "attr47": "e47_2",
     "attr29": "AB543",
@@ -426,6 +461,7 @@
   },
   {
     "name": "lockers2-35",
+    "active": true,
     "attr66": 25318,
     "attr61": 16434,
     "attr74": "AB541",
@@ -439,6 +475,7 @@
   },
   {
     "name": "lockers2-36",
+    "active": true,
     "attr11": 91422,
     "attr27": "e27_2",
     "attr13": true,
@@ -452,6 +489,7 @@
   },
   {
     "name": "lockers2-37",
+    "active": true,
     "attr16": 52554,
     "attr4": "AB660",
     "attr57": "e57_1",
@@ -465,6 +503,7 @@
   },
   {
     "name": "lockers2-38",
+    "active": true,
     "attr41": 14560,
     "attr44": "AB990",
     "attr13": true,
@@ -478,6 +517,7 @@
   },
   {
     "name": "lockers2-39",
+    "active": true,
     "attr35": "s4988",
     "attr75": "s9583",
     "attr56": 7459,
@@ -491,6 +531,7 @@
   },
   {
     "name": "lockers2-40",
+    "active": true,
     "attr45": "s2424",
     "attr37": "e37_3",
     "attr14": "AB150",
@@ -503,6 +544,7 @@
   },
   {
     "name": "lockers2-41",
+    "active": true,
     "attr26": 57190,
     "attr3": false,
     "attr16": 51088,
@@ -515,6 +557,7 @@
   },
   {
     "name": "lockers2-42",
+    "active": true,
     "attr35": "s6435",
     "attr49": "AB199",
     "attr44": "AB688",
@@ -528,6 +571,7 @@
   },
   {
     "name": "lockers2-43",
+    "active": true,
     "attr39": "AB720",
     "attr62": "e62_1",
     "attr7": "e7_3",
@@ -540,6 +584,7 @@
   },
   {
     "name": "lockers2-44",
+    "active": true,
     "attr55": "s3095",
     "attr56": 21148,
     "attr33": true,
@@ -553,6 +598,7 @@
   },
   {
     "name": "lockers2-45",
+    "active": true,
     "attr55": "s2318",
     "attr50": "s9048",
     "attr35": "s7280",
@@ -566,6 +612,7 @@
   },
   {
     "name": "lockers2-46",
+    "active": true,
     "attr18": true,
     "attr51": 2448,
     "attr29": "AB883",
@@ -577,6 +624,7 @@
   },
   {
     "name": "lockers2-47",
+    "active": true,
     "attr2": "e2_0",
     "attr1": 33557,
     "attr43": true,
@@ -590,6 +638,7 @@
   },
   {
     "name": "lockers2-48",
+    "active": true,
     "attr24": "AB895",
     "attr39": "AB178",
     "attr8": true,
@@ -603,6 +652,7 @@
   },
   {
     "name": "lockers2-49",
+    "active": true,
     "attr17": "e17_3",
     "attr2": "e2_1",
     "attr20": "s4116",
@@ -615,6 +665,7 @@
   },
   {
     "name": "lockers2-50",
+    "active": true,
     "attr11": 3364,
     "attr32": "e32_3",
     "attr34": "AB629",
@@ -627,6 +678,7 @@
   },
   {
     "name": "lockers2-51",
+    "active": true,
     "attr31": 3308,
     "attr2": "e2_2",
     "attr71": 11009,
@@ -638,6 +690,7 @@
   },
   {
     "name": "lockers2-52",
+    "active": true,
     "attr7": "e7_4",
     "attr70": "s2433",
     "attr20": "s5382",
@@ -650,6 +703,7 @@
   },
   {
     "name": "lockers2-53",
+    "active": true,
     "attr78": false,
     "attr11": 34304,
     "attr67": "e67_2",
@@ -663,6 +717,7 @@
   },
   {
     "name": "lockers2-54",
+    "active": true,
     "attr3": false,
     "attr44": "AB597",
     "attr14": "AB231",
@@ -675,6 +730,7 @@
   },
   {
     "name": "lockers2-55",
+    "active": true,
     "attr52": "e52_3",
     "attr68": false,
     "attr30": "s2268",
@@ -687,6 +743,7 @@
   },
   {
     "name": "lockers2-56",
+    "active": true,
     "attr10": "s8475",
     "attr58": false,
     "attr0": "s9899",
@@ -699,6 +756,7 @@
   },
   {
     "name": "lockers2-57",
+    "active": true,
     "attr42": "e42_1",
     "attr8": false,
     "attr40": "s1225",
@@ -712,6 +770,7 @@
   },
   {
     "name": "lockers2-58",
+    "active": true,
     "attr17": "e17_3",
     "attr62": "e62_4",
     "attr8": true,
@@ -724,6 +783,7 @@
   },
   {
     "name": "lockers2-59",
+    "active": true,
     "attr16": 75464,
     "attr5": "s1850",
     "attr76": 62724,

@@ -1,6 +1,8 @@
 [
   {
     "name": "banners2-0",
+    "priceCents": 250,
+    "code": "AB123",
     "attr53": true,
     "attr22": "e22_1",
     "attr11": 12915,
@@ -13,6 +15,8 @@
   },
   {
     "name": "banners2-1",
+    "priceCents": 250,
+    "code": "AB123",
     "attr70": "s5621",
     "attr72": "e72_1",
     "attr14": "AB700",
@@ -25,6 +29,8 @@
   },
   {
     "name": "banners2-2",
+    "priceCents": 250,
+    "code": "AB123",
     "attr63": false,
     "attr74": "AB826",
     "attr46": 7585,
@@ -38,6 +44,8 @@
   },
   {
     "name": "banners2-3",
+    "priceCents": 250,
+    "code": "AB123",
     "attr45": "s2736",
     "attr10": "s9337",
     "attr27": "e27_3",
@@ -51,6 +59,8 @@
   },
   {
     "name": "banners2-4",
+    "priceCents": 250,
+    "code": "AB123",
     "attr38": true,
     "attr16": 3858,
     "attr37": "e37_2",
@@ -64,6 +74,8 @@
   },
   {
     "name": "banners2-5",
+    "priceCents": 250,
+    "code": "AB123",
     "attr65": "s3869",
     "attr76": 16240,
     "attr18": true,
@@ -76,6 +88,8 @@
   },
   {
     "name": "banners2-6",
+    "priceCents": 250,
+    "code": "AB123",
     "attr16": 5948,
     "attr30": "s7602",
     "attr26": 44162,
@@ -88,6 +102,8 @@
   },
   {
     "name": "banners2-7",
+    "priceCents": 250,
+    "code": "AB123",
     "attr78": true,
     "attr47": "e47_4",
     "attr17": "e17_3",
@@ -99,6 +115,8 @@
   },
   {
     "name": "banners2-8",
+    "priceCents": 250,
+    "code": "AB123",
     "attr52": "e52_2",
     "attr7": "e7_0",
     "attr16": 1284,
@@ -112,6 +130,8 @@
   },
   {
     "name": "banners2-9",
+    "priceCents": 250,
+    "code": "AB123",
     "attr41": 5568,
     "attr51": 1320,
     "attr28": true,
@@ -122,6 +142,8 @@
   },
   {
     "name": "banners2-10",
+    "priceCents": 250,
+    "code": "AB123",
     "attr61": 8840,
     "attr29": "AB877",
     "attr77": "e77_1",
@@ -134,6 +156,8 @@
   },
   {
     "name": "banners2-11",
+    "priceCents": 250,
+    "code": "AB123",
     "attr61": 12959,
     "attr48": false,
     "attr39": "AB823",
@@ -147,6 +171,8 @@
   },
   {
     "name": "banners2-12",
+    "priceCents": 250,
+    "code": "AB123",
     "attr38": false,
     "attr1": 33214,
     "attr28": false,
@@ -160,6 +186,8 @@
   },
   {
     "name": "banners2-13",
+    "priceCents": 250,
+    "code": "AB123",
     "attr13": true,
     "attr12": "e12_0",
     "attr49": "AB130",
@@ -172,6 +200,8 @@
   },
   {
     "name": "banners2-14",
+    "priceCents": 250,
+    "code": "AB123",
     "attr15": "s2536",
     "attr4": "AB257",
     "attr3": false,
@@ -185,6 +215,8 @@
   },
   {
     "name": "banners2-15",
+    "priceCents": 250,
+    "code": "AB123",
     "attr72": "e72_0",
     "attr65": "s6784",
     "attr3": false,
@@ -198,6 +230,8 @@
   },
   {
     "name": "banners2-16",
+    "priceCents": 250,
+    "code": "AB123",
     "attr73": true,
     "attr59": "AB569",
     "attr34": "AB603",
@@ -211,6 +245,8 @@
   },
   {
     "name": "banners2-17",
+    "priceCents": 250,
+    "code": "AB123",
     "attr77": "e77_3",
     "attr33": true,
     "attr63": true,
@@ -223,6 +259,8 @@
   },
   {
     "name": "banners2-18",
+    "priceCents": 250,
+    "code": "AB123",
     "attr41": 46734,
     "attr6": 11471,
     "attr44": "AB485",
@@ -235,6 +273,8 @@
   },
   {
     "name": "banners2-19",
+    "priceCents": 250,
+    "code": "AB123",
     "attr22": "e22_4",
     "attr57": "e57_3",
     "attr66": 53908,
@@ -248,6 +288,8 @@
   },
   {
     "name": "banners2-20",
+    "priceCents": 250,
+    "code": "AB123",
     "attr5": "s9381",
     "attr15": "s50",
     "attr68": true,
@@ -258,6 +300,8 @@
   },
   {
     "name": "banners2-21",
+    "priceCents": 250,
+    "code": "AB123",
     "attr32": "e32_4",
     "attr58": true,
     "attr70": "s6589",
@@ -271,6 +315,8 @@
   },
   {
     "name": "banners2-22",
+    "priceCents": 250,
+    "code": "AB123",
     "attr78": true,
     "attr58": true,
     "attr6": 19717,
@@ -284,6 +330,8 @@
   },
   {
     "name": "banners2-23",
+    "priceCents": 250,
+    "code": "AB123",
     "attr20": "s4139",
     "attr71": 8250,
     "attr11": 27626,
@@ -296,6 +344,8 @@
   },
   {
     "name": "banners2-24",
+    "priceCents": 250,
+    "code": "AB123",
     "attr15": "s8116",
     "attr46": 8018,
     "attr1": 9042,
@@ -309,6 +359,8 @@
   },
   {
     "name": "banners2-25",
+    "priceCents": 250,
+    "code": "AB123",
     "attr24": "AB512",
     "attr45": "s3143",
     "attr23": true,
@@ -322,6 +374,8 @@
   },
   {
     "name": "banners2-26",
+    "priceCents": 250,
+    "code": "AB123",
     "attr46": 4953,
     "attr64": "AB383",
     "attr63": false,
@@ -334,6 +388,8 @@
   },
   {
     "name": "banners2-27",
+    "priceCents": 250,
+    "code": "AB123",
     "attr41": 20262,
     "attr7": "e7_2",
     "attr43": true,
@@ -346,6 +402,8 @@
   },
   {
     "name": "banners2-28",
+    "priceCents": 250,
+    "code": "AB123",
     "attr55": "s3343",
     "attr2": "e2_2",
     "attr68": true,
@@ -359,6 +417,8 @@
   },
   {
     "name": "banners2-29",
+    "priceCents": 250,
+    "code": "AB123",
     "attr12": "e12_1",
     "attr39": "AB356",
     "attr28": false,
@@ -371,6 +431,8 @@
   },
   {
     "name": "banners2-30",
+    "priceCents": 250,
+    "code": "AB123",
     "attr36": 14293,
     "attr25": "s5452",
     "attr43": true,
@@ -384,6 +446,8 @@
   },
   {
     "name": "banners2-31",
+    "priceCents": 250,
+    "code": "AB123",
     "attr61": 3514,
     "attr62": "e62_4",
     "attr4": "AB326",
@@ -396,6 +460,8 @@
   },
   {
     "name": "banners2-32",
+    "priceCents": 250,
+    "code": "AB123",
     "attr41": 30814,
     "attr57": "e57_0",
     "attr37": "e37_1",
@@ -406,6 +472,8 @@
   },
   {
     "name": "banners2-33",
+    "priceCents": 250,
+    "code": "AB123",
     "attr7": "e7_1",
     "attr67": "e67_3",
     "attr22": "e22_2",
@@ -418,6 +486,8 @@
   },
   {
     "name": "banners2-34",
+    "priceCents": 250,
+    "code": "AB123",
     "attr67": "e67_0",
     "attr18": true,
     "attr39": "AB727",
@@ -430,6 +500,8 @@
   },
   {
     "name": "banners2-35",
+    "priceCents": 250,
+    "code": "AB123",
     "attr56": 31303,
     "attr52": "e52_3",
     "attr75": "s6324",
@@ -442,6 +514,8 @@
   },
   {
     "name": "banners2-36",
+    "priceCents": 250,
+    "code": "AB123",
     "attr67": "e67_1",
     "attr52": "e52_3",
     "attr37": "e37_0",
@@ -455,6 +529,8 @@
   },
   {
     "name": "banners2-37",
+    "priceCents": 250,
+    "code": "AB123",
     "attr25": "s6587",
     "attr64": "AB861",
     "attr0": "s5180",
@@ -468,6 +544,8 @@
   },
   {
     "name": "banners2-38",
+    "priceCents": 250,
+    "code": "AB123",
     "attr21": 21472,
     "attr77": "e77_1",
     "attr23": true,
@@ -480,6 +558,8 @@
   },
   {
     "name": "banners2-39",
+    "priceCents": 250,
+    "code": "AB123",
     "attr14": "AB583",
     "attr39": "AB879",
     "attr79": "AB233",
@@ -493,6 +573,8 @@
   },
   {
     "name": "banners2-40",
+    "priceCents": 250,
+    "code": "AB123",
     "attr16": 5048,
     "attr68": true,
     "attr20": "s5219",
@@ -504,6 +586,8 @@
   },
   {
     "name": "banners2-41",
+    "priceCents": 250,
+    "code": "AB123",
     "attr46": 849,
     "attr32": "e32_3",
     "attr36": 987,
@@ -517,6 +601,8 @@
   },
   {
     "name": "banners2-42",
+    "priceCents": 250,
+    "code": "AB123",
     "attr61": 4155,
     "attr29": "AB956",
     "attr33": false,
@@ -530,6 +616,8 @@
   },
   {
     "name": "banners2-43",
+    "priceCents": 250,
+    "code": "AB123",
     "attr15": "s7669",
     "attr54": "AB937",
     "attr1": 19880,
@@ -543,6 +631,8 @@
   },
   {
     "name": "banners2-44",
+    "priceCents": 250,
+    "code": "AB123",
     "attr31": 6432,
     "attr48": true,
     "attr57": "e57_1",
@@ -556,6 +646,8 @@
   },
   {
     "name": "banners2-45",
+    "priceCents": 250,
+    "code": "AB123",
     "attr19": "AB479",
     "attr64": "AB990",
     "attr4": "AB896",
@@ -569,6 +661,8 @@
   },
   {
     "name": "banners2-46",
+    "priceCents": 250,
+    "code": "AB123",
     "attr41": 34934,
     "attr15": "s1197",
     "attr47": "e47_4",
@@ -581,6 +675,8 @@
   },
   {
     "name": "banners2-47",
+    "priceCents": 250,
+    "code": "AB123",
     "attr62": "e62_4",
     "attr72": "e72_1",
     "attr24": "AB150",
@@ -594,6 +690,8 @@
   },
   {
     "name": "banners2-48",
+    "priceCents": 250,
+    "code": "AB123",
     "attr21": 39038,
     "attr33": true,
     "attr31": 11986,
@@ -607,6 +705,8 @@
   },
   {
     "name": "banners2-49",
+    "priceCents": 250,
+    "code": "AB123",
     "attr34": "AB268",
     "attr41": 11463,
     "attr24": "AB776",
@@ -619,6 +719,8 @@
   },
   {
     "name": "banners2-50",
+    "priceCents": 250,
+    "code": "AB123",
     "attr60": "s7315",
     "attr19": "AB863",
     "attr70": "s3516",
@@ -632,6 +734,8 @@
   },
   {
     "name": "banners2-51",
+    "priceCents": 250,
+    "code": "AB123",
     "attr12": "e12_1",
     "attr77": "e77_0",
     "attr50": "s3820",
@@ -643,6 +747,8 @@
   },
   {
     "name": "banners2-52",
+    "priceCents": 250,
+    "code": "AB123",
     "attr62": "e62_4",
     "attr12": "e12_2",
     "attr9": "AB365",
@@ -655,6 +761,8 @@
   },
   {
     "name": "banners2-53",
+    "priceCents": 250,
+    "code": "AB123",
     "attr55": "s5214",
     "attr26": 32097,
     "attr17": "e17_0",
@@ -665,6 +773,8 @@
   },
   {
     "name": "banners2-54",
+    "priceCents": 250,
+    "code": "AB123",
     "attr65": "s3708",
     "attr49": "AB325",
     "attr51": 2979,
@@ -678,6 +788,8 @@
   },
   {
     "name": "banners2-55",
+    "priceCents": 250,
+    "code": "AB123",
     "attr3": true,
     "attr13": false,
     "attr28": false,
@@ -691,6 +803,8 @@
   },
   {
     "name": "banners2-56",
+    "priceCents": 250,
+    "code": "AB123",
     "attr65": "s1970",
     "attr59": "AB245",
     "attr19": "AB525",
@@ -704,6 +818,8 @@
   },
   {
     "name": "banners2-57",
+    "priceCents": 250,
+    "code": "AB123",
     "attr36": 198,
     "attr21": 2187,
     "attr37": "e37_2",
@@ -716,6 +832,8 @@
   },
   {
     "name": "banners2-58",
+    "priceCents": 250,
+    "code": "AB123",
     "attr41": 5461,
     "attr9": "AB862",
     "attr66": 36153,
@@ -729,6 +847,8 @@
   },
   {
     "name": "banners2-59",
+    "priceCents": 250,
+    "code": "AB123",
     "attr16": 4644,
     "attr44": "AB274",
     "attr29": "AB124",

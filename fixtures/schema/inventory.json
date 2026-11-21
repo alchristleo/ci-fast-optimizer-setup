@@ -1,12 +1,24 @@
 {
   "type": "object",
-  "required": ["name"],
+  "required": ["name", "sku", "quantity", "unitCents"],
   "additionalProperties": false,
   "properties": {
     "name": {
       "type": "string",
       "minLength": 1,
       "maxLength": 80
+    },
+    "sku": {
+      "type": "string",
+      "pattern": "^[A-Z0-9-]{3,16}$"
+    },
+    "quantity": {
+      "type": "number",
+      "minimum": 0
+    },
+    "unitCents": {
+      "type": "number",
+      "minimum": 0
     },
     "attr0": {
       "type": "string",

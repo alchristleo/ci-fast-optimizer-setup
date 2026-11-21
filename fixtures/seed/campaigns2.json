@@ -1,6 +1,9 @@
 [
   {
     "name": "campaigns2-0",
+    "qty": 3,
+    "code": "AB123",
+    "priceCents": 250,
     "attr61": 2442,
     "attr36": 3215,
     "attr38": false,
@@ -13,6 +16,9 @@
   },
   {
     "name": "campaigns2-1",
+    "qty": 3,
+    "code": "AB123",
+    "priceCents": 250,
     "attr46": 89530,
     "attr15": "s1129",
     "attr63": true,
@@ -25,6 +31,9 @@
   },
   {
     "name": "campaigns2-2",
+    "qty": 3,
+    "code": "AB123",
+    "priceCents": 250,
     "attr59": "AB952",
     "attr18": true,
     "attr74": "AB783",
@@ -37,6 +46,9 @@
   },
   {
     "name": "campaigns2-3",
+    "qty": 3,
+    "code": "AB123",
+    "priceCents": 250,
     "attr34": "AB912",
     "attr79": "AB134",
     "attr62": "e62_4",
@@ -50,6 +62,9 @@
   },
   {
     "name": "campaigns2-4",
+    "qty": 3,
+    "code": "AB123",
+    "priceCents": 250,
     "attr2": "e2_3",
     "attr45": "s1348",
     "attr27": "e27_1",
@@ -62,6 +77,9 @@
   },
   {
     "name": "campaigns2-5",
+    "qty": 3,
+    "code": "AB123",
+    "priceCents": 250,
     "attr55": "s6779",
     "attr41": 17493,
     "attr35": "s2254",
@@ -75,6 +93,9 @@
   },
   {
     "name": "campaigns2-6",
+    "qty": 3,
+    "code": "AB123",
+    "priceCents": 250,
     "attr70": "s4972",
     "attr22": "e22_4",
     "attr18": false,
@@ -88,6 +109,9 @@
   },
   {
     "name": "campaigns2-7",
+    "qty": 3,
+    "code": "AB123",
+    "priceCents": 250,
     "attr48": false,
     "attr20": "s3272",
     "attr70": "s1755",
@@ -101,6 +125,9 @@
   },
   {
     "name": "campaigns2-8",
+    "qty": 3,
+    "code": "AB123",
+    "priceCents": 250,
     "attr26": 21620,
     "attr6": 29540,
     "attr0": "s1474",
@@ -111,6 +138,9 @@
   },
   {
     "name": "campaigns2-9",
+    "qty": 3,
+    "code": "AB123",
+    "priceCents": 250,
     "attr6": 38650,
     "attr31": 22462,
     "attr66": 21290,
@@ -124,6 +154,9 @@
   },
   {
     "name": "campaigns2-10",
+    "qty": 3,
+    "code": "AB123",
+    "priceCents": 250,
     "attr31": 61383,
     "attr70": "s8427",
     "attr67": "e67_3",
@@ -137,6 +170,9 @@
   },
   {
     "name": "campaigns2-11",
+    "qty": 3,
+    "code": "AB123",
+    "priceCents": 250,
     "attr20": "s437",
     "attr69": "AB880",
     "attr10": "s9915",
@@ -148,6 +184,9 @@
   },
   {
     "name": "campaigns2-12",
+    "qty": 3,
+    "code": "AB123",
+    "priceCents": 250,
     "attr1": 1620,
     "attr48": false,
     "attr66": 22619,
@@ -160,6 +199,9 @@
   },
   {
     "name": "campaigns2-13",
+    "qty": 3,
+    "code": "AB123",
+    "priceCents": 250,
     "attr28": true,
     "attr16": 16376,
     "attr15": "s7401",
@@ -172,6 +214,9 @@
   },
   {
     "name": "campaigns2-14",
+    "qty": 3,
+    "code": "AB123",
+    "priceCents": 250,
     "attr12": "e12_2",
     "attr3": true,
     "attr61": 17449,
@@ -184,6 +229,9 @@
   },
   {
     "name": "campaigns2-15",
+    "qty": 3,
+    "code": "AB123",
+    "priceCents": 250,
     "attr29": "AB645",
     "attr1": 5087,
     "attr68": false,
@@ -197,6 +245,9 @@
   },
   {
     "name": "campaigns2-16",
+    "qty": 3,
+    "code": "AB123",
+    "priceCents": 250,
     "attr40": "s5388",
     "attr9": "AB406",
     "attr75": "s6817",
@@ -210,6 +261,9 @@
   },
   {
     "name": "campaigns2-17",
+    "qty": 3,
+    "code": "AB123",
+    "priceCents": 250,
     "attr58": true,
     "attr34": "AB455",
     "attr27": "e27_1",
@@ -222,6 +276,9 @@
   },
   {
     "name": "campaigns2-18",
+    "qty": 3,
+    "code": "AB123",
+    "priceCents": 250,
     "attr67": "e67_1",
     "attr34": "AB992",
     "attr31": 52424,
@@ -234,6 +291,9 @@
   },
   {
     "name": "campaigns2-19",
+    "qty": 3,
+    "code": "AB123",
+    "priceCents": 250,
     "attr11": 26789,
     "attr10": "s3476",
     "attr41": 10808,
@@ -247,6 +307,9 @@
   },
   {
     "name": "campaigns2-20",
+    "qty": 3,
+    "code": "AB123",
+    "priceCents": 250,
     "attr43": true,
     "attr55": "s8852",
     "attr45": "s5772",
@@ -260,6 +323,9 @@
   },
   {
     "name": "campaigns2-21",
+    "qty": 3,
+    "code": "AB123",
+    "priceCents": 250,
     "attr54": "AB251",
     "attr2": "e2_4",
     "attr36": 19766,
@@ -272,6 +338,9 @@
   },
   {
     "name": "campaigns2-22",
+    "qty": 3,
+    "code": "AB123",
+    "priceCents": 250,
     "attr47": "e47_2",
     "attr34": "AB551",
     "attr19": "AB499",
@@ -285,6 +354,9 @@
   },
   {
     "name": "campaigns2-23",
+    "qty": 3,
+    "code": "AB123",
+    "priceCents": 250,
     "attr27": "e27_4",
     "attr28": true,
     "attr38": true,
@@ -298,6 +370,9 @@
   },
   {
     "name": "campaigns2-24",
+    "qty": 3,
+    "code": "AB123",
+    "priceCents": 250,
     "attr0": "s3192",
     "attr68": false,
     "attr14": "AB465",
@@ -311,6 +386,9 @@
   },
   {
     "name": "campaigns2-25",
+    "qty": 3,
+    "code": "AB123",
+    "priceCents": 250,
     "attr65": "s467",
     "attr21": 163,
     "attr61": 38149,
@@ -322,6 +400,9 @@
   },
   {
     "name": "campaigns2-26",
+    "qty": 3,
+    "code": "AB123",
+    "priceCents": 250,
     "attr62": "e62_1",
     "attr20": "s4151",
     "attr49": "AB917",
@@ -335,6 +416,9 @@
   },
   {
     "name": "campaigns2-27",
+    "qty": 3,
+    "code": "AB123",
+    "priceCents": 250,
     "attr33": true,
     "attr36": 7406,
     "attr65": "s6317",
@@ -348,6 +432,9 @@
   },
   {
     "name": "campaigns2-28",
+    "qty": 3,
+    "code": "AB123",
+    "priceCents": 250,
     "attr78": false,
     "attr47": "e47_1",
     "attr32": "e32_2",
@@ -360,6 +447,9 @@
   },
   {
     "name": "campaigns2-29",
+    "qty": 3,
+    "code": "AB123",
+    "priceCents": 250,
     "attr72": "e72_1",
     "attr19": "AB666",
     "attr63": true,
@@ -372,6 +462,9 @@
   },
   {
     "name": "campaigns2-30",
+    "qty": 3,
+    "code": "AB123",
+    "priceCents": 250,
     "attr77": "e77_1",
     "attr79": "AB813",
     "attr0": "s2536",
@@ -384,6 +477,9 @@
   },
   {
     "name": "campaigns2-31",
+    "qty": 3,
+    "code": "AB123",
+    "priceCents": 250,
     "attr13": true,
     "attr31": 40880,
     "attr36": 34390,
@@ -396,6 +492,9 @@
   },
   {
     "name": "campaigns2-32",
+    "qty": 3,
+    "code": "AB123",
+    "priceCents": 250,
     "attr0": "s9018",
     "attr23": true,
     "attr42": "e42_0",
@@ -409,6 +508,9 @@
   },
   {
     "name": "campaigns2-33",
+    "qty": 3,
+    "code": "AB123",
+    "priceCents": 250,
     "attr75": "s8328",
     "attr74": "AB105",
     "attr25": "s5672",
@@ -421,6 +523,9 @@
   },
   {
     "name": "campaigns2-34",
+    "qty": 3,
+    "code": "AB123",
+    "priceCents": 250,
     "attr5": "s3423",
     "attr66": 26456,
     "attr7": "e7_1",
@@ -433,6 +538,9 @@
   },
   {
     "name": "campaigns2-35",
+    "qty": 3,
+    "code": "AB123",
+    "priceCents": 250,
     "attr63": false,
     "attr45": "s9541",
     "attr71": 11371,
@@ -446,6 +554,9 @@
   },
   {
     "name": "campaigns2-36",
+    "qty": 3,
+    "code": "AB123",
+    "priceCents": 250,
     "attr2": "e2_4",
     "attr73": false,
     "attr35": "s633",
@@ -457,6 +568,9 @@
   },
   {
     "name": "campaigns2-37",
+    "qty": 3,
+    "code": "AB123",
+    "priceCents": 250,
     "attr41": 10214,
     "attr61": 2648,
     "attr27": "e27_3",
@@ -470,6 +584,9 @@
   },
   {
     "name": "campaigns2-38",
+    "qty": 3,
+    "code": "AB123",
+    "priceCents": 250,
     "attr69": "AB171",
     "attr10": "s8412",
     "attr60": "s2539",
@@ -482,6 +599,9 @@
   },
   {
     "name": "campaigns2-39",
+    "qty": 3,
+    "code": "AB123",
+    "priceCents": 250,
     "attr40": "s633",
     "attr54": "AB656",
     "attr76": 19926,
@@ -495,6 +615,9 @@
   },
   {
     "name": "campaigns2-40",
+    "qty": 3,
+    "code": "AB123",
+    "priceCents": 250,
     "attr12": "e12_3",
     "attr2": "e2_1",
     "attr8": true,
@@ -508,6 +631,9 @@
   },
   {
     "name": "campaigns2-41",
+    "qty": 3,
+    "code": "AB123",
+    "priceCents": 250,
     "attr79": "AB604",
     "attr72": "e72_3",
     "attr9": "AB536",
@@ -521,6 +647,9 @@
   },
   {
     "name": "campaigns2-42",
+    "qty": 3,
+    "code": "AB123",
+    "priceCents": 250,
     "attr52": "e52_3",
     "attr67": "e67_4",
     "attr44": "AB166",
@@ -534,6 +663,9 @@
   },
   {
     "name": "campaigns2-43",
+    "qty": 3,
+    "code": "AB123",
+    "priceCents": 250,
     "attr40": "s5271",
     "attr16": 10313,
     "attr50": "s6610",
@@ -547,6 +679,9 @@
   },
   {
     "name": "campaigns2-44",
+    "qty": 3,
+    "code": "AB123",
+    "priceCents": 250,
     "attr37": "e37_3",
     "attr24": "AB390",
     "attr36": 19813,
@@ -560,6 +695,9 @@
   },
   {
     "name": "campaigns2-45",
+    "qty": 3,
+    "code": "AB123",
+    "priceCents": 250,
     "attr43": true,
     "attr3": true,
     "attr57": "e57_1",
@@ -573,6 +711,9 @@
   },
   {
     "name": "campaigns2-46",
+    "qty": 3,
+    "code": "AB123",
+    "priceCents": 250,
     "attr30": "s2538",
     "attr35": "s8230",
     "attr71": 8091,
@@ -586,6 +727,9 @@
   },
   {
     "name": "campaigns2-47",
+    "qty": 3,
+    "code": "AB123",
+    "priceCents": 250,
     "attr35": "s2037",
     "attr0": "s7867",
     "attr53": false,
@@ -599,6 +743,9 @@
   },
   {
     "name": "campaigns2-48",
+    "qty": 3,
+    "code": "AB123",
+    "priceCents": 250,
     "attr53": true,
     "attr2": "e2_2",
     "attr25": "s7334",
@@ -611,6 +758,9 @@
   },
   {
     "name": "campaigns2-49",
+    "qty": 3,
+    "code": "AB123",
+    "priceCents": 250,
     "attr24": "AB758",
     "attr75": "s7046",
     "attr69": "AB960",
@@ -622,6 +772,9 @@
   },
   {
     "name": "campaigns2-50",
+    "qty": 3,
+    "code": "AB123",
+    "priceCents": 250,
     "attr10": "s132",
     "attr35": "s7496",
     "attr66": 16172,
@@ -634,6 +787,9 @@
   },
   {
     "name": "campaigns2-51",
+    "qty": 3,
+    "code": "AB123",
+    "priceCents": 250,
     "attr76": 68,
     "attr38": false,
     "attr20": "s8958",
@@ -646,6 +802,9 @@
   },
   {
     "name": "campaigns2-52",
+    "qty": 3,
+    "code": "AB123",
+    "priceCents": 250,
     "attr59": "AB511",
     "attr2": "e2_3",
     "attr56": 2177,
@@ -659,6 +818,9 @@
   },
   {
     "name": "campaigns2-53",
+    "qty": 3,
+    "code": "AB123",
+    "priceCents": 250,
     "attr38": true,
     "attr0": "s7801",
     "attr14": "AB425",
@@ -671,6 +833,9 @@
   },
   {
     "name": "campaigns2-54",
+    "qty": 3,
+    "code": "AB123",
+    "priceCents": 250,
     "attr59": "AB257",
     "attr73": false,
     "attr42": "e42_4",
@@ -684,6 +849,9 @@
   },
   {
     "name": "campaigns2-55",
+    "qty": 3,
+    "code": "AB123",
+    "priceCents": 250,
     "attr51": 26492,
     "attr42": "e42_2",
     "attr17": "e17_2",
@@ -696,6 +864,9 @@
   },
   {
     "name": "campaigns2-56",
+    "qty": 3,
+    "code": "AB123",
+    "priceCents": 250,
     "attr3": false,
     "attr56": 3157,
     "attr55": "s938",
@@ -709,6 +880,9 @@
   },
   {
     "name": "campaigns2-57",
+    "qty": 3,
+    "code": "AB123",
+    "priceCents": 250,
     "attr7": "e7_3",
     "attr52": "e52_2",
     "attr69": "AB583",
@@ -721,6 +895,9 @@
   },
   {
     "name": "campaigns2-58",
+    "qty": 3,
+    "code": "AB123",
+    "priceCents": 250,
     "attr46": 945,
     "attr63": false,
     "attr10": "s926",
@@ -734,6 +911,9 @@
   },
   {
     "name": "campaigns2-59",
+    "qty": 3,
+    "code": "AB123",
+    "priceCents": 250,
     "attr8": true,
     "attr27": "e27_2",
     "attr58": true,

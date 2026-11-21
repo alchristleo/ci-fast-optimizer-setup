@@ -1,18 +1,11 @@
 import { Hono } from "hono";
-import { compile, type Schema } from "../../lib/validation.ts";
+import type { Validator } from "../../lib/validation.ts";
 import { addCustomer, findByEmail, getCustomer, listCustomers, setVip } from "./service.ts";
 
 export const name = "customers";
 
-export const schema: Schema = {
-  name: { type: "string", required: true, min: 1, max: 80 },
-  email: { type: "string", required: true, pattern: "^[^@\\s]+@[^@\\s]+\\.[a-z]{2,}$" },
-  vip: { type: "boolean" },
-};
-
-export function routes(): Hono {
+export function routes(validate: Validator): Hono {
   const app = new Hono();
-  const validate = compile(schema);
 
   app.get("/", (c) => {
     const email = c.req.query("email");

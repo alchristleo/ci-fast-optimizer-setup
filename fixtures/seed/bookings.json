@@ -1,6 +1,7 @@
 [
   {
     "name": "bookings-0",
+    "priceCents": 250,
     "attr65": "s5299",
     "attr55": "s32",
     "attr18": false,
@@ -13,6 +14,7 @@
   },
   {
     "name": "bookings-1",
+    "priceCents": 250,
     "attr67": "e67_2",
     "attr3": false,
     "attr30": "s3970",
@@ -24,6 +26,7 @@
   },
   {
     "name": "bookings-2",
+    "priceCents": 250,
     "attr56": 7464,
     "attr58": true,
     "attr43": true,
@@ -35,6 +38,7 @@
   },
   {
     "name": "bookings-3",
+    "priceCents": 250,
     "attr33": false,
     "attr17": "e17_4",
     "attr26": 17311,
@@ -48,6 +52,7 @@
   },
   {
     "name": "bookings-4",
+    "priceCents": 250,
     "attr73": true,
     "attr12": "e12_2",
     "attr34": "AB160",
@@ -60,6 +65,7 @@
   },
   {
     "name": "bookings-5",
+    "priceCents": 250,
     "attr10": "s3856",
     "attr56": 2612,
     "attr70": "s8950",
@@ -72,6 +78,7 @@
   },
   {
     "name": "bookings-6",
+    "priceCents": 250,
     "attr58": false,
     "attr9": "AB133",
     "attr1": 832,
@@ -85,6 +92,7 @@
   },
   {
     "name": "bookings-7",
+    "priceCents": 250,
     "attr39": "AB446",
     "attr27": "e27_0",
     "attr65": "s9051",
@@ -98,6 +106,7 @@
   },
   {
     "name": "bookings-8",
+    "priceCents": 250,
     "attr38": true,
     "attr32": "e32_2",
     "attr0": "s6226",
@@ -109,6 +118,7 @@
   },
   {
     "name": "bookings-9",
+    "priceCents": 250,
     "attr60": "s5007",
     "attr7": "e7_0",
     "attr38": false,
@@ -121,6 +131,7 @@
   },
   {
     "name": "bookings-10",
+    "priceCents": 250,
     "attr45": "s2806",
     "attr62": "e62_1",
     "attr34": "AB539",
@@ -134,6 +145,7 @@
   },
   {
     "name": "bookings-11",
+    "priceCents": 250,
     "attr2": "e2_3",
     "attr71": 51579,
     "attr66": 1429,
@@ -145,6 +157,7 @@
   },
   {
     "name": "bookings-12",
+    "priceCents": 250,
     "attr29": "AB837",
     "attr26": 15688,
     "attr31": 12715,
@@ -158,6 +171,7 @@
   },
   {
     "name": "bookings-13",
+    "priceCents": 250,
     "attr19": "AB982",
     "attr56": 26414,
     "attr36": 29615,
@@ -171,6 +185,7 @@
   },
   {
     "name": "bookings-14",
+    "priceCents": 250,
     "attr31": 1738,
     "attr62": "e62_2",
     "attr58": true,
@@ -183,6 +198,7 @@
   },
   {
     "name": "bookings-15",
+    "priceCents": 250,
     "attr37": "e37_0",
     "attr59": "AB146",
     "attr72": "e72_2",
@@ -195,6 +211,7 @@
   },
   {
     "name": "bookings-16",
+    "priceCents": 250,
     "attr45": "s7036",
     "attr66": 5623,
     "attr1": 1434,
@@ -207,6 +224,7 @@
   },
   {
     "name": "bookings-17",
+    "priceCents": 250,
     "attr55": "s7325",
     "attr3": true,
     "attr20": "s7322",
@@ -220,6 +238,7 @@
   },
   {
     "name": "bookings-18",
+    "priceCents": 250,
     "attr39": "AB581",
     "attr8": false,
     "attr3": false,
@@ -233,6 +252,7 @@
   },
   {
     "name": "bookings-19",
+    "priceCents": 250,
     "attr45": "s8465",
     "attr21": 71794,
     "attr68": true,
@@ -245,6 +265,7 @@
   },
   {
     "name": "bookings-20",
+    "priceCents": 250,
     "attr29": "AB567",
     "attr17": "e17_2",
     "attr30": "s5534",
@@ -258,6 +279,7 @@
   },
   {
     "name": "bookings-21",
+    "priceCents": 250,
     "attr51": 75761,
     "attr55": "s7831",
     "attr65": "s8919",
@@ -270,6 +292,7 @@
   },
   {
     "name": "bookings-22",
+    "priceCents": 250,
     "attr10": "s4999",
     "attr49": "AB595",
     "attr9": "AB883",
@@ -283,6 +306,7 @@
   },
   {
     "name": "bookings-23",
+    "priceCents": 250,
     "attr25": "s7272",
     "attr13": false,
     "attr11": 61782,
@@ -295,6 +319,7 @@
   },
   {
     "name": "bookings-24",
+    "priceCents": 250,
     "attr33": false,
     "attr68": true,
     "attr27": "e27_1",
@@ -308,6 +333,7 @@
   },
   {
     "name": "bookings-25",
+    "priceCents": 250,
     "attr39": "AB795",
     "attr18": true,
     "attr6": 38689,
@@ -320,6 +346,7 @@
   },
   {
     "name": "bookings-26",
+    "priceCents": 250,
     "attr75": "s4803",
     "attr44": "AB715",
     "attr60": "s734",
@@ -333,6 +360,7 @@
   },
   {
     "name": "bookings-27",
+    "priceCents": 250,
     "attr41": 36161,
     "attr34": "AB682",
     "attr48": true,
@@ -345,6 +373,7 @@
   },
   {
     "name": "bookings-28",
+    "priceCents": 250,
     "attr2": "e2_0",
     "attr31": 44788,
     "attr29": "AB827",
@@ -358,6 +387,7 @@
   },
   {
     "name": "bookings-29",
+    "priceCents": 250,
     "attr43": true,
     "attr61": 28560,
     "attr47": "e47_2",
@@ -371,6 +401,7 @@
   },
   {
     "name": "bookings-30",
+    "priceCents": 250,
     "attr52": "e52_0",
     "attr61": 22016,
     "attr55": "s6485",
@@ -384,6 +415,7 @@
   },
   {
     "name": "bookings-31",
+    "priceCents": 250,
     "attr34": "AB799",
     "attr48": true,
     "attr20": "s3680",
@@ -397,6 +429,7 @@
   },
   {
     "name": "bookings-32",
+    "priceCents": 250,
     "attr44": "AB628",
     "attr29": "AB178",
     "attr15": "s4299",
@@ -409,6 +442,7 @@
   },
   {
     "name": "bookings-33",
+    "priceCents": 250,
     "attr35": "s2060",
     "attr3": true,
     "attr74": "AB128",
@@ -422,6 +456,7 @@
   },
   {
     "name": "bookings-34",
+    "priceCents": 250,
     "attr65": "s7072",
     "attr56": 20817,
     "attr15": "s5432",
@@ -435,6 +470,7 @@
   },
   {
     "name": "bookings-35",
+    "priceCents": 250,
     "attr78": false,
     "attr54": "AB971",
     "attr47": "e47_1",
@@ -448,6 +484,7 @@
   },
   {
     "name": "bookings-36",
+    "priceCents": 250,
     "attr1": 115,
     "attr46": 7158,
     "attr35": "s8691",
@@ -461,6 +498,7 @@
   },
   {
     "name": "bookings-37",
+    "priceCents": 250,
     "attr20": "s3672",
     "attr37": "e37_1",
     "attr18": false,
@@ -473,6 +511,7 @@
   },
   {
     "name": "bookings-38",
+    "priceCents": 250,
     "attr26": 17918,
     "attr55": "s8856",
     "attr42": "e42_3",
@@ -486,6 +525,7 @@
   },
   {
     "name": "bookings-39",
+    "priceCents": 250,
     "attr9": "AB497",
     "attr30": "s3797",
     "attr25": "s1189",
@@ -499,6 +539,7 @@
   },
   {
     "name": "bookings-40",
+    "priceCents": 250,
     "attr53": true,
     "attr43": false,
     "attr10": "s9007",
@@ -511,6 +552,7 @@
   },
   {
     "name": "bookings-41",
+    "priceCents": 250,
     "attr37": "e37_1",
     "attr61": 42587,
     "attr23": true,
@@ -524,6 +566,7 @@
   },
   {
     "name": "bookings-42",
+    "priceCents": 250,
     "attr6": 43024,
     "attr63": false,
     "attr42": "e42_0",
@@ -537,6 +580,7 @@
   },
   {
     "name": "bookings-43",
+    "priceCents": 250,
     "attr26": 15620,
     "attr10": "s882",
     "attr39": "AB570",
@@ -549,6 +593,7 @@
   },
   {
     "name": "bookings-44",
+    "priceCents": 250,
     "attr68": false,
     "attr27": "e27_1",
     "attr74": "AB710",
@@ -561,6 +606,7 @@
   },
   {
     "name": "bookings-45",
+    "priceCents": 250,
     "attr54": "AB801",
     "attr33": false,
     "attr29": "AB171",
@@ -574,6 +620,7 @@
   },
   {
     "name": "bookings-46",
+    "priceCents": 250,
     "attr54": "AB916",
     "attr78": true,
     "attr49": "AB145",
@@ -586,6 +633,7 @@
   },
   {
     "name": "bookings-47",
+    "priceCents": 250,
     "attr54": "AB761",
     "attr20": "s7567",
     "attr7": "e7_4",
@@ -599,6 +647,7 @@
   },
   {
     "name": "bookings-48",
+    "priceCents": 250,
     "attr38": true,
     "attr9": "AB193",
     "attr35": "s6989",
@@ -610,6 +659,7 @@
   },
   {
     "name": "bookings-49",
+    "priceCents": 250,
     "attr68": false,
     "attr45": "s817",
     "attr42": "e42_2",
@@ -622,6 +672,7 @@
   },
   {
     "name": "bookings-50",
+    "priceCents": 250,
     "attr17": "e17_2",
     "attr35": "s788",
     "attr36": 27729,
@@ -634,6 +685,7 @@
   },
   {
     "name": "bookings-51",
+    "priceCents": 250,
     "attr62": "e62_2",
     "attr1": 1151,
     "attr11": 20532,
@@ -646,6 +698,7 @@
   },
   {
     "name": "bookings-52",
+    "priceCents": 250,
     "attr1": 759,
     "attr43": true,
     "attr32": "e32_2",
@@ -658,6 +711,7 @@
   },
   {
     "name": "bookings-53",
+    "priceCents": 250,
     "attr13": false,
     "attr65": "s8489",
     "attr76": 5002,
@@ -671,6 +725,7 @@
   },
   {
     "name": "bookings-54",
+    "priceCents": 250,
     "attr39": "AB732",
     "attr49": "AB441",
     "attr71": 6586,
@@ -683,6 +738,7 @@
   },
   {
     "name": "bookings-55",
+    "priceCents": 250,
     "attr14": "AB575",
     "attr68": true,
     "attr57": "e57_1",
@@ -693,6 +749,7 @@
   },
   {
     "name": "bookings-56",
+    "priceCents": 250,
     "attr56": 9324,
     "attr3": true,
     "attr47": "e47_2",
@@ -705,6 +762,7 @@
   },
   {
     "name": "bookings-57",
+    "priceCents": 250,
     "attr67": "e67_4",
     "attr8": false,
     "attr77": "e77_2",
@@ -717,6 +775,7 @@
   },
   {
     "name": "bookings-58",
+    "priceCents": 250,
     "attr31": 6674,
     "attr24": "AB528",
     "attr45": "s3531",
@@ -730,6 +789,7 @@
   },
   {
     "name": "bookings-59",
+    "priceCents": 250,
     "attr46": 7979,
     "attr29": "AB394",
     "attr36": 30753,

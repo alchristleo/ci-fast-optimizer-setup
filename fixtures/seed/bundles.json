@@ -1,6 +1,8 @@
 [
   {
     "name": "bundles-0",
+    "priceCents": 250,
+    "note": "hello",
     "attr20": "s9079",
     "attr24": "AB730",
     "attr9": "AB101",
@@ -14,6 +16,8 @@
   },
   {
     "name": "bundles-1",
+    "priceCents": 250,
+    "note": "hello",
     "attr72": "e72_2",
     "attr70": "s439",
     "attr18": false,
@@ -27,6 +31,8 @@
   },
   {
     "name": "bundles-2",
+    "priceCents": 250,
+    "note": "hello",
     "attr13": false,
     "attr48": false,
     "attr26": 52046,
@@ -40,6 +46,8 @@
   },
   {
     "name": "bundles-3",
+    "priceCents": 250,
+    "note": "hello",
     "attr42": "e42_3",
     "attr37": "e37_1",
     "attr52": "e52_2",
@@ -53,6 +61,8 @@
   },
   {
     "name": "bundles-4",
+    "priceCents": 250,
+    "note": "hello",
     "attr76": 24458,
     "attr35": "s9687",
     "attr45": "s883",
@@ -64,6 +74,8 @@
   },
   {
     "name": "bundles-5",
+    "priceCents": 250,
+    "note": "hello",
     "attr56": 4711,
     "attr71": 24567,
     "attr37": "e37_2",
@@ -75,6 +87,8 @@
   },
   {
     "name": "bundles-6",
+    "priceCents": 250,
+    "note": "hello",
     "attr23": true,
     "attr77": "e77_3",
     "attr32": "e32_3",
@@ -88,6 +102,8 @@
   },
   {
     "name": "bundles-7",
+    "priceCents": 250,
+    "note": "hello",
     "attr69": "AB799",
     "attr47": "e47_3",
     "attr34": "AB397",
@@ -101,6 +117,8 @@
   },
   {
     "name": "bundles-8",
+    "priceCents": 250,
+    "note": "hello",
     "attr20": "s8166",
     "attr3": true,
     "attr15": "s869",
@@ -113,6 +131,8 @@
   },
   {
     "name": "bundles-9",
+    "priceCents": 250,
+    "note": "hello",
     "attr69": "AB761",
     "attr45": "s4198",
     "attr2": "e2_2",
@@ -126,6 +146,8 @@
   },
   {
     "name": "bundles-10",
+    "priceCents": 250,
+    "note": "hello",
     "attr74": "AB292",
     "attr27": "e27_1",
     "attr59": "AB300",
@@ -139,6 +161,8 @@
   },
   {
     "name": "bundles-11",
+    "priceCents": 250,
+    "note": "hello",
     "attr79": "AB133",
     "attr54": "AB367",
     "attr51": 14329,
@@ -152,6 +176,8 @@
   },
   {
     "name": "bundles-12",
+    "priceCents": 250,
+    "note": "hello",
     "attr26": 51732,
     "attr9": "AB545",
     "attr37": "e37_2",
@@ -165,6 +191,8 @@
   },
   {
     "name": "bundles-13",
+    "priceCents": 250,
+    "note": "hello",
     "attr62": "e62_2",
     "attr8": false,
     "attr53": true,
@@ -177,6 +205,8 @@
   },
   {
     "name": "bundles-14",
+    "priceCents": 250,
+    "note": "hello",
     "attr55": "s4500",
     "attr7": "e7_3",
     "attr60": "s4006",
@@ -190,6 +220,8 @@
   },
   {
     "name": "bundles-15",
+    "priceCents": 250,
+    "note": "hello",
     "attr28": true,
     "attr3": false,
     "attr16": 40218,
@@ -202,6 +234,8 @@
   },
   {
     "name": "bundles-16",
+    "priceCents": 250,
+    "note": "hello",
     "attr0": "s7566",
     "attr52": "e52_3",
     "attr65": "s4049",
@@ -214,6 +248,8 @@
   },
   {
     "name": "bundles-17",
+    "priceCents": 250,
+    "note": "hello",
     "attr23": true,
     "attr74": "AB276",
     "attr62": "e62_0",
@@ -226,6 +262,8 @@
   },
   {
     "name": "bundles-18",
+    "priceCents": 250,
+    "note": "hello",
     "attr16": 59954,
     "attr17": "e17_0",
     "attr44": "AB259",
@@ -239,6 +277,8 @@
   },
   {
     "name": "bundles-19",
+    "priceCents": 250,
+    "note": "hello",
     "attr25": "s9187",
     "attr4": "AB981",
     "attr62": "e62_4",
@@ -252,6 +292,8 @@
   },
   {
     "name": "bundles-20",
+    "priceCents": 250,
+    "note": "hello",
     "attr12": "e12_3",
     "attr69": "AB138",
     "attr0": "s3101",
@@ -265,6 +307,8 @@
   },
   {
     "name": "bundles-21",
+    "priceCents": 250,
+    "note": "hello",
     "attr23": true,
     "attr30": "s4797",
     "attr41": 26312,
@@ -278,6 +322,8 @@
   },
   {
     "name": "bundles-22",
+    "priceCents": 250,
+    "note": "hello",
     "attr25": "s9314",
     "attr15": "s317",
     "attr39": "AB197",
@@ -290,6 +336,8 @@
   },
   {
     "name": "bundles-23",
+    "priceCents": 250,
+    "note": "hello",
     "attr31": 3025,
     "attr63": true,
     "attr73": false,
@@ -303,6 +351,8 @@
   },
   {
     "name": "bundles-24",
+    "priceCents": 250,
+    "note": "hello",
     "attr57": "e57_1",
     "attr58": true,
     "attr10": "s5513",
@@ -315,6 +365,8 @@
   },
   {
     "name": "bundles-25",
+    "priceCents": 250,
+    "note": "hello",
     "attr59": "AB130",
     "attr27": "e27_1",
     "attr5": "s3424",
@@ -327,6 +379,8 @@
   },
   {
     "name": "bundles-26",
+    "priceCents": 250,
+    "note": "hello",
     "attr30": "s2549",
     "attr14": "AB549",
     "attr77": "e77_0",
@@ -340,6 +394,8 @@
   },
   {
     "name": "bundles-27",
+    "priceCents": 250,
+    "note": "hello",
     "attr16": 364,
     "attr37": "e37_2",
     "attr71": 9958,
@@ -351,6 +407,8 @@
   },
   {
     "name": "bundles-28",
+    "priceCents": 250,
+    "note": "hello",
     "attr10": "s8365",
     "attr16": 64522,
     "attr44": "AB754",
@@ -363,6 +421,8 @@
   },
   {
     "name": "bundles-29",
+    "priceCents": 250,
+    "note": "hello",
     "attr13": false,
     "attr14": "AB431",
     "attr65": "s1456",
@@ -376,6 +436,8 @@
   },
   {
     "name": "bundles-30",
+    "priceCents": 250,
+    "note": "hello",
     "attr15": "s7868",
     "attr47": "e47_4",
     "attr12": "e12_4",
@@ -388,6 +450,8 @@
   },
   {
     "name": "bundles-31",
+    "priceCents": 250,
+    "note": "hello",
     "attr29": "AB575",
     "attr0": "s3374",
     "attr28": true,
@@ -400,6 +464,8 @@
   },
   {
     "name": "bundles-32",
+    "priceCents": 250,
+    "note": "hello",
     "attr36": 69226,
     "attr4": "AB757",
     "attr69": "AB408",
@@ -412,6 +478,8 @@
   },
   {
     "name": "bundles-33",
+    "priceCents": 250,
+    "note": "hello",
     "attr9": "AB800",
     "attr32": "e32_4",
     "attr26": 6075,
@@ -425,6 +493,8 @@
   },
   {
     "name": "bundles-34",
+    "priceCents": 250,
+    "note": "hello",
     "attr78": true,
     "attr24": "AB424",
     "attr61": 17670,
@@ -437,6 +507,8 @@
   },
   {
     "name": "bundles-35",
+    "priceCents": 250,
+    "note": "hello",
     "attr30": "s6656",
     "attr64": "AB516",
     "attr61": 29909,
@@ -448,6 +520,8 @@
   },
   {
     "name": "bundles-36",
+    "priceCents": 250,
+    "note": "hello",
     "attr18": false,
     "attr50": "s8918",
     "attr52": "e52_4",
@@ -461,6 +535,8 @@
   },
   {
     "name": "bundles-37",
+    "priceCents": 250,
+    "note": "hello",
     "attr52": "e52_2",
     "attr75": "s4820",
     "attr63": true,
@@ -474,6 +550,8 @@
   },
   {
     "name": "bundles-38",
+    "priceCents": 250,
+    "note": "hello",
     "attr76": 3343,
     "attr30": "s3715",
     "attr64": "AB490",
@@ -487,6 +565,8 @@
   },
   {
     "name": "bundles-39",
+    "priceCents": 250,
+    "note": "hello",
     "attr47": "e47_3",
     "attr74": "AB558",
     "attr73": false,
@@ -499,6 +579,8 @@
   },
   {
     "name": "bundles-40",
+    "priceCents": 250,
+    "note": "hello",
     "attr46": 2360,
     "attr6": 10607,
     "attr58": false,
@@ -510,6 +592,8 @@
   },
   {
     "name": "bundles-41",
+    "priceCents": 250,
+    "note": "hello",
     "attr36": 62836,
     "attr45": "s832",
     "attr68": false,
@@ -523,6 +607,8 @@
   },
   {
     "name": "bundles-42",
+    "priceCents": 250,
+    "note": "hello",
     "attr32": "e32_4",
     "attr73": true,
     "attr48": true,
@@ -536,6 +622,8 @@
   },
   {
     "name": "bundles-43",
+    "priceCents": 250,
+    "note": "hello",
     "attr24": "AB715",
     "attr69": "AB700",
     "attr42": "e42_0",
@@ -549,6 +637,8 @@
   },
   {
     "name": "bundles-44",
+    "priceCents": 250,
+    "note": "hello",
     "attr17": "e17_0",
     "attr68": true,
     "attr78": false,
@@ -562,6 +652,8 @@
   },
   {
     "name": "bundles-45",
+    "priceCents": 250,
+    "note": "hello",
     "attr69": "AB911",
     "attr77": "e77_2",
     "attr74": "AB319",
@@ -575,6 +667,8 @@
   },
   {
     "name": "bundles-46",
+    "priceCents": 250,
+    "note": "hello",
     "attr47": "e47_2",
     "attr8": false,
     "attr4": "AB241",
@@ -588,6 +682,8 @@
   },
   {
     "name": "bundles-47",
+    "priceCents": 250,
+    "note": "hello",
     "attr36": 42124,
     "attr49": "AB796",
     "attr8": true,
@@ -600,6 +696,8 @@
   },
   {
     "name": "bundles-48",
+    "priceCents": 250,
+    "note": "hello",
     "attr31": 6312,
     "attr20": "s586",
     "attr9": "AB974",
@@ -612,6 +710,8 @@
   },
   {
     "name": "bundles-49",
+    "priceCents": 250,
+    "note": "hello",
     "attr20": "s3092",
     "attr56": 9782,
     "attr28": false,
@@ -625,6 +725,8 @@
   },
   {
     "name": "bundles-50",
+    "priceCents": 250,
+    "note": "hello",
     "attr47": "e47_3",
     "attr79": "AB595",
     "attr27": "e27_3",
@@ -637,6 +739,8 @@
   },
   {
     "name": "bundles-51",
+    "priceCents": 250,
+    "note": "hello",
     "attr54": "AB364",
     "attr40": "s4768",
     "attr67": "e67_4",
@@ -650,6 +754,8 @@
   },
   {
     "name": "bundles-52",
+    "priceCents": 250,
+    "note": "hello",
     "attr67": "e67_2",
     "attr56": 7082,
     "attr72": "e72_2",
@@ -662,6 +768,8 @@
   },
   {
     "name": "bundles-53",
+    "priceCents": 250,
+    "note": "hello",
     "attr59": "AB212",
     "attr47": "e47_4",
     "attr21": 10258,
@@ -674,6 +782,8 @@
   },
   {
     "name": "bundles-54",
+    "priceCents": 250,
+    "note": "hello",
     "attr70": "s6018",
     "attr23": true,
     "attr63": false,
@@ -687,6 +797,8 @@
   },
   {
     "name": "bundles-55",
+    "priceCents": 250,
+    "note": "hello",
     "attr51": 63833,
     "attr28": false,
     "attr67": "e67_0",
@@ -700,6 +812,8 @@
   },
   {
     "name": "bundles-56",
+    "priceCents": 250,
+    "note": "hello",
     "attr54": "AB188",
     "attr9": "AB706",
     "attr47": "e47_1",
@@ -712,6 +826,8 @@
   },
   {
     "name": "bundles-57",
+    "priceCents": 250,
+    "note": "hello",
     "attr62": "e62_1",
     "attr63": true,
     "attr6": 22639,
@@ -725,6 +841,8 @@
   },
   {
     "name": "bundles-58",
+    "priceCents": 250,
+    "note": "hello",
     "attr50": "s1125",
     "attr54": "AB910",
     "attr48": false,
@@ -737,6 +855,8 @@
   },
   {
     "name": "bundles-59",
+    "priceCents": 250,
+    "note": "hello",
     "attr15": "s4995",
     "attr3": true,
     "attr52": "e52_0",

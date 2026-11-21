@@ -1,6 +1,7 @@
 [
   {
     "name": "licenses-0",
+    "priceCents": 250,
     "attr20": "s101",
     "attr68": false,
     "attr0": "s7533",
@@ -13,6 +14,7 @@
   },
   {
     "name": "licenses-1",
+    "priceCents": 250,
     "attr22": "e22_2",
     "attr62": "e62_4",
     "attr11": 24065,
@@ -25,6 +27,7 @@
   },
   {
     "name": "licenses-2",
+    "priceCents": 250,
     "attr17": "e17_3",
     "attr8": false,
     "attr38": true,
@@ -37,6 +40,7 @@
   },
   {
     "name": "licenses-3",
+    "priceCents": 250,
     "attr21": 28915,
     "attr9": "AB356",
     "attr19": "AB542",
@@ -50,6 +54,7 @@
   },
   {
     "name": "licenses-4",
+    "priceCents": 250,
     "attr11": 1007,
     "attr40": "s4478",
     "attr1": 89529,
@@ -62,6 +67,7 @@
   },
   {
     "name": "licenses-5",
+    "priceCents": 250,
     "attr18": true,
     "attr31": 47876,
     "attr39": "AB982",
@@ -74,6 +80,7 @@
   },
   {
     "name": "licenses-6",
+    "priceCents": 250,
     "attr31": 3484,
     "attr36": 26085,
     "attr3": false,
@@ -86,6 +93,7 @@
   },
   {
     "name": "licenses-7",
+    "priceCents": 250,
     "attr21": 31501,
     "attr73": false,
     "attr23": false,
@@ -99,6 +107,7 @@
   },
   {
     "name": "licenses-8",
+    "priceCents": 250,
     "attr13": false,
     "attr39": "AB446",
     "attr50": "s8898",
@@ -112,6 +121,7 @@
   },
   {
     "name": "licenses-9",
+    "priceCents": 250,
     "attr34": "AB699",
     "attr19": "AB137",
     "attr74": "AB264",
@@ -124,6 +134,7 @@
   },
   {
     "name": "licenses-10",
+    "priceCents": 250,
     "attr27": "e27_4",
     "attr32": "e32_1",
     "attr46": 93218,
@@ -137,6 +148,7 @@
   },
   {
     "name": "licenses-11",
+    "priceCents": 250,
     "attr15": "s1671",
     "attr21": 37189,
     "attr11": 6431,
@@ -150,6 +162,7 @@
   },
   {
     "name": "licenses-12",
+    "priceCents": 250,
     "attr35": "s857",
     "attr33": false,
     "attr72": "e72_1",
@@ -163,6 +176,7 @@
   },
   {
     "name": "licenses-13",
+    "priceCents": 250,
     "attr29": "AB456",
     "attr5": "s3306",
     "attr54": "AB481",
@@ -175,6 +189,7 @@
   },
   {
     "name": "licenses-14",
+    "priceCents": 250,
     "attr35": "s6070",
     "attr78": false,
     "attr36": 23355,
@@ -187,6 +202,7 @@
   },
   {
     "name": "licenses-15",
+    "priceCents": 250,
     "attr74": "AB845",
     "attr26": 18648,
     "attr55": "s6876",
@@ -200,6 +216,7 @@
   },
   {
     "name": "licenses-16",
+    "priceCents": 250,
     "attr34": "AB256",
     "attr17": "e17_2",
     "attr61": 8406,
@@ -212,6 +229,7 @@
   },
   {
     "name": "licenses-17",
+    "priceCents": 250,
     "attr21": 58325,
     "attr30": "s6170",
     "attr77": "e77_2",
@@ -225,6 +243,7 @@
   },
   {
     "name": "licenses-18",
+    "priceCents": 250,
     "attr8": false,
     "attr21": 9948,
     "attr68": false,
@@ -238,6 +257,7 @@
   },
   {
     "name": "licenses-19",
+    "priceCents": 250,
     "attr9": "AB516",
     "attr33": false,
     "attr55": "s3379",
@@ -251,6 +271,7 @@
   },
   {
     "name": "licenses-20",
+    "priceCents": 250,
     "attr30": "s8922",
     "attr2": "e2_4",
     "attr5": "s4328",
@@ -263,6 +284,7 @@
   },
   {
     "name": "licenses-21",
+    "priceCents": 250,
     "attr58": false,
     "attr38": false,
     "attr36": 27850,
@@ -275,6 +297,7 @@
   },
   {
     "name": "licenses-22",
+    "priceCents": 250,
     "attr43": true,
     "attr47": "e47_2",
     "attr66": 19845,
@@ -288,6 +311,7 @@
   },
   {
     "name": "licenses-23",
+    "priceCents": 250,
     "attr78": false,
     "attr61": 38353,
     "attr65": "s9967",
@@ -300,6 +324,7 @@
   },
   {
     "name": "licenses-24",
+    "priceCents": 250,
     "attr71": 28580,
     "attr29": "AB885",
     "attr18": true,
@@ -312,6 +337,7 @@
   },
   {
     "name": "licenses-25",
+    "priceCents": 250,
     "attr53": true,
     "attr46": 7866,
     "attr9": "AB720",
@@ -324,6 +350,7 @@
   },
   {
     "name": "licenses-26",
+    "priceCents": 250,
     "attr70": "s2199",
     "attr9": "AB317",
     "attr31": 58962,
@@ -336,6 +363,7 @@
   },
   {
     "name": "licenses-27",
+    "priceCents": 250,
     "attr26": 51754,
     "attr62": "e62_4",
     "attr17": "e17_1",
@@ -348,6 +376,7 @@
   },
   {
     "name": "licenses-28",
+    "priceCents": 250,
     "attr79": "AB585",
     "attr27": "e27_3",
     "attr60": "s7307",
@@ -361,6 +390,7 @@
   },
   {
     "name": "licenses-29",
+    "priceCents": 250,
     "attr1": 40109,
     "attr71": 39650,
     "attr60": "s9457",
@@ -374,6 +404,7 @@
   },
   {
     "name": "licenses-30",
+    "priceCents": 250,
     "attr63": true,
     "attr54": "AB686",
     "attr30": "s8832",
@@ -387,6 +418,7 @@
   },
   {
     "name": "licenses-31",
+    "priceCents": 250,
     "attr79": "AB146",
     "attr9": "AB658",
     "attr50": "s9715",
@@ -399,6 +431,7 @@
   },
   {
     "name": "licenses-32",
+    "priceCents": 250,
     "attr12": "e12_2",
     "attr2": "e2_3",
     "attr31": 227,
@@ -411,6 +444,7 @@
   },
   {
     "name": "licenses-33",
+    "priceCents": 250,
     "attr23": true,
     "attr63": true,
     "attr7": "e7_3",
@@ -424,6 +458,7 @@
   },
   {
     "name": "licenses-34",
+    "priceCents": 250,
     "attr2": "e2_4",
     "attr1": 35731,
     "attr22": "e22_1",
@@ -436,6 +471,7 @@
   },
   {
     "name": "licenses-35",
+    "priceCents": 250,
     "attr18": false,
     "attr71": 2488,
     "attr52": "e52_2",
@@ -448,6 +484,7 @@
   },
   {
     "name": "licenses-36",
+    "priceCents": 250,
     "attr33": false,
     "attr40": "s374",
     "attr21": 33626,
@@ -460,6 +497,7 @@
   },
   {
     "name": "licenses-37",
+    "priceCents": 250,
     "attr65": "s9993",
     "attr79": "AB738",
     "attr74": "AB877",
@@ -472,6 +510,7 @@
   },
   {
     "name": "licenses-38",
+    "priceCents": 250,
     "attr55": "s6793",
     "attr40": "s2769",
     "attr13": false,
@@ -485,6 +524,7 @@
   },
   {
     "name": "licenses-39",
+    "priceCents": 250,
     "attr36": 15281,
     "attr56": 23152,
     "attr51": 76606,
@@ -497,6 +537,7 @@
   },
   {
     "name": "licenses-40",
+    "priceCents": 250,
     "attr48": false,
     "attr10": "s3535",
     "attr12": "e12_2",
@@ -509,6 +550,7 @@
   },
   {
     "name": "licenses-41",
+    "priceCents": 250,
     "attr73": true,
     "attr53": false,
     "attr32": "e32_2",
@@ -520,6 +562,7 @@
   },
   {
     "name": "licenses-42",
+    "priceCents": 250,
     "attr40": "s6547",
     "attr47": "e47_0",
     "attr69": "AB678",
@@ -533,6 +576,7 @@
   },
   {
     "name": "licenses-43",
+    "priceCents": 250,
     "attr52": "e52_2",
     "attr59": "AB212",
     "attr68": true,
@@ -545,6 +589,7 @@
   },
   {
     "name": "licenses-44",
+    "priceCents": 250,
     "attr9": "AB209",
     "attr8": false,
     "attr66": 5183,
@@ -557,6 +602,7 @@
   },
   {
     "name": "licenses-45",
+    "priceCents": 250,
     "attr58": true,
     "attr45": "s2476",
     "attr28": false,
@@ -570,6 +616,7 @@
   },
   {
     "name": "licenses-46",
+    "priceCents": 250,
     "attr39": "AB187",
     "attr17": "e17_3",
     "attr59": "AB741",
@@ -581,6 +628,7 @@
   },
   {
     "name": "licenses-47",
+    "priceCents": 250,
     "attr39": "AB114",
     "attr31": 43243,
     "attr48": false,
@@ -593,6 +641,7 @@
   },
   {
     "name": "licenses-48",
+    "priceCents": 250,
     "attr48": true,
     "attr28": true,
     "attr38": true,
@@ -605,6 +654,7 @@
   },
   {
     "name": "licenses-49",
+    "priceCents": 250,
     "attr34": "AB648",
     "attr17": "e17_0",
     "attr36": 16326,
@@ -618,6 +668,7 @@
   },
   {
     "name": "licenses-50",
+    "priceCents": 250,
     "attr8": false,
     "attr34": "AB271",
     "attr62": "e62_0",
@@ -631,6 +682,7 @@
   },
   {
     "name": "licenses-51",
+    "priceCents": 250,
     "attr55": "s3193",
     "attr41": 24719,
     "attr42": "e42_3",
@@ -644,6 +696,7 @@
   },
   {
     "name": "licenses-52",
+    "priceCents": 250,
     "attr13": true,
     "attr71": 781,
     "attr45": "s9255",
@@ -657,6 +710,7 @@
   },
   {
     "name": "licenses-53",
+    "priceCents": 250,
     "attr21": 29154,
     "attr1": 3032,
     "attr54": "AB389",
@@ -670,6 +724,7 @@
   },
   {
     "name": "licenses-54",
+    "priceCents": 250,
     "attr70": "s3062",
     "attr29": "AB796",
     "attr46": 37293,
@@ -683,6 +738,7 @@
   },
   {
     "name": "licenses-55",
+    "priceCents": 250,
     "attr46": 87951,
     "attr26": 7639,
     "attr25": "s9029",
@@ -696,6 +752,7 @@
   },
   {
     "name": "licenses-56",
+    "priceCents": 250,
     "attr7": "e7_3",
     "attr6": 19527,
     "attr76": 1337,
@@ -709,6 +766,7 @@
   },
   {
     "name": "licenses-57",
+    "priceCents": 250,
     "attr13": false,
     "attr49": "AB873",
     "attr55": "s2963",
@@ -722,6 +780,7 @@
   },
   {
     "name": "licenses-58",
+    "priceCents": 250,
     "attr53": false,
     "attr29": "AB952",
     "attr58": false,
@@ -734,6 +793,7 @@
   },
   {
     "name": "licenses-59",
+    "priceCents": 250,
     "attr60": "s4607",
     "attr50": "s3573",
     "attr65": "s7026",

@@ -1,6 +1,7 @@
 [
   {
     "name": "bookings2-0",
+    "qty": 3,
     "attr1": 75912,
     "attr10": "s5456",
     "attr71": 2857,
@@ -12,6 +13,7 @@
   },
   {
     "name": "bookings2-1",
+    "qty": 3,
     "attr36": 20294,
     "attr8": false,
     "attr53": true,
@@ -24,6 +26,7 @@
   },
   {
     "name": "bookings2-2",
+    "qty": 3,
     "attr1": 83029,
     "attr40": "s1825",
     "attr60": "s4705",
@@ -36,6 +39,7 @@
   },
   {
     "name": "bookings2-3",
+    "qty": 3,
     "attr58": true,
     "attr35": "s9657",
     "attr14": "AB747",
@@ -47,6 +51,7 @@
   },
   {
     "name": "bookings2-4",
+    "qty": 3,
     "attr45": "s5657",
     "attr21": 19936,
     "attr69": "AB683",
@@ -59,6 +64,7 @@
   },
   {
     "name": "bookings2-5",
+    "qty": 3,
     "attr68": false,
     "attr49": "AB501",
     "attr33": false,
@@ -72,6 +78,7 @@
   },
   {
     "name": "bookings2-6",
+    "qty": 3,
     "attr64": "AB750",
     "attr7": "e7_2",
     "attr75": "s4806",
@@ -84,6 +91,7 @@
   },
   {
     "name": "bookings2-7",
+    "qty": 3,
     "attr39": "AB999",
     "attr1": 89145,
     "attr72": "e72_3",
@@ -97,6 +105,7 @@
   },
   {
     "name": "bookings2-8",
+    "qty": 3,
     "attr20": "s4113",
     "attr24": "AB725",
     "attr56": 37863,
@@ -110,6 +119,7 @@
   },
   {
     "name": "bookings2-9",
+    "qty": 3,
     "attr7": "e7_3",
     "attr52": "e52_4",
     "attr10": "s4871",
@@ -123,6 +133,7 @@
   },
   {
     "name": "bookings2-10",
+    "qty": 3,
     "attr68": false,
     "attr44": "AB243",
     "attr50": "s3765",
@@ -135,6 +146,7 @@
   },
   {
     "name": "bookings2-11",
+    "qty": 3,
     "attr44": "AB202",
     "attr5": "s9885",
     "attr50": "s4398",
@@ -148,6 +160,7 @@
   },
   {
     "name": "bookings2-12",
+    "qty": 3,
     "attr20": "s1048",
     "attr30": "s3049",
     "attr42": "e42_1",
@@ -161,6 +174,7 @@
   },
   {
     "name": "bookings2-13",
+    "qty": 3,
     "attr78": true,
     "attr23": false,
     "attr24": "AB968",
@@ -174,6 +188,7 @@
   },
   {
     "name": "bookings2-14",
+    "qty": 3,
     "attr73": true,
     "attr56": 29022,
     "attr42": "e42_2",
@@ -187,6 +202,7 @@
   },
   {
     "name": "bookings2-15",
+    "qty": 3,
     "attr75": "s3491",
     "attr48": false,
     "attr25": "s5210",
@@ -200,6 +216,7 @@
   },
   {
     "name": "bookings2-16",
+    "qty": 3,
     "attr66": 21837,
     "attr28": true,
     "attr74": "AB398",
@@ -212,6 +229,7 @@
   },
   {
     "name": "bookings2-17",
+    "qty": 3,
     "attr29": "AB139",
     "attr40": "s3912",
     "attr27": "e27_2",
@@ -225,6 +243,7 @@
   },
   {
     "name": "bookings2-18",
+    "qty": 3,
     "attr53": false,
     "attr32": "e32_1",
     "attr43": false,
@@ -237,6 +256,7 @@
   },
   {
     "name": "bookings2-19",
+    "qty": 3,
     "attr53": true,
     "attr38": false,
     "attr66": 8306,
@@ -249,6 +269,7 @@
   },
   {
     "name": "bookings2-20",
+    "qty": 3,
     "attr5": "s4342",
     "attr31": 74745,
     "attr30": "s7006",
@@ -262,6 +283,7 @@
   },
   {
     "name": "bookings2-21",
+    "qty": 3,
     "attr13": true,
     "attr22": "e22_2",
     "attr62": "e62_1",
@@ -274,6 +296,7 @@
   },
   {
     "name": "bookings2-22",
+    "qty": 3,
     "attr78": true,
     "attr23": false,
     "attr1": 60397,
@@ -286,6 +309,7 @@
   },
   {
     "name": "bookings2-23",
+    "qty": 3,
     "attr23": true,
     "attr29": "AB524",
     "attr3": false,
@@ -297,6 +321,7 @@
   },
   {
     "name": "bookings2-24",
+    "qty": 3,
     "attr30": "s6497",
     "attr57": "e57_0",
     "attr52": "e52_4",
@@ -310,6 +335,7 @@
   },
   {
     "name": "bookings2-25",
+    "qty": 3,
     "attr64": "AB495",
     "attr1": 41134,
     "attr53": true,
@@ -322,6 +348,7 @@
   },
   {
     "name": "bookings2-26",
+    "qty": 3,
     "attr27": "e27_2",
     "attr49": "AB479",
     "attr63": true,
@@ -334,6 +361,7 @@
   },
   {
     "name": "bookings2-27",
+    "qty": 3,
     "attr1": 16106,
     "attr28": true,
     "attr52": "e52_4",
@@ -347,6 +375,7 @@
   },
   {
     "name": "bookings2-28",
+    "qty": 3,
     "attr18": true,
     "attr28": true,
     "attr11": 39293,
@@ -360,6 +389,7 @@
   },
   {
     "name": "bookings2-29",
+    "qty": 3,
     "attr44": "AB418",
     "attr18": false,
     "attr53": true,
@@ -373,6 +403,7 @@
   },
   {
     "name": "bookings2-30",
+    "qty": 3,
     "attr73": true,
     "attr55": "s6934",
     "attr57": "e57_4",
@@ -384,6 +415,7 @@
   },
   {
     "name": "bookings2-31",
+    "qty": 3,
     "attr60": "s2015",
     "attr58": false,
     "attr30": "s5615",
@@ -397,6 +429,7 @@
   },
   {
     "name": "bookings2-32",
+    "qty": 3,
     "attr71": 5224,
     "attr68": true,
     "attr53": true,
@@ -409,6 +442,7 @@
   },
   {
     "name": "bookings2-33",
+    "qty": 3,
     "attr32": "e32_0",
     "attr6": 35624,
     "attr3": false,
@@ -421,6 +455,7 @@
   },
   {
     "name": "bookings2-34",
+    "qty": 3,
     "attr18": false,
     "attr44": "AB276",
     "attr71": 2429,
@@ -434,6 +469,7 @@
   },
   {
     "name": "bookings2-35",
+    "qty": 3,
     "attr13": false,
     "attr55": "s797",
     "attr48": true,
@@ -447,6 +483,7 @@
   },
   {
     "name": "bookings2-36",
+    "qty": 3,
     "attr0": "s2243",
     "attr32": "e32_1",
     "attr11": 21157,
@@ -460,6 +497,7 @@
   },
   {
     "name": "bookings2-37",
+    "qty": 3,
     "attr60": "s6664",
     "attr34": "AB965",
     "attr33": false,
@@ -473,6 +511,7 @@
   },
   {
     "name": "bookings2-38",
+    "qty": 3,
     "attr35": "s4756",
     "attr15": "s3149",
     "attr59": "AB925",
@@ -486,6 +525,7 @@
   },
   {
     "name": "bookings2-39",
+    "qty": 3,
     "attr9": "AB409",
     "attr76": 36432,
     "attr49": "AB384",
@@ -499,6 +539,7 @@
   },
   {
     "name": "bookings2-40",
+    "qty": 3,
     "attr14": "AB869",
     "attr71": 2992,
     "attr27": "e27_4",
@@ -512,6 +553,7 @@
   },
   {
     "name": "bookings2-41",
+    "qty": 3,
     "attr48": false,
     "attr58": false,
     "attr15": "s7716",
@@ -524,6 +566,7 @@
   },
   {
     "name": "bookings2-42",
+    "qty": 3,
     "attr77": "e77_1",
     "attr10": "s6514",
     "attr25": "s1321",
@@ -537,6 +580,7 @@
   },
   {
     "name": "bookings2-43",
+    "qty": 3,
     "attr38": false,
     "attr73": true,
     "attr70": "s7460",
@@ -550,6 +594,7 @@
   },
   {
     "name": "bookings2-44",
+    "qty": 3,
     "attr33": false,
     "attr66": 14792,
     "attr14": "AB735",
@@ -563,6 +608,7 @@
   },
   {
     "name": "bookings2-45",
+    "qty": 3,
     "attr27": "e27_0",
     "attr62": "e62_4",
     "attr38": true,
@@ -576,6 +622,7 @@
   },
   {
     "name": "bookings2-46",
+    "qty": 3,
     "attr71": 5699,
     "attr76": 34155,
     "attr28": false,
@@ -589,6 +636,7 @@
   },
   {
     "name": "bookings2-47",
+    "qty": 3,
     "attr65": "s4755",
     "attr14": "AB386",
     "attr49": "AB723",
@@ -602,6 +650,7 @@
   },
   {
     "name": "bookings2-48",
+    "qty": 3,
     "attr64": "AB676",
     "attr71": 1435,
     "attr29": "AB890",
@@ -614,6 +663,7 @@
   },
   {
     "name": "bookings2-49",
+    "qty": 3,
     "attr56": 62819,
     "attr55": "s8555",
     "attr6": 48010,
@@ -627,6 +677,7 @@
   },
   {
     "name": "bookings2-50",
+    "qty": 3,
     "attr58": false,
     "attr30": "s9132",
     "attr75": "s9041",
@@ -640,6 +691,7 @@
   },
   {
     "name": "bookings2-51",
+    "qty": 3,
     "attr29": "AB345",
     "attr44": "AB886",
     "attr43": true,
@@ -653,6 +705,7 @@
   },
   {
     "name": "bookings2-52",
+    "qty": 3,
     "attr37": "e37_1",
     "attr2": "e2_3",
     "attr31": 9076,
@@ -666,6 +719,7 @@
   },
   {
     "name": "bookings2-53",
+    "qty": 3,
     "attr49": "AB550",
     "attr3": false,
     "attr5": "s9980",
@@ -678,6 +732,7 @@
   },
   {
     "name": "bookings2-54",
+    "qty": 3,
     "attr8": true,
     "attr24": "AB474",
     "attr34": "AB569",
@@ -691,6 +746,7 @@
   },
   {
     "name": "bookings2-55",
+    "qty": 3,
     "attr67": "e67_1",
     "attr45": "s1792",
     "attr14": "AB657",
@@ -703,6 +759,7 @@
   },
   {
     "name": "bookings2-56",
+    "qty": 3,
     "attr64": "AB383",
     "attr63": true,
     "attr6": 68107,
@@ -715,6 +772,7 @@
   },
   {
     "name": "bookings2-57",
+    "qty": 3,
     "attr78": false,
     "attr63": false,
     "attr31": 80649,
@@ -727,6 +785,7 @@
   },
   {
     "name": "bookings2-58",
+    "qty": 3,
     "attr23": true,
     "attr34": "AB223",
     "attr46": 40939,
@@ -740,6 +799,7 @@
   },
   {
     "name": "bookings2-59",
+    "qty": 3,
     "attr21": 88391,
     "attr7": "e7_0",
     "attr63": true,

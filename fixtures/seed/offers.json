@@ -1,6 +1,7 @@
 [
   {
     "name": "offers-0",
+    "code": "AB123",
     "attr7": "e7_1",
     "attr44": "AB624",
     "attr39": "AB823",
@@ -14,6 +15,7 @@
   },
   {
     "name": "offers-1",
+    "code": "AB123",
     "attr0": "s6281",
     "attr41": 88,
     "attr73": true,
@@ -27,6 +29,7 @@
   },
   {
     "name": "offers-2",
+    "code": "AB123",
     "attr53": false,
     "attr11": 8532,
     "attr32": "e32_3",
@@ -40,6 +43,7 @@
   },
   {
     "name": "offers-3",
+    "code": "AB123",
     "attr8": true,
     "attr28": false,
     "attr2": "e2_3",
@@ -52,6 +56,7 @@
   },
   {
     "name": "offers-4",
+    "code": "AB123",
     "attr50": "s7157",
     "attr34": "AB680",
     "attr56": 53050,
@@ -65,6 +70,7 @@
   },
   {
     "name": "offers-5",
+    "code": "AB123",
     "attr44": "AB333",
     "attr36": 49615,
     "attr50": "s276",
@@ -78,6 +84,7 @@
   },
   {
     "name": "offers-6",
+    "code": "AB123",
     "attr32": "e32_4",
     "attr71": 3267,
     "attr77": "e77_2",
@@ -91,6 +98,7 @@
   },
   {
     "name": "offers-7",
+    "code": "AB123",
     "attr51": 19909,
     "attr60": "s3447",
     "attr2": "e2_4",
@@ -103,6 +111,7 @@
   },
   {
     "name": "offers-8",
+    "code": "AB123",
     "attr49": "AB159",
     "attr21": 28026,
     "attr0": "s8598",
@@ -116,6 +125,7 @@
   },
   {
     "name": "offers-9",
+    "code": "AB123",
     "attr57": "e57_4",
     "attr13": false,
     "attr68": true,
@@ -128,6 +138,7 @@
   },
   {
     "name": "offers-10",
+    "code": "AB123",
     "attr72": "e72_4",
     "attr8": true,
     "attr15": "s6231",
@@ -139,6 +150,7 @@
   },
   {
     "name": "offers-11",
+    "code": "AB123",
     "attr39": "AB991",
     "attr61": 5328,
     "attr29": "AB322",
@@ -152,6 +164,7 @@
   },
   {
     "name": "offers-12",
+    "code": "AB123",
     "attr20": "s7014",
     "attr33": false,
     "attr47": "e47_1",
@@ -163,6 +176,7 @@
   },
   {
     "name": "offers-13",
+    "code": "AB123",
     "attr30": "s3737",
     "attr27": "e27_3",
     "attr0": "s8406",
@@ -176,6 +190,7 @@
   },
   {
     "name": "offers-14",
+    "code": "AB123",
     "attr61": 14681,
     "attr58": true,
     "attr17": "e17_2",
@@ -188,6 +203,7 @@
   },
   {
     "name": "offers-15",
+    "code": "AB123",
     "attr14": "AB908",
     "attr12": "e12_2",
     "attr37": "e37_3",
@@ -201,6 +217,7 @@
   },
   {
     "name": "offers-16",
+    "code": "AB123",
     "attr58": true,
     "attr4": "AB851",
     "attr54": "AB639",
@@ -214,6 +231,7 @@
   },
   {
     "name": "offers-17",
+    "code": "AB123",
     "attr45": "s1617",
     "attr19": "AB309",
     "attr63": false,
@@ -226,6 +244,7 @@
   },
   {
     "name": "offers-18",
+    "code": "AB123",
     "attr30": "s6654",
     "attr77": "e77_1",
     "attr49": "AB404",
@@ -238,6 +257,7 @@
   },
   {
     "name": "offers-19",
+    "code": "AB123",
     "attr13": false,
     "attr50": "s2184",
     "attr20": "s8760",
@@ -251,6 +271,7 @@
   },
   {
     "name": "offers-20",
+    "code": "AB123",
     "attr53": true,
     "attr57": "e57_2",
     "attr55": "s6278",
@@ -264,6 +285,7 @@
   },
   {
     "name": "offers-21",
+    "code": "AB123",
     "attr38": false,
     "attr7": "e7_2",
     "attr32": "e32_1",
@@ -277,6 +299,7 @@
   },
   {
     "name": "offers-22",
+    "code": "AB123",
     "attr16": 5087,
     "attr17": "e17_2",
     "attr10": "s7329",
@@ -288,6 +311,7 @@
   },
   {
     "name": "offers-23",
+    "code": "AB123",
     "attr17": "e17_2",
     "attr38": false,
     "attr47": "e47_2",
@@ -300,6 +324,7 @@
   },
   {
     "name": "offers-24",
+    "code": "AB123",
     "attr55": "s8060",
     "attr46": 11938,
     "attr69": "AB532",
@@ -313,6 +338,7 @@
   },
   {
     "name": "offers-25",
+    "code": "AB123",
     "attr40": "s2384",
     "attr22": "e22_2",
     "attr75": "s5589",
@@ -326,6 +352,7 @@
   },
   {
     "name": "offers-26",
+    "code": "AB123",
     "attr58": false,
     "attr33": true,
     "attr47": "e47_0",
@@ -338,6 +365,7 @@
   },
   {
     "name": "offers-27",
+    "code": "AB123",
     "attr3": true,
     "attr57": "e57_3",
     "attr13": true,
@@ -350,6 +378,7 @@
   },
   {
     "name": "offers-28",
+    "code": "AB123",
     "attr32": "e32_3",
     "attr69": "AB754",
     "attr65": "s5822",
@@ -362,6 +391,7 @@
   },
   {
     "name": "offers-29",
+    "code": "AB123",
     "attr75": "s6749",
     "attr53": false,
     "attr46": 28410,
@@ -373,6 +403,7 @@
   },
   {
     "name": "offers-30",
+    "code": "AB123",
     "attr28": true,
     "attr9": "AB809",
     "attr39": "AB967",
@@ -385,6 +416,7 @@
   },
   {
     "name": "offers-31",
+    "code": "AB123",
     "attr7": "e7_1",
     "attr30": "s8954",
     "attr68": false,
@@ -397,6 +429,7 @@
   },
   {
     "name": "offers-32",
+    "code": "AB123",
     "attr69": "AB706",
     "attr19": "AB696",
     "attr30": "s1369",
@@ -410,6 +443,7 @@
   },
   {
     "name": "offers-33",
+    "code": "AB123",
     "attr7": "e7_4",
     "attr8": false,
     "attr30": "s5036",
@@ -423,6 +457,7 @@
   },
   {
     "name": "offers-34",
+    "code": "AB123",
     "attr32": "e32_4",
     "attr26": 22236,
     "attr45": "s3754",
@@ -436,6 +471,7 @@
   },
   {
     "name": "offers-35",
+    "code": "AB123",
     "attr48": false,
     "attr76": 1270,
     "attr61": 10555,
@@ -449,6 +485,7 @@
   },
   {
     "name": "offers-36",
+    "code": "AB123",
     "attr76": 1500,
     "attr6": 18646,
     "attr31": 22788,
@@ -461,6 +498,7 @@
   },
   {
     "name": "offers-37",
+    "code": "AB123",
     "attr27": "e27_2",
     "attr20": "s5292",
     "attr17": "e17_4",
@@ -473,6 +511,7 @@
   },
   {
     "name": "offers-38",
+    "code": "AB123",
     "attr45": "s7050",
     "attr41": 296,
     "attr26": 39646,
@@ -485,6 +524,7 @@
   },
   {
     "name": "offers-39",
+    "code": "AB123",
     "attr9": "AB563",
     "attr38": false,
     "attr33": true,
@@ -497,6 +537,7 @@
   },
   {
     "name": "offers-40",
+    "code": "AB123",
     "attr72": "e72_4",
     "attr49": "AB443",
     "attr74": "AB561",
@@ -509,6 +550,7 @@
   },
   {
     "name": "offers-41",
+    "code": "AB123",
     "attr49": "AB174",
     "attr76": 1248,
     "attr36": 68847,
@@ -522,6 +564,7 @@
   },
   {
     "name": "offers-42",
+    "code": "AB123",
     "attr70": "s1296",
     "attr21": 28958,
     "attr72": "e72_3",
@@ -535,6 +578,7 @@
   },
   {
     "name": "offers-43",
+    "code": "AB123",
     "attr39": "AB889",
     "attr30": "s5021",
     "attr9": "AB881",
@@ -548,6 +592,7 @@
   },
   {
     "name": "offers-44",
+    "code": "AB123",
     "attr48": false,
     "attr10": "s557",
     "attr51": 31644,
@@ -561,6 +606,7 @@
   },
   {
     "name": "offers-45",
+    "code": "AB123",
     "attr22": "e22_3",
     "attr74": "AB198",
     "attr61": 16466,
@@ -574,6 +620,7 @@
   },
   {
     "name": "offers-46",
+    "code": "AB123",
     "attr51": 33570,
     "attr79": "AB373",
     "attr70": "s3218",
@@ -587,6 +634,7 @@
   },
   {
     "name": "offers-47",
+    "code": "AB123",
     "attr74": "AB277",
     "attr65": "s4448",
     "attr6": 20673,
@@ -600,6 +648,7 @@
   },
   {
     "name": "offers-48",
+    "code": "AB123",
     "attr63": false,
     "attr66": 44406,
     "attr16": 10805,
@@ -613,6 +662,7 @@
   },
   {
     "name": "offers-49",
+    "code": "AB123",
     "attr1": 7835,
     "attr12": "e12_0",
     "attr66": 8485,
@@ -625,6 +675,7 @@
   },
   {
     "name": "offers-50",
+    "code": "AB123",
     "attr41": 237,
     "attr53": false,
     "attr66": 8245,
@@ -637,6 +688,7 @@
   },
   {
     "name": "offers-51",
+    "code": "AB123",
     "attr19": "AB887",
     "attr57": "e57_4",
     "attr32": "e32_4",
@@ -649,6 +701,7 @@
   },
   {
     "name": "offers-52",
+    "code": "AB123",
     "attr52": "e52_0",
     "attr67": "e67_3",
     "attr39": "AB965",
@@ -661,6 +714,7 @@
   },
   {
     "name": "offers-53",
+    "code": "AB123",
     "attr63": false,
     "attr12": "e12_1",
     "attr51": 25314,
@@ -673,6 +727,7 @@
   },
   {
     "name": "offers-54",
+    "code": "AB123",
     "attr59": "AB529",
     "attr27": "e27_3",
     "attr44": "AB704",
@@ -686,6 +741,7 @@
   },
   {
     "name": "offers-55",
+    "code": "AB123",
     "attr6": 4894,
     "attr4": "AB767",
     "attr33": false,
@@ -699,6 +755,7 @@
   },
   {
     "name": "offers-56",
+    "code": "AB123",
     "attr71": 2833,
     "attr40": "s3416",
     "attr21": 1728,
@@ -711,6 +768,7 @@
   },
   {
     "name": "offers-57",
+    "code": "AB123",
     "attr17": "e17_0",
     "attr32": "e32_4",
     "attr12": "e12_4",
@@ -723,6 +781,7 @@
   },
   {
     "name": "offers-58",
+    "code": "AB123",
     "attr66": 4257,
     "attr30": "s9464",
     "attr23": true,
@@ -735,6 +794,7 @@
   },
   {
     "name": "offers-59",
+    "code": "AB123",
     "attr22": "e22_3",
     "attr68": true,
     "attr16": 13711,

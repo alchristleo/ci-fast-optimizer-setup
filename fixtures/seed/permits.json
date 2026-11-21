@@ -1,6 +1,7 @@
 [
   {
     "name": "permits-0",
+    "priceCents": 250,
     "attr16": 41115,
     "attr31": 52039,
     "attr26": 13739,
@@ -12,6 +13,7 @@
   },
   {
     "name": "permits-1",
+    "priceCents": 250,
     "attr76": 35177,
     "attr61": 35629,
     "attr41": 18627,
@@ -24,6 +26,7 @@
   },
   {
     "name": "permits-2",
+    "priceCents": 250,
     "attr15": "s5362",
     "attr20": "s530",
     "attr77": "e77_1",
@@ -37,6 +40,7 @@
   },
   {
     "name": "permits-3",
+    "priceCents": 250,
     "attr27": "e27_4",
     "attr70": "s4381",
     "attr50": "s9206",
@@ -49,6 +53,7 @@
   },
   {
     "name": "permits-4",
+    "priceCents": 250,
     "attr4": "AB941",
     "attr31": 18956,
     "attr55": "s5869",
@@ -62,6 +67,7 @@
   },
   {
     "name": "permits-5",
+    "priceCents": 250,
     "attr53": true,
     "attr12": "e12_2",
     "attr18": true,
@@ -74,6 +80,7 @@
   },
   {
     "name": "permits-6",
+    "priceCents": 250,
     "attr9": "AB321",
     "attr29": "AB833",
     "attr31": 52853,
@@ -87,6 +94,7 @@
   },
   {
     "name": "permits-7",
+    "priceCents": 250,
     "attr22": "e22_3",
     "attr28": false,
     "attr55": "s179",
@@ -98,6 +106,7 @@
   },
   {
     "name": "permits-8",
+    "priceCents": 250,
     "attr49": "AB608",
     "attr41": 21835,
     "attr30": "s4394",
@@ -110,6 +119,7 @@
   },
   {
     "name": "permits-9",
+    "priceCents": 250,
     "attr68": true,
     "attr35": "s3519",
     "attr0": "s979",
@@ -122,6 +132,7 @@
   },
   {
     "name": "permits-10",
+    "priceCents": 250,
     "attr32": "e32_0",
     "attr28": true,
     "attr31": 15834,
@@ -134,6 +145,7 @@
   },
   {
     "name": "permits-11",
+    "priceCents": 250,
     "attr7": "e7_3",
     "attr44": "AB237",
     "attr4": "AB228",
@@ -147,6 +159,7 @@
   },
   {
     "name": "permits-12",
+    "priceCents": 250,
     "attr71": 3811,
     "attr54": "AB820",
     "attr58": false,
@@ -158,6 +171,7 @@
   },
   {
     "name": "permits-13",
+    "priceCents": 250,
     "attr32": "e32_1",
     "attr13": false,
     "attr18": true,
@@ -169,6 +183,7 @@
   },
   {
     "name": "permits-14",
+    "priceCents": 250,
     "attr59": "AB844",
     "attr71": 66398,
     "attr17": "e17_0",
@@ -180,6 +195,7 @@
   },
   {
     "name": "permits-15",
+    "priceCents": 250,
     "attr48": false,
     "attr44": "AB252",
     "attr22": "e22_0",
@@ -193,6 +209,7 @@
   },
   {
     "name": "permits-16",
+    "priceCents": 250,
     "attr75": "s1833",
     "attr36": 2223,
     "attr21": 16431,
@@ -205,6 +222,7 @@
   },
   {
     "name": "permits-17",
+    "priceCents": 250,
     "attr15": "s3804",
     "attr77": "e77_3",
     "attr4": "AB548",
@@ -217,6 +235,7 @@
   },
   {
     "name": "permits-18",
+    "priceCents": 250,
     "attr77": "e77_1",
     "attr37": "e37_4",
     "attr21": 2020,
@@ -229,6 +248,7 @@
   },
   {
     "name": "permits-19",
+    "priceCents": 250,
     "attr65": "s8621",
     "attr53": false,
     "attr25": "s6064",
@@ -242,6 +262,7 @@
   },
   {
     "name": "permits-20",
+    "priceCents": 250,
     "attr51": 13272,
     "attr27": "e27_0",
     "attr21": 6940,
@@ -254,6 +275,7 @@
   },
   {
     "name": "permits-21",
+    "priceCents": 250,
     "attr36": 8425,
     "attr18": true,
     "attr48": true,
@@ -267,6 +289,7 @@
   },
   {
     "name": "permits-22",
+    "priceCents": 250,
     "attr7": "e7_4",
     "attr72": "e72_2",
     "attr70": "s5476",
@@ -280,6 +303,7 @@
   },
   {
     "name": "permits-23",
+    "priceCents": 250,
     "attr28": true,
     "attr67": "e67_2",
     "attr2": "e2_2",
@@ -293,6 +317,7 @@
   },
   {
     "name": "permits-24",
+    "priceCents": 250,
     "attr56": 73711,
     "attr16": 37996,
     "attr21": 4122,
@@ -306,6 +331,7 @@
   },
   {
     "name": "permits-25",
+    "priceCents": 250,
     "attr34": "AB771",
     "attr33": true,
     "attr47": "e47_1",
@@ -319,6 +345,7 @@
   },
   {
     "name": "permits-26",
+    "priceCents": 250,
     "attr7": "e7_3",
     "attr69": "AB945",
     "attr32": "e32_4",
@@ -332,6 +359,7 @@
   },
   {
     "name": "permits-27",
+    "priceCents": 250,
     "attr38": true,
     "attr16": 9502,
     "attr46": 25960,
@@ -343,6 +371,7 @@
   },
   {
     "name": "permits-28",
+    "priceCents": 250,
     "attr34": "AB249",
     "attr73": true,
     "attr17": "e17_2",
@@ -355,6 +384,7 @@
   },
   {
     "name": "permits-29",
+    "priceCents": 250,
     "attr71": 6479,
     "attr54": "AB555",
     "attr70": "s9070",
@@ -367,6 +397,7 @@
   },
   {
     "name": "permits-30",
+    "priceCents": 250,
     "attr31": 32291,
     "attr58": true,
     "attr28": false,
@@ -379,6 +410,7 @@
   },
   {
     "name": "permits-31",
+    "priceCents": 250,
     "attr69": "AB518",
     "attr41": 8478,
     "attr46": 5182,
@@ -392,6 +424,7 @@
   },
   {
     "name": "permits-32",
+    "priceCents": 250,
     "attr30": "s324",
     "attr40": "s7154",
     "attr56": 69648,
@@ -405,6 +438,7 @@
   },
   {
     "name": "permits-33",
+    "priceCents": 250,
     "attr79": "AB886",
     "attr28": true,
     "attr67": "e67_0",
@@ -418,6 +452,7 @@
   },
   {
     "name": "permits-34",
+    "priceCents": 250,
     "attr20": "s2105",
     "attr31": 24321,
     "attr2": "e2_3",
@@ -430,6 +465,7 @@
   },
   {
     "name": "permits-35",
+    "priceCents": 250,
     "attr6": 21881,
     "attr7": "e7_1",
     "attr33": true,
@@ -443,6 +479,7 @@
   },
   {
     "name": "permits-36",
+    "priceCents": 250,
     "attr60": "s5196",
     "attr41": 15382,
     "attr42": "e42_4",
@@ -456,6 +493,7 @@
   },
   {
     "name": "permits-37",
+    "priceCents": 250,
     "attr37": "e37_2",
     "attr23": false,
     "attr54": "AB302",
@@ -469,6 +507,7 @@
   },
   {
     "name": "permits-38",
+    "priceCents": 250,
     "attr64": "AB450",
     "attr14": "AB442",
     "attr45": "s4005",
@@ -482,6 +521,7 @@
   },
   {
     "name": "permits-39",
+    "priceCents": 250,
     "attr2": "e2_1",
     "attr54": "AB831",
     "attr3": false,
@@ -494,6 +534,7 @@
   },
   {
     "name": "permits-40",
+    "priceCents": 250,
     "attr8": true,
     "attr15": "s4597",
     "attr67": "e67_1",
@@ -507,6 +548,7 @@
   },
   {
     "name": "permits-41",
+    "priceCents": 250,
     "attr50": "s1128",
     "attr31": 42666,
     "attr3": false,
@@ -518,6 +560,7 @@
   },
   {
     "name": "permits-42",
+    "priceCents": 250,
     "attr70": "s5938",
     "attr28": false,
     "attr59": "AB875",
@@ -530,6 +573,7 @@
   },
   {
     "name": "permits-43",
+    "priceCents": 250,
     "attr14": "AB341",
     "attr69": "AB116",
     "attr32": "e32_2",
@@ -542,6 +586,7 @@
   },
   {
     "name": "permits-44",
+    "priceCents": 250,
     "attr70": "s2362",
     "attr37": "e37_4",
     "attr21": 501,
@@ -554,6 +599,7 @@
   },
   {
     "name": "permits-45",
+    "priceCents": 250,
     "attr2": "e2_1",
     "attr50": "s1759",
     "attr44": "AB469",
@@ -567,6 +613,7 @@
   },
   {
     "name": "permits-46",
+    "priceCents": 250,
     "attr28": true,
     "attr56": 73477,
     "attr62": "e62_4",
@@ -580,6 +627,7 @@
   },
   {
     "name": "permits-47",
+    "priceCents": 250,
     "attr10": "s5953",
     "attr64": "AB499",
     "attr46": 5551,
@@ -593,6 +641,7 @@
   },
   {
     "name": "permits-48",
+    "priceCents": 250,
     "attr3": true,
     "attr40": "s8617",
     "attr28": false,
@@ -605,6 +654,7 @@
   },
   {
     "name": "permits-49",
+    "priceCents": 250,
     "attr29": "AB217",
     "attr77": "e77_1",
     "attr63": false,
@@ -618,6 +668,7 @@
   },
   {
     "name": "permits-50",
+    "priceCents": 250,
     "attr35": "s4412",
     "attr38": true,
     "attr9": "AB878",
@@ -630,6 +681,7 @@
   },
   {
     "name": "permits-51",
+    "priceCents": 250,
     "attr12": "e12_0",
     "attr79": "AB552",
     "attr26": 56545,
@@ -642,6 +694,7 @@
   },
   {
     "name": "permits-52",
+    "priceCents": 250,
     "attr27": "e27_3",
     "attr22": "e22_4",
     "attr18": false,
@@ -655,6 +708,7 @@
   },
   {
     "name": "permits-53",
+    "priceCents": 250,
     "attr60": "s4207",
     "attr27": "e27_1",
     "attr29": "AB800",
@@ -666,6 +720,7 @@
   },
   {
     "name": "permits-54",
+    "priceCents": 250,
     "attr41": 5590,
     "attr79": "AB183",
     "attr66": 60924,
@@ -679,6 +734,7 @@
   },
   {
     "name": "permits-55",
+    "priceCents": 250,
     "attr13": false,
     "attr26": 68044,
     "attr72": "e72_4",
@@ -692,6 +748,7 @@
   },
   {
     "name": "permits-56",
+    "priceCents": 250,
     "attr36": 3965,
     "attr73": true,
     "attr32": "e32_4",
@@ -705,6 +762,7 @@
   },
   {
     "name": "permits-57",
+    "priceCents": 250,
     "attr75": "s3228",
     "attr28": false,
     "attr20": "s5283",
@@ -718,6 +776,7 @@
   },
   {
     "name": "permits-58",
+    "priceCents": 250,
     "attr15": "s6252",
     "attr52": "e52_0",
     "attr24": "AB555",
@@ -731,6 +790,7 @@
   },
   {
     "name": "permits-59",
+    "priceCents": 250,
     "attr58": true,
     "attr10": "s4525",
     "attr55": "s6180",

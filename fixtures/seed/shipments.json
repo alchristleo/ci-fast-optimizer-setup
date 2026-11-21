@@ -1,6 +1,7 @@
 [
   {
     "name": "shipments-0",
+    "code": "AB123",
     "attr75": "s9840",
     "attr73": true,
     "attr51": 5042,
@@ -14,6 +15,7 @@
   },
   {
     "name": "shipments-1",
+    "code": "AB123",
     "attr13": true,
     "attr23": true,
     "attr28": false,
@@ -27,6 +29,7 @@
   },
   {
     "name": "shipments-2",
+    "code": "AB123",
     "attr13": true,
     "attr70": "s1975",
     "attr35": "s3209",
@@ -40,6 +43,7 @@
   },
   {
     "name": "shipments-3",
+    "code": "AB123",
     "attr54": "AB318",
     "attr77": "e77_0",
     "attr35": "s6959",
@@ -52,6 +56,7 @@
   },
   {
     "name": "shipments-4",
+    "code": "AB123",
     "attr44": "AB549",
     "attr47": "e47_0",
     "attr61": 1169,
@@ -65,6 +70,7 @@
   },
   {
     "name": "shipments-5",
+    "code": "AB123",
     "attr42": "e42_4",
     "attr56": 12475,
     "attr45": "s7402",
@@ -78,6 +84,7 @@
   },
   {
     "name": "shipments-6",
+    "code": "AB123",
     "attr30": "s808",
     "attr62": "e62_3",
     "attr61": 255,
@@ -91,6 +98,7 @@
   },
   {
     "name": "shipments-7",
+    "code": "AB123",
     "attr58": true,
     "attr39": "AB814",
     "attr9": "AB856",
@@ -104,6 +112,7 @@
   },
   {
     "name": "shipments-8",
+    "code": "AB123",
     "attr34": "AB901",
     "attr28": false,
     "attr21": 56423,
@@ -117,6 +126,7 @@
   },
   {
     "name": "shipments-9",
+    "code": "AB123",
     "attr57": "e57_2",
     "attr21": 17696,
     "attr4": "AB515",
@@ -130,6 +140,7 @@
   },
   {
     "name": "shipments-10",
+    "code": "AB123",
     "attr71": 16796,
     "attr20": "s9471",
     "attr19": "AB600",
@@ -141,6 +152,7 @@
   },
   {
     "name": "shipments-11",
+    "code": "AB123",
     "attr32": "e32_2",
     "attr41": 1050,
     "attr4": "AB628",
@@ -154,6 +166,7 @@
   },
   {
     "name": "shipments-12",
+    "code": "AB123",
     "attr45": "s4093",
     "attr73": true,
     "attr6": 14174,
@@ -167,6 +180,7 @@
   },
   {
     "name": "shipments-13",
+    "code": "AB123",
     "attr78": false,
     "attr2": "e2_0",
     "attr7": "e7_1",
@@ -179,6 +193,7 @@
   },
   {
     "name": "shipments-14",
+    "code": "AB123",
     "attr28": false,
     "attr16": 22668,
     "attr7": "e7_1",
@@ -192,6 +207,7 @@
   },
   {
     "name": "shipments-15",
+    "code": "AB123",
     "attr51": 8608,
     "attr70": "s9264",
     "attr45": "s6913",
@@ -205,6 +221,7 @@
   },
   {
     "name": "shipments-16",
+    "code": "AB123",
     "attr62": "e62_2",
     "attr20": "s1793",
     "attr79": "AB602",
@@ -218,6 +235,7 @@
   },
   {
     "name": "shipments-17",
+    "code": "AB123",
     "attr64": "AB461",
     "attr38": true,
     "attr78": false,
@@ -230,6 +248,7 @@
   },
   {
     "name": "shipments-18",
+    "code": "AB123",
     "attr70": "s331",
     "attr2": "e2_4",
     "attr55": "s1770",
@@ -242,6 +261,7 @@
   },
   {
     "name": "shipments-19",
+    "code": "AB123",
     "attr34": "AB610",
     "attr70": "s1324",
     "attr69": "AB665",
@@ -255,6 +275,7 @@
   },
   {
     "name": "shipments-20",
+    "code": "AB123",
     "attr11": 38402,
     "attr4": "AB152",
     "attr10": "s9701",
@@ -268,6 +289,7 @@
   },
   {
     "name": "shipments-21",
+    "code": "AB123",
     "attr5": "s4307",
     "attr44": "AB117",
     "attr45": "s7433",
@@ -281,6 +303,7 @@
   },
   {
     "name": "shipments-22",
+    "code": "AB123",
     "attr18": true,
     "attr1": 27071,
     "attr9": "AB524",
@@ -291,6 +314,7 @@
   },
   {
     "name": "shipments-23",
+    "code": "AB123",
     "attr60": "s5439",
     "attr47": "e47_1",
     "attr67": "e67_1",
@@ -304,6 +328,7 @@
   },
   {
     "name": "shipments-24",
+    "code": "AB123",
     "attr74": "AB373",
     "attr20": "s6189",
     "attr4": "AB223",
@@ -316,6 +341,7 @@
   },
   {
     "name": "shipments-25",
+    "code": "AB123",
     "attr71": 49611,
     "attr34": "AB249",
     "attr7": "e7_3",
@@ -329,6 +355,7 @@
   },
   {
     "name": "shipments-26",
+    "code": "AB123",
     "attr53": true,
     "attr21": 88551,
     "attr65": "s4820",
@@ -342,6 +369,7 @@
   },
   {
     "name": "shipments-27",
+    "code": "AB123",
     "attr26": 25066,
     "attr68": false,
     "attr60": "s4717",
@@ -355,6 +383,7 @@
   },
   {
     "name": "shipments-28",
+    "code": "AB123",
     "attr1": 12415,
     "attr15": "s4192",
     "attr13": false,
@@ -367,6 +396,7 @@
   },
   {
     "name": "shipments-29",
+    "code": "AB123",
     "attr61": 7799,
     "attr77": "e77_2",
     "attr7": "e7_4",
@@ -380,6 +410,7 @@
   },
   {
     "name": "shipments-30",
+    "code": "AB123",
     "attr73": true,
     "attr65": "s7778",
     "attr23": true,
@@ -393,6 +424,7 @@
   },
   {
     "name": "shipments-31",
+    "code": "AB123",
     "attr53": true,
     "attr19": "AB368",
     "attr79": "AB313",
@@ -404,6 +436,7 @@
   },
   {
     "name": "shipments-32",
+    "code": "AB123",
     "attr54": "AB417",
     "attr49": "AB553",
     "attr9": "AB613",
@@ -416,6 +449,7 @@
   },
   {
     "name": "shipments-33",
+    "code": "AB123",
     "attr56": 55213,
     "attr4": "AB538",
     "attr3": true,
@@ -429,6 +463,7 @@
   },
   {
     "name": "shipments-34",
+    "code": "AB123",
     "attr12": "e12_0",
     "attr56": 37633,
     "attr28": true,
@@ -442,6 +477,7 @@
   },
   {
     "name": "shipments-35",
+    "code": "AB123",
     "attr40": "s8937",
     "attr9": "AB445",
     "attr2": "e2_1",
@@ -454,6 +490,7 @@
   },
   {
     "name": "shipments-36",
+    "code": "AB123",
     "attr41": 13172,
     "attr71": 1648,
     "attr68": false,
@@ -466,6 +503,7 @@
   },
   {
     "name": "shipments-37",
+    "code": "AB123",
     "attr72": "e72_4",
     "attr0": "s1984",
     "attr71": 26248,
@@ -479,6 +517,7 @@
   },
   {
     "name": "shipments-38",
+    "code": "AB123",
     "attr37": "e37_1",
     "attr54": "AB600",
     "attr31": 28141,
@@ -491,6 +530,7 @@
   },
   {
     "name": "shipments-39",
+    "code": "AB123",
     "attr23": false,
     "attr34": "AB267",
     "attr46": 39806,
@@ -504,6 +544,7 @@
   },
   {
     "name": "shipments-40",
+    "code": "AB123",
     "attr0": "s7083",
     "attr28": true,
     "attr41": 15589,
@@ -517,6 +558,7 @@
   },
   {
     "name": "shipments-41",
+    "code": "AB123",
     "attr48": true,
     "attr2": "e2_3",
     "attr13": false,
@@ -530,6 +572,7 @@
   },
   {
     "name": "shipments-42",
+    "code": "AB123",
     "attr66": 1404,
     "attr10": "s5657",
     "attr16": 77138,
@@ -543,6 +586,7 @@
   },
   {
     "name": "shipments-43",
+    "code": "AB123",
     "attr48": true,
     "attr2": "e2_0",
     "attr17": "e17_4",
@@ -555,6 +599,7 @@
   },
   {
     "name": "shipments-44",
+    "code": "AB123",
     "attr13": false,
     "attr46": 48921,
     "attr34": "AB475",
@@ -567,6 +612,7 @@
   },
   {
     "name": "shipments-45",
+    "code": "AB123",
     "attr39": "AB880",
     "attr40": "s1693",
     "attr14": "AB378",
@@ -580,6 +626,7 @@
   },
   {
     "name": "shipments-46",
+    "code": "AB123",
     "attr45": "s8931",
     "attr53": true,
     "attr43": true,
@@ -593,6 +640,7 @@
   },
   {
     "name": "shipments-47",
+    "code": "AB123",
     "attr47": "e47_0",
     "attr58": false,
     "attr52": "e52_3",
@@ -606,6 +654,7 @@
   },
   {
     "name": "shipments-48",
+    "code": "AB123",
     "attr1": 28180,
     "attr33": true,
     "attr47": "e47_2",
@@ -619,6 +668,7 @@
   },
   {
     "name": "shipments-49",
+    "code": "AB123",
     "attr12": "e12_1",
     "attr6": 23529,
     "attr47": "e47_1",
@@ -632,6 +682,7 @@
   },
   {
     "name": "shipments-50",
+    "code": "AB123",
     "attr8": true,
     "attr44": "AB552",
     "attr4": "AB879",
@@ -645,6 +696,7 @@
   },
   {
     "name": "shipments-51",
+    "code": "AB123",
     "attr53": false,
     "attr73": false,
     "attr39": "AB966",
@@ -658,6 +710,7 @@
   },
   {
     "name": "shipments-52",
+    "code": "AB123",
     "attr25": "s8926",
     "attr61": 9297,
     "attr20": "s596",
@@ -671,6 +724,7 @@
   },
   {
     "name": "shipments-53",
+    "code": "AB123",
     "attr23": true,
     "attr19": "AB497",
     "attr50": "s6983",
@@ -684,6 +738,7 @@
   },
   {
     "name": "shipments-54",
+    "code": "AB123",
     "attr38": false,
     "attr0": "s5204",
     "attr63": false,
@@ -697,6 +752,7 @@
   },
   {
     "name": "shipments-55",
+    "code": "AB123",
     "attr78": true,
     "attr0": "s3084",
     "attr37": "e37_2",
@@ -710,6 +766,7 @@
   },
   {
     "name": "shipments-56",
+    "code": "AB123",
     "attr43": false,
     "attr7": "e7_1",
     "attr73": true,
@@ -723,6 +780,7 @@
   },
   {
     "name": "shipments-57",
+    "code": "AB123",
     "attr27": "e27_1",
     "attr3": false,
     "attr11": 55430,
@@ -733,6 +791,7 @@
   },
   {
     "name": "shipments-58",
+    "code": "AB123",
     "attr58": true,
     "attr57": "e57_2",
     "attr59": "AB725",
@@ -746,6 +805,7 @@
   },
   {
     "name": "shipments-59",
+    "code": "AB123",
     "attr41": 4793,
     "attr43": true,
     "attr56": 56520,

@@ -1,6 +1,8 @@
 [
   {
     "name": "channels2-0",
+    "priceCents": 250,
+    "active": true,
     "attr11": 6925,
     "attr42": "e42_0",
     "attr48": true,
@@ -13,6 +15,8 @@
   },
   {
     "name": "channels2-1",
+    "priceCents": 250,
+    "active": true,
     "attr15": "s4385",
     "attr52": "e52_4",
     "attr79": "AB613",
@@ -24,6 +28,8 @@
   },
   {
     "name": "channels2-2",
+    "priceCents": 250,
+    "active": true,
     "attr22": "e22_0",
     "attr23": true,
     "attr56": 18673,
@@ -37,6 +43,8 @@
   },
   {
     "name": "channels2-3",
+    "priceCents": 250,
+    "active": true,
     "attr55": "s2069",
     "attr2": "e2_0",
     "attr56": 16326,
@@ -50,6 +58,8 @@
   },
   {
     "name": "channels2-4",
+    "priceCents": 250,
+    "active": true,
     "attr59": "AB377",
     "attr63": true,
     "attr24": "AB968",
@@ -62,6 +72,8 @@
   },
   {
     "name": "channels2-5",
+    "priceCents": 250,
+    "active": true,
     "attr57": "e57_4",
     "attr2": "e2_4",
     "attr53": false,
@@ -74,6 +86,8 @@
   },
   {
     "name": "channels2-6",
+    "priceCents": 250,
+    "active": true,
     "attr25": "s6000",
     "attr59": "AB189",
     "attr62": "e62_0",
@@ -87,6 +101,8 @@
   },
   {
     "name": "channels2-7",
+    "priceCents": 250,
+    "active": true,
     "attr25": "s6214",
     "attr10": "s8413",
     "attr18": false,
@@ -100,6 +116,8 @@
   },
   {
     "name": "channels2-8",
+    "priceCents": 250,
+    "active": true,
     "attr72": "e72_3",
     "attr20": "s3368",
     "attr48": true,
@@ -112,6 +130,8 @@
   },
   {
     "name": "channels2-9",
+    "priceCents": 250,
+    "active": true,
     "attr42": "e42_4",
     "attr51": 84774,
     "attr37": "e37_2",
@@ -125,6 +145,8 @@
   },
   {
     "name": "channels2-10",
+    "priceCents": 250,
+    "active": true,
     "attr7": "e7_3",
     "attr64": "AB389",
     "attr65": "s1475",
@@ -138,6 +160,8 @@
   },
   {
     "name": "channels2-11",
+    "priceCents": 250,
+    "active": true,
     "attr28": true,
     "attr41": 23116,
     "attr52": "e52_3",
@@ -151,6 +175,8 @@
   },
   {
     "name": "channels2-12",
+    "priceCents": 250,
+    "active": true,
     "attr9": "AB917",
     "attr64": "AB775",
     "attr11": 2031,
@@ -163,6 +189,8 @@
   },
   {
     "name": "channels2-13",
+    "priceCents": 250,
+    "active": true,
     "attr73": false,
     "attr44": "AB301",
     "attr25": "s1511",
@@ -176,6 +204,8 @@
   },
   {
     "name": "channels2-14",
+    "priceCents": 250,
+    "active": true,
     "attr53": false,
     "attr59": "AB480",
     "attr11": 1551,
@@ -189,6 +219,8 @@
   },
   {
     "name": "channels2-15",
+    "priceCents": 250,
+    "active": true,
     "attr34": "AB950",
     "attr59": "AB444",
     "attr10": "s7865",
@@ -201,6 +233,8 @@
   },
   {
     "name": "channels2-16",
+    "priceCents": 250,
+    "active": true,
     "attr2": "e2_0",
     "attr61": 7544,
     "attr48": false,
@@ -213,6 +247,8 @@
   },
   {
     "name": "channels2-17",
+    "priceCents": 250,
+    "active": true,
     "attr65": "s5094",
     "attr69": "AB798",
     "attr29": "AB575",
@@ -226,6 +262,8 @@
   },
   {
     "name": "channels2-18",
+    "priceCents": 250,
+    "active": true,
     "attr2": "e2_1",
     "attr53": false,
     "attr28": true,
@@ -237,6 +275,8 @@
   },
   {
     "name": "channels2-19",
+    "priceCents": 250,
+    "active": true,
     "attr6": 11196,
     "attr75": "s3504",
     "attr21": 1799,
@@ -250,6 +290,8 @@
   },
   {
     "name": "channels2-20",
+    "priceCents": 250,
+    "active": true,
     "attr52": "e52_3",
     "attr2": "e2_0",
     "attr26": 5776,
@@ -261,6 +303,8 @@
   },
   {
     "name": "channels2-21",
+    "priceCents": 250,
+    "active": true,
     "attr28": true,
     "attr55": "s8138",
     "attr23": false,
@@ -274,6 +318,8 @@
   },
   {
     "name": "channels2-22",
+    "priceCents": 250,
+    "active": true,
     "attr66": 12303,
     "attr37": "e37_0",
     "attr73": true,
@@ -287,6 +333,8 @@
   },
   {
     "name": "channels2-23",
+    "priceCents": 250,
+    "active": true,
     "attr41": 23450,
     "attr31": 14533,
     "attr50": "s9717",
@@ -299,6 +347,8 @@
   },
   {
     "name": "channels2-24",
+    "priceCents": 250,
+    "active": true,
     "attr79": "AB844",
     "attr47": "e47_3",
     "attr6": 15079,
@@ -311,6 +361,8 @@
   },
   {
     "name": "channels2-25",
+    "priceCents": 250,
+    "active": true,
     "attr76": 1791,
     "attr5": "s1082",
     "attr51": 58676,
@@ -324,6 +376,8 @@
   },
   {
     "name": "channels2-26",
+    "priceCents": 250,
+    "active": true,
     "attr66": 8250,
     "attr78": false,
     "attr60": "s4827",
@@ -337,6 +391,8 @@
   },
   {
     "name": "channels2-27",
+    "priceCents": 250,
+    "active": true,
     "attr37": "e37_1",
     "attr73": true,
     "attr43": true,
@@ -349,6 +405,8 @@
   },
   {
     "name": "channels2-28",
+    "priceCents": 250,
+    "active": true,
     "attr23": false,
     "attr37": "e37_4",
     "attr50": "s9449",
@@ -362,6 +420,8 @@
   },
   {
     "name": "channels2-29",
+    "priceCents": 250,
+    "active": true,
     "attr60": "s1561",
     "attr1": 41128,
     "attr42": "e42_3",
@@ -375,6 +435,8 @@
   },
   {
     "name": "channels2-30",
+    "priceCents": 250,
+    "active": true,
     "attr25": "s8934",
     "attr31": 11991,
     "attr32": "e32_2",
@@ -386,6 +448,8 @@
   },
   {
     "name": "channels2-31",
+    "priceCents": 250,
+    "active": true,
     "attr4": "AB874",
     "attr8": false,
     "attr79": "AB441",
@@ -398,6 +462,8 @@
   },
   {
     "name": "channels2-32",
+    "priceCents": 250,
+    "active": true,
     "attr26": 38123,
     "attr35": "s6402",
     "attr20": "s1347",
@@ -411,6 +477,8 @@
   },
   {
     "name": "channels2-33",
+    "priceCents": 250,
+    "active": true,
     "attr55": "s6586",
     "attr46": 6969,
     "attr33": true,
@@ -423,6 +491,8 @@
   },
   {
     "name": "channels2-34",
+    "priceCents": 250,
+    "active": true,
     "attr76": 478,
     "attr77": "e77_1",
     "attr42": "e42_4",
@@ -436,6 +506,8 @@
   },
   {
     "name": "channels2-35",
+    "priceCents": 250,
+    "active": true,
     "attr73": false,
     "attr70": "s9807",
     "attr72": "e72_3",
@@ -448,6 +520,8 @@
   },
   {
     "name": "channels2-36",
+    "priceCents": 250,
+    "active": true,
     "attr26": 4386,
     "attr59": "AB192",
     "attr22": "e22_4",
@@ -461,6 +535,8 @@
   },
   {
     "name": "channels2-37",
+    "priceCents": 250,
+    "active": true,
     "attr56": 9224,
     "attr51": 60145,
     "attr20": "s8499",
@@ -474,6 +550,8 @@
   },
   {
     "name": "channels2-38",
+    "priceCents": 250,
+    "active": true,
     "attr20": "s6766",
     "attr61": 2608,
     "attr13": true,
@@ -486,6 +564,8 @@
   },
   {
     "name": "channels2-39",
+    "priceCents": 250,
+    "active": true,
     "attr39": "AB546",
     "attr63": false,
     "attr68": true,
@@ -499,6 +579,8 @@
   },
   {
     "name": "channels2-40",
+    "priceCents": 250,
+    "active": true,
     "attr15": "s6176",
     "attr55": "s1742",
     "attr47": "e47_3",
@@ -512,6 +594,8 @@
   },
   {
     "name": "channels2-41",
+    "priceCents": 250,
+    "active": true,
     "attr74": "AB888",
     "attr31": 16162,
     "attr66": 57,
@@ -525,6 +609,8 @@
   },
   {
     "name": "channels2-42",
+    "priceCents": 250,
+    "active": true,
     "attr21": 59070,
     "attr43": true,
     "attr53": true,
@@ -537,6 +623,8 @@
   },
   {
     "name": "channels2-43",
+    "priceCents": 250,
+    "active": true,
     "attr55": "s212",
     "attr24": "AB993",
     "attr17": "e17_3",
@@ -550,6 +638,8 @@
   },
   {
     "name": "channels2-44",
+    "priceCents": 250,
+    "active": true,
     "attr67": "e67_3",
     "attr49": "AB942",
     "attr14": "AB461",
@@ -563,6 +653,8 @@
   },
   {
     "name": "channels2-45",
+    "priceCents": 250,
+    "active": true,
     "attr53": true,
     "attr7": "e7_3",
     "attr66": 9119,
@@ -576,6 +668,8 @@
   },
   {
     "name": "channels2-46",
+    "priceCents": 250,
+    "active": true,
     "attr56": 12434,
     "attr7": "e7_2",
     "attr13": true,
@@ -588,6 +682,8 @@
   },
   {
     "name": "channels2-47",
+    "priceCents": 250,
+    "active": true,
     "attr38": true,
     "attr77": "e77_0",
     "attr17": "e17_2",
@@ -601,6 +697,8 @@
   },
   {
     "name": "channels2-48",
+    "priceCents": 250,
+    "active": true,
     "attr49": "AB470",
     "attr60": "s3043",
     "attr65": "s9477",
@@ -613,6 +711,8 @@
   },
   {
     "name": "channels2-49",
+    "priceCents": 250,
+    "active": true,
     "attr5": "s6282",
     "attr49": "AB712",
     "attr56": 18906,
@@ -626,6 +726,8 @@
   },
   {
     "name": "channels2-50",
+    "priceCents": 250,
+    "active": true,
     "attr44": "AB612",
     "attr76": 2117,
     "attr52": "e52_2",
@@ -639,6 +741,8 @@
   },
   {
     "name": "channels2-51",
+    "priceCents": 250,
+    "active": true,
     "attr72": "e72_0",
     "attr68": false,
     "attr44": "AB888",
@@ -652,6 +756,8 @@
   },
   {
     "name": "channels2-52",
+    "priceCents": 250,
+    "active": true,
     "attr50": "s8773",
     "attr45": "s9643",
     "attr27": "e27_0",
@@ -665,6 +771,8 @@
   },
   {
     "name": "channels2-53",
+    "priceCents": 250,
+    "active": true,
     "attr7": "e7_0",
     "attr45": "s8998",
     "attr20": "s1122",
@@ -676,6 +784,8 @@
   },
   {
     "name": "channels2-54",
+    "priceCents": 250,
+    "active": true,
     "attr69": "AB311",
     "attr3": false,
     "attr25": "s4859",
@@ -689,6 +799,8 @@
   },
   {
     "name": "channels2-55",
+    "priceCents": 250,
+    "active": true,
     "attr3": true,
     "attr52": "e52_4",
     "attr33": false,
@@ -702,6 +814,8 @@
   },
   {
     "name": "channels2-56",
+    "priceCents": 250,
+    "active": true,
     "attr29": "AB910",
     "attr74": "AB792",
     "attr21": 9651,
@@ -714,6 +828,8 @@
   },
   {
     "name": "channels2-57",
+    "priceCents": 250,
+    "active": true,
     "attr57": "e57_1",
     "attr19": "AB755",
     "attr22": "e22_3",
@@ -727,6 +843,8 @@
   },
   {
     "name": "channels2-58",
+    "priceCents": 250,
+    "active": true,
     "attr49": "AB855",
     "attr6": 3047,
     "attr39": "AB329",
@@ -740,6 +858,8 @@
   },
   {
     "name": "channels2-59",
+    "priceCents": 250,
+    "active": true,
     "attr78": false,
     "attr0": "s1110",
     "attr60": "s6527",

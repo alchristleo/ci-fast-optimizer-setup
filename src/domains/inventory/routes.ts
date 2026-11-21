@@ -1,5 +1,5 @@
 import { Hono } from "hono";
-import { compile, type Schema } from "../../lib/validation.ts";
+import type { Validator } from "../../lib/validation.ts";
 import {
   addItem,
   adjustStock,
@@ -12,16 +12,8 @@ import {
 
 export const name = "inventory";
 
-export const schema: Schema = {
-  name: { type: "string", required: true, min: 1, max: 80 },
-  sku: { type: "string", required: true, pattern: "^[A-Z0-9-]{3,16}$" },
-  quantity: { type: "number", required: true, min: 0 },
-  unitCents: { type: "number", required: true, min: 0 },
-};
-
-export function routes(): Hono {
+export function routes(validate: Validator): Hono {
   const app = new Hono();
-  const validate = compile(schema);
 
   app.get("/", (c) => c.json(listItems()));
   app.get("/low-stock", (c) => c.json(lowStock(Number(c.req.query("threshold") ?? 5))));

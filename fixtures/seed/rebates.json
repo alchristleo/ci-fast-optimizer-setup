@@ -1,6 +1,9 @@
 [
   {
     "name": "rebates-0",
+    "priceCents": 250,
+    "qty": 3,
+    "code": "AB123",
     "attr53": true,
     "attr44": "AB382",
     "attr3": false,
@@ -12,6 +15,9 @@
   },
   {
     "name": "rebates-1",
+    "priceCents": 250,
+    "qty": 3,
+    "code": "AB123",
     "attr26": 46648,
     "attr75": "s2369",
     "attr50": "s5639",
@@ -25,6 +31,9 @@
   },
   {
     "name": "rebates-2",
+    "priceCents": 250,
+    "qty": 3,
+    "code": "AB123",
     "attr13": false,
     "attr26": 26617,
     "attr32": "e32_0",
@@ -37,6 +46,9 @@
   },
   {
     "name": "rebates-3",
+    "priceCents": 250,
+    "qty": 3,
+    "code": "AB123",
     "attr39": "AB807",
     "attr1": 699,
     "attr33": true,
@@ -49,6 +61,9 @@
   },
   {
     "name": "rebates-4",
+    "priceCents": 250,
+    "qty": 3,
+    "code": "AB123",
     "attr20": "s3792",
     "attr24": "AB618",
     "attr25": "s7570",
@@ -61,6 +76,9 @@
   },
   {
     "name": "rebates-5",
+    "priceCents": 250,
+    "qty": 3,
+    "code": "AB123",
     "attr44": "AB105",
     "attr3": false,
     "attr0": "s6889",
@@ -73,6 +91,9 @@
   },
   {
     "name": "rebates-6",
+    "priceCents": 250,
+    "qty": 3,
+    "code": "AB123",
     "attr51": 21492,
     "attr15": "s9122",
     "attr68": true,
@@ -86,6 +107,9 @@
   },
   {
     "name": "rebates-7",
+    "priceCents": 250,
+    "qty": 3,
+    "code": "AB123",
     "attr49": "AB907",
     "attr8": false,
     "attr10": "s9867",
@@ -99,6 +123,9 @@
   },
   {
     "name": "rebates-8",
+    "priceCents": 250,
+    "qty": 3,
+    "code": "AB123",
     "attr21": 60,
     "attr35": "s4385",
     "attr18": false,
@@ -111,6 +138,9 @@
   },
   {
     "name": "rebates-9",
+    "priceCents": 250,
+    "qty": 3,
+    "code": "AB123",
     "attr11": 13603,
     "attr21": 62672,
     "attr2": "e2_0",
@@ -124,6 +154,9 @@
   },
   {
     "name": "rebates-10",
+    "priceCents": 250,
+    "qty": 3,
+    "code": "AB123",
     "attr9": "AB216",
     "attr16": 10693,
     "attr1": 413,
@@ -137,6 +170,9 @@
   },
   {
     "name": "rebates-11",
+    "priceCents": 250,
+    "qty": 3,
+    "code": "AB123",
     "attr36": 655,
     "attr53": true,
     "attr21": 8725,
@@ -150,6 +186,9 @@
   },
   {
     "name": "rebates-12",
+    "priceCents": 250,
+    "qty": 3,
+    "code": "AB123",
     "attr48": true,
     "attr26": 9233,
     "attr24": "AB799",
@@ -162,6 +201,9 @@
   },
   {
     "name": "rebates-13",
+    "priceCents": 250,
+    "qty": 3,
+    "code": "AB123",
     "attr41": 56064,
     "attr8": false,
     "attr59": "AB330",
@@ -174,6 +216,9 @@
   },
   {
     "name": "rebates-14",
+    "priceCents": 250,
+    "qty": 3,
+    "code": "AB123",
     "attr15": "s4997",
     "attr73": false,
     "attr76": 23470,
@@ -185,6 +230,9 @@
   },
   {
     "name": "rebates-15",
+    "priceCents": 250,
+    "qty": 3,
+    "code": "AB123",
     "attr28": false,
     "attr54": "AB200",
     "attr27": "e27_3",
@@ -197,6 +245,9 @@
   },
   {
     "name": "rebates-16",
+    "priceCents": 250,
+    "qty": 3,
+    "code": "AB123",
     "attr23": false,
     "attr6": 38858,
     "attr14": "AB207",
@@ -210,6 +261,9 @@
   },
   {
     "name": "rebates-17",
+    "priceCents": 250,
+    "qty": 3,
+    "code": "AB123",
     "attr11": 53511,
     "attr19": "AB240",
     "attr42": "e42_2",
@@ -223,6 +277,9 @@
   },
   {
     "name": "rebates-18",
+    "priceCents": 250,
+    "qty": 3,
+    "code": "AB123",
     "attr76": 24047,
     "attr32": "e32_1",
     "attr46": 74564,
@@ -235,6 +292,9 @@
   },
   {
     "name": "rebates-19",
+    "priceCents": 250,
+    "qty": 3,
+    "code": "AB123",
     "attr73": false,
     "attr78": true,
     "attr1": 1545,
@@ -248,6 +308,9 @@
   },
   {
     "name": "rebates-20",
+    "priceCents": 250,
+    "qty": 3,
+    "code": "AB123",
     "attr16": 10655,
     "attr2": "e2_2",
     "attr4": "AB557",
@@ -260,6 +323,9 @@
   },
   {
     "name": "rebates-21",
+    "priceCents": 250,
+    "qty": 3,
+    "code": "AB123",
     "attr9": "AB525",
     "attr77": "e77_0",
     "attr3": false,
@@ -273,6 +339,9 @@
   },
   {
     "name": "rebates-22",
+    "priceCents": 250,
+    "qty": 3,
+    "code": "AB123",
     "attr70": "s1988",
     "attr33": true,
     "attr74": "AB409",
@@ -286,6 +355,9 @@
   },
   {
     "name": "rebates-23",
+    "priceCents": 250,
+    "qty": 3,
+    "code": "AB123",
     "attr68": true,
     "attr0": "s8813",
     "attr52": "e52_0",
@@ -299,6 +371,9 @@
   },
   {
     "name": "rebates-24",
+    "priceCents": 250,
+    "qty": 3,
+    "code": "AB123",
     "attr23": true,
     "attr63": true,
     "attr15": "s8536",
@@ -312,6 +387,9 @@
   },
   {
     "name": "rebates-25",
+    "priceCents": 250,
+    "qty": 3,
+    "code": "AB123",
     "attr24": "AB325",
     "attr4": "AB251",
     "attr36": 3124,
@@ -325,6 +403,9 @@
   },
   {
     "name": "rebates-26",
+    "priceCents": 250,
+    "qty": 3,
+    "code": "AB123",
     "attr29": "AB958",
     "attr13": true,
     "attr15": "s7730",
@@ -338,6 +419,9 @@
   },
   {
     "name": "rebates-27",
+    "priceCents": 250,
+    "qty": 3,
+    "code": "AB123",
     "attr69": "AB624",
     "attr23": true,
     "attr8": false,
@@ -349,6 +433,9 @@
   },
   {
     "name": "rebates-28",
+    "priceCents": 250,
+    "qty": 3,
+    "code": "AB123",
     "attr49": "AB686",
     "attr39": "AB989",
     "attr8": false,
@@ -362,6 +449,9 @@
   },
   {
     "name": "rebates-29",
+    "priceCents": 250,
+    "qty": 3,
+    "code": "AB123",
     "attr46": 64786,
     "attr45": "s282",
     "attr77": "e77_3",
@@ -374,6 +464,9 @@
   },
   {
     "name": "rebates-30",
+    "priceCents": 250,
+    "qty": 3,
+    "code": "AB123",
     "attr70": "s9786",
     "attr27": "e27_1",
     "attr47": "e47_3",
@@ -386,6 +479,9 @@
   },
   {
     "name": "rebates-31",
+    "priceCents": 250,
+    "qty": 3,
+    "code": "AB123",
     "attr15": "s4540",
     "attr39": "AB651",
     "attr67": "e67_3",
@@ -398,6 +494,9 @@
   },
   {
     "name": "rebates-32",
+    "priceCents": 250,
+    "qty": 3,
+    "code": "AB123",
     "attr17": "e17_2",
     "attr52": "e52_2",
     "attr56": 32870,
@@ -411,6 +510,9 @@
   },
   {
     "name": "rebates-33",
+    "priceCents": 250,
+    "qty": 3,
+    "code": "AB123",
     "attr74": "AB892",
     "attr45": "s2822",
     "attr17": "e17_4",
@@ -423,6 +525,9 @@
   },
   {
     "name": "rebates-34",
+    "priceCents": 250,
+    "qty": 3,
+    "code": "AB123",
     "attr31": 80996,
     "attr50": "s9672",
     "attr32": "e32_0",
@@ -436,6 +541,9 @@
   },
   {
     "name": "rebates-35",
+    "priceCents": 250,
+    "qty": 3,
+    "code": "AB123",
     "attr9": "AB410",
     "attr46": 41361,
     "attr28": false,
@@ -448,6 +556,9 @@
   },
   {
     "name": "rebates-36",
+    "priceCents": 250,
+    "qty": 3,
+    "code": "AB123",
     "attr55": "s8805",
     "attr43": true,
     "attr66": 50694,
@@ -460,6 +571,9 @@
   },
   {
     "name": "rebates-37",
+    "priceCents": 250,
+    "qty": 3,
+    "code": "AB123",
     "attr38": false,
     "attr26": 36977,
     "attr8": false,
@@ -472,6 +586,9 @@
   },
   {
     "name": "rebates-38",
+    "priceCents": 250,
+    "qty": 3,
+    "code": "AB123",
     "attr66": 45356,
     "attr54": "AB491",
     "attr27": "e27_2",
@@ -485,6 +602,9 @@
   },
   {
     "name": "rebates-39",
+    "priceCents": 250,
+    "qty": 3,
+    "code": "AB123",
     "attr67": "e67_2",
     "attr57": "e57_3",
     "attr74": "AB234",
@@ -498,6 +618,9 @@
   },
   {
     "name": "rebates-40",
+    "priceCents": 250,
+    "qty": 3,
+    "code": "AB123",
     "attr13": true,
     "attr46": 10057,
     "attr12": "e12_1",
@@ -511,6 +634,9 @@
   },
   {
     "name": "rebates-41",
+    "priceCents": 250,
+    "qty": 3,
+    "code": "AB123",
     "attr35": "s5770",
     "attr9": "AB587",
     "attr18": true,
@@ -523,6 +649,9 @@
   },
   {
     "name": "rebates-42",
+    "priceCents": 250,
+    "qty": 3,
+    "code": "AB123",
     "attr60": "s4665",
     "attr35": "s1913",
     "attr26": 18330,
@@ -535,6 +664,9 @@
   },
   {
     "name": "rebates-43",
+    "priceCents": 250,
+    "qty": 3,
+    "code": "AB123",
     "attr76": 6558,
     "attr53": true,
     "attr22": "e22_1",
@@ -546,6 +678,9 @@
   },
   {
     "name": "rebates-44",
+    "priceCents": 250,
+    "qty": 3,
+    "code": "AB123",
     "attr47": "e47_0",
     "attr26": 23382,
     "attr24": "AB861",
@@ -556,6 +691,9 @@
   },
   {
     "name": "rebates-45",
+    "priceCents": 250,
+    "qty": 3,
+    "code": "AB123",
     "attr10": "s320",
     "attr41": 65331,
     "attr66": 50690,
@@ -567,6 +705,9 @@
   },
   {
     "name": "rebates-46",
+    "priceCents": 250,
+    "qty": 3,
+    "code": "AB123",
     "attr73": true,
     "attr8": false,
     "attr37": "e37_2",
@@ -579,6 +720,9 @@
   },
   {
     "name": "rebates-47",
+    "priceCents": 250,
+    "qty": 3,
+    "code": "AB123",
     "attr17": "e17_4",
     "attr22": "e22_4",
     "attr57": "e57_3",
@@ -592,6 +736,9 @@
   },
   {
     "name": "rebates-48",
+    "priceCents": 250,
+    "qty": 3,
+    "code": "AB123",
     "attr59": "AB271",
     "attr10": "s1684",
     "attr60": "s9967",
@@ -605,6 +752,9 @@
   },
   {
     "name": "rebates-49",
+    "priceCents": 250,
+    "qty": 3,
+    "code": "AB123",
     "attr32": "e32_0",
     "attr16": 424,
     "attr26": 32212,
@@ -617,6 +767,9 @@
   },
   {
     "name": "rebates-50",
+    "priceCents": 250,
+    "qty": 3,
+    "code": "AB123",
     "attr11": 2218,
     "attr34": "AB645",
     "attr51": 33678,
@@ -630,6 +783,9 @@
   },
   {
     "name": "rebates-51",
+    "priceCents": 250,
+    "qty": 3,
+    "code": "AB123",
     "attr0": "s6801",
     "attr56": 36608,
     "attr51": 19065,
@@ -643,6 +799,9 @@
   },
   {
     "name": "rebates-52",
+    "priceCents": 250,
+    "qty": 3,
+    "code": "AB123",
     "attr25": "s8983",
     "attr65": "s8282",
     "attr38": true,
@@ -656,6 +815,9 @@
   },
   {
     "name": "rebates-53",
+    "priceCents": 250,
+    "qty": 3,
+    "code": "AB123",
     "attr10": "s9742",
     "attr31": 45230,
     "attr78": true,
@@ -668,6 +830,9 @@
   },
   {
     "name": "rebates-54",
+    "priceCents": 250,
+    "qty": 3,
+    "code": "AB123",
     "attr59": "AB574",
     "attr47": "e47_2",
     "attr57": "e57_1",
@@ -681,6 +846,9 @@
   },
   {
     "name": "rebates-55",
+    "priceCents": 250,
+    "qty": 3,
+    "code": "AB123",
     "attr18": true,
     "attr25": "s6699",
     "attr40": "s3981",
@@ -694,6 +862,9 @@
   },
   {
     "name": "rebates-56",
+    "priceCents": 250,
+    "qty": 3,
+    "code": "AB123",
     "attr25": "s7839",
     "attr18": true,
     "attr51": 11729,
@@ -706,6 +877,9 @@
   },
   {
     "name": "rebates-57",
+    "priceCents": 250,
+    "qty": 3,
+    "code": "AB123",
     "attr10": "s9644",
     "attr3": true,
     "attr20": "s8456",
@@ -717,6 +891,9 @@
   },
   {
     "name": "rebates-58",
+    "priceCents": 250,
+    "qty": 3,
+    "code": "AB123",
     "attr64": "AB567",
     "attr34": "AB663",
     "attr49": "AB164",
@@ -730,6 +907,9 @@
   },
   {
     "name": "rebates-59",
+    "priceCents": 250,
+    "qty": 3,
+    "code": "AB123",
     "attr44": "AB802",
     "attr48": true,
     "attr10": "s5510",

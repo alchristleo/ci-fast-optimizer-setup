@@ -1,12 +1,19 @@
 {
   "type": "object",
-  "required": ["name"],
+  "required": ["name", "email"],
   "additionalProperties": false,
   "properties": {
     "name": {
       "type": "string",
       "minLength": 1,
       "maxLength": 80
+    },
+    "email": {
+      "type": "string",
+      "pattern": "^[^@\\s]+@[^@\\s]+\\.[a-z]{2,}$"
+    },
+    "vip": {
+      "type": "boolean"
     },
     "attr0": {
       "type": "string",

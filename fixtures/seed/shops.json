@@ -1,6 +1,8 @@
 [
   {
     "name": "shops-0",
+    "priceCents": 250,
+    "qty": 3,
     "attr70": "s1250",
     "attr17": "e17_0",
     "attr59": "AB258",
@@ -13,6 +15,8 @@
   },
   {
     "name": "shops-1",
+    "priceCents": 250,
+    "qty": 3,
     "attr0": "s4507",
     "attr67": "e67_2",
     "attr50": "s9",
@@ -26,6 +30,8 @@
   },
   {
     "name": "shops-2",
+    "priceCents": 250,
+    "qty": 3,
     "attr8": true,
     "attr9": "AB306",
     "attr6": 34740,
@@ -39,6 +45,8 @@
   },
   {
     "name": "shops-3",
+    "priceCents": 250,
+    "qty": 3,
     "attr1": 14548,
     "attr20": "s8945",
     "attr66": 14632,
@@ -52,6 +60,8 @@
   },
   {
     "name": "shops-4",
+    "priceCents": 250,
+    "qty": 3,
     "attr29": "AB354",
     "attr28": true,
     "attr66": 27075,
@@ -64,6 +74,8 @@
   },
   {
     "name": "shops-5",
+    "priceCents": 250,
+    "qty": 3,
     "attr36": 26351,
     "attr75": "s900",
     "attr16": 2069,
@@ -77,6 +89,8 @@
   },
   {
     "name": "shops-6",
+    "priceCents": 250,
+    "qty": 3,
     "attr44": "AB352",
     "attr64": "AB204",
     "attr17": "e17_3",
@@ -90,6 +104,8 @@
   },
   {
     "name": "shops-7",
+    "priceCents": 250,
+    "qty": 3,
     "attr3": true,
     "attr64": "AB540",
     "attr65": "s4152",
@@ -103,6 +119,8 @@
   },
   {
     "name": "shops-8",
+    "priceCents": 250,
+    "qty": 3,
     "attr66": 13202,
     "attr65": "s252",
     "attr37": "e37_0",
@@ -114,6 +132,8 @@
   },
   {
     "name": "shops-9",
+    "priceCents": 250,
+    "qty": 3,
     "attr26": 24920,
     "attr30": "s8329",
     "attr69": "AB427",
@@ -126,6 +146,8 @@
   },
   {
     "name": "shops-10",
+    "priceCents": 250,
+    "qty": 3,
     "attr24": "AB208",
     "attr35": "s7955",
     "attr16": 17292,
@@ -138,6 +160,8 @@
   },
   {
     "name": "shops-11",
+    "priceCents": 250,
+    "qty": 3,
     "attr36": 22984,
     "attr6": 23314,
     "attr14": "AB803",
@@ -151,6 +175,8 @@
   },
   {
     "name": "shops-12",
+    "priceCents": 250,
+    "qty": 3,
     "attr71": 10511,
     "attr27": "e27_4",
     "attr14": "AB661",
@@ -162,6 +188,8 @@
   },
   {
     "name": "shops-13",
+    "priceCents": 250,
+    "qty": 3,
     "attr59": "AB934",
     "attr32": "e32_0",
     "attr56": 1000,
@@ -175,6 +203,8 @@
   },
   {
     "name": "shops-14",
+    "priceCents": 250,
+    "qty": 3,
     "attr77": "e77_0",
     "attr63": true,
     "attr26": 5028,
@@ -187,6 +217,8 @@
   },
   {
     "name": "shops-15",
+    "priceCents": 250,
+    "qty": 3,
     "attr66": 57545,
     "attr32": "e32_1",
     "attr79": "AB976",
@@ -199,6 +231,8 @@
   },
   {
     "name": "shops-16",
+    "priceCents": 250,
+    "qty": 3,
     "attr45": "s7277",
     "attr38": false,
     "attr59": "AB719",
@@ -211,6 +245,8 @@
   },
   {
     "name": "shops-17",
+    "priceCents": 250,
+    "qty": 3,
     "attr11": 19558,
     "attr8": true,
     "attr50": "s1754",
@@ -222,6 +258,8 @@
   },
   {
     "name": "shops-18",
+    "priceCents": 250,
+    "qty": 3,
     "attr32": "e32_4",
     "attr11": 40100,
     "attr44": "AB564",
@@ -235,6 +273,8 @@
   },
   {
     "name": "shops-19",
+    "priceCents": 250,
+    "qty": 3,
     "attr70": "s1773",
     "attr14": "AB893",
     "attr34": "AB222",
@@ -248,6 +288,8 @@
   },
   {
     "name": "shops-20",
+    "priceCents": 250,
+    "qty": 3,
     "attr21": 11365,
     "attr37": "e37_2",
     "attr72": "e72_1",
@@ -259,6 +301,8 @@
   },
   {
     "name": "shops-21",
+    "priceCents": 250,
+    "qty": 3,
     "attr7": "e7_2",
     "attr66": 50119,
     "attr3": false,
@@ -272,6 +316,8 @@
   },
   {
     "name": "shops-22",
+    "priceCents": 250,
+    "qty": 3,
     "attr8": false,
     "attr75": "s6990",
     "attr28": false,
@@ -284,6 +330,8 @@
   },
   {
     "name": "shops-23",
+    "priceCents": 250,
+    "qty": 3,
     "attr3": true,
     "attr33": true,
     "attr14": "AB771",
@@ -296,6 +344,8 @@
   },
   {
     "name": "shops-24",
+    "priceCents": 250,
+    "qty": 3,
     "attr79": "AB177",
     "attr47": "e47_1",
     "attr43": true,
@@ -309,6 +359,8 @@
   },
   {
     "name": "shops-25",
+    "priceCents": 250,
+    "qty": 3,
     "attr42": "e42_1",
     "attr41": 28251,
     "attr60": "s2494",
@@ -319,6 +371,8 @@
   },
   {
     "name": "shops-26",
+    "priceCents": 250,
+    "qty": 3,
     "attr27": "e27_2",
     "attr25": "s2227",
     "attr3": false,
@@ -331,6 +385,8 @@
   },
   {
     "name": "shops-27",
+    "priceCents": 250,
+    "qty": 3,
     "attr19": "AB397",
     "attr69": "AB919",
     "attr59": "AB360",
@@ -341,6 +397,8 @@
   },
   {
     "name": "shops-28",
+    "priceCents": 250,
+    "qty": 3,
     "attr68": false,
     "attr66": 36160,
     "attr74": "AB401",
@@ -353,6 +411,8 @@
   },
   {
     "name": "shops-29",
+    "priceCents": 250,
+    "qty": 3,
     "attr76": 46257,
     "attr23": true,
     "attr64": "AB696",
@@ -365,6 +425,8 @@
   },
   {
     "name": "shops-30",
+    "priceCents": 250,
+    "qty": 3,
     "attr42": "e42_3",
     "attr11": 45387,
     "attr60": "s9464",
@@ -377,6 +439,8 @@
   },
   {
     "name": "shops-31",
+    "priceCents": 250,
+    "qty": 3,
     "attr10": "s4089",
     "attr45": "s749",
     "attr49": "AB873",
@@ -389,6 +453,8 @@
   },
   {
     "name": "shops-32",
+    "priceCents": 250,
+    "qty": 3,
     "attr54": "AB483",
     "attr0": "s8057",
     "attr5": "s7896",
@@ -402,6 +468,8 @@
   },
   {
     "name": "shops-33",
+    "priceCents": 250,
+    "qty": 3,
     "attr47": "e47_0",
     "attr9": "AB832",
     "attr75": "s8264",
@@ -414,6 +482,8 @@
   },
   {
     "name": "shops-34",
+    "priceCents": 250,
+    "qty": 3,
     "attr40": "s2153",
     "attr7": "e7_0",
     "attr9": "AB575",
@@ -427,6 +497,8 @@
   },
   {
     "name": "shops-35",
+    "priceCents": 250,
+    "qty": 3,
     "attr21": 422,
     "attr14": "AB844",
     "attr0": "s9928",
@@ -439,6 +511,8 @@
   },
   {
     "name": "shops-36",
+    "priceCents": 250,
+    "qty": 3,
     "attr27": "e27_2",
     "attr22": "e22_0",
     "attr62": "e62_2",
@@ -452,6 +526,8 @@
   },
   {
     "name": "shops-37",
+    "priceCents": 250,
+    "qty": 3,
     "attr8": true,
     "attr16": 20195,
     "attr75": "s3279",
@@ -465,6 +541,8 @@
   },
   {
     "name": "shops-38",
+    "priceCents": 250,
+    "qty": 3,
     "attr73": false,
     "attr74": "AB523",
     "attr61": 55115,
@@ -478,6 +556,8 @@
   },
   {
     "name": "shops-39",
+    "priceCents": 250,
+    "qty": 3,
     "attr51": 40634,
     "attr38": false,
     "attr25": "s4025",
@@ -491,6 +571,8 @@
   },
   {
     "name": "shops-40",
+    "priceCents": 250,
+    "qty": 3,
     "attr22": "e22_0",
     "attr0": "s5103",
     "attr40": "s3928",
@@ -504,6 +586,8 @@
   },
   {
     "name": "shops-41",
+    "priceCents": 250,
+    "qty": 3,
     "attr70": "s1963",
     "attr69": "AB717",
     "attr36": 3558,
@@ -516,6 +600,8 @@
   },
   {
     "name": "shops-42",
+    "priceCents": 250,
+    "qty": 3,
     "attr14": "AB933",
     "attr39": "AB472",
     "attr48": false,
@@ -529,6 +615,8 @@
   },
   {
     "name": "shops-43",
+    "priceCents": 250,
+    "qty": 3,
     "attr39": "AB556",
     "attr22": "e22_4",
     "attr56": 5397,
@@ -542,6 +630,8 @@
   },
   {
     "name": "shops-44",
+    "priceCents": 250,
+    "qty": 3,
     "attr51": 32273,
     "attr62": "e62_4",
     "attr4": "AB978",
@@ -554,6 +644,8 @@
   },
   {
     "name": "shops-45",
+    "priceCents": 250,
+    "qty": 3,
     "attr50": "s5827",
     "attr37": "e37_3",
     "attr77": "e77_2",
@@ -567,6 +659,8 @@
   },
   {
     "name": "shops-46",
+    "priceCents": 250,
+    "qty": 3,
     "attr60": "s7662",
     "attr42": "e42_4",
     "attr66": 27232,
@@ -580,6 +674,8 @@
   },
   {
     "name": "shops-47",
+    "priceCents": 250,
+    "qty": 3,
     "attr58": true,
     "attr27": "e27_3",
     "attr29": "AB919",
@@ -593,6 +689,8 @@
   },
   {
     "name": "shops-48",
+    "priceCents": 250,
+    "qty": 3,
     "attr58": true,
     "attr52": "e52_1",
     "attr74": "AB952",
@@ -606,6 +704,8 @@
   },
   {
     "name": "shops-49",
+    "priceCents": 250,
+    "qty": 3,
     "attr63": false,
     "attr6": 7528,
     "attr59": "AB134",
@@ -619,6 +719,8 @@
   },
   {
     "name": "shops-50",
+    "priceCents": 250,
+    "qty": 3,
     "attr27": "e27_2",
     "attr70": "s4053",
     "attr32": "e32_4",
@@ -632,6 +734,8 @@
   },
   {
     "name": "shops-51",
+    "priceCents": 250,
+    "qty": 3,
     "attr56": 6148,
     "attr68": false,
     "attr50": "s3921",
@@ -644,6 +748,8 @@
   },
   {
     "name": "shops-52",
+    "priceCents": 250,
+    "qty": 3,
     "attr33": false,
     "attr43": false,
     "attr26": 23294,
@@ -657,6 +763,8 @@
   },
   {
     "name": "shops-53",
+    "priceCents": 250,
+    "qty": 3,
     "attr28": false,
     "attr41": 22029,
     "attr8": false,
@@ -670,6 +778,8 @@
   },
   {
     "name": "shops-54",
+    "priceCents": 250,
+    "qty": 3,
     "attr70": "s724",
     "attr65": "s2369",
     "attr11": 39751,
@@ -683,6 +793,8 @@
   },
   {
     "name": "shops-55",
+    "priceCents": 250,
+    "qty": 3,
     "attr43": false,
     "attr12": "e12_2",
     "attr5": "s140",
@@ -695,6 +807,8 @@
   },
   {
     "name": "shops-56",
+    "priceCents": 250,
+    "qty": 3,
     "attr61": 5904,
     "attr22": "e22_1",
     "attr21": 17159,
@@ -708,6 +822,8 @@
   },
   {
     "name": "shops-57",
+    "priceCents": 250,
+    "qty": 3,
     "attr74": "AB833",
     "attr73": false,
     "attr12": "e12_3",
@@ -721,6 +837,8 @@
   },
   {
     "name": "shops-58",
+    "priceCents": 250,
+    "qty": 3,
     "attr17": "e17_0",
     "attr58": false,
     "attr49": "AB696",
@@ -733,6 +851,8 @@
   },
   {
     "name": "shops-59",
+    "priceCents": 250,
+    "qty": 3,
     "attr33": true,
     "attr66": 408,
     "attr56": 803,

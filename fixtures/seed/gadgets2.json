@@ -1,6 +1,7 @@
 [
   {
     "name": "gadgets2-0",
+    "active": true,
     "attr76": 63914,
     "attr59": "AB978",
     "attr77": "e77_1",
@@ -14,6 +15,7 @@
   },
   {
     "name": "gadgets2-1",
+    "active": true,
     "attr0": "s2013",
     "attr74": "AB872",
     "attr6": 8636,
@@ -27,6 +29,7 @@
   },
   {
     "name": "gadgets2-2",
+    "active": true,
     "attr38": true,
     "attr78": true,
     "attr47": "e47_0",
@@ -39,6 +42,7 @@
   },
   {
     "name": "gadgets2-3",
+    "active": true,
     "attr7": "e7_4",
     "attr71": 20648,
     "attr65": "s3217",
@@ -52,6 +56,7 @@
   },
   {
     "name": "gadgets2-4",
+    "active": true,
     "attr18": false,
     "attr30": "s3797",
     "attr77": "e77_0",
@@ -65,6 +70,7 @@
   },
   {
     "name": "gadgets2-5",
+    "active": true,
     "attr46": 27573,
     "attr51": 18272,
     "attr41": 46729,
@@ -77,6 +83,7 @@
   },
   {
     "name": "gadgets2-6",
+    "active": true,
     "attr24": "AB154",
     "attr56": 1256,
     "attr59": "AB481",
@@ -90,6 +97,7 @@
   },
   {
     "name": "gadgets2-7",
+    "active": true,
     "attr26": 3193,
     "attr42": "e42_3",
     "attr40": "s5187",
@@ -103,6 +111,7 @@
   },
   {
     "name": "gadgets2-8",
+    "active": true,
     "attr44": "AB203",
     "attr13": true,
     "attr29": "AB357",
@@ -115,6 +124,7 @@
   },
   {
     "name": "gadgets2-9",
+    "active": true,
     "attr18": true,
     "attr56": 14009,
     "attr70": "s7249",
@@ -128,6 +138,7 @@
   },
   {
     "name": "gadgets2-10",
+    "active": true,
     "attr68": true,
     "attr44": "AB500",
     "attr21": 76695,
@@ -141,6 +152,7 @@
   },
   {
     "name": "gadgets2-11",
+    "active": true,
     "attr33": true,
     "attr9": "AB343",
     "attr32": "e32_1",
@@ -153,6 +165,7 @@
   },
   {
     "name": "gadgets2-12",
+    "active": true,
     "attr1": 34846,
     "attr26": 2299,
     "attr75": "s9853",
@@ -165,6 +178,7 @@
   },
   {
     "name": "gadgets2-13",
+    "active": true,
     "attr37": "e37_2",
     "attr29": "AB990",
     "attr40": "s85",
@@ -176,6 +190,7 @@
   },
   {
     "name": "gadgets2-14",
+    "active": true,
     "attr79": "AB330",
     "attr15": "s2723",
     "attr2": "e2_3",
@@ -189,6 +204,7 @@
   },
   {
     "name": "gadgets2-15",
+    "active": true,
     "attr52": "e52_4",
     "attr75": "s6117",
     "attr65": "s6458",
@@ -201,6 +217,7 @@
   },
   {
     "name": "gadgets2-16",
+    "active": true,
     "attr67": "e67_2",
     "attr77": "e77_1",
     "attr28": false,
@@ -214,6 +231,7 @@
   },
   {
     "name": "gadgets2-17",
+    "active": true,
     "attr47": "e47_4",
     "attr4": "AB842",
     "attr0": "s7181",
@@ -226,6 +244,7 @@
   },
   {
     "name": "gadgets2-18",
+    "active": true,
     "attr18": true,
     "attr73": false,
     "attr37": "e37_4",
@@ -238,6 +257,7 @@
   },
   {
     "name": "gadgets2-19",
+    "active": true,
     "attr58": true,
     "attr24": "AB387",
     "attr4": "AB217",
@@ -250,6 +270,7 @@
   },
   {
     "name": "gadgets2-20",
+    "active": true,
     "attr25": "s1898",
     "attr12": "e12_4",
     "attr23": true,
@@ -262,6 +283,7 @@
   },
   {
     "name": "gadgets2-21",
+    "active": true,
     "attr5": "s8478",
     "attr44": "AB668",
     "attr15": "s7264",
@@ -274,6 +296,7 @@
   },
   {
     "name": "gadgets2-22",
+    "active": true,
     "attr69": "AB305",
     "attr52": "e52_3",
     "attr14": "AB194",
@@ -287,6 +310,7 @@
   },
   {
     "name": "gadgets2-23",
+    "active": true,
     "attr75": "s1927",
     "attr67": "e67_2",
     "attr27": "e27_2",
@@ -298,6 +322,7 @@
   },
   {
     "name": "gadgets2-24",
+    "active": true,
     "attr1": 17572,
     "attr62": "e62_0",
     "attr72": "e72_3",
@@ -311,6 +336,7 @@
   },
   {
     "name": "gadgets2-25",
+    "active": true,
     "attr67": "e67_0",
     "attr43": false,
     "attr20": "s8701",
@@ -323,6 +349,7 @@
   },
   {
     "name": "gadgets2-26",
+    "active": true,
     "attr15": "s7316",
     "attr29": "AB553",
     "attr59": "AB764",
@@ -333,6 +360,7 @@
   },
   {
     "name": "gadgets2-27",
+    "active": true,
     "attr38": false,
     "attr15": "s451",
     "attr28": false,
@@ -346,6 +374,7 @@
   },
   {
     "name": "gadgets2-28",
+    "active": true,
     "attr26": 3212,
     "attr41": 55217,
     "attr30": "s7198",
@@ -359,6 +388,7 @@
   },
   {
     "name": "gadgets2-29",
+    "active": true,
     "attr4": "AB850",
     "attr54": "AB338",
     "attr11": 12568,
@@ -372,6 +402,7 @@
   },
   {
     "name": "gadgets2-30",
+    "active": true,
     "attr36": 39843,
     "attr29": "AB333",
     "attr4": "AB123",
@@ -385,6 +416,7 @@
   },
   {
     "name": "gadgets2-31",
+    "active": true,
     "attr54": "AB770",
     "attr63": false,
     "attr30": "s8877",
@@ -398,6 +430,7 @@
   },
   {
     "name": "gadgets2-32",
+    "active": true,
     "attr20": "s2605",
     "attr40": "s8558",
     "attr8": false,
@@ -411,6 +444,7 @@
   },
   {
     "name": "gadgets2-33",
+    "active": true,
     "attr1": 11368,
     "attr27": "e27_1",
     "attr48": false,
@@ -423,6 +457,7 @@
   },
   {
     "name": "gadgets2-34",
+    "active": true,
     "attr14": "AB550",
     "attr19": "AB351",
     "attr11": 14338,
@@ -436,6 +471,7 @@
   },
   {
     "name": "gadgets2-35",
+    "active": true,
     "attr23": true,
     "attr77": "e77_0",
     "attr36": 60946,
@@ -448,6 +484,7 @@
   },
   {
     "name": "gadgets2-36",
+    "active": true,
     "attr77": "e77_2",
     "attr58": true,
     "attr17": "e17_4",
@@ -461,6 +498,7 @@
   },
   {
     "name": "gadgets2-37",
+    "active": true,
     "attr21": 7355,
     "attr14": "AB742",
     "attr4": "AB562",
@@ -474,6 +512,7 @@
   },
   {
     "name": "gadgets2-38",
+    "active": true,
     "attr58": true,
     "attr1": 16092,
     "attr18": false,
@@ -487,6 +526,7 @@
   },
   {
     "name": "gadgets2-39",
+    "active": true,
     "attr42": "e42_1",
     "attr52": "e52_0",
     "attr26": 1468,
@@ -498,6 +538,7 @@
   },
   {
     "name": "gadgets2-40",
+    "active": true,
     "attr11": 13328,
     "attr42": "e42_1",
     "attr40": "s5182",
@@ -511,6 +552,7 @@
   },
   {
     "name": "gadgets2-41",
+    "active": true,
     "attr13": true,
     "attr61": 354,
     "attr77": "e77_1",
@@ -524,6 +566,7 @@
   },
   {
     "name": "gadgets2-42",
+    "active": true,
     "attr6": 18038,
     "attr42": "e42_1",
     "attr32": "e32_2",
@@ -537,6 +580,7 @@
   },
   {
     "name": "gadgets2-43",
+    "active": true,
     "attr73": true,
     "attr33": true,
     "attr26": 1164,
@@ -550,6 +594,7 @@
   },
   {
     "name": "gadgets2-44",
+    "active": true,
     "attr62": "e62_4",
     "attr30": "s8388",
     "attr33": true,
@@ -562,6 +607,7 @@
   },
   {
     "name": "gadgets2-45",
+    "active": true,
     "attr75": "s3076",
     "attr49": "AB553",
     "attr42": "e42_0",
@@ -573,6 +619,7 @@
   },
   {
     "name": "gadgets2-46",
+    "active": true,
     "attr34": "AB179",
     "attr17": "e17_3",
     "attr30": "s1923",
@@ -586,6 +633,7 @@
   },
   {
     "name": "gadgets2-47",
+    "active": true,
     "attr64": "AB450",
     "attr7": "e7_4",
     "attr65": "s8887",
@@ -598,6 +646,7 @@
   },
   {
     "name": "gadgets2-48",
+    "active": true,
     "attr78": true,
     "attr54": "AB641",
     "attr48": false,
@@ -611,6 +660,7 @@
   },
   {
     "name": "gadgets2-49",
+    "active": true,
     "attr68": false,
     "attr29": "AB757",
     "attr18": true,
@@ -623,6 +673,7 @@
   },
   {
     "name": "gadgets2-50",
+    "active": true,
     "attr14": "AB176",
     "attr29": "AB238",
     "attr42": "e42_2",
@@ -636,6 +687,7 @@
   },
   {
     "name": "gadgets2-51",
+    "active": true,
     "attr35": "s3036",
     "attr58": true,
     "attr10": "s2322",
@@ -648,6 +700,7 @@
   },
   {
     "name": "gadgets2-52",
+    "active": true,
     "attr27": "e27_4",
     "attr67": "e67_2",
     "attr49": "AB334",
@@ -661,6 +714,7 @@
   },
   {
     "name": "gadgets2-53",
+    "active": true,
     "attr36": 42306,
     "attr46": 46038,
     "attr44": "AB658",
@@ -674,6 +728,7 @@
   },
   {
     "name": "gadgets2-54",
+    "active": true,
     "attr19": "AB357",
     "attr42": "e42_2",
     "attr68": false,
@@ -687,6 +742,7 @@
   },
   {
     "name": "gadgets2-55",
+    "active": true,
     "attr75": "s1373",
     "attr50": "s2698",
     "attr66": 40687,
@@ -699,6 +755,7 @@
   },
   {
     "name": "gadgets2-56",
+    "active": true,
     "attr62": "e62_0",
     "attr43": false,
     "attr49": "AB711",
@@ -712,6 +769,7 @@
   },
   {
     "name": "gadgets2-57",
+    "active": true,
     "attr66": 28086,
     "attr20": "s353",
     "attr67": "e67_2",
@@ -724,6 +782,7 @@
   },
   {
     "name": "gadgets2-58",
+    "active": true,
     "attr37": "e37_1",
     "attr8": true,
     "attr77": "e77_3",
@@ -736,6 +795,7 @@
   },
   {
     "name": "gadgets2-59",
+    "active": true,
     "attr42": "e42_3",
     "attr3": false,
     "attr66": 33032,

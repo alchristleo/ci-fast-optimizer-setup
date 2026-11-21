@@ -1,6 +1,9 @@
 [
   {
     "name": "lockers-0",
+    "qty": 3,
+    "priceCents": 250,
+    "active": true,
     "attr59": "AB110",
     "attr22": "e22_0",
     "attr2": "e2_1",
@@ -14,6 +17,9 @@
   },
   {
     "name": "lockers-1",
+    "qty": 3,
+    "priceCents": 250,
+    "active": true,
     "attr9": "AB707",
     "attr77": "e77_1",
     "attr22": "e22_3",
@@ -25,6 +31,9 @@
   },
   {
     "name": "lockers-2",
+    "qty": 3,
+    "priceCents": 250,
+    "active": true,
     "attr8": true,
     "attr75": "s2951",
     "attr20": "s8086",
@@ -38,6 +47,9 @@
   },
   {
     "name": "lockers-3",
+    "qty": 3,
+    "priceCents": 250,
+    "active": true,
     "attr51": 25917,
     "attr24": "AB809",
     "attr44": "AB166",
@@ -51,6 +63,9 @@
   },
   {
     "name": "lockers-4",
+    "qty": 3,
+    "priceCents": 250,
+    "active": true,
     "attr57": "e57_1",
     "attr28": true,
     "attr65": "s5996",
@@ -63,6 +78,9 @@
   },
   {
     "name": "lockers-5",
+    "qty": 3,
+    "priceCents": 250,
+    "active": true,
     "attr20": "s7966",
     "attr19": "AB618",
     "attr60": "s3211",
@@ -75,6 +93,9 @@
   },
   {
     "name": "lockers-6",
+    "qty": 3,
+    "priceCents": 250,
+    "active": true,
     "attr32": "e32_1",
     "attr70": "s1206",
     "attr34": "AB475",
@@ -88,6 +109,9 @@
   },
   {
     "name": "lockers-7",
+    "qty": 3,
+    "priceCents": 250,
+    "active": true,
     "attr22": "e22_0",
     "attr9": "AB233",
     "attr58": true,
@@ -101,6 +125,9 @@
   },
   {
     "name": "lockers-8",
+    "qty": 3,
+    "priceCents": 250,
+    "active": true,
     "attr59": "AB160",
     "attr8": false,
     "attr26": 9438,
@@ -113,6 +140,9 @@
   },
   {
     "name": "lockers-9",
+    "qty": 3,
+    "priceCents": 250,
+    "active": true,
     "attr77": "e77_2",
     "attr40": "s5298",
     "attr19": "AB567",
@@ -125,6 +155,9 @@
   },
   {
     "name": "lockers-10",
+    "qty": 3,
+    "priceCents": 250,
+    "active": true,
     "attr33": true,
     "attr10": "s6170",
     "attr48": true,
@@ -138,6 +171,9 @@
   },
   {
     "name": "lockers-11",
+    "qty": 3,
+    "priceCents": 250,
+    "active": true,
     "attr30": "s2374",
     "attr69": "AB603",
     "attr41": 5281,
@@ -151,6 +187,9 @@
   },
   {
     "name": "lockers-12",
+    "qty": 3,
+    "priceCents": 250,
+    "active": true,
     "attr55": "s2211",
     "attr30": "s5911",
     "attr8": true,
@@ -164,6 +203,9 @@
   },
   {
     "name": "lockers-13",
+    "qty": 3,
+    "priceCents": 250,
+    "active": true,
     "attr20": "s903",
     "attr36": 9098,
     "attr6": 11452,
@@ -177,6 +219,9 @@
   },
   {
     "name": "lockers-14",
+    "qty": 3,
+    "priceCents": 250,
+    "active": true,
     "attr76": 57045,
     "attr43": false,
     "attr6": 10513,
@@ -190,6 +235,9 @@
   },
   {
     "name": "lockers-15",
+    "qty": 3,
+    "priceCents": 250,
+    "active": true,
     "attr2": "e2_3",
     "attr13": false,
     "attr66": 6120,
@@ -202,6 +250,9 @@
   },
   {
     "name": "lockers-16",
+    "qty": 3,
+    "priceCents": 250,
+    "active": true,
     "attr68": false,
     "attr34": "AB706",
     "attr7": "e7_1",
@@ -214,6 +265,9 @@
   },
   {
     "name": "lockers-17",
+    "qty": 3,
+    "priceCents": 250,
+    "active": true,
     "attr13": true,
     "attr30": "s811",
     "attr58": false,
@@ -226,6 +280,9 @@
   },
   {
     "name": "lockers-18",
+    "qty": 3,
+    "priceCents": 250,
+    "active": true,
     "attr2": "e2_4",
     "attr45": "s9561",
     "attr5": "s1991",
@@ -239,6 +296,9 @@
   },
   {
     "name": "lockers-19",
+    "qty": 3,
+    "priceCents": 250,
+    "active": true,
     "attr42": "e42_0",
     "attr77": "e77_2",
     "attr0": "s6966",
@@ -252,6 +312,9 @@
   },
   {
     "name": "lockers-20",
+    "qty": 3,
+    "priceCents": 250,
+    "active": true,
     "attr38": false,
     "attr33": true,
     "attr56": 75277,
@@ -265,6 +328,9 @@
   },
   {
     "name": "lockers-21",
+    "qty": 3,
+    "priceCents": 250,
+    "active": true,
     "attr72": "e72_3",
     "attr71": 3114,
     "attr63": false,
@@ -278,6 +344,9 @@
   },
   {
     "name": "lockers-22",
+    "qty": 3,
+    "priceCents": 250,
+    "active": true,
     "attr5": "s3225",
     "attr9": "AB612",
     "attr66": 6797,
@@ -291,6 +360,9 @@
   },
   {
     "name": "lockers-23",
+    "qty": 3,
+    "priceCents": 250,
+    "active": true,
     "attr38": false,
     "attr34": "AB381",
     "attr52": "e52_1",
@@ -304,6 +376,9 @@
   },
   {
     "name": "lockers-24",
+    "qty": 3,
+    "priceCents": 250,
+    "active": true,
     "attr2": "e2_1",
     "attr28": true,
     "attr22": "e22_0",
@@ -317,6 +392,9 @@
   },
   {
     "name": "lockers-25",
+    "qty": 3,
+    "priceCents": 250,
+    "active": true,
     "attr69": "AB158",
     "attr72": "e72_0",
     "attr11": 74438,
@@ -330,6 +408,9 @@
   },
   {
     "name": "lockers-26",
+    "qty": 3,
+    "priceCents": 250,
+    "active": true,
     "attr13": true,
     "attr18": false,
     "attr57": "e57_2",
@@ -343,6 +424,9 @@
   },
   {
     "name": "lockers-27",
+    "qty": 3,
+    "priceCents": 250,
+    "active": true,
     "attr23": true,
     "attr52": "e52_2",
     "attr47": "e47_0",
@@ -356,6 +440,9 @@
   },
   {
     "name": "lockers-28",
+    "qty": 3,
+    "priceCents": 250,
+    "active": true,
     "attr2": "e2_2",
     "attr67": "e67_0",
     "attr32": "e32_1",
@@ -369,6 +456,9 @@
   },
   {
     "name": "lockers-29",
+    "qty": 3,
+    "priceCents": 250,
+    "active": true,
     "attr45": "s9601",
     "attr35": "s1182",
     "attr48": false,
@@ -382,6 +472,9 @@
   },
   {
     "name": "lockers-30",
+    "qty": 3,
+    "priceCents": 250,
+    "active": true,
     "attr32": "e32_4",
     "attr42": "e42_0",
     "attr50": "s362",
@@ -395,6 +488,9 @@
   },
   {
     "name": "lockers-31",
+    "qty": 3,
+    "priceCents": 250,
+    "active": true,
     "attr53": false,
     "attr22": "e22_1",
     "attr13": true,
@@ -408,6 +504,9 @@
   },
   {
     "name": "lockers-32",
+    "qty": 3,
+    "priceCents": 250,
+    "active": true,
     "attr15": "s5536",
     "attr78": true,
     "attr36": 18831,
@@ -421,6 +520,9 @@
   },
   {
     "name": "lockers-33",
+    "qty": 3,
+    "priceCents": 250,
+    "active": true,
     "attr71": 9292,
     "attr68": false,
     "attr37": "e37_3",
@@ -433,6 +535,9 @@
   },
   {
     "name": "lockers-34",
+    "qty": 3,
+    "priceCents": 250,
+    "active": true,
     "attr17": "e17_1",
     "attr26": 5480,
     "attr48": true,
@@ -445,6 +550,9 @@
   },
   {
     "name": "lockers-35",
+    "qty": 3,
+    "priceCents": 250,
+    "active": true,
     "attr62": "e62_4",
     "attr4": "AB769",
     "attr72": "e72_3",
@@ -457,6 +565,9 @@
   },
   {
     "name": "lockers-36",
+    "qty": 3,
+    "priceCents": 250,
+    "active": true,
     "attr65": "s7096",
     "attr16": 51352,
     "attr45": "s7557",
@@ -470,6 +581,9 @@
   },
   {
     "name": "lockers-37",
+    "qty": 3,
+    "priceCents": 250,
+    "active": true,
     "attr18": false,
     "attr21": 2432,
     "attr27": "e27_2",
@@ -482,6 +596,9 @@
   },
   {
     "name": "lockers-38",
+    "qty": 3,
+    "priceCents": 250,
+    "active": true,
     "attr17": "e17_1",
     "attr35": "s400",
     "attr46": 29611,
@@ -495,6 +612,9 @@
   },
   {
     "name": "lockers-39",
+    "qty": 3,
+    "priceCents": 250,
+    "active": true,
     "attr19": "AB367",
     "attr42": "e42_2",
     "attr59": "AB770",
@@ -507,6 +627,9 @@
   },
   {
     "name": "lockers-40",
+    "qty": 3,
+    "priceCents": 250,
+    "active": true,
     "attr17": "e17_0",
     "attr55": "s701",
     "attr29": "AB705",
@@ -520,6 +643,9 @@
   },
   {
     "name": "lockers-41",
+    "qty": 3,
+    "priceCents": 250,
+    "active": true,
     "attr47": "e47_2",
     "attr61": 7230,
     "attr3": true,
@@ -533,6 +659,9 @@
   },
   {
     "name": "lockers-42",
+    "qty": 3,
+    "priceCents": 250,
+    "active": true,
     "attr19": "AB199",
     "attr58": true,
     "attr3": false,
@@ -545,6 +674,9 @@
   },
   {
     "name": "lockers-43",
+    "qty": 3,
+    "priceCents": 250,
+    "active": true,
     "attr11": 20834,
     "attr61": 263,
     "attr35": "s8950",
@@ -558,6 +690,9 @@
   },
   {
     "name": "lockers-44",
+    "qty": 3,
+    "priceCents": 250,
+    "active": true,
     "attr37": "e37_2",
     "attr23": false,
     "attr70": "s2474",
@@ -570,6 +705,9 @@
   },
   {
     "name": "lockers-45",
+    "qty": 3,
+    "priceCents": 250,
+    "active": true,
     "attr3": true,
     "attr25": "s7421",
     "attr16": 27685,
@@ -582,6 +720,9 @@
   },
   {
     "name": "lockers-46",
+    "qty": 3,
+    "priceCents": 250,
+    "active": true,
     "attr49": "AB541",
     "attr62": "e62_1",
     "attr18": true,
@@ -594,6 +735,9 @@
   },
   {
     "name": "lockers-47",
+    "qty": 3,
+    "priceCents": 250,
+    "active": true,
     "attr31": 90072,
     "attr46": 40606,
     "attr20": "s5354",
@@ -606,6 +750,9 @@
   },
   {
     "name": "lockers-48",
+    "qty": 3,
+    "priceCents": 250,
+    "active": true,
     "attr65": "s6736",
     "attr41": 4378,
     "attr33": true,
@@ -619,6 +766,9 @@
   },
   {
     "name": "lockers-49",
+    "qty": 3,
+    "priceCents": 250,
+    "active": true,
     "attr68": false,
     "attr69": "AB767",
     "attr44": "AB382",
@@ -632,6 +782,9 @@
   },
   {
     "name": "lockers-50",
+    "qty": 3,
+    "priceCents": 250,
+    "active": true,
     "attr14": "AB620",
     "attr67": "e67_3",
     "attr64": "AB695",
@@ -645,6 +798,9 @@
   },
   {
     "name": "lockers-51",
+    "qty": 3,
+    "priceCents": 250,
+    "active": true,
     "attr55": "s9602",
     "attr34": "AB757",
     "attr18": false,
@@ -658,6 +814,9 @@
   },
   {
     "name": "lockers-52",
+    "qty": 3,
+    "priceCents": 250,
+    "active": true,
     "attr72": "e72_2",
     "attr41": 5118,
     "attr34": "AB191",
@@ -671,6 +830,9 @@
   },
   {
     "name": "lockers-53",
+    "qty": 3,
+    "priceCents": 250,
+    "active": true,
     "attr50": "s1247",
     "attr16": 79758,
     "attr56": 78769,
@@ -684,6 +846,9 @@
   },
   {
     "name": "lockers-54",
+    "qty": 3,
+    "priceCents": 250,
+    "active": true,
     "attr61": 8437,
     "attr42": "e42_1",
     "attr69": "AB192",
@@ -697,6 +862,9 @@
   },
   {
     "name": "lockers-55",
+    "qty": 3,
+    "priceCents": 250,
+    "active": true,
     "attr58": true,
     "attr16": 14549,
     "attr2": "e2_0",
@@ -710,6 +878,9 @@
   },
   {
     "name": "lockers-56",
+    "qty": 3,
+    "priceCents": 250,
+    "active": true,
     "attr42": "e42_3",
     "attr73": false,
     "attr70": "s9462",
@@ -723,6 +894,9 @@
   },
   {
     "name": "lockers-57",
+    "qty": 3,
+    "priceCents": 250,
+    "active": true,
     "attr35": "s1989",
     "attr75": "s3963",
     "attr40": "s1976",
@@ -736,6 +910,9 @@
   },
   {
     "name": "lockers-58",
+    "qty": 3,
+    "priceCents": 250,
+    "active": true,
     "attr53": true,
     "attr61": 2382,
     "attr10": "s6327",
@@ -749,6 +926,9 @@
   },
   {
     "name": "lockers-59",
+    "qty": 3,
+    "priceCents": 250,
+    "active": true,
     "attr54": "AB979",
     "attr58": true,
     "attr33": false,

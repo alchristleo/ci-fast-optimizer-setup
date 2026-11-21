@@ -1,6 +1,7 @@
 [
   {
     "name": "bundles2-0",
+    "priceCents": 250,
     "attr46": 1794,
     "attr75": "s9723",
     "attr43": false,
@@ -14,6 +15,7 @@
   },
   {
     "name": "bundles2-1",
+    "priceCents": 250,
     "attr43": true,
     "attr12": "e12_4",
     "attr72": "e72_3",
@@ -26,6 +28,7 @@
   },
   {
     "name": "bundles2-2",
+    "priceCents": 250,
     "attr30": "s8001",
     "attr29": "AB192",
     "attr6": 25678,
@@ -39,6 +42,7 @@
   },
   {
     "name": "bundles2-3",
+    "priceCents": 250,
     "attr12": "e12_4",
     "attr61": 16485,
     "attr47": "e47_0",
@@ -52,6 +56,7 @@
   },
   {
     "name": "bundles2-4",
+    "priceCents": 250,
     "attr6": 24847,
     "attr71": 34948,
     "attr57": "e57_3",
@@ -64,6 +69,7 @@
   },
   {
     "name": "bundles2-5",
+    "priceCents": 250,
     "attr56": 18900,
     "attr18": true,
     "attr64": "AB208",
@@ -75,6 +81,7 @@
   },
   {
     "name": "bundles2-6",
+    "priceCents": 250,
     "attr69": "AB768",
     "attr66": 18072,
     "attr78": true,
@@ -87,6 +94,7 @@
   },
   {
     "name": "bundles2-7",
+    "priceCents": 250,
     "attr23": false,
     "attr18": true,
     "attr31": 7636,
@@ -100,6 +108,7 @@
   },
   {
     "name": "bundles2-8",
+    "priceCents": 250,
     "attr48": false,
     "attr5": "s1580",
     "attr21": 13291,
@@ -113,6 +122,7 @@
   },
   {
     "name": "bundles2-9",
+    "priceCents": 250,
     "attr48": false,
     "attr68": true,
     "attr70": "s3316",
@@ -126,6 +136,7 @@
   },
   {
     "name": "bundles2-10",
+    "priceCents": 250,
     "attr45": "s9287",
     "attr69": "AB408",
     "attr9": "AB442",
@@ -138,6 +149,7 @@
   },
   {
     "name": "bundles2-11",
+    "priceCents": 250,
     "attr12": "e12_1",
     "attr52": "e52_1",
     "attr8": true,
@@ -150,6 +162,7 @@
   },
   {
     "name": "bundles2-12",
+    "priceCents": 250,
     "attr19": "AB964",
     "attr32": "e32_2",
     "attr50": "s3481",
@@ -162,6 +175,7 @@
   },
   {
     "name": "bundles2-13",
+    "priceCents": 250,
     "attr46": 1117,
     "attr77": "e77_4",
     "attr57": "e57_4",
@@ -175,6 +189,7 @@
   },
   {
     "name": "bundles2-14",
+    "priceCents": 250,
     "attr61": 4075,
     "attr23": false,
     "attr45": "s5806",
@@ -188,6 +203,7 @@
   },
   {
     "name": "bundles2-15",
+    "priceCents": 250,
     "attr14": "AB265",
     "attr44": "AB695",
     "attr33": true,
@@ -200,6 +216,7 @@
   },
   {
     "name": "bundles2-16",
+    "priceCents": 250,
     "attr40": "s4165",
     "attr8": false,
     "attr76": 1263,
@@ -211,6 +228,7 @@
   },
   {
     "name": "bundles2-17",
+    "priceCents": 250,
     "attr71": 36030,
     "attr7": "e7_1",
     "attr13": true,
@@ -223,6 +241,7 @@
   },
   {
     "name": "bundles2-18",
+    "priceCents": 250,
     "attr33": true,
     "attr72": "e72_2",
     "attr75": "s2441",
@@ -236,6 +255,7 @@
   },
   {
     "name": "bundles2-19",
+    "priceCents": 250,
     "attr54": "AB378",
     "attr50": "s5470",
     "attr71": 33238,
@@ -249,6 +269,7 @@
   },
   {
     "name": "bundles2-20",
+    "priceCents": 250,
     "attr49": "AB702",
     "attr39": "AB649",
     "attr55": "s1217",
@@ -261,6 +282,7 @@
   },
   {
     "name": "bundles2-21",
+    "priceCents": 250,
     "attr49": "AB117",
     "attr59": "AB884",
     "attr51": 2861,
@@ -273,6 +295,7 @@
   },
   {
     "name": "bundles2-22",
+    "priceCents": 250,
     "attr74": "AB445",
     "attr14": "AB787",
     "attr76": 1245,
@@ -284,6 +307,7 @@
   },
   {
     "name": "bundles2-23",
+    "priceCents": 250,
     "attr59": "AB412",
     "attr38": false,
     "attr14": "AB717",
@@ -296,6 +320,7 @@
   },
   {
     "name": "bundles2-24",
+    "priceCents": 250,
     "attr17": "e17_3",
     "attr67": "e67_4",
     "attr57": "e57_3",
@@ -309,6 +334,7 @@
   },
   {
     "name": "bundles2-25",
+    "priceCents": 250,
     "attr54": "AB312",
     "attr8": true,
     "attr14": "AB966",
@@ -322,6 +348,7 @@
   },
   {
     "name": "bundles2-26",
+    "priceCents": 250,
     "attr39": "AB711",
     "attr2": "e2_0",
     "attr77": "e77_3",
@@ -335,6 +362,7 @@
   },
   {
     "name": "bundles2-27",
+    "priceCents": 250,
     "attr14": "AB756",
     "attr52": "e52_1",
     "attr38": true,
@@ -348,6 +376,7 @@
   },
   {
     "name": "bundles2-28",
+    "priceCents": 250,
     "attr71": 41168,
     "attr43": false,
     "attr35": "s7546",
@@ -361,6 +390,7 @@
   },
   {
     "name": "bundles2-29",
+    "priceCents": 250,
     "attr12": "e12_0",
     "attr18": true,
     "attr76": 5616,
@@ -374,6 +404,7 @@
   },
   {
     "name": "bundles2-30",
+    "priceCents": 250,
     "attr48": false,
     "attr45": "s5700",
     "attr61": 22719,
@@ -387,6 +418,7 @@
   },
   {
     "name": "bundles2-31",
+    "priceCents": 250,
     "attr54": "AB685",
     "attr79": "AB536",
     "attr31": 35483,
@@ -400,6 +432,7 @@
   },
   {
     "name": "bundles2-32",
+    "priceCents": 250,
     "attr1": 15601,
     "attr46": 5258,
     "attr17": "e17_1",
@@ -412,6 +445,7 @@
   },
   {
     "name": "bundles2-33",
+    "priceCents": 250,
     "attr3": true,
     "attr27": "e27_1",
     "attr47": "e47_0",
@@ -424,6 +458,7 @@
   },
   {
     "name": "bundles2-34",
+    "priceCents": 250,
     "attr15": "s8294",
     "attr68": false,
     "attr56": 16017,
@@ -436,6 +471,7 @@
   },
   {
     "name": "bundles2-35",
+    "priceCents": 250,
     "attr33": true,
     "attr27": "e27_3",
     "attr59": "AB775",
@@ -449,6 +485,7 @@
   },
   {
     "name": "bundles2-36",
+    "priceCents": 250,
     "attr1": 15286,
     "attr8": false,
     "attr59": "AB708",
@@ -462,6 +499,7 @@
   },
   {
     "name": "bundles2-37",
+    "priceCents": 250,
     "attr32": "e32_4",
     "attr33": false,
     "attr25": "s3183",
@@ -475,6 +513,7 @@
   },
   {
     "name": "bundles2-38",
+    "priceCents": 250,
     "attr37": "e37_3",
     "attr6": 23807,
     "attr78": false,
@@ -488,6 +527,7 @@
   },
   {
     "name": "bundles2-39",
+    "priceCents": 250,
     "attr76": 3570,
     "attr32": "e32_3",
     "attr55": "s9337",
@@ -499,6 +539,7 @@
   },
   {
     "name": "bundles2-40",
+    "priceCents": 250,
     "attr21": 12932,
     "attr32": "e32_2",
     "attr15": "s7307",
@@ -511,6 +552,7 @@
   },
   {
     "name": "bundles2-41",
+    "priceCents": 250,
     "attr34": "AB246",
     "attr64": "AB493",
     "attr40": "s5804",
@@ -523,6 +565,7 @@
   },
   {
     "name": "bundles2-42",
+    "priceCents": 250,
     "attr38": true,
     "attr60": "s9518",
     "attr3": false,
@@ -536,6 +579,7 @@
   },
   {
     "name": "bundles2-43",
+    "priceCents": 250,
     "attr36": 37308,
     "attr10": "s369",
     "attr25": "s5835",
@@ -549,6 +593,7 @@
   },
   {
     "name": "bundles2-44",
+    "priceCents": 250,
     "attr19": "AB231",
     "attr31": 6494,
     "attr21": 71596,
@@ -562,6 +607,7 @@
   },
   {
     "name": "bundles2-45",
+    "priceCents": 250,
     "attr10": "s1438",
     "attr26": 49383,
     "attr23": true,
@@ -574,6 +620,7 @@
   },
   {
     "name": "bundles2-46",
+    "priceCents": 250,
     "attr51": 11482,
     "attr5": "s1528",
     "attr55": "s8757",
@@ -586,6 +633,7 @@
   },
   {
     "name": "bundles2-47",
+    "priceCents": 250,
     "attr63": false,
     "attr6": 23181,
     "attr0": "s6712",
@@ -599,6 +647,7 @@
   },
   {
     "name": "bundles2-48",
+    "priceCents": 250,
     "attr66": 1647,
     "attr76": 270,
     "attr54": "AB677",
@@ -612,6 +661,7 @@
   },
   {
     "name": "bundles2-49",
+    "priceCents": 250,
     "attr25": "s3812",
     "attr53": true,
     "attr32": "e32_1",
@@ -625,6 +675,7 @@
   },
   {
     "name": "bundles2-50",
+    "priceCents": 250,
     "attr46": 17688,
     "attr1": 52470,
     "attr55": "s7456",
@@ -638,6 +689,7 @@
   },
   {
     "name": "bundles2-51",
+    "priceCents": 250,
     "attr36": 36508,
     "attr75": "s7531",
     "attr34": "AB475",
@@ -651,6 +703,7 @@
   },
   {
     "name": "bundles2-52",
+    "priceCents": 250,
     "attr20": "s3405",
     "attr0": "s8833",
     "attr75": "s1186",
@@ -664,6 +717,7 @@
   },
   {
     "name": "bundles2-53",
+    "priceCents": 250,
     "attr76": 2997,
     "attr79": "AB614",
     "attr78": false,
@@ -676,6 +730,7 @@
   },
   {
     "name": "bundles2-54",
+    "priceCents": 250,
     "attr62": "e62_0",
     "attr54": "AB396",
     "attr51": 29935,
@@ -689,6 +744,7 @@
   },
   {
     "name": "bundles2-55",
+    "priceCents": 250,
     "attr9": "AB405",
     "attr15": "s7372",
     "attr16": 2968,
@@ -701,6 +757,7 @@
   },
   {
     "name": "bundles2-56",
+    "priceCents": 250,
     "attr38": false,
     "attr23": true,
     "attr43": true,
@@ -714,6 +771,7 @@
   },
   {
     "name": "bundles2-57",
+    "priceCents": 250,
     "attr9": "AB936",
     "attr28": true,
     "attr50": "s3802",
@@ -727,6 +785,7 @@
   },
   {
     "name": "bundles2-58",
+    "priceCents": 250,
     "attr11": 18543,
     "attr32": "e32_2",
     "attr41": 39633,
@@ -739,6 +798,7 @@
   },
   {
     "name": "bundles2-59",
+    "priceCents": 250,
     "attr25": "s5456",
     "attr38": false,
     "attr18": false,

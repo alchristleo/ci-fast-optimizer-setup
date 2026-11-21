@@ -8,6 +8,13 @@
       "minLength": 1,
       "maxLength": 80
     },
+    "priceCents": {
+      "type": "number",
+      "minimum": 0
+    },
+    "active": {
+      "type": "boolean"
+    },
     "attr0": {
       "type": "string",
       "minLength": 1,

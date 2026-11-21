@@ -1,6 +1,9 @@
 [
   {
     "name": "journals-0",
+    "code": "AB123",
+    "active": true,
+    "priceCents": 250,
     "attr44": "AB889",
     "attr39": "AB723",
     "attr37": "e37_3",
@@ -14,6 +17,9 @@
   },
   {
     "name": "journals-1",
+    "code": "AB123",
+    "active": true,
+    "priceCents": 250,
     "attr0": "s6987",
     "attr14": "AB601",
     "attr33": false,
@@ -27,6 +33,9 @@
   },
   {
     "name": "journals-2",
+    "code": "AB123",
+    "active": true,
+    "priceCents": 250,
     "attr10": "s1278",
     "attr36": 974,
     "attr49": "AB892",
@@ -40,6 +49,9 @@
   },
   {
     "name": "journals-3",
+    "code": "AB123",
+    "active": true,
+    "priceCents": 250,
     "attr12": "e12_1",
     "attr44": "AB582",
     "attr4": "AB427",
@@ -51,6 +63,9 @@
   },
   {
     "name": "journals-4",
+    "code": "AB123",
+    "active": true,
+    "priceCents": 250,
     "attr56": 996,
     "attr26": 16576,
     "attr4": "AB548",
@@ -64,6 +79,9 @@
   },
   {
     "name": "journals-5",
+    "code": "AB123",
+    "active": true,
+    "priceCents": 250,
     "attr53": true,
     "attr20": "s5314",
     "attr59": "AB121",
@@ -77,6 +95,9 @@
   },
   {
     "name": "journals-6",
+    "code": "AB123",
+    "active": true,
+    "priceCents": 250,
     "attr36": 435,
     "attr63": false,
     "attr78": false,
@@ -90,6 +111,9 @@
   },
   {
     "name": "journals-7",
+    "code": "AB123",
+    "active": true,
+    "priceCents": 250,
     "attr67": "e67_3",
     "attr55": "s3728",
     "attr4": "AB924",
@@ -103,6 +127,9 @@
   },
   {
     "name": "journals-8",
+    "code": "AB123",
+    "active": true,
+    "priceCents": 250,
     "attr6": 19258,
     "attr18": false,
     "attr47": "e47_1",
@@ -116,6 +143,9 @@
   },
   {
     "name": "journals-9",
+    "code": "AB123",
+    "active": true,
+    "priceCents": 250,
     "attr1": 20451,
     "attr3": true,
     "attr20": "s1546",
@@ -128,6 +158,9 @@
   },
   {
     "name": "journals-10",
+    "code": "AB123",
+    "active": true,
+    "priceCents": 250,
     "attr47": "e47_1",
     "attr49": "AB834",
     "attr39": "AB176",
@@ -139,6 +172,9 @@
   },
   {
     "name": "journals-11",
+    "code": "AB123",
+    "active": true,
+    "priceCents": 250,
     "attr56": 1831,
     "attr0": "s85",
     "attr64": "AB535",
@@ -152,6 +188,9 @@
   },
   {
     "name": "journals-12",
+    "code": "AB123",
+    "active": true,
+    "priceCents": 250,
     "attr71": 56210,
     "attr57": "e57_2",
     "attr33": false,
@@ -165,6 +204,9 @@
   },
   {
     "name": "journals-13",
+    "code": "AB123",
+    "active": true,
+    "priceCents": 250,
     "attr54": "AB268",
     "attr27": "e27_2",
     "attr48": true,
@@ -177,6 +219,9 @@
   },
   {
     "name": "journals-14",
+    "code": "AB123",
+    "active": true,
+    "priceCents": 250,
     "attr52": "e52_3",
     "attr69": "AB296",
     "attr51": 28,
@@ -189,6 +234,9 @@
   },
   {
     "name": "journals-15",
+    "code": "AB123",
+    "active": true,
+    "priceCents": 250,
     "attr30": "s179",
     "attr73": false,
     "attr17": "e17_2",
@@ -202,6 +250,9 @@
   },
   {
     "name": "journals-16",
+    "code": "AB123",
+    "active": true,
+    "priceCents": 250,
     "attr52": "e52_4",
     "attr64": "AB244",
     "attr2": "e2_1",
@@ -214,6 +265,9 @@
   },
   {
     "name": "journals-17",
+    "code": "AB123",
+    "active": true,
+    "priceCents": 250,
     "attr18": false,
     "attr47": "e47_4",
     "attr64": "AB311",
@@ -227,6 +281,9 @@
   },
   {
     "name": "journals-18",
+    "code": "AB123",
+    "active": true,
+    "priceCents": 250,
     "attr56": 1242,
     "attr46": 21436,
     "attr0": "s6512",
@@ -239,6 +296,9 @@
   },
   {
     "name": "journals-19",
+    "code": "AB123",
+    "active": true,
+    "priceCents": 250,
     "attr35": "s6291",
     "attr58": true,
     "attr51": 17473,
@@ -252,6 +312,9 @@
   },
   {
     "name": "journals-20",
+    "code": "AB123",
+    "active": true,
+    "priceCents": 250,
     "attr63": false,
     "attr14": "AB978",
     "attr30": "s6162",
@@ -264,6 +327,9 @@
   },
   {
     "name": "journals-21",
+    "code": "AB123",
+    "active": true,
+    "priceCents": 250,
     "attr71": 47252,
     "attr40": "s1170",
     "attr6": 25168,
@@ -277,6 +343,9 @@
   },
   {
     "name": "journals-22",
+    "code": "AB123",
+    "active": true,
+    "priceCents": 250,
     "attr19": "AB454",
     "attr37": "e37_2",
     "attr58": true,
@@ -290,6 +359,9 @@
   },
   {
     "name": "journals-23",
+    "code": "AB123",
+    "active": true,
+    "priceCents": 250,
     "attr11": 11983,
     "attr79": "AB103",
     "attr70": "s5002",
@@ -302,6 +374,9 @@
   },
   {
     "name": "journals-24",
+    "code": "AB123",
+    "active": true,
+    "priceCents": 250,
     "attr29": "AB629",
     "attr71": 48441,
     "attr44": "AB405",
@@ -315,6 +390,9 @@
   },
   {
     "name": "journals-25",
+    "code": "AB123",
+    "active": true,
+    "priceCents": 250,
     "attr75": "s7269",
     "attr65": "s3832",
     "attr69": "AB370",
@@ -327,6 +405,9 @@
   },
   {
     "name": "journals-26",
+    "code": "AB123",
+    "active": true,
+    "priceCents": 250,
     "attr61": 18195,
     "attr70": "s9655",
     "attr55": "s8984",
@@ -339,6 +420,9 @@
   },
   {
     "name": "journals-27",
+    "code": "AB123",
+    "active": true,
+    "priceCents": 250,
     "attr6": 3316,
     "attr52": "e52_3",
     "attr27": "e27_4",
@@ -351,6 +435,9 @@
   },
   {
     "name": "journals-28",
+    "code": "AB123",
+    "active": true,
+    "priceCents": 250,
     "attr47": "e47_2",
     "attr48": false,
     "attr25": "s48",
@@ -362,6 +449,9 @@
   },
   {
     "name": "journals-29",
+    "code": "AB123",
+    "active": true,
+    "priceCents": 250,
     "attr15": "s7350",
     "attr9": "AB765",
     "attr75": "s1448",
@@ -375,6 +465,9 @@
   },
   {
     "name": "journals-30",
+    "code": "AB123",
+    "active": true,
+    "priceCents": 250,
     "attr43": false,
     "attr47": "e47_4",
     "attr7": "e7_4",
@@ -388,6 +481,9 @@
   },
   {
     "name": "journals-31",
+    "code": "AB123",
+    "active": true,
+    "priceCents": 250,
     "attr17": "e17_2",
     "attr42": "e42_0",
     "attr31": 8780,
@@ -400,6 +496,9 @@
   },
   {
     "name": "journals-32",
+    "code": "AB123",
+    "active": true,
+    "priceCents": 250,
     "attr5": "s5399",
     "attr64": "AB101",
     "attr10": "s2117",
@@ -412,6 +511,9 @@
   },
   {
     "name": "journals-33",
+    "code": "AB123",
+    "active": true,
+    "priceCents": 250,
     "attr28": false,
     "attr74": "AB106",
     "attr9": "AB674",
@@ -425,6 +527,9 @@
   },
   {
     "name": "journals-34",
+    "code": "AB123",
+    "active": true,
+    "priceCents": 250,
     "attr75": "s4007",
     "attr10": "s7731",
     "attr15": "s6117",
@@ -438,6 +543,9 @@
   },
   {
     "name": "journals-35",
+    "code": "AB123",
+    "active": true,
+    "priceCents": 250,
     "attr78": false,
     "attr9": "AB667",
     "attr2": "e2_4",
@@ -451,6 +559,9 @@
   },
   {
     "name": "journals-36",
+    "code": "AB123",
+    "active": true,
+    "priceCents": 250,
     "attr4": "AB986",
     "attr39": "AB418",
     "attr21": 21295,
@@ -464,6 +575,9 @@
   },
   {
     "name": "journals-37",
+    "code": "AB123",
+    "active": true,
+    "priceCents": 250,
     "attr6": 29835,
     "attr58": true,
     "attr22": "e22_4",
@@ -475,6 +589,9 @@
   },
   {
     "name": "journals-38",
+    "code": "AB123",
+    "active": true,
+    "priceCents": 250,
     "attr31": 35143,
     "attr57": "e57_4",
     "attr12": "e12_2",
@@ -488,6 +605,9 @@
   },
   {
     "name": "journals-39",
+    "code": "AB123",
+    "active": true,
+    "priceCents": 250,
     "attr14": "AB703",
     "attr20": "s1495",
     "attr19": "AB880",
@@ -499,6 +619,9 @@
   },
   {
     "name": "journals-40",
+    "code": "AB123",
+    "active": true,
+    "priceCents": 250,
     "attr79": "AB939",
     "attr27": "e27_1",
     "attr63": true,
@@ -512,6 +635,9 @@
   },
   {
     "name": "journals-41",
+    "code": "AB123",
+    "active": true,
+    "priceCents": 250,
     "attr76": 4941,
     "attr11": 8423,
     "attr74": "AB930",
@@ -524,6 +650,9 @@
   },
   {
     "name": "journals-42",
+    "code": "AB123",
+    "active": true,
+    "priceCents": 250,
     "attr44": "AB776",
     "attr43": false,
     "attr68": false,
@@ -537,6 +666,9 @@
   },
   {
     "name": "journals-43",
+    "code": "AB123",
+    "active": true,
+    "priceCents": 250,
     "attr57": "e57_4",
     "attr1": 48683,
     "attr55": "s5626",
@@ -550,6 +682,9 @@
   },
   {
     "name": "journals-44",
+    "code": "AB123",
+    "active": true,
+    "priceCents": 250,
     "attr44": "AB919",
     "attr40": "s942",
     "attr69": "AB438",
@@ -563,6 +698,9 @@
   },
   {
     "name": "journals-45",
+    "code": "AB123",
+    "active": true,
+    "priceCents": 250,
     "attr8": false,
     "attr73": false,
     "attr13": false,
@@ -575,6 +713,9 @@
   },
   {
     "name": "journals-46",
+    "code": "AB123",
+    "active": true,
+    "priceCents": 250,
     "attr27": "e27_0",
     "attr73": true,
     "attr64": "AB967",
@@ -588,6 +729,9 @@
   },
   {
     "name": "journals-47",
+    "code": "AB123",
+    "active": true,
+    "priceCents": 250,
     "attr72": "e72_3",
     "attr42": "e42_1",
     "attr76": 27098,
@@ -600,6 +744,9 @@
   },
   {
     "name": "journals-48",
+    "code": "AB123",
+    "active": true,
+    "priceCents": 250,
     "attr57": "e57_2",
     "attr45": "s2523",
     "attr46": 51497,
@@ -612,6 +759,9 @@
   },
   {
     "name": "journals-49",
+    "code": "AB123",
+    "active": true,
+    "priceCents": 250,
     "attr35": "s8948",
     "attr39": "AB838",
     "attr7": "e7_4",
@@ -624,6 +774,9 @@
   },
   {
     "name": "journals-50",
+    "code": "AB123",
+    "active": true,
+    "priceCents": 250,
     "attr67": "e67_3",
     "attr11": 4836,
     "attr14": "AB484",
@@ -636,6 +789,9 @@
   },
   {
     "name": "journals-51",
+    "code": "AB123",
+    "active": true,
+    "priceCents": 250,
     "attr62": "e62_1",
     "attr40": "s3438",
     "attr7": "e7_1",
@@ -649,6 +805,9 @@
   },
   {
     "name": "journals-52",
+    "code": "AB123",
+    "active": true,
+    "priceCents": 250,
     "attr24": "AB730",
     "attr5": "s2229",
     "attr61": 20646,
@@ -662,6 +821,9 @@
   },
   {
     "name": "journals-53",
+    "code": "AB123",
+    "active": true,
+    "priceCents": 250,
     "attr78": false,
     "attr8": true,
     "attr11": 22459,
@@ -674,6 +836,9 @@
   },
   {
     "name": "journals-54",
+    "code": "AB123",
+    "active": true,
+    "priceCents": 250,
     "attr24": "AB314",
     "attr35": "s6986",
     "attr33": true,
@@ -686,6 +851,9 @@
   },
   {
     "name": "journals-55",
+    "code": "AB123",
+    "active": true,
+    "priceCents": 250,
     "attr76": 9491,
     "attr44": "AB214",
     "attr67": "e67_4",
@@ -699,6 +867,9 @@
   },
   {
     "name": "journals-56",
+    "code": "AB123",
+    "active": true,
+    "priceCents": 250,
     "attr12": "e12_0",
     "attr22": "e22_4",
     "attr48": true,
@@ -711,6 +882,9 @@
   },
   {
     "name": "journals-57",
+    "code": "AB123",
+    "active": true,
+    "priceCents": 250,
     "attr55": "s5892",
     "attr66": 61155,
     "attr63": true,
@@ -724,6 +898,9 @@
   },
   {
     "name": "journals-58",
+    "code": "AB123",
+    "active": true,
+    "priceCents": 250,
     "attr62": "e62_1",
     "attr21": 58611,
     "attr55": "s2330",
@@ -737,6 +914,9 @@
   },
   {
     "name": "journals-59",
+    "code": "AB123",
+    "active": true,
+    "priceCents": 250,
     "attr11": 17714,
     "attr4": "AB358",
     "attr16": 18601,

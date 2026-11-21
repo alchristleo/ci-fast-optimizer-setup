@@ -1,6 +1,8 @@
 [
   {
     "name": "vouchers-0",
+    "active": true,
+    "priceCents": 250,
     "attr6": 7426,
     "attr8": false,
     "attr53": true,
@@ -14,6 +16,8 @@
   },
   {
     "name": "vouchers-1",
+    "active": true,
+    "priceCents": 250,
     "attr42": "e42_4",
     "attr33": false,
     "attr27": "e27_0",
@@ -26,6 +30,8 @@
   },
   {
     "name": "vouchers-2",
+    "active": true,
+    "priceCents": 250,
     "attr12": "e12_4",
     "attr30": "s7021",
     "attr19": "AB662",
@@ -38,6 +44,8 @@
   },
   {
     "name": "vouchers-3",
+    "active": true,
+    "priceCents": 250,
     "attr6": 49957,
     "attr24": "AB894",
     "attr71": 4293,
@@ -51,6 +59,8 @@
   },
   {
     "name": "vouchers-4",
+    "active": true,
+    "priceCents": 250,
     "attr64": "AB835",
     "attr31": 3732,
     "attr25": "s9428",
@@ -64,6 +74,8 @@
   },
   {
     "name": "vouchers-5",
+    "active": true,
+    "priceCents": 250,
     "attr11": 62097,
     "attr73": false,
     "attr77": "e77_4",
@@ -77,6 +89,8 @@
   },
   {
     "name": "vouchers-6",
+    "active": true,
+    "priceCents": 250,
     "attr26": 4987,
     "attr10": "s454",
     "attr0": "s5289",
@@ -90,6 +104,8 @@
   },
   {
     "name": "vouchers-7",
+    "active": true,
+    "priceCents": 250,
     "attr10": "s7241",
     "attr47": "e47_1",
     "attr77": "e77_2",
@@ -102,6 +118,8 @@
   },
   {
     "name": "vouchers-8",
+    "active": true,
+    "priceCents": 250,
     "attr7": "e7_2",
     "attr0": "s668",
     "attr27": "e27_4",
@@ -114,6 +132,8 @@
   },
   {
     "name": "vouchers-9",
+    "active": true,
+    "priceCents": 250,
     "attr72": "e72_2",
     "attr35": "s3236",
     "attr23": false,
@@ -127,6 +147,8 @@
   },
   {
     "name": "vouchers-10",
+    "active": true,
+    "priceCents": 250,
     "attr17": "e17_2",
     "attr2": "e2_3",
     "attr21": 4447,
@@ -139,6 +161,8 @@
   },
   {
     "name": "vouchers-11",
+    "active": true,
+    "priceCents": 250,
     "attr35": "s9524",
     "attr50": "s8664",
     "attr62": "e62_2",
@@ -152,6 +176,8 @@
   },
   {
     "name": "vouchers-12",
+    "active": true,
+    "priceCents": 250,
     "attr49": "AB120",
     "attr41": 33827,
     "attr27": "e27_0",
@@ -164,6 +190,8 @@
   },
   {
     "name": "vouchers-13",
+    "active": true,
+    "priceCents": 250,
     "attr8": true,
     "attr60": "s9140",
     "attr5": "s1857",
@@ -177,6 +205,8 @@
   },
   {
     "name": "vouchers-14",
+    "active": true,
+    "priceCents": 250,
     "attr18": false,
     "attr38": false,
     "attr53": false,
@@ -190,6 +220,8 @@
   },
   {
     "name": "vouchers-15",
+    "active": true,
+    "priceCents": 250,
     "attr19": "AB653",
     "attr73": true,
     "attr68": false,
@@ -202,6 +234,8 @@
   },
   {
     "name": "vouchers-16",
+    "active": true,
+    "priceCents": 250,
     "attr49": "AB667",
     "attr33": true,
     "attr28": false,
@@ -215,6 +249,8 @@
   },
   {
     "name": "vouchers-17",
+    "active": true,
+    "priceCents": 250,
     "attr56": 28350,
     "attr38": true,
     "attr54": "AB603",
@@ -227,6 +263,8 @@
   },
   {
     "name": "vouchers-18",
+    "active": true,
+    "priceCents": 250,
     "attr71": 3460,
     "attr1": 21878,
     "attr78": false,
@@ -240,6 +278,8 @@
   },
   {
     "name": "vouchers-19",
+    "active": true,
+    "priceCents": 250,
     "attr27": "e27_1",
     "attr60": "s9392",
     "attr37": "e37_4",
@@ -253,6 +293,8 @@
   },
   {
     "name": "vouchers-20",
+    "active": true,
+    "priceCents": 250,
     "attr73": true,
     "attr38": true,
     "attr24": "AB838",
@@ -266,6 +308,8 @@
   },
   {
     "name": "vouchers-21",
+    "active": true,
+    "priceCents": 250,
     "attr55": "s1164",
     "attr33": false,
     "attr54": "AB493",
@@ -279,6 +323,8 @@
   },
   {
     "name": "vouchers-22",
+    "active": true,
+    "priceCents": 250,
     "attr73": true,
     "attr8": true,
     "attr1": 19952,
@@ -292,6 +338,8 @@
   },
   {
     "name": "vouchers-23",
+    "active": true,
+    "priceCents": 250,
     "attr5": "s7517",
     "attr26": 24008,
     "attr13": false,
@@ -305,6 +353,8 @@
   },
   {
     "name": "vouchers-24",
+    "active": true,
+    "priceCents": 250,
     "attr79": "AB773",
     "attr38": false,
     "attr50": "s1967",
@@ -318,6 +368,8 @@
   },
   {
     "name": "vouchers-25",
+    "active": true,
+    "priceCents": 250,
     "attr53": false,
     "attr47": "e47_1",
     "attr8": true,
@@ -331,6 +383,8 @@
   },
   {
     "name": "vouchers-26",
+    "active": true,
+    "priceCents": 250,
     "attr41": 1596,
     "attr27": "e27_2",
     "attr29": "AB323",
@@ -344,6 +398,8 @@
   },
   {
     "name": "vouchers-27",
+    "active": true,
+    "priceCents": 250,
     "attr69": "AB843",
     "attr76": 8703,
     "attr5": "s9281",
@@ -356,6 +412,8 @@
   },
   {
     "name": "vouchers-28",
+    "active": true,
+    "priceCents": 250,
     "attr63": false,
     "attr77": "e77_0",
     "attr73": true,
@@ -369,6 +427,8 @@
   },
   {
     "name": "vouchers-29",
+    "active": true,
+    "priceCents": 250,
     "attr46": 5525,
     "attr43": true,
     "attr26": 3054,
@@ -382,6 +442,8 @@
   },
   {
     "name": "vouchers-30",
+    "active": true,
+    "priceCents": 250,
     "attr20": "s4128",
     "attr45": "s5730",
     "attr73": true,
@@ -394,6 +456,8 @@
   },
   {
     "name": "vouchers-31",
+    "active": true,
+    "priceCents": 250,
     "attr19": "AB717",
     "attr74": "AB508",
     "attr0": "s8433",
@@ -406,6 +470,8 @@
   },
   {
     "name": "vouchers-32",
+    "active": true,
+    "priceCents": 250,
     "attr18": true,
     "attr38": false,
     "attr77": "e77_4",
@@ -419,6 +485,8 @@
   },
   {
     "name": "vouchers-33",
+    "active": true,
+    "priceCents": 250,
     "attr14": "AB226",
     "attr43": false,
     "attr58": true,
@@ -431,6 +499,8 @@
   },
   {
     "name": "vouchers-34",
+    "active": true,
+    "priceCents": 250,
     "attr0": "s8256",
     "attr67": "e67_2",
     "attr72": "e72_2",
@@ -444,6 +514,8 @@
   },
   {
     "name": "vouchers-35",
+    "active": true,
+    "priceCents": 250,
     "attr78": false,
     "attr43": false,
     "attr41": 4961,
@@ -457,6 +529,8 @@
   },
   {
     "name": "vouchers-36",
+    "active": true,
+    "priceCents": 250,
     "attr6": 31116,
     "attr34": "AB808",
     "attr4": "AB107",
@@ -470,6 +544,8 @@
   },
   {
     "name": "vouchers-37",
+    "active": true,
+    "priceCents": 250,
     "attr37": "e37_0",
     "attr31": 5568,
     "attr55": "s8891",
@@ -483,6 +559,8 @@
   },
   {
     "name": "vouchers-38",
+    "active": true,
+    "priceCents": 250,
     "attr32": "e32_2",
     "attr47": "e47_2",
     "attr5": "s971",
@@ -495,6 +573,8 @@
   },
   {
     "name": "vouchers-39",
+    "active": true,
+    "priceCents": 250,
     "attr29": "AB324",
     "attr7": "e7_1",
     "attr64": "AB921",
@@ -508,6 +588,8 @@
   },
   {
     "name": "vouchers-40",
+    "active": true,
+    "priceCents": 250,
     "attr71": 7907,
     "attr0": "s7533",
     "attr68": true,
@@ -519,6 +601,8 @@
   },
   {
     "name": "vouchers-41",
+    "active": true,
+    "priceCents": 250,
     "attr39": "AB153",
     "attr41": 44039,
     "attr47": "e47_3",
@@ -532,6 +616,8 @@
   },
   {
     "name": "vouchers-42",
+    "active": true,
+    "priceCents": 250,
     "attr2": "e2_0",
     "attr58": true,
     "attr1": 21360,
@@ -545,6 +631,8 @@
   },
   {
     "name": "vouchers-43",
+    "active": true,
+    "priceCents": 250,
     "attr54": "AB361",
     "attr70": "s5155",
     "attr76": 50584,
@@ -557,6 +645,8 @@
   },
   {
     "name": "vouchers-44",
+    "active": true,
+    "priceCents": 250,
     "attr21": 50696,
     "attr8": false,
     "attr13": true,
@@ -569,6 +659,8 @@
   },
   {
     "name": "vouchers-45",
+    "active": true,
+    "priceCents": 250,
     "attr18": true,
     "attr38": false,
     "attr4": "AB232",
@@ -582,6 +674,8 @@
   },
   {
     "name": "vouchers-46",
+    "active": true,
+    "priceCents": 250,
     "attr34": "AB646",
     "attr29": "AB845",
     "attr40": "s452",
@@ -595,6 +689,8 @@
   },
   {
     "name": "vouchers-47",
+    "active": true,
+    "priceCents": 250,
     "attr72": "e72_4",
     "attr55": "s6398",
     "attr63": false,
@@ -608,6 +704,8 @@
   },
   {
     "name": "vouchers-48",
+    "active": true,
+    "priceCents": 250,
     "attr5": "s6499",
     "attr19": "AB492",
     "attr3": true,
@@ -621,6 +719,8 @@
   },
   {
     "name": "vouchers-49",
+    "active": true,
+    "priceCents": 250,
     "attr32": "e32_4",
     "attr28": false,
     "attr44": "AB627",
@@ -634,6 +734,8 @@
   },
   {
     "name": "vouchers-50",
+    "active": true,
+    "priceCents": 250,
     "attr65": "s4391",
     "attr48": true,
     "attr58": true,
@@ -647,6 +749,8 @@
   },
   {
     "name": "vouchers-51",
+    "active": true,
+    "priceCents": 250,
     "attr77": "e77_1",
     "attr19": "AB868",
     "attr11": 58214,
@@ -658,6 +762,8 @@
   },
   {
     "name": "vouchers-52",
+    "active": true,
+    "priceCents": 250,
     "attr63": true,
     "attr69": "AB508",
     "attr50": "s7648",
@@ -671,6 +777,8 @@
   },
   {
     "name": "vouchers-53",
+    "active": true,
+    "priceCents": 250,
     "attr62": "e62_4",
     "attr52": "e52_0",
     "attr77": "e77_0",
@@ -683,6 +791,8 @@
   },
   {
     "name": "vouchers-54",
+    "active": true,
+    "priceCents": 250,
     "attr45": "s3941",
     "attr15": "s1881",
     "attr76": 32863,
@@ -695,6 +805,8 @@
   },
   {
     "name": "vouchers-55",
+    "active": true,
+    "priceCents": 250,
     "attr65": "s8201",
     "attr23": false,
     "attr15": "s833",
@@ -708,6 +820,8 @@
   },
   {
     "name": "vouchers-56",
+    "active": true,
+    "priceCents": 250,
     "attr55": "s2029",
     "attr60": "s1389",
     "attr15": "s8672",
@@ -720,6 +834,8 @@
   },
   {
     "name": "vouchers-57",
+    "active": true,
+    "priceCents": 250,
     "attr37": "e37_3",
     "attr38": true,
     "attr67": "e67_4",
@@ -733,6 +849,8 @@
   },
   {
     "name": "vouchers-58",
+    "active": true,
+    "priceCents": 250,
     "attr64": "AB752",
     "attr52": "e52_3",
     "attr23": false,
@@ -745,6 +863,8 @@
   },
   {
     "name": "vouchers-59",
+    "active": true,
+    "priceCents": 250,
     "attr31": 20923,
     "attr71": 2003,
     "attr8": true,

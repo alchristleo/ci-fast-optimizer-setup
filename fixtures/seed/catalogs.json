@@ -1,6 +1,9 @@
 [
   {
     "name": "catalogs-0",
+    "qty": 3,
+    "priceCents": 250,
+    "note": "hello",
     "attr38": false,
     "attr48": false,
     "attr33": false,
@@ -13,6 +16,9 @@
   },
   {
     "name": "catalogs-1",
+    "qty": 3,
+    "priceCents": 250,
+    "note": "hello",
     "attr17": "e17_2",
     "attr27": "e27_0",
     "attr30": "s6784",
@@ -25,6 +31,9 @@
   },
   {
     "name": "catalogs-2",
+    "qty": 3,
+    "priceCents": 250,
+    "note": "hello",
     "attr44": "AB102",
     "attr3": false,
     "attr78": false,
@@ -38,6 +47,9 @@
   },
   {
     "name": "catalogs-3",
+    "qty": 3,
+    "priceCents": 250,
+    "note": "hello",
     "attr9": "AB588",
     "attr37": "e37_0",
     "attr49": "AB373",
@@ -51,6 +63,9 @@
   },
   {
     "name": "catalogs-4",
+    "qty": 3,
+    "priceCents": 250,
+    "note": "hello",
     "attr13": true,
     "attr68": false,
     "attr27": "e27_1",
@@ -64,6 +79,9 @@
   },
   {
     "name": "catalogs-5",
+    "qty": 3,
+    "priceCents": 250,
+    "note": "hello",
     "attr28": false,
     "attr16": 17976,
     "attr34": "AB179",
@@ -76,6 +94,9 @@
   },
   {
     "name": "catalogs-6",
+    "qty": 3,
+    "priceCents": 250,
+    "note": "hello",
     "attr4": "AB614",
     "attr45": "s1058",
     "attr30": "s6303",
@@ -89,6 +110,9 @@
   },
   {
     "name": "catalogs-7",
+    "qty": 3,
+    "priceCents": 250,
+    "note": "hello",
     "attr61": 26235,
     "attr16": 3047,
     "attr39": "AB309",
@@ -102,6 +126,9 @@
   },
   {
     "name": "catalogs-8",
+    "qty": 3,
+    "priceCents": 250,
+    "note": "hello",
     "attr68": true,
     "attr6": 10730,
     "attr11": 23627,
@@ -115,6 +142,9 @@
   },
   {
     "name": "catalogs-9",
+    "qty": 3,
+    "priceCents": 250,
+    "note": "hello",
     "attr54": "AB889",
     "attr59": "AB309",
     "attr79": "AB734",
@@ -128,6 +158,9 @@
   },
   {
     "name": "catalogs-10",
+    "qty": 3,
+    "priceCents": 250,
+    "note": "hello",
     "attr52": "e52_0",
     "attr53": false,
     "attr27": "e27_4",
@@ -141,6 +174,9 @@
   },
   {
     "name": "catalogs-11",
+    "qty": 3,
+    "priceCents": 250,
+    "note": "hello",
     "attr45": "s8059",
     "attr24": "AB829",
     "attr38": false,
@@ -154,6 +190,9 @@
   },
   {
     "name": "catalogs-12",
+    "qty": 3,
+    "priceCents": 250,
+    "note": "hello",
     "attr5": "s4831",
     "attr16": 6507,
     "attr75": "s1783",
@@ -166,6 +205,9 @@
   },
   {
     "name": "catalogs-13",
+    "qty": 3,
+    "priceCents": 250,
+    "note": "hello",
     "attr69": "AB776",
     "attr34": "AB897",
     "attr21": 20729,
@@ -178,6 +220,9 @@
   },
   {
     "name": "catalogs-14",
+    "qty": 3,
+    "priceCents": 250,
+    "note": "hello",
     "attr15": "s7534",
     "attr22": "e22_2",
     "attr67": "e67_1",
@@ -189,6 +234,9 @@
   },
   {
     "name": "catalogs-15",
+    "qty": 3,
+    "priceCents": 250,
+    "note": "hello",
     "attr43": false,
     "attr14": "AB343",
     "attr66": 5979,
@@ -202,6 +250,9 @@
   },
   {
     "name": "catalogs-16",
+    "qty": 3,
+    "priceCents": 250,
+    "note": "hello",
     "attr11": 17541,
     "attr42": "e42_1",
     "attr9": "AB127",
@@ -215,6 +266,9 @@
   },
   {
     "name": "catalogs-17",
+    "qty": 3,
+    "priceCents": 250,
+    "note": "hello",
     "attr44": "AB375",
     "attr47": "e47_4",
     "attr30": "s235",
@@ -227,6 +281,9 @@
   },
   {
     "name": "catalogs-18",
+    "qty": 3,
+    "priceCents": 250,
+    "note": "hello",
     "attr11": 30596,
     "attr67": "e67_2",
     "attr27": "e27_0",
@@ -239,6 +296,9 @@
   },
   {
     "name": "catalogs-19",
+    "qty": 3,
+    "priceCents": 250,
+    "note": "hello",
     "attr52": "e52_2",
     "attr58": false,
     "attr77": "e77_3",
@@ -252,6 +312,9 @@
   },
   {
     "name": "catalogs-20",
+    "qty": 3,
+    "priceCents": 250,
+    "note": "hello",
     "attr51": 49314,
     "attr48": false,
     "attr40": "s8899",
@@ -264,6 +327,9 @@
   },
   {
     "name": "catalogs-21",
+    "qty": 3,
+    "priceCents": 250,
+    "note": "hello",
     "attr23": true,
     "attr67": "e67_1",
     "attr27": "e27_1",
@@ -277,6 +343,9 @@
   },
   {
     "name": "catalogs-22",
+    "qty": 3,
+    "priceCents": 250,
+    "note": "hello",
     "attr39": "AB186",
     "attr54": "AB809",
     "attr10": "s2960",
@@ -290,6 +359,9 @@
   },
   {
     "name": "catalogs-23",
+    "qty": 3,
+    "priceCents": 250,
+    "note": "hello",
     "attr28": false,
     "attr38": false,
     "attr27": "e27_4",
@@ -301,6 +373,9 @@
   },
   {
     "name": "catalogs-24",
+    "qty": 3,
+    "priceCents": 250,
+    "note": "hello",
     "attr47": "e47_4",
     "attr74": "AB745",
     "attr2": "e2_3",
@@ -313,6 +388,9 @@
   },
   {
     "name": "catalogs-25",
+    "qty": 3,
+    "priceCents": 250,
+    "note": "hello",
     "attr34": "AB687",
     "attr10": "s629",
     "attr7": "e7_2",
@@ -325,6 +403,9 @@
   },
   {
     "name": "catalogs-26",
+    "qty": 3,
+    "priceCents": 250,
+    "note": "hello",
     "attr50": "s2574",
     "attr34": "AB700",
     "attr10": "s4044",
@@ -338,6 +419,9 @@
   },
   {
     "name": "catalogs-27",
+    "qty": 3,
+    "priceCents": 250,
+    "note": "hello",
     "attr67": "e67_2",
     "attr4": "AB490",
     "attr52": "e52_1",
@@ -350,6 +434,9 @@
   },
   {
     "name": "catalogs-28",
+    "qty": 3,
+    "priceCents": 250,
+    "note": "hello",
     "attr50": "s1952",
     "attr37": "e37_1",
     "attr53": false,
@@ -362,6 +449,9 @@
   },
   {
     "name": "catalogs-29",
+    "qty": 3,
+    "priceCents": 250,
+    "note": "hello",
     "attr13": false,
     "attr41": 69305,
     "attr10": "s506",
@@ -375,6 +465,9 @@
   },
   {
     "name": "catalogs-30",
+    "qty": 3,
+    "priceCents": 250,
+    "note": "hello",
     "attr3": false,
     "attr78": true,
     "attr72": "e72_1",
@@ -387,6 +480,9 @@
   },
   {
     "name": "catalogs-31",
+    "qty": 3,
+    "priceCents": 250,
+    "note": "hello",
     "attr42": "e42_3",
     "attr1": 756,
     "attr61": 25223,
@@ -400,6 +496,9 @@
   },
   {
     "name": "catalogs-32",
+    "qty": 3,
+    "priceCents": 250,
+    "note": "hello",
     "attr41": 36114,
     "attr60": "s2008",
     "attr35": "s1726",
@@ -413,6 +512,9 @@
   },
   {
     "name": "catalogs-33",
+    "qty": 3,
+    "priceCents": 250,
+    "note": "hello",
     "attr19": "AB870",
     "attr13": false,
     "attr58": true,
@@ -426,6 +528,9 @@
   },
   {
     "name": "catalogs-34",
+    "qty": 3,
+    "priceCents": 250,
+    "note": "hello",
     "attr71": 43250,
     "attr25": "s8291",
     "attr74": "AB971",
@@ -437,6 +542,9 @@
   },
   {
     "name": "catalogs-35",
+    "qty": 3,
+    "priceCents": 250,
+    "note": "hello",
     "attr55": "s33",
     "attr60": "s2408",
     "attr45": "s3937",
@@ -449,6 +557,9 @@
   },
   {
     "name": "catalogs-36",
+    "qty": 3,
+    "priceCents": 250,
+    "note": "hello",
     "attr21": 26423,
     "attr30": "s7341",
     "attr64": "AB875",
@@ -462,6 +573,9 @@
   },
   {
     "name": "catalogs-37",
+    "qty": 3,
+    "priceCents": 250,
+    "note": "hello",
     "attr6": 20404,
     "attr62": "e62_3",
     "attr47": "e47_2",
@@ -474,6 +588,9 @@
   },
   {
     "name": "catalogs-38",
+    "qty": 3,
+    "priceCents": 250,
+    "note": "hello",
     "attr38": true,
     "attr17": "e17_2",
     "attr30": "s9761",
@@ -486,6 +603,9 @@
   },
   {
     "name": "catalogs-39",
+    "qty": 3,
+    "priceCents": 250,
+    "note": "hello",
     "attr71": 22358,
     "attr56": 8495,
     "attr58": false,
@@ -498,6 +618,9 @@
   },
   {
     "name": "catalogs-40",
+    "qty": 3,
+    "priceCents": 250,
+    "note": "hello",
     "attr3": true,
     "attr20": "s786",
     "attr74": "AB970",
@@ -510,6 +633,9 @@
   },
   {
     "name": "catalogs-41",
+    "qty": 3,
+    "priceCents": 250,
+    "note": "hello",
     "attr72": "e72_2",
     "attr71": 3717,
     "attr18": false,
@@ -523,6 +649,9 @@
   },
   {
     "name": "catalogs-42",
+    "qty": 3,
+    "priceCents": 250,
+    "note": "hello",
     "attr20": "s3396",
     "attr28": true,
     "attr62": "e62_0",
@@ -535,6 +664,9 @@
   },
   {
     "name": "catalogs-43",
+    "qty": 3,
+    "priceCents": 250,
+    "note": "hello",
     "attr25": "s266",
     "attr78": true,
     "attr61": 15712,
@@ -548,6 +680,9 @@
   },
   {
     "name": "catalogs-44",
+    "qty": 3,
+    "priceCents": 250,
+    "note": "hello",
     "attr0": "s4713",
     "attr40": "s3829",
     "attr65": "s8612",
@@ -561,6 +696,9 @@
   },
   {
     "name": "catalogs-45",
+    "qty": 3,
+    "priceCents": 250,
+    "note": "hello",
     "attr31": 5490,
     "attr24": "AB705",
     "attr51": 43345,
@@ -574,6 +712,9 @@
   },
   {
     "name": "catalogs-46",
+    "qty": 3,
+    "priceCents": 250,
+    "note": "hello",
     "attr65": "s9555",
     "attr29": "AB544",
     "attr71": 15325,
@@ -587,6 +728,9 @@
   },
   {
     "name": "catalogs-47",
+    "qty": 3,
+    "priceCents": 250,
+    "note": "hello",
     "attr71": 24075,
     "attr36": 8685,
     "attr33": true,
@@ -599,6 +743,9 @@
   },
   {
     "name": "catalogs-48",
+    "qty": 3,
+    "priceCents": 250,
+    "note": "hello",
     "attr4": "AB396",
     "attr35": "s7887",
     "attr32": "e32_2",
@@ -612,6 +759,9 @@
   },
   {
     "name": "catalogs-49",
+    "qty": 3,
+    "priceCents": 250,
+    "note": "hello",
     "attr11": 5126,
     "attr36": 12897,
     "attr26": 29084,
@@ -625,6 +775,9 @@
   },
   {
     "name": "catalogs-50",
+    "qty": 3,
+    "priceCents": 250,
+    "note": "hello",
     "attr22": "e22_3",
     "attr54": "AB957",
     "attr47": "e47_3",
@@ -638,6 +791,9 @@
   },
   {
     "name": "catalogs-51",
+    "qty": 3,
+    "priceCents": 250,
+    "note": "hello",
     "attr28": true,
     "attr10": "s5663",
     "attr59": "AB464",
@@ -649,6 +805,9 @@
   },
   {
     "name": "catalogs-52",
+    "qty": 3,
+    "priceCents": 250,
+    "note": "hello",
     "attr44": "AB263",
     "attr57": "e57_1",
     "attr43": false,
@@ -661,6 +820,9 @@
   },
   {
     "name": "catalogs-53",
+    "qty": 3,
+    "priceCents": 250,
+    "note": "hello",
     "attr67": "e67_3",
     "attr41": 10130,
     "attr74": "AB254",
@@ -674,6 +836,9 @@
   },
   {
     "name": "catalogs-54",
+    "qty": 3,
+    "priceCents": 250,
+    "note": "hello",
     "attr29": "AB486",
     "attr49": "AB255",
     "attr23": false,
@@ -687,6 +852,9 @@
   },
   {
     "name": "catalogs-55",
+    "qty": 3,
+    "priceCents": 250,
+    "note": "hello",
     "attr56": 5595,
     "attr78": true,
     "attr15": "s3689",
@@ -700,6 +868,9 @@
   },
   {
     "name": "catalogs-56",
+    "qty": 3,
+    "priceCents": 250,
+    "note": "hello",
     "attr18": true,
     "attr57": "e57_1",
     "attr29": "AB457",
@@ -712,6 +883,9 @@
   },
   {
     "name": "catalogs-57",
+    "qty": 3,
+    "priceCents": 250,
+    "note": "hello",
     "attr25": "s9200",
     "attr41": 44868,
     "attr50": "s6303",
@@ -723,6 +897,9 @@
   },
   {
     "name": "catalogs-58",
+    "qty": 3,
+    "priceCents": 250,
+    "note": "hello",
     "attr37": "e37_2",
     "attr19": "AB906",
     "attr26": 13426,
@@ -736,6 +913,9 @@
   },
   {
     "name": "catalogs-59",
+    "qty": 3,
+    "priceCents": 250,
+    "note": "hello",
     "attr50": "s9735",
     "attr76": 11023,
     "attr9": "AB831",

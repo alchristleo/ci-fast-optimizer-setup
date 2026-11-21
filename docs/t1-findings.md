@@ -37,11 +37,11 @@ D13: do not rely on `scanImports`; write a fallback regex scanner that keeps typ
 Junit: `bun test --reporter=junit --reporter-outfile=<f> <files...>` (evidence: `bun test --reporter=junit --reporter-outfile=out.xml a.test.ts v.test.ts` -> 2 pass, XML written)
 
 ## T2: scaffold tuning
-Chosen: K=120 generated domains (`gen.ts --domains 120 --seed 1`), plus 3 hand-written domains and 5 lib/meta test files. `createApp()` does real-style boot work (no busy loop): builds the router table, compiles each domain JSON schema (`fixtures/schema/<name>.json`, 80 optional props) with ajv 8.20.0, loads seed rows (`fixtures/seed/<name>.json`, 60 rows) via `node:fs`, and deep-clones the cached parsed JSON into the store. Cost is tuned by `SCHEMA_PROPS`/`SEED_ROWS` in `scripts/gen.ts`.
+Chosen: K=120 generated domains (`gen.ts --domains 120 --seed 1`), plus 3 hand-written domains and 7 lib/meta test files. `createApp()` does real-style boot work (no busy loop): builds the router table, compiles each domain JSON schema (`fixtures/schema/<name>.json`, 80 optional props plus the route fields) with ajv 8.20.0, and loads seed rows (`fixtures/seed/<name>.json`, 60 rows) via `node:fs`. The compiled validator is the only request-body validator a domain's routes use (`src/lib/schema.ts` maps ajv errors to the 400 body). Seed rows are validated, deep-frozen and served read-only by `GET /<name>/catalog`. They never enter the mutable store, so `resetStore` leaves them alone. A row that fails its schema makes boot throw. Cost is tuned by `SCHEMA_PROPS`/`SEED_ROWS` in `scripts/gen.ts`.
 Env: Bun 1.4.5, Node 22.23.5, vitest 5.1.1, TypeScript 5.9.3 (`legacy:check`), 20-core local machine.
-- Per-`createApp()` cost (second call in a warm process): bun 0.70 s, node 0.82 s (first call 0.97 s bun, 1.03 s node).
-- `bun test`: 1399 tests across 128 files, 1.1 s wall (build once per process).
-- `vitest run` (`bun run legacy:test`, default workers): 1399 tests across 128 files, 20.7 s wall. Ratio 18.8x (target 4x).
-- Baseline-serial local total (oxfmt, oxlint, tsc 5.9, build, vitest with 1 worker): 148 s (target 120 s). Measured as one `time ( ... )` run.
-- Test count matches on both runners (1399). Both pass green. AC14: `bun run legacy:check && bun run check` both green.
+- Per-`createApp()` cost (second call in a warm process): bun 0.56 s, node 0.56 s (first call 0.95 s bun, 0.96 s node).
+- `bun test`: 1524 tests across 130 files, 1.4 s wall (build once per process).
+- `vitest run` (`bun run legacy:test`, default workers): 1524 tests across 130 files, 20.1 s wall. Ratio 14x (target 4x).
+- Baseline-serial local total (oxfmt, oxlint, tsc 5.9, build, vitest with `--maxWorkers=1`): 145 s (target 120 s). Measured as one `time ( ... )` run.
+- Test count matches on both runners (1524). Both pass green. AC14: `bun run legacy:check && bun run check` both green.
 - Negative checks: appending `Bun.version` to `src/lib/ids.ts` fails `api subset > src/ never uses Bun.* APIs`. Adding `import ... from "vitest"` to a test file fails `api subset > test/ imports only the shared subset`. Both restored.

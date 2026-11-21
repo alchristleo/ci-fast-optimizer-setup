@@ -1,6 +1,7 @@
 [
   {
     "name": "members-0",
+    "code": "AB123",
     "attr59": "AB231",
     "attr56": 23404,
     "attr22": "e22_1",
@@ -14,6 +15,7 @@
   },
   {
     "name": "members-1",
+    "code": "AB123",
     "attr7": "e7_3",
     "attr35": "s7537",
     "attr36": 32968,
@@ -27,6 +29,7 @@
   },
   {
     "name": "members-2",
+    "code": "AB123",
     "attr46": 51275,
     "attr74": "AB467",
     "attr23": false,
@@ -39,6 +42,7 @@
   },
   {
     "name": "members-3",
+    "code": "AB123",
     "attr71": 1334,
     "attr61": 1662,
     "attr73": false,
@@ -51,6 +55,7 @@
   },
   {
     "name": "members-4",
+    "code": "AB123",
     "attr15": "s7083",
     "attr56": 12806,
     "attr45": "s4584",
@@ -63,6 +68,7 @@
   },
   {
     "name": "members-5",
+    "code": "AB123",
     "attr19": "AB342",
     "attr22": "e22_4",
     "attr49": "AB419",
@@ -75,6 +81,7 @@
   },
   {
     "name": "members-6",
+    "code": "AB123",
     "attr57": "e57_2",
     "attr7": "e7_3",
     "attr69": "AB877",
@@ -88,6 +95,7 @@
   },
   {
     "name": "members-7",
+    "code": "AB123",
     "attr74": "AB965",
     "attr45": "s3672",
     "attr23": true,
@@ -101,6 +109,7 @@
   },
   {
     "name": "members-8",
+    "code": "AB123",
     "attr58": false,
     "attr53": true,
     "attr39": "AB777",
@@ -114,6 +123,7 @@
   },
   {
     "name": "members-9",
+    "code": "AB123",
     "attr76": 56555,
     "attr59": "AB226",
     "attr39": "AB438",
@@ -126,6 +136,7 @@
   },
   {
     "name": "members-10",
+    "code": "AB123",
     "attr79": "AB971",
     "attr45": "s6041",
     "attr15": "s7262",
@@ -139,6 +150,7 @@
   },
   {
     "name": "members-11",
+    "code": "AB123",
     "attr78": true,
     "attr32": "e32_1",
     "attr65": "s1062",
@@ -150,6 +162,7 @@
   },
   {
     "name": "members-12",
+    "code": "AB123",
     "attr49": "AB299",
     "attr1": 3136,
     "attr14": "AB492",
@@ -163,6 +176,7 @@
   },
   {
     "name": "members-13",
+    "code": "AB123",
     "attr29": "AB618",
     "attr76": 51120,
     "attr66": 14881,
@@ -176,6 +190,7 @@
   },
   {
     "name": "members-14",
+    "code": "AB123",
     "attr38": false,
     "attr17": "e17_4",
     "attr20": "s8761",
@@ -189,6 +204,7 @@
   },
   {
     "name": "members-15",
+    "code": "AB123",
     "attr48": true,
     "attr58": true,
     "attr64": "AB438",
@@ -201,6 +217,7 @@
   },
   {
     "name": "members-16",
+    "code": "AB123",
     "attr32": "e32_3",
     "attr74": "AB944",
     "attr24": "AB661",
@@ -214,6 +231,7 @@
   },
   {
     "name": "members-17",
+    "code": "AB123",
     "attr62": "e62_3",
     "attr5": "s2647",
     "attr54": "AB531",
@@ -227,6 +245,7 @@
   },
   {
     "name": "members-18",
+    "code": "AB123",
     "attr72": "e72_2",
     "attr67": "e67_0",
     "attr25": "s577",
@@ -239,6 +258,7 @@
   },
   {
     "name": "members-19",
+    "code": "AB123",
     "attr31": 61282,
     "attr38": true,
     "attr26": 46622,
@@ -252,6 +272,7 @@
   },
   {
     "name": "members-20",
+    "code": "AB123",
     "attr8": false,
     "attr42": "e42_3",
     "attr20": "s5506",
@@ -265,6 +286,7 @@
   },
   {
     "name": "members-21",
+    "code": "AB123",
     "attr60": "s2975",
     "attr58": false,
     "attr42": "e42_3",
@@ -277,6 +299,7 @@
   },
   {
     "name": "members-22",
+    "code": "AB123",
     "attr14": "AB734",
     "attr8": false,
     "attr53": true,
@@ -289,6 +312,7 @@
   },
   {
     "name": "members-23",
+    "code": "AB123",
     "attr79": "AB800",
     "attr76": 68276,
     "attr27": "e27_2",
@@ -301,6 +325,7 @@
   },
   {
     "name": "members-24",
+    "code": "AB123",
     "attr61": 3718,
     "attr68": false,
     "attr3": false,
@@ -313,6 +338,7 @@
   },
   {
     "name": "members-25",
+    "code": "AB123",
     "attr65": "s3652",
     "attr41": 9728,
     "attr42": "e42_0",
@@ -325,6 +351,7 @@
   },
   {
     "name": "members-26",
+    "code": "AB123",
     "attr52": "e52_3",
     "attr73": true,
     "attr56": 4238,
@@ -338,6 +365,7 @@
   },
   {
     "name": "members-27",
+    "code": "AB123",
     "attr17": "e17_3",
     "attr51": 1050,
     "attr49": "AB596",
@@ -350,6 +378,7 @@
   },
   {
     "name": "members-28",
+    "code": "AB123",
     "attr63": true,
     "attr52": "e52_0",
     "attr15": "s7055",
@@ -363,6 +392,7 @@
   },
   {
     "name": "members-29",
+    "code": "AB123",
     "attr49": "AB172",
     "attr75": "s9625",
     "attr20": "s37",
@@ -375,6 +405,7 @@
   },
   {
     "name": "members-30",
+    "code": "AB123",
     "attr19": "AB454",
     "attr55": "s5251",
     "attr34": "AB292",
@@ -388,6 +419,7 @@
   },
   {
     "name": "members-31",
+    "code": "AB123",
     "attr27": "e27_3",
     "attr26": 16526,
     "attr52": "e52_3",
@@ -400,6 +432,7 @@
   },
   {
     "name": "members-32",
+    "code": "AB123",
     "attr19": "AB335",
     "attr54": "AB599",
     "attr57": "e57_0",
@@ -413,6 +446,7 @@
   },
   {
     "name": "members-33",
+    "code": "AB123",
     "attr0": "s2773",
     "attr64": "AB893",
     "attr50": "s3530",
@@ -425,6 +459,7 @@
   },
   {
     "name": "members-34",
+    "code": "AB123",
     "attr24": "AB908",
     "attr20": "s9638",
     "attr74": "AB119",
@@ -438,6 +473,7 @@
   },
   {
     "name": "members-35",
+    "code": "AB123",
     "attr0": "s8203",
     "attr26": 6685,
     "attr70": "s4863",
@@ -450,6 +486,7 @@
   },
   {
     "name": "members-36",
+    "code": "AB123",
     "attr48": false,
     "attr2": "e2_1",
     "attr23": true,
@@ -463,6 +500,7 @@
   },
   {
     "name": "members-37",
+    "code": "AB123",
     "attr16": 28159,
     "attr65": "s437",
     "attr33": true,
@@ -475,6 +513,7 @@
   },
   {
     "name": "members-38",
+    "code": "AB123",
     "attr17": "e17_0",
     "attr19": "AB295",
     "attr39": "AB405",
@@ -488,6 +527,7 @@
   },
   {
     "name": "members-39",
+    "code": "AB123",
     "attr20": "s1829",
     "attr44": "AB754",
     "attr19": "AB641",
@@ -499,6 +539,7 @@
   },
   {
     "name": "members-40",
+    "code": "AB123",
     "attr70": "s7036",
     "attr4": "AB894",
     "attr12": "e12_4",
@@ -512,6 +553,7 @@
   },
   {
     "name": "members-41",
+    "code": "AB123",
     "attr28": true,
     "attr58": true,
     "attr14": "AB706",
@@ -525,6 +567,7 @@
   },
   {
     "name": "members-42",
+    "code": "AB123",
     "attr65": "s2001",
     "attr67": "e67_4",
     "attr75": "s3428",
@@ -538,6 +581,7 @@
   },
   {
     "name": "members-43",
+    "code": "AB123",
     "attr68": false,
     "attr40": "s6003",
     "attr48": true,
@@ -548,6 +592,7 @@
   },
   {
     "name": "members-44",
+    "code": "AB123",
     "attr48": false,
     "attr1": 64437,
     "attr78": false,
@@ -560,6 +605,7 @@
   },
   {
     "name": "members-45",
+    "code": "AB123",
     "attr18": false,
     "attr65": "s693",
     "attr71": 7728,
@@ -572,6 +618,7 @@
   },
   {
     "name": "members-46",
+    "code": "AB123",
     "attr49": "AB766",
     "attr7": "e7_3",
     "attr43": false,
@@ -585,6 +632,7 @@
   },
   {
     "name": "members-47",
+    "code": "AB123",
     "attr70": "s3689",
     "attr29": "AB302",
     "attr59": "AB160",
@@ -598,6 +646,7 @@
   },
   {
     "name": "members-48",
+    "code": "AB123",
     "attr27": "e27_1",
     "attr32": "e32_0",
     "attr35": "s4690",
@@ -610,6 +659,7 @@
   },
   {
     "name": "members-49",
+    "code": "AB123",
     "attr59": "AB256",
     "attr17": "e17_3",
     "attr22": "e22_2",
@@ -623,6 +673,7 @@
   },
   {
     "name": "members-50",
+    "code": "AB123",
     "attr0": "s8802",
     "attr13": true,
     "attr66": 14337,
@@ -636,6 +687,7 @@
   },
   {
     "name": "members-51",
+    "code": "AB123",
     "attr5": "s4738",
     "attr55": "s1434",
     "attr8": true,
@@ -649,6 +701,7 @@
   },
   {
     "name": "members-52",
+    "code": "AB123",
     "attr50": "s1089",
     "attr8": false,
     "attr0": "s4996",
@@ -662,6 +715,7 @@
   },
   {
     "name": "members-53",
+    "code": "AB123",
     "attr35": "s4261",
     "attr30": "s7504",
     "attr68": false,
@@ -674,6 +728,7 @@
   },
   {
     "name": "members-54",
+    "code": "AB123",
     "attr59": "AB239",
     "attr34": "AB555",
     "attr4": "AB795",
@@ -686,6 +741,7 @@
   },
   {
     "name": "members-55",
+    "code": "AB123",
     "attr73": true,
     "attr11": 9795,
     "attr18": false,
@@ -697,6 +753,7 @@
   },
   {
     "name": "members-56",
+    "code": "AB123",
     "attr35": "s8125",
     "attr54": "AB601",
     "attr10": "s9032",
@@ -710,6 +767,7 @@
   },
   {
     "name": "members-57",
+    "code": "AB123",
     "attr75": "s7089",
     "attr16": 20516,
     "attr5": "s7090",
@@ -723,6 +781,7 @@
   },
   {
     "name": "members-58",
+    "code": "AB123",
     "attr48": true,
     "attr5": "s3570",
     "attr52": "e52_3",
@@ -736,6 +795,7 @@
   },
   {
     "name": "members-59",
+    "code": "AB123",
     "attr50": "s5838",
     "attr39": "AB378",
     "attr9": "AB159",

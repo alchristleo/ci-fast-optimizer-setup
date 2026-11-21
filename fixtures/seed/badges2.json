@@ -1,6 +1,7 @@
 [
   {
     "name": "badges2-0",
+    "note": "hello",
     "attr73": false,
     "attr9": "AB403",
     "attr37": "e37_0",
@@ -13,6 +14,7 @@
   },
   {
     "name": "badges2-1",
+    "note": "hello",
     "attr59": "AB779",
     "attr23": true,
     "attr30": "s4678",
@@ -26,6 +28,7 @@
   },
   {
     "name": "badges2-2",
+    "note": "hello",
     "attr2": "e2_1",
     "attr59": "AB380",
     "attr5": "s3355",
@@ -39,6 +42,7 @@
   },
   {
     "name": "badges2-3",
+    "note": "hello",
     "attr69": "AB661",
     "attr67": "e67_3",
     "attr52": "e52_0",
@@ -52,6 +56,7 @@
   },
   {
     "name": "badges2-4",
+    "note": "hello",
     "attr34": "AB360",
     "attr66": 20459,
     "attr7": "e7_1",
@@ -65,6 +70,7 @@
   },
   {
     "name": "badges2-5",
+    "note": "hello",
     "attr72": "e72_2",
     "attr76": 1303,
     "attr5": "s1708",
@@ -78,6 +84,7 @@
   },
   {
     "name": "badges2-6",
+    "note": "hello",
     "attr51": 58591,
     "attr60": "s5372",
     "attr0": "s8686",
@@ -91,6 +98,7 @@
   },
   {
     "name": "badges2-7",
+    "note": "hello",
     "attr63": true,
     "attr77": "e77_1",
     "attr45": "s409",
@@ -104,6 +112,7 @@
   },
   {
     "name": "badges2-8",
+    "note": "hello",
     "attr8": true,
     "attr16": 14964,
     "attr39": "AB687",
@@ -117,6 +126,7 @@
   },
   {
     "name": "badges2-9",
+    "note": "hello",
     "attr37": "e37_3",
     "attr30": "s6133",
     "attr20": "s2940",
@@ -130,6 +140,7 @@
   },
   {
     "name": "badges2-10",
+    "note": "hello",
     "attr30": "s1687",
     "attr33": true,
     "attr66": 44570,
@@ -143,6 +154,7 @@
   },
   {
     "name": "badges2-11",
+    "note": "hello",
     "attr11": 71360,
     "attr47": "e47_1",
     "attr37": "e37_1",
@@ -155,6 +167,7 @@
   },
   {
     "name": "badges2-12",
+    "note": "hello",
     "attr26": 26184,
     "attr44": "AB152",
     "attr75": "s5913",
@@ -168,6 +181,7 @@
   },
   {
     "name": "badges2-13",
+    "note": "hello",
     "attr60": "s602",
     "attr46": 56417,
     "attr70": "s5586",
@@ -181,6 +195,7 @@
   },
   {
     "name": "badges2-14",
+    "note": "hello",
     "attr0": "s1374",
     "attr47": "e47_2",
     "attr67": "e67_0",
@@ -193,6 +208,7 @@
   },
   {
     "name": "badges2-15",
+    "note": "hello",
     "attr58": false,
     "attr50": "s6882",
     "attr68": false,
@@ -206,6 +222,7 @@
   },
   {
     "name": "badges2-16",
+    "note": "hello",
     "attr60": "s1377",
     "attr10": "s7553",
     "attr32": "e32_4",
@@ -218,6 +235,7 @@
   },
   {
     "name": "badges2-17",
+    "note": "hello",
     "attr12": "e12_0",
     "attr13": true,
     "attr0": "s5528",
@@ -231,6 +249,7 @@
   },
   {
     "name": "badges2-18",
+    "note": "hello",
     "attr44": "AB303",
     "attr41": 20528,
     "attr12": "e12_4",
@@ -243,6 +262,7 @@
   },
   {
     "name": "badges2-19",
+    "note": "hello",
     "attr3": true,
     "attr40": "s2028",
     "attr24": "AB673",
@@ -256,6 +276,7 @@
   },
   {
     "name": "badges2-20",
+    "note": "hello",
     "attr40": "s7975",
     "attr79": "AB974",
     "attr77": "e77_2",
@@ -268,6 +289,7 @@
   },
   {
     "name": "badges2-21",
+    "note": "hello",
     "attr41": 23060,
     "attr77": "e77_0",
     "attr59": "AB753",
@@ -281,6 +303,7 @@
   },
   {
     "name": "badges2-22",
+    "note": "hello",
     "attr28": true,
     "attr17": "e17_4",
     "attr22": "e22_1",
@@ -293,6 +316,7 @@
   },
   {
     "name": "badges2-23",
+    "note": "hello",
     "attr16": 3654,
     "attr32": "e32_3",
     "attr57": "e57_3",
@@ -305,6 +329,7 @@
   },
   {
     "name": "badges2-24",
+    "note": "hello",
     "attr61": 3677,
     "attr29": "AB258",
     "attr5": "s7936",
@@ -318,6 +343,7 @@
   },
   {
     "name": "badges2-25",
+    "note": "hello",
     "attr14": "AB164",
     "attr3": false,
     "attr77": "e77_4",
@@ -331,6 +357,7 @@
   },
   {
     "name": "badges2-26",
+    "note": "hello",
     "attr62": "e62_4",
     "attr36": 10379,
     "attr5": "s8025",
@@ -343,6 +370,7 @@
   },
   {
     "name": "badges2-27",
+    "note": "hello",
     "attr43": false,
     "attr8": false,
     "attr3": false,
@@ -355,6 +383,7 @@
   },
   {
     "name": "badges2-28",
+    "note": "hello",
     "attr77": "e77_3",
     "attr18": true,
     "attr78": true,
@@ -368,6 +397,7 @@
   },
   {
     "name": "badges2-29",
+    "note": "hello",
     "attr5": "s6448",
     "attr55": "s9260",
     "attr39": "AB803",
@@ -381,6 +411,7 @@
   },
   {
     "name": "badges2-30",
+    "note": "hello",
     "attr30": "s9285",
     "attr65": "s5542",
     "attr79": "AB516",
@@ -390,6 +421,7 @@
   },
   {
     "name": "badges2-31",
+    "note": "hello",
     "attr51": 57609,
     "attr73": false,
     "attr26": 27181,
@@ -403,6 +435,7 @@
   },
   {
     "name": "badges2-32",
+    "note": "hello",
     "attr30": "s3759",
     "attr73": true,
     "attr22": "e22_0",
@@ -415,6 +448,7 @@
   },
   {
     "name": "badges2-33",
+    "note": "hello",
     "attr12": "e12_1",
     "attr72": "e72_2",
     "attr11": 39519,
@@ -428,6 +462,7 @@
   },
   {
     "name": "badges2-34",
+    "note": "hello",
     "attr15": "s7121",
     "attr20": "s8964",
     "attr48": true,
@@ -440,6 +475,7 @@
   },
   {
     "name": "badges2-35",
+    "note": "hello",
     "attr64": "AB739",
     "attr69": "AB174",
     "attr4": "AB547",
@@ -453,6 +489,7 @@
   },
   {
     "name": "badges2-36",
+    "note": "hello",
     "attr31": 4074,
     "attr37": "e37_0",
     "attr36": 336,
@@ -465,6 +502,7 @@
   },
   {
     "name": "badges2-37",
+    "note": "hello",
     "attr75": "s4956",
     "attr78": false,
     "attr57": "e57_3",
@@ -477,6 +515,7 @@
   },
   {
     "name": "badges2-38",
+    "note": "hello",
     "attr29": "AB441",
     "attr3": false,
     "attr46": 42560,
@@ -489,6 +528,7 @@
   },
   {
     "name": "badges2-39",
+    "note": "hello",
     "attr79": "AB347",
     "attr60": "s8885",
     "attr51": 55879,
@@ -502,6 +542,7 @@
   },
   {
     "name": "badges2-40",
+    "note": "hello",
     "attr75": "s9505",
     "attr30": "s6489",
     "attr71": 8929,
@@ -515,6 +556,7 @@
   },
   {
     "name": "badges2-41",
+    "note": "hello",
     "attr3": true,
     "attr10": "s6963",
     "attr74": "AB337",
@@ -528,6 +570,7 @@
   },
   {
     "name": "badges2-42",
+    "note": "hello",
     "attr53": false,
     "attr46": 64158,
     "attr76": 1665,
@@ -540,6 +583,7 @@
   },
   {
     "name": "badges2-43",
+    "note": "hello",
     "attr61": 23092,
     "attr77": "e77_2",
     "attr72": "e72_0",
@@ -552,6 +596,7 @@
   },
   {
     "name": "badges2-44",
+    "note": "hello",
     "attr38": false,
     "attr54": "AB871",
     "attr51": 19186,
@@ -564,6 +609,7 @@
   },
   {
     "name": "badges2-45",
+    "note": "hello",
     "attr21": 11732,
     "attr30": "s9761",
     "attr67": "e67_3",
@@ -576,6 +622,7 @@
   },
   {
     "name": "badges2-46",
+    "note": "hello",
     "attr6": 64562,
     "attr1": 23439,
     "attr36": 1796,
@@ -589,6 +636,7 @@
   },
   {
     "name": "badges2-47",
+    "note": "hello",
     "attr28": true,
     "attr21": 16411,
     "attr76": 1153,
@@ -601,6 +649,7 @@
   },
   {
     "name": "badges2-48",
+    "note": "hello",
     "attr20": "s5989",
     "attr3": false,
     "attr59": "AB465",
@@ -614,6 +663,7 @@
   },
   {
     "name": "badges2-49",
+    "note": "hello",
     "attr42": "e42_4",
     "attr16": 46537,
     "attr62": "e62_1",
@@ -624,6 +674,7 @@
   },
   {
     "name": "badges2-50",
+    "note": "hello",
     "attr54": "AB353",
     "attr69": "AB529",
     "attr79": "AB485",
@@ -636,6 +687,7 @@
   },
   {
     "name": "badges2-51",
+    "note": "hello",
     "attr21": 398,
     "attr37": "e37_0",
     "attr20": "s7560",
@@ -649,6 +701,7 @@
   },
   {
     "name": "badges2-52",
+    "note": "hello",
     "attr64": "AB439",
     "attr65": "s7089",
     "attr5": "s1417",
@@ -662,6 +715,7 @@
   },
   {
     "name": "badges2-53",
+    "note": "hello",
     "attr63": false,
     "attr8": false,
     "attr65": "s5529",
@@ -675,6 +729,7 @@
   },
   {
     "name": "badges2-54",
+    "note": "hello",
     "attr23": false,
     "attr8": false,
     "attr25": "s6796",
@@ -687,6 +742,7 @@
   },
   {
     "name": "badges2-55",
+    "note": "hello",
     "attr62": "e62_1",
     "attr77": "e77_0",
     "attr22": "e22_0",
@@ -700,6 +756,7 @@
   },
   {
     "name": "badges2-56",
+    "note": "hello",
     "attr49": "AB883",
     "attr32": "e32_4",
     "attr38": false,
@@ -713,6 +770,7 @@
   },
   {
     "name": "badges2-57",
+    "note": "hello",
     "attr8": false,
     "attr71": 22110,
     "attr9": "AB141",
@@ -726,6 +784,7 @@
   },
   {
     "name": "badges2-58",
+    "note": "hello",
     "attr68": true,
     "attr40": "s9450",
     "attr56": 4846,
@@ -738,6 +797,7 @@
   },
   {
     "name": "badges2-59",
+    "note": "hello",
     "attr10": "s7485",
     "attr33": true,
     "attr74": "AB337",
