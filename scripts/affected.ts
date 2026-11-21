@@ -1,6 +1,6 @@
 import { execFileSync } from "node:child_process";
 import { existsSync, readdirSync, readFileSync, statSync } from "node:fs";
-import { dirname, join, posix } from "node:path";
+import { join, posix } from "node:path";
 
 export type Change = { path: string; status: string };
 export type ImportGraph = {
@@ -71,7 +71,8 @@ export function buildGraph(root: string): ImportGraph {
   return graphFrom(files, (p) => readFileSync(join(root, p), "utf8"));
 }
 
-const isTest = (p: string) => /\.test\.ts$/.test(p) && SCAN_DIRS.some((d) => p.startsWith(`${d}/`));
+const isTest = (p: string) =>
+  p.endsWith(".test.ts") && SCAN_DIRS.some((d) => p.startsWith(`${d}/`));
 const ignored = (p: string) => p.endsWith(".md") || p.startsWith("docs/");
 const analysable = (p: string) =>
   p.endsWith(".ts") &&
