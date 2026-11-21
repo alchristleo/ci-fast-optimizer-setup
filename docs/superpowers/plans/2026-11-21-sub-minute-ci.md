@@ -122,3 +122,7 @@ T2 fix 3c7fc9e sdd-reviewer-lite fix-needed seed cleared by reset, ajv validator
 T2 fix c9b0040 sdd-reviewer-lite fix-needed dead code in validation.ts; owner chose coord fix past cap
 T2 coord e4d53f2 drop dead validator code, unknown-field test; count 1520 both runners
 T2 done 8f7858b sdd-reviewer-lite coord review approve; 1520 tests both runners
+T3 review approve 8c78c6a sdd-reviewer should: seed skewed by boot cost -> regen via timings:update after merge
+T3 done 8c78c6a sdd-reviewer approve
+T5 review approve 7d5e3ea sdd-reviewer nit: scope timings:update to test/
+T5 done 7d5e3ea sdd-reviewer approve

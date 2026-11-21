@@ -23,6 +23,11 @@ No team-scale claims ("200+ hours"): README gives a formula readers fill with th
 - **D1 Codebase:** small real API (Hono, runs on Node and Bun) with hand-written domain libs and
   tests, plus `scripts/gen.ts` (seeded, deterministic) that emits K generated domains (service,
   routes, tests) — committed. K tuned in T2 so baseline suite takes minutes. README says scaled.
+  Scale (owner choice, after T3 review: a 1.5 s bun suite makes sharding a net loss): tests do
+  real CPU work (fast-check property tests over domain services, pinned seeds, no sleeps) and the
+  suite grows until serial `bun test` is ≈25–35 s locally (target ≈40–60 s on a 4-vCPU runner),
+  so 4 time-filled shards pay off. App suite root is `test/`; tooling tests (`scripts/*.test.ts`)
+  run via `bun run test:tooling`, outside benched test counts.
 - **D2 Test file compat** (one-way door: test source shape). Shapes: (a) tests import `bun:test`,
   vitest aliases `bun:test`→`vitest`; (b) tests import `vitest`, Bun resolves it natively.
   **pending: T1** (whichever works with zero per-file edits on both runners; (a) preferred).
@@ -61,6 +66,10 @@ No team-scale claims ("200+ hours"): README gives a formula readers fill with th
   outside `src/`/`test/` except `*.md`/`docs/` (package.json, bun.lock, configs, scripts,
   workflows) → run all. Deleted files count as changed (graph built at base for them). Zero
   reachable tests → run none, job passes with a log line.
+  **Barrel cut** (owner choice): reverse edges through the registry `src/domains/index.ts` are not
+  walked; every domain test imports its own domain module, so a domain change selects its own
+  tests plus real importers. `test/smoke/**` (boot, catalog over all domains, cross-domain
+  flows) always runs on PRs to catch wiring breaks. README explains the cut and its risk.
 - **D9 Bench:** `scripts/bench.ts` run locally with the owner's `gh` auth (no CI token with write
   scope). Dispatches `baseline.yml` and `fast.yml` (`workflow_dispatch`, mode `full`) R=5 times
   each, interleaved, plus `fast.yml` mode `pr` on fixed sample diff branch `bench/pr-sample`.
@@ -132,11 +141,12 @@ separately, not in wall time beyond its own seconds.
    `bun test scripts/workflows.test.ts`
 8. Workflow security per D10 (no `pull_request_target`, read-only perms, SHA-pinned third-party
    actions, no secrets): `bun test scripts/workflows.test.ts`
-9. PR mode on `bench/pr-sample` runs fewer test files than full and median wall < 60 s:
+9. PR mode on `bench/pr-sample` (one generated-domain service change) runs ≤ 20% of full test
+   files and median wall < 60 s:
    `bun scripts/bench.ts --check pr_fewer_files,pr_median_lt=60`
 10. README bench section equals render of `bench/results.json` (no hand numbers):
     `bun scripts/bench.ts --readme --check`
-11. Local gate green: `bun run ci:local` (fmt check, lint, check, build, test)
+11. Local gate green: `bun run ci:local` (fmt check, lint, check, build, test, test:tooling)
 14. Both checkers agree: TS 5.9 `tsc --noEmit` and `bun check` both pass at HEAD and on
     `bench/pr-sample`, same tsconfig: `bun run legacy:check && bun run check`
 12. README explains each of the 8 changes with its measured effect, honest notes (scaled suite,
