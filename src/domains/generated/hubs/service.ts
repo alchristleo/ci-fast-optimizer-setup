@@ -26,5 +26,6 @@ export function get(id: string): Row | undefined {
 }
 
 export function change(id: string, data: Record<string, unknown>): Row | undefined {
-  return patch(TABLE, id, data);
+  const updated = patch(TABLE, id, data);
+  return updated;
 }
