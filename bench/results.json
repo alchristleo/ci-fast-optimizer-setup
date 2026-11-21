@@ -4,9 +4,10 @@
   "node": "22.23.5",
   "runs": [
     {
+      "run_id": 44927113096,
+      "head_sha": "5673b4667aa98fc534ff7bba7073597f825907f0",
       "workflow": "baseline",
       "mode": "full",
-      "run_id": 44927113096,
       "attempt": 1,
       "url": "https://github.com/alchristleo/ci-fast-optimizer-setup/actions/runs/44927113096",
       "conclusion": "success",
@@ -77,9 +78,10 @@
       "tests_passed": 2053
     },
     {
+      "run_id": 44927546962,
+      "head_sha": "5673b4667aa98fc534ff7bba7073597f825907f0",
       "workflow": "fast",
       "mode": "full",
-      "run_id": 44927546962,
       "attempt": 1,
       "url": "https://github.com/alchristleo/ci-fast-optimizer-setup/actions/runs/44927546962",
       "conclusion": "success",
@@ -464,20 +466,16 @@
               "s": 0
             }
           ]
-        },
-        {
-          "name": "timings",
-          "wall_s": -1,
-          "steps": []
         }
       ],
       "test_files": 131,
       "tests_passed": 2053
     },
     {
+      "run_id": 44927640112,
+      "head_sha": "d7774181182e182921949da3964462b769aa9f68",
       "workflow": "fast",
       "mode": "pr",
-      "run_id": 44927640112,
       "attempt": 1,
       "url": "https://github.com/alchristleo/ci-fast-optimizer-setup/actions/runs/44927640112",
       "conclusion": "success",
@@ -862,20 +860,16 @@
               "s": 0
             }
           ]
-        },
-        {
-          "name": "timings",
-          "wall_s": 0,
-          "steps": []
         }
       ],
       "test_files": 8,
       "tests_passed": 189
     },
     {
+      "run_id": 44927728691,
+      "head_sha": "5673b4667aa98fc534ff7bba7073597f825907f0",
       "workflow": "baseline",
       "mode": "full",
-      "run_id": 44927728691,
       "attempt": 1,
       "url": "https://github.com/alchristleo/ci-fast-optimizer-setup/actions/runs/44927728691",
       "conclusion": "success",
@@ -946,9 +940,10 @@
       "tests_passed": 2053
     },
     {
+      "run_id": 44928190160,
+      "head_sha": "5673b4667aa98fc534ff7bba7073597f825907f0",
       "workflow": "fast",
       "mode": "full",
-      "run_id": 44928190160,
       "attempt": 1,
       "url": "https://github.com/alchristleo/ci-fast-optimizer-setup/actions/runs/44928190160",
       "conclusion": "success",
@@ -1333,20 +1328,16 @@
               "s": 0
             }
           ]
-        },
-        {
-          "name": "timings",
-          "wall_s": -1,
-          "steps": []
         }
       ],
       "test_files": 131,
       "tests_passed": 2053
     },
     {
+      "run_id": 44928294466,
+      "head_sha": "d7774181182e182921949da3964462b769aa9f68",
       "workflow": "fast",
       "mode": "pr",
-      "run_id": 44928294466,
       "attempt": 1,
       "url": "https://github.com/alchristleo/ci-fast-optimizer-setup/actions/runs/44928294466",
       "conclusion": "success",
@@ -1731,20 +1722,16 @@
               "s": 0
             }
           ]
-        },
-        {
-          "name": "timings",
-          "wall_s": -1,
-          "steps": []
         }
       ],
       "test_files": 8,
       "tests_passed": 189
     },
     {
+      "run_id": 44928383240,
+      "head_sha": "5673b4667aa98fc534ff7bba7073597f825907f0",
       "workflow": "baseline",
       "mode": "full",
-      "run_id": 44928383240,
       "attempt": 1,
       "url": "https://github.com/alchristleo/ci-fast-optimizer-setup/actions/runs/44928383240",
       "conclusion": "success",
@@ -1815,9 +1802,10 @@
       "tests_passed": 2053
     },
     {
+      "run_id": 44928739641,
+      "head_sha": "5673b4667aa98fc534ff7bba7073597f825907f0",
       "workflow": "fast",
       "mode": "full",
-      "run_id": 44928739641,
       "attempt": 1,
       "url": "https://github.com/alchristleo/ci-fast-optimizer-setup/actions/runs/44928739641",
       "conclusion": "success",
@@ -2202,20 +2190,16 @@
               "s": 0
             }
           ]
-        },
-        {
-          "name": "timings",
-          "wall_s": 0,
-          "steps": []
         }
       ],
       "test_files": 131,
       "tests_passed": 2053
     },
     {
+      "run_id": 44928836833,
+      "head_sha": "d7774181182e182921949da3964462b769aa9f68",
       "workflow": "fast",
       "mode": "pr",
-      "run_id": 44928836833,
       "attempt": 1,
       "url": "https://github.com/alchristleo/ci-fast-optimizer-setup/actions/runs/44928836833",
       "conclusion": "success",
@@ -2600,20 +2584,16 @@
               "s": 1
             }
           ]
-        },
-        {
-          "name": "timings",
-          "wall_s": 0,
-          "steps": []
         }
       ],
       "test_files": 8,
       "tests_passed": 189
     },
     {
+      "run_id": 44928920396,
+      "head_sha": "5673b4667aa98fc534ff7bba7073597f825907f0",
       "workflow": "baseline",
       "mode": "full",
-      "run_id": 44928920396,
       "attempt": 1,
       "url": "https://github.com/alchristleo/ci-fast-optimizer-setup/actions/runs/44928920396",
       "conclusion": "success",
@@ -2684,9 +2664,10 @@
       "tests_passed": 2053
     },
     {
+      "run_id": 44929199698,
+      "head_sha": "5673b4667aa98fc534ff7bba7073597f825907f0",
       "workflow": "fast",
       "mode": "full",
-      "run_id": 44929199698,
       "attempt": 1,
       "url": "https://github.com/alchristleo/ci-fast-optimizer-setup/actions/runs/44929199698",
       "conclusion": "success",
@@ -3071,20 +3052,16 @@
               "s": 0
             }
           ]
-        },
-        {
-          "name": "timings",
-          "wall_s": 0,
-          "steps": []
         }
       ],
       "test_files": 131,
       "tests_passed": 2053
     },
     {
+      "run_id": 44929294822,
+      "head_sha": "d7774181182e182921949da3964462b769aa9f68",
       "workflow": "fast",
       "mode": "pr",
-      "run_id": 44929294822,
       "attempt": 1,
       "url": "https://github.com/alchristleo/ci-fast-optimizer-setup/actions/runs/44929294822",
       "conclusion": "success",
@@ -3469,20 +3446,16 @@
               "s": 0
             }
           ]
-        },
-        {
-          "name": "timings",
-          "wall_s": 0,
-          "steps": []
         }
       ],
       "test_files": 8,
       "tests_passed": 189
     },
     {
+      "run_id": 44929362671,
+      "head_sha": "5673b4667aa98fc534ff7bba7073597f825907f0",
       "workflow": "baseline",
       "mode": "full",
-      "run_id": 44929362671,
       "attempt": 1,
       "url": "https://github.com/alchristleo/ci-fast-optimizer-setup/actions/runs/44929362671",
       "conclusion": "success",
@@ -3553,9 +3526,10 @@
       "tests_passed": 2053
     },
     {
+      "run_id": 44929706588,
+      "head_sha": "5673b4667aa98fc534ff7bba7073597f825907f0",
       "workflow": "fast",
       "mode": "full",
-      "run_id": 44929706588,
       "attempt": 1,
       "url": "https://github.com/alchristleo/ci-fast-optimizer-setup/actions/runs/44929706588",
       "conclusion": "success",
@@ -3940,20 +3914,16 @@
               "s": 0
             }
           ]
-        },
-        {
-          "name": "timings",
-          "wall_s": 0,
-          "steps": []
         }
       ],
       "test_files": 131,
       "tests_passed": 2053
     },
     {
+      "run_id": 44929822176,
+      "head_sha": "d7774181182e182921949da3964462b769aa9f68",
       "workflow": "fast",
       "mode": "pr",
-      "run_id": 44929822176,
       "attempt": 1,
       "url": "https://github.com/alchristleo/ci-fast-optimizer-setup/actions/runs/44929822176",
       "conclusion": "success",
@@ -4338,11 +4308,6 @@
               "s": 0
             }
           ]
-        },
-        {
-          "name": "timings",
-          "wall_s": 0,
-          "steps": []
         }
       ],
       "test_files": 8,
