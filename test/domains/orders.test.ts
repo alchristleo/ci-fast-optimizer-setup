@@ -40,6 +40,11 @@ describe("orders", () => {
     const invalid = await app.request("/orders", send("POST", { ...order, quantity: 0 }));
     expect(invalid.status).toBe(400);
   });
+  test("rejects unknown body fields", async () => {
+    await seed();
+    const res = await app.request("/orders", send("POST", { ...order, note: "x" }));
+    expect(res.status).toBe(400);
+  });
   test("cancels an order and restores stock", async () => {
     await seed();
     await app.request("/orders", send("POST", order));
