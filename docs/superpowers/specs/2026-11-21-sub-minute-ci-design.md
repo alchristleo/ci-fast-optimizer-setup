@@ -173,3 +173,28 @@ is public on GitHub: done once in the scaffold task after this spec is approved.
 
 Repo is empty at spec time: every AC command is missing until the scaffold/feature tasks add it.
 Commands are checked for shape in plan; first real run is in the task that adds each.
+
+## Status (converged 2026-11-21)
+
+Phase 1 (PR 1, base fd54e21, head b338313). No earlier status table existed.
+
+| # | criterion (short) | verdict | evidence |
+|---|---|---|---|
+| 1 | fast full median < 60 s, max <= 90 s | INCONCLUSIVE | pending PR 2 (bench after merge). Context only: PR run fast = 45 s (ledger T7) |
+| 2 | baseline >= 3x fast | INCONCLUSIVE | pending PR 2 (bench after merge). Context only: PR run baseline 203 s vs fast 45 s (ledger T7) |
+| 3 | same tests both pipelines | INCONCLUSIVE | bench `--check same_tests` pending PR 2. Parity data from PR 1 CI (run 44924866835 fast, 44924866977 baseline): fast shards 475+487+463+628 = 2053 passed over 31+34+31+35 = 131 files; baseline `TESTS files=131 passed=2053`. Equal. Not a bench run |
+| 4 | LPT shard | VERIFIED | `bun test ./scripts/shard.test.ts`: 7 pass, 0 fail |
+| 5 | affected selection | VERIFIED | `bun test ./scripts/affected.test.ts`: 45 pass, 0 fail |
+| 6 | build once | VERIFIED | `bun test ./scripts/build-once.test.ts`: 2 pass, 0 fail |
+| 7 | fast jobs no needs; baseline one job | VERIFIED | `bun test ./scripts/workflows.test.ts`: 14 pass, 0 fail |
+| 8 | workflow security D10 | VERIFIED | same run as AC7: 14 pass, 0 fail |
+| 9 | PR mode <= 20% files, median < 60 s | INCONCLUSIVE | pending PR 2 (bench after merge); `bench/pr-sample` run missing |
+| 10 | README equals render of results.json | INCONCLUSIVE | pending PR 2 (bench after merge); README and results.json land in PR 2 |
+| 11 | local gate green | VERIFIED | `bun run ci:local`: 2053 pass 0 fail (131 files), tooling 90 pass 0 fail (6 files) |
+| 12 | README content | INCONCLUSIVE | check: seat panel-cdo. Ledger `PANEL cdo skipped owner: README lands in PR 2`; pending PR 2 |
+| 13 | public runs linked | INCONCLUSIVE | owner checks at merge gate; pending PR 2 |
+| 14 | tsc 5.9 and bun check agree | VERIFIED at HEAD only | `bun run legacy:check && bun run check`: "No type errors in 400 files". `bench/pr-sample` half not run (branch not created until PR 2) |
+
+Open findings: none. Ledger shows `TRIAGE fixed=17 dismissed=1 backlog=5`, `FIX wave 01be3f6`, `COORD ... re-review approve`; the one dismissed item (README stub) is owner-scoped to PR 2.
+
+Deviations: none in commands run. AC3 parity uses PR CI logs, not the bench command. AC14 covers HEAD only.
