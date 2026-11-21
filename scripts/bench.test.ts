@@ -89,7 +89,7 @@ const jobsResponse = {
 
 describe("jobsTiming", () => {
   test("wall is last completed minus first started, queue is first started minus run created", () => {
-    const t = jobsTiming(jobsResponse.jobs, "2026-11-21T09:59:50Z");
+    const t = jobsTiming(jobsResponse.jobs, "2026-11-21T09:59:50Z")!;
     expect(t.wall_s).toBe(33);
     expect(t.queue_s).toBe(20);
     expect(t.jobs.map((j) => [j.name, j.wall_s])).toEqual([
@@ -98,6 +98,34 @@ describe("jobsTiming", () => {
       ["ci-ok", 2],
     ]);
     expect(t.jobs[1]?.steps).toEqual([{ name: "Run tests", s: 26 }]);
+  });
+});
+
+describe("jobsTiming edge cases", () => {
+  const job = (name: string, started: string | null, completed: string | null) => ({
+    name,
+    started_at: started,
+    completed_at: completed,
+  });
+  test("a job that never started is left out", () => {
+    const t = jobsTiming(
+      [
+        job("skipped", null, "2026-11-21T10:00:30Z"),
+        job("lint", "2026-11-21T10:00:10Z", "2026-11-21T10:00:25Z"),
+      ],
+      "2026-11-21T10:00:00Z",
+    );
+    expect(t?.wall_s).toBe(15);
+    expect(t?.jobs.map((j) => j.name)).toEqual(["lint"]);
+  });
+  test("no completed job gives null, not NaN timings", () => {
+    expect(
+      jobsTiming(
+        [job("a", null, null), job("b", "2026-11-21T10:00:10Z", null)],
+        "2026-11-21T10:00:00Z",
+      ),
+    ).toBeNull();
+    expect(jobsTiming([], "2026-11-21T10:00:00Z")).toBeNull();
   });
 });
 
@@ -122,6 +150,16 @@ describe("correlateRun", () => {
   test("picks the earliest matching run created after dispatch", () => {
     const r = correlateRun(runs, { headSha: "abc", dispatchedAt: "2026-11-21T10:00:00Z" });
     expect(r?.id).toBe(4);
+  });
+  test("ignores a re-run (attempt 2) of an earlier run, even when created after dispatch", () => {
+    const decoy = [{ ...base, id: 9, created_at: "2026-11-21T10:00:03Z", run_attempt: 2 }];
+    expect(
+      correlateRun(decoy, { headSha: "abc", dispatchedAt: "2026-11-21T10:00:00Z" }),
+    ).toBeUndefined();
+    expect(
+      correlateRun([...decoy, ...runs], { headSha: "abc", dispatchedAt: "2026-11-21T10:00:00Z" })
+        ?.id,
+    ).toBe(4);
   });
   test("returns undefined when nothing matches", () => {
     expect(
@@ -182,6 +220,17 @@ describe("summarize", () => {
     const s = summarize(good.runs, "fast", "full");
     expect(s).toMatchObject({ n: 3, excluded: 1, median_wall_s: 45 });
   });
+  test("a cancelled run is excluded and keeps its wall out of the median", () => {
+    const cancelled = run({
+      workflow: "fast",
+      mode: "full",
+      wall_s: 1000,
+      run_id: 99,
+      conclusion: "cancelled",
+    });
+    const s = summarize([...good.runs, cancelled], "fast", "full");
+    expect(s).toMatchObject({ n: 3, excluded: 2, median_wall_s: 45 });
+  });
 });
 
 describe("checks", () => {
@@ -213,6 +262,22 @@ describe("checks", () => {
       ),
     ).toBe(false);
   });
+  test("fast_full_max_lte compares the slowest successful run", () => {
+    const f = (res: Results) => checkAll(res, "fast_full_max_lte=90")[0]?.ok;
+    expect(f(good)).toBe(true);
+    const bump = (w: number, conclusion = "success") =>
+      results(
+        good.runs.map((r) =>
+          r.workflow === "fast" && r.mode === "full" && r.run_id === 10
+            ? { ...r, wall_s: w, conclusion }
+            : r,
+        ),
+      );
+    expect(f(bump(90))).toBe(true);
+    expect(f(bump(91))).toBe(false);
+    expect(f(bump(500, "cancelled"))).toBe(true);
+    expect(f(results([]))).toBe(false);
+  });
   test("no data fails and unknown expression fails", () => {
     expect(checkAll(results([]), "speedup_gte=3")[0]?.ok).toBe(false);
     expect(checkAll(good, "bogus")[0]?.ok).toBe(false);
@@ -232,6 +297,11 @@ describe("readme", () => {
   test("check detects drift", () => {
     expect(checkReadme(renderReadme(readme, good), good)).toBe(true);
     expect(checkReadme(readme, good)).toBe(false);
+  });
+  test("a row without runs renders n/a, never NaN", () => {
+    const out = renderReadme(readme, results([]));
+    expect(out).not.toContain("NaN");
+    expect(out).toContain("| baseline | full | 0 | 0 | n/a | n/a | n/a |");
   });
   test("throws without markers", () => {
     expect(() => renderReadme("# T\n", good)).toThrow();

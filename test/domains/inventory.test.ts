@@ -1,4 +1,5 @@
 import { describe, expect, test } from "bun:test";
+import "../../src/domains/inventory/service.ts";
 import { send, useTestApp } from "../support/app.ts";
 
 const app = useTestApp();

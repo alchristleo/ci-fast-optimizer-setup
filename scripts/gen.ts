@@ -92,6 +92,7 @@ type FieldDef = {
   valid: string;
   invalid: string;
   sample: unknown;
+  arb: string; // fast-check arbitrary for a valid value
 };
 
 const FIELD_POOL: FieldDef[] = [
@@ -101,6 +102,7 @@ const FIELD_POOL: FieldDef[] = [
     valid: "3",
     invalid: "-1",
     sample: 3,
+    arb: "fc.nat(10000)",
   },
   {
     key: "priceCents",
@@ -108,14 +110,23 @@ const FIELD_POOL: FieldDef[] = [
     valid: "250",
     invalid: "-5",
     sample: 250,
+    arb: "fc.nat(100000)",
   },
-  { key: "active", json: { type: "boolean" }, valid: "true", invalid: `"yes"`, sample: true },
+  {
+    key: "active",
+    json: { type: "boolean" },
+    valid: "true",
+    invalid: `"yes"`,
+    sample: true,
+    arb: "fc.boolean()",
+  },
   {
     key: "code",
     json: { type: "string", pattern: "^[A-Z]{2}[0-9]{3}$" },
     valid: `"AB123"`,
     invalid: `"bad"`,
     sample: "AB123",
+    arb: "fc.stringMatching(/^[A-Z]{2}[0-9]{3}$/)",
   },
   {
     key: "note",
@@ -123,6 +134,7 @@ const FIELD_POOL: FieldDef[] = [
     valid: `"hello"`,
     invalid: "42",
     sample: "hello",
+    arb: "fc.string({ maxLength: 60 })",
   },
 ];
 
@@ -459,18 +471,41 @@ function genDomain(
       `  test("creates variant ${k}", async () => {\n    const res = await app.request("${P}", send("POST", { ...valid, name: "v${k}" }));\n    expect(res.status).toBe(201);\n  });\n`,
     );
   }
-  const head = [`import { describe, expect, test } from "bun:test";`];
+  // Property tests do real CPU work on the service and the HTTP path; per-domain scale varies test times.
+  const scale = 1 + (hash(name) % 4);
+  const rowArb = `fc.record({ name: fc.string({ minLength: 1, maxLength: 40 })${extra.map((f) => `, ${f.key}: ${f.arb}`).join("")} })`;
+  const lineStats = handlers.has("stats") && useLine;
+  const properties = [
+    `  test("property: rows round-trip through the service", () => {\n    fc.assert(\n      fc.property(fc.array(${rowArb}, { maxLength: 30 }), (rows) => {\n        resetStore();\n        const made = rows.map((r) => create(r));\n        expect(count()).toBe(rows.length);\n        expect(new Set(made.map((r) => r.id)).size).toBe(rows.length);\n        expect(list().map((r) => r.name)).toEqual(rows.map((r) => r.name));\n      }),\n      params(${scale}),\n    );\n  });\n`,
+    `  test("service round trip example", () => {\n    create(valid);\n    expect(list()).toEqual([{ ...valid, id: "${name}_1" }]);\n  });\n`,
+    `  test("property: valid bodies round-trip over HTTP", async () => {\n    await fc.assert(\n      fc.asyncProperty(${rowArb}, async (body) => {\n        resetStore();\n        const res = await app.request("${P}", send("POST", body));\n        expect(res.status).toBe(201);\n        expect(await res.json()).toEqual({ ...body, id: "${name}_1" });\n        expect((await (await app.request("${P}")).json()).length).toBe(1);\n      }),\n      params(${scale}),\n    );\n  });\n`,
+    `  test("HTTP round trip example", async () => {\n    const res = await app.request("${P}", send("POST", valid));\n    expect(await res.json()).toEqual({ ...valid, id: "${name}_1" });\n  });\n`,
+  ];
+  if (lineStats)
+    properties.push(
+      `  test("property: stats value is the sum of undiscounted line totals", () => {\n    fc.assert(\n      fc.property(\n        fc.array(fc.record({ name: fc.constant("n"), qty: fc.nat(4), priceCents: fc.nat(100000) }), { maxLength: 30 }),\n        (rows) => {\n          resetStore();\n          for (const r of rows) create(r);\n          expect(stats().valueCents).toBe(rows.reduce((t, r) => t + r.qty * r.priceCents, 0));\n        },\n      ),\n      params(${scale}),\n    );\n  });\n`,
+      `  test("property: bulk discounts never raise the stats value", () => {\n    fc.assert(\n      fc.property(\n        fc.array(fc.record({ name: fc.constant("n"), qty: fc.nat(1000), priceCents: fc.nat(100000) }), { maxLength: 30 }),\n        (rows) => {\n          resetStore();\n          for (const r of rows) create(r);\n          const { valueCents } = stats();\n          expect(Number.isInteger(valueCents)).toBe(true);\n          expect(valueCents).toBeLessThanOrEqual(rows.reduce((t, r) => t + r.qty * r.priceCents, 0));\n        },\n      ),\n      params(${scale}),\n    );\n  });\n`,
+      `  test("stats of a 20 unit row example", () => {\n    create({ name: "n", qty: 20, priceCents: 100 });\n    expect(stats().valueCents).toBe(1800);\n  });\n`,
+    );
+  const own = ["count", "create", "list", ...(lineStats ? ["stats"] : [])].sort().join(", ");
+  const head = [
+    `import { describe, expect, test } from "bun:test";`,
+    `import * as fc from "fast-check";`,
+    `import { ${own} } from "../../src/domains/generated/${name}/service.ts";`,
+  ];
   if (chosen.some((c) => c.includes("createOther(")))
     head.push(
       `import { create as createOther } from "../../src/domains/generated/${other}/service.ts";`,
     );
   head.push(
+    `import { resetStore } from "../../src/lib/store.ts";`,
     `import { send, useTestApp } from "../support/app.ts";`,
+    `import { params } from "../support/property.ts";`,
     "",
     `const app = useTestApp();`,
   );
   head.push(`const valid = ${validObj};`, "", `describe("${name}", () => {`);
-  const test = head.join("\n") + "\n" + chosen.join("\n") + `});\n`;
+  const test = head.join("\n") + "\n" + [...chosen, ...properties].join("\n") + `});\n`;
   const base: Base = {
     required: ["name"],
     props: { name: NAME_PROP, ...Object.fromEntries(extra.map((f) => [f.key, f.json])) },

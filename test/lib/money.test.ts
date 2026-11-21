@@ -1,5 +1,7 @@
 import { describe, expect, test } from "bun:test";
+import * as fc from "fast-check";
 import { addMoney, formatMoney, fromCents, splitMoney, toCents } from "../../src/lib/money.ts";
+import { params } from "../support/property.ts";
 
 describe("money", () => {
   test("converts to and from cents", () => {
@@ -21,5 +23,23 @@ describe("money", () => {
   });
   test("rejects zero parts", () => {
     expect(() => splitMoney(100, 0)).toThrow("parts must be positive");
+  });
+  test("property: splitting money keeps the total and stays within one cent", () => {
+    fc.assert(
+      fc.property(
+        fc.integer({ min: 0, max: 10_000_000 }),
+        fc.integer({ min: 1, max: 50 }),
+        (total, parts) => {
+          const split = splitMoney(total, parts);
+          expect(split.length).toBe(parts);
+          expect(addMoney(...split)).toBe(total);
+          expect(Math.max(...split) - Math.min(...split)).toBeLessThanOrEqual(1);
+        },
+      ),
+      params(8),
+    );
+  });
+  test("splits 10 cents three ways example", () => {
+    expect(splitMoney(10, 3)).toEqual([4, 3, 3]);
   });
 });

@@ -45,3 +45,16 @@ Env: Bun 1.4.5, Node 22.23.5, vitest 5.1.1, TypeScript 5.9.3 (`legacy:check`), 2
 - Baseline-serial local total (oxfmt, oxlint, tsc 5.9, build, vitest with `--maxWorkers=1`): 145 s (target 120 s). Measured as one `time ( ... )` run.
 - Test count matches on both runners (1524). Both pass green. AC14: `bun run legacy:check && bun run check` both green.
 - Negative checks: appending `Bun.version` to `src/lib/ids.ts` fails `api subset > src/ never uses Bun.* APIs`. Adding `import ... from "vitest"` to a test file fails `api subset > test/ imports only the shared subset`. Both restored.
+
+## T10: barrel cut, smoke set, scaled suite
+Env: same machine as T2 (20 cores), Bun 1.4.5, Node 22.23.5, vitest 5.1.1. Same K=120 domains. Property tests (fast-check, shared seed 20261121 and `RUNS = 4000` in `test/support/property.ts`, scaled 1-4x per generated domain) do the CPU work. App suite root is `test/` (`bunfig.toml`). `scripts/*.test.ts` run via `bun run test:tooling` (62 tests, not counted below).
+- `bun test` (serial, one process): 2053 tests across 131 files, 28.3 s wall.
+- `vitest run` (`bun run legacy:test`, default workers = 20): 2053 tests across 131 files, 34.5 s wall.
+- `vitest run --maxWorkers=4` (stand-in for a 4-vCPU runner): 2053 tests across 131 files, 62.3 s wall.
+- Test count equal on both runners (2053). `bun run ci:local` green, `bun run legacy:check && bun run check` green, `bun run gen` leaves the tree clean.
+- Other baseline steps: tsc 5.9 2.2 s, oxfmt/oxlint/build under 0.2 s each.
+- LPT over the regenerated `.ci/test-timings.json` (from `bun run timings:update`, 131 files, 25.8 s of test time): 4 shards of 6.44, 6.44, 6.47, 6.44 s.
+- Affected on the real tree: `src/domains/generated/accounts/service.ts` (imported by other domains' tests) selects 15 test files + 3 smoke = 18 of 131 (13.7%). `hubs/service.ts` and `customers/service.ts` select 3 + 3 (4.6%). `src/domains/index.ts` or `src/app.ts` change selects all.
+- Projected AC2 for a 4-vCPU runner (a projection, T9 measures it): baseline = setup and install O + vitest 62 s + tsc about 6 s (slower cores) = O + 68 s. Fast = O + test shard 6.4 s + about 2 s (fmt/lint/typecheck/build run in parallel jobs, each with its own setup). With O of about 20 s: 88 s / 28 s = 3.1x. The margin over 3x is thin and moves with O: O = 15 s gives 2.8x, O = 25 s gives 3.4x. If T9 measures under 3x, the owner decides K, N or per-test cost.
+- Note: the T2 rule "local vitest at least 4x bun" and "baseline-serial at least 120 s" no longer apply (D1 replaced them). Local vitest is now 1.2x bun because the 20-core machine hides the boot cost.
+- Negative checks: a test requesting `/orders` without importing `src/domains/orders/` fails `cross-domain rule > a test imports the domain module of every route prefix it requests` (restored). Removing the `!== BARREL` filter in `scripts/affected.ts` fails `the barrel cut` and the 20% real-tree test (restored). Removing the `RUN_ALL` check fails the three "runs all" tests for `index.ts` and `app.ts` (restored).

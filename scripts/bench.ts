@@ -13,6 +13,7 @@ const RESULTS = join(root, "bench/results.json");
 const README = join(root, "README.md");
 const REPO = "alchristleo/ci-fast-optimizer-setup";
 const PR_BRANCH = "bench/pr-sample";
+const RUN_TIMEOUT_MS = 30 * 60 * 1000;
 
 export type BenchStep = { name: string; s: number };
 export type BenchJob = { name: string; wall_s: number; steps: BenchStep[] };
@@ -55,8 +56,10 @@ type ApiRun = {
 
 const secs = (a: string, b: string) => (Date.parse(b) - Date.parse(a)) / 1000;
 
+// null when no job both started and completed (cancelled before any job ran).
 export function jobsTiming(jobs: ApiJob[], runCreatedAt: string) {
   const done = jobs.filter((j) => j.started_at && j.completed_at);
+  if (done.length === 0) return null;
   const first = Math.min(...done.map((j) => Date.parse(j.started_at!)));
   const last = Math.max(...done.map((j) => Date.parse(j.completed_at!)));
   return {
@@ -93,6 +96,7 @@ export function correlateRun(
     .filter(
       (r) =>
         r.event === "workflow_dispatch" &&
+        r.run_attempt === 1 && // a re-run of an earlier run is never ours
         r.head_sha === want.headSha &&
         Date.parse(r.created_at) >= t,
     )
@@ -139,6 +143,10 @@ export function checkAll(res: Results, exprs: string): CheckResult[] {
             fast.n > 0 && fast.median_wall_s < lim,
             `fast full median ${fast.median_wall_s}s over ${fast.n} runs`,
           );
+        case "fast_full_max_lte": {
+          const max = Math.max(...fast.ok.map((x) => x.wall_s));
+          return r(fast.n > 0 && max <= lim, `fast full max ${max}s over ${fast.n} runs`);
+        }
         case "speedup_gte": {
           const x = base.median_wall_s / fast.median_wall_s;
           return r(
@@ -174,6 +182,8 @@ export function checkAll(res: Results, exprs: string): CheckResult[] {
 const START = "<!-- bench:start -->";
 const END = "<!-- bench:end -->";
 
+const num = (x: number) => (Number.isFinite(x) ? String(x) : "n/a");
+
 function section(res: Results): string {
   const rows = (
     [
@@ -183,7 +193,7 @@ function section(res: Results): string {
     ] as const
   ).map(([w, m]) => {
     const s = summarize(res.runs, w, m);
-    return `| ${w} | ${m} | ${s.n} | ${s.excluded} | ${s.median_wall_s} | ${s.p90_wall_s} | ${s.median_queue_s} |`;
+    return `| ${w} | ${m} | ${s.n} | ${s.excluded} | ${num(s.median_wall_s)} | ${num(s.p90_wall_s)} | ${num(s.median_queue_s)} |`;
   });
   return [
     "| workflow | mode | runs | excluded | median wall (s) | p90 wall (s) | median queue (s) |",
@@ -234,13 +244,15 @@ async function dispatchOne(workflow: string, mode: "full" | "pr"): Promise<Bench
   if (!found) throw new Error(`no run appeared for ${file}`);
 
   let run = found as ApiRun & { status?: string; conclusion?: string; html_url?: string };
+  const deadline = Date.now() + RUN_TIMEOUT_MS;
   while (run.status !== "completed") {
+    if (Date.now() > deadline) throw new Error(`run ${found.id} not completed after 30 minutes`);
     await sleep(5000);
     run = ghJson([`repos/${REPO}/actions/runs/${found.id}`]);
   }
   const jobs = ghJson([`repos/${REPO}/actions/runs/${found.id}/jobs?per_page=100`])
     .jobs as (ApiJob & { id: number })[];
-  const timing = jobsTiming(jobs, run.created_at);
+  const timing = jobsTiming(jobs, run.created_at) ?? { wall_s: 0, queue_s: 0, jobs: [] };
   let files = 0;
   let passed = 0;
   let seen = false;

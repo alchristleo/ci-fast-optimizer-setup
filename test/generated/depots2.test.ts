@@ -1,5 +1,9 @@
 import { describe, expect, test } from "bun:test";
+import * as fc from "fast-check";
+import { count, create, list } from "../../src/domains/generated/depots2/service.ts";
+import { resetStore } from "../../src/lib/store.ts";
 import { send, useTestApp } from "../support/app.ts";
+import { params } from "../support/property.ts";
 
 const app = useTestApp();
 const valid = { name: "n1", active: true, priceCents: 250, note: "hello" };
@@ -103,5 +107,60 @@ describe("depots2", () => {
       await app.request("/depots2", send("POST", { ...valid, name: `n${k}` }));
     const rows = await (await app.request("/depots2")).json();
     expect(rows.length).toBe(29);
+  });
+
+  test("property: rows round-trip through the service", () => {
+    fc.assert(
+      fc.property(
+        fc.array(
+          fc.record({
+            name: fc.string({ minLength: 1, maxLength: 40 }),
+            active: fc.boolean(),
+            priceCents: fc.nat(100000),
+            note: fc.string({ maxLength: 60 }),
+          }),
+          { maxLength: 30 },
+        ),
+        (rows) => {
+          resetStore();
+          const made = rows.map((r) => create(r));
+          expect(count()).toBe(rows.length);
+          expect(new Set(made.map((r) => r.id)).size).toBe(rows.length);
+          expect(list().map((r) => r.name)).toEqual(rows.map((r) => r.name));
+        },
+      ),
+      params(1),
+    );
+  });
+
+  test("service round trip example", () => {
+    create(valid);
+    expect(list()).toEqual([{ ...valid, id: "depots2_1" }]);
+  });
+
+  test("property: valid bodies round-trip over HTTP", async () => {
+    await fc.assert(
+      fc.asyncProperty(
+        fc.record({
+          name: fc.string({ minLength: 1, maxLength: 40 }),
+          active: fc.boolean(),
+          priceCents: fc.nat(100000),
+          note: fc.string({ maxLength: 60 }),
+        }),
+        async (body) => {
+          resetStore();
+          const res = await app.request("/depots2", send("POST", body));
+          expect(res.status).toBe(201);
+          expect(await res.json()).toEqual({ ...body, id: "depots2_1" });
+          expect((await (await app.request("/depots2")).json()).length).toBe(1);
+        },
+      ),
+      params(1),
+    );
+  });
+
+  test("HTTP round trip example", async () => {
+    const res = await app.request("/depots2", send("POST", valid));
+    expect(await res.json()).toEqual({ ...valid, id: "depots2_1" });
   });
 });

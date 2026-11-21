@@ -12,7 +12,7 @@ function sources(dir: string): string[] {
   });
 }
 
-const ALLOWED_TEST_IMPORTS = /^(bun:test|\.{1,2}\/|node:|hono$)/;
+const ALLOWED_TEST_IMPORTS = /^(bun:test|\.{1,2}\/|node:|hono$|fast-check$)/;
 const ALLOWED_NAMES = new Set([
   "describe",
   "test",

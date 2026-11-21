@@ -9,7 +9,8 @@ export type ImportGraph = {
   // files with a non-literal or unresolvable import: a change there cannot be analysed
   unsafe: Set<string>;
 };
-export type Affected = { mode: "all" | "some"; files: string[] };
+// `smoke`: the always-run wiring tests, listed apart from `files`; empty when nothing but docs changed.
+export type Affected = { mode: "all" | "some"; files: string[]; smoke: string[] };
 
 const SCAN_DIRS = ["src", "test"];
 
@@ -71,6 +72,11 @@ export function buildGraph(root: string): ImportGraph {
   return graphFrom(files, (p) => readFileSync(join(root, p), "utf8"));
 }
 
+// Reverse edges through the registry are not walked (every domain test imports its own domain),
+// so a change to either file runs everything instead.
+const BARREL = "src/domains/index.ts";
+const RUN_ALL = [BARREL, "src/app.ts"];
+const isSmoke = (p: string) => p.startsWith("test/smoke/");
 const isTest = (p: string) =>
   p.endsWith(".test.ts") && SCAN_DIRS.some((d) => p.startsWith(`${d}/`));
 const ignored = (p: string) => p.endsWith(".md") || p.startsWith("docs/");
@@ -86,18 +92,26 @@ export function affectedTests(changed: Change[], graph: ImportGraph): Affected {
   }
   const seen = new Set<string>();
   const queue: string[] = [];
+  let relevant = false;
   for (const { path } of changed) {
     if (ignored(path)) continue;
-    if (!analysable(path) || graph.unsafe.has(path)) return { mode: "all", files: [] };
+    if (!analysable(path) || graph.unsafe.has(path) || RUN_ALL.includes(path))
+      return { mode: "all", files: [], smoke: [] };
     queue.push(path);
+    relevant = true;
   }
   while (queue.length > 0) {
     const file = queue.pop()!;
     if (seen.has(file)) continue;
     seen.add(file);
-    queue.push(...(dependents.get(file) ?? []));
+    queue.push(...(dependents.get(file) ?? []).filter((d) => d !== BARREL));
   }
-  return { mode: "some", files: [...seen].filter(isTest).sort() };
+  const tests = [...seen].filter(isTest);
+  return {
+    mode: "some",
+    files: tests.filter((f) => !isSmoke(f)).sort(),
+    smoke: relevant ? [...graph.imports.keys()].filter((f) => isTest(f) && isSmoke(f)).sort() : [],
+  };
 }
 
 // `git diff --name-status` lines; a rename or copy lists both paths.
@@ -142,7 +156,11 @@ function main(argv: string[]): void {
   }
   const result = affectedTests(changed, graph);
   if (result.mode === "all") console.log("all");
-  else if (result.files.length > 0) console.log(result.files.join("\n"));
+  else {
+    // A deleted or renamed-away test is in the graph but gone at head: bun test would fail on it.
+    const picked = [...result.files, ...result.smoke].filter((f) => existsSync(f));
+    if (picked.length > 0) console.log(picked.join("\n"));
+  }
 }
 
 if (import.meta.main) main(process.argv.slice(2));

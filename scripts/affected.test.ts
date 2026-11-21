@@ -18,10 +18,12 @@ function fixture(extra: Record<string, string> = {}): string {
     "src/domains/b/service.ts": 'import { f } from "../a/service.ts";\nexport const g = f;\n',
     "src/domains/c/service.ts": "export const h = 1;\n",
     "src/domains/index.ts": 'import * as a from "./a/routes.ts";\nexport const all = [a];\n',
-    "src/app.ts": 'import { all } from "./domains/index.ts";\nexport const app = all;\n',
+    "src/app.ts":
+      'import type { Validator } from "./lib/validation.ts";\nimport { all } from "./domains/index.ts";\nexport const app = all;\nexport type V = Validator;\n',
     "test/support/app.ts":
       'import { app } from "../../src/app.ts";\nexport const get = () => app;\n',
-    "test/a.test.ts": 'import { get } from "./support/app.ts";\nget();\n',
+    "test/a.test.ts":
+      'import { f } from "../src/domains/a/service.ts";\nimport { get } from "./support/app.ts";\nget();\nf();\n',
     "test/b.test.ts": 'import { g } from "../src/domains/b/service.ts";\ng();\n',
     "test/c.test.ts": 'import { h } from "../src/domains/c/service.ts";\nh;\n',
     "test/money.test.ts": 'import { add } from "../src/lib/money.ts";\nadd(1, 1);\n',
@@ -53,10 +55,45 @@ describe("affectedTests", () => {
     expect(run([["src/domains/b/service.ts", "M"]])).toEqual({
       mode: "some",
       files: ["test/b.test.ts"],
+      smoke: [],
     });
     expect(run([["src/domains/c/service.ts", "M"]])).toEqual({
       mode: "some",
       files: ["test/c.test.ts"],
+      smoke: [],
+    });
+  });
+
+  test("the barrel cut: a domain change does not walk through src/domains/index.ts", () => {
+    // Every test reaches routes only via support/app -> app -> index; walking it would select them all.
+    expect(run([["src/domains/a/service.ts", "M"]]).files).toEqual([
+      "test/a.test.ts",
+      "test/b.test.ts",
+    ]);
+    expect(run([["src/domains/a/routes.ts", "M"]]).files).toEqual([]);
+  });
+
+  test.each(["src/domains/index.ts", "src/app.ts"])("%s change runs all", (path) => {
+    expect(run([[path, "M"]]).mode).toBe("all");
+  });
+
+  describe("smoke set", () => {
+    const smoke = { "test/smoke/boot.test.ts": 'import "../support/app.ts";\n' };
+    test("rides along on any source change, listed apart from files", () => {
+      const r = run([["src/domains/c/service.ts", "M"]], smoke);
+      expect(r).toEqual({
+        mode: "some",
+        files: ["test/c.test.ts"],
+        smoke: ["test/smoke/boot.test.ts"],
+      });
+    });
+    test("a lib change reaching smoke through support lists it once, under smoke", () => {
+      const r = run([["src/lib/validation.ts", "M"]], smoke);
+      expect(r.files).not.toContain("test/smoke/boot.test.ts");
+      expect(r.smoke).toEqual(["test/smoke/boot.test.ts"]);
+    });
+    test("markdown-only changes run no smoke", () => {
+      expect(run([["README.md", "M"]], smoke)).toEqual({ mode: "some", files: [], smoke: [] });
     });
   });
 
@@ -64,17 +101,23 @@ describe("affectedTests", () => {
     expect(run([["src/lib/money.ts", "M"]])).toEqual({
       mode: "some",
       files: ["test/a.test.ts", "test/b.test.ts", "test/money.test.ts"],
+      smoke: [],
     });
   });
 
   test("a changed test file runs itself", () => {
-    expect(run([["test/c.test.ts", "A"]])).toEqual({ mode: "some", files: ["test/c.test.ts"] });
+    expect(run([["test/c.test.ts", "A"]])).toEqual({
+      mode: "some",
+      files: ["test/c.test.ts"],
+      smoke: [],
+    });
   });
 
   test("type-only import edges count, including multi-line forms", () => {
     expect(run([["src/lib/validation.ts", "M"]])).toEqual({
       mode: "some",
       files: ["test/a.test.ts", "test/types.test.ts"],
+      smoke: [],
     });
   });
 
@@ -108,7 +151,7 @@ describe("affectedTests", () => {
         ["docs/x.html", "A"],
         ["src/lib/NOTES.md", "M"],
       ]),
-    ).toEqual({ mode: "some", files: [] });
+    ).toEqual({ mode: "some", files: [], smoke: [] });
   });
 
   test("a deleted file still reaches its dependents from the graph", () => {
@@ -185,6 +228,24 @@ describe("real tree shapes", () => {
     expect(r.files).toContain("test/generated/accounts.test.ts");
   });
 
+  test("a generated domain service change selects at most 20% of test files, smoke included", () => {
+    const tests = [...graph.imports.keys()].filter(
+      (f) => f.startsWith("test/") && f.endsWith(".test.ts"),
+    );
+    const r = affectedTests(
+      [{ path: "src/domains/generated/accounts/service.ts", status: "M" }],
+      graph,
+    );
+    const picked = [...r.files, ...r.smoke];
+    expect(r.smoke.length).toBeGreaterThan(0);
+    expect(r.smoke.length).toBeLessThanOrEqual(3);
+    expect(picked.length / tests.length).toBeLessThanOrEqual(0.2);
+  });
+
+  test("a change to the domains index runs all", () => {
+    expect(affectedTests([{ path: "src/domains/index.ts", status: "M" }], graph).mode).toBe("all");
+  });
+
   test("a generated domain service reaches its own test", () => {
     const r = affectedTests(
       [{ path: "src/domains/generated/accounts/service.ts", status: "M" }],
@@ -259,6 +320,19 @@ describe("CLI against a git repo", () => {
   test("a deleted file selects the tests that imported it", () => {
     const out = cli((r) => unlinkSync(join(r, "src/domains/c/service.ts")));
     expect(out).toBe("test/c.test.ts\n");
+  });
+
+  test("a deleted test file is not selected", () => {
+    const out = cli((r) => {
+      unlinkSync(join(r, "test/c.test.ts"));
+      unlinkSync(join(r, "src/domains/c/service.ts"));
+    });
+    expect(out).toBe("");
+  });
+
+  test("a test renamed away is not selected, its new path is", () => {
+    const out = cli((r) => renameSync(join(r, "test/c.test.ts"), join(r, "test/c2.test.ts")));
+    expect(out).toBe("test/c2.test.ts\n");
   });
 
   test("a renamed file selects the tests that imported its old path", () => {
