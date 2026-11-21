@@ -34,7 +34,11 @@ No team-scale claims ("200+ hours"): README gives a formula readers fill with th
   router table; load seed fixtures (`fixtures/seed/<d>.json`) from disk, validate each row, and
   serve them as read-only reference data (`GET /<d>/catalog`). Seed read via `node:fs` with path
   from `import.meta.url`; parsed seed frozen, never mutated, so it needs no reset. The mutable
-  store starts empty and `resetStore` clears it. Cost tuned via schema/fixture size. ajv version pinned exactly. Per-build cost measured and reported in README
+  store starts empty and `resetStore` clears it. One mapper turns ajv errors (allErrors:false)
+  into the existing 400 error body. Seed deep-frozen at load; a row failing its schema makes boot
+  throw. Catalog has one parametrized test over all domains (reset then GET still returns seed).
+  Test count after this change is the new baseline, equal on both runners. Cost tuned via
+  schema/fixture size. ajv version pinned exactly. Per-build cost measured and reported in README
   (tuned so local vitest ≥ 4× bun test, T2 rule); no target beyond that and increments a counter printed as `APP_BUILDS=<n>` at process exit.
 - **D4 Lint tool:** pin newest **stable** Bun. If `bun lint` is stable there, use it; else keep
   oxlint in the fast pipeline and README says so. **pending: T1.** Same rule for `bun check`/`bun fmt`
@@ -70,7 +74,7 @@ No team-scale claims ("200+ hours"): README gives a formula readers fill with th
   from a `plan` step output; empty → test job skipped, `ci-ok` (`if: always()`) passes only when
   skipped-because-empty, fails on any failed/cancelled/other-skipped need.
 - **D13 Affected safety:** base = `git merge-base` of PR base SHA and head, `fetch-depth: 0`.
-  Dispatch pr-mode takes explicit `base`/`head` inputs. `fixtures/seed/**` change → run all (fs read invisible to import graph). Unresolvable or non-literal import,
+  Dispatch pr-mode takes explicit `base`/`head` inputs. `fixtures/**` change → run all (fs read invisible to import graph). Unresolvable or non-literal import,
   tsconfig path alias, or fs-read fixture under `test/fixtures` change → run all. Type-only import
   edges are included (scanned from source text, not transpiler output) — pending T1 check of
   scanImports; fallback is a regex import scanner.
