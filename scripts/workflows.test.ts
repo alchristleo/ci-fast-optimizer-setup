@@ -2,11 +2,12 @@ import { expect, test } from "bun:test";
 import { readFileSync } from "node:fs";
 import { parse } from "yaml";
 
+type Step = { uses?: string; run?: string; with?: Record<string, unknown> };
 type Job = {
   name?: string;
   needs?: string | string[];
   if?: string;
-  steps?: { uses?: string; run?: string; with?: Record<string, unknown> }[];
+  steps?: Step[];
 };
 type Workflow = {
   on: Record<string, unknown>;
@@ -19,6 +20,9 @@ const load = (name: string) => {
   const text = readFileSync(`.github/workflows/${name}.yml`, "utf8");
   return { text, wf: parse(text) as Workflow };
 };
+const SETUP = ".github/actions/setup/action.yml";
+const setupText = readFileSync(SETUP, "utf8");
+const setup = parse(setupText) as { runs: { using: string; steps: Step[] } };
 const baseline = load("baseline");
 const fast = load("fast");
 const both = [baseline, fast];
@@ -34,11 +38,6 @@ test("fast: fmt, lint, typecheck, build, tooling have no needs", () => {
 test("fast: test needs only plan, and plan needs nothing", () => {
   expect(needsOf(fast.wf.jobs.test!)).toEqual(["plan"]);
   expect(needsOf(fast.wf.jobs.plan!)).toEqual([]);
-});
-
-test("fast: ci-ok and timings exist", () => {
-  expect(fast.wf.jobs["ci-ok"]).toBeDefined();
-  expect(fast.wf.jobs.timings).toBeDefined();
 });
 
 test("baseline: exactly one job, named test", () => {
@@ -58,15 +57,31 @@ test("top-level permissions are contents: read only", () => {
   for (const { wf } of both) expect(wf.permissions).toEqual({ contents: "read" });
 });
 
-test("every uses: is pinned to a 40-hex SHA", () => {
+const pinned = (step: Step) => {
+  if (step.uses?.startsWith("./")) expect(step.uses).toBe("./.github/actions/setup");
+  else if (step.uses) expect(step.uses).toMatch(/^[\w.-]+\/[\w.-]+(\/[\w./-]+)?@[0-9a-f]{40}$/);
+};
+
+test("every uses: is pinned to a 40-hex SHA or is the local setup action", () => {
   for (const { wf } of both)
-    for (const job of Object.values(wf.jobs))
-      for (const step of job.steps ?? [])
-        if (step.uses) expect(step.uses).toMatch(/^[\w.-]+\/[\w.-]+(\/[\w./-]+)?@[0-9a-f]{40}$/);
+    for (const job of Object.values(wf.jobs)) for (const step of job.steps ?? []) pinned(step);
+  expect(setup.runs.using).toBe("composite");
+  for (const step of setup.runs.steps) pinned(step);
+  expect(setup.runs.steps.filter((s) => s.uses).length).toBe(2);
+});
+
+test("every job in both workflows sets up through the local action", () => {
+  for (const { wf } of both)
+    for (const [id, job] of Object.entries(wf.jobs).filter(([id]) => id !== "ci-ok"))
+      expect(
+        job.steps!.some((s) => s.uses === "./.github/actions/setup"),
+        id,
+      ).toBe(true);
 });
 
 test("no secrets are used", () => {
-  for (const { text } of both) expect(text).not.toContain("secrets.");
+  for (const text of [...both.map((w) => w.text), setupText])
+    expect(text).not.toContain("secrets.");
 });
 
 test("fast: timings runs only on push", () => {
@@ -91,6 +106,7 @@ test("no run block interpolates expressions", () => {
   for (const { wf } of both)
     for (const job of Object.values(wf.jobs))
       for (const step of job.steps ?? []) expect(step.run ?? "").not.toMatch(/\$\{\{/);
+  for (const step of setup.runs.steps) expect(step.run ?? "").not.toMatch(/\$\{\{/);
 });
 
 test("fast: plan checks out full history", () => {

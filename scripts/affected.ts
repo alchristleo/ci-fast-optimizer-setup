@@ -77,6 +77,10 @@ export function buildGraph(root: string): ImportGraph {
 const BARREL = "src/domains/index.ts";
 const RUN_ALL = [BARREL, "src/app.ts"];
 const isSmoke = (p: string) => p.startsWith("test/smoke/");
+const isMeta = (p: string) => p.startsWith("test/meta/");
+// A domain dir: src/domains/<d>/ or src/domains/generated/<d>/. Tests import service.ts only, so a
+// routes.ts change must also queue its siblings.
+const DOMAIN_FILE = /^(src\/domains\/(?:generated\/)?[^/]+)\/[^/]+$/;
 const isTest = (p: string) =>
   p.endsWith(".test.ts") && SCAN_DIRS.some((d) => p.startsWith(`${d}/`));
 const ignored = (p: string) => p.endsWith(".md") || p.startsWith("docs/");
@@ -95,17 +99,20 @@ export function affectedTests(changed: Change[], graph: ImportGraph): Affected {
   let relevant = false;
   for (const { path } of changed) {
     if (ignored(path)) continue;
-    if (!analysable(path) || graph.unsafe.has(path) || RUN_ALL.includes(path))
-      return { mode: "all", files: [], smoke: [] };
+    if (!analysable(path) || RUN_ALL.includes(path)) return { mode: "all", files: [], smoke: [] };
     queue.push(path);
+    const dir = DOMAIN_FILE.exec(path)?.[1];
+    if (dir) queue.push(...[...graph.imports.keys()].filter((f) => posix.dirname(f) === dir));
     relevant = true;
   }
+  if (relevant && graph.unsafe.size > 0) return { mode: "all", files: [], smoke: [] };
   while (queue.length > 0) {
     const file = queue.pop()!;
     if (seen.has(file)) continue;
     seen.add(file);
     queue.push(...(dependents.get(file) ?? []).filter((d) => d !== BARREL));
   }
+  if (relevant) for (const f of graph.imports.keys()) if (isMeta(f) && isTest(f)) seen.add(f);
   const tests = [...seen].filter(isTest);
   return {
     mode: "some",
@@ -129,11 +136,14 @@ function git(...args: string[]): string {
   return execFileSync("git", args, { encoding: "utf8", maxBuffer: 64 * 1024 * 1024 });
 }
 
-function mergeGraphs(a: ImportGraph, b: ImportGraph): ImportGraph {
+// `a` is the head graph, `b` the base graph. A base file left importing a deleted path looks unsafe at
+// head only because of that deletion, so head-unsafe counts only for new or changed files.
+function mergeGraphs(a: ImportGraph, b: ImportGraph, changed: Set<string>): ImportGraph {
   const imports = new Map(a.imports);
   for (const [file, deps] of b.imports)
     imports.set(file, new Set([...(imports.get(file) ?? []), ...deps]));
-  return { imports, unsafe: new Set([...a.unsafe, ...b.unsafe]) };
+  const headUnsafe = [...a.unsafe].filter((f) => !b.imports.has(f) || changed.has(f));
+  return { imports, unsafe: new Set([...headUnsafe, ...b.unsafe]) };
 }
 
 function main(argv: string[]): void {
@@ -152,6 +162,7 @@ function main(argv: string[]): void {
     graph = mergeGraphs(
       graph,
       graphFrom(files, (p) => git("show", `${mergeBase}:${p}`)),
+      new Set(changed.map((c) => c.path)),
     );
   }
   const result = affectedTests(changed, graph);

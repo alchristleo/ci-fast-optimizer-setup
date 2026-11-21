@@ -171,7 +171,7 @@ const HAND: Record<string, Base> = {
     props: {
       customerId: { type: "string" },
       itemId: { type: "string" },
-      quantity: { type: "number", minimum: 1, maximum: 1000 },
+      quantity: { type: "integer", minimum: 1, maximum: 1000 },
     },
     row: () => ({ customerId: "customers_1", itemId: "inventory_1", quantity: 1 }),
   },

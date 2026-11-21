@@ -141,30 +141,27 @@ describe("median and p90", () => {
 describe("correlateRun", () => {
   const base = { name: "fast", event: "workflow_dispatch", head_sha: "abc", run_attempt: 1 };
   const runs = [
-    { ...base, id: 1, created_at: "2026-11-21T09:00:00Z" }, // before dispatch
+    { ...base, id: 1, created_at: "2026-11-21T09:00:00Z" }, // existed before dispatch
     { ...base, id: 2, created_at: "2026-11-21T10:00:05Z", event: "push" }, // wrong event
     { ...base, id: 3, created_at: "2026-11-21T10:00:06Z", head_sha: "zzz" }, // wrong sha
-    { ...base, id: 5, created_at: "2026-11-21T10:00:09Z" }, // later match
-    { ...base, id: 4, created_at: "2026-11-21T10:00:07Z" }, // earliest match
+    { ...base, id: 5, created_at: "2026-11-21T10:00:09Z" }, // later new match
+    { ...base, id: 4, created_at: "2026-11-21T10:00:07Z" }, // earliest new match
   ];
-  test("picks the earliest matching run created after dispatch", () => {
-    const r = correlateRun(runs, { headSha: "abc", dispatchedAt: "2026-11-21T10:00:00Z" });
-    expect(r?.id).toBe(4);
+  test("picks the earliest matching run whose id was not known before dispatch", () => {
+    expect(correlateRun(runs, { headSha: "abc", knownIds: new Set([1]) })?.id).toBe(4);
   });
-  test("ignores a re-run (attempt 2) of an earlier run, even when created after dispatch", () => {
+  test("ignores a run whose id was known before dispatch, whatever its clock says", () => {
+    expect(correlateRun(runs, { headSha: "abc", knownIds: new Set([1, 4, 5]) })).toBeUndefined();
+  });
+  test("ignores a re-run (attempt 2) of an earlier run", () => {
     const decoy = [{ ...base, id: 9, created_at: "2026-11-21T10:00:03Z", run_attempt: 2 }];
-    expect(
-      correlateRun(decoy, { headSha: "abc", dispatchedAt: "2026-11-21T10:00:00Z" }),
-    ).toBeUndefined();
-    expect(
-      correlateRun([...decoy, ...runs], { headSha: "abc", dispatchedAt: "2026-11-21T10:00:00Z" })
-        ?.id,
-    ).toBe(4);
+    expect(correlateRun(decoy, { headSha: "abc", knownIds: new Set() })).toBeUndefined();
+    expect(correlateRun([...decoy, ...runs], { headSha: "abc", knownIds: new Set([1]) })?.id).toBe(
+      4,
+    );
   });
   test("returns undefined when nothing matches", () => {
-    expect(
-      correlateRun(runs, { headSha: "nope", dispatchedAt: "2026-11-21T10:00:00Z" }),
-    ).toBeUndefined();
+    expect(correlateRun(runs, { headSha: "nope", knownIds: new Set() })).toBeUndefined();
   });
 });
 

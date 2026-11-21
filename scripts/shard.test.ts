@@ -18,6 +18,10 @@ describe("planShards", () => {
     ]);
   });
 
+  test("zero-time files still spread across shards", () => {
+    expect(planShards(["a", "b"], { a: 0, b: 0 }, 2)).toEqual([["a"], ["b"]]);
+  });
+
   test("unknown files get the median time", () => {
     // median of 10, 20, 30 is 20; new.test.ts (20) ties with b (20) and sorts by path after it
     const timings = { "a.test.ts": 30, "b.test.ts": 20, "c.test.ts": 10 };

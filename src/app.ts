@@ -10,10 +10,6 @@ const defaultFixtures = fileURLToPath(new URL("../fixtures", import.meta.url));
 
 let builds = 0;
 
-export function appBuilds(): number {
-  return builds;
-}
-
 function loadJson(dir: string, kind: "schema" | "seed", name: string): unknown {
   return JSON.parse(readFileSync(join(dir, kind, `${name}.json`), "utf8"));
 }

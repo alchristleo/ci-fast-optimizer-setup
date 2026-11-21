@@ -11,7 +11,6 @@ import { fileURLToPath } from "node:url";
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 const RESULTS = join(root, "bench/results.json");
 const README = join(root, "README.md");
-const REPO = "alchristleo/ci-fast-optimizer-setup";
 const PR_BRANCH = "bench/pr-sample";
 const RUN_TIMEOUT_MS = 30 * 60 * 1000;
 
@@ -87,18 +86,18 @@ export function p90(xs: number[]): number {
   return s[Math.ceil(0.9 * s.length) - 1]!;
 }
 
+// `knownIds`: run ids that already existed for this workflow and sha before the dispatch.
 export function correlateRun(
   runs: ApiRun[],
-  want: { headSha: string; dispatchedAt: string },
+  want: { headSha: string; knownIds: Set<number> },
 ): ApiRun | undefined {
-  const t = Date.parse(want.dispatchedAt);
   return runs
     .filter(
       (r) =>
         r.event === "workflow_dispatch" &&
         r.run_attempt === 1 && // a re-run of an earlier run is never ours
         r.head_sha === want.headSha &&
-        Date.parse(r.created_at) >= t,
+        !want.knownIds.has(r.id),
     )
     .sort((a, b) => Date.parse(a.created_at) - Date.parse(b.created_at))[0];
 }
@@ -222,25 +221,37 @@ function gh(args: string[]): string {
 }
 const ghJson = (args: string[]) => JSON.parse(gh(args));
 const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
+// BENCH_REPO=owner/name, else the repo of the current checkout.
+const repoName = () =>
+  process.env.BENCH_REPO ??
+  execFileSync("gh", ["repo", "view", "--json", "nameWithOwner", "--jq", ".nameWithOwner"], {
+    encoding: "utf8",
+  }).trim();
 
 async function dispatchOne(workflow: string, mode: "full" | "pr"): Promise<BenchRun> {
+  const REPO = repoName();
   const file = `${workflow}.yml`;
   const mainSha: string = ghJson([`repos/${REPO}/commits/main`]).sha;
   const ref = mode === "pr" ? PR_BRANCH : "main";
   const headSha: string =
     mode === "pr" ? ghJson([`repos/${REPO}/commits/${PR_BRANCH}`]).sha : mainSha;
-  const dispatchedAt = new Date(Date.now() - 2000).toISOString().replace(/\.\d+Z$/, "Z");
-  const fields = ["-f", `ref=${ref}`, "-f", `inputs[mode]=${mode}`];
-  if (mode === "pr") fields.push("-f", `inputs[base]=${mainSha}`, "-f", `inputs[head]=${headSha}`);
+  const runsPath = `repos/${REPO}/actions/workflows/${file}/runs?event=workflow_dispatch&per_page=30`;
+  const knownIds = new Set<number>(
+    (ghJson([runsPath]).workflow_runs as ApiRun[])
+      .filter((r) => r.head_sha === headSha)
+      .map((r) => r.id),
+  );
+  const fields = ["-f", `ref=${ref}`];
+  // Only fast.yml declares inputs; baseline would reject them.
+  if (workflow === "fast") fields.push("-f", `inputs[mode]=${mode}`);
+  if (workflow === "fast" && mode === "pr")
+    fields.push("-f", `inputs[base]=${mainSha}`, "-f", `inputs[head]=${headSha}`);
   gh(["-X", "POST", `repos/${REPO}/actions/workflows/${file}/dispatches`, ...fields]);
 
   let found: ApiRun | undefined;
   for (let i = 0; i < 60 && !found; i++) {
     await sleep(5000);
-    const list = ghJson([
-      `repos/${REPO}/actions/workflows/${file}/runs?event=workflow_dispatch&per_page=30`,
-    ]);
-    found = correlateRun(list.workflow_runs, { headSha, dispatchedAt });
+    found = correlateRun(ghJson([runsPath]).workflow_runs, { headSha, knownIds });
   }
   if (!found) throw new Error(`no run appeared for ${file}`);
 

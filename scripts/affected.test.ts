@@ -70,7 +70,28 @@ describe("affectedTests", () => {
       "test/a.test.ts",
       "test/b.test.ts",
     ]);
-    expect(run([["src/domains/a/routes.ts", "M"]]).files).toEqual([]);
+  });
+
+  test("a routes change also queues its sibling files, so the domain tests run", () => {
+    expect(run([["src/domains/a/routes.ts", "M"]]).files).toEqual([
+      "test/a.test.ts",
+      "test/b.test.ts",
+    ]);
+  });
+
+  test("test/meta always runs on a relevant change, like smoke", () => {
+    const meta = { "test/meta/m.test.ts": 'import "../support/app.ts";\n' };
+    expect(run([["src/domains/c/service.ts", "M"]], meta).files).toEqual([
+      "test/c.test.ts",
+      "test/meta/m.test.ts",
+    ]);
+    expect(run([["README.md", "M"]], meta).files).toEqual([]);
+  });
+
+  test("an unsafe import anywhere in the graph runs all, even when that file is unchanged", () => {
+    const dyn = { "src/lib/dyn.ts": "export const m = (n: string) => import(n);\n" };
+    expect(run([["src/domains/c/service.ts", "M"]], dyn).mode).toBe("all");
+    expect(run([["README.md", "M"]], dyn).mode).toBe("some");
   });
 
   test.each(["src/domains/index.ts", "src/app.ts"])("%s change runs all", (path) => {
@@ -240,6 +261,19 @@ describe("real tree shapes", () => {
     expect(r.smoke.length).toBeGreaterThan(0);
     expect(r.smoke.length).toBeLessThanOrEqual(3);
     expect(picked.length / tests.length).toBeLessThanOrEqual(0.2);
+  });
+
+  test("a hand-written routes change selects its domain test", () => {
+    const r = affectedTests([{ path: "src/domains/orders/routes.ts", status: "M" }], graph);
+    expect(r.files).toContain("test/domains/orders.test.ts");
+  });
+
+  test("a generated routes change selects its domain test", () => {
+    const r = affectedTests(
+      [{ path: "src/domains/generated/accounts/routes.ts", status: "M" }],
+      graph,
+    );
+    expect(r.files).toContain("test/generated/accounts.test.ts");
   });
 
   test("a change to the domains index runs all", () => {

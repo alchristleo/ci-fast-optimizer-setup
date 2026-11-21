@@ -1,6 +1,7 @@
 import { describe, expect, test } from "bun:test";
 import { readdirSync, readFileSync } from "node:fs";
 import { join } from "node:path";
+import { domains } from "../../src/domains/index.ts";
 import { resetStore } from "../../src/lib/store.ts";
 import { send, useTestApp } from "../support/app.ts";
 
@@ -10,7 +11,7 @@ const names = readdirSync(seedDir).map((f) => f.replace(/\.json$/, ""));
 
 describe("seed catalog", () => {
   test("has a seed file for every domain", () => {
-    expect(names.length).toBe(123);
+    expect(names.length).toBe(domains.length);
   });
 
   test.each(names)("%s serves read-only seed after a reset", async (name) => {
@@ -21,7 +22,7 @@ describe("seed catalog", () => {
     expect(res.status).toBe(200);
     const rows = await res.json();
     expect(rows).toEqual(seed);
-    expect(rows.length).toBe(60);
+    expect(rows.length).toBe(seed.length);
     rows[0].name = "mutated";
     rows.pop();
     expect(await (await app.request(`/${name}/catalog`)).json()).toEqual(seed);

@@ -10,7 +10,7 @@
       "type": "string"
     },
     "quantity": {
-      "type": "number",
+      "type": "integer",
       "minimum": 1,
       "maximum": 1000
     },

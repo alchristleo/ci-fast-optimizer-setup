@@ -16,7 +16,7 @@ export function planShards(
 ): string[][] {
   if (files.length === 0) return [];
   const fallback = median(files.filter((f) => f in timings).map((f) => timings[f]!));
-  const time = (f: string) => timings[f] ?? fallback;
+  const time = (f: string) => Math.max(1, timings[f] ?? fallback); // zero-time files must still spread
   const sorted = [...files].sort((a, b) => time(b) - time(a) || (a < b ? -1 : a > b ? 1 : 0));
   const count = Math.min(n, files.length);
   const shards: string[][] = Array.from({ length: count }, () => []);
