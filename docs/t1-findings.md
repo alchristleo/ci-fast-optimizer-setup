@@ -1,13 +1,13 @@
 # T1 findings: tool facts
 
-Env: Bun 1.4.5 (npm `latest` dist-tag; `canary` is 1.4.5-canary.20261120.1), Node v22.23.5, vitest 5.1.1.
+Env: Bun 1.4.5 (npm `latest` dist-tag; canary version not checked), Node v22.23.5, vitest 5.1.1.
 Scratch projects: `/tmp/claude-1000/-home-leo-AI-STUFF-lean-sdd/45fad210-f892-4c83-9a39-acc262fd122b/scratchpad/{s1,d2}`.
 
 ## Install deviation
 The official installer (`curl https://bun.sh/install | bash` to `~/.bun`) was denied by the permission classifier.
 Bun came from `npm i bun` and Node 22 from `npm i node@22`, both in the scratchpad. Nothing is in `~/.bun`.
 Node 22 was missing (only v20.19.5 present). T2+ must put these on PATH or install them themselves.
-Both npm packages report the same version the stable installer serves (`latest` = 1.4.5).
+Unverified: that the official installer serves the same build as npm `bun@1.4.5` (owner installs it officially before T2).
 
 ## Bun built-ins (stable 1.4.5)
 - `bun --help` lists `test`, `check` ("Type check a TypeScript project") and `fmt`. It does NOT list `lint`.
@@ -31,5 +31,7 @@ Both npm packages report the same version the stable installer serves (`latest` 
 D4: use `bun check` for typecheck (exists in stable 1.4.5; exit 1 on error) (evidence: `bun check` in s1 -> `Found 1 error in 1 file`, rc=1)
 D11: use `bun fmt --check` for format; `bun lint` is not available on stable, so no built-in lint step (evidence: `bun lint` -> `Script not found "lint"` rc=1; `bun fmt --check` -> rc=1 then rc=0 after `bun fmt`)
 D2: test files import `bun:test`; vitest runs them via `resolve.alias` to a shim re-exporting `vitest`, zero edits (evidence: `npx vitest run a.test.ts` -> 1 passed; `bun test v.test.ts` importing vitest -> 1 pass)
+D4 lint: `bun lint` absent on stable -> keep oxlint in fast pipeline, README says so (evidence: `bun lint` -> `Script not found "lint"`, rc=1)
+D11 pin: bun-version 1.4.5, node 22.23.5 (evidence: `bun --version` -> 1.4.5; `node -v` -> v22.23.5)
 D13: do not rely on `scanImports`; write a fallback regex scanner that keeps type edges (evidence: `bun scan.ts` -> only ./b, ./e, ./f, missing ./types ./c ./d)
 Junit: `bun test --reporter=junit --reporter-outfile=<f> <files...>` (evidence: `bun test --reporter=junit --reporter-outfile=out.xml a.test.ts v.test.ts` -> 2 pass, XML written)
