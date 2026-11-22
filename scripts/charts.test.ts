@@ -1,6 +1,6 @@
 import { describe, expect, test } from "bun:test";
-import type { BenchJob, BenchRun, Results } from "./bench";
-import { CHARTS, runs, steps, timeline, wallTime } from "./charts";
+import type { BenchJob, BenchRun, Results } from "./bench-data";
+import { bar, CHARTS, runs, steps, timeline, wallTime } from "./charts";
 
 const SHA = "3d3c42e5aac5ba805825da76410c181273ba90b1";
 const step = (name: string, s: number) => ({ name, s });
@@ -38,16 +38,17 @@ const run = (
   test_files: 100,
   tests_passed: 500,
 });
+// The run wall is `end`: the first job starts at 3 s and ci-ok ends at end + 3 s.
 const fastJobs = (end: number): BenchJob[] => [
-  job("plan", 4, 7, 1),
+  job("plan", 3, 7, 1),
   job("fmt", 12, 8, 0),
   job("lint", 12, 6, 0),
   job("typecheck", 12, 9, 1),
   job("build", 12, 8, 1),
   job("tooling", 12, 14, 7),
-  job("test (shard 0)", 12, end - 16, end - 24),
-  job("test (shard 1)", 12, end - 18, end - 26),
-  job("ci-ok", end - 2, 2, 0),
+  job("test (shard 0)", 12, end - 12, end - 20),
+  job("test (shard 1)", 12, end - 14, end - 22),
+  job("ci-ok", end + 1, 2, 0),
 ];
 
 const res: Results = {
@@ -65,6 +66,10 @@ const res: Results = {
 
 const themes = ["light", "dark"] as const;
 const fns = { "wall-time": wallTime, timeline, runs, steps };
+const COLOURS = {
+  pipelines: { light: ["#2a78d6", "#eb6834", "#1baf7a"], dark: ["#3987e5", "#d95926", "#199e70"] },
+  steps: { light: ["#6250d6", "#eda100", "#e87ba4"], dark: ["#9085e9", "#c98500", "#d55181"] },
+};
 
 // Minimal well-formedness check: balanced tags, no stray `&` or `<`.
 function assertXml(svg: string) {
@@ -87,7 +92,7 @@ describe("charts", () => {
   for (const [name, fn] of Object.entries(fns))
     for (const theme of themes) {
       describe(`${name} ${theme}`, () => {
-        const svg = fn(res, theme);
+        const { svg, alt, caption } = fn(res, theme);
         test("is valid SVG, 720 wide, with title and desc", () => {
           assertXml(svg);
           expect(svg.startsWith('<svg xmlns="http://www.w3.org/2000/svg" width="720"')).toBe(true);
@@ -96,17 +101,22 @@ describe("charts", () => {
           expect(svg.endsWith("</svg>\n")).toBe(true);
           expect(svg).not.toContain("\r");
         });
-        test("uses the theme surface and series colours", () => {
-          const [bg, a, b, c] =
-            theme === "light"
-              ? ["#fcfcfb", "#2a78d6", "#eb6834", "#1baf7a"]
-              : ["#1a1a19", "#3987e5", "#d95926", "#199e70"];
+        test("uses the theme surface and series colours, never for text", () => {
+          const bg = theme === "light" ? "#fcfcfb" : "#1a1a19";
+          const cols = COLOURS[name === "steps" ? "steps" : "pipelines"][theme];
           expect(svg).toContain(`fill="${bg}"`);
-          for (const col of [a, b, c]) expect(svg).toContain(col);
-          for (const col of [a, b, c]) expect(svg).not.toMatch(new RegExp(`<text[^>]*${col}`));
+          for (const col of cols) expect(svg).toContain(col);
+          for (const col of cols) expect(svg).not.toMatch(new RegExp(`<text[^>]*${col}`));
         });
         test("is byte-deterministic", () => {
-          expect(fn(res, theme)).toBe(svg);
+          expect(fn(res, theme)).toEqual({ svg, alt, caption });
+        });
+        test("has alt text, a caption, and no text below 13 px", () => {
+          expect(alt.length).toBeGreaterThan(20);
+          expect(svg).toContain(`<desc>${alt}</desc>`);
+          expect(caption.length).toBeGreaterThan(10);
+          const sizes = [...svg.matchAll(/font-size="([\d.]+)"/g)].map((m) => Number(m[1]));
+          expect(Math.min(...sizes)).toBeGreaterThanOrEqual(13);
         });
       });
     }
@@ -114,82 +124,131 @@ describe("charts", () => {
   test("one labelled mark per series", () => {
     for (const theme of themes) {
       for (const fn of [wallTime, runs, timeline]) {
-        const svg = fn(res, theme);
+        const { svg } = fn(res, theme);
         for (const label of ["baseline full", "fast full", "fast pr"])
           expect(svg).toContain(`>${label}</text>`);
       }
-      const s = steps(res, theme);
+      const s = steps(res, theme).svg;
       for (const label of ["checkout", "setup", "work"]) expect(s).toContain(`>${label}</text>`);
     }
   });
 
   test("values: wall-time medians and p90 equal the data", () => {
-    const svg = wallTime(res, "light");
+    const { svg, alt } = wallTime(res, "light");
     expect(svg).toContain(">220 s, p90 300 s</text>");
     expect(svg).toContain(">44 s, p90 50 s</text>");
     expect(svg).toContain(">34 s, p90 38 s</text>");
     expect(svg).toContain("5.00x");
+    expect(alt).toBe("Fast full is 5.00x faster than baseline full: 44 s vs 220 s median.");
   });
 
   test("values: runs shows every run wall time as a dot", () => {
-    const svg = runs(res, "light");
+    const { svg, alt } = runs(res, "light");
     expect(svg.match(/<circle /g)?.length).toBe(15);
     expect(svg).toContain(">median 220 s</text>");
     expect(svg).toContain(">median 44 s</text>");
     expect(svg).toContain(">median 34 s</text>");
+    expect(alt).toContain("baseline full 200 to 300 s, fast full 40 to 50 s, fast pr 30 to 38 s");
   });
 
-  test("values: timeline marks the critical path of the median run", () => {
-    const svg = timeline(res, "light");
-    expect(svg).toContain(">critical path, 44 s</text>");
-    expect(svg).toContain(">test (shard 0)</text>");
+  const dots = (svg: string) =>
+    [...svg.matchAll(/<circle cx="([\d.]+)" cy="([\d.]+)"/g)].map((m) => [+m[1]!, +m[2]!]);
+  const apart = (svg: string) => {
+    const d = dots(svg);
+    return Math.min(
+      ...d.flatMap(([x, y], i) => d.slice(i + 1).map(([x2, y2]) => Math.hypot(x! - x2!, y! - y2!))),
+    );
+  };
+
+  test("runs: no two dots overlap, even when every run has the same time", () => {
+    expect(apart(runs(res, "light").svg)).toBeGreaterThanOrEqual(9);
+    const same: Results = {
+      ...res,
+      runs: res.runs.map((r) => ({ ...r, wall_s: r.workflow === "fast" ? 44 : r.wall_s })),
+    };
+    expect(dots(runs(same, "light").svg).length).toBe(15);
+    expect(apart(runs(same, "light").svg)).toBeGreaterThanOrEqual(9);
   });
 
-  test("values: timeline puts the critical-path label on the latest-ending job's row", () => {
-    const lateLint = (w: number) => [
-      job("plan", 4, 7, 1),
-      job("lint", 20, w - 20, 1),
-      job("ci-ok", 12, 2, 0),
+  test("runs: the median ticks are drawn before the dots", () => {
+    const { svg } = runs(res, "light");
+    expect(svg.lastIndexOf('stroke-width="2"/>')).toBeLessThan(svg.indexOf("<circle"));
+  });
+  test("bars thinner than 3 px have square ends", () => {
+    expect(bar(10, 12, 0, 10, "#000")).toMatch(/^<rect /);
+    expect(bar(10, 20, 0, 10, "#000")).toMatch(/^<path /);
+  });
+
+  test("values: timeline starts each run at its first job, so its end is the run wall", () => {
+    const { svg, alt } = timeline(res, "light");
+    expect(svg).toContain(">baseline full, 220 s</text>");
+    expect(svg).toContain(">fast full, 44 s</text>");
+    expect(svg).toContain(">fast pr, 34 s</text>");
+    expect(svg).toContain("seconds since the first job of the run started");
+    expect(svg).not.toContain("axis from run created");
+    expect(alt).toBe(
+      "Critical path of the median run: baseline full test (baseline) 220 s; fast full plan, test (shard 0), ci-ok 44 s; fast pr typecheck 34 s.",
+    );
+  });
+
+  test("values: timeline draws the critical-path bars solid and the others faded", () => {
+    const { svg } = timeline(res, "light");
+    expect(svg).toContain(">critical path: plan, test (shard 0), ci-ok</text>");
+    // fast full: 9 jobs, 3 on the path; fast pr: 5 jobs, 1 on the path; baseline: 1 job, on the path
+    expect(svg.match(/fill-opacity="0.4"/g)?.length).toBe(6 + 4);
+  });
+
+  test("values: timeline follows needs back from the latest-ending job, not job times", () => {
+    // fmt ends exactly when the shard starts, but the shard needs plan, not fmt.
+    const near = (w: number) => [
+      job("plan", 3, 7, 1),
+      job("fmt", 3, 11, 0),
+      job("test (shard 0)", 14, w - 14, 1),
+      job("ci-ok", w + 1, 2, 0),
     ];
     const odd: Results = {
       ...res,
       runs: res.runs.map((r) =>
-        r.workflow === "fast" && r.mode === "full" ? { ...r, jobs: lateLint(r.wall_s) } : r,
+        r.workflow === "fast" && r.mode === "full" ? { ...r, jobs: near(r.wall_s) } : r,
       ),
     };
-    const svg = timeline(odd, "light");
-    const rowY = (label: string) =>
-      [...svg.matchAll(new RegExp(`<text [^>]*y="([\\d.]+)"[^>]*>${label}</text>`, "g"))].map(
-        (m) => m[1],
-      );
-    const crit = svg.match(/<text [^>]*y="([\d.]+)"[^>]*>critical path, 44 s<\/text>/);
-    expect(crit).not.toBeNull();
-    expect(rowY("lint")).toContain(crit![1]!);
-    expect(rowY("ci-ok")).not.toContain(crit![1]!);
+    expect(timeline(odd, "light").svg).toContain(
+      ">critical path: plan, test (shard 0), ci-ok</text>",
+    );
   });
 
-  test("values: timeline falls back to start 0 when a job has no start_s", () => {
-    const old: Results = {
+  test("values: timeline sorts jobs that start together by code-unit name order", () => {
+    const tied: Results = {
       ...res,
       runs: res.runs.map((r) =>
-        r.workflow === "baseline"
-          ? { ...r, jobs: r.jobs.map((j) => ({ name: j.name, wall_s: j.wall_s, steps: j.steps })) }
+        r.workflow === "fast" && r.mode === "full"
+          ? { ...r, jobs: [job("plan", 3, 7, 1), job("a", 12, 5, 1), job("B", 12, 5, 1)] }
           : r,
       ),
     };
-    const svg = timeline(old, "light");
-    expect(svg).not.toContain("NaN");
-    expect(svg).toContain('d="M120.0 '); // the baseline bar starts at the axis origin (x0 = 120)
+    const { svg } = timeline(tied, "light");
+    expect(svg.indexOf(">B</text>")).toBeLessThan(svg.indexOf(">a</text>"));
   });
 
-  test("values: steps axis names the sum of medians", () => {
-    expect(steps(res, "light")).toContain("sum of median checkout, setup and work (s)");
-  });
-
-  test("values: steps shows baseline and shard totals in medians", () => {
-    const svg = steps(res, "light");
-    expect(svg).toContain(">test (baseline)</text>");
-    expect(svg).toContain(">212 s</text>"); // 1 + 3 + 208
+  test("values: steps names the sum of medians and leaves the baseline bar out", () => {
+    const { svg, alt } = steps(res, "light");
+    expect(svg).toContain("baseline test job: 212 s");
+    expect(svg).not.toContain(">test (baseline)</text>");
     expect(svg).toContain(">test (shards)</text>");
+    expect(svg).toContain("Setup and checkout, not tests, are most of a fast job");
+    expect(svg).toContain("more than work in 6 of 8 fast job kinds");
+    expect(alt).toContain("6 of 8 fast job kinds");
+  });
+
+  test("values: steps title follows the data when work dominates", () => {
+    const heavy: Results = {
+      ...res,
+      runs: res.runs.map((r) =>
+        r.workflow === "fast"
+          ? { ...r, jobs: r.jobs.map((j) => ({ ...j, steps: [...j.steps, step("work2", 100)] })) }
+          : r,
+      ),
+    };
+    expect(steps(heavy, "light").svg).toContain("Tests are most of a fast job");
   });
 });
