@@ -18,6 +18,7 @@
         {
           "name": "test (baseline)",
           "wall_s": 285,
+          "start_s": 3,
           "steps": [
             {
               "name": "Set up job",
@@ -92,6 +93,7 @@
         {
           "name": "tooling",
           "wall_s": 21,
+          "start_s": 3,
           "steps": [
             {
               "name": "Set up job",
@@ -126,6 +128,7 @@
         {
           "name": "fmt",
           "wall_s": 12,
+          "start_s": 4,
           "steps": [
             {
               "name": "Set up job",
@@ -160,6 +163,7 @@
         {
           "name": "lint",
           "wall_s": 7,
+          "start_s": 3,
           "steps": [
             {
               "name": "Set up job",
@@ -194,6 +198,7 @@
         {
           "name": "build",
           "wall_s": 7,
+          "start_s": 3,
           "steps": [
             {
               "name": "Set up job",
@@ -228,6 +233,7 @@
         {
           "name": "typecheck",
           "wall_s": 11,
+          "start_s": 3,
           "steps": [
             {
               "name": "Set up job",
@@ -262,6 +268,7 @@
         {
           "name": "plan",
           "wall_s": 9,
+          "start_s": 3,
           "steps": [
             {
               "name": "Set up job",
@@ -300,6 +307,7 @@
         {
           "name": "test (shard 1)",
           "wall_s": 17,
+          "start_s": 14,
           "steps": [
             {
               "name": "Set up job",
@@ -338,6 +346,7 @@
         {
           "name": "test (shard 3)",
           "wall_s": 18,
+          "start_s": 13,
           "steps": [
             {
               "name": "Set up job",
@@ -376,6 +385,7 @@
         {
           "name": "test (shard 2)",
           "wall_s": 20,
+          "start_s": 14,
           "steps": [
             {
               "name": "Set up job",
@@ -414,6 +424,7 @@
         {
           "name": "test (shard 0)",
           "wall_s": 26,
+          "start_s": 14,
           "steps": [
             {
               "name": "Set up job",
@@ -452,6 +463,7 @@
         {
           "name": "ci-ok",
           "wall_s": 3,
+          "start_s": 42,
           "steps": [
             {
               "name": "Set up job",
@@ -486,6 +498,7 @@
         {
           "name": "plan",
           "wall_s": 7,
+          "start_s": 3,
           "steps": [
             {
               "name": "Set up job",
@@ -524,6 +537,7 @@
         {
           "name": "typecheck",
           "wall_s": 9,
+          "start_s": 4,
           "steps": [
             {
               "name": "Set up job",
@@ -558,6 +572,7 @@
         {
           "name": "build",
           "wall_s": 7,
+          "start_s": 3,
           "steps": [
             {
               "name": "Set up job",
@@ -592,6 +607,7 @@
         {
           "name": "tooling",
           "wall_s": 17,
+          "start_s": 4,
           "steps": [
             {
               "name": "Set up job",
@@ -626,6 +642,7 @@
         {
           "name": "lint",
           "wall_s": 7,
+          "start_s": 3,
           "steps": [
             {
               "name": "Set up job",
@@ -660,6 +677,7 @@
         {
           "name": "fmt",
           "wall_s": 11,
+          "start_s": 4,
           "steps": [
             {
               "name": "Set up job",
@@ -694,6 +712,7 @@
         {
           "name": "test (shard 3)",
           "wall_s": 12,
+          "start_s": 12,
           "steps": [
             {
               "name": "Set up job",
@@ -732,6 +751,7 @@
         {
           "name": "test (shard 0)",
           "wall_s": 15,
+          "start_s": 12,
           "steps": [
             {
               "name": "Set up job",
@@ -770,6 +790,7 @@
         {
           "name": "test (shard 1)",
           "wall_s": 21,
+          "start_s": 12,
           "steps": [
             {
               "name": "Set up job",
@@ -808,6 +829,7 @@
         {
           "name": "test (shard 2)",
           "wall_s": 9,
+          "start_s": 12,
           "steps": [
             {
               "name": "Set up job",
@@ -846,6 +868,7 @@
         {
           "name": "ci-ok",
           "wall_s": 2,
+          "start_s": 35,
           "steps": [
             {
               "name": "Set up job",
@@ -880,6 +903,7 @@
         {
           "name": "test (baseline)",
           "wall_s": 282,
+          "start_s": 3,
           "steps": [
             {
               "name": "Set up job",
@@ -954,6 +978,7 @@
         {
           "name": "typecheck",
           "wall_s": 7,
+          "start_s": 3,
           "steps": [
             {
               "name": "Set up job",
@@ -988,6 +1013,7 @@
         {
           "name": "fmt",
           "wall_s": 8,
+          "start_s": 3,
           "steps": [
             {
               "name": "Set up job",
@@ -1022,6 +1048,7 @@
         {
           "name": "lint",
           "wall_s": 11,
+          "start_s": 3,
           "steps": [
             {
               "name": "Set up job",
@@ -1056,6 +1083,7 @@
         {
           "name": "tooling",
           "wall_s": 15,
+          "start_s": 3,
           "steps": [
             {
               "name": "Set up job",
@@ -1090,6 +1118,7 @@
         {
           "name": "build",
           "wall_s": 8,
+          "start_s": 3,
           "steps": [
             {
               "name": "Set up job",
@@ -1124,6 +1153,7 @@
         {
           "name": "plan",
           "wall_s": 17,
+          "start_s": 3,
           "steps": [
             {
               "name": "Set up job",
@@ -1162,6 +1192,7 @@
         {
           "name": "test (shard 2)",
           "wall_s": 26,
+          "start_s": 22,
           "steps": [
             {
               "name": "Set up job",
@@ -1200,6 +1231,7 @@
         {
           "name": "test (shard 3)",
           "wall_s": 26,
+          "start_s": 22,
           "steps": [
             {
               "name": "Set up job",
@@ -1238,6 +1270,7 @@
         {
           "name": "test (shard 0)",
           "wall_s": 27,
+          "start_s": 22,
           "steps": [
             {
               "name": "Set up job",
@@ -1276,6 +1309,7 @@
         {
           "name": "test (shard 1)",
           "wall_s": 22,
+          "start_s": 22,
           "steps": [
             {
               "name": "Set up job",
@@ -1314,6 +1348,7 @@
         {
           "name": "ci-ok",
           "wall_s": 3,
+          "start_s": 51,
           "steps": [
             {
               "name": "Set up job",
@@ -1348,6 +1383,7 @@
         {
           "name": "typecheck",
           "wall_s": 8,
+          "start_s": 3,
           "steps": [
             {
               "name": "Set up job",
@@ -1382,6 +1418,7 @@
         {
           "name": "build",
           "wall_s": 8,
+          "start_s": 3,
           "steps": [
             {
               "name": "Set up job",
@@ -1416,6 +1453,7 @@
         {
           "name": "lint",
           "wall_s": 15,
+          "start_s": 3,
           "steps": [
             {
               "name": "Set up job",
@@ -1450,6 +1488,7 @@
         {
           "name": "fmt",
           "wall_s": 8,
+          "start_s": 3,
           "steps": [
             {
               "name": "Set up job",
@@ -1484,6 +1523,7 @@
         {
           "name": "plan",
           "wall_s": 13,
+          "start_s": 3,
           "steps": [
             {
               "name": "Set up job",
@@ -1522,6 +1562,7 @@
         {
           "name": "tooling",
           "wall_s": 15,
+          "start_s": 3,
           "steps": [
             {
               "name": "Set up job",
@@ -1556,6 +1597,7 @@
         {
           "name": "test (shard 3)",
           "wall_s": 11,
+          "start_s": 18,
           "steps": [
             {
               "name": "Set up job",
@@ -1594,6 +1636,7 @@
         {
           "name": "test (shard 2)",
           "wall_s": 10,
+          "start_s": 17,
           "steps": [
             {
               "name": "Set up job",
@@ -1632,6 +1675,7 @@
         {
           "name": "test (shard 1)",
           "wall_s": 15,
+          "start_s": 18,
           "steps": [
             {
               "name": "Set up job",
@@ -1670,6 +1714,7 @@
         {
           "name": "test (shard 0)",
           "wall_s": 10,
+          "start_s": 17,
           "steps": [
             {
               "name": "Set up job",
@@ -1708,6 +1753,7 @@
         {
           "name": "ci-ok",
           "wall_s": 3,
+          "start_s": 35,
           "steps": [
             {
               "name": "Set up job",
@@ -1742,6 +1788,7 @@
         {
           "name": "test (baseline)",
           "wall_s": 219,
+          "start_s": 3,
           "steps": [
             {
               "name": "Set up job",
@@ -1816,6 +1863,7 @@
         {
           "name": "plan",
           "wall_s": 9,
+          "start_s": 3,
           "steps": [
             {
               "name": "Set up job",
@@ -1854,6 +1902,7 @@
         {
           "name": "typecheck",
           "wall_s": 9,
+          "start_s": 3,
           "steps": [
             {
               "name": "Set up job",
@@ -1888,6 +1937,7 @@
         {
           "name": "fmt",
           "wall_s": 8,
+          "start_s": 3,
           "steps": [
             {
               "name": "Set up job",
@@ -1922,6 +1972,7 @@
         {
           "name": "lint",
           "wall_s": 8,
+          "start_s": 3,
           "steps": [
             {
               "name": "Set up job",
@@ -1956,6 +2007,7 @@
         {
           "name": "tooling",
           "wall_s": 15,
+          "start_s": 3,
           "steps": [
             {
               "name": "Set up job",
@@ -1990,6 +2042,7 @@
         {
           "name": "build",
           "wall_s": 10,
+          "start_s": 3,
           "steps": [
             {
               "name": "Set up job",
@@ -2024,6 +2077,7 @@
         {
           "name": "test (shard 3)",
           "wall_s": 22,
+          "start_s": 13,
           "steps": [
             {
               "name": "Set up job",
@@ -2062,6 +2116,7 @@
         {
           "name": "test (shard 1)",
           "wall_s": 26,
+          "start_s": 14,
           "steps": [
             {
               "name": "Set up job",
@@ -2100,6 +2155,7 @@
         {
           "name": "test (shard 2)",
           "wall_s": 20,
+          "start_s": 13,
           "steps": [
             {
               "name": "Set up job",
@@ -2138,6 +2194,7 @@
         {
           "name": "test (shard 0)",
           "wall_s": 21,
+          "start_s": 13,
           "steps": [
             {
               "name": "Set up job",
@@ -2176,6 +2233,7 @@
         {
           "name": "ci-ok",
           "wall_s": 4,
+          "start_s": 42,
           "steps": [
             {
               "name": "Set up job",
@@ -2210,6 +2268,7 @@
         {
           "name": "build",
           "wall_s": 7,
+          "start_s": 3,
           "steps": [
             {
               "name": "Set up job",
@@ -2244,6 +2303,7 @@
         {
           "name": "typecheck",
           "wall_s": 16,
+          "start_s": 3,
           "steps": [
             {
               "name": "Set up job",
@@ -2278,6 +2338,7 @@
         {
           "name": "tooling",
           "wall_s": 25,
+          "start_s": 3,
           "steps": [
             {
               "name": "Set up job",
@@ -2312,6 +2373,7 @@
         {
           "name": "fmt",
           "wall_s": 7,
+          "start_s": 3,
           "steps": [
             {
               "name": "Set up job",
@@ -2346,6 +2408,7 @@
         {
           "name": "plan",
           "wall_s": 12,
+          "start_s": 3,
           "steps": [
             {
               "name": "Set up job",
@@ -2384,6 +2447,7 @@
         {
           "name": "lint",
           "wall_s": 10,
+          "start_s": 3,
           "steps": [
             {
               "name": "Set up job",
@@ -2418,6 +2482,7 @@
         {
           "name": "test (shard 1)",
           "wall_s": 20,
+          "start_s": 17,
           "steps": [
             {
               "name": "Set up job",
@@ -2456,6 +2521,7 @@
         {
           "name": "test (shard 0)",
           "wall_s": 12,
+          "start_s": 17,
           "steps": [
             {
               "name": "Set up job",
@@ -2494,6 +2560,7 @@
         {
           "name": "test (shard 3)",
           "wall_s": 13,
+          "start_s": 17,
           "steps": [
             {
               "name": "Set up job",
@@ -2532,6 +2599,7 @@
         {
           "name": "test (shard 2)",
           "wall_s": 9,
+          "start_s": 17,
           "steps": [
             {
               "name": "Set up job",
@@ -2570,6 +2638,7 @@
         {
           "name": "ci-ok",
           "wall_s": 2,
+          "start_s": 39,
           "steps": [
             {
               "name": "Set up job",
@@ -2604,6 +2673,7 @@
         {
           "name": "test (baseline)",
           "wall_s": 173,
+          "start_s": 3,
           "steps": [
             {
               "name": "Set up job",
@@ -2678,6 +2748,7 @@
         {
           "name": "fmt",
           "wall_s": 11,
+          "start_s": 3,
           "steps": [
             {
               "name": "Set up job",
@@ -2712,6 +2783,7 @@
         {
           "name": "lint",
           "wall_s": 6,
+          "start_s": 3,
           "steps": [
             {
               "name": "Set up job",
@@ -2746,6 +2818,7 @@
         {
           "name": "build",
           "wall_s": 7,
+          "start_s": 3,
           "steps": [
             {
               "name": "Set up job",
@@ -2780,6 +2853,7 @@
         {
           "name": "plan",
           "wall_s": 9,
+          "start_s": 3,
           "steps": [
             {
               "name": "Set up job",
@@ -2818,6 +2892,7 @@
         {
           "name": "typecheck",
           "wall_s": 8,
+          "start_s": 3,
           "steps": [
             {
               "name": "Set up job",
@@ -2852,6 +2927,7 @@
         {
           "name": "tooling",
           "wall_s": 15,
+          "start_s": 3,
           "steps": [
             {
               "name": "Set up job",
@@ -2886,6 +2962,7 @@
         {
           "name": "test (shard 0)",
           "wall_s": 21,
+          "start_s": 14,
           "steps": [
             {
               "name": "Set up job",
@@ -2924,6 +3001,7 @@
         {
           "name": "test (shard 3)",
           "wall_s": 20,
+          "start_s": 14,
           "steps": [
             {
               "name": "Set up job",
@@ -2962,6 +3040,7 @@
         {
           "name": "test (shard 1)",
           "wall_s": 28,
+          "start_s": 14,
           "steps": [
             {
               "name": "Set up job",
@@ -3000,6 +3079,7 @@
         {
           "name": "test (shard 2)",
           "wall_s": 20,
+          "start_s": 14,
           "steps": [
             {
               "name": "Set up job",
@@ -3038,6 +3118,7 @@
         {
           "name": "ci-ok",
           "wall_s": 3,
+          "start_s": 44,
           "steps": [
             {
               "name": "Set up job",
@@ -3072,6 +3153,7 @@
         {
           "name": "plan",
           "wall_s": 7,
+          "start_s": 3,
           "steps": [
             {
               "name": "Set up job",
@@ -3110,6 +3192,7 @@
         {
           "name": "tooling",
           "wall_s": 14,
+          "start_s": 3,
           "steps": [
             {
               "name": "Set up job",
@@ -3144,6 +3227,7 @@
         {
           "name": "lint",
           "wall_s": 11,
+          "start_s": 3,
           "steps": [
             {
               "name": "Set up job",
@@ -3178,6 +3262,7 @@
         {
           "name": "build",
           "wall_s": 7,
+          "start_s": 2,
           "steps": [
             {
               "name": "Set up job",
@@ -3212,6 +3297,7 @@
         {
           "name": "typecheck",
           "wall_s": 8,
+          "start_s": 3,
           "steps": [
             {
               "name": "Set up job",
@@ -3246,6 +3332,7 @@
         {
           "name": "fmt",
           "wall_s": 11,
+          "start_s": 3,
           "steps": [
             {
               "name": "Set up job",
@@ -3280,6 +3367,7 @@
         {
           "name": "test (shard 2)",
           "wall_s": 12,
+          "start_s": 12,
           "steps": [
             {
               "name": "Set up job",
@@ -3318,6 +3406,7 @@
         {
           "name": "test (shard 0)",
           "wall_s": 14,
+          "start_s": 12,
           "steps": [
             {
               "name": "Set up job",
@@ -3356,6 +3445,7 @@
         {
           "name": "test (shard 1)",
           "wall_s": 13,
+          "start_s": 13,
           "steps": [
             {
               "name": "Set up job",
@@ -3394,6 +3484,7 @@
         {
           "name": "test (shard 3)",
           "wall_s": 13,
+          "start_s": 12,
           "steps": [
             {
               "name": "Set up job",
@@ -3432,6 +3523,7 @@
         {
           "name": "ci-ok",
           "wall_s": 3,
+          "start_s": 28,
           "steps": [
             {
               "name": "Set up job",
@@ -3466,6 +3558,7 @@
         {
           "name": "test (baseline)",
           "wall_s": 203,
+          "start_s": 3,
           "steps": [
             {
               "name": "Set up job",
@@ -3540,6 +3633,7 @@
         {
           "name": "build",
           "wall_s": 11,
+          "start_s": 3,
           "steps": [
             {
               "name": "Set up job",
@@ -3574,6 +3668,7 @@
         {
           "name": "tooling",
           "wall_s": 19,
+          "start_s": 3,
           "steps": [
             {
               "name": "Set up job",
@@ -3608,6 +3703,7 @@
         {
           "name": "fmt",
           "wall_s": 8,
+          "start_s": 3,
           "steps": [
             {
               "name": "Set up job",
@@ -3642,6 +3738,7 @@
         {
           "name": "typecheck",
           "wall_s": 11,
+          "start_s": 3,
           "steps": [
             {
               "name": "Set up job",
@@ -3676,6 +3773,7 @@
         {
           "name": "lint",
           "wall_s": 7,
+          "start_s": 3,
           "steps": [
             {
               "name": "Set up job",
@@ -3710,6 +3808,7 @@
         {
           "name": "plan",
           "wall_s": 18,
+          "start_s": 4,
           "steps": [
             {
               "name": "Set up job",
@@ -3748,6 +3847,7 @@
         {
           "name": "test (shard 2)",
           "wall_s": 28,
+          "start_s": 25,
           "steps": [
             {
               "name": "Set up job",
@@ -3786,6 +3886,7 @@
         {
           "name": "test (shard 3)",
           "wall_s": 17,
+          "start_s": 24,
           "steps": [
             {
               "name": "Set up job",
@@ -3824,6 +3925,7 @@
         {
           "name": "test (shard 1)",
           "wall_s": 19,
+          "start_s": 24,
           "steps": [
             {
               "name": "Set up job",
@@ -3862,6 +3964,7 @@
         {
           "name": "test (shard 0)",
           "wall_s": 26,
+          "start_s": 25,
           "steps": [
             {
               "name": "Set up job",
@@ -3900,6 +4003,7 @@
         {
           "name": "ci-ok",
           "wall_s": 3,
+          "start_s": 55,
           "steps": [
             {
               "name": "Set up job",
@@ -3934,6 +4038,7 @@
         {
           "name": "typecheck",
           "wall_s": 8,
+          "start_s": 3,
           "steps": [
             {
               "name": "Set up job",
@@ -3968,6 +4073,7 @@
         {
           "name": "lint",
           "wall_s": 11,
+          "start_s": 3,
           "steps": [
             {
               "name": "Set up job",
@@ -4002,6 +4108,7 @@
         {
           "name": "tooling",
           "wall_s": 14,
+          "start_s": 3,
           "steps": [
             {
               "name": "Set up job",
@@ -4036,6 +4143,7 @@
         {
           "name": "plan",
           "wall_s": 8,
+          "start_s": 3,
           "steps": [
             {
               "name": "Set up job",
@@ -4074,6 +4182,7 @@
         {
           "name": "fmt",
           "wall_s": 8,
+          "start_s": 3,
           "steps": [
             {
               "name": "Set up job",
@@ -4108,6 +4217,7 @@
         {
           "name": "build",
           "wall_s": 9,
+          "start_s": 3,
           "steps": [
             {
               "name": "Set up job",
@@ -4142,6 +4252,7 @@
         {
           "name": "test (shard 1)",
           "wall_s": 14,
+          "start_s": 13,
           "steps": [
             {
               "name": "Set up job",
@@ -4180,6 +4291,7 @@
         {
           "name": "test (shard 3)",
           "wall_s": 13,
+          "start_s": 13,
           "steps": [
             {
               "name": "Set up job",
@@ -4218,6 +4330,7 @@
         {
           "name": "test (shard 0)",
           "wall_s": 9,
+          "start_s": 13,
           "steps": [
             {
               "name": "Set up job",
@@ -4256,6 +4369,7 @@
         {
           "name": "test (shard 2)",
           "wall_s": 7,
+          "start_s": 13,
           "steps": [
             {
               "name": "Set up job",
@@ -4294,6 +4408,7 @@
         {
           "name": "ci-ok",
           "wall_s": 3,
+          "start_s": 29,
           "steps": [
             {
               "name": "Set up job",

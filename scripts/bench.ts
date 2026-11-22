@@ -3,6 +3,7 @@
 //   bun scripts/bench.ts run --runs R
 //   bun scripts/bench.ts --check fast_full_median_lt=60,speedup_gte=3,same_tests
 //   bun scripts/bench.ts --readme [--check]
+//   bun scripts/bench.ts backfill-starts
 import { execFileSync } from "node:child_process";
 import { readFileSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
@@ -15,7 +16,7 @@ const PR_BRANCH = "bench/pr-sample";
 const RUN_TIMEOUT_MS = 30 * 60 * 1000;
 
 export type BenchStep = { name: string; s: number };
-export type BenchJob = { name: string; wall_s: number; steps: BenchStep[] };
+export type BenchJob = { name: string; wall_s: number; start_s?: number; steps: BenchStep[] };
 export type BenchRun = {
   workflow: string;
   mode: string;
@@ -75,6 +76,14 @@ export function jobsTiming(jobs: ApiJob[], runCreatedAt: string) {
         .map((s) => ({ name: s.name, s: secs(s.started_at!, s.completed_at!) })),
     })),
   };
+}
+
+// Seconds from run creation to each job's start, by job name. Jobs that never started are left out.
+export function jobStarts(jobs: ApiJob[], runCreatedAt: string): Record<string, number> {
+  const out: Record<string, number> = {};
+  for (const j of jobs)
+    if (j.started_at) out[j.name] = Math.max(0, secs(runCreatedAt, j.started_at));
+  return out;
 }
 
 // Body of the workflow_dispatch API call. Only fast.yml declares inputs, baseline rejects them.
@@ -327,6 +336,13 @@ async function dispatchOne(workflow: string, mode: "full" | "pr"): Promise<Bench
   const jobs = ghJson([`repos/${REPO}/actions/runs/${found.id}/jobs?per_page=100`])
     .jobs as (ApiJob & { id: number })[];
   const timing = jobsTiming(jobs, run.created_at) ?? { wall_s: 0, queue_s: 0, jobs: [] };
+  const starts = jobStarts(jobs, run.created_at);
+  const timedJobs = timing.jobs.map(({ name, wall_s, steps }) => ({
+    name,
+    wall_s,
+    start_s: starts[name],
+    steps,
+  }));
   let files = 0;
   let passed = 0;
   let seen = false;
@@ -349,7 +365,7 @@ async function dispatchOne(workflow: string, mode: "full" | "pr"): Promise<Bench
     created_at: run.created_at,
     queue_s: timing.queue_s,
     wall_s: timing.wall_s,
-    jobs: timing.jobs,
+    jobs: timedJobs,
     test_files: seen ? files : null,
     tests_passed: seen ? passed : null,
   };
@@ -375,8 +391,27 @@ async function runBench(runs: number) {
   writeFileSync(README, renderReadme(readFileSync(README, "utf8"), res));
 }
 
+// One-time: add start_s to the runs already in results.json. Writes once, after every fetch.
+function backfillStarts() {
+  const REPO = repoName();
+  const res: Results = JSON.parse(readFileSync(RESULTS, "utf8"));
+  for (const r of res.runs) {
+    if (r.attempt !== 1) throw new Error(`run ${r.run_id} is attempt ${r.attempt}, not 1`);
+    const apiJobs = ghJson([`repos/${REPO}/actions/runs/${r.run_id}/jobs?per_page=100`])
+      .jobs as ApiJob[];
+    const starts = jobStarts(apiJobs, r.created_at);
+    r.jobs = r.jobs.map(({ name, wall_s, steps }) => {
+      const start_s = starts[name];
+      if (start_s === undefined) throw new Error(`run ${r.run_id}: no start for job ${name}`);
+      return { name, wall_s, start_s, steps };
+    });
+  }
+  writeFileSync(RESULTS, `${JSON.stringify(res, null, 2)}\n`);
+}
+
 async function main(argv: string[]) {
   const arg = (f: string) => argv[argv.indexOf(f) + 1];
+  if (argv[0] === "backfill-starts") return backfillStarts();
   if (argv[0] === "run") return runBench(Number(arg("--runs") ?? 5));
   const res: Results = JSON.parse(readFileSync(RESULTS, "utf8"));
   if (argv.includes("--readme")) {

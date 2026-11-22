@@ -1,10 +1,12 @@
 import { describe, expect, test } from "bun:test";
+import { readFileSync } from "node:fs";
 import {
   assertUpToDate,
   checkAll,
   checkReadme,
   correlateRun,
   dispatchBody,
+  jobStarts,
   jobsTiming,
   median,
   p90,
@@ -445,5 +447,40 @@ describe("assertUpToDate", () => {
   });
   test("passes when the branch is level with main", () => {
     expect(() => assertUpToDate(0)).not.toThrow();
+  });
+});
+
+describe("jobStarts", () => {
+  test("maps job name to seconds from run created_at", () => {
+    expect(jobStarts(jobsResponse.jobs, "2026-11-21T09:59:50Z")).toEqual({
+      lint: 20,
+      "test (1)": 22,
+      "ci-ok": 51,
+    });
+  });
+  test("a job with a null started_at is skipped", () => {
+    const jobs = [
+      { name: "a", started_at: null, completed_at: "2026-11-21T10:00:30Z" },
+      { name: "b", started_at: "2026-11-21T10:00:10Z", completed_at: null },
+    ];
+    expect(jobStarts(jobs, "2026-11-21T10:00:00Z")).toEqual({ b: 10 });
+  });
+  test("a start before the run was created is clamped to 0", () => {
+    const jobs = [{ name: "a", started_at: "2026-11-21T09:59:58Z", completed_at: null }];
+    expect(jobStarts(jobs, "2026-11-21T10:00:00Z")).toEqual({ a: 0 });
+  });
+});
+
+describe("committed results.json start_s", () => {
+  test("every job has a finite start_s of at least 0", () => {
+    const res: Results = JSON.parse(
+      readFileSync(new URL("../bench/results.json", import.meta.url), "utf8"),
+    );
+    const jobs = res.runs.flatMap((r) => r.jobs);
+    expect(jobs.length).toBeGreaterThan(0);
+    for (const j of jobs) {
+      expect(Number.isFinite(j.start_s)).toBe(true);
+      expect(j.start_s!).toBeGreaterThanOrEqual(0);
+    }
   });
 });
