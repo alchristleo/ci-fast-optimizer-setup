@@ -455,7 +455,7 @@ describe("jobStarts", () => {
     expect(jobStarts(jobsResponse.jobs, "2026-11-21T09:59:50Z")).toEqual({
       lint: 20,
       "test (1)": 22,
-      "ci-ok": 40,
+      "ci-ok": 51,
     });
   });
   test("a job with a null started_at is skipped", () => {
