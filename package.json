@@ -11,6 +11,7 @@
     "check": "bun check",
     "build": "bun build src/app.ts --target=node --outdir dist",
     "test": "bun test",
+    "test:all": "bun test && bun test ./scripts/",
     "test:tooling": "bun test ./scripts/",
     "gen": "bun scripts/gen.ts --domains 120 && bun fmt src/domains test/generated fixtures",
     "ci:local": "bun run fmt:check && bun run lint && bun run check && bun run build && bun run test && bun run test:tooling",

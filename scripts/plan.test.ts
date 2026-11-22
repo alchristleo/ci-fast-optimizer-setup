@@ -164,12 +164,32 @@ describe("planFiles", () => {
       put(root, "src/lib/m.ts", "export const m = 2;\n");
       git(root, "add", "-A");
       git(root, "commit", "-qm", "feature");
-      expect(planFiles({ mode: "pr", base: "main", head: "feature" }, root)).toEqual([
-        "test/a.test.ts",
-      ]);
+      const [base, head] = ["main", "feature"].map((r) => git(root, "rev-parse", r).trim());
+      expect(planFiles({ mode: "pr", base: base!, head: head! }, root)).toEqual(["test/a.test.ts"]);
     } finally {
       rmSync(root, { recursive: true });
     }
+  });
+
+  test("pr mode rejects a base or head that is not a hex SHA, before any git call", () => {
+    const nowhere = join(tmpdir(), "plan-no-such-dir");
+    for (const [base, head] of [
+      ["--output=x", "abc1234"],
+      ["abc1234", "--upload-pack=x"],
+      ["main", "abc1234"],
+      ["abc123", "abc1234"],
+    ])
+      expect(() => planFiles({ mode: "pr", base: base!, head: head! }, nowhere)).toThrow(
+        "base and head must be commit SHAs",
+      );
+  });
+
+  test("pr mode accepts 7 to 40 hex digit SHAs", () => {
+    const nowhere = join(tmpdir(), "plan-no-such-dir");
+    for (const sha of ["abc1234", "ABC1234abc", "a".repeat(40)])
+      expect(() => planFiles({ mode: "pr", base: sha, head: sha }, nowhere)).not.toThrow(
+        "base and head must be commit SHAs",
+      );
   });
 });
 

@@ -36,7 +36,11 @@ export function planMatrix(
 const listTests = (cwd: string) =>
   [...new Glob("test/**/*.test.ts").scanSync({ cwd, dot: true })].sort();
 
+const SHA = /^[0-9a-f]{7,40}$/i;
+
 export function planFiles({ mode, base, head }: Mode, cwd: string): string[] {
+  if (mode === "pr" && !(SHA.test(base) && SHA.test(head)))
+    throw new Error("base and head must be commit SHAs");
   const picked = mode === "pr" ? selectFiles(base, head, cwd) : "all";
   return picked === "all" ? listTests(cwd) : picked;
 }

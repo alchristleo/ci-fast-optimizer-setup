@@ -235,7 +235,7 @@ describe("charts", () => {
     expect(svg).toContain("baseline test job: 212 s");
     expect(svg).not.toContain(">test (baseline)</text>");
     expect(svg).toContain(">test (shards)</text>");
-    expect(svg).toContain("Setup and checkout, not tests, are most of a fast job");
+    expect(svg).toContain("Checkout and setup take longer than work in 6 of 8 fast jobs");
     expect(svg).toContain("more than work in 6 of 8 fast job kinds");
     expect(alt).toContain("6 of 8 fast job kinds");
   });
@@ -249,6 +249,8 @@ describe("charts", () => {
           : r,
       ),
     };
-    expect(steps(heavy, "light").svg).toContain("Tests are most of a fast job");
+    expect(steps(heavy, "light").svg).toContain(
+      "Checkout and setup take longer than work in only 0 of 8 fast jobs",
+    );
   });
 });
