@@ -89,6 +89,10 @@ export function dispatchBody(
   return { ref, inputs: mode === "pr" ? { mode, base, head } : { mode } };
 }
 
+export function assertUpToDate(behindBy: number): void {
+  if (behindBy > 0) throw new Error(`${PR_BRANCH} is stale: rebase it on main`);
+}
+
 export function median(xs: number[]): number {
   const s = [...xs].sort((a, b) => a - b);
   const m = s.length >> 1;
@@ -291,6 +295,8 @@ async function dispatchOne(workflow: string, mode: "full" | "pr"): Promise<Bench
   const REPO = repoName();
   const file = `${workflow}.yml`;
   const mainSha: string = ghJson([`repos/${REPO}/commits/main`]).sha;
+  if (mode === "pr")
+    assertUpToDate(ghJson([`repos/${REPO}/compare/main...${PR_BRANCH}`]).behind_by);
   const ref = mode === "pr" ? PR_BRANCH : "main";
   const headSha: string =
     mode === "pr" ? ghJson([`repos/${REPO}/commits/${PR_BRANCH}`]).sha : mainSha;
