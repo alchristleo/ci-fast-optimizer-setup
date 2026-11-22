@@ -440,6 +440,9 @@ describe("assertUpToDate", () => {
   test("throws when the branch is behind main", () => {
     expect(() => assertUpToDate(1)).toThrow("bench/pr-sample is stale: rebase it on main");
   });
+  test("throws when behind_by is missing", () => {
+    expect(() => assertUpToDate(undefined as unknown as number)).toThrow("rebase it on main");
+  });
   test("passes when the branch is level with main", () => {
     expect(() => assertUpToDate(0)).not.toThrow();
   });

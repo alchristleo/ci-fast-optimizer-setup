@@ -23,6 +23,8 @@ export function planMatrix(
   timings: Record<string, number>,
   maxShards = 4,
 ): { count: number; matrix: { include: { shard: number; files: string }[] } } {
+  const bad = files.find((f) => /\s/.test(f));
+  if (bad !== undefined) throw new Error(`whitespace in test path: ${JSON.stringify(bad)}`);
   const shards = planShards(files, timings, maxShards);
   return {
     count: shards.length,
@@ -31,7 +33,8 @@ export function planMatrix(
 }
 
 // Code-unit order (JS default sort), not the locale order of `sort`.
-const listTests = (cwd: string) => [...new Glob("test/**/*.test.ts").scanSync(cwd)].sort();
+const listTests = (cwd: string) =>
+  [...new Glob("test/**/*.test.ts").scanSync({ cwd, dot: true })].sort();
 
 export function planFiles({ mode, base, head }: Mode, cwd: string): string[] {
   const picked = mode === "pr" ? selectFiles(base, head, cwd) : "all";

@@ -90,7 +90,7 @@ export function dispatchBody(
 }
 
 export function assertUpToDate(behindBy: number): void {
-  if (behindBy > 0) throw new Error(`${PR_BRANCH} is stale: rebase it on main`);
+  if (behindBy !== 0) throw new Error(`${PR_BRANCH} is stale: rebase it on main`);
 }
 
 export function median(xs: number[]): number {
