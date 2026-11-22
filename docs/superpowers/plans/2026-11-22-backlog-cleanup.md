@@ -64,3 +64,6 @@ T2 review approve cb0fe1c sdd-reviewer-lite AC7 byte-identical
 T2 done cb0fe1c sdd-implementer-lite seed constant
 T1 review approve f338f5d sdd-reviewer parity clean, no weakened asserts
 T1 done f338f5d sdd-implementer selectFiles + flat shape
+T4 review approve 484d8e2 sdd-reviewer parity ok; should: CLI output untested
+T4 coord a686881 CLI GITHUB_OUTPUT test
+T4 done a686881 sdd-reviewer-lite coord re-review approve
