@@ -80,3 +80,4 @@ PANEL design skipped <300 lines new non-test code
 PANEL security df2e140 must=0 should=1 nit=0
 PANEL correctness df2e140 must=0 should=0 nit=2
 TRIAGE fixed=3 dismissed=0 backlog=1
+FIX wave 0fd7d3e sdd-implementer whitespace throw, glob dot, bench fail-closed; re-review sdd-reviewer-lite approve
