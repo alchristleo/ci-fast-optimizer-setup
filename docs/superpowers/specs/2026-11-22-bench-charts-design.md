@@ -21,9 +21,8 @@ Target reader: an engineer who maintains a CI pipeline, scanning the README on G
   The backfill asserts `run_attempt == 1` (the jobs API returns the latest attempt only), skips jobs
   with a null `started_at`, clamps clock skew below 0 to 0, writes `results.json` once at the end
   (no partial write, same `JSON.stringify(..., null, 2)` + newline format) and changes no existing field,
-  so the README tables do not move. It is a one-time step and its result is committed. `bench.ts run`
-  also records `start_s` from now on. The time axis starts at run `created_at`, so queue time and
-  runner-pickup gaps show.
+  so the README tables do not move. It was a one-time step: its result is committed and the verb was
+  deleted in the panel fix wave. `bench.ts run` records `start_s` (inside `jobsTiming`) from now on. The timeline axis starts at each run's first job start (panel fix: one number per run, equal to its wall time).
 - D2 Files: `scripts/charts.ts` holds pure functions `(res: Results, theme: "light" | "dark") => string`
   (SVG), one per chart. `bun scripts/bench.ts --charts` writes `bench/charts/<name>-<theme>.svg`
   (8 files). `--charts --check` exits 1 if a committed SVG differs from the render. A tooling test runs
