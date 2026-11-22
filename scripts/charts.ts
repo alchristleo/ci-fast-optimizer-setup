@@ -228,9 +228,12 @@ const medianRun = (runs: BenchRun[]): BenchRun =>
 
 const jobEnd = (j: BenchJob) => j.start_s + j.wall_s;
 
-// Job dependencies by job kind, from .github/workflows/fast.yml: shards need plan, ci-ok needs every job.
+// Job dependencies by job kind, as in .github/workflows/fast.yml (workflows.test.ts checks they agree).
 // Run data has no dependency edges, and a job that ends as another starts is no proof of one.
-const NEEDS: Record<string, string[] | "all"> = { "test (shards)": ["plan"], "ci-ok": "all" };
+export const NEEDS: Record<string, string[]> = {
+  "test (shards)": ["plan"],
+  "ci-ok": ["plan", "fmt", "lint", "typecheck", "build", "tooling", "test (shards)"],
+};
 
 // The chain of jobs that sets the run length: the latest-ending job, then the latest-ending job
 // it needs, and so on back.
@@ -240,10 +243,7 @@ function criticalPath(jobs: BenchJob[]): BenchJob[] {
   for (;;) {
     const needs = NEEDS[jobKind(cur.name)];
     const prev = jobs
-      .filter(
-        (j) =>
-          j.start_s < cur.start_s && needs && (needs === "all" || needs.includes(jobKind(j.name))),
-      )
+      .filter((j) => j.start_s < cur.start_s && needs?.includes(jobKind(j.name)))
       .reduce<BenchJob | undefined>((a, b) => (!a || jobEnd(b) > jobEnd(a) ? b : a), undefined);
     if (!prev) return chain;
     chain.unshift(prev);
