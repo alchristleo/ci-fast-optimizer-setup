@@ -9,25 +9,35 @@ On the benchmark below, the full fast pipeline has a median wall time of 44 s ag
 Every number in this section comes from `bench/results.json`. The script `scripts/bench.ts` dispatches each workflow on GitHub, reads job and step timings from the Actions API, and renders the tables below. Wall time is the last job's end minus the first job's start, so it includes runner startup and install but not queue time (shown separately). Five rounds, each dispatching baseline, then fast, then fast on the sample PR branch, one run at a time.
 
 <!-- bench:start -->
+The four charts show, in order: the median wall time of each pipeline, the jobs of one run of each pipeline, the wall time of every run, and where a fast job spends its seconds.
+
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="bench/charts/wall-time-dark.svg">
-  <img src="bench/charts/wall-time-light.svg" alt="Median wall time: baseline full 219 s, fast full 44 s, fast pr 34 s." width="720">
+  <img src="bench/charts/wall-time-light.svg" alt="Fast full is 4.98x faster than baseline full: 44 s vs 219 s median.">
 </picture>
+
+Median wall time of each pipeline. The whisker reaches the p90 run.
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="bench/charts/timeline-dark.svg">
-  <img src="bench/charts/timeline-light.svg" alt="Timeline of one run per pipeline on one time axis: median wall time 219 s for baseline full, 44 s for fast full, 34 s for fast pr." width="720">
+  <img src="bench/charts/timeline-light.svg" alt="Critical path of the median run: baseline full test (baseline) 219 s; fast full plan, test (shard 1), ci-ok 44 s; fast pr plan, test (shard 1), ci-ok 34 s.">
 </picture>
+
+The median run of each pipeline, job by job. Solid bars are the critical path, the chain of jobs that sets the wall time.
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="bench/charts/runs-dark.svg">
-  <img src="bench/charts/runs-light.svg" alt="Wall time of every run: baseline full 173 to 285 s, fast full 42 to 55 s, fast pr 29 to 38 s." width="720">
+  <img src="bench/charts/runs-light.svg" alt="Wall time of every run: baseline full 173 to 285 s, fast full 42 to 55 s, fast pr 29 to 38 s. Medians 219 s, 44 s, 34 s.">
 </picture>
+
+Every run, one dot each. Dots that would overlap move up or down. The tick marks the median.
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="bench/charts/steps-dark.svg">
-  <img src="bench/charts/steps-light.svg" alt="Median seconds per job split into checkout, setup and work: the baseline job takes 215 s, the longest fast job 18 s." width="720">
+  <img src="bench/charts/steps-light.svg" alt="Checkout and setup take more than work in 5 of 7 fast job kinds. The baseline test job takes 215 s, not drawn.">
 </picture>
+
+Median seconds of each fast job, split into checkout, setup and work. The baseline test job takes 215 s and is not drawn.
 
 Columns: mode `full` runs every test file and `pr` runs only the files the diff can reach (fast.yml on the branch `bench/pr-sample`). `excluded` counts runs that did not succeed and are left out of every statistic. Runner seconds are the sum of all job walls in a run, skipped jobs left out.
 
@@ -171,12 +181,14 @@ Needs Bun 1.4.5, Node 22 and the `gh` CLI signed in to a fork of this repo.
 bun install --frozen-lockfile
 bun run ci:local                      # fmt, lint, check, build, tests, tooling tests
 bun run legacy:check && bun run check # both type checkers agree
-bun scripts/bench.ts run --runs 5     # dispatches 15 runs one at a time; the recorded runs total about 26 min of job time, plus queue and polling
+bun scripts/bench.ts run --runs 5     # dispatches 15 runs one at a time, then writes the charts and README tables; the recorded runs total about 26 min of job time, plus queue and polling
 bun scripts/bench.ts --check fast_full_median_lt=60,fast_full_max_lte=90
 bun scripts/bench.ts --check speedup_gte=3
 bun scripts/bench.ts --check same_tests
 bun scripts/bench.ts --check pr_fewer_files,pr_median_lt=60
 bun scripts/bench.ts --readme --check # README tables equal results.json
+bun scripts/bench.ts --charts # write bench/charts/*.svg from results.json
+bun scripts/bench.ts --charts --check # committed charts equal the render
 ```
 
 The bench script reads the repo from `gh`, or from the `BENCH_REPO=owner/name` variable. For the pr runs it needs a branch named `bench/pr-sample` with a small change to a generated service. Run `bun run gen` to regenerate the generated domains.

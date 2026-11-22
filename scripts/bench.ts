@@ -1,15 +1,16 @@
-// Bench: dispatch baseline/fast workflows, collect timings, write bench/results.json, render README.
+// Bench: dispatch baseline/fast workflows, collect timings, write bench/results.json, render the charts and README.
 // Usage:
 //   bun scripts/bench.ts run --runs R
 //   bun scripts/bench.ts --check fast_full_median_lt=60,speedup_gte=3,same_tests
 //   bun scripts/bench.ts --readme [--check]
 //   bun scripts/bench.ts --charts [--check]
-//   bun scripts/bench.ts backfill-starts
 import { execFileSync } from "node:child_process";
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
-import { CHARTS, stepRows } from "./charts";
+import { PIPELINES, isBookkeeping, jobKind, median, pipelineStats, summarize } from "./bench-data";
+import type { BenchRun, Results } from "./bench-data";
+import { CHARTS, chartable } from "./charts";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 const RESULTS = join(root, "bench/results.json");
@@ -17,30 +18,6 @@ const README = join(root, "README.md");
 const CHART_DIR = join(root, "bench/charts");
 const PR_BRANCH = "bench/pr-sample";
 const RUN_TIMEOUT_MS = 30 * 60 * 1000;
-
-export type BenchStep = { name: string; s: number };
-export type BenchJob = { name: string; wall_s: number; start_s?: number; steps: BenchStep[] };
-export type BenchRun = {
-  workflow: string;
-  mode: string;
-  run_id: number;
-  head_sha: string;
-  attempt: number;
-  url: string;
-  conclusion: string;
-  created_at: string;
-  queue_s: number;
-  wall_s: number;
-  jobs: BenchJob[];
-  test_files: number | null;
-  tests_passed: number | null;
-};
-export type Results = {
-  generated_at: string | null;
-  bun: string | null;
-  node: string | null;
-  runs: BenchRun[];
-};
 
 type ApiStep = { name: string; started_at: string | null; completed_at: string | null };
 type ApiJob = {
@@ -74,19 +51,12 @@ export function jobsTiming(jobs: ApiJob[], runCreatedAt: string) {
     jobs: done.map((j) => ({
       name: j.name,
       wall_s: secs(j.started_at!, j.completed_at!),
+      start_s: Math.max(0, secs(runCreatedAt, j.started_at!)),
       steps: (j.steps ?? [])
         .filter((s) => s.started_at && s.completed_at)
         .map((s) => ({ name: s.name, s: secs(s.started_at!, s.completed_at!) })),
     })),
   };
-}
-
-// Seconds from run creation to each job's start, by job name. Jobs that never started are left out.
-export function jobStarts(jobs: ApiJob[], runCreatedAt: string): Record<string, number> {
-  const out: Record<string, number> = {};
-  for (const j of jobs)
-    if (j.started_at) out[j.name] = Math.max(0, secs(runCreatedAt, j.started_at));
-  return out;
 }
 
 // Body of the workflow_dispatch API call. Only fast.yml declares inputs, baseline rejects them.
@@ -103,18 +73,6 @@ export function dispatchBody(
 
 export function assertUpToDate(behindBy: number): void {
   if (behindBy !== 0) throw new Error(`${PR_BRANCH} is stale: rebase it on main`);
-}
-
-export function median(xs: number[]): number {
-  const s = [...xs].sort((a, b) => a - b);
-  const m = s.length >> 1;
-  return s.length % 2 ? s[m]! : (s[m - 1]! + s[m]!) / 2;
-}
-
-// Nearest-rank percentile.
-export function p90(xs: number[]): number {
-  const s = [...xs].sort((a, b) => a - b);
-  return s[Math.ceil(0.9 * s.length) - 1]!;
 }
 
 // `knownIds`: run ids that already existed for this workflow and sha before the dispatch.
@@ -139,31 +97,11 @@ export function parseTestsNotice(log: string): { files: number; passed: number }
   return m ? { files: Number(m[1]), passed: Number(m[2]) } : undefined;
 }
 
-export function summarize(runs: BenchRun[], workflow: string, mode: string) {
-  const all = runs.filter((r) => r.workflow === workflow && r.mode === mode);
-  const ok = all.filter((r) => r.conclusion === "success");
-  const walls = ok.map((r) => r.wall_s);
-  return {
-    n: ok.length,
-    excluded: all.length - ok.length,
-    ok,
-    median_wall_s: ok.length ? median(walls) : NaN,
-    p90_wall_s: ok.length ? p90(walls) : NaN,
-    median_queue_s: ok.length ? median(ok.map((r) => r.queue_s)) : NaN,
-    // Runner time: the sum of all job walls in a run.
-    median_runner_s: ok.length
-      ? median(ok.map((r) => r.jobs.reduce((t, j) => t + j.wall_s, 0)))
-      : NaN,
-    median_files: ok.length ? median(ok.map((r) => r.test_files ?? NaN)) : NaN,
-  };
-}
-
 export type CheckResult = { expr: string; ok: boolean; detail: string };
 
 export function checkAll(res: Results, exprs: string): CheckResult[] {
-  const fast = summarize(res.runs, "fast", "full");
-  const base = summarize(res.runs, "baseline", "full");
-  const pr = summarize(res.runs, "fast", "pr");
+  const st = pipelineStats(res.runs);
+  const [base, fast, pr] = [st[0]!, st[1]!, st[2]!];
   return exprs
     .split(",")
     .map((e) => e.trim())
@@ -222,11 +160,15 @@ const num = (x: number) => (Number.isFinite(x) ? String(x) : "n/a");
 // "Run actions/checkout@<40 hex>" becomes "actions/checkout".
 const shortStep = (name: string) => name.replace(/^Run /, "").replace(/@[0-9a-f]{40}$/, "");
 
+const CHARTS_NEED = "charts need a successful run with jobs for every pipeline";
+
 // bench/charts/<name>-<theme>.svg for every chart and theme, as file name -> SVG text.
 export function renderCharts(res: Results): Record<string, string> {
+  if (!chartable(res)) throw new Error(CHARTS_NEED);
   const out: Record<string, string> = {};
   for (const [name, fn] of Object.entries(CHARTS))
-    for (const theme of ["light", "dark"] as const) out[`${name}-${theme}.svg`] = fn(res, theme);
+    for (const theme of ["light", "dark"] as const)
+      out[`${name}-${theme}.svg`] = fn(res, theme).svg;
   return out;
 }
 
@@ -238,40 +180,27 @@ export function chartDrift(res: Results, dir: string): string[] {
   });
 }
 
+const INTRO =
+  "The four charts show, in order: the median wall time of each pipeline, the jobs of one run of each pipeline, the wall time of every run, and where a fast job spends its seconds.";
+
 function pictures(res: Results): string {
-  const sum = (w: string, m: string) => summarize(res.runs, w, m);
-  const [b, f, pr] = [sum("baseline", "full"), sum("fast", "full"), sum("fast", "pr")];
-  const range = (s: ReturnType<typeof summarize>) =>
-    `${num(Math.min(...s.ok.map((r) => r.wall_s)))} to ${num(Math.max(...s.ok.map((r) => r.wall_s)))} s`;
-  const rows = stepRows(res);
-  const total = (m: number[]) => m[0]! + m[1]! + m[2]!;
-  const fastMax = Math.max(...rows.slice(1).map((r) => total(r.med)));
-  const alt: Record<string, string> = {
-    "wall-time": `Median wall time: baseline full ${num(b.median_wall_s)} s, fast full ${num(f.median_wall_s)} s, fast pr ${num(pr.median_wall_s)} s.`,
-    timeline: `Timeline of one run per pipeline on one time axis: median wall time ${num(b.median_wall_s)} s for baseline full, ${num(f.median_wall_s)} s for fast full, ${num(pr.median_wall_s)} s for fast pr.`,
-    runs: `Wall time of every run: baseline full ${range(b)}, fast full ${range(f)}, fast pr ${range(pr)}.`,
-    steps: `Median seconds per job split into checkout, setup and work: the baseline job takes ${num(total(rows[0]!.med))} s, the longest fast job ${num(fastMax)} s.`,
-  };
-  return Object.keys(CHARTS)
-    .map((name) =>
-      [
-        "<picture>",
-        `  <source media="(prefers-color-scheme: dark)" srcset="bench/charts/${name}-dark.svg">`,
-        `  <img src="bench/charts/${name}-light.svg" alt="${alt[name]}" width="720">`,
-        "</picture>",
-      ].join("\n"),
-    )
-    .join("\n\n");
+  if (!chartable(res)) return `No charts yet: ${CHARTS_NEED}.`;
+  const blocks = Object.entries(CHARTS).map(([name, chart]) => {
+    const { alt, caption } = chart(res, "light");
+    return [
+      "<picture>",
+      `  <source media="(prefers-color-scheme: dark)" srcset="bench/charts/${name}-dark.svg">`,
+      `  <img src="bench/charts/${name}-light.svg" alt="${alt}">`,
+      "</picture>",
+      "",
+      caption,
+    ].join("\n");
+  });
+  return [INTRO, ...blocks].join("\n\n");
 }
 
 function section(res: Results): string {
-  const rows = (
-    [
-      ["baseline", "full"],
-      ["fast", "full"],
-      ["fast", "pr"],
-    ] as const
-  ).map(([w, m]) => {
+  const rows = PIPELINES.map(([w, m]) => {
     const s = summarize(res.runs, w, m);
     return `| ${w} | ${m} | ${s.n} | ${s.excluded} | ${num(s.median_wall_s)} | ${num(s.p90_wall_s)} | ${num(s.median_queue_s)} | ${num(s.median_runner_s)} |`;
   });
@@ -280,10 +209,9 @@ function section(res: Results): string {
     const by = new Map<string, number[]>();
     for (const r of summarize(res.runs, w, "full").ok)
       for (const j of r.jobs) {
-        // Shards are one job kind: group "test (shard 2)" with the others.
-        const job = j.name.replace(/ \(shard \d+\)$/, " (shards)");
+        const job = jobKind(j.name);
         for (const st of j.steps) {
-          if (/^(Set up job|Post |Complete job)/.test(st.name)) continue; // runner bookkeeping
+          if (isBookkeeping(st.name)) continue;
           const key = `${job}\t${shortStep(st.name)}`;
           by.set(key, [...(by.get(key) ?? []), st.s]);
         }
@@ -294,7 +222,7 @@ function section(res: Results): string {
     }
   }
   const ranges = summarize(res.runs, "fast", "full").ok.map((r) => {
-    const w = r.jobs.filter((j) => /^test \(shard \d+\)$/.test(j.name)).map((j) => j.wall_s);
+    const w = r.jobs.filter((j) => jobKind(j.name) === "test (shards)").map((j) => j.wall_s);
     return w.length ? `${Math.min(...w)}-${Math.max(...w)} s` : "n/a";
   });
   return [
@@ -383,13 +311,6 @@ async function dispatchOne(workflow: string, mode: "full" | "pr"): Promise<Bench
   const jobs = ghJson([`repos/${REPO}/actions/runs/${found.id}/jobs?per_page=100`])
     .jobs as (ApiJob & { id: number })[];
   const timing = jobsTiming(jobs, run.created_at) ?? { wall_s: 0, queue_s: 0, jobs: [] };
-  const starts = jobStarts(jobs, run.created_at);
-  const timedJobs = timing.jobs.map(({ name, wall_s, steps }) => ({
-    name,
-    wall_s,
-    start_s: starts[name],
-    steps,
-  }));
   let files = 0;
   let passed = 0;
   let seen = false;
@@ -412,10 +333,16 @@ async function dispatchOne(workflow: string, mode: "full" | "pr"): Promise<Bench
     created_at: run.created_at,
     queue_s: timing.queue_s,
     wall_s: timing.wall_s,
-    jobs: timedJobs,
+    jobs: timing.jobs,
     test_files: seen ? files : null,
     tests_passed: seen ? passed : null,
   };
+}
+
+function writeCharts(res: Results): void {
+  mkdirSync(CHART_DIR, { recursive: true });
+  for (const [file, svg] of Object.entries(renderCharts(res)))
+    writeFileSync(join(CHART_DIR, file), svg);
 }
 
 async function runBench(runs: number) {
@@ -423,11 +350,7 @@ async function runBench(runs: number) {
   const sh = (c: string, a: string[]) => execFileSync(c, a, { encoding: "utf8" }).trim();
   // Interleaved: baseline, fast, pr per round; dispatched sequentially.
   for (let i = 0; i < runs; i++) {
-    for (const [w, m] of [
-      ["baseline", "full"],
-      ["fast", "full"],
-      ["fast", "pr"],
-    ] as const) {
+    for (const [w, m] of PIPELINES) {
       res.runs.push(await dispatchOne(w, m));
       res.generated_at = new Date().toISOString();
       res.bun = sh("bun", ["--version"]);
@@ -435,30 +358,12 @@ async function runBench(runs: number) {
       writeFileSync(RESULTS, `${JSON.stringify(res, null, 2)}\n`);
     }
   }
+  writeCharts(res);
   writeFileSync(README, renderReadme(readFileSync(README, "utf8"), res));
-}
-
-// One-time: add start_s to the runs already in results.json. Writes once, after every fetch.
-function backfillStarts() {
-  const REPO = repoName();
-  const res: Results = JSON.parse(readFileSync(RESULTS, "utf8"));
-  for (const r of res.runs) {
-    if (r.attempt !== 1) throw new Error(`run ${r.run_id} is attempt ${r.attempt}, not 1`);
-    const apiJobs = ghJson([`repos/${REPO}/actions/runs/${r.run_id}/jobs?per_page=100`])
-      .jobs as ApiJob[];
-    const starts = jobStarts(apiJobs, r.created_at);
-    r.jobs = r.jobs.map(({ name, wall_s, steps }) => {
-      const start_s = starts[name];
-      if (start_s === undefined) throw new Error(`run ${r.run_id}: no start for job ${name}`);
-      return { name, wall_s, start_s, steps };
-    });
-  }
-  writeFileSync(RESULTS, `${JSON.stringify(res, null, 2)}\n`);
 }
 
 async function main(argv: string[]) {
   const arg = (f: string) => argv[argv.indexOf(f) + 1];
-  if (argv[0] === "backfill-starts") return backfillStarts();
   if (argv[0] === "run") return runBench(Number(arg("--runs") ?? 5));
   const res: Results = JSON.parse(readFileSync(RESULTS, "utf8"));
   if (argv.includes("--charts")) {
@@ -470,9 +375,7 @@ async function main(argv: string[]) {
       }
       return;
     }
-    mkdirSync(CHART_DIR, { recursive: true });
-    for (const [file, svg] of Object.entries(renderCharts(res)))
-      writeFileSync(join(CHART_DIR, file), svg);
+    writeCharts(res);
     return;
   }
   if (argv.includes("--readme")) {

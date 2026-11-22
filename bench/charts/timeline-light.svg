@@ -1,78 +1,78 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="598" viewBox="0 0 720 598" role="img" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12">
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="670" viewBox="0 0 720 670" role="img" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15">
 <title>Where the time goes in one run</title>
-<desc>Gantt chart of the median run of each pipeline on one time axis, each job a bar from its start to its end. Critical path ends at baseline full 222 s, fast full 47 s, fast pr 37 s.</desc>
-<rect width="720" height="598" fill="#fcfcfb"/>
-<text x="24.0" y="30.0" fill="#0b0b0b" font-size="16" font-weight="600">Where the time goes in one run</text>
-<text x="24.0" y="50.0" fill="#52514e">Median-wall-time run of each pipeline, jobs from start to end</text>
-<rect x="24.0" y="66.0" width="10" height="10" rx="2" fill="#2a78d6"/>
-<text x="40.0" y="76.0" fill="#0b0b0b">baseline full</text>
-<rect x="153.0" y="66.0" width="10" height="10" rx="2" fill="#eb6834"/>
-<text x="169.0" y="76.0" fill="#0b0b0b">fast full</text>
-<rect x="254.0" y="66.0" width="10" height="10" rx="2" fill="#1baf7a"/>
-<text x="270.0" y="76.0" fill="#0b0b0b">fast pr</text>
-<line x1="120.0" y1="92.0" x2="120.0" y2="554.0" stroke="#e4e3df" stroke-width="1"/>
-<text x="120.0" y="570.0" fill="#52514e" text-anchor="middle" font-size="11">0</text>
-<line x1="208.0" y1="92.0" x2="208.0" y2="554.0" stroke="#e4e3df" stroke-width="1"/>
-<text x="208.0" y="570.0" fill="#52514e" text-anchor="middle" font-size="11">50</text>
-<line x1="296.0" y1="92.0" x2="296.0" y2="554.0" stroke="#e4e3df" stroke-width="1"/>
-<text x="296.0" y="570.0" fill="#52514e" text-anchor="middle" font-size="11">100</text>
-<line x1="384.0" y1="92.0" x2="384.0" y2="554.0" stroke="#e4e3df" stroke-width="1"/>
-<text x="384.0" y="570.0" fill="#52514e" text-anchor="middle" font-size="11">150</text>
-<line x1="472.0" y1="92.0" x2="472.0" y2="554.0" stroke="#e4e3df" stroke-width="1"/>
-<text x="472.0" y="570.0" fill="#52514e" text-anchor="middle" font-size="11">200</text>
-<line x1="560.0" y1="92.0" x2="560.0" y2="554.0" stroke="#e4e3df" stroke-width="1"/>
-<text x="560.0" y="570.0" fill="#52514e" text-anchor="middle" font-size="11">250</text>
-<text x="560.0" y="586.0" fill="#52514e" text-anchor="end" font-size="11">seconds since the run was created</text>
-<text x="24.0" y="104.0" fill="#0b0b0b" font-weight="600">baseline full, run wall 219 s, axis from run created</text>
-<text x="110.0" y="123.0" fill="#0b0b0b" text-anchor="end" font-size="11">test (baseline)</text>
-<path d="M125.3 114.0H506.7A4.0 4.0 0 0 1 510.7 118.0V120.0A4.0 4.0 0 0 1 506.7 124.0H125.3Z" fill="#2a78d6"/>
-<text x="518.7" y="123.0" fill="#0b0b0b" font-size="11">critical path, 222 s</text>
-<text x="24.0" y="156.0" fill="#0b0b0b" font-weight="600">fast full, run wall 44 s, axis from run created</text>
-<text x="110.0" y="175.0" fill="#0b0b0b" text-anchor="end" font-size="11">build</text>
-<path d="M125.3 166.0H133.6A4.0 4.0 0 0 1 137.6 170.0V172.0A4.0 4.0 0 0 1 133.6 176.0H125.3Z" fill="#eb6834"/>
-<text x="110.0" y="191.0" fill="#0b0b0b" text-anchor="end" font-size="11">fmt</text>
-<path d="M125.3 182.0H140.6A4.0 4.0 0 0 1 144.6 186.0V188.0A4.0 4.0 0 0 1 140.6 192.0H125.3Z" fill="#eb6834"/>
-<text x="110.0" y="207.0" fill="#0b0b0b" text-anchor="end" font-size="11">lint</text>
-<path d="M125.3 198.0H131.8A4.0 4.0 0 0 1 135.8 202.0V204.0A4.0 4.0 0 0 1 131.8 208.0H125.3Z" fill="#eb6834"/>
-<text x="110.0" y="223.0" fill="#0b0b0b" text-anchor="end" font-size="11">plan</text>
-<path d="M125.3 214.0H137.1A4.0 4.0 0 0 1 141.1 218.0V220.0A4.0 4.0 0 0 1 137.1 224.0H125.3Z" fill="#eb6834"/>
-<text x="110.0" y="239.0" fill="#0b0b0b" text-anchor="end" font-size="11">tooling</text>
-<path d="M125.3 230.0H147.7A4.0 4.0 0 0 1 151.7 234.0V236.0A4.0 4.0 0 0 1 147.7 240.0H125.3Z" fill="#eb6834"/>
-<text x="110.0" y="255.0" fill="#0b0b0b" text-anchor="end" font-size="11">typecheck</text>
-<path d="M125.3 246.0H135.4A4.0 4.0 0 0 1 139.4 250.0V252.0A4.0 4.0 0 0 1 135.4 256.0H125.3Z" fill="#eb6834"/>
-<text x="110.0" y="271.0" fill="#0b0b0b" text-anchor="end" font-size="11">test (shard 0)</text>
-<path d="M144.6 262.0H177.6A4.0 4.0 0 0 1 181.6 266.0V268.0A4.0 4.0 0 0 1 177.6 272.0H144.6Z" fill="#eb6834"/>
-<text x="110.0" y="287.0" fill="#0b0b0b" text-anchor="end" font-size="11">test (shard 1)</text>
-<path d="M144.6 278.0H189.9A4.0 4.0 0 0 1 193.9 282.0V284.0A4.0 4.0 0 0 1 189.9 288.0H144.6Z" fill="#eb6834"/>
-<text x="110.0" y="303.0" fill="#0b0b0b" text-anchor="end" font-size="11">test (shard 2)</text>
-<path d="M144.6 294.0H175.8A4.0 4.0 0 0 1 179.8 298.0V300.0A4.0 4.0 0 0 1 175.8 304.0H144.6Z" fill="#eb6834"/>
-<text x="110.0" y="319.0" fill="#0b0b0b" text-anchor="end" font-size="11">test (shard 3)</text>
-<path d="M144.6 310.0H175.8A4.0 4.0 0 0 1 179.8 314.0V316.0A4.0 4.0 0 0 1 175.8 320.0H144.6Z" fill="#eb6834"/>
-<text x="110.0" y="335.0" fill="#0b0b0b" text-anchor="end" font-size="11">ci-ok</text>
-<path d="M197.4 326.0H198.7A4.0 4.0 0 0 1 202.7 330.0V332.0A4.0 4.0 0 0 1 198.7 336.0H197.4Z" fill="#eb6834"/>
-<text x="210.7" y="335.0" fill="#0b0b0b" font-size="11">critical path, 47 s</text>
-<text x="24.0" y="368.0" fill="#0b0b0b" font-weight="600">fast pr, run wall 34 s, axis from run created</text>
-<text x="110.0" y="387.0" fill="#0b0b0b" text-anchor="end" font-size="11">build</text>
-<path d="M125.3 378.0H133.6A4.0 4.0 0 0 1 137.6 382.0V384.0A4.0 4.0 0 0 1 133.6 388.0H125.3Z" fill="#1baf7a"/>
-<text x="110.0" y="403.0" fill="#0b0b0b" text-anchor="end" font-size="11">lint</text>
-<path d="M125.3 394.0H133.6A4.0 4.0 0 0 1 137.6 398.0V400.0A4.0 4.0 0 0 1 133.6 404.0H125.3Z" fill="#1baf7a"/>
-<text x="110.0" y="419.0" fill="#0b0b0b" text-anchor="end" font-size="11">plan</text>
-<path d="M125.3 410.0H133.6A4.0 4.0 0 0 1 137.6 414.0V416.0A4.0 4.0 0 0 1 133.6 420.0H125.3Z" fill="#1baf7a"/>
-<text x="110.0" y="435.0" fill="#0b0b0b" text-anchor="end" font-size="11">fmt</text>
-<path d="M127.0 426.0H142.4A4.0 4.0 0 0 1 146.4 430.0V432.0A4.0 4.0 0 0 1 142.4 436.0H127.0Z" fill="#1baf7a"/>
-<text x="110.0" y="451.0" fill="#0b0b0b" text-anchor="end" font-size="11">tooling</text>
-<path d="M127.0 442.0H153.0A4.0 4.0 0 0 1 157.0 446.0V448.0A4.0 4.0 0 0 1 153.0 452.0H127.0Z" fill="#1baf7a"/>
-<text x="110.0" y="467.0" fill="#0b0b0b" text-anchor="end" font-size="11">typecheck</text>
-<path d="M127.0 458.0H138.9A4.0 4.0 0 0 1 142.9 462.0V464.0A4.0 4.0 0 0 1 138.9 468.0H127.0Z" fill="#1baf7a"/>
-<text x="110.0" y="483.0" fill="#0b0b0b" text-anchor="end" font-size="11">test (shard 0)</text>
-<path d="M141.1 474.0H163.5A4.0 4.0 0 0 1 167.5 478.0V480.0A4.0 4.0 0 0 1 163.5 484.0H141.1Z" fill="#1baf7a"/>
-<text x="110.0" y="499.0" fill="#0b0b0b" text-anchor="end" font-size="11">test (shard 1)</text>
-<path d="M141.1 490.0H174.1A4.0 4.0 0 0 1 178.1 494.0V496.0A4.0 4.0 0 0 1 174.1 500.0H141.1Z" fill="#1baf7a"/>
-<text x="110.0" y="515.0" fill="#0b0b0b" text-anchor="end" font-size="11">test (shard 2)</text>
-<path d="M141.1 506.0H153.0A4.0 4.0 0 0 1 157.0 510.0V512.0A4.0 4.0 0 0 1 153.0 516.0H141.1Z" fill="#1baf7a"/>
-<text x="110.0" y="531.0" fill="#0b0b0b" text-anchor="end" font-size="11">test (shard 3)</text>
-<path d="M141.1 522.0H158.2A4.0 4.0 0 0 1 162.2 526.0V528.0A4.0 4.0 0 0 1 158.2 532.0H141.1Z" fill="#1baf7a"/>
-<text x="110.0" y="547.0" fill="#0b0b0b" text-anchor="end" font-size="11">ci-ok</text>
-<path d="M181.6 538.0H181.6A3.5 3.5 0 0 1 185.1 541.5V544.5A3.5 3.5 0 0 1 181.6 548.0H181.6Z" fill="#1baf7a"/>
-<text x="193.1" y="547.0" fill="#0b0b0b" font-size="11">critical path, 37 s</text>
+<desc>Critical path of the median run: baseline full test (baseline) 219 s; fast full plan, test (shard 1), ci-ok 44 s; fast pr plan, test (shard 1), ci-ok 34 s.</desc>
+<rect width="720" height="670" fill="#fcfcfb"/>
+<text x="24.0" y="32.0" fill="#0b0b0b" font-size="20" font-weight="600">Where the time goes in one run</text>
+<text x="24.0" y="55.0" fill="#52514e" font-size="13">Median run of each pipeline, jobs from start to end. Solid bars are the critical path.</text>
+<rect x="24.0" y="71.0" width="11" height="11" rx="2" fill="#2a78d6"/>
+<text x="42.0" y="82.0" fill="#0b0b0b">baseline full</text>
+<rect x="181.0" y="71.0" width="11" height="11" rx="2" fill="#eb6834"/>
+<text x="199.0" y="82.0" fill="#0b0b0b">fast full</text>
+<rect x="302.0" y="71.0" width="11" height="11" rx="2" fill="#1baf7a"/>
+<text x="320.0" y="82.0" fill="#0b0b0b">fast pr</text>
+<line x1="135.0" y1="100.0" x2="135.0" y2="622.0" stroke="#e4e3df" stroke-width="1"/>
+<text x="135.0" y="639.0" fill="#52514e" text-anchor="middle" font-size="13">0</text>
+<line x1="247.2" y1="100.0" x2="247.2" y2="622.0" stroke="#e4e3df" stroke-width="1"/>
+<text x="247.2" y="639.0" fill="#52514e" text-anchor="middle" font-size="13">50</text>
+<line x1="359.4" y1="100.0" x2="359.4" y2="622.0" stroke="#e4e3df" stroke-width="1"/>
+<text x="359.4" y="639.0" fill="#52514e" text-anchor="middle" font-size="13">100</text>
+<line x1="471.6" y1="100.0" x2="471.6" y2="622.0" stroke="#e4e3df" stroke-width="1"/>
+<text x="471.6" y="639.0" fill="#52514e" text-anchor="middle" font-size="13">150</text>
+<line x1="583.8" y1="100.0" x2="583.8" y2="622.0" stroke="#e4e3df" stroke-width="1"/>
+<text x="583.8" y="639.0" fill="#52514e" text-anchor="middle" font-size="13">200</text>
+<line x1="696.0" y1="100.0" x2="696.0" y2="622.0" stroke="#e4e3df" stroke-width="1"/>
+<text x="696.0" y="639.0" fill="#52514e" text-anchor="middle" font-size="13">250</text>
+<text x="696.0" y="657.0" fill="#52514e" text-anchor="end" font-size="13">seconds since the first job of the run started</text>
+<text x="24.0" y="113.0" fill="#0b0b0b" font-weight="600">baseline full, 219 s</text>
+<text x="696.0" y="113.0" fill="#52514e" text-anchor="end" font-size="13">critical path: test (baseline)</text>
+<text x="125.0" y="137.0" fill="#0b0b0b" text-anchor="end" font-size="13" font-weight="600">test (baseline)</text>
+<path d="M135.0 127.0H622.4A4.0 4.0 0 0 1 626.4 131.0V134.0A4.0 4.0 0 0 1 622.4 138.0H135.0Z" fill="#2a78d6"/>
+<text x="24.0" y="167.0" fill="#0b0b0b" font-weight="600">fast full, 44 s</text>
+<text x="696.0" y="167.0" fill="#52514e" text-anchor="end" font-size="13">critical path: plan, test (shard 1), ci-ok</text>
+<text x="125.0" y="191.0" fill="#0b0b0b" text-anchor="end" font-size="13">build</text>
+<path d="M135.0 181.0H146.7A4.0 4.0 0 0 1 150.7 185.0V188.0A4.0 4.0 0 0 1 146.7 192.0H135.0Z" fill="#eb6834" fill-opacity="0.4"/>
+<text x="125.0" y="209.0" fill="#0b0b0b" text-anchor="end" font-size="13">fmt</text>
+<path d="M135.0 199.0H155.7A4.0 4.0 0 0 1 159.7 203.0V206.0A4.0 4.0 0 0 1 155.7 210.0H135.0Z" fill="#eb6834" fill-opacity="0.4"/>
+<text x="125.0" y="227.0" fill="#0b0b0b" text-anchor="end" font-size="13">lint</text>
+<path d="M135.0 217.0H144.5A4.0 4.0 0 0 1 148.5 221.0V224.0A4.0 4.0 0 0 1 144.5 228.0H135.0Z" fill="#eb6834" fill-opacity="0.4"/>
+<text x="125.0" y="245.0" fill="#0b0b0b" text-anchor="end" font-size="13" font-weight="600">plan</text>
+<path d="M135.0 235.0H151.2A4.0 4.0 0 0 1 155.2 239.0V242.0A4.0 4.0 0 0 1 151.2 246.0H135.0Z" fill="#eb6834"/>
+<text x="125.0" y="263.0" fill="#0b0b0b" text-anchor="end" font-size="13">tooling</text>
+<path d="M135.0 253.0H164.7A4.0 4.0 0 0 1 168.7 257.0V260.0A4.0 4.0 0 0 1 164.7 264.0H135.0Z" fill="#eb6834" fill-opacity="0.4"/>
+<text x="125.0" y="281.0" fill="#0b0b0b" text-anchor="end" font-size="13">typecheck</text>
+<path d="M135.0 271.0H149.0A4.0 4.0 0 0 1 153.0 275.0V278.0A4.0 4.0 0 0 1 149.0 282.0H135.0Z" fill="#eb6834" fill-opacity="0.4"/>
+<text x="125.0" y="299.0" fill="#0b0b0b" text-anchor="end" font-size="13">test (shard 0)</text>
+<path d="M159.7 289.0H202.8A4.0 4.0 0 0 1 206.8 293.0V296.0A4.0 4.0 0 0 1 202.8 300.0H159.7Z" fill="#eb6834" fill-opacity="0.4"/>
+<text x="125.0" y="317.0" fill="#0b0b0b" text-anchor="end" font-size="13" font-weight="600">test (shard 1)</text>
+<path d="M159.7 307.0H218.5A4.0 4.0 0 0 1 222.5 311.0V314.0A4.0 4.0 0 0 1 218.5 318.0H159.7Z" fill="#eb6834"/>
+<text x="125.0" y="335.0" fill="#0b0b0b" text-anchor="end" font-size="13">test (shard 2)</text>
+<path d="M159.7 325.0H200.6A4.0 4.0 0 0 1 204.6 329.0V332.0A4.0 4.0 0 0 1 200.6 336.0H159.7Z" fill="#eb6834" fill-opacity="0.4"/>
+<text x="125.0" y="353.0" fill="#0b0b0b" text-anchor="end" font-size="13">test (shard 3)</text>
+<path d="M159.7 343.0H200.6A4.0 4.0 0 0 1 204.6 347.0V350.0A4.0 4.0 0 0 1 200.6 354.0H159.7Z" fill="#eb6834" fill-opacity="0.4"/>
+<text x="125.0" y="371.0" fill="#0b0b0b" text-anchor="end" font-size="13" font-weight="600">ci-ok</text>
+<path d="M227.0 361.0H231.5A2.2 2.2 0 0 1 233.7 363.2V369.8A2.2 2.2 0 0 1 231.5 372.0H227.0Z" fill="#eb6834"/>
+<text x="24.0" y="401.0" fill="#0b0b0b" font-weight="600">fast pr, 34 s</text>
+<text x="696.0" y="401.0" fill="#52514e" text-anchor="end" font-size="13">critical path: plan, test (shard 1), ci-ok</text>
+<text x="125.0" y="425.0" fill="#0b0b0b" text-anchor="end" font-size="13">build</text>
+<path d="M135.0 415.0H146.7A4.0 4.0 0 0 1 150.7 419.0V422.0A4.0 4.0 0 0 1 146.7 426.0H135.0Z" fill="#1baf7a" fill-opacity="0.4"/>
+<text x="125.0" y="443.0" fill="#0b0b0b" text-anchor="end" font-size="13">lint</text>
+<path d="M135.0 433.0H146.7A4.0 4.0 0 0 1 150.7 437.0V440.0A4.0 4.0 0 0 1 146.7 444.0H135.0Z" fill="#1baf7a" fill-opacity="0.4"/>
+<text x="125.0" y="461.0" fill="#0b0b0b" text-anchor="end" font-size="13" font-weight="600">plan</text>
+<path d="M135.0 451.0H146.7A4.0 4.0 0 0 1 150.7 455.0V458.0A4.0 4.0 0 0 1 146.7 462.0H135.0Z" fill="#1baf7a"/>
+<text x="125.0" y="479.0" fill="#0b0b0b" text-anchor="end" font-size="13">fmt</text>
+<path d="M137.2 469.0H157.9A4.0 4.0 0 0 1 161.9 473.0V476.0A4.0 4.0 0 0 1 157.9 480.0H137.2Z" fill="#1baf7a" fill-opacity="0.4"/>
+<text x="125.0" y="497.0" fill="#0b0b0b" text-anchor="end" font-size="13">tooling</text>
+<path d="M137.2 487.0H171.4A4.0 4.0 0 0 1 175.4 491.0V494.0A4.0 4.0 0 0 1 171.4 498.0H137.2Z" fill="#1baf7a" fill-opacity="0.4"/>
+<text x="125.0" y="515.0" fill="#0b0b0b" text-anchor="end" font-size="13">typecheck</text>
+<path d="M137.2 505.0H153.4A4.0 4.0 0 0 1 157.4 509.0V512.0A4.0 4.0 0 0 1 153.4 516.0H137.2Z" fill="#1baf7a" fill-opacity="0.4"/>
+<text x="125.0" y="533.0" fill="#0b0b0b" text-anchor="end" font-size="13">test (shard 0)</text>
+<path d="M155.2 523.0H184.9A4.0 4.0 0 0 1 188.9 527.0V530.0A4.0 4.0 0 0 1 184.9 534.0H155.2Z" fill="#1baf7a" fill-opacity="0.4"/>
+<text x="125.0" y="551.0" fill="#0b0b0b" text-anchor="end" font-size="13" font-weight="600">test (shard 1)</text>
+<path d="M155.2 541.0H198.3A4.0 4.0 0 0 1 202.3 545.0V548.0A4.0 4.0 0 0 1 198.3 552.0H155.2Z" fill="#1baf7a"/>
+<text x="125.0" y="569.0" fill="#0b0b0b" text-anchor="end" font-size="13">test (shard 2)</text>
+<path d="M155.2 559.0H171.4A4.0 4.0 0 0 1 175.4 563.0V566.0A4.0 4.0 0 0 1 171.4 570.0H155.2Z" fill="#1baf7a" fill-opacity="0.4"/>
+<text x="125.0" y="587.0" fill="#0b0b0b" text-anchor="end" font-size="13">test (shard 3)</text>
+<path d="M155.2 577.0H178.1A4.0 4.0 0 0 1 182.1 581.0V584.0A4.0 4.0 0 0 1 178.1 588.0H155.2Z" fill="#1baf7a" fill-opacity="0.4"/>
+<text x="125.0" y="605.0" fill="#0b0b0b" text-anchor="end" font-size="13" font-weight="600">ci-ok</text>
+<path d="M206.8 595.0H209.8A1.5 1.5 0 0 1 211.3 596.5V604.5A1.5 1.5 0 0 1 209.8 606.0H206.8Z" fill="#1baf7a"/>
 </svg>

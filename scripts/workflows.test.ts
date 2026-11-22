@@ -1,6 +1,7 @@
 import { expect, test } from "bun:test";
 import { readFileSync } from "node:fs";
 import { parse } from "yaml";
+import { NEEDS } from "./charts.ts";
 
 type Step = {
   if?: string;
@@ -149,4 +150,12 @@ test("fast: plan step runs bun scripts/plan.ts with inputs only through env", ()
 
 test("fast: no jq, seq or scripts/shard.ts in the workflow", () => {
   expect(fast.text).not.toMatch(/jq |seq |scripts\/shard\.ts/);
+});
+
+test("charts NEEDS matches fast.yml needs (test job is the shards kind)", () => {
+  const kind = (id: string) => (id === "test" ? "test (shards)" : id);
+  for (const [k, needs] of Object.entries(NEEDS)) {
+    const id = k === "test (shards)" ? "test" : k;
+    expect(needsOf(fast.wf.jobs[id]!).map(kind).sort(), k).toEqual([...needs].sort());
+  }
 });
