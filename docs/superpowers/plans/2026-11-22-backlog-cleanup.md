@@ -112,3 +112,6 @@ FIX wave 0fd7d3e sdd-implementer whitespace throw, glob dot, bench fail-closed; 
 PR 4 opened f2817c4
 CONVERGE 10/10 VERIFIED (AC5, AC9 filled from CI by coordinator)
 PLAN part 2 charts: T7-T9
+T7 fix 4cbc5ed sdd-reviewer fix-needed jobStarts test expectation 40 vs 51
+T7 coord 5d10a3a fix expectation
+T7 done 5d10a3a sdd-reviewer-lite re-review approve; gate gap: bun test skips scripts/ (bunfig root=test)
