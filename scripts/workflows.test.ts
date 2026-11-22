@@ -2,7 +2,12 @@ import { expect, test } from "bun:test";
 import { readFileSync } from "node:fs";
 import { parse } from "yaml";
 
-type Step = { uses?: string; run?: string; with?: Record<string, unknown> };
+type Step = {
+  uses?: string;
+  run?: string;
+  with?: Record<string, unknown>;
+  env?: Record<string, string>;
+};
 type Job = {
   name?: string;
   needs?: string | string[];
@@ -116,4 +121,20 @@ test("fast: plan checks out full history", () => {
 
 test("fast: test job is skipped when the plan has no files", () => {
   expect(fast.wf.jobs.test!.if).toBe("needs.plan.outputs.count != '0'");
+});
+
+test("fast: plan step runs bun scripts/plan.ts with inputs only through env", () => {
+  const step = fast.wf.jobs.plan!.steps!.find((s) => s.run?.includes("plan.ts"));
+  expect(step!.run!.trim()).toBe("bun scripts/plan.ts");
+  expect(Object.keys(step!.env ?? {}).sort()).toEqual([
+    "EVENT",
+    "IN_BASE",
+    "IN_HEAD",
+    "IN_MODE",
+    "PR_BASE",
+  ]);
+});
+
+test("fast: no jq, seq or scripts/shard.ts in the workflow", () => {
+  expect(fast.text).not.toMatch(/jq |seq |scripts\/shard\.ts/);
 });
