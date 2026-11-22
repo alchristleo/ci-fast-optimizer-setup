@@ -77,6 +77,14 @@ Files: scripts/bench.ts (`--charts`, `--charts --check`, README section embeds `
 Check: spec AC4, AC5, AC8 (local half). Render each SVG to PNG for the cdo seat if a tool exists (e.g. `rsvg-convert`,
 `bunx playwright`), else say so.
 
+## T10 — owner-requested small backlog items (agent: sdd-implementer; depends-on: T9 fix wave)
+1. Steps chart title: "Checkout and setup take longer than work in 5 of 7 fast jobs" (generated from the counts).
+2. Chart text: SMALL 15, BASE 17 (W unchanged); re-render.
+3. `.github/CODEOWNERS`: `/.github/` and `/scripts/` owned by the repo owner (a required review is a branch-protection setting the owner turns on).
+4. workflows.test NEEDS check both ways: every fast.yml job with `needs` (except push-only timings) has a NEEDS entry.
+5. plan.ts: base/head must be hex SHAs (7-40) before any git call; else throw.
+6. `test:all` script (`bun test && bun test ./scripts/`) and a project CLAUDE.md gate line, so the gate covers scripts/.
+
 ## Backlog
 - Scheduled weekly bench re-run + badge
 - Per-claim ablation workflows (one change at a time)
@@ -140,3 +148,4 @@ SEAT cdo pass af1e191 AC7
 COORD 249e78b explicit ci-ok NEEDS + fast.yml drift test; sdd-reviewer-lite approve
 PR 4 pushed ef5d4c3 (part 2 charts)
 CONVERGE charts 8/8 VERIFIED (AC8 filled from PR CI ef5d4c3)
+PLAN T10 owner-requested small backlog items
