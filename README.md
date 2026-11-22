@@ -104,7 +104,7 @@ Generated from bench/results.json (generated_at 2026-11-21T17:24:34.855Z, bun 1.
    export function getTestApp(): Hono { app ??= createApp(); return app; }
    ```
    Effect: not measured separately. It is part of the gap in change 1.
-8. **Lint, typecheck, build, tooling tests and test shards run as parallel jobs.** No job has a `needs` on another, except that test shards wait for `plan` and the push-only `timings` job waits for the shards. A final `ci-ok` job reports one result. `ci-ok` fails when a needed job fails or gets cancelled. A skipped job passes. A branch protection rule needs only that one check.
+8. **Lint, typecheck, build, tooling tests and test shards run as parallel jobs.** No job has a `needs` on another, except that test shards wait for `plan` and the push-only `timings` job waits for the shards. A final `ci-ok` job reports one result. `ci-ok` fails when a needed job fails or gets cancelled. A skipped job counts as a pass, so a PR with no affected tests still goes green. A branch protection rule needs only that one check.
    ```yaml
    jobs: { plan: ..., fmt: ..., lint: ..., typecheck: ..., build: ..., tooling: ..., test: { needs: plan }, ci-ok: ... }
    ```
