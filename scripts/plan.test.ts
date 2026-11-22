@@ -156,3 +156,18 @@ describe("planFiles", () => {
     }
   });
 });
+
+test("CLI writes count and matrix to GITHUB_OUTPUT", () => {
+  const out = join(mkdtempSync(join(tmpdir(), "plan-cli-")), "out");
+  const env = { ...process.env, EVENT: "push", GITHUB_OUTPUT: out };
+  execFileSync("bun", ["scripts/plan.ts"], { env, encoding: "utf8" });
+  const lines = Object.fromEntries(
+    readFileSync(out, "utf8")
+      .trim()
+      .split("\n")
+      .map((l) => l.split(/=(.*)/s)),
+  );
+  const matrix = JSON.parse(lines.matrix!);
+  expect(Number(lines.count)).toBe(matrix.include.length);
+  expect(matrix.include.length).toBeGreaterThan(0);
+});
