@@ -128,13 +128,7 @@ time target, shared install cache, oxlint fallback, TS 5.9 baseline vs TS 7, bar
 `--readme --check` green (AC10). PR 2 with its own review + merge gate.
 
 ## Backlog
-- scripts/plan.ts: move fast.yml plan bash into a tested script (panel design)
-- ci-ok: standard contains(needs.*.result) idiom (panel design)
-- affected.ts: flatter return shape `string[] | "all"` (panel design)
-- gen `--seed` as constant (panel design nit)
-- T9: rebase bench/pr-sample / assert fast.yml blob equals main before bench (panel correctness nit)
-- test/smoke/catalog.test.ts:15 hard-coded toBe(123) → derive from domains.length (PRE-EXISTING, T10 review)
-- bench.ts optional repo slug env override (T8 review nit)
+- Cleanup items: see 2026-11-22-backlog-cleanup.md
 - Scheduled weekly bench re-run + badge
 - Per-claim ablation workflows (one change at a time)
 - turbo/nx comparison; frontend app
