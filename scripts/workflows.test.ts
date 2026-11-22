@@ -1,8 +1,15 @@
 import { expect, test } from "bun:test";
 import { readFileSync } from "node:fs";
 import { parse } from "yaml";
+import { NEEDS } from "./charts.ts";
 
-type Step = { uses?: string; run?: string; with?: Record<string, unknown> };
+type Step = {
+  if?: string;
+  uses?: string;
+  run?: string;
+  with?: Record<string, unknown>;
+  env?: Record<string, string>;
+};
 type Job = {
   name?: string;
   needs?: string | string[];
@@ -28,10 +35,11 @@ const fast = load("fast");
 const both = [baseline, fast];
 const needsOf = (job: Job) => [job.needs ?? []].flat();
 
-test("fast: fmt, lint, typecheck, build, tooling have no needs", () => {
+test("fast: fmt, lint, typecheck, build, tooling have no needs and no if", () => {
   for (const id of ["fmt", "lint", "typecheck", "build", "tooling"]) {
     expect(fast.wf.jobs[id], id).toBeDefined();
     expect(needsOf(fast.wf.jobs[id]!), id).toEqual([]);
+    expect(fast.wf.jobs[id]!.if, id).toBeUndefined();
   }
 });
 
@@ -101,6 +109,16 @@ test("fast: ci-ok runs always and needs every other job", () => {
   expect(needsOf(ok).sort()).toEqual(others.sort());
 });
 
+test("fast: ci-ok fails on a failed or cancelled need and reads no needs.<job>.result", () => {
+  const ok = fast.wf.jobs["ci-ok"]!;
+  const gate = ok.steps!.find((s) => s.if?.includes("needs.*.result"));
+  expect(gate!.if).toBe(
+    "contains(needs.*.result, 'failure') || contains(needs.*.result, 'cancelled')",
+  );
+  expect(gate!.run!.trim()).toBe("exit 1");
+  expect(JSON.stringify(ok.steps)).not.toMatch(/needs\.\w+\.result/);
+});
+
 // Any ${{ }} in a run block is rejected: values reach scripts only through env.
 test("no run block interpolates expressions", () => {
   for (const { wf } of both)
@@ -116,4 +134,40 @@ test("fast: plan checks out full history", () => {
 
 test("fast: test job is skipped when the plan has no files", () => {
   expect(fast.wf.jobs.test!.if).toBe("needs.plan.outputs.count != '0'");
+});
+
+test("fast: plan step runs bun scripts/plan.ts with inputs only through env", () => {
+  const step = fast.wf.jobs.plan!.steps!.find((s) => s.run?.includes("plan.ts"));
+  expect(step!.run!.trim()).toBe("bun scripts/plan.ts");
+  expect(Object.keys(step!.env ?? {}).sort()).toEqual([
+    "EVENT",
+    "IN_BASE",
+    "IN_HEAD",
+    "IN_MODE",
+    "PR_BASE",
+  ]);
+});
+
+test("fast: no jq, seq or scripts/shard.ts in the workflow", () => {
+  expect(fast.text).not.toMatch(/jq |seq |scripts\/shard\.ts/);
+});
+
+test("charts NEEDS matches fast.yml needs (test job is the shards kind)", () => {
+  const kind = (id: string) => (id === "test" ? "test (shards)" : id);
+  for (const [k, needs] of Object.entries(NEEDS)) {
+    const id = k === "test (shards)" ? "test" : k;
+    expect(needsOf(fast.wf.jobs[id]!).map(kind).sort(), k).toEqual([...needs].sort());
+  }
+  // timings runs on push only and sits off the critical path.
+  for (const [id, job] of Object.entries(fast.wf.jobs))
+    if (job.needs && id !== "timings") expect(NEEDS[kind(id)], id).toBeDefined();
+});
+
+test("CODEOWNERS covers .github/ and scripts/", () => {
+  const rules = readFileSync(".github/CODEOWNERS", "utf8")
+    .split("\n")
+    .filter((l) => l.trim() && !l.startsWith("#"))
+    .map((l) => l.trim().split(/\s+/));
+  for (const path of ["/.github/", "/scripts/"])
+    expect(rules, path).toContainEqual([path, "@alchristleo"]);
 });

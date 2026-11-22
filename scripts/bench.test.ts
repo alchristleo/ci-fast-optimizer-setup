@@ -1,18 +1,21 @@
 import { describe, expect, test } from "bun:test";
+import { mkdtempSync, readFileSync, writeFileSync } from "node:fs";
+import { tmpdir } from "node:os";
+import { join } from "node:path";
+import { fileURLToPath } from "node:url";
 import {
+  assertUpToDate,
+  chartDrift,
   checkAll,
   checkReadme,
   correlateRun,
   dispatchBody,
   jobsTiming,
-  median,
-  p90,
   parseTestsNotice,
+  renderCharts,
   renderReadme,
-  summarize,
-  type BenchRun,
-  type Results,
 } from "./bench";
+import { median, p90, summarize, type BenchRun, type Results } from "./bench-data";
 
 // Shaped like GET /repos/{owner}/{repo}/actions/runs/{run_id}/jobs (GitHub REST docs).
 const jobsResponse = {
@@ -99,6 +102,21 @@ describe("jobsTiming", () => {
       ["ci-ok", 2],
     ]);
     expect(t.jobs[1]?.steps).toEqual([{ name: "Run tests", s: 26 }]);
+  });
+  test("each job has start_s, seconds from run creation to the job start", () => {
+    const t = jobsTiming(jobsResponse.jobs, "2026-11-21T09:59:50Z")!;
+    expect(t.jobs.map((j) => [j.name, j.start_s])).toEqual([
+      ["lint", 20],
+      ["test (1)", 22],
+      ["ci-ok", 51],
+    ]);
+  });
+  test("a start before the run was created is clamped to 0", () => {
+    const t = jobsTiming(
+      [{ name: "a", started_at: "2026-11-21T09:59:58Z", completed_at: "2026-11-21T10:00:05Z" }],
+      "2026-11-21T10:00:00Z",
+    )!;
+    expect(t.jobs[0]?.start_s).toBe(0);
   });
 });
 
@@ -356,6 +374,12 @@ describe("readme", () => {
     expect(out).not.toContain("NaN");
     expect(out).toContain("| baseline | full | 0 | 0 | n/a | n/a | n/a |");
   });
+  test("without a successful run with jobs for every pipeline, the README says so and charts throw", () => {
+    expect(renderReadme(readme, results([]))).toContain(
+      "No charts yet: charts need a successful run with jobs for every pipeline.",
+    );
+    expect(() => renderCharts(good)).toThrow("charts need a successful run");
+  });
   test("renders median per-step seconds for full-mode successful runs", () => {
     const withJobs = results([
       ...[10, 20, 30].map((s, i) =>
@@ -364,7 +388,9 @@ describe("readme", () => {
           mode: "full",
           wall_s: 60,
           run_id: 40 + i,
-          jobs: [{ name: "test (baseline)", wall_s: 60, steps: [{ name: "vitest", s }] }],
+          jobs: [
+            { name: "test (baseline)", wall_s: 60, start_s: 0, steps: [{ name: "vitest", s }] },
+          ],
         }),
       ),
       run({
@@ -373,14 +399,16 @@ describe("readme", () => {
         wall_s: 60,
         run_id: 49,
         conclusion: "failure",
-        jobs: [{ name: "test (baseline)", wall_s: 900, steps: [{ name: "vitest", s: 900 }] }],
+        jobs: [
+          { name: "test (baseline)", wall_s: 900, start_s: 0, steps: [{ name: "vitest", s: 900 }] },
+        ],
       }),
     ]);
     const out = renderReadme(readme, withJobs);
     expect(out).toContain("| baseline | test (baseline) | vitest | 20 |");
   });
   test("renders median runner seconds as the sum of job walls", () => {
-    const j = (w: number) => ({ name: "x", wall_s: w, steps: [] });
+    const j = (w: number) => ({ name: "x", wall_s: w, start_s: 0, steps: [] });
     const out = renderReadme(
       readme,
       results([
@@ -404,6 +432,7 @@ describe("readme", () => {
             {
               name: "plan",
               wall_s: 9,
+              start_s: 0,
               steps: [
                 { name: "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1", s: 1 },
                 { name: "Run bun run lint", s: 2 },
@@ -420,7 +449,7 @@ describe("readme", () => {
     expect(out).not.toContain("3d3c42e5");
   });
   test("renders the shard wall range of each fast full run", () => {
-    const sh = (w: number) => ({ name: "test (shard 0)", wall_s: w, steps: [] });
+    const sh = (w: number) => ({ name: "test (shard 0)", wall_s: w, start_s: 0, steps: [] });
     const out = renderReadme(
       readme,
       results([
@@ -432,5 +461,76 @@ describe("readme", () => {
   });
   test("throws without markers", () => {
     expect(() => renderReadme("# T\n", good)).toThrow();
+  });
+});
+
+describe("assertUpToDate", () => {
+  test("throws when the branch is behind main", () => {
+    expect(() => assertUpToDate(1)).toThrow("bench/pr-sample is stale: rebase it on main");
+  });
+  test("throws when behind_by is missing", () => {
+    expect(() => assertUpToDate(undefined as unknown as number)).toThrow("rebase it on main");
+  });
+  test("passes when the branch is level with main", () => {
+    expect(() => assertUpToDate(0)).not.toThrow();
+  });
+});
+
+describe("committed results.json start_s", () => {
+  test("every job has a finite start_s of at least 0", () => {
+    const res: Results = JSON.parse(
+      readFileSync(new URL("../bench/results.json", import.meta.url), "utf8"),
+    );
+    const jobs = res.runs.flatMap((r) => r.jobs);
+    expect(jobs.length).toBeGreaterThan(0);
+    for (const j of jobs) {
+      expect(Number.isFinite(j.start_s)).toBe(true);
+      expect(j.start_s).toBeGreaterThanOrEqual(0);
+    }
+  });
+});
+
+describe("charts wiring", () => {
+  const here = (rel: string) => new URL(rel, import.meta.url);
+  const committed: Results = JSON.parse(readFileSync(here("../bench/results.json"), "utf8"));
+  test("renders four charts in two themes", () => {
+    expect(Object.keys(renderCharts(committed))).toEqual([
+      "wall-time-light.svg",
+      "wall-time-dark.svg",
+      "timeline-light.svg",
+      "timeline-dark.svg",
+      "runs-light.svg",
+      "runs-dark.svg",
+      "steps-light.svg",
+      "steps-dark.svg",
+    ]);
+  });
+  test("the committed SVGs equal the render", () => {
+    expect(chartDrift(committed, fileURLToPath(here("../bench/charts")))).toEqual([]);
+  });
+  test("drift names a changed or missing file", () => {
+    const dir = mkdtempSync(join(tmpdir(), "charts-"));
+    for (const [file, svg] of Object.entries(renderCharts(committed)))
+      writeFileSync(join(dir, file), file === "runs-dark.svg" ? `${svg} ` : svg);
+    expect(chartDrift(committed, dir)).toEqual(["runs-dark.svg"]);
+    expect(chartDrift(committed, join(dir, "none")).length).toBe(8);
+  });
+  test("the README embeds four pictures with dark sources and numeric alt text", () => {
+    const readme = readFileSync(here("../README.md"), "utf8");
+    expect(readme.match(/<picture>/g)?.length).toBe(4);
+    expect(
+      readme.match(
+        /<source media="\(prefers-color-scheme: dark\)" srcset="bench\/charts\/[a-z-]+-dark\.svg">/g,
+      )?.length,
+    ).toBe(4);
+    expect(readme).toContain(
+      'alt="Fast full is 4.98x faster than baseline full: 44 s vs 219 s median."',
+    );
+    expect(readme).not.toContain("width=");
+  });
+  test("the README names the chart order and puts a caption after each picture", () => {
+    const readme = readFileSync(here("../README.md"), "utf8");
+    expect(readme).toContain("The four charts show, in order: the median wall time");
+    expect(readme.match(/<\/picture>\n\n[A-Z][^\n]+\.\n/g)?.length).toBe(4);
   });
 });

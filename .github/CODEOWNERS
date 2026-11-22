@@ -1,0 +1,3 @@
+# Required review for these paths is enabled in branch protection by the repo owner.
+/.github/ @alchristleo
+/scripts/ @alchristleo

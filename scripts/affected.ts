@@ -9,9 +9,6 @@ export type ImportGraph = {
   // files with a non-literal or unresolvable import: a change there cannot be analysed
   unsafe: Set<string>;
 };
-// `smoke`: the always-run wiring tests, listed apart from `files`; empty when nothing but docs changed.
-export type Affected = { mode: "all" | "some"; files: string[]; smoke: string[] };
-
 const SCAN_DIRS = ["src", "test"];
 
 function stripComments(src: string): string {
@@ -89,7 +86,8 @@ const analysable = (p: string) =>
   SCAN_DIRS.some((d) => p.startsWith(`${d}/`)) &&
   !p.startsWith("test/fixtures/");
 
-export function affectedTests(changed: Change[], graph: ImportGraph): Affected {
+// "all", or the sorted non-smoke tests followed by the sorted smoke tests (smoke only when something but docs changed).
+export function affectedTests(changed: Change[], graph: ImportGraph): string[] | "all" {
   const dependents = new Map<string, string[]>();
   for (const [file, deps] of graph.imports) {
     for (const dep of deps) dependents.set(dep, [...(dependents.get(dep) ?? []), file]);
@@ -99,13 +97,13 @@ export function affectedTests(changed: Change[], graph: ImportGraph): Affected {
   let relevant = false;
   for (const { path } of changed) {
     if (ignored(path)) continue;
-    if (!analysable(path) || RUN_ALL.includes(path)) return { mode: "all", files: [], smoke: [] };
+    if (!analysable(path) || RUN_ALL.includes(path)) return "all";
     queue.push(path);
     const dir = DOMAIN_FILE.exec(path)?.[1];
     if (dir) queue.push(...[...graph.imports.keys()].filter((f) => posix.dirname(f) === dir));
     relevant = true;
   }
-  if (relevant && graph.unsafe.size > 0) return { mode: "all", files: [], smoke: [] };
+  if (relevant && graph.unsafe.size > 0) return "all";
   while (queue.length > 0) {
     const file = queue.pop()!;
     if (seen.has(file)) continue;
@@ -114,11 +112,8 @@ export function affectedTests(changed: Change[], graph: ImportGraph): Affected {
   }
   if (relevant) for (const f of graph.imports.keys()) if (isMeta(f) && isTest(f)) seen.add(f);
   const tests = [...seen].filter(isTest);
-  return {
-    mode: "some",
-    files: tests.filter((f) => !isSmoke(f)).sort(),
-    smoke: relevant ? [...graph.imports.keys()].filter((f) => isTest(f) && isSmoke(f)).sort() : [],
-  };
+  const smoke = relevant ? [...graph.imports.keys()].filter((f) => isTest(f) && isSmoke(f)) : [];
+  return [...tests.filter((f) => !isSmoke(f)).sort(), ...smoke.sort()];
 }
 
 // `git diff --name-status` lines; a rename or copy lists both paths.
@@ -132,8 +127,12 @@ export function parseNameStatus(out: string): Change[] {
     });
 }
 
-function git(...args: string[]): string {
-  return execFileSync("git", args, { encoding: "utf8", maxBuffer: 64 * 1024 * 1024 });
+function gitIn(cwd: string, ...args: string[]): string {
+  return execFileSync("git", args, {
+    cwd,
+    encoding: "utf8",
+    maxBuffer: 64 * 1024 * 1024,
+  });
 }
 
 // `a` is the head graph, `b` the base graph. A base file left importing a deleted path looks unsafe at
@@ -146,14 +145,11 @@ function mergeGraphs(a: ImportGraph, b: ImportGraph, changed: Set<string>): Impo
   return { imports, unsafe: new Set([...headUnsafe, ...b.unsafe]) };
 }
 
-function main(argv: string[]): void {
-  const arg = (name: string) => argv[argv.indexOf(name) + 1];
-  const base = arg("--base");
-  const head = arg("--head");
-  if (!base || !head) throw new Error("usage: bun scripts/affected.ts --base <sha> --head <sha>");
+export function selectFiles(base: string, head: string, cwd = process.cwd()): string[] | "all" {
+  const git = (...args: string[]) => gitIn(cwd, ...args);
   const mergeBase = git("merge-base", base, head).trim();
   const changed = parseNameStatus(git("diff", "--name-status", `${mergeBase}..${head}`));
-  let graph = buildGraph(process.cwd());
+  let graph = buildGraph(cwd);
   if (changed.some((c) => c.status === "D" || c.status === "R")) {
     // Deleted and renamed-away paths are gone from the head graph: add the base graph so their dependents are found.
     const files = git("ls-tree", "-r", "--name-only", mergeBase, ...SCAN_DIRS)
@@ -166,12 +162,18 @@ function main(argv: string[]): void {
     );
   }
   const result = affectedTests(changed, graph);
-  if (result.mode === "all") console.log("all");
-  else {
-    // A deleted or renamed-away test is in the graph but gone at head: bun test would fail on it.
-    const picked = [...result.files, ...result.smoke].filter((f) => existsSync(f));
-    if (picked.length > 0) console.log(picked.join("\n"));
-  }
+  // A deleted or renamed-away test is in the graph but gone at head: bun test would fail on it.
+  return result === "all" ? result : result.filter((f) => existsSync(join(cwd, f)));
+}
+
+function main(argv: string[]): void {
+  const arg = (name: string) => argv[argv.indexOf(name) + 1];
+  const base = arg("--base");
+  const head = arg("--head");
+  if (!base || !head) throw new Error("usage: bun scripts/affected.ts --base <sha> --head <sha>");
+  const picked = selectFiles(base, head);
+  if (picked === "all") console.log("all");
+  else if (picked.length > 0) console.log(picked.join("\n"));
 }
 
 if (import.meta.main) main(process.argv.slice(2));

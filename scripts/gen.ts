@@ -1,11 +1,12 @@
-// Deterministic generator: bun scripts/gen.ts --domains K --seed S
+// Deterministic generator: bun scripts/gen.ts --domains K
 // Writes src/domains/generated/<name>/{service,routes}.ts, test/generated/<name>.test.ts,
-// src/domains/index.ts and fixtures/{schema,seed}/<name>.json. Output depends only on K and S.
+// src/domains/index.ts and fixtures/{schema,seed}/<name>.json. Output depends only on K and the fixed SEED.
 import { mkdirSync, rmSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
+const SEED = 1;
 
 const NOUNS = [
   "accounts",
@@ -246,15 +247,14 @@ function genFixtures(name: string, seed: number, base: Base): { schema: unknown;
   };
 }
 
-function parseArgs(argv: string[]): { domains: number; seed: number } {
+function parseArgs(argv: string[]): { domains: number } {
   const get = (flag: string): number => {
     const i = argv.indexOf(flag);
     const n = i >= 0 ? Number(argv[i + 1]) : NaN;
-    if (!Number.isInteger(n) || n < 0)
-      throw new Error(`usage: gen.ts --domains K --seed S (bad ${flag})`);
+    if (!Number.isInteger(n) || n < 0) throw new Error(`usage: gen.ts --domains K (bad ${flag})`);
     return n;
   };
-  return { domains: get("--domains"), seed: get("--seed") };
+  return { domains: get("--domains") };
 }
 
 function domainName(i: number): string {
@@ -518,8 +518,8 @@ function genDomain(
 }
 
 function main(): void {
-  const { domains, seed } = parseArgs(process.argv.slice(2));
-  const rand = mulberry32(seed);
+  const { domains } = parseArgs(process.argv.slice(2));
+  const rand = mulberry32(SEED);
   const genDir = join(root, "src/domains/generated");
   const testDir = join(root, "test/generated");
   const schemaDir = join(root, "fixtures/schema");
@@ -542,7 +542,7 @@ function main(): void {
   }
 
   for (const name of ["orders", "inventory", "customers", ...names]) {
-    const f = genFixtures(name, seed, bases[name]!);
+    const f = genFixtures(name, SEED, bases[name]!);
     writeFileSync(join(schemaDir, `${name}.json`), JSON.stringify(f.schema, null, 2) + "\n");
     writeFileSync(join(seedDir, `${name}.json`), JSON.stringify(f.seed, null, 2) + "\n");
   }
@@ -559,7 +559,7 @@ function main(): void {
     "",
   ].join("\n");
   writeFileSync(join(root, "src/domains/index.ts"), index);
-  console.log(`generated ${domains} domains (seed ${seed})`);
+  console.log(`generated ${domains} domains (seed ${SEED})`);
 }
 
 main();
