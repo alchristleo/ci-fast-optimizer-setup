@@ -67,3 +67,6 @@ T1 done f338f5d sdd-implementer selectFiles + flat shape
 T4 review approve 484d8e2 sdd-reviewer parity ok; should: CLI output untested
 T4 coord a686881 CLI GITHUB_OUTPUT test
 T4 done a686881 sdd-reviewer-lite coord re-review approve
+T5 fix 25d97d2 sdd-reviewer-lite fix-needed no-if assertion missing
+T5 coord eac8424 add no-if assertion
+T5 done eac8424 sdd-reviewer-lite re-review approve, red-checked
