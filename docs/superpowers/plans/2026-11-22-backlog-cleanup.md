@@ -58,3 +58,9 @@ Check: spec AC10.
 ## Ledger
 USAGE start 3
 PLAN written 6 tasks
+T3 review approve bb2cc67 sdd-reviewer assertUpToDate + compare wiring
+T3 done bb2cc67 sdd-implementer bench guard
+T2 review approve cb0fe1c sdd-reviewer-lite AC7 byte-identical
+T2 done cb0fe1c sdd-implementer-lite seed constant
+T1 review approve f338f5d sdd-reviewer parity clean, no weakened asserts
+T1 done f338f5d sdd-implementer selectFiles + flat shape
