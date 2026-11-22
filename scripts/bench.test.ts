@@ -1,7 +1,10 @@
 import { describe, expect, test } from "bun:test";
-import { readFileSync } from "node:fs";
+import { mkdtempSync, readFileSync, writeFileSync } from "node:fs";
+import { tmpdir } from "node:os";
+import { join } from "node:path";
 import {
   assertUpToDate,
+  chartDrift,
   checkAll,
   checkReadme,
   correlateRun,
@@ -11,6 +14,7 @@ import {
   median,
   p90,
   parseTestsNotice,
+  renderCharts,
   renderReadme,
   summarize,
   type BenchRun,
@@ -482,5 +486,43 @@ describe("committed results.json start_s", () => {
       expect(Number.isFinite(j.start_s)).toBe(true);
       expect(j.start_s!).toBeGreaterThanOrEqual(0);
     }
+  });
+});
+
+describe("charts wiring", () => {
+  const committed: Results = JSON.parse(readFileSync("bench/results.json", "utf8"));
+  test("renders four charts in two themes", () => {
+    expect(Object.keys(renderCharts(committed))).toEqual([
+      "wall-time-light.svg",
+      "wall-time-dark.svg",
+      "timeline-light.svg",
+      "timeline-dark.svg",
+      "runs-light.svg",
+      "runs-dark.svg",
+      "steps-light.svg",
+      "steps-dark.svg",
+    ]);
+  });
+  test("the committed SVGs equal the render", () => {
+    expect(chartDrift(committed, "bench/charts")).toEqual([]);
+  });
+  test("drift names a changed or missing file", () => {
+    const dir = mkdtempSync(join(tmpdir(), "charts-"));
+    for (const [file, svg] of Object.entries(renderCharts(committed)))
+      writeFileSync(join(dir, file), file === "runs-dark.svg" ? `${svg} ` : svg);
+    expect(chartDrift(committed, dir)).toEqual(["runs-dark.svg"]);
+    expect(chartDrift(committed, join(dir, "none")).length).toBe(8);
+  });
+  test("the README embeds four pictures with dark sources and numeric alt text", () => {
+    const readme = readFileSync("README.md", "utf8");
+    expect(readme.match(/<picture>/g)?.length).toBe(4);
+    expect(
+      readme.match(
+        /<source media="\(prefers-color-scheme: dark\)" srcset="bench\/charts\/[a-z-]+-dark\.svg">/g,
+      )?.length,
+    ).toBe(4);
+    expect(readme).toContain(
+      'alt="Median wall time: baseline full 219 s, fast full 44 s, fast pr 34 s."',
+    );
   });
 });

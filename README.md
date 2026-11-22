@@ -9,6 +9,26 @@ On the benchmark below, the full fast pipeline has a median wall time of 44 s ag
 Every number in this section comes from `bench/results.json`. The script `scripts/bench.ts` dispatches each workflow on GitHub, reads job and step timings from the Actions API, and renders the tables below. Wall time is the last job's end minus the first job's start, so it includes runner startup and install but not queue time (shown separately). Five rounds, each dispatching baseline, then fast, then fast on the sample PR branch, one run at a time.
 
 <!-- bench:start -->
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="bench/charts/wall-time-dark.svg">
+  <img src="bench/charts/wall-time-light.svg" alt="Median wall time: baseline full 219 s, fast full 44 s, fast pr 34 s." width="720">
+</picture>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="bench/charts/timeline-dark.svg">
+  <img src="bench/charts/timeline-light.svg" alt="Timeline of one run per pipeline on one time axis: median wall time 219 s for baseline full, 44 s for fast full, 34 s for fast pr." width="720">
+</picture>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="bench/charts/runs-dark.svg">
+  <img src="bench/charts/runs-light.svg" alt="Wall time of every run: baseline full 173 to 285 s, fast full 42 to 55 s, fast pr 29 to 38 s." width="720">
+</picture>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="bench/charts/steps-dark.svg">
+  <img src="bench/charts/steps-light.svg" alt="Median seconds per job split into checkout, setup and work: the baseline job takes 215 s, the longest fast job 18 s." width="720">
+</picture>
+
 Columns: mode `full` runs every test file and `pr` runs only the files the diff can reach (fast.yml on the branch `bench/pr-sample`). `excluded` counts runs that did not succeed and are left out of every statistic. Runner seconds are the sum of all job walls in a run, skipped jobs left out.
 
 | workflow | mode | runs | excluded | median wall (s) | p90 wall (s) | median queue (s) | median runner (s) |

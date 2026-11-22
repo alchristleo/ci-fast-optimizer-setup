@@ -145,6 +145,47 @@ describe("charts", () => {
     expect(svg).toContain(">test (shard 0)</text>");
   });
 
+  test("values: timeline puts the critical-path label on the latest-ending job's row", () => {
+    const lateLint = (w: number) => [
+      job("plan", 4, 7, 1),
+      job("lint", 20, w - 20, 1),
+      job("ci-ok", 12, 2, 0),
+    ];
+    const odd: Results = {
+      ...res,
+      runs: res.runs.map((r) =>
+        r.workflow === "fast" && r.mode === "full" ? { ...r, jobs: lateLint(r.wall_s) } : r,
+      ),
+    };
+    const svg = timeline(odd, "light");
+    const rowY = (label: string) =>
+      [...svg.matchAll(new RegExp(`<text [^>]*y="([\\d.]+)"[^>]*>${label}</text>`, "g"))].map(
+        (m) => m[1],
+      );
+    const crit = svg.match(/<text [^>]*y="([\d.]+)"[^>]*>critical path, 44 s<\/text>/);
+    expect(crit).not.toBeNull();
+    expect(rowY("lint")).toContain(crit![1]!);
+    expect(rowY("ci-ok")).not.toContain(crit![1]!);
+  });
+
+  test("values: timeline falls back to start 0 when a job has no start_s", () => {
+    const old: Results = {
+      ...res,
+      runs: res.runs.map((r) =>
+        r.workflow === "baseline"
+          ? { ...r, jobs: r.jobs.map((j) => ({ name: j.name, wall_s: j.wall_s, steps: j.steps })) }
+          : r,
+      ),
+    };
+    const svg = timeline(old, "light");
+    expect(svg).not.toContain("NaN");
+    expect(svg).toContain('d="M120.0 '); // the baseline bar starts at the axis origin (x0 = 120)
+  });
+
+  test("values: steps axis names the sum of medians", () => {
+    expect(steps(res, "light")).toContain("sum of median checkout, setup and work (s)");
+  });
+
   test("values: steps shows baseline and shard totals in medians", () => {
     const svg = steps(res, "light");
     expect(svg).toContain(">test (baseline)</text>");

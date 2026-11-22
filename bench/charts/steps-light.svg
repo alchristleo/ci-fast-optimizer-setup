@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="334" viewBox="0 0 720 334" role="img" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12">
+<title>Where each job spends its seconds</title>
+<desc>Stacked bars per job in successful full runs: the median seconds of checkout, setup and work, added up. test (baseline) takes 215 s. The longest fast job takes 18 s.</desc>
+<rect width="720" height="334" fill="#fcfcfb"/>
+<text x="24.0" y="30.0" fill="#0b0b0b" font-size="16" font-weight="600">Where each job spends its seconds</text>
+<text x="24.0" y="50.0" fill="#52514e">Median seconds per step group, successful full runs, runner bookkeeping left out</text>
+<rect x="24.0" y="66.0" width="10" height="10" rx="2" fill="#2a78d6"/>
+<text x="40.0" y="76.0" fill="#0b0b0b">checkout</text>
+<rect x="118.0" y="66.0" width="10" height="10" rx="2" fill="#eb6834"/>
+<text x="134.0" y="76.0" fill="#0b0b0b">setup</text>
+<rect x="191.0" y="66.0" width="10" height="10" rx="2" fill="#1baf7a"/>
+<text x="207.0" y="76.0" fill="#0b0b0b">work</text>
+<line x1="140.0" y1="92.0" x2="140.0" y2="290.0" stroke="#e4e3df" stroke-width="1"/>
+<text x="140.0" y="306.0" fill="#52514e" text-anchor="middle" font-size="11">0</text>
+<line x1="226.0" y1="92.0" x2="226.0" y2="290.0" stroke="#e4e3df" stroke-width="1"/>
+<text x="226.0" y="306.0" fill="#52514e" text-anchor="middle" font-size="11">50</text>
+<line x1="312.0" y1="92.0" x2="312.0" y2="290.0" stroke="#e4e3df" stroke-width="1"/>
+<text x="312.0" y="306.0" fill="#52514e" text-anchor="middle" font-size="11">100</text>
+<line x1="398.0" y1="92.0" x2="398.0" y2="290.0" stroke="#e4e3df" stroke-width="1"/>
+<text x="398.0" y="306.0" fill="#52514e" text-anchor="middle" font-size="11">150</text>
+<line x1="484.0" y1="92.0" x2="484.0" y2="290.0" stroke="#e4e3df" stroke-width="1"/>
+<text x="484.0" y="306.0" fill="#52514e" text-anchor="middle" font-size="11">200</text>
+<line x1="570.0" y1="92.0" x2="570.0" y2="290.0" stroke="#e4e3df" stroke-width="1"/>
+<text x="570.0" y="306.0" fill="#52514e" text-anchor="middle" font-size="11">250</text>
+<text x="570.0" y="322.0" fill="#52514e" text-anchor="end" font-size="11">sum of median checkout, setup and work (s)</text>
+<text x="128.0" y="107.0" fill="#0b0b0b" text-anchor="end">test (baseline)</text>
+<rect x="140.0" y="97.0" width="1.0" height="12.0" fill="#2a78d6"/>
+<rect x="141.7" y="97.0" width="3.2" height="12.0" fill="#eb6834"/>
+<path d="M146.9 97.0H505.8A4.0 4.0 0 0 1 509.8 101.0V105.0A4.0 4.0 0 0 1 505.8 109.0H146.9Z" fill="#1baf7a"/>
+<text x="517.8" y="107.0" fill="#0b0b0b">215 s</text>
+<text x="128.0" y="129.0" fill="#0b0b0b" text-anchor="end">tooling</text>
+<rect x="140.0" y="119.0" width="1.0" height="12.0" fill="#2a78d6"/>
+<rect x="141.7" y="119.0" width="6.6" height="12.0" fill="#eb6834"/>
+<path d="M150.3 119.0H158.4A4.0 4.0 0 0 1 162.4 123.0V127.0A4.0 4.0 0 0 1 158.4 131.0H150.3Z" fill="#1baf7a"/>
+<text x="170.4" y="129.0" fill="#0b0b0b">13 s</text>
+<text x="128.0" y="151.0" fill="#0b0b0b" text-anchor="end">fmt</text>
+<rect x="140.0" y="141.0" width="1.0" height="12.0" fill="#2a78d6"/>
+<path d="M141.7 141.0H142.9A4.0 4.0 0 0 1 146.9 145.0V149.0A4.0 4.0 0 0 1 142.9 153.0H141.7Z" fill="#eb6834"/>
+<text x="154.9" y="151.0" fill="#0b0b0b">4 s</text>
+<text x="128.0" y="173.0" fill="#0b0b0b" text-anchor="end">lint</text>
+<rect x="140.0" y="163.0" width="1.0" height="12.0" fill="#2a78d6"/>
+<rect x="141.7" y="163.0" width="1.4" height="12.0" fill="#eb6834"/>
+<path d="M145.2 163.0H145.2A1.7 1.7 0 0 1 146.9 164.7V173.3A1.7 1.7 0 0 1 145.2 175.0H145.2Z" fill="#1baf7a"/>
+<text x="154.9" y="173.0" fill="#0b0b0b">4 s</text>
+<text x="128.0" y="195.0" fill="#0b0b0b" text-anchor="end">build</text>
+<rect x="140.0" y="185.0" width="1.0" height="12.0" fill="#2a78d6"/>
+<path d="M141.7 185.0H142.9A4.0 4.0 0 0 1 146.9 189.0V193.0A4.0 4.0 0 0 1 142.9 197.0H141.7Z" fill="#eb6834"/>
+<text x="154.9" y="195.0" fill="#0b0b0b">4 s</text>
+<text x="128.0" y="217.0" fill="#0b0b0b" text-anchor="end">typecheck</text>
+<rect x="140.0" y="207.0" width="1.0" height="12.0" fill="#2a78d6"/>
+<path d="M141.7 207.0H144.6A4.0 4.0 0 0 1 148.6 211.0V215.0A4.0 4.0 0 0 1 144.6 219.0H141.7Z" fill="#eb6834"/>
+<text x="156.6" y="217.0" fill="#0b0b0b">5 s</text>
+<text x="128.0" y="239.0" fill="#0b0b0b" text-anchor="end">plan</text>
+<rect x="140.0" y="229.0" width="1.0" height="12.0" fill="#2a78d6"/>
+<path d="M141.7 229.0H144.6A4.0 4.0 0 0 1 148.6 233.0V237.0A4.0 4.0 0 0 1 144.6 241.0H141.7Z" fill="#eb6834"/>
+<text x="156.6" y="239.0" fill="#0b0b0b">5 s</text>
+<text x="128.0" y="261.0" fill="#0b0b0b" text-anchor="end">test (shards)</text>
+<rect x="140.0" y="251.0" width="1.0" height="12.0" fill="#2a78d6"/>
+<rect x="141.7" y="251.0" width="4.9" height="12.0" fill="#eb6834"/>
+<path d="M148.6 251.0H167.0A4.0 4.0 0 0 1 171.0 255.0V259.0A4.0 4.0 0 0 1 167.0 263.0H148.6Z" fill="#1baf7a"/>
+<text x="179.0" y="261.0" fill="#0b0b0b">18 s</text>
+<text x="128.0" y="283.0" fill="#0b0b0b" text-anchor="end">ci-ok</text>
+<text x="148.0" y="283.0" fill="#0b0b0b">0 s</text>
+</svg>
