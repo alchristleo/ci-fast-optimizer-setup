@@ -34,10 +34,11 @@ const fast = load("fast");
 const both = [baseline, fast];
 const needsOf = (job: Job) => [job.needs ?? []].flat();
 
-test("fast: fmt, lint, typecheck, build, tooling have no needs", () => {
+test("fast: fmt, lint, typecheck, build, tooling have no needs and no if", () => {
   for (const id of ["fmt", "lint", "typecheck", "build", "tooling"]) {
     expect(fast.wf.jobs[id], id).toBeDefined();
     expect(needsOf(fast.wf.jobs[id]!), id).toEqual([]);
+    expect(fast.wf.jobs[id]!.if, id).toBeUndefined();
   }
 });
 
