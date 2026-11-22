@@ -193,7 +193,13 @@ export const timeline: Chart = (res, theme) => {
   layout.forEach(({ r, jobs, top }, i) => {
     const color = p.series[i]!;
     panels.push(
-      text(24, top + 12, `${PIPELINE_LABELS[i]}, run wall ${sec(r.wall_s)}`, p, { bold: true }),
+      text(
+        24,
+        top + 12,
+        `${PIPELINE_LABELS[i]}, run wall ${sec(r.wall_s)}, axis from run created`,
+        p,
+        { bold: true },
+      ),
     );
     const critical = jobs.reduce((a, b) => (end(b) > end(a) ? b : a));
     jobs.forEach((j, k) => {
@@ -288,8 +294,8 @@ function stepCategory(name: string): number | null {
   return 2;
 }
 
-export const steps: Chart = (res, theme) => {
-  const p = PALETTE[theme];
+// Median seconds per job kind, split into checkout, setup and work: baseline first, then fast jobs.
+export function stepRows(res: Results): { label: string; med: number[] }[] {
   const sums = (jobs: BenchJob[]) =>
     jobs.map((j) => {
       const t = [0, 0, 0];
@@ -314,6 +320,12 @@ export const steps: Chart = (res, theme) => {
       byKind.set(kind, [...(byKind.get(kind) ?? []), j]);
     }
   for (const [kind, jobs] of byKind) add(kind, jobs);
+  return rows;
+}
+
+export const steps: Chart = (res, theme) => {
+  const p = PALETTE[theme];
+  const rows = stepRows(res);
   const [x0, x1, top, pitch, bh] = [140, 570, 92, 22, 12];
   const bottom = top + pitch * rows.length;
   const total = (m: number[]) => m[0]! + m[1]! + m[2]!;
@@ -324,7 +336,7 @@ export const steps: Chart = (res, theme) => {
     x1,
     top,
     bottom,
-    "median seconds per job",
+    "sum of median checkout, setup and work (s)",
   );
   const body = [
     legend(
@@ -351,8 +363,8 @@ export const steps: Chart = (res, theme) => {
   const [b, ...fast] = rows;
   return frame(p, {
     title: "Where each job spends its seconds",
-    desc: `Stacked bars of median seconds per job in successful full runs, split into checkout, setup and work. ${b!.label} takes ${sec(total(b!.med))}. The longest fast job takes ${sec(Math.max(...fast.map((r) => total(r.med))))}.`,
-    sub: "Median seconds per job, successful full runs, runner bookkeeping left out",
+    desc: `Stacked bars per job in successful full runs: the median seconds of checkout, setup and work, added up. ${b!.label} takes ${sec(total(b!.med))}. The longest fast job takes ${sec(Math.max(...fast.map((r) => total(r.med))))}.`,
+    sub: "Median seconds per step group, successful full runs, runner bookkeeping left out",
     height: bottom + 44,
     body,
   });

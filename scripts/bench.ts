@@ -3,15 +3,18 @@
 //   bun scripts/bench.ts run --runs R
 //   bun scripts/bench.ts --check fast_full_median_lt=60,speedup_gte=3,same_tests
 //   bun scripts/bench.ts --readme [--check]
+//   bun scripts/bench.ts --charts [--check]
 //   bun scripts/bench.ts backfill-starts
 import { execFileSync } from "node:child_process";
-import { readFileSync, writeFileSync } from "node:fs";
+import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
+import { CHARTS, stepRows } from "./charts";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 const RESULTS = join(root, "bench/results.json");
 const README = join(root, "README.md");
+const CHART_DIR = join(root, "bench/charts");
 const PR_BRANCH = "bench/pr-sample";
 const RUN_TIMEOUT_MS = 30 * 60 * 1000;
 
@@ -219,6 +222,48 @@ const num = (x: number) => (Number.isFinite(x) ? String(x) : "n/a");
 // "Run actions/checkout@<40 hex>" becomes "actions/checkout".
 const shortStep = (name: string) => name.replace(/^Run /, "").replace(/@[0-9a-f]{40}$/, "");
 
+// bench/charts/<name>-<theme>.svg for every chart and theme, as file name -> SVG text.
+export function renderCharts(res: Results): Record<string, string> {
+  const out: Record<string, string> = {};
+  for (const [name, fn] of Object.entries(CHARTS))
+    for (const theme of ["light", "dark"] as const) out[`${name}-${theme}.svg`] = fn(res, theme);
+  return out;
+}
+
+// Names of the committed SVGs that differ from the render (missing counts as different).
+export function chartDrift(res: Results, dir: string): string[] {
+  return Object.entries(renderCharts(res)).flatMap(([file, svg]) => {
+    const path = join(dir, file);
+    return existsSync(path) && readFileSync(path, "utf8") === svg ? [] : [file];
+  });
+}
+
+function pictures(res: Results): string {
+  const sum = (w: string, m: string) => summarize(res.runs, w, m);
+  const [b, f, pr] = [sum("baseline", "full"), sum("fast", "full"), sum("fast", "pr")];
+  const range = (s: ReturnType<typeof summarize>) =>
+    `${num(Math.min(...s.ok.map((r) => r.wall_s)))} to ${num(Math.max(...s.ok.map((r) => r.wall_s)))} s`;
+  const rows = stepRows(res);
+  const total = (m: number[]) => m[0]! + m[1]! + m[2]!;
+  const fastMax = Math.max(...rows.slice(1).map((r) => total(r.med)));
+  const alt: Record<string, string> = {
+    "wall-time": `Median wall time: baseline full ${num(b.median_wall_s)} s, fast full ${num(f.median_wall_s)} s, fast pr ${num(pr.median_wall_s)} s.`,
+    timeline: `Timeline of one run per pipeline on one time axis: median wall time ${num(b.median_wall_s)} s for baseline full, ${num(f.median_wall_s)} s for fast full, ${num(pr.median_wall_s)} s for fast pr.`,
+    runs: `Wall time of every run: baseline full ${range(b)}, fast full ${range(f)}, fast pr ${range(pr)}.`,
+    steps: `Median seconds per job split into checkout, setup and work: the baseline job takes ${num(total(rows[0]!.med))} s, the longest fast job ${num(fastMax)} s.`,
+  };
+  return Object.keys(CHARTS)
+    .map((name) =>
+      [
+        "<picture>",
+        `  <source media="(prefers-color-scheme: dark)" srcset="bench/charts/${name}-dark.svg">`,
+        `  <img src="bench/charts/${name}-light.svg" alt="${alt[name]}" width="720">`,
+        "</picture>",
+      ].join("\n"),
+    )
+    .join("\n\n");
+}
+
 function section(res: Results): string {
   const rows = (
     [
@@ -253,6 +298,8 @@ function section(res: Results): string {
     return w.length ? `${Math.min(...w)}-${Math.max(...w)} s` : "n/a";
   });
   return [
+    pictures(res),
+    "",
     "Columns: mode `full` runs every test file and `pr` runs only the files the diff can reach (fast.yml on the branch `bench/pr-sample`). `excluded` counts runs that did not succeed and are left out of every statistic. Runner seconds are the sum of all job walls in a run, skipped jobs left out.",
     "",
     "| workflow | mode | runs | excluded | median wall (s) | p90 wall (s) | median queue (s) | median runner (s) |",
@@ -414,6 +461,20 @@ async function main(argv: string[]) {
   if (argv[0] === "backfill-starts") return backfillStarts();
   if (argv[0] === "run") return runBench(Number(arg("--runs") ?? 5));
   const res: Results = JSON.parse(readFileSync(RESULTS, "utf8"));
+  if (argv.includes("--charts")) {
+    if (argv.includes("--check")) {
+      const bad = chartDrift(res, CHART_DIR);
+      if (bad.length) {
+        console.error(`bench/charts differs from the render: ${bad.join(", ")}`);
+        process.exit(1);
+      }
+      return;
+    }
+    mkdirSync(CHART_DIR, { recursive: true });
+    for (const [file, svg] of Object.entries(renderCharts(res)))
+      writeFileSync(join(CHART_DIR, file), svg);
+    return;
+  }
   if (argv.includes("--readme")) {
     const text = readFileSync(README, "utf8");
     if (argv.includes("--check")) {
@@ -432,7 +493,9 @@ async function main(argv: string[]) {
     if (out.some((c) => !c.ok)) process.exit(1);
     return;
   }
-  console.error("usage: bench.ts run --runs R | --check <exprs> | --readme [--check]");
+  console.error(
+    "usage: bench.ts run --runs R | --check <exprs> | --readme [--check] | --charts [--check]",
+  );
   process.exit(2);
 }
 
