@@ -18,8 +18,8 @@ export type Chart = (res: Results, theme: Theme) => { svg: string; alt: string; 
 const W = 720;
 const FONT = "system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif";
 // Text sizes stay legible when the SVG scales to a phone: nothing below SMALL.
-const BASE = 15;
-const SMALL = 13;
+const BASE = 17;
+const SMALL = 15;
 const X0 = 150;
 const X1 = 560;
 const PALETTE = {
@@ -254,7 +254,7 @@ function criticalPath(jobs: BenchJob[]): BenchJob[] {
 export const timeline: Chart = (res, theme) => {
   const p = PALETTE[theme];
   const picked = PIPELINES.map(([w, m]) => medianRun(summarize(res.runs, w, m).ok));
-  const [x0, x1, pitch, bh, top] = [135, W - 24, 18, 11, 100];
+  const [x0, x1, pitch, bh, top] = [X0, W - 24, 18, 11, 100];
   const panels = picked.map((r) => {
     const origin = Math.min(...r.jobs.map((j) => j.start_s));
     const jobs = [...r.jobs].sort((a, b) => a.start_s - b.start_s || byName(a.name, b.name));
@@ -444,10 +444,7 @@ export const steps: Chart = (res, theme) => {
   const alt = `Checkout and setup take more than work in ${count}. The baseline test job takes ${sec(baseTotal)}, not drawn.`;
   const [top, pitch, bh] = [100, 40, 14];
   const svg = frame(p, {
-    title:
-      setupHeavy * 2 > rows.length
-        ? "Setup and checkout, not tests, are most of a fast job"
-        : "Tests are most of a fast job",
+    title: `Checkout and setup take longer than work in ${setupHeavy * 2 > rows.length ? "" : "only "}${setupHeavy} of ${rows.length} fast jobs`,
     alt,
     sub: `Median seconds per step group, successful full runs. Not drawn: baseline test job: ${sec(baseTotal)}.`,
     top,
@@ -487,13 +484,7 @@ export const steps: Chart = (res, theme) => {
         body.push(text(ax.x(total(r.med)) + 8, y + bh / 2 + 5, sec(total(r.med)), p));
       });
       body.push(
-        text(
-          24,
-          bottom + 60,
-          `Checkout and setup take more than work in ${count}. Shards count as one kind.`,
-          p,
-          { fill: p.sub, size: SMALL },
-        ),
+        text(24, bottom + 60, "Shards count as one kind.", p, { fill: p.sub, size: SMALL }),
       );
       return body;
     },

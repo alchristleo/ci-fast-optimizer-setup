@@ -1,9 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="456" viewBox="0 0 720 456" role="img" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15">
-<title>Setup and checkout, not tests, are most of a fast job</title>
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="456" viewBox="0 0 720 456" role="img" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="17">
+<title>Checkout and setup take longer than work in 5 of 7 fast jobs</title>
 <desc>Checkout and setup take more than work in 5 of 7 fast job kinds. The baseline test job takes 215 s, not drawn.</desc>
 <rect width="720" height="456" fill="#1a1a19"/>
-<text x="24.0" y="32.0" fill="#f0efec" font-size="20" font-weight="600">Setup and checkout, not tests, are most of a fast job</text>
-<text x="24.0" y="55.0" fill="#c3c2b7" font-size="13">Median seconds per step group, successful full runs. Not drawn: baseline test job: 215 s.</text>
+<text x="24.0" y="32.0" fill="#f0efec" font-size="20" font-weight="600">Checkout and setup take longer than work in 5 of 7 fast jobs</text>
+<text x="24.0" y="55.0" fill="#c3c2b7" font-size="15">Median seconds per step group, successful full runs. Not drawn: baseline test job: 215 s.</text>
 <rect x="24.0" y="71.0" width="11" height="11" rx="2" fill="#9085e9"/>
 <text x="42.0" y="82.0" fill="#f0efec">checkout</text>
 <rect x="136.0" y="71.0" width="11" height="11" rx="2" fill="#c98500"/>
@@ -11,63 +11,63 @@
 <rect x="221.0" y="71.0" width="11" height="11" rx="2" fill="#d55181"/>
 <text x="239.0" y="82.0" fill="#f0efec">work</text>
 <line x1="150.0" y1="100.0" x2="150.0" y2="380.0" stroke="#33332f" stroke-width="1"/>
-<text x="150.0" y="397.0" fill="#c3c2b7" text-anchor="middle" font-size="13">0</text>
+<text x="150.0" y="397.0" fill="#c3c2b7" text-anchor="middle" font-size="15">0</text>
 <line x1="252.5" y1="100.0" x2="252.5" y2="380.0" stroke="#33332f" stroke-width="1"/>
-<text x="252.5" y="397.0" fill="#c3c2b7" text-anchor="middle" font-size="13">5</text>
+<text x="252.5" y="397.0" fill="#c3c2b7" text-anchor="middle" font-size="15">5</text>
 <line x1="355.0" y1="100.0" x2="355.0" y2="380.0" stroke="#33332f" stroke-width="1"/>
-<text x="355.0" y="397.0" fill="#c3c2b7" text-anchor="middle" font-size="13">10</text>
+<text x="355.0" y="397.0" fill="#c3c2b7" text-anchor="middle" font-size="15">10</text>
 <line x1="457.5" y1="100.0" x2="457.5" y2="380.0" stroke="#33332f" stroke-width="1"/>
-<text x="457.5" y="397.0" fill="#c3c2b7" text-anchor="middle" font-size="13">15</text>
+<text x="457.5" y="397.0" fill="#c3c2b7" text-anchor="middle" font-size="15">15</text>
 <line x1="560.0" y1="100.0" x2="560.0" y2="380.0" stroke="#33332f" stroke-width="1"/>
-<text x="560.0" y="397.0" fill="#c3c2b7" text-anchor="middle" font-size="13">20</text>
-<text x="560.0" y="415.0" fill="#c3c2b7" text-anchor="end" font-size="13">seconds, median per step group</text>
+<text x="560.0" y="397.0" fill="#c3c2b7" text-anchor="middle" font-size="15">20</text>
+<text x="560.0" y="415.0" fill="#c3c2b7" text-anchor="end" font-size="15">seconds, median per step group</text>
 <text x="138.0" y="116.0" fill="#f0efec" text-anchor="end">test (shards)</text>
 <rect x="150.0" y="104.0" width="18.5" height="14.0" fill="#9085e9"/>
-<text x="160.3" y="132.0" fill="#f0efec" text-anchor="middle" font-size="13">1</text>
+<text x="160.3" y="132.0" fill="#f0efec" text-anchor="middle" font-size="15">1</text>
 <rect x="170.5" y="104.0" width="80.0" height="14.0" fill="#c98500"/>
-<text x="211.5" y="132.0" fill="#f0efec" text-anchor="middle" font-size="13">4</text>
+<text x="211.5" y="132.0" fill="#f0efec" text-anchor="middle" font-size="15">4</text>
 <path d="M252.5 104.0H515.0A4.0 4.0 0 0 1 519.0 108.0V114.0A4.0 4.0 0 0 1 515.0 118.0H252.5Z" fill="#d55181"/>
-<text x="385.8" y="132.0" fill="#f0efec" text-anchor="middle" font-size="13">13</text>
+<text x="385.8" y="132.0" fill="#f0efec" text-anchor="middle" font-size="15">13</text>
 <text x="527.0" y="116.0" fill="#f0efec">18 s</text>
 <text x="138.0" y="156.0" fill="#f0efec" text-anchor="end">tooling</text>
 <rect x="150.0" y="144.0" width="18.5" height="14.0" fill="#9085e9"/>
-<text x="160.3" y="172.0" fill="#f0efec" text-anchor="middle" font-size="13">1</text>
+<text x="160.3" y="172.0" fill="#f0efec" text-anchor="middle" font-size="15">1</text>
 <rect x="170.5" y="144.0" width="100.5" height="14.0" fill="#c98500"/>
-<text x="221.8" y="172.0" fill="#f0efec" text-anchor="middle" font-size="13">5</text>
+<text x="221.8" y="172.0" fill="#f0efec" text-anchor="middle" font-size="15">5</text>
 <path d="M273.0 144.0H412.5A4.0 4.0 0 0 1 416.5 148.0V154.0A4.0 4.0 0 0 1 412.5 158.0H273.0Z" fill="#d55181"/>
-<text x="344.8" y="172.0" fill="#f0efec" text-anchor="middle" font-size="13">7</text>
+<text x="344.8" y="172.0" fill="#f0efec" text-anchor="middle" font-size="15">7</text>
 <text x="424.5" y="156.0" fill="#f0efec">13 s</text>
 <text x="138.0" y="196.0" fill="#f0efec" text-anchor="end">typecheck</text>
 <rect x="150.0" y="184.0" width="18.5" height="14.0" fill="#9085e9"/>
-<text x="160.3" y="212.0" fill="#f0efec" text-anchor="middle" font-size="13">1</text>
+<text x="160.3" y="212.0" fill="#f0efec" text-anchor="middle" font-size="15">1</text>
 <path d="M170.5 184.0H248.5A4.0 4.0 0 0 1 252.5 188.0V194.0A4.0 4.0 0 0 1 248.5 198.0H170.5Z" fill="#c98500"/>
-<text x="211.5" y="212.0" fill="#f0efec" text-anchor="middle" font-size="13">4</text>
+<text x="211.5" y="212.0" fill="#f0efec" text-anchor="middle" font-size="15">4</text>
 <text x="260.5" y="196.0" fill="#f0efec">5 s</text>
 <text x="138.0" y="236.0" fill="#f0efec" text-anchor="end">plan</text>
 <rect x="150.0" y="224.0" width="18.5" height="14.0" fill="#9085e9"/>
-<text x="160.3" y="252.0" fill="#f0efec" text-anchor="middle" font-size="13">1</text>
+<text x="160.3" y="252.0" fill="#f0efec" text-anchor="middle" font-size="15">1</text>
 <path d="M170.5 224.0H248.5A4.0 4.0 0 0 1 252.5 228.0V234.0A4.0 4.0 0 0 1 248.5 238.0H170.5Z" fill="#c98500"/>
-<text x="211.5" y="252.0" fill="#f0efec" text-anchor="middle" font-size="13">4</text>
+<text x="211.5" y="252.0" fill="#f0efec" text-anchor="middle" font-size="15">4</text>
 <text x="260.5" y="236.0" fill="#f0efec">5 s</text>
 <text x="138.0" y="276.0" fill="#f0efec" text-anchor="end">fmt</text>
 <rect x="150.0" y="264.0" width="18.5" height="14.0" fill="#9085e9"/>
-<text x="160.3" y="292.0" fill="#f0efec" text-anchor="middle" font-size="13">1</text>
+<text x="160.3" y="292.0" fill="#f0efec" text-anchor="middle" font-size="15">1</text>
 <path d="M170.5 264.0H228.0A4.0 4.0 0 0 1 232.0 268.0V274.0A4.0 4.0 0 0 1 228.0 278.0H170.5Z" fill="#c98500"/>
-<text x="201.3" y="292.0" fill="#f0efec" text-anchor="middle" font-size="13">3</text>
+<text x="201.3" y="292.0" fill="#f0efec" text-anchor="middle" font-size="15">3</text>
 <text x="240.0" y="276.0" fill="#f0efec">4 s</text>
 <text x="138.0" y="316.0" fill="#f0efec" text-anchor="end">lint</text>
 <rect x="150.0" y="304.0" width="18.5" height="14.0" fill="#9085e9"/>
-<text x="160.3" y="332.0" fill="#f0efec" text-anchor="middle" font-size="13">1</text>
+<text x="160.3" y="332.0" fill="#f0efec" text-anchor="middle" font-size="15">1</text>
 <rect x="170.5" y="304.0" width="39.0" height="14.0" fill="#c98500"/>
-<text x="191.0" y="332.0" fill="#f0efec" text-anchor="middle" font-size="13">2</text>
+<text x="191.0" y="332.0" fill="#f0efec" text-anchor="middle" font-size="15">2</text>
 <path d="M211.5 304.0H228.0A4.0 4.0 0 0 1 232.0 308.0V314.0A4.0 4.0 0 0 1 228.0 318.0H211.5Z" fill="#d55181"/>
-<text x="221.8" y="332.0" fill="#f0efec" text-anchor="middle" font-size="13">1</text>
+<text x="221.8" y="332.0" fill="#f0efec" text-anchor="middle" font-size="15">1</text>
 <text x="240.0" y="316.0" fill="#f0efec">4 s</text>
 <text x="138.0" y="356.0" fill="#f0efec" text-anchor="end">build</text>
 <rect x="150.0" y="344.0" width="18.5" height="14.0" fill="#9085e9"/>
-<text x="160.3" y="372.0" fill="#f0efec" text-anchor="middle" font-size="13">1</text>
+<text x="160.3" y="372.0" fill="#f0efec" text-anchor="middle" font-size="15">1</text>
 <path d="M170.5 344.0H228.0A4.0 4.0 0 0 1 232.0 348.0V354.0A4.0 4.0 0 0 1 228.0 358.0H170.5Z" fill="#c98500"/>
-<text x="201.3" y="372.0" fill="#f0efec" text-anchor="middle" font-size="13">3</text>
+<text x="201.3" y="372.0" fill="#f0efec" text-anchor="middle" font-size="15">3</text>
 <text x="240.0" y="356.0" fill="#f0efec">4 s</text>
-<text x="24.0" y="440.0" fill="#c3c2b7" font-size="13">Checkout and setup take more than work in 5 of 7 fast job kinds. Shards count as one kind.</text>
+<text x="24.0" y="440.0" fill="#c3c2b7" font-size="15">Shards count as one kind.</text>
 </svg>

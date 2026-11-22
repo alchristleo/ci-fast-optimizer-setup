@@ -158,4 +158,16 @@ test("charts NEEDS matches fast.yml needs (test job is the shards kind)", () => 
     const id = k === "test (shards)" ? "test" : k;
     expect(needsOf(fast.wf.jobs[id]!).map(kind).sort(), k).toEqual([...needs].sort());
   }
+  // timings runs on push only and sits off the critical path.
+  for (const [id, job] of Object.entries(fast.wf.jobs))
+    if (job.needs && id !== "timings") expect(NEEDS[kind(id)], id).toBeDefined();
+});
+
+test("CODEOWNERS covers .github/ and scripts/", () => {
+  const rules = readFileSync(".github/CODEOWNERS", "utf8")
+    .split("\n")
+    .filter((l) => l.trim() && !l.startsWith("#"))
+    .map((l) => l.trim().split(/\s+/));
+  for (const path of ["/.github/", "/scripts/"])
+    expect(rules, path).toContainEqual([path, "@alchristleo"]);
 });
