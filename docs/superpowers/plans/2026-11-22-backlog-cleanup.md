@@ -85,6 +85,8 @@ Check: spec AC4, AC5, AC8 (local half). Render each SVG to PNG for the cdo seat 
 - CODEOWNERS + required review on .github/ and scripts/: a fork PR runs its own fast.yml/plan.ts and can rewrite ci-ok (PRE-EXISTING, panel security)
 
 ### Checks
+- oxlint `import/no-cycle` (T9 review: bench.ts <-> charts.ts cycle)
+- gate runs `bun run test:tooling` too: plain `bun test` skips scripts/ (bunfig root=test); a T7 test failure passed the implementer's gate
 - git calls with base/head: `--end-of-options` or a SHA regex check (panel security, hardening)
 
 ## Ledger
@@ -117,3 +119,5 @@ T7 coord 5d10a3a fix expectation
 T7 done 5d10a3a sdd-reviewer-lite re-review approve; gate gap: bun test skips scripts/ (bunfig root=test)
 T8 review approve ad4c007 sdd-reviewer 2 should (steps total label, weak timeline test) folded into T9
 T8 done ad4c007 sdd-implementer charts.ts
+T9 review approve c6488aa sdd-reviewer should: bench<->charts import cycle (to panel triage)
+T9 done c6488aa sdd-implementer charts wired, README pictures, drift check
