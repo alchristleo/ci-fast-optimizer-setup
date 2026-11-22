@@ -3,6 +3,7 @@ import { readFileSync } from "node:fs";
 import { parse } from "yaml";
 
 type Step = {
+  if?: string;
   uses?: string;
   run?: string;
   with?: Record<string, unknown>;
@@ -104,6 +105,16 @@ test("fast: ci-ok runs always and needs every other job", () => {
   expect(ok.if).toBe("always()");
   const others = Object.keys(fast.wf.jobs).filter((id) => id !== "ci-ok" && id !== "timings");
   expect(needsOf(ok).sort()).toEqual(others.sort());
+});
+
+test("fast: ci-ok fails on a failed or cancelled need and reads no needs.<job>.result", () => {
+  const ok = fast.wf.jobs["ci-ok"]!;
+  const gate = ok.steps!.find((s) => s.if?.includes("needs.*.result"));
+  expect(gate!.if).toBe(
+    "contains(needs.*.result, 'failure') || contains(needs.*.result, 'cancelled')",
+  );
+  expect(gate!.run!.trim()).toBe("exit 1");
+  expect(JSON.stringify(ok.steps)).not.toMatch(/needs\.\w+\.result/);
 });
 
 // Any ${{ }} in a run block is rejected: values reach scripts only through env.
