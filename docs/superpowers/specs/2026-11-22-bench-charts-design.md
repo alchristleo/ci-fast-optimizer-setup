@@ -72,3 +72,19 @@ Target reader: an engineer who maintains a CI pipeline, scanning the README on G
 7. The charts read correctly on GitHub in light and dark themes, with no overlapping labels and the main
    number visible without the tables. Check: `check: seat cdo` (rendered screenshots of each SVG)
 8. The local gate and PR CI are green. Check: `bun test && bun run check && bun run lint && bun run fmt:check`; `pr-checks-wait.sh 4` exit 0
+
+## Status (converged 2026-11-22)
+Base `8634563`, head `ef5d4c3`. No earlier status table in this spec.
+
+| # | Criterion (short) | Verdict | Evidence |
+|---|---|---|---|
+| 1 | Backfill: numeric `start_s`, within run bounds, no other field changed | VERIFIED | `bun test ./scripts/bench.test.ts -t start_s`: 2 pass, 0 fail. `git diff main -- bench/results.json \| grep '^[-+] ' \| grep -v start_s`: empty; `--stat`: 115 insertions, 0 deletions |
+| 2 | Valid SVG (XML, title, desc, width 720), both themes, one labelled mark per series | VERIFIED | `bun test ./scripts/charts.test.ts`: 45 pass, 0 fail |
+| 3 | `wall-time` median and p90 equal `summarize()` | VERIFIED | `bun test ./scripts/charts.test.ts -t values`: 8 pass, 0 fail |
+| 4 | 8 committed SVGs equal the render | VERIFIED | `bun scripts/bench.ts --charts --check`: exit 0; `bun run test:tooling`: 179 pass, 0 fail (plain `bun test` skips `scripts/`) |
+| 5 | README embeds 4 `<picture>`, `--readme --check` passes | VERIFIED | `bun scripts/bench.ts --readme --check`: exit 0; `grep -c '<picture>' README.md`: 4 |
+| 6 | Palettes pass `validate_palette.js`, no series colour in text | VERIFIED | Ledger: `SEAT cdo pass af1e191 AC6`. The only later change to a chart file is the `NEEDS` refactor in `scripts/charts.ts` (249e78b); the SVGs are untouched since af1e191 and `--charts --check` exits 0, so the rendered bytes are the same |
+| 7 | Charts read correctly in light and dark, no overlap, main number visible | VERIFIED | Ledger: `SEAT cdo pass af1e191 AC7` (same note as AC6) |
+| 8 | Local gate and PR CI | VERIFIED | Local: `bun test` 2053 pass, `bun run test:tooling` 179 pass, check/lint/fmt clean. PR #4 CI: `pr-checks-wait.sh 4` exit 0 at head ef5d4c3 (plan, fmt, lint, typecheck, build, tooling, 4 shards, ci-ok, baseline all pass). |
+
+Deviations: none from the Check commands. `bun run test:tooling` was added as a second run for AC4 (the spec names "the tooling test"). Open findings: none (ledger `TRIAGE fixed=17 dismissed=3 backlog=0`, later `PANEL cdo af1e191 must=0 should=0 nit=1`).

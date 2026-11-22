@@ -138,3 +138,5 @@ PANEL cdo af1e191 must=0 should=0 nit=1
 SEAT cdo pass af1e191 AC6
 SEAT cdo pass af1e191 AC7
 COORD 249e78b explicit ci-ok NEEDS + fast.yml drift test; sdd-reviewer-lite approve
+PR 4 pushed ef5d4c3 (part 2 charts)
+CONVERGE charts 8/8 VERIFIED (AC8 filled from PR CI ef5d4c3)
