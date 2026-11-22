@@ -104,7 +104,7 @@ Generated from bench/results.json (generated_at 2026-11-21T17:24:34.855Z, bun 1.
    export function getTestApp(): Hono { app ??= createApp(); return app; }
    ```
    Effect: not measured separately. It is part of the gap in change 1.
-8. **Lint, typecheck, build, tooling tests and test shards run as parallel jobs.** No job has a `needs` on another, except that test shards wait for `plan` and the push-only `timings` job waits for the shards. A final `ci-ok` job reports one result. `ci-ok` needs every job and fails if any required job did not succeed, so a branch protection rule needs only that one check.
+8. **Lint, typecheck, build, tooling tests and test shards run as parallel jobs.** No job has a `needs` on another, except that test shards wait for `plan` and the push-only `timings` job waits for the shards. A final `ci-ok` job reports one result. `ci-ok` fails when a needed job fails or gets cancelled. A skipped job counts as a pass, so a PR with no affected tests still goes green. A branch protection rule needs only that one check.
    ```yaml
    jobs: { plan: ..., fmt: ..., lint: ..., typecheck: ..., build: ..., tooling: ..., test: { needs: plan }, ci-ok: ... }
    ```
@@ -139,7 +139,7 @@ Seconds saved per run is the baseline median minus the fast median from the tabl
 
 1. Copy [`.github/actions/setup/action.yml`](.github/actions/setup/action.yml). It installs Bun and caches the install.
 2. Copy [`.github/workflows/fast.yml`](.github/workflows/fast.yml) and adjust the job commands to your scripts. The `plan` job picks the test files, builds the shard matrix and feeds the `test` job.
-3. Copy [`scripts/shard.ts`](scripts/shard.ts) for sharding and [`scripts/affected.ts`](scripts/affected.ts) for PR selection. `affected.ts` follows imports under `src/` and `test/`, so adjust the roots for your layout.
+3. Copy [`scripts/plan.ts`](scripts/plan.ts) and [`scripts/shard.ts`](scripts/shard.ts) for sharding, and [`scripts/affected.ts`](scripts/affected.ts) for PR selection. `affected.ts` follows imports under `src/` and `test/`, so adjust the roots for your layout.
 4. Make `ci-ok` the one required check.
 5. Measure your own suite before you trust the ratio here. [`scripts/bench.ts`](scripts/bench.ts) does that for both pipelines.
 
@@ -166,7 +166,7 @@ The bench script reads the repo from `gh`, or from the `BENCH_REPO=owner/name` v
 - `.github/workflows/fast.yml`, `baseline.yml`: the two pipelines. `.github/actions/setup`: Bun install and cache, shared.
 - `src/`: the Hono app. `src/lib/`: shared code. `src/domains/`: hand-written and generated domains.
 - `test/`: the app tests that both pipelines run. `scripts/*.test.ts`: tests of the tooling, run by the `tooling` job.
-- `scripts/shard.ts`, `affected.ts`, `timings.ts`: sharding, affected selection, timing merge. `gen.ts`: domain generator.
+- `scripts/plan.ts`: the fast.yml plan job. `scripts/shard.ts`, `affected.ts`, `timings.ts`: sharding, affected selection, timing merge. `gen.ts`: domain generator.
 - [`scripts/bench.ts`](scripts/bench.ts): dispatch, collect, render and check. `bench/results.json`: raw results.
 - `docs/t1-findings.md`: measured tool facts. `docs/superpowers/`: the spec and plan.
 
