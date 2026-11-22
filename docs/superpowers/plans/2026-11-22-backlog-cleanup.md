@@ -147,3 +147,12 @@ PLAN T10 owner-requested small backlog items
 T10 review approve 3a1f6ce sdd-reviewer gate green, deviations accepted
 T10 done 3a1f6ce sdd-implementer 6 small backlog items
 DISMISSED cdo re-run past cap after T10: owner said not needed
+MERGED PR 4 at 1332000
+USAGE end 67
+
+## Retro (2026-11-22)
+- Numbers: tasks=10 fix_rounds=2 coord=4 fix_waves=2 blocked=0 seats 4/0 reruns=1; panels part 1 security 0/1/0, correctness 0/0/2; part 2 design 1/4/3, correctness 0/1/3, cdo 1/4/3 (re-run 0/0/1); triage fixed=17 dismissed=3; 5h 3→67. Merged PR #4 at 1332000.
+- Gate gap: `bunfig.toml` root=test made plain `bun test` skip scripts/, so a red T7 test passed the implementer gate. Structure: `bun run test:all` + project CLAUDE.md gate line (T10).
+- Worktree drift: every `isolation: worktree` dispatch started at main (f4853a0), not the branch head; each brief needed "confirm HEAD = base, else reset". Workflow lesson for lean-sdd (proposed, owner decides).
+- Mid-gate scope add (charts) worked as a second spec on the same PR; the cdo seat earned its place (timeline 219 vs 222, colour reuse, dot overlap).
+- Next: bench re-run needs `bench/pr-sample` rebased on main; owner enables "Require review from Code Owners".
