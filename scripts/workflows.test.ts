@@ -3,6 +3,7 @@ import { readFileSync } from "node:fs";
 import { parse } from "yaml";
 
 type Step = {
+  if?: string;
   uses?: string;
   run?: string;
   with?: Record<string, unknown>;
@@ -33,10 +34,11 @@ const fast = load("fast");
 const both = [baseline, fast];
 const needsOf = (job: Job) => [job.needs ?? []].flat();
 
-test("fast: fmt, lint, typecheck, build, tooling have no needs", () => {
+test("fast: fmt, lint, typecheck, build, tooling have no needs and no if", () => {
   for (const id of ["fmt", "lint", "typecheck", "build", "tooling"]) {
     expect(fast.wf.jobs[id], id).toBeDefined();
     expect(needsOf(fast.wf.jobs[id]!), id).toEqual([]);
+    expect(fast.wf.jobs[id]!.if, id).toBeUndefined();
   }
 });
 
@@ -104,6 +106,16 @@ test("fast: ci-ok runs always and needs every other job", () => {
   expect(ok.if).toBe("always()");
   const others = Object.keys(fast.wf.jobs).filter((id) => id !== "ci-ok" && id !== "timings");
   expect(needsOf(ok).sort()).toEqual(others.sort());
+});
+
+test("fast: ci-ok fails on a failed or cancelled need and reads no needs.<job>.result", () => {
+  const ok = fast.wf.jobs["ci-ok"]!;
+  const gate = ok.steps!.find((s) => s.if?.includes("needs.*.result"));
+  expect(gate!.if).toBe(
+    "contains(needs.*.result, 'failure') || contains(needs.*.result, 'cancelled')",
+  );
+  expect(gate!.run!.trim()).toBe("exit 1");
+  expect(JSON.stringify(ok.steps)).not.toMatch(/needs\.\w+\.result/);
 });
 
 // Any ${{ }} in a run block is rejected: values reach scripts only through env.

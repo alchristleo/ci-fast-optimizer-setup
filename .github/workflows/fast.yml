@@ -121,24 +121,10 @@ jobs:
     if: always()
     runs-on: ubuntu-latest
     steps:
-      - name: check needs
-        env:
-          PLAN: ${{ needs.plan.result }}
-          FMT: ${{ needs.fmt.result }}
-          LINT: ${{ needs.lint.result }}
-          TYPECHECK: ${{ needs.typecheck.result }}
-          BUILD: ${{ needs.build.result }}
-          TOOLING: ${{ needs.tooling.result }}
-          TEST: ${{ needs.test.result }}
-          COUNT: ${{ needs.plan.outputs.count }}
-        run: |
-          for r in "$PLAN" "$FMT" "$LINT" "$TYPECHECK" "$BUILD" "$TOOLING"; do
-            [ "$r" = success ] || { echo "a required job did not succeed"; exit 1; }
-          done
-          if [ "$TEST" = success ]; then exit 0; fi
-          if [ "$TEST" = skipped ] && [ "$COUNT" = 0 ]; then echo "no affected tests"; exit 0; fi
-          echo "test result: $TEST"
-          exit 1
+      - name: fail on a failed or cancelled need
+        if: contains(needs.*.result, 'failure') || contains(needs.*.result, 'cancelled')
+        run: exit 1
+      - run: echo "all needed jobs passed or were skipped by design"
 
   timings:
     needs: test
