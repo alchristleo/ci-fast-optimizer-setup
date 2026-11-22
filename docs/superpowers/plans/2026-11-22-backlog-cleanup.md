@@ -54,6 +54,10 @@ Check: spec AC10.
 - Per-claim ablation workflows (one change at a time)
 - turbo/nx comparison; frontend app
 - Blog-post write-up
+- CODEOWNERS + required review on .github/ and scripts/: a fork PR runs its own fast.yml/plan.ts and can rewrite ci-ok (PRE-EXISTING, panel security)
+
+### Checks
+- git calls with base/head: `--end-of-options` or a SHA regex check (panel security, hardening)
 
 ## Ledger
 USAGE start 3
@@ -73,3 +77,6 @@ T5 done eac8424 sdd-reviewer-lite re-review approve, red-checked
 T6 coord d097eb7 README ci-ok skip wording
 T6 done d097eb7 sdd-reviewer-lite approve (one misread finding withdrawn on recheck)
 PANEL design skipped <300 lines new non-test code
+PANEL security df2e140 must=0 should=1 nit=0
+PANEL correctness df2e140 must=0 should=0 nit=2
+TRIAGE fixed=3 dismissed=0 backlog=1
