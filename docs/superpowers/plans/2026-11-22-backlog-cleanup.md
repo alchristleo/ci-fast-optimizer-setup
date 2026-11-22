@@ -115,3 +115,5 @@ PLAN part 2 charts: T7-T9
 T7 fix 4cbc5ed sdd-reviewer fix-needed jobStarts test expectation 40 vs 51
 T7 coord 5d10a3a fix expectation
 T7 done 5d10a3a sdd-reviewer-lite re-review approve; gate gap: bun test skips scripts/ (bunfig root=test)
+T8 review approve ad4c007 sdd-reviewer 2 should (steps total label, weak timeline test) folded into T9
+T8 done ad4c007 sdd-implementer charts.ts
