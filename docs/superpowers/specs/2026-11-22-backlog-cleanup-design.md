@@ -108,3 +108,23 @@ cd "$repo"; git worktree remove --force "$tmp/wt"; rm -rf "$tmp"
 fast.yml keeps `permissions: contents: read` and pinned action shas. Inputs keep going through env
 vars, never `${{ }}` inside `run:`. plan.ts passes base/head to git through `execFileSync` argv (no shell).
 `pull_request` from forks runs with a read-only token. plan.ts writes only `$GITHUB_OUTPUT`.
+
+## Status (converged 2026-11-22)
+
+Branch `backlog-cleanup` at f2817c4, base f4853a0 (equals `main`). No earlier status table.
+
+| # | Criterion | Verdict | Evidence |
+|---|-----------|---------|----------|
+| 1 | plan.ts unit tests | VERIFIED | `bun test ./scripts/plan.test.ts`: 19 pass, 0 fail |
+| 2 | planMatrix equals shard.ts old path | VERIFIED | `bun test ./scripts/plan.test.ts -t equivalence`: 5 pass, 14 filtered out, 0 fail |
+| 3 | fast.yml runs plan.ts, no jq/seq/shard.ts | VERIFIED | `bun test ./scripts/workflows.test.ts`: 17 pass; grep for `jq \|seq \|scripts/shard.ts` finds nothing (exit 0) |
+| 4 | ci-ok idiom, no per-job env, no if/needs on gate jobs | VERIFIED | `bun test ./scripts/workflows.test.ts -t ci-ok`: 2 pass; grep `needs.fmt.result` finds nothing |
+| 5 | No-op PR dispatch run passes | VERIFIED | run 45003571001 at f2817c4 (dispatch mode=pr, base=head): plan log `mode=pr files=0 shards=0`, test job skipped, ci-ok success, run conclusion success |
+| 6 | affectedTests shape, CLI parity | VERIFIED | `bun test ./scripts/affected.test.ts`: 46 pass; parity script (main vs working tree, 6 pairs) printed nothing, exit 0. The base line counts (7, 33, 0, 5, 34, 0) were not separately printed |
+| 7 | gen: no `--seed`, byte-identical | VERIFIED | grep finds no `--seed`; `bun run gen` printed "generated 120 domains (seed 1)"; `git diff --exit-code -- src test fixtures` exit 0 |
+| 8 | assertUpToDate | VERIFIED | `bun test ./scripts/bench.test.ts -t assertUpToDate`: 3 pass, 0 fail |
+| 9 | Local gate and PR CI | VERIFIED | Local half passes: `bun test` 2053 pass, 0 fail; `bun run check` no type errors; `bun run lint` exit 0; `bun run fmt:check` exit 0. PR #4 CI: `pr-checks-wait.sh 4` exit 0 at head f2817c4 (plan, fmt, lint, typecheck, build, tooling, 4 shards, ci-ok, baseline all pass) |
+| 10 | Milestone-1 Backlog cleared | VERIFIED | `! sed -n '/^## Backlog/,/^## Ledger/p' ...sub-minute-ci.md \| grep -nE '...'` exit 0, no match |
+
+Deviations: none in commands.
+Open findings: none. Panel: security should=1 and correctness nit=2 fixed in the fix wave (0fd7d3e); one PRE-EXISTING security item (CODEOWNERS) went to the Backlog.
