@@ -146,3 +146,4 @@ CONVERGE charts 8/8 VERIFIED (AC8 filled from PR CI ef5d4c3)
 PLAN T10 owner-requested small backlog items
 T10 review approve 3a1f6ce sdd-reviewer gate green, deviations accepted
 T10 done 3a1f6ce sdd-implementer 6 small backlog items
+DISMISSED cdo re-run past cap after T10: owner said not needed
