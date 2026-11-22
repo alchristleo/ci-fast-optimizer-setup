@@ -1,5 +1,6 @@
 import { describe, expect, test } from "bun:test";
 import {
+  assertUpToDate,
   checkAll,
   checkReadme,
   correlateRun,
@@ -432,5 +433,14 @@ describe("readme", () => {
   });
   test("throws without markers", () => {
     expect(() => renderReadme("# T\n", good)).toThrow();
+  });
+});
+
+describe("assertUpToDate", () => {
+  test("throws when the branch is behind main", () => {
+    expect(() => assertUpToDate(1)).toThrow("bench/pr-sample is stale: rebase it on main");
+  });
+  test("passes when the branch is level with main", () => {
+    expect(() => assertUpToDate(0)).not.toThrow();
   });
 });
