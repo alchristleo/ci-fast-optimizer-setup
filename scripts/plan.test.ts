@@ -57,6 +57,10 @@ describe("planMatrix", () => {
     const all = matrix.include.flatMap((s) => s.files.split(" "));
     expect(all.sort()).toEqual([...files].sort());
   });
+  test("a path with whitespace throws and names the path", () => {
+    expect(() => planMatrix(["test/a\nx.test.ts"], {})).toThrow("whitespace in test path");
+    expect(() => planMatrix(["test/a x.test.ts"], {})).toThrow("test/a x.test.ts");
+  });
   test("files are space-joined with no trailing space", () => {
     const { matrix } = planMatrix(["a.test.ts", "b.test.ts"], { "a.test.ts": 5, "b.test.ts": 1 });
     expect(matrix.include).toEqual([
@@ -128,6 +132,18 @@ describe("planFiles", () => {
         "test/B.test.ts",
         "test/b.test.ts",
         "test/sub/a.test.ts",
+      ]);
+    } finally {
+      rmSync(root, { recursive: true });
+    }
+  });
+
+  test("full lists test files under dot-directories", () => {
+    const root = mkdtempSync(join(tmpdir(), "plan-"));
+    try {
+      put(root, "test/.hid/a.test.ts", "");
+      expect(planFiles({ mode: "full", base: "", head: "h" }, root)).toEqual([
+        "test/.hid/a.test.ts",
       ]);
     } finally {
       rmSync(root, { recursive: true });
