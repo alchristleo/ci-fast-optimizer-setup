@@ -15,7 +15,7 @@ const PR_BRANCH = "bench/pr-sample";
 const RUN_TIMEOUT_MS = 30 * 60 * 1000;
 
 export type BenchStep = { name: string; s: number };
-export type BenchJob = { name: string; wall_s: number; steps: BenchStep[] };
+export type BenchJob = { name: string; wall_s: number; start_s?: number; steps: BenchStep[] };
 export type BenchRun = {
   workflow: string;
   mode: string;
