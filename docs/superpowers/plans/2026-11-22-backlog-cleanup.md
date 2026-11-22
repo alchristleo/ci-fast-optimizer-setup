@@ -70,3 +70,6 @@ T4 done a686881 sdd-reviewer-lite coord re-review approve
 T5 fix 25d97d2 sdd-reviewer-lite fix-needed no-if assertion missing
 T5 coord eac8424 add no-if assertion
 T5 done eac8424 sdd-reviewer-lite re-review approve, red-checked
+T6 coord d097eb7 README ci-ok skip wording
+T6 done d097eb7 sdd-reviewer-lite approve (one misread finding withdrawn on recheck)
+PANEL design skipped <300 lines new non-test code
