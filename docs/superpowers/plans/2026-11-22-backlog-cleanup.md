@@ -121,3 +121,12 @@ T8 review approve ad4c007 sdd-reviewer 2 should (steps total label, weak timelin
 T8 done ad4c007 sdd-implementer charts.ts
 T9 review approve c6488aa sdd-reviewer should: bench<->charts import cycle (to panel triage)
 T9 done c6488aa sdd-implementer charts wired, README pictures, drift check
+PANEL design 53ea901 must=1 should=4 nit=3
+PANEL correctness 53ea901 must=0 should=1 nit=3
+PANEL cdo 53ea901 must=1 should=4 nit=3
+SEAT cdo pass 53ea901 AC6
+SEAT cdo pass 53ea901 AC7 reservations: timeline numbers, steps colours, runs overlap
+DISMISSED design nit drop --charts --check CLI: spec AC4 names it (owner accepted)
+DISMISSED correctness nit zero-success crash: unreachable with committed data, manual command (owner accepted)
+DISMISSED cdo nit drop legends: dataviz requires legend for 2+ series (owner accepted)
+TRIAGE fixed=17 dismissed=3 backlog=0
