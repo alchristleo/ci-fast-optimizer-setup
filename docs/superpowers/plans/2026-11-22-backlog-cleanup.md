@@ -90,15 +90,10 @@ Check: spec AC4, AC5, AC8 (local half). Render each SVG to PNG for the cdo seat 
 - Per-claim ablation workflows (one change at a time)
 - turbo/nx comparison; frontend app
 - Blog-post write-up
-- CODEOWNERS + required review on .github/ and scripts/: a fork PR runs its own fast.yml/plan.ts and can rewrite ci-ok (PRE-EXISTING, panel security)
-- Chart text on phones: ~7 px at 375 px wide; cheapest step SMALL 15 / BASE 17, 10 px needs a W~560 relayout (cdo re-run)
-- Steps chart title reads against its top bar (shards mostly work): reword to "Checkout and setup take longer than work in 5 of 7 fast jobs" (cdo re-run nit)
-- workflows.test NEEDS check is one-way: also assert every fast.yml job with needs (except timings) has a NEEDS entry (coord review nit)
+- Phone legibility to 10 px: needs a ~560 px-wide chart relayout (T10 got ~8 px)
+- Owner: enable "Require review from Code Owners" in branch protection (CODEOWNERS added in T10)
 
 ### Checks
-- oxlint `import/no-cycle` (T9 review: bench.ts <-> charts.ts cycle)
-- gate runs `bun run test:tooling` too: plain `bun test` skips scripts/ (bunfig root=test); a T7 test failure passed the implementer's gate
-- git calls with base/head: `--end-of-options` or a SHA regex check (panel security, hardening)
 
 ## Ledger
 USAGE start 3
@@ -149,3 +144,5 @@ COORD 249e78b explicit ci-ok NEEDS + fast.yml drift test; sdd-reviewer-lite appr
 PR 4 pushed ef5d4c3 (part 2 charts)
 CONVERGE charts 8/8 VERIFIED (AC8 filled from PR CI ef5d4c3)
 PLAN T10 owner-requested small backlog items
+T10 review approve 3a1f6ce sdd-reviewer gate green, deviations accepted
+T10 done 3a1f6ce sdd-implementer 6 small backlog items
